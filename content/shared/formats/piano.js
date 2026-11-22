@@ -1,6 +1,7 @@
 const keys = ['c', 'c-sharp', 'd', 'd-sharp', 'e', 'f', 'f-sharp', 'g', 'g-sharp', 'a', 'a-sharp', 'b'];
 const keyCenters = [16, 32, 48, 64, 80, 112, 128, 144, 160, 176, 192, 208];
-const piano = new URL('./piano.svg', import.meta.url).href;
+// SVG <use> needs a same-origin file for its key fragments in the built site.
+const piano = new URL('./piano.svg?no-inline', import.meta.url).href;
 const octaveWidth = 224;
 
 export function pianoMarkup(start, end, octaves = 2) {

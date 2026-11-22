@@ -37,19 +37,51 @@ jobs:
       - uses: actions/upload-pages-artifact@v4
         with:
           path: dist
-      - name: Wait for the Pages artifact to become visible
+      - name: Deploy the Pages artifact
+        id: publish
+        timeout-minutes: 7
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          # Use the repository API because the Actions artifact service can omit uploaded artifacts.
+          artifact=
           for attempt in {1..12}; do
-            if artifact=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts" \
-                --jq '.artifacts[] | select(.name == "github-pages" and .expired == false) | .id') &&
-                [ -n "$artifact" ]; then
-              exit 0
+            artifact=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts" \
+              --jq '.artifacts | map(select(.name == "github-pages" and .expired == false)) | max_by(.id).id // empty') || artifact=
+            if [ -n "$artifact" ]; then
+              break
             fi
             sleep 5
           done
-          echo "::error::GitHub did not index the Pages artifact within 60 seconds."
+          if [ -z "$artifact" ]; then
+            echo "::error::GitHub did not index the Pages artifact within 60 seconds."
+            exit 1
+          fi
+
+          oidc=$(curl --fail --silent --show-error \
+            -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "$ACTIONS_ID_TOKEN_REQUEST_URL" | jq -er '.value')
+          echo "::add-mask::$oidc"
+
+          endpoint="repos/$GITHUB_REPOSITORY/pages/deployments"
+          deployment=$(gh api --method POST "$endpoint" \
+            -F artifact_id="$artifact" -f pages_build_version="$GITHUB_SHA" -f oidc_token="$oidc")
+          deployment_id=$(jq -er '.id // (.status_url | split("/") | last)' <<< "$deployment")
+          page_url=$(jq -er '.page_url' <<< "$deployment")
+          echo "page_url=$page_url" >> "$GITHUB_OUTPUT"
+
+          for attempt in {1..60}; do
+            status=$(gh api "$endpoint/$deployment_id" --jq '.status') || status=unknown_status
+            case "$status" in
+            succeed)
+              exit 0
+              ;;
+            deployment_failed|deployment_content_failed|deployment_cancelled|deployment_lost)
+              echo "::error::GitHub Pages deployment ended with status $status."
+              exit 1
+              ;;
+            esac
+            sleep 5
+          done
+          echo "::error::GitHub Pages deployment did not finish within five minutes."
           exit 1
-      - uses: actions/deploy-pages@v4
-        id: publish

@@ -491,9 +491,18 @@
   gap: 0.4rem 0.9rem;
   padding: 0.7rem 0.85rem;
   border-bottom: 1px solid var(--line);
+  border-start-start-radius: inherit;
+  border-start-end-radius: inherit;
+  background: var(--tint);
 }
 .music-demo-toolbar :is(h3, h4) { margin: 0; }
-.music-demo-toolbar label { display: flex; align-items: center; gap: 0.45rem; font-size: 0.9rem; }
+.music-demo-toolbar label { display: flex; align-items: center; gap: 0.45rem; min-width: 0; max-width: 100%; font-size: 0.9rem; }
+.music-demo-toolbar select { min-width: 0; max-width: 100%; text-overflow: ellipsis; }
+@media (max-width: 30rem) {
+  .music-demo-toolbar > :is(h3, h4) { flex-basis: 100%; }
+  .music-demo-toolbar > label { flex: 1 1 11rem; }
+  .music-demo-toolbar label > select { flex: 1 1 auto; }
+}
 .ornament-controls { display: flex; flex-wrap: wrap; gap: 0.4rem 0.7rem; margin: 0; }
 .music-demo :is(select, .route-actions button) {
   min-height: 44px;
@@ -516,7 +525,7 @@
 .ornament-compare-layout h4 { margin: 0 0 0.35rem; font-size: 0.93rem; }
 .ornament-source { width: 8rem; margin-inline: 0; }
 .ornament-source .ornament-grace { font-size: 14px; }
-.music-demo-cue { display: block; margin: 0.15rem 0.85rem 0.55rem; color: var(--muted); }
+.music-demo-cue { display: block; margin: 0.55rem 0.85rem; color: var(--muted); font-size: 0.95rem; }
 .music-demo .score-example { margin: 0; border: 0; border-top: 1px solid var(--line); border-radius: 0; }
 .route-staff { display: block; width: calc(100% - 1.7rem); min-width: var(--staff-min-width); margin: 0.5rem 0.85rem; }
 .route-staff .route-bar-highlight { fill: transparent; }

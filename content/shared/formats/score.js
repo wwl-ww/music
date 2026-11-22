@@ -1,9 +1,9 @@
-import { AlphaTabApi, midi, synth } from '../../../node_modules/@coderline/alphatab/dist/alphaTab.mjs';
+import { AlphaTabApi, FontFileFormat, midi, synth } from '@coderline/alphatab';
+import bravura from '@coderline/alphatab/font/Bravura.woff2?url';
 import { enableScrollFrame } from './readable-layout.js';
 import { encodeScore, fourPartHarmony } from './four-part.js';
 import { mountScoreReading } from './score-reading.js';
 
-const assets = '/node_modules/@coderline/alphatab/dist/';
 const soundFont = new URL('../assets/piano-and-strings.sf3', import.meta.url).href;
 const views = {
   staff: ['score'],
@@ -47,7 +47,7 @@ export function mountScore(figure, { notes, tempo = 90, notation = 'both', audio
   const updateScroll = enableScrollFrame(score, '谱例');
 
   const api = new AlphaTabApi(score, {
-    core: { fontDirectory: assets + 'font/', enableLazyLoading: false },
+    core: { smuflFontSources: new Map([[FontFileFormat.Woff2, bravura]]), enableLazyLoading: false },
     display: { padding: [5, 5, 7, 3], lastSystemPaddingBottom: 2, lastSystemFillThreshold: 0 },
     player: {
       enablePlayer: audio,

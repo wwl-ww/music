@@ -1,4 +1,4 @@
-import { importer, io, model, Settings } from '../../../node_modules/@coderline/alphatab/dist/alphaTab.mjs';
+import { importer, io, model, Settings } from '@coderline/alphatab';
 import { encodeScore } from './four-part.js';
 
 const letterNames = { 0: 'C', 2: 'D', 4: 'E', 5: 'F', 7: 'G', 9: 'A', 11: 'B' };

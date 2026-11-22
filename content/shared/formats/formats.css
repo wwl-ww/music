@@ -397,7 +397,7 @@
 
 @font-face {
   font-family: "Lesson Music Symbols";
-  src: url("/node_modules/@coderline/alphatab/dist/font/Bravura.woff2") format("woff2");
+  src: url("@coderline/alphatab/font/Bravura.woff2") format("woff2");
 }
 
 .lesson-aside {

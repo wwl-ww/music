@@ -13,6 +13,8 @@ npm run dev
 
 课程内容集中放在 `content/`。教材的章节和专用脚本归入各自的目录，参考 PDF 可留在本地的 `sources/`，并由 Git 忽略。课程网页由同一套 Vite 配置运行。
 
+发布版用 `npm run build` 生成到 `dist/`，可用 `npm run preview` 在本地的 `/music/` 子路径预览。GitHub Pages 在 `main` 有新提交时自动部署。[线上课程](https://wwl-ww.github.io/music/)
+
 | 目录 | 内容 |
 | --- | --- |
 | `content/` | 教材首页、程序谱目录、格式样板 |

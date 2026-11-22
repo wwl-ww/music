@@ -6,6 +6,7 @@ import { defineConfig } from 'vite';
 
 const contentRoot = fileURLToPath(new URL('./content/', import.meta.url));
 const dist = fileURLToPath(new URL('./dist/', import.meta.url));
+const alphaTabPackage = fileURLToPath(new URL('../', import.meta.resolve('@coderline/alphatab')));
 
 const legacyPages = new Map([
   ['/', '/content/'],
@@ -41,7 +42,7 @@ export default defineConfig(({ command, isPreview }) => {
         configureServer(server) { server.middlewares.use(redirectLegacyPages); }
       },
       {
-        name: 'keep-early-theme-script',
+        name: 'copy-static-course-assets',
         apply: 'build',
         transformIndexHtml: {
           order: 'pre',
@@ -50,11 +51,14 @@ export default defineConfig(({ command, isPreview }) => {
           }
         },
         generateBundle() {
-          this.emitFile({
-            type: 'asset',
-            fileName: 'shared/themes.js',
-            source: readFileSync(resolve(contentRoot, 'shared/themes.js'))
-          });
+          const files = [
+            ['shared/themes.js', resolve(contentRoot, 'shared/themes.js')],
+            ['licenses/alphaTab.txt', resolve(alphaTabPackage, 'LICENSE')],
+            ['licenses/Bravura.txt', resolve(alphaTabPackage, 'dist/font/Bravura-OFL.txt')]
+          ];
+          for (const [fileName, path] of files) {
+            this.emitFile({ type: 'asset', fileName, source: readFileSync(path) });
+          }
         }
       }
     ],

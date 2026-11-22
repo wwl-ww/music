@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第三十五章 同主音综合调式（一）· 概论｜和声学基础 · 下</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony-35.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 下</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第三十五章　同主音综合调式（一）· 概论</h1>
+      <p class="intro">主音相同的大小调可以共享和弦。辨认这些和弦时，既要看哪些音级发生变化，也要看主、下属、属的功能走向。</p>
+      <section aria-labelledby="parallel-tonic">
+        <h2 id="parallel-tonic">同主音调的共同骨干</h2>
+        <p><strong>同主音调</strong>也叫同名调。C 大调与 c 小调的主音都是 C，Ⅰ、Ⅳ、Ⅴ级音均为 C、F、G。相同级数可承担相应功能，音程性质仍会改变调式色彩。例如主音上方的三度在大调是 E，在小调是 E♭。比较 C 大调与 a 小调时，两调的联系来自相同调号，属于平行关系。</p>
+        <p>自然大小调相差第Ⅲ、Ⅵ、Ⅶ级。和声或旋律大小调会让这几级的音在同一个主音系统中互相渗透。弗里几亚色彩还能带入降Ⅱ级，例如 D♭。这样Ⅰ、Ⅳ、Ⅴ仍是音阶骨干，Ⅱ、Ⅲ、Ⅵ、Ⅶ可以有两种音高。</p>
+        <table class="lesson-table">
+          <caption>以 C 为主音的音阶形式</caption>
+          <thead><tr><th scope="col">音阶</th><th scope="col">相对于自然大调的变化</th><th scope="col">上行与下行</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">自然大调</th><td>各音保持自然大调音级。</td><td>同一组音。</td></tr>
+            <tr><th scope="row">和声大调</th><td>降Ⅵ级。</td><td>同一组音。</td></tr>
+            <tr><th scope="row">旋律大调</th><td>下行采用降Ⅵ、降Ⅶ级。</td><td>上行采用自然大调。</td></tr>
+            <tr><th scope="row">自然小调</th><td>降Ⅲ、降Ⅵ、降Ⅶ级。</td><td>同一组音。</td></tr>
+            <tr><th scope="row">和声小调</th><td>降Ⅲ、降Ⅵ级。</td><td>同一组音。</td></tr>
+            <tr><th scope="row">旋律小调</th><td>上行保持降Ⅲ级，Ⅵ、Ⅶ级升回本位。</td><td>下行采用自然小调。</td></tr>
+            <tr><th scope="row">弗里几亚音列</th><td>在自然小调的基础上再降Ⅱ级。</td><td>同一组音。</td></tr>
+          </tbody>
+        </table>
+        <p>大小调可以先在旋律中吸收对方的音高，同时保留各自的主和弦。例如 C 大调的旋律可带 E♭、A♭、B♭，而主和弦仍用 E；c 小调的旋律可以用 E、A、B，主和弦仍用 E♭。把可变的四级合并，得到 C、D♭、D、E♭、E、F、G、A♭、A、B♭、B 共十一个音。两类综合调式都可取用这同一组音。和弦混用很多时，主和弦的三度及其收束仍能辨别大小调。</p>
+        <div class="music-demo" id="parallel-scale-colors">
+          <div class="music-demo-toolbar">
+            <h3>同一主音的音阶与综合音列</h3>
+            <form class="ornament-controls">
+              <label>音阶 <select name="form">
+                <option value="naturalMajor">自然大调</option><option value="harmonicMajor">和声大调</option>
+                <option value="melodicMajor">旋律大调</option><option value="naturalMinor">自然小调</option>
+                <option value="harmonicMinor">和声小调</option><option value="melodicMinor">旋律小调</option>
+                <option value="phrygian">弗里几亚音列</option>
+                <option value="combinedMajor">十一音 · 大主和弦</option><option value="combinedMinor">十一音 · 小主和弦</option>
+              </select></label>
+              <label>方向 <select name="direction"><option value="up">上行</option><option value="down">下行</option></select></label>
+            </form>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+      <section aria-labelledby="major-borrowing">
+        <h2 id="major-borrowing">大调的下属与属功能扩展</h2>
+        <p>大调吸收小调下属组时，首先可把Ⅵ级 A 降成 A♭
+          <svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="A 降到降 A，两音处在同一线间">
+            <path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/>
+            <text x="17" y="19.5">&#xE0A2;</text><text x="40" y="19.5">&#xE260;</text><text x="51" y="19.5">&#xE0A2;</text>
+          </svg>，使大下属 F–A–C 变成小下属 F–A♭–C。主和弦仍为 C–E–G，和声音列因降Ⅵ而成为和声大调。
+        </p>
+        <p>小下属还可联系 A♭ 大三和弦、D 减三和弦及降Ⅱ级和弦。A♭–C–E♭ 是从同主音小调吸收的 ♭VI；只把自然大调的 A 降低而保留 E，得到的是 A♭–C–E 增三和弦。</p>
+        <p>从下属组扩大到属组时，B 可降成 B♭，以 G–B♭–D 小属和弦带来更柔和的属向。与这组材料相关的还有 ♭VII、♭III。例如 ♭III 连到小属时，E♭ 大三和弦和 G 小三和弦可以保持 G、B♭。旋律大调的下行也出现降Ⅶ级。借用的和弦可以用三和弦、七和弦或转位。</p>
+        <div class="music-demo" id="parallel-major-harmony" data-harmony-options="parallel-major-harmony">
+          <div class="music-demo-toolbar">
+            <h3>大调终止中的小调和弦</h3>
+            <label>谱例 <select>
+        <option value="natural">自然大调的和弦</option>
+        <option value="minorSubdominant">引入小下属</option>
+        <option value="loweredSubmediant">引入降Ⅵ级和弦</option>
+        <option value="minorDominant">引入小属</option>
+        <option value="loweredLeading">降Ⅶ级和弦向主收束</option>
+        <option value="loweredMediant">降Ⅲ级和弦连到小属</option>
+        <option value="phrygian">引入降Ⅱ级和弦</option>
+            </select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+      <section aria-labelledby="minor-borrowing">
+        <h2 id="minor-borrowing">小调的属与下属功能扩展</h2>
+        <p>小调吸收大调的属组时，可升高第Ⅶ级 B♭，使小属 G–B♭–D 变成大属 G–B–D，并得到导音减三和弦 B–D–F。升高导音的半音倾向加强了属到主，形成和声小调的音列。还可借用以 E 为根音的 E 小三和弦，其根音来自升高的Ⅲ级。</p>
+        <p>从属组扩大到下属组时，可以升高Ⅵ级 A♭，得到大下属 F–A–C 和 D 小三和弦。旋律小调上行时使用的 A、B 也支持这类写法。只提高Ⅵ级，在 A 上叠置得到减三和弦 A–C–E♭。直接借用 C 大调的 vi 还会用到 E，得到 A–C–E 小三和弦。两种写法都能保留 c 小和弦作为主和弦。</p>
+        <div class="music-demo" id="parallel-minor-harmony" data-harmony-options="parallel-minor-harmony">
+          <div class="music-demo-toolbar">
+            <h3>小调终止中的大调和弦</h3>
+            <label>谱例 <select>
+        <option value="natural">自然小调的和弦</option>
+        <option value="majorDominant">只提高导音</option>
+        <option value="raisedMediant">借用升Ⅲ级小三和弦</option>
+        <option value="majorSubdominant">大下属与大属</option>
+        <option value="supertonic">升高Ⅵ级形成上主小七</option>
+        <option value="raisedSixth">只提高Ⅵ级，得到 A 减三</option>
+        <option value="borrowedSixth">借用大调的 A 小三</option>
+        <option value="majorTonic">小调乐句收在大主和弦</option>
+            </select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+      <section aria-labelledby="expanded-functions">
+        <h2 id="expanded-functions">综合调式的三个功能组</h2>
+        <p>同主音大小调可互相吸收下属和属组和弦。主和弦两侧相隔三度的和弦也可扩展主功能。Am 与 I 共有 C、E，与 IV 共有 A、C。Em 与 I 共有 E、G，与 V 共有 G、B。共同音解释了第Ⅵ、Ⅲ级和弦为何能联系两个功能组，实际功能还要看前后连接、低音位置和终止方向。</p>
+        <table class="lesson-table">
+          <caption>C 大调与 c 小调的功能组交叠</caption>
+          <thead><tr><th scope="col">功能范围</th><th scope="col">C 大调的和弦</th><th scope="col">c 小调的和弦与扩展</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">下属组</th><td>Dm、F</td><td>D°、Fm。借用弗里几亚材料时也可用 D♭。</td></tr>
+            <tr><th scope="row">下属组与主组</th><td>Am</td><td>A♭。在 C 大调借用时，可在阻碍进行中替代预期的 I。</td></tr>
+            <tr><th scope="row">主功能中心</th><td>C</td><td>Cm。终止时可将三音 E♭ 升为 E，得到同主音的大主和弦。</td></tr>
+            <tr><th scope="row">主组与属组</th><td>Em</td><td>E♭</td></tr>
+            <tr><th scope="row">属组</th><td>G、B°</td><td>Gm、B♭。升高导音后可用 G、B°。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="mixture-function-context" data-harmony-options="mixture-function-context">
+          <div class="music-demo-toolbar">
+            <h3>同一和弦在不同位置的功能</h3>
+            <label>谱例 <select>
+              <option value="submediantPredominant">Am 接属七</option>
+              <option value="submediantDeceptive">Am 作阻碍终止</option>
+              <option value="mediantTonic">Em 夹在两个主和弦之间</option>
+              <option value="mediantDominant">Em 接属七</option>
+            </select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <aside class="lesson-callout">
+          <h3>借用、离调与转调的判断</h3>
+          <ul>
+            <li>C 大调的 I–iv–V₇–I 用 Fm 增强下属倾向。借用的 A♭ 改变和弦色彩，属到主的方向仍指向 C。</li>
+            <li>A₇–Dm 中的 C♯ 暂时指向 D。若后面仍用 G₇–C 收束，Dm 得到的是<a href="./harmony-26.html">离调</a>式的局部强调。</li>
+            <li>若后续的和声和终止建立并延续新的主音，按<a href="./harmony-28.html">转调</a>分析。单个变化音只能提示线索。</li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>

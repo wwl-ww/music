@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第八章　属七和弦｜和声学基础</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony-5-8.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 上</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第八章　属七和弦</h1>
+      <p class="intro">属七和弦在属三和弦的基础上加入七音，导音和七音的走向共同决定解决方式。</p>
+      <section aria-labelledby="dominant-seventh-structure"><h2 id="dominant-seventh-structure">属七和弦的结构与功能</h2>
+      <p>在 V 的大三和弦上再叠一个小三度，就得到属七和弦 V₇。根音至七音是小七度，三音（导音）至七音是减五度，七音置于导音下方时形成相应的增四度。C 大调与 c 和声小调都可写 G–B–D–F。F 虽是调式的下属音，整个和弦仍具有属功能。</p>
+      <p>小七度和减五度使和弦比属三和弦更不稳定。导音与七音的级进解决让 V₇–I 或 V₇–i 强烈地指向主和弦，可用于确立和巩固调性。</p>
+      <div class="music-demo" data-harmony-options="seventhSpacing" id="seventhSpacing">
+        <div class="music-demo-toolbar"><h3>属三、完整属七及省略写法</h3><label>谱例 <select><option value="triad">V</option><option value="complete">完整 V₇</option><option value="omitFifth">V₇ 省略五音</option><option value="omitThird">V₇ 省略三音</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="dominant-seventh-resolution"><h2 id="dominant-seventh-resolution">原位属七的典型解决</h2>
+      <table class="lesson-table"><caption>C 大调中各个和弦音的去向</caption><thead><tr><th scope="col">V₇ 的成员</th><th scope="col">标准走向</th><th scope="col">C 大调</th></tr></thead><tbody>
+      <tr><th scope="row">根音（低音）</th><td>到主音，常下行五度或上行四度。</td><td>G → C</td></tr>
+      <tr><th scope="row">三音（导音）</th><td>上行半音到主音。</td><td>B → C</td></tr>
+      <tr><th scope="row">五音</th><td>完整 V₇ 中通常下行到主音，主和弦的三音由属七的七音解决而来。</td><td>D → C</td></tr>
+      <tr><th scope="row">七音</th><td>下行二度到主和弦三音。</td><td>F → E，大调。F → E♭，c 小调。</td></tr>
+      </tbody></table>
+      <p>四部可以写出完整 V₇，典型解决得到省略五音的主和弦。也可以在 V₇ 省略五音并重复根音，保留小七度与减五度。重复到上方的属根音可保持，成为主和弦的五音，因而得到完整的 I 或 i。</p>
+      <p>偶尔省略的是三音，并以根音补足四声部。这时减五度关系消失，张力较弱。这种写法在传统大小调和声中较少见，可用于适应五声性旋律。</p>
+      <div class="music-demo" data-harmony-options="seventhResolution" id="seventhResolution">
+        <div class="music-demo-toolbar"><h3>原位属七的典型解决</h3><label>谱例 <select><option value="complete">完整 V₇ → I 省五音</option><option value="omitFifth">V₇ 省五音 → 完整 I</option><option value="minorComplete">c 小调完整 V₇ → i 省五音</option><option value="minorOmitFifth">c 小调 V₇ 省五音 → 完整 i</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="seventh-exceptions"><h2 id="seventh-exceptions">属七解决的常用变体</h2>
+      <table class="lesson-table"><caption>为了旋律与声部连接而调整解决</caption><thead><tr><th scope="col">处理</th><th scope="col">适用理由与效果</th></tr></thead><tbody>
+      <tr><th scope="row">内声部导音下行</th><td>内声部的 B 可下行到 G，让完整 V₇ 进入五音齐全的主和弦。高音导音的上行解决更显著，通常保留。</td></tr>
+      <tr><th scope="row">主和弦重复三音</th><td>旋律需要落到主和弦的三音时，可令另一声部也进入三音。以声部线条清楚为条件。</td></tr>
+      <tr><th scope="row">七音上行至主和弦五音</th><td>可见于解决到 I₆、顺应平行三度或六度，也可为避免七度或九度的两音同向进入八度。</td></tr>
+      <tr><th scope="row">保留解决 V₇–IV₆</th><td>七音保留并成为下属和弦根音。属七低音上行一级，成为下属六和弦低音。小调相应为 iv₆。</td></tr>
+      </tbody></table>
+      <div class="music-demo" data-harmony-options="seventhExceptions" id="seventhExceptions">
+        <div class="music-demo-toolbar"><h3>属七解决的四种变体</h3><label>谱例 <select><option value="leadingDown">内声部导音下行</option><option value="doubleThird">主和弦重复三音</option><option value="seventhUp">七音上行至 I₆ 的五音</option><option value="retain">七音保留，进入 IV₆</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="seventh-preparation"><h2 id="seventh-preparation">七音的引入与预备</h2>
+      <p>为了缓和七音进入时的不协和，可让它在前一和弦中已出现并保持，或让声部级进经过七音，或把七音放在两个相同音之间形成辅助式进行。也可以无预备地跳到七音。I、IV、V 都可出现在 V₇ 前面，之后常接 I 或 I₆，偶尔接 IV₆。</p>
+      <div class="music-demo" data-harmony-options="seventhPreparation" id="seventhPreparation">
+        <div class="music-demo-toolbar"><h3>属七和弦七音的四种引入</h3><label>谱例 <select><option value="sustained">同音预备</option><option value="passing">经过式</option><option value="neighbor">辅助式</option><option value="leap">不预备，跳进引入</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="seventh-usage"><h2 id="seventh-usage">属七在乐句中的用法</h2>
+      <p>V₇–I 是正格终止的常用语汇，也能在乐段开始或中间明确调性。原先可用 V 的位置，可根据张力需要考虑 V₇。选择时看七音是否能顺畅引入和解决，也看此处是否需要更强烈的归主感。</p>
+      <p>配旋律时，第Ⅳ级除了可在下属和弦中作根音，还可在 V₇ 中作七音。若旋律随后下行到第Ⅲ级，常可采用 V₇–I。相反，在同一属功能内部，也可让 V 先延长，再加入七音推动解决。</p>
+      <figure data-harmony-example="seventhPhrase"><figcaption>从属三到属七，再解决到主和弦</figcaption></figure>
+      </section>
+    </main>
+  </body>
+</html>

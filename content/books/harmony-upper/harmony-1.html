@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第一章 和弦｜和声学基础</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 上</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第一章　和弦</h1>
+      <p class="intro">从三度叠置读出和弦的结构，再把它放回调式和四部和声中。</p>
+      <section aria-labelledby="chord-construction"><h2 id="chord-construction">三度叠置与和弦音</h2>
+      <p>和声研究和弦的结构、连接和进行的逻辑。同一个和弦可以有不同的音响，也可以因所在调式而承担不同的作用。后面几章会把和弦拆到各声部中，考察音怎样从前一个和弦进行到后一个和弦。</p>
+      <p>在传统调性和声中，三个或更多不同的音按三度叠置构成和弦。两个音同时发声构成和声音程。把 C、E、G 依次叠成三度，最下面的 C 是<strong>根音</strong>，E 是<strong>三音</strong>，G 是<strong>五音</strong>。三音、五音的名称来自它们与根音的音程。三度叠置时，两段相邻的三度可以分别是大三度或小三度，因此有四种基本三和弦。</p>
+      <p>实际写作中可以把和弦音移到别的八度。同一组 C、E、G 以 E 或 G 作最低音时，根音仍是 C。<strong>根音</strong>用来识别和弦结构，<strong>低音</strong>是实际发声最低的音。</p>
+      <figure data-harmony="root-order"><figcaption>C 大三和弦的根音与最低音</figcaption></figure>
+      </section>
+      <section aria-labelledby="triad-quality"><h2 id="triad-quality">四种三和弦</h2>
+      <table class="lesson-table">
+      <caption>三和弦的三度结构</caption><thead><tr><th scope="col">种类</th><th scope="col">根音至三音</th><th scope="col">三音至五音</th><th scope="col">根音至五音</th></tr></thead>
+      <tbody><tr><th scope="row">大三和弦</th><td>大三度</td><td>小三度</td><td>纯五度</td></tr>
+      <tr><th scope="row">小三和弦</th><td>小三度</td><td>大三度</td><td>纯五度</td></tr>
+      <tr><th scope="row">减三和弦</th><td>小三度</td><td>小三度</td><td>减五度</td></tr>
+      <tr><th scope="row">增三和弦</th><td>大三度</td><td>大三度</td><td>增五度</td></tr></tbody>
+      </table>
+      <figure data-harmony="triad-quality"><figcaption>以 C 为根音的大、小、减、增三和弦</figcaption></figure>
+      </section>
+      <section aria-labelledby="scale-chords"><h2 id="scale-chords">调式音阶上的和弦</h2>
+      <p>在每一级上隔一个音级取一个音，就能写出该级的三和弦。罗马数字表示根音所在的音级。大三和弦用大写，小三和弦用小写。减三和弦用小写加 °，增三和弦用大写加 +。小调的和弦随所用小调音阶变化。以 a 小调为例，把 G 升为 G♯ 后，含第Ⅶ级的 III、V 和 vii 都改变性质，其他各级三和弦保持原有结构。</p>
+      <table class="lesson-table">
+      <caption>C 大调与 a 和声小调的各级三和弦</caption><thead><tr><th scope="col">根音级</th><th scope="col">C 大调</th><th scope="col">a 和声小调</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">Ⅰ 主音</th><td>I · C–E–G</td><td>i · A–C–E</td></tr>
+      <tr><th scope="row">Ⅱ 上主音</th><td>ii · D–F–A</td><td>ii° · B–D–F</td></tr>
+      <tr><th scope="row">Ⅲ 中音</th><td>iii · E–G–B</td><td>III+ · C–E–G♯</td></tr>
+      <tr><th scope="row">Ⅳ 下属音</th><td>IV · F–A–C</td><td>iv · D–F–A</td></tr>
+      <tr><th scope="row">Ⅴ 属音</th><td>V · G–B–D</td><td>V · E–G♯–B</td></tr>
+      <tr><th scope="row">Ⅵ 下中音</th><td>vi · A–C–E</td><td>VI · F–A–C</td></tr>
+      <tr><th scope="row">Ⅶ 导音</th><td>vii° · B–D–F</td><td>vii° · G♯–B–D</td></tr>
+      </tbody></table>
+      <h3>七和弦与九和弦</h3>
+      <p>三和弦上再叠一个三度，得到七和弦，新增的是根音上方的七音。再叠一个三度，得到九和弦，新增的是九音。各级都能构成七和弦，数字 7 加在级数右下方。C 大调从 I<sub>7</sub> 到 vii°<sub>7</sub>，七音依次是 B、C、D、E、F、G、A。这里的 vii°<sub>7</sub> 以减三和弦为基础，根音上方是小七度，整体是半减七和弦。</p>
+      <figure data-harmony="diatonic-sevenths"><figcaption>C 大调第Ⅰ至Ⅶ级的七和弦</figcaption></figure>
+      <p>九和弦中常用的是属九和弦 V<sub>9</sub>。C 大调的属九和弦在 G–B–D–F 上加 A，a 和声小调在 E–G♯–B–D 上加 F。两者的根音至九音分别为大九度和小九度。</p>
+      <figure data-harmony="dominant-ninths"><figcaption>C 大调与 a 和声小调的属九和弦</figcaption></figure>
+      </section>
+      <section aria-labelledby="function"><h2 id="function">和弦音响与调式功能</h2>
+      <p>由协和音程组成的大、小三和弦是协和和弦。减三和弦有减五度，增三和弦有增五度，七和弦、九和弦也包含不协和音程，在传统和声中都归为不协和和弦。大、小三和弦各含大三度、小三度和纯五度，次序不同，音色也常形成明亮与柔和的对照。七和弦、九和弦虽都归入不协和，底层三和弦的结构和上方的音程仍会影响色彩。</p>
+      <p><strong>正三和弦</strong>是主和弦、下属和弦与属和弦的统称。大调为 I、IV、V，和声小调为 i、iv、V。三者合起来包含调式的七个音级，能够确立调性。三者分别建立在调式的三个正音级上。主和弦最稳定，下属和属和弦都能趋向主和弦。属和弦含导音，导音向上半音到主音，使属到主的倾向尤其明确。</p>
+      </section>
+      <section aria-labelledby="satb"><h2 id="satb">四部和声与声部音域</h2>
+      <p>四部写法把和弦音分给女高音（S）、女中音（A）、男高音（T）、男低音（B）所对应的四条音线，按高音、中音、次中音、低音排列。高音通常承担旋律，低音给出和弦的低音线。高音和低音是外声部，中音和次中音是内声部。</p>
+      <table class="lesson-table"><caption>四部写作的参考音域</caption><thead><tr><th scope="col">高音 S</th><th scope="col">中音 A</th><th scope="col">次中音 T</th><th scope="col">低音 B</th></tr></thead><tbody><tr><td>C4–C6</td><td>G3–E5</td><td>C3–A4</td><td>C2–E4</td></tr></tbody></table>
+      <p>旋律主要在各声部的中间音区活动，极高音和极低音少用。本课程的四部谱使用上下两行五线谱，上行写高音和中音，下行写次中音和低音。</p>
+      </section>
+    </main>
+  </body>
+</html>

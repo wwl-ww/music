@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第一章 音的长短｜乐理教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">基本乐理教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第一章　音的长短</h1>
+      <p class="intro">同一个音可以唱得长，也可以唱得短。这一章对照五线谱和简谱，看看怎样记下声音、停顿和延长的时间。</p>
+
+      <section aria-labelledby="notes-title">
+        <h2 id="notes-title">音符与时值</h2>
+        <p>音符记录乐音的音高和长短。音持续的时间叫<strong>时值</strong>。全音符等于两个二分音符，二分音符又等于两个四分音符。它们的名称表示相对于全音符的比例，具体持续几秒还要看演奏速度。</p>
+        <p>简谱的基本音符是 1、2、3、4、5、6、7，唱作 do、re、mi、fa、sol、la、si。单写一个数字，时值等于一个四分音符。数字右边每加一条<strong>增时线</strong>，就多一个四分音符的时值。数字下每加一条<strong>减时线</strong>，时值就在现有基础上再减半。</p>
+        <p>五线谱的音符可由<strong>符头、符干、符尾</strong>组成。全音符只有空心符头，二分音符加上符干，四分音符改用实心符头。从四分音符开始，每增加一道符尾（或符杠），时值减半。</p>
+        <table class="lesson-table duration-table">
+          <caption>音符的常见时值（以四分音符为一拍）</caption>
+          <thead><tr><th scope="col">名称</th><th scope="col">五线谱</th><th scope="col">简谱</th><th scope="col">拍数</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">全音符</th><td><span class="music-symbol" aria-hidden="true">&#xe1d2;</span></td><td>5 − − −</td><td>4</td></tr>
+            <tr><th scope="row">二分音符</th><td><span class="music-symbol" aria-hidden="true">&#xe1d3;</span></td><td>5 −</td><td>2</td></tr>
+            <tr><th scope="row">四分音符</th><td><span class="music-symbol" aria-hidden="true">&#xe1d5;</span></td><td><span class="numbered-symbol" data-underlines="0">5</span></td><td>1</td></tr>
+            <tr><th scope="row">八分音符</th><td><span class="music-symbol" aria-hidden="true">&#xe1d7;</span></td><td><span class="numbered-symbol" data-underlines="1">5</span></td><td><span class="fraction" role="img" aria-label="1/2"><span aria-hidden="true">1</span><span aria-hidden="true">2</span></span></td></tr>
+            <tr><th scope="row">十六分音符</th><td><span class="music-symbol" aria-hidden="true">&#xe1d9;</span></td><td><span class="numbered-symbol" data-underlines="2">5</span></td><td><span class="fraction" role="img" aria-label="1/4"><span aria-hidden="true">1</span><span aria-hidden="true">4</span></span></td></tr>
+            <tr><th scope="row">三十二分音符</th><td><span class="music-symbol" aria-hidden="true">&#xe1db;</span></td><td><span class="numbered-symbol" data-underlines="3">5</span></td><td><span class="fraction" role="img" aria-label="1/8"><span aria-hidden="true">1</span><span aria-hidden="true">8</span></span></td></tr>
+          </tbody>
+        </table>
+        <p class="example-note">较少见的二全音符 <span class="music-symbol" aria-hidden="true">&#xE1D0;</span> 等于两个全音符。</p>
+        <details class="lesson-aside">
+          <summary>五线谱手写规范</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>符头大小约等于一个线间。符头在线上还是间内必须写清楚。全音符的符头向右下倾斜，其余通常向右上倾斜。
+                <svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="线上的全音符符头和间内的实心符头">
+                  <path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/>
+                  <text x="21" y="22">&#xE0A2;</text><text x="49" y="14.5">&#xE0A4;</text>
+                </svg>
+              </li>
+              <li>符干通常长约三个线间。同一符干连着多个符头时，还要留出这些符头之间的距离。
+                <svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="单个符头的符干跨三个线间，多个符头的符干更长">
+                  <path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/>
+                  <path d="M24 27V12 M57 27V7"/>
+                  <text x="18" y="27">&#xE0A4;</text><text x="51" y="27">&#xE0A4;</text><text x="51" y="22">&#xE0A4;</text>
+                </svg>
+              </li>
+              <li>符头在第三线以上，符干写在左侧向下。第三线以下写在右侧向上。第三线上的音可随上下文取向。
+                <svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="低音符干向上，高音符干向下">
+                  <path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/>
+                  <path d="M24 27V11 M51 12V28"/>
+                  <text x="18" y="27">&#xE0A4;</text><text x="51" y="12">&#xE0A4;</text>
+                </svg>
+              </li>
+              <li>同一符干上的两个相邻音错开写，低音在左，高音在右。
+                <svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="相邻符头共用一根符干，左低右高">
+                  <path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/>
+                  <path d="M38 22V5"/>
+                  <text x="32" y="22">&#xE0A4;</text><text x="38" y="19.5">&#xE0A4;</text>
+                </svg>
+              </li>
+              <li>单独的符尾写在符干右侧。符干向上时，符尾向下弯，反之向上弯。
+                <svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="两种符干方向下，符尾都在右侧">
+                  <path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/>
+                  <path d="M24 27V10 M51 12V29"/>
+                  <text x="18" y="27">&#xE0A4;</text><text x="51" y="12">&#xE0A4;</text><text x="24" y="10">&#xE240;</text><text x="51" y="29">&#xE241;</text>
+                </svg>
+              </li>
+              <li>同一拍内多个带符尾的音可用符杠相连。符干方向通常依多数音的位置决定，符杠斜度大致顺着音高走势。
+                <svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="三个上行音符的符干由略向上倾斜的符杠相连">
+                  <path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/>
+                  <path d="M24 27V12 M43 24.5V9.5 M62 22V7 M24 12L62 7 M24 13L62 8"/>
+                  <text x="18" y="27">&#xE0A4;</text><text x="37" y="24.5">&#xE0A4;</text><text x="56" y="22">&#xE0A4;</text>
+                </svg>
+              </li>
+              <li>同一谱表内，高声部通常符干向上，低声部向下。两声部节奏相同，可以共用符干。
+                <svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="左边高低声部各用一根符干，右边两个音共用一根符干">
+                  <path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/>
+                  <path d="M25 12V1 M19 22V33 M56 22V1"/>
+                  <text x="19" y="12">&#xE0A4;</text><text x="19" y="22">&#xE0A4;</text><text x="50" y="12">&#xE0A4;</text><text x="50" y="22">&#xE0A4;</text>
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="rests-title">
+        <h2 id="rests-title">休止符及其时值</h2>
+        <p><strong>休止符</strong>记录音乐中暂时不出声的时段。简谱用 0，短休止在 0 下加减时线，长休止用多个 0。五线谱的全休止符挂在线下，二分休止符坐在线上。</p>
+        <table class="lesson-table duration-table">
+          <caption>休止符的常见时值（以四分音符为一拍）</caption>
+          <thead><tr><th scope="col">名称</th><th scope="col">五线谱</th><th scope="col">简谱</th><th scope="col">拍数</th></tr></thead>
+          <tbody>
+            <tr>
+              <th scope="row">全休止符</th>
+              <td><svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="全休止符挂在第四线下方">
+                <path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/>
+                <rect x="33" y="12" width="10" height="2.5"/>
+              </svg></td>
+              <td>0　0　0　0</td><td>4</td>
+            </tr>
+            <tr>
+              <th scope="row">二分休止符</th>
+              <td><svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="二分休止符坐在第三线上方">
+                <path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/>
+                <rect x="33" y="14.5" width="10" height="2.5"/>
+              </svg></td>
+              <td>0　0</td><td>2</td>
+            </tr>
+            <tr><th scope="row">四分休止符</th><td><span class="music-symbol" aria-hidden="true">&#xe4e5;</span></td><td><span class="numbered-symbol" data-underlines="0">0</span></td><td>1</td></tr>
+            <tr><th scope="row">八分休止符</th><td><span class="music-symbol" aria-hidden="true">&#xe4e6;</span></td><td><span class="numbered-symbol" data-underlines="1">0</span></td><td><span class="fraction" role="img" aria-label="1/2"><span aria-hidden="true">1</span><span aria-hidden="true">2</span></span></td></tr>
+            <tr><th scope="row">十六分休止符</th><td><span class="music-symbol" aria-hidden="true">&#xe4e7;</span></td><td><span class="numbered-symbol" data-underlines="2">0</span></td><td><span class="fraction" role="img" aria-label="1/4"><span aria-hidden="true">1</span><span aria-hidden="true">4</span></span></td></tr>
+            <tr><th scope="row">三十二分休止符</th><td><span class="music-symbol" aria-hidden="true">&#xe4e8;</span></td><td><span class="numbered-symbol" data-underlines="3">0</span></td><td><span class="fraction" role="img" aria-label="1/8"><span aria-hidden="true">1</span><span aria-hidden="true">8</span></span></td></tr>
+          </tbody>
+        </table>
+        <aside class="lesson-callout" aria-labelledby="whole-rest-title">
+          <h3 id="whole-rest-title">整小节休止</h3>
+          <p>全休止符单独用来表示整小节休止时，占满该小节。比如 <span class="time-signature" role="img" aria-label="3/4 拍"><span aria-hidden="true">3</span><span aria-hidden="true">4</span></span> 拍里，它表示休止三拍。</p>
+        </aside>
+        <details class="lesson-aside">
+          <summary>多小节休止的记法</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>长休止记号上方的数字表示连续休止的小节数。图中为两小节。
+                <svg class="inline-staff" viewBox="0 -3 76 37" role="img" aria-label="长休止记号上方标有数字二">
+                  <path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/>
+                  <rect x="20" y="15.5" width="36" height="3"/>
+                  <path d="M20 12V22 M56 12V22"/>
+                  <text class="inline-staff-count" x="38" y="6" text-anchor="middle">2</text>
+                </svg>
+              </li>
+              <li>教材也列出两端收尖的长休止记号，用于小节数不定的长休止。
+                <svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="两端收尖、上方无数字的长休止记号">
+                  <path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/>
+                  <polygon points="19,12 24,15.5 52,15.5 57,12 54,17 57,22 52,18.5 24,18.5 19,22 22,17"/>
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="dots-title">
+        <h2 id="dots-title">附点与复附点</h2>
+        <p>音符或休止符右边的小圆点叫<strong>附点</strong>，增加原时值的<span class="fraction" role="img" aria-label="二分之一"><span aria-hidden="true">1</span><span aria-hidden="true">2</span></span>。两个点叫<strong>复附点</strong>，第二个点再增加原时值的<span class="fraction" role="img" aria-label="四分之一"><span aria-hidden="true">1</span><span aria-hidden="true">4</span></span>。</p>
+        <table class="lesson-table">
+          <caption>四分音符、附点与复附点</caption>
+          <thead><tr><th scope="col">五线谱</th><th scope="col">简谱</th><th scope="col">拍数</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="无附点的四分音符"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><path d="M36 22V7"/><text x="30" y="22">&#xE0A4;</text></svg>四分</th><td>5</td><td>1</td></tr>
+            <tr><th scope="row"><svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="附点四分音符"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><path d="M36 22V7"/><text x="30" y="22">&#xE0A4;</text><circle cx="41" cy="19.5" r="1.05"/></svg>附点</th><td>5·</td><td>1 <span class="fraction" role="img" aria-label="1/2"><span aria-hidden="true">1</span><span aria-hidden="true">2</span></span></td></tr>
+            <tr><th scope="row"><svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="复附点四分音符"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><path d="M36 22V7"/><text x="30" y="22">&#xE0A4;</text><circle cx="41" cy="19.5" r="1.05"/><circle cx="46" cy="19.5" r="1.05"/></svg>复附点</th><td>5··</td><td>1 <span class="fraction" role="img" aria-label="3/4"><span aria-hidden="true">3</span><span aria-hidden="true">4</span></span></td></tr>
+          </tbody>
+        </table>
+        <p>同样的算法适用于休止符。例如附点四分休止等于四分休止加八分休止，复附点再加一个十六分休止。<svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="带两个附点的四分休止符"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><text x="32" y="17">&#xE4E5;</text><circle cx="43" cy="14.5" r="1.05"/><circle cx="48" cy="14.5" r="1.05"/></svg>五线谱中各种基本时值都可以加点。简谱通常给四分音符、四分休止符及更短的音符和休止符加点。</p>
+        <details class="lesson-aside">
+          <summary>附点在谱表上的位置</summary>
+          <div class="lesson-aside-content"><ul>
+            <li>附点写在符头右边。符头在间内时，点留在同一间。<svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="符头和附点都在同一间"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><path d="M36 19.5V4.5"/><text x="30" y="19.5">&#xE0A4;</text><circle cx="41" cy="19.5" r="1.05"/></svg></li>
+            <li>符头在线上时，点写到上方相邻的间内。<svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="符头在线上，附点在上方的间内"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><path d="M36 22V7"/><text x="30" y="22">&#xE0A4;</text><circle cx="41" cy="19.5" r="1.05"/></svg></li>
+          </ul></div>
+        </details>
+      </section>
+
+      <section aria-labelledby="tuplets-title">
+        <h2 id="tuplets-title">基本划分与连音符</h2>
+        <p>把全音符对半分成二分音符，再对半分成四分音符、八分音符，是时值的<strong>基本划分</strong>。把同一段时值改成另一种等分，就会用到<strong>连音符</strong>。例如一个四分音符通常分成两个八分音符，八分三连音把同样长的一拍均分成三个音。</p>
+        <figure class="duration-division">
+          <figcaption>一拍的二等分与三等分</figcaption>
+          <div><span>一个四分音符</span><svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="一个四分音符"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><path d="M36 22V7"/><text x="30" y="22">&#xE0A4;</text></svg><span class="duration-segments" aria-hidden="true"><i></i></span></div>
+          <div><span>两个八分音符</span><svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="两个共用符杠的八分音符"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><path d="M29 27V10 M49 27V10"/><rect x="29" y="9.4" width="20" height="1.8"/><text x="23" y="27">&#xE0A4;</text><text x="43" y="27">&#xE0A4;</text></svg><span class="duration-segments" aria-hidden="true"><i></i><i></i></span></div>
+          <div><span>八分三连音</span><svg class="inline-staff" viewBox="0 -3 76 37" role="img" aria-label="符杠上方标有数字三的八分三连音"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><path d="M20 27V10 M38 27V10 M56 27V10"/><rect x="20" y="9.4" width="36" height="1.8"/><text x="14" y="27">&#xE0A4;</text><text x="32" y="27">&#xE0A4;</text><text x="50" y="27">&#xE0A4;</text><text class="inline-staff-count" x="38" y="6" text-anchor="middle">3</text></svg><span class="duration-segments" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        </figure>
+        <table class="lesson-table duration-table">
+          <caption>连音符的等分关系</caption>
+          <thead><tr><th scope="col">原有等分</th><th scope="col">改为等分</th><th scope="col">记法</th><th scope="col">谱例</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">2 份</th><td>3 份</td><td>三连音</td><td><svg class="inline-staff" viewBox="0 -4 76 43" role="img" aria-label="三连音谱例"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><path d="M16 27V10 M41 27V10 M66 27V10"/><rect x="16" y="9.4" width="50" height="1.8"/><text x="10" y="27">&#xE0A4;</text><text x="35" y="27">&#xE0A4;</text><text x="60" y="27">&#xE0A4;</text><text class="inline-staff-count" x="38" y="6" text-anchor="middle">3</text></svg></td></tr>
+            <tr><th scope="row">4 份</th><td>5、6 或 7 份</td><td>五至七连音</td><td><svg class="inline-staff" viewBox="0 -4 76 43" role="img" aria-label="五连音谱例"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><path d="M16 27V10 M29 27V10 M41 27V10 M54 27V10 M66 27V10"/><rect x="16" y="9.4" width="50" height="1.8"/><rect x="16" y="12" width="50" height="1.8"/><text x="10" y="27">&#xE0A4;</text><text x="23" y="27">&#xE0A4;</text><text x="35" y="27">&#xE0A4;</text><text x="48" y="27">&#xE0A4;</text><text x="60" y="27">&#xE0A4;</text><text class="inline-staff-count" x="38" y="6" text-anchor="middle">5</text></svg></td></tr>
+            <tr><th scope="row">8 份</th><td>9 至 15 份</td><td>九至十五连音</td><td><svg class="inline-staff inline-staff-wide" viewBox="0 -4 108 43" role="img" aria-label="九连音谱例"><path class="inline-staff-lines" d="M1 7H107 M1 12H107 M1 17H107 M1 22H107 M1 27H107"/><path d="M16 27V10 M26 27V10 M37 27V10 M47 27V10 M57 27V10 M67 27V10 M78 27V10 M88 27V10 M98 27V10"/><rect x="16" y="9.4" width="82" height="1.8"/><rect x="16" y="12" width="82" height="1.8"/><text x="10" y="27">&#xE0A4;</text><text x="20" y="27">&#xE0A4;</text><text x="31" y="27">&#xE0A4;</text><text x="41" y="27">&#xE0A4;</text><text x="51" y="27">&#xE0A4;</text><text x="61" y="27">&#xE0A4;</text><text x="72" y="27">&#xE0A4;</text><text x="82" y="27">&#xE0A4;</text><text x="92" y="27">&#xE0A4;</text><text class="inline-staff-count" x="54" y="6" text-anchor="middle">9</text></svg></td></tr>
+            <tr><th scope="row">附点时值的 3 份</th><td>2 或 4 份</td><td>二连音或四连音</td><td><svg class="inline-staff" viewBox="0 -4 76 43" role="img" aria-label="二连音谱例"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><path d="M27 27V10 M55 27V10"/><path d="M21 30V33H32 M44 33H55V30"/><text x="21" y="27">&#xE0A4;</text><text x="49" y="27">&#xE0A4;</text><text class="inline-staff-count" x="38" y="36" text-anchor="middle">2</text></svg></td></tr>
+          </tbody>
+        </table>
+        <details class="lesson-aside">
+          <summary>连音符数字与组内休止符</summary>
+          <div class="lesson-aside-content"><ul>
+            <li>连音符数字通常写在共同符杠一侧。没有共用符杠时，可在符头一侧用括线圈出这组音。<svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="八分三连音中间有一个休止符，三个位置由标有三的括线连接"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><path d="M20 27V12 M58 27V12 M14 30V32H32 M44 32H64V30"/><text x="14" y="27">&#xE0A4;</text><text x="52" y="27">&#xE0A4;</text><text x="20" y="12">&#xE240;</text><text x="58" y="12">&#xE240;</text><text x="34" y="17">&#xE4E6;</text><text class="inline-staff-count" x="38" y="34" text-anchor="middle">3</text></svg></li>
+            <li>一组连音符可以包含休止。例如八分三连音里，一个八分休止符和其他两个位置各占这拍的<span class="fraction" role="img" aria-label="三分之一"><span aria-hidden="true">1</span><span aria-hidden="true">3</span></span>。</li>
+            <li>组内音符和休止符沿用被替换的基本划分的符号，再用连音符数字说明实际比例。</li>
+          </ul></div>
+        </details>
+      </section>
+
+      <section aria-labelledby="extensions-title">
+        <h2 id="extensions-title">延长记号与延音线</h2>
+        <p><strong>延长记号</strong>表示把音或停顿延长，延长量没有固定拍数。它可以写在音符上方或下方，也可以写在休止符上方。<svg class="inline-staff" viewBox="0 -10 76 48" role="img" aria-label="四分音符上方的延长记号"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><path d="M36 22V7"/><text x="30" y="22">&#xE0A4;</text><text x="29" y="3">&#xE4C0;</text></svg> 放在小节线上方时，表示在两小节之间稍作停顿。</p>
+        <p><strong>延音线</strong>是连接同音高音符的弧线。线下的时值相加，演奏时只起音一次。</p>
+        <p>两个同音高的四分音符用延音线相连 <svg class="inline-staff" viewBox="0 -5 76 43" role="img" aria-label="两个同音高四分音符由下方的延音线连接"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><path d="M24 22V7 M57 22V7 M26 25Q38 31 50 25"/><text x="18" y="22">&#xE0A4;</text><text x="51" y="22">&#xE0A4;</text></svg>，合成一个二分音符的时值。</p>
+        <details class="lesson-aside">
+          <summary>延音线的方向</summary>
+          <div class="lesson-aside-content"><ul>
+            <li>简谱的延音线放在数字上方。五线谱单声部中，弧线通常写在符干的相反一侧。</li>
+            <li>同一谱表中有两个声部时，高声部的延音线向上弯，低声部向下弯。<svg class="inline-staff" viewBox="0 -5 76 43" role="img" aria-label="上声部的延音线在上方，下声部的延音线在下方"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><path d="M24 12V-2 M57 12V-2 M18 22V36 M51 22V36 M26 10Q38 4 50 10 M26 25Q38 31 50 25"/><text x="18" y="12">&#xE0A4;</text><text x="51" y="12">&#xE0A4;</text><text x="18" y="22">&#xE0A4;</text><text x="51" y="22">&#xE0A4;</text></svg> 更多声部时可用上下两个方向避免重叠。</li>
+          </ul></div>
+        </details>
+      </section>
+    </main>
+  </body>
+</html>

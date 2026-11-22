@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第四十四章 等和弦转调（三）· 增三等和弦转调｜和声学基础 · 下</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony-43-44.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 下</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第四十四章　等和弦转调（三）· 增三等和弦转调</h1>
+      <p class="intro">增三和弦把八度等分为三个大三度。同一组音可以有三个不同的根音拼写，再按上行或下行的倾向解决，把原来相距较远的调连接起来。</p>
+
+      <section aria-labelledby="augmented-symmetry">
+        <h2 id="augmented-symmetry">增三和弦的对称性</h2>
+        <p>增三和弦由两个大三度叠置。第三个音到上方八度的根音是减四度，在十二平均律中也等于四个半音。三个音轮流作根音，都可以重写成相隔两个大三度的和弦。</p>
+        <p>C–E–G♯、E–G♯–B♯、A♭–C–E 是三个等音写法。把它们放在同一音区时，琴键完全重合
+          <svg class="inline-staff inline-staff-wide" viewBox="0 -3 142 45" role="img" aria-label="同音区的三个等音增三和弦，C4 E4 G♯4、B♯3 E4 G♯4、C4 E4 A♭4">
+            <path class="inline-staff-lines" d="M1 7H141 M1 12H141 M1 17H141 M1 22H141 M1 27H141"/>
+            <path d="M14 32H30 M63 32H79 M111 32H127"/>
+            <text x="8" y="22">&#xE262;</text>
+            <text x="18" y="22">&#xE0A2;</text><text x="18" y="27">&#xE0A2;</text><text x="18" y="32">&#xE0A2;</text>
+            <text x="57" y="34.5">&#xE262;</text><text x="57" y="22">&#xE262;</text>
+            <text x="67" y="22">&#xE0A2;</text><text x="67" y="27">&#xE0A2;</text><text x="67" y="34.5">&#xE0A2;</text>
+            <text x="105" y="19.5">&#xE260;</text>
+            <text x="115" y="19.5">&#xE0A2;</text><text x="115" y="27">&#xE0A2;</text><text x="115" y="32">&#xE0A2;</text>
+          </svg>。
+          从十二个音出发虽然能写出十二个根音不同的增三和弦，按实音合并后只有四组。
+        </p>
+        <table class="lesson-table duration-table">
+          <caption>十二平均律中的四组增三实音</caption>
+          <thead><tr><th scope="col">一种增三拼写</th><th scope="col">同一组音也可解释为</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">C–E–G♯</th><td>C⁺、E⁺、A♭⁺</td></tr>
+            <tr><th scope="row">D♭–F–A</th><td>D♭⁺、F⁺、A⁺</td></tr>
+            <tr><th scope="row">D–F♯–A♯</th><td>D⁺、F♯⁺、B♭⁺</td></tr>
+            <tr><th scope="row">E♭–G–B</th><td>E♭⁺、G⁺、B⁺</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="augmented-functions">
+        <h2 id="augmented-functions">关系大小调中的常见增三和弦</h2>
+        <p>关系大小调分别有两种常用的增三和弦。以 C 大调和 a 小调为例，升高 V 或 III 的和弦五音可得到属方向的变和弦。降低 vi 或 iv 的和弦根音可得到下属方向的变和弦。这里的升、降用来说明变化的来源和解决方向。</p>
+        <table class="lesson-table duration-table">
+          <caption>C 大调与 a 小调的四种用法</caption>
+          <thead><tr><th scope="col">调内功能</th><th scope="col">构成</th><th scope="col">解决线索</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">C 大调 V⁺</th><td>G–B–D♯<br>升高 V 的五音。</td><td>B 上行到 C，D♯ 上行到 E。</td></tr>
+            <tr><th scope="row">C 大调 ♭VI⁺</th><td>A♭–C–E<br>降低 vi 的根音。</td><td>A♭ 下行到 G，可接终止四六。</td></tr>
+            <tr><th scope="row">a 小调 III⁺</th><td>C–E–G♯<br>升高 III 的五音，即调式第Ⅶ级。</td><td>G♯ 上行到 A，C 与 E 可保持。</td></tr>
+            <tr><th scope="row">a 小调 ♭IV⁺</th><td>D♭–F–A<br>降低 iv 的根音。</td><td>D♭ 下行到 C，可通向主和弦。</td></tr>
+          </tbody>
+        </table>
+        <p>小调的 III⁺ 与 ♭IV⁺ 常以第一转位出现。C 大调的 ♭VI⁺ 与 a 小调的 III⁺ 只差 A♭ 与 G♯ 的拼写。同一个音在 C 大调的下属方向倾向下降，在 a 小调的属方向却是上行导音。</p>
+      </section>
+
+      <section aria-labelledby="augmented-range">
+        <h2 id="augmented-range">一个增三和弦的十二个调性位置</h2>
+        <p><strong>按属方向解释</strong>，把和弦的三个音轮流视作新调的导音。各导音上行半音到三个不同的主音，每个主音都能形成大、小两种主和弦，共得到六个调。大调可写成 V⁺，小调可写成 III⁺。</p>
+        <p><strong>按下属方向解释</strong>，把三个音轮流写作大调的降Ⅵ级，或小调的降Ⅳ级。降Ⅵ级下行到属音，降Ⅳ级下行到小主和弦的三音。三个和弦实音轮流成为新调主音，仍各有大小两种，共得到另外六个调。</p>
+        <table class="lesson-table duration-table">
+          <caption>常见增三中介的目标主音，每个主音均可配大调或小调</caption>
+          <thead><tr><th scope="col">出发调和中介</th><th scope="col">下属方向<br>以和弦音为主音</th><th scope="col">属方向<br>在和弦音上方半音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">C 大调 V⁺<br>G–B–D♯</th><td>E♭、G、B</td><td>E、A♭、C</td></tr>
+            <tr><th scope="row">C 大调 ♭VI⁺／a 小调 III⁺<br>A♭–C–E</th><td>A♭、C、E</td><td>A、D♭、F</td></tr>
+            <tr><th scope="row">a 小调 ♭IV⁺<br>D♭–F–A</th><td>D♭、F、A</td><td>D、G♭、B♭</td></tr>
+            <tr><th scope="row">G 大调 V⁺<br>D–F♯–A♯</th><td>D、F♯、B♭</td><td>E♭、G、B</td></tr>
+          </tbody>
+        </table>
+        <p>把原调计入时共有十二个位置。因此从已确立的出发调计，可转入另外十一个调。例如 d 小调的 ♭IV⁺ 拼作 G♭–B♭–D，可按下属方向到 G♭、B♭、D 为主音的大小调，也可按属方向到 G、B、E♭ 为主音的大小调。</p>
+        <aside class="lesson-callout"><h3>大三度、增五度与大二度</h3><p>同一组增三和弦，每升高四或八个半音仍保留原有实音。从 C 大调到 E 大调，或到 G♯ 的等音调 A♭ 大调，共同的增三和弦都可保持 V⁺ 的功能，只需重写音名。整体相距大二度的两组增三和弦则互补。例如把 G–B–D♯ 的三个音一同升高两个半音，得到 A–C♯–E♯，它正与 D♭–F–A 同音。两组合在一起时，可覆盖十二个主音的全部大小调。</p></aside>
+      </section>
+
+      <section aria-labelledby="augmented-voice-leading">
+        <h2 id="augmented-voice-leading">中介增三和弦的引入与解决</h2>
+        <ol>
+          <li><strong>按新调倒推中介。</strong> 先决定要用属方向还是下属方向进入新调，再选含有相应导音、降Ⅵ级或降Ⅳ级的那一组增三和弦。</li>
+          <li><strong>用半音引入。</strong> 大三和弦可升高五音，小三和弦可降低根音，另外两音留在原声部。也可保持一音，将大三和弦的根音和三音各降半音，或把小三和弦的三音和五音各升半音。例如保留 Am 的 A，把 C、E 升成 C♯、E♯，得到 A⁺。只要声部进行平稳，中介也可由其他和弦直接引入。</li>
+          <li><strong>按新调功能重写。</strong> 同一音高可因功能改变而重新拼写。例如 A♭ 在 C 大调是降Ⅵ级，写成 G♯ 就可成为 a 小调的导音。用音名表明趋向音该向上还是向下解决。</li>
+          <li><strong>保留趋向音的单一声部。</strong> 三声部已足以写全增三和弦。四声部应避免重复起变音作用的音和导音，第四声部可重复两边都稳定的和弦音。</li>
+          <li><strong>按新调完成解决。</strong> 带上行倾向的音向上解决，带下行倾向的音向下解决。其后用新调的主和弦或属到主的终止确立调性。</li>
+        </ol>
+        <p>同一组 G–B–D♯ 可由 C 大调的 V⁺ 进入 E♭ 大调的 ♭VI⁺，也可反向解释。向 E♭ 大调转时 B 写成 C♭，向下到 B♭。向 C 大调转时 C♭ 写成 B，向上到 C。</p>
+        <p>以 E 大调为目标，若选属方向，D♯ 作导音，中介可写成 B–D♯–F𝄪，随后让 D♯ 上行到 E。若选下属方向，降Ⅵ级 C 是需要下行的音，中介可写成 C–E–G♯，随后让 C 下行到属音 B。目标相同，两种进入方式需要两组不同的实际音高。</p>
+        <div class="music-demo" id="augmented-triad-modulations" data-harmony-options="augmented-triad-modulations">
+          <div class="music-demo-toolbar"><h3>共同增三和弦的功能转换</h3><label>路线
+            <select>
+              <option value="toFlat">C 大调 → E♭ 大调</option>
+              <option value="toDominant">E♭ 大调 → C 大调</option>
+              <option value="toRelativeMinor">C 大调 → a 小调</option>
+              <option value="minorModes">e♭ 小调 → f♯ 小调</option>
+            </select>
+          </label></div>
+          <output class="music-demo-cue">相同的实音在 C 大调是 V⁺，到 E♭ 大调重写为 ♭VI⁺。</output>
+          <figure aria-label="增三等和弦的四种转调路线"></figure>
+        </div>
+        <details class="lesson-aside">
+          <summary>中介提前出现与织体变化</summary>
+          <div class="lesson-aside-content"><p>原调可以先把增三和弦按原功能解决一次，后来以同一实音改接新调。变换处也可在低音提前引出新调属音，或暂时收住旋律、放慢速度，让新调的解决有清晰的位置。</p></div>
+        </details>
+        <h3>连续两次使用同一功能关系</h3>
+        <p>一段音乐可从 D 大调先到 F 大调，再到 E 大调。两次转调都把原调的 V⁺ 重新理解为后调的 ♭VI⁺，但两次使用的是不同的音组。进入新调后，结尾的属到主使新中心成立，才能再从这个中心出发。</p>
+        <table class="lesson-table duration-table">
+          <caption>D → F → E 的两次增三转调</caption>
+          <thead><tr><th scope="col">路线</th><th scope="col">原调 V⁺</th><th scope="col">后调 ♭VI⁺ 的下行解决</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">D 大调 → F 大调</th><td>A–C♯–E♯</td><td>D♭–F–A，D♭ 下行到新调属音 C。</td></tr>
+            <tr><th scope="row">F 大调 → E 大调</th><td>C–E–G♯</td><td>C–E–G♯，C 下行到新调属音 B。</td></tr>
+          </tbody>
+        </table>
+        <p>第二个中介沿用同一套音名。C–E–G♯ 在 F 调有上行的导音 E 和升五音 G♯，进入 E 调后，主要的变化音成为向下解决的 C。辨别这类功能转换时，决定性线索是前后的和声与声部走向。</p>
+      </section>
+    </main>
+  </body>
+</html>

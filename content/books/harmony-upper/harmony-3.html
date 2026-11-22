@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第三章 正三和弦的和声｜和声学基础</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 上</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第三章　正三和弦的和声</h1>
+      <p class="intro">用主、下属和属三类和弦组织方向，再为一条旋律写出完整的低音和内声部。</p>
+      <section aria-labelledby="harmonic-phrases"><h2 id="harmonic-phrases">正三和弦的和声语汇</h2>
+      <p>和弦的先后次序形成和声语汇。主和弦提供稳定起点或归宿。属和弦含导音，回到主和弦的倾向明确。下属和弦既可直接回主，也可接属和弦，继续积累张力。</p>
+      <table class="lesson-table"><caption>正三和弦进行的方向</caption><thead><tr><th scope="col">方向</th><th scope="col">正格</th><th scope="col">变格</th><th scope="col">复式</th></tr></thead>
+      <tbody><tr><th scope="row">开放</th><td>I–V</td><td>I–IV</td><td>I–IV–V</td></tr><tr><th scope="row">收拢</th><td>V–I</td><td>IV–I</td><td>IV–V–I</td></tr></tbody></table>
+      <p>复式进行中，IV 在 V 前面的走向常见。V–IV–I 在这种古典调性写作中较少见。和声小调沿用相同的功能顺序，主和下属用 i 和 iv，属和弦仍用 V。</p>
+      <div id="function-score" class="music-demo" data-harmony-switch="functions"><div class="music-demo-toolbar"><h3>正格、变格与复式进行</h3><label>走向 <select><option value="authenticOpen">I–V</option><option value="plagalOpen">I–IV</option><option value="compoundOpen">I–IV–V</option><option value="authenticClose">V–I</option><option value="plagalClose">IV–I</option><option value="compoundClose">IV–V–I</option></select></label></div><figure></figure></div>
+      </section>
+      <section aria-labelledby="smooth-connections"><h2 id="smooth-connections">按根音关系连接正三和弦</h2>
+      <p>I 和 V、I 和 IV 的根音为四、五度关系，各有一个共同音，两种连接法都能使用。例如 C 大调 I 和 V 共同拥有 G，I 和 IV 共同拥有 C。用和声的连接法时，保留该声部的共同音。练习平稳连接时，可从六种原位排列中的任一种出发，按近距离分配剩余和弦音，再检查各声部是否仍在规范排列内。</p>
+      <p>IV 和 V 的根音相邻，没有共同音，只能用旋律的连接法。低音上行时，上方声部多下行。低音向下换八度时，仍应检查和上方声部是否形成同向或反向的连续纯五、八度。和声小调 iv–V 还要避免在同一声部直接走过降六级至升七级的增二度。例如 a 小调中可让 F 下行到 E，让 A 下行到 G♯。</p>
+      <p>同主音大小调可以对照着写。I–V 转成 i–V 时降主和弦的三音，I–IV 转成 i–iv 时分别降低两个和弦的三音，IV–V 转成 iv–V 时只降下属和弦的三音。属和弦保留导音。前两组的平稳连接也可以反过来读作归向主和弦的范式。</p>
+      <div class="music-demo" id="connection-patterns" data-harmony-connections>
+        <div class="music-demo-toolbar"><h3>六种原位排列的连接范式</h3>
+          <form class="ornament-controls">
+            <label>调式 <select name="key"><option value="C">C 大调</option><option value="Cminor">c 和声小调</option></select></label>
+            <label>根音进行 <select name="pair"><option value="tonicDominant">主 → 属</option><option value="tonicSubdominant">主 → 下属</option><option value="subdominantDominant">下属 → 属</option></select></label>
+            <label>连接法 <select name="method"><option value="harmonic">和声连接</option><option value="melodic">旋律连接</option></select></label>
+            <label>起始排列 <select name="voicing">
+              <optgroup label="密集排列"><option value="0">密集 · 根音</option><option value="1" selected>密集 · 三音</option><option value="2">密集 · 五音</option></optgroup>
+              <optgroup label="开放排列"><option value="3">开放 · 根音</option><option value="4">开放 · 三音</option><option value="5">开放 · 五音</option></optgroup>
+            </select></label>
+          </form>
+        </div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="harmonization"><h2 id="harmonization">为旋律配和声</h2>
+      <p>配和声是为给定声部写出其余声部。给定高音时是为旋律配和声，给定低音时是为低音配和声。下面从高音出发。</p>
+      <ol>
+      <li><strong>选和弦。</strong>确认调性，把指定旋律当作高音。按旋律音、拍位和功能列出可用和弦，选择符合乐句方向的方案。同一个音可属于多个和弦。a 小调的 E 同时是 i 的五音和 V 的根音，开头可用 i 确立调性。后面再次出现 E 时可考虑 V，尤其是在旋律即将走向主和弦时。若 E 后接 C，也可继续用 i，此时旋律在同一和弦内换位。最后的 A 同时属于 i 和 iv，作为结束音时配 i 更稳定。</li>
+      <li><strong>定低音。</strong>在只用原位正三和弦时，低音写各和弦的根音。利用音区变化获得流畅线条，避免连续同向五度跳进和呆板地来回跳。</li>
+      <li><strong>填内声部。</strong>补齐所需的和弦音和重复音，保持声部间距。先找共同音和最近的目的音，再逐对检查不良进行。</li>
+      </ol>
+      <table class="lesson-table"><caption>乐句中的拍位与功能</caption><thead><tr><th scope="col">位置</th><th scope="col">常见处理</th></tr></thead><tbody>
+      <tr><th scope="row">开头</th><td>通常以主和弦确立调性。弱起可暂不配和弦，或用属和弦，在下一强拍到主和弦。</td></tr>
+      <tr><th scope="row">小节交界</th><td>小节末弱拍才引入的和弦，通常避免原样延续到下一小节的强拍。若和弦已从前一小节强拍开始，则可以跨过小节线保持，强拍之间的功能走向仍清楚。</td></tr>
+      <tr><th scope="row">收束</th><td>以稳定的主和弦结束。在四部里可省五音并重复根音。</td></tr>
+      </tbody></table>
+      <h3>大小调旋律配和声</h3>
+      <p>g 小调的第一小节高音围绕主音 G 运动，中音 D 保持一整小节，同时属于主和弦和属和弦。末小节的主和弦省略五音。A♭ 大调的弱起已能配主和弦，进入完整小节后再用 V–I 回应，收束采用 IV–I。</p>
+      <figure data-harmony="harmonized-g-minor"><figcaption>g 小调旋律中的共同音与终止</figcaption></figure>
+      <figure data-harmony="harmonized-a-flat"><figcaption>A♭ 大调旋律的弱起与变格收束</figcaption></figure>
+      </section>
+    </main>
+  </body>
+</html>

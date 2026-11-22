@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第三章 音的高低｜乐理教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./chapter-3.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">基本乐理教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第三章　音的高低</h1>
+      <p class="intro">这一章从钢琴键盘出发，先认识音名和音高，再学会把同一个音写在不同的谱表上。</p>
+
+      <section aria-labelledby="pitch-levels">
+        <h2 id="pitch-levels">音列与音级</h2>
+        <p>发声物体振动得越快，音通常就越高。每秒振动的次数叫<strong>频率</strong>，以赫兹（Hz）为单位。调音常用的标准音 A4 是 440 Hz。</p>
+        <p>音乐中有固定音高的乐音合起来，构成<strong>乐音体系</strong>。按音高把这些音排起来，就得到<strong>音列</strong>。音列中的各个音叫<strong>音级</strong>。钢琴的白键反复使用七个基本音级 C、D、E、F、G、A、B。</p>
+        <p>字母是<strong>音名</strong>。音名加上音组才能标明具体高度，例如 C4 和 C5。do、re、mi、fa、sol、la、si 是<strong>唱名</strong>，在首调唱法里随调改变。下面用 C 作 do 来对照。</p>
+        <figure class="pitch-diagram">
+          <svg class="pitch-keyboard" viewBox="0 0 256 99" role="img" aria-label="键盘白键从左至右为 C、D、E、F、G、A、B 和高八度的 C，E 与 F 以及 B 与 C 之间没有黑键">
+            <use class="keyboard-white" href="../../shared/formats/piano.svg#white-keys"/>
+            <use class="keyboard-white" href="../../shared/formats/piano.svg#key-c" x="224"/>
+            <use class="keyboard-black" href="../../shared/formats/piano.svg#black-keys"/>
+            <g class="keyboard-label">
+              <text x="16" y="73">C</text><text x="48" y="73">D</text><text x="80" y="73">E</text><text x="112" y="73">F</text><text x="144" y="73">G</text><text x="176" y="73">A</text><text x="208" y="73">B</text><text x="240" y="73">C</text>
+              <text x="16" y="87">do</text><text x="48" y="87">re</text><text x="80" y="87">mi</text><text x="112" y="87">fa</text><text x="144" y="87">sol</text><text x="176" y="87">la</text><text x="208" y="87">si</text><text x="240" y="87">do</text>
+            </g>
+          </svg>
+          <figcaption>从 C 到下一个 C，每一步依次是全、全、半、全、全、全、半。</figcaption>
+        </figure>
+        <aside class="lesson-callout" aria-labelledby="half-step-rule">
+          <h3 id="half-step-rule">半音的计算</h3>
+          <p>相邻两个琴键相隔一个半音，两个半音合成一个全音。E–F 和 B–C 之间没有黑键，所以各隔半音。其余相邻白键各隔全音。一个八度包含十二个半音。</p>
+        </aside>
+      </section>
+
+      <section aria-labelledby="pitch-octaves">
+        <h2 id="pitch-octaves">音列分组</h2>
+        <p>标准 88 键钢琴有 52 个白键，音名循环使用。为了区分名字相同、音高不同的音，以 C 为每一组的起点，到 B 结束。中央 C 是小字一组的第一个音，写作 <code>c¹</code>，也常写作 <code>C4</code>。标准音 A4 是同组的 <code>a¹</code>。</p>
+        <p>C3、C4 和 C5 的音名相同，相邻两个音相隔一个八度。简谱用数字上下的圆点区分八度，五线谱用符头的高度区分。</p>
+        <figure class="pitch-diagram pitch-full-diagram">
+          <div class="pitch-full-scroll" role="region" aria-label="88 键钢琴的音列分组" tabindex="0">
+            <svg class="pitch-full-keyboard" viewBox="0 0 1664 461" role="img" aria-label="大谱表中的 52 个自然音与钢琴白键逐一对齐。中央 C4 以蓝色标出。">
+              <path class="pitch-full-guides" d="M64 12V300 M288 12V300 M512 12V300 M736 12V300 M960 12V300 M1184 12V300 M1408 12V300 M1632 12V300"/>
+              <path class="pitch-full-middle-guide" d="M752 153V302"/>
+              <path class="pitch-full-staff" d="M1 108H1663 M1 118H1663 M1 128H1663 M1 138H1663 M1 148H1663 M1 168H1663 M1 178H1663 M1 188H1663 M1 198H1663 M1 208H1663 M1 108V208"/>
+              <text class="pitch-full-clef" x="10" y="138">&#xE050;</text>
+              <text class="pitch-full-clef" x="10" y="178">&#xE062;</text>
+              <path class="pitch-full-ledgers" d="M10 218h12 M10 228h12 M10 238h12 M10 248h12 M10 258h12 M10 268h12 M42 218h12 M42 228h12 M42 238h12 M42 248h12 M42 258h12 M42 268h12 M74 218h12 M74 228h12 M74 238h12 M74 248h12 M74 258h12 M106 218h12 M106 228h12 M106 238h12 M106 248h12 M106 258h12 M138 218h12 M138 228h12 M138 238h12 M138 248h12 M170 218h12 M170 228h12 M170 238h12 M170 248h12 M202 218h12 M202 228h12 M202 238h12 M234 218h12 M234 228h12 M234 238h12 M266 218h12 M266 228h12 M298 218h12 M298 228h12 M330 218h12 M362 218h12 M746 158h12 M1130 98h12 M1162 98h12 M1194 98h12 M1194 88h12 M1226 98h12 M1226 88h12 M1258 98h12 M1258 88h12 M1258 78h12 M1290 98h12 M1290 88h12 M1290 78h12 M1322 98h12 M1322 88h12 M1322 78h12 M1322 68h12 M1354 98h12 M1354 88h12 M1354 78h12 M1354 68h12 M1386 98h12 M1386 88h12 M1386 78h12 M1386 68h12 M1386 58h12 M1418 98h12 M1418 88h12 M1418 78h12 M1418 68h12 M1418 58h12 M1450 98h12 M1450 88h12 M1450 78h12 M1450 68h12 M1450 58h12 M1450 48h12 M1482 98h12 M1482 88h12 M1482 78h12 M1482 68h12 M1482 58h12 M1482 48h12 M1514 98h12 M1514 88h12 M1514 78h12 M1514 68h12 M1514 58h12 M1514 48h12 M1514 38h12 M1546 98h12 M1546 88h12 M1546 78h12 M1546 68h12 M1546 58h12 M1546 48h12 M1546 38h12 M1578 98h12 M1578 88h12 M1578 78h12 M1578 68h12 M1578 58h12 M1578 48h12 M1578 38h12 M1578 28h12 M1610 98h12 M1610 88h12 M1610 78h12 M1610 68h12 M1610 58h12 M1610 48h12 M1610 38h12 M1610 28h12 M1642 98h12 M1642 88h12 M1642 78h12 M1642 68h12 M1642 58h12 M1642 48h12 M1642 38h12 M1642 28h12 M1642 18h12"/>
+              <g class="pitch-full-white-notes">
+                <ellipse cx="16" cy="273" rx="4.5" ry="3" transform="rotate(-18 16 273)"/><ellipse cx="48" cy="268" rx="4.5" ry="3" transform="rotate(-18 48 268)"/><ellipse cx="80" cy="263" rx="4.5" ry="3" transform="rotate(-18 80 263)"/><ellipse cx="112" cy="258" rx="4.5" ry="3" transform="rotate(-18 112 258)"/><ellipse cx="144" cy="253" rx="4.5" ry="3" transform="rotate(-18 144 253)"/><ellipse cx="176" cy="248" rx="4.5" ry="3" transform="rotate(-18 176 248)"/><ellipse cx="208" cy="243" rx="4.5" ry="3" transform="rotate(-18 208 243)"/>
+                <ellipse cx="240" cy="238" rx="4.5" ry="3" transform="rotate(-18 240 238)"/><ellipse cx="272" cy="233" rx="4.5" ry="3" transform="rotate(-18 272 233)"/><ellipse cx="304" cy="228" rx="4.5" ry="3" transform="rotate(-18 304 228)"/><ellipse cx="336" cy="223" rx="4.5" ry="3" transform="rotate(-18 336 223)"/><ellipse cx="368" cy="218" rx="4.5" ry="3" transform="rotate(-18 368 218)"/><ellipse cx="400" cy="213" rx="4.5" ry="3" transform="rotate(-18 400 213)"/><ellipse cx="432" cy="208" rx="4.5" ry="3" transform="rotate(-18 432 208)"/>
+                <ellipse cx="464" cy="203" rx="4.5" ry="3" transform="rotate(-18 464 203)"/><ellipse cx="496" cy="198" rx="4.5" ry="3" transform="rotate(-18 496 198)"/><ellipse cx="528" cy="193" rx="4.5" ry="3" transform="rotate(-18 528 193)"/><ellipse cx="560" cy="188" rx="4.5" ry="3" transform="rotate(-18 560 188)"/><ellipse cx="592" cy="183" rx="4.5" ry="3" transform="rotate(-18 592 183)"/><ellipse cx="624" cy="178" rx="4.5" ry="3" transform="rotate(-18 624 178)"/><ellipse cx="656" cy="173" rx="4.5" ry="3" transform="rotate(-18 656 173)"/>
+                <ellipse cx="688" cy="168" rx="4.5" ry="3" transform="rotate(-18 688 168)"/><ellipse cx="720" cy="163" rx="4.5" ry="3" transform="rotate(-18 720 163)"/><ellipse cx="752" cy="158" rx="4.5" ry="3" transform="rotate(-18 752 158)" class="pitch-middle-c"/><ellipse cx="784" cy="153" rx="4.5" ry="3" transform="rotate(-18 784 153)"/><ellipse cx="816" cy="148" rx="4.5" ry="3" transform="rotate(-18 816 148)"/><ellipse cx="848" cy="143" rx="4.5" ry="3" transform="rotate(-18 848 143)"/><ellipse cx="880" cy="138" rx="4.5" ry="3" transform="rotate(-18 880 138)"/>
+                <ellipse cx="912" cy="133" rx="4.5" ry="3" transform="rotate(-18 912 133)"/><ellipse cx="944" cy="128" rx="4.5" ry="3" transform="rotate(-18 944 128)"/><ellipse cx="976" cy="123" rx="4.5" ry="3" transform="rotate(-18 976 123)"/><ellipse cx="1008" cy="118" rx="4.5" ry="3" transform="rotate(-18 1008 118)"/><ellipse cx="1040" cy="113" rx="4.5" ry="3" transform="rotate(-18 1040 113)"/><ellipse cx="1072" cy="108" rx="4.5" ry="3" transform="rotate(-18 1072 108)"/><ellipse cx="1104" cy="103" rx="4.5" ry="3" transform="rotate(-18 1104 103)"/>
+                <ellipse cx="1136" cy="98" rx="4.5" ry="3" transform="rotate(-18 1136 98)"/><ellipse cx="1168" cy="93" rx="4.5" ry="3" transform="rotate(-18 1168 93)"/><ellipse cx="1200" cy="88" rx="4.5" ry="3" transform="rotate(-18 1200 88)"/><ellipse cx="1232" cy="83" rx="4.5" ry="3" transform="rotate(-18 1232 83)"/><ellipse cx="1264" cy="78" rx="4.5" ry="3" transform="rotate(-18 1264 78)"/><ellipse cx="1296" cy="73" rx="4.5" ry="3" transform="rotate(-18 1296 73)"/><ellipse cx="1328" cy="68" rx="4.5" ry="3" transform="rotate(-18 1328 68)"/>
+                <ellipse cx="1360" cy="63" rx="4.5" ry="3" transform="rotate(-18 1360 63)"/><ellipse cx="1392" cy="58" rx="4.5" ry="3" transform="rotate(-18 1392 58)"/><ellipse cx="1424" cy="53" rx="4.5" ry="3" transform="rotate(-18 1424 53)"/><ellipse cx="1456" cy="48" rx="4.5" ry="3" transform="rotate(-18 1456 48)"/><ellipse cx="1488" cy="43" rx="4.5" ry="3" transform="rotate(-18 1488 43)"/><ellipse cx="1520" cy="38" rx="4.5" ry="3" transform="rotate(-18 1520 38)"/><ellipse cx="1552" cy="33" rx="4.5" ry="3" transform="rotate(-18 1552 33)"/>
+                <ellipse cx="1584" cy="28" rx="4.5" ry="3" transform="rotate(-18 1584 28)"/><ellipse cx="1616" cy="23" rx="4.5" ry="3" transform="rotate(-18 1616 23)"/><ellipse cx="1648" cy="18" rx="4.5" ry="3" transform="rotate(-18 1648 18)"/>
+              </g>
+              <g transform="translate(0 303)">
+                <g class="keyboard-white">
+                    <use href="../../shared/formats/piano.svg#key-a" x="-160"/>
+                    <use href="../../shared/formats/piano.svg#key-b" x="-160"/>
+                    <use href="../../shared/formats/piano.svg#white-keys" x="64"/>
+                    <use href="../../shared/formats/piano.svg#white-keys" x="288"/>
+                    <use href="../../shared/formats/piano.svg#white-keys" x="512"/>
+                    <use href="../../shared/formats/piano.svg#white-keys" x="736"/>
+                    <use href="../../shared/formats/piano.svg#white-keys" x="960"/>
+                    <use href="../../shared/formats/piano.svg#white-keys" x="1184"/>
+                    <use href="../../shared/formats/piano.svg#white-keys" x="1408"/>
+                    <use href="../../shared/formats/piano.svg#key-c" x="1632"/>
+                </g>
+                <use class="keyboard-highlight" href="../../shared/formats/piano.svg#key-c" x="736"/>
+                <g class="keyboard-black">
+                    <use href="../../shared/formats/piano.svg#key-a-sharp" x="-160"/>
+                    <use href="../../shared/formats/piano.svg#black-keys" x="64"/>
+                    <use href="../../shared/formats/piano.svg#black-keys" x="288"/>
+                    <use href="../../shared/formats/piano.svg#black-keys" x="512"/>
+                    <use href="../../shared/formats/piano.svg#black-keys" x="736"/>
+                    <use href="../../shared/formats/piano.svg#black-keys" x="960"/>
+                    <use href="../../shared/formats/piano.svg#black-keys" x="1184"/>
+                    <use href="../../shared/formats/piano.svg#black-keys" x="1408"/>
+                </g>
+                <g class="pitch-full-notes">
+                    <text x="16" y="85">A0</text>
+                    <text x="80" y="85">C1</text>
+                    <text x="304" y="85">C2</text>
+                    <text x="528" y="85">C3</text>
+                    <text x="752" y="85">C4</text>
+                    <text x="976" y="85">C5</text>
+                    <text x="1200" y="85">C6</text>
+                    <text x="1424" y="85">C7</text>
+                    <text x="1648" y="85">C8</text>
+                </g>
+                <path class="pitch-group-lines" d="M70 103v8h212v-8 M294 103v8h212v-8 M518 103v8h212v-8 M742 103v8h212v-8 M966 103v8h212v-8 M1190 103v8h212v-8 M1414 103v8h212v-8"/>
+                <g class="pitch-full-groups">
+                    <text x="176" y="145">大字一组</text>
+                    <text x="400" y="145">大字组</text>
+                    <text x="624" y="145">小字组</text>
+                    <text x="848" y="145">小字一组</text>
+                    <text x="1072" y="145">小字二组</text>
+                    <text x="1296" y="145">小字三组</text>
+                    <text x="1520" y="145">小字四组</text>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <figcaption><strong>全音列的谱键对照</strong>。蓝色标出中央 C。窄屏可横向滚动查看全图。</figcaption>
+        </figure>
+        <details class="lesson-aside">
+          <summary>钢琴音组名称</summary>
+          <div class="lesson-aside-content">
+            <table class="lesson-table">
+              <caption>由低到高的音组</caption>
+              <thead><tr><th scope="col">音组</th><th scope="col">传统写法举例</th><th scope="col">数字音高记法</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">大字二组</th><td>A₂</td><td>A0–B0</td></tr>
+                <tr><th scope="row">大字一组</th><td>C₁</td><td>C1–B1</td></tr>
+                <tr><th scope="row">大字组</th><td>C</td><td>C2–B2</td></tr>
+                <tr><th scope="row">小字组</th><td>c</td><td>C3–B3</td></tr>
+                <tr><th scope="row">小字一组</th><td>c¹</td><td>C4–B4</td></tr>
+                <tr><th scope="row">小字二组</th><td>c²</td><td>C5–B5</td></tr>
+                <tr><th scope="row">小字三组</th><td>c³</td><td>C6–B6</td></tr>
+                <tr><th scope="row">小字四组</th><td>c⁴</td><td>C7–B7</td></tr>
+                <tr><th scope="row">小字五组</th><td>c⁵</td><td>C8</td></tr>
+              </tbody>
+            </table>
+            <p>88 键钢琴的两端是不完整的音组，最低键是 A0，最高键是 C8。</p>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="pitch-accidentals">
+        <h2 id="pitch-accidentals">变音、等音与音名的拼写</h2>
+        <p>把基本音级升高或降低，就得到<strong>变化音级</strong>，简称变音。谱面上用变音记号写明变化。</p>
+        <table class="lesson-table">
+          <caption>五种变音记号</caption>
+          <thead><tr><th scope="col">名称</th><th scope="col">记号</th><th scope="col">作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">升号</th><td><span class="music-symbol" aria-hidden="true">&#xE262;</span></td><td>升高一个半音</td></tr>
+            <tr><th scope="row">降号</th><td><span class="music-symbol" aria-hidden="true">&#xE260;</span></td><td>降低一个半音</td></tr>
+            <tr><th scope="row">还原号</th><td><span class="music-symbol" aria-hidden="true">&#xE261;</span></td><td>恢复为基本音级</td></tr>
+            <tr><th scope="row">重升号</th><td><span class="music-symbol" aria-hidden="true">&#xE263;</span></td><td>升高一个全音</td></tr>
+            <tr><th scope="row">重降号</th><td><span class="music-symbol" aria-hidden="true">&#xE264;</span></td><td>降低一个全音</td></tr>
+          </tbody>
+        </table>
+        <p>临时变音记号在本小节内对同一谱位后续出现的音继续有效，遇到新的变音记号时以新记号为准。下一小节重新按该处的调号读。</p>
+        <figure class="pitch-diagram pitch-annotated">
+          <svg class="pitch-staff-diagram" viewBox="0 0 294 108" role="img" aria-label="一个无升降调号的小节。四个符头都在下加一线，第二个有升号，第三个延续升号，第四个有还原号。实际音高依次为 C、升 C、升 C、C。">
+            <path class="pitch-staff-lines" d="M9 12H283 M9 22H283 M9 32H283 M9 42H283 M9 52H283 M9 12V52 M283 12V52"/>
+            <text class="pitch-clef-glyph" x="18" y="42">&#xE050;</text>
+            <path class="pitch-staff-lines" d="M62 62h20 M120 62h20 M178 62h20 M236 62h20 M78 61V32 M136 61V32 M194 61V32 M252 61V32"/>
+            <g class="pitch-annotated-heads">
+              <ellipse cx="72" cy="62" rx="6" ry="4" transform="rotate(-18 72 62)"/>
+              <ellipse cx="130" cy="62" rx="6" ry="4" transform="rotate(-18 130 62)"/>
+              <ellipse cx="188" cy="62" rx="6" ry="4" transform="rotate(-18 188 62)"/>
+              <ellipse cx="246" cy="62" rx="6" ry="4" transform="rotate(-18 246 62)"/>
+            </g>
+            <text class="pitch-clef-glyph" x="106" y="62">&#xE262;</text>
+            <text class="pitch-clef-glyph" x="222" y="62">&#xE261;</text>
+            <g class="pitch-annotated-labels">
+              <text x="72" y="93">C</text>
+              <text x="130" y="93">C♯</text>
+              <text x="188" y="93">C♯</text>
+              <text x="246" y="93">C</text>
+            </g>
+          </svg>
+          <figcaption>同一小节内的临时变音。谱下标出实际音高。</figcaption>
+        </figure>
+        <p>在十二平均律的钢琴上，C♯ 与 D♭ 落在同一个键，音高相同，音名及写法不同。这种关系叫<strong>等音</strong>。等音也可以落在白键上，例如 E 与 F♭。若只用单升降和重升降，一个八度内通常每个键有三种常见拼写，G♯／A♭ 这个键只有两种。</p>
+        <figure class="pitch-diagram">
+          <svg class="pitch-keyboard" viewBox="0 0 224 99" role="img" aria-label="C 和 D 两个白键之间的同一个黑键，既可写作 C 升，也可写作 D 降">
+            <use class="keyboard-white" href="../../shared/formats/piano.svg#white-keys"/>
+            <use class="keyboard-black" href="../../shared/formats/piano.svg#black-keys"/>
+            <use class="keyboard-highlight-black" href="../../shared/formats/piano.svg#key-c-sharp"/>
+            <g class="keyboard-label"><text x="16" y="83">C</text><text x="48" y="83">D</text></g>
+          </svg>
+          <figcaption>C 升半音与 D 降半音都到达蓝色键。</figcaption>
+        </figure>
+        <p>C♯ 和 D♭ 在五线谱上占不同位置 <svg class="inline-staff" viewBox="0 -5 76 45" role="img" aria-label="升 C 写在下加一线上，降 D 写在下加一线上方的间内"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><path d="M18 32H32"/><text x="13" y="32">&#xE262;</text><text x="22" y="32">&#xE0A2;</text><text x="43" y="29.5">&#xE260;</text><text x="52" y="29.5">&#xE0A2;</text></svg>，在钢琴上使用同一个键。</p>
+
+        <h3 id="semitone-types">半音与全音的分类</h3>
+        <p>一对音是半音还是全音，由它们之间的音高距离决定。它是<strong>自然</strong>还是<strong>变化</strong>，要看两端字母代表的基本音级。相邻字母是自然的，同一字母或隔开一个字母是变化的。</p>
+        <table class="lesson-table">
+          <caption>半音与全音的记法</caption>
+          <thead><tr><th scope="col">类别</th><th scope="col">例子</th><th scope="col">为何这样归类</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">自然半音</th><td>E–F、C–D♭</td><td>相邻字母，相隔一个半音</td></tr>
+            <tr><th scope="row">变化半音</th><td>C–C♯、E♯–G♭</td><td>同一字母，或中间隔一个字母</td></tr>
+            <tr><th scope="row">自然全音</th><td>C–D、E–F♯</td><td>相邻字母，相隔两个半音</td></tr>
+            <tr><th scope="row">变化全音</th><td>D–D&#x1D12A;、E–G♭</td><td>同一字母，或中间隔一个字母</td></tr>
+          </tbody>
+        </table>
+        <p>例如 C–C♯ 和 C–D♭ 在键盘上走的是同一步。前者两端都用字母 C，后者用相邻的 C 和 D，因此分别是变化半音和自然半音。</p>
+      </section>
+
+      <section aria-labelledby="pitch-staff">
+        <h2 id="pitch-staff">五线谱与加线</h2>
+        <p>五线谱的五条线和四个线间都从下往上数。音符可以写在线上或线间，每移动一个位置，就跨一格基本音级。写到五线外时，使用与谱线等距的<strong>加线</strong>。加线之间也能放音。</p>
+        <figure class="pitch-diagram" aria-label="五条基本线和上、下加一线示意图">
+          <svg class="pitch-staff-diagram" viewBox="0 0 365 108" aria-hidden="true">
+            <path class="pitch-staff-lines" d="M82 32H278 M82 44H278 M82 56H278 M82 68H278 M82 80H278 M155 20H206 M155 92H206"/>
+            <g class="staff-labels">
+              <text x="66" y="32">第五线</text><text x="66" y="44">第四线</text><text x="66" y="56">第三线</text><text x="66" y="68">第二线</text><text x="66" y="80">第一线</text>
+              <text x="291" y="38">第四间</text><text x="291" y="50">第三间</text><text x="291" y="62">第二间</text><text x="291" y="74">第一间</text>
+              <text x="220" y="20">上加一线</text><text x="220" y="92">下加一线</text>
+            </g>
+          </svg>
+          <figcaption>第一线和第一间都在最下方。加线从靠近谱表的那一条开始数。</figcaption>
+        </figure>
+        <details class="lesson-aside">
+          <summary>加线与加间的编号</summary>
+          <div class="lesson-aside-content"><ul>
+            <li>上加线和上加间向上数，下加线和下加间向下数。基本谱线与第一条加线之间就是加一间。</li>
+            <li>加线只写在需要它的音符附近。相邻音符各用自己的加线，避免连成新的长谱线。加线理论上可继续增加，实际记谱通常不会用太多。</li>
+          </ul></div>
+        </details>
+      </section>
+
+      <section aria-labelledby="pitch-clefs">
+        <h2 id="pitch-clefs">谱号与音高</h2>
+        <p>同一个谱位的音高，由每行左端的<strong>谱号</strong>确定。谱号先指定一条线的音高，再沿线与间逐级推算其他基本音级。</p>
+        <table class="lesson-table">
+          <caption>常用谱号所在的线</caption>
+          <thead><tr><th scope="col">谱号</th><th scope="col">图形</th><th scope="col">定位</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">G 谱号（高音）</th><td><svg class="inline-staff" viewBox="0 -4 76 44" role="img" aria-label="G 谱号（高音），第二线是 G4"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><text x="12" y="22">&#xE050;</text></svg></td><td>第二线是 G4</td></tr>
+            <tr><th scope="row">F 谱号（低音）</th><td><svg class="inline-staff" viewBox="0 -4 76 44" role="img" aria-label="F 谱号（低音），两点夹住第四线 F3"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><text x="12" y="12">&#xE062;</text></svg></td><td>两点夹住第四线 F3</td></tr>
+            <tr><th scope="row">C 谱号（中音）</th><td><svg class="inline-staff" viewBox="0 -4 76 44" role="img" aria-label="C 谱号（中音），中心对准第三线 C4"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><text x="12" y="17">&#xE05C;</text></svg></td><td>中心对准第三线 C4</td></tr>
+            <tr><th scope="row">C 谱号（次中音）</th><td><svg class="inline-staff" viewBox="0 -4 76 44" role="img" aria-label="C 谱号（次中音），中心对准第四线 C4"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><text x="12" y="12">&#xE05C;</text></svg></td><td>中心对准第四线 C4</td></tr>
+          </tbody>
+        </table>
+        <aside class="lesson-callout" aria-labelledby="middle-c-rule">
+          <h3 id="middle-c-rule">中央 C 在各谱号中的位置</h3>
+          <p>高音谱表下加一线与低音谱表上加一线都表示 C4。在中音谱表和次中音谱表上，中央 C 分别写在第三线和第四线。</p>
+        </aside>
+        <ul class="pitch-clef-examples">
+          <li>高音谱号 <svg class="inline-staff" viewBox="0 -6 76 48" role="img" aria-label="中央 C 写在高音谱表下加一线"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><text x="12" y="22">&#xE050;</text><path d="M38 32H53"/><text x="42" y="32">&#xE0A2;</text></svg></li>
+          <li>低音谱号 <svg class="inline-staff" viewBox="0 -6 76 48" role="img" aria-label="中央 C 写在低音谱表上加一线"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><text x="12" y="12">&#xE062;</text><path d="M38 2H53"/><text x="42" y="2">&#xE0A2;</text></svg></li>
+          <li>中音谱号 <svg class="inline-staff" viewBox="0 -6 76 48" role="img" aria-label="中央 C 写在中音谱表第三线"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><text x="12" y="17">&#xE05C;</text><text x="42" y="17">&#xE0A2;</text></svg></li>
+          <li>次中音谱号 <svg class="inline-staff" viewBox="0 -6 76 48" role="img" aria-label="中央 C 写在次中音谱表第四线"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><text x="12" y="12">&#xE05C;</text><text x="42" y="12">&#xE0A2;</text></svg></li>
+        </ul>
+        <details class="lesson-aside">
+          <summary>谱号的更换</summary>
+          <div class="lesson-aside-content"><ul>
+            <li>选用接近实际音区的谱号，可减少加线。曲中可以换谱号，例如大提琴进入较高音区时可改用次中音谱号。每行开头都要标当前谱号。</li>
+            <li>C 谱号的中心还可以定位第一、二、五线，分别称女高音、次女高音、上低音谱号。这些位置较少见。</li>
+          </ul></div>
+        </details>
+      </section>
+
+      <section aria-labelledby="pitch-staff-systems">
+        <h2 id="pitch-staff-systems">谱表的类型</h2>
+        <p>五线加上谱号成为<strong>谱表</strong>。单谱表只有一行 <svg class="inline-staff" viewBox="0 -3 76 42" role="img" aria-label="单谱表，一行五线配高音谱号"><path class="inline-staff-lines" d="M11 7H75 M11 12H75 M11 17H75 M11 22H75 M11 27H75"/><text x="15" y="22">&#xE050;</text></svg>。高音谱表常见于小提琴、长笛等乐器；低音谱表常见于大提琴、大管等乐器；中音谱表常见于中提琴。乐器跨入另一音区时，也可能临时换谱号。</p>
+        <p>高音和低音谱表合成<strong>大谱表</strong> <svg class="inline-staff inline-staff-wide" viewBox="0 0 76 73" role="img" aria-label="花括号连接高音和低音谱表。两个符头都是中央 C"><path class="inline-staff-lines" d="M11 7H75 M11 12H75 M11 17H75 M11 22H75 M11 27H75 M11 47H75 M11 52H75 M11 57H75 M11 62H75 M11 67H75"/><path d="M11 7V67 M7 7Q3 8 3 16V30Q3 37 0.8 37Q3 37 3 44V58Q3 66 7 67 M43 32H58 M43 42H58"/><text x="15" y="22">&#xE050;</text><text x="15" y="52">&#xE062;</text><text x="47" y="32">&#xE0A2;</text><text x="47" y="42">&#xE0A2;</text></svg>。钢琴、风琴和手风琴常用花括号连接两行。上方的下加一线与下方的上加一线都表示中央 C。</p>
+        <p><strong>联合谱表</strong>把不同声部的谱表上下排列，让同一时刻的音纵向对齐。例如独唱和钢琴伴奏可以排成三行 <svg class="inline-staff inline-staff-wide" viewBox="0 0 76 91" role="img" aria-label="联合谱表，独唱在上，钢琴的大谱表在下"><path class="inline-staff-lines" d="M11 7H75 M11 12H75 M11 17H75 M11 22H75 M11 27H75 M11 36H75 M11 41H75 M11 46H75 M11 51H75 M11 56H75 M11 66H75 M11 71H75 M11 76H75 M11 81H75 M11 86H75"/><path d="M7 7H3V86H7 M11 7V86 M9 36Q6 37 6 43V55Q6 61 3 61Q6 61 6 67V79Q6 85 9 86"/><text x="15" y="22">&#xE050;</text><text x="15" y="51">&#xE050;</text><text x="15" y="71">&#xE062;</text></svg>。合唱或重奏也常用方括号连接多行谱表。</p>
+        <details class="lesson-aside">
+          <summary>联合谱表的常见编排</summary>
+          <div class="lesson-aside-content"><ul>
+            <li>独唱加钢琴通常把独唱谱表放在上面，钢琴大谱表放在下面。</li>
+            <li>弦乐四重奏常按第一小提琴、第二小提琴、中提琴、大提琴排列，依次使用高音、高音、中音、低音谱表。</li>
+            <li>混声四部常按女高音、女低音、男高音、男低音排列。男高音可用低八度记读的高音谱号。</li>
+          </ul></div>
+        </details>
+      </section>
+    </main>
+  </body>
+</html>

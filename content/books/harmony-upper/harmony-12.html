@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第十二章　大调副三和弦｜和声学基础</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony-9-12.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 上</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第十二章　大调副三和弦</h1>
+      <p class="intro">大调的 ii、iii、vi、vii° 扩展主、属、下属三类功能。使用时既要看共同音，也要判断它在乐句里承担哪一类作用。</p>
+      <section aria-labelledby="major-function-groups"><h2 id="major-function-groups">大调三和弦的功能组</h2>
+      <p>每个功能组以一个正三和弦为中心。与中心根音相隔三度、并与中心和弦共享两个音的副三和弦，可以延续或替代相近的功能。大调的 ii、iii、vi 是小三和弦，vii° 是减三和弦。</p>
+      <table class="lesson-table"><caption>C 大调三个功能组的成员</caption><thead><tr><th scope="col">组</th><th scope="col">中心</th><th scope="col">副三和弦与共有音</th></tr></thead><tbody>
+      <tr><th scope="row">主功能</th><td>I · C–E–G</td><td>vi 共有 C、E。iii 共有 E、G。</td></tr>
+      <tr><th scope="row">下属功能</th><td>IV · F–A–C</td><td>ii 共有 F、A。vi 共有 A、C。</td></tr>
+      <tr><th scope="row">属功能</th><td>V · G–B–D</td><td>iii 共有 G、B。vii° 共有 B、D。</td></tr>
+      </tbody></table>
+      <p>vi 同时联系主功能与下属功能，iii 同时联系主功能与属功能。实际身份由前后和弦、低音与乐句位置决定。</p>
+      </section>
+      <section aria-labelledby="functional-expansion"><h2 id="functional-expansion">功能替代与扩展</h2>
+      <p>在相同结构位置换用同组的副三和弦，是功能替代。例如 I–IV–I 可改成 I–ii–I，仍呈下属回主的走向。让副三和弦在正三和弦前后继续同类功能，是功能扩展。例如把 I–IV–V–I 展开成 I–vi–IV–V–I，vi 既延伸主功能，又能接入下属功能。较长的进行也可在功能组内多次切换，最终仍归结到主、下属、属的骨架。</p>
+      <div class="music-demo" data-harmony-options="majorFunction" id="majorFunction">
+        <div class="music-demo-toolbar"><h3>同组替代与扩展</h3><label>谱例 <select><option value="plagal">I–IV–I</option><option value="substitute">I–ii–I</option><option value="compound">I–IV–V–I</option><option value="expansion">I–vi–IV–V–I</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="major-second"><h2 id="major-second">ii 与 ii₆ 的下属功能</h2>
+      <p>ii 是大调最常用的副三和弦之一。常重复它的三音，也就是调式的下属音。可以重复根音，偶尔也重复五音。第一转位 ii₆ 比原位多用。以 C 大调为例，F–A–D 与 IV 的 F–A–C 只差上方的 D 和 C。因此 ii₆ 的下属低音明确，也可理解成 IV 的五音位置改成了六度音。</p>
+      <p>ii₆ 接 K<sup>6</sup><sub>4</sub> 时要检查 D–A 是否平行到 C–G。可以在上方声部中重排相应两音，使它们以四度相对，也可在合适声部采用四度跳进避开平行五度。</p>
+      <div class="music-demo" data-harmony-options="majorSecond" id="majorSecond">
+        <div class="music-demo-toolbar"><h3>ii₆ 接终止四六的连接</h3><label>谱例 <select><option value="parallel">平行五度</option><option value="fourths">改作平行四度</option><option value="leap">以四度跳进避开</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="major-third"><h2 id="major-third">iii 与 iii₆ 的属功能倾向</h2>
+      <p>iii 是以中音为根音的中音和弦，通常偏向属功能。最常重复三音，也就是调式属音。根音也可重复。五音是导音，通常不重复。原位 iii 到 I 时，常用和声连接法，让高音的导音级进到主音，此时可重复根音。</p>
+      <p>高音作 do–si–la–sol 下行时，si 可配 iii，其后常接 IV。iii₆ 比原位更常见，因为属音作低音强化了属功能。旋律由中音到主音时，可使用 iii₆–I 收束。前面用 V，构成属功能内部的换色。前面用 ii，则由下属功能经 iii₆ 回主。</p>
+      <div class="music-demo" data-harmony-options="majorThird" id="majorThird">
+        <div class="music-demo-toolbar"><h3>iii 的旋律位置与终止</h3><label>谱例 <select><option value="toTonic">导音上行到主音</option><option value="descending">do–si–la–sol</option><option value="inverted">iii₆–I</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="major-sixth"><h2 id="major-sixth">vi 与阻碍进行</h2>
+      <p>vi 是以下中音为根音的下中音和弦，既有主功能又有下属功能，一般更偏下属。优先重复三音，因为它正是调式主音。也可重复根音，偶尔重复五音。重复五音容易带来平行五度、八度，需逐对检查。</p>
+      <p>V 或 V₇ 接 vi，是常见的<strong>阻碍进行</strong>，也可由 IV 先引入属功能。在乐段结束处出现，称<strong>阻碍终止</strong>。属和弦中的导音仍进到主音，但低音落到第Ⅵ级。因此主音出现在 vi 的三音位置。V₇–vi 通常让 vi 重复三音，以免产生平行五度。</p>
+      <div class="music-demo" data-harmony-options="deceptive" id="deceptive">
+        <div class="music-demo-toolbar"><h3>属和弦到主和弦或 vi</h3><label>谱例 <select><option value="normal">V₇–I</option><option value="deceptive">V₇–vi</option><option value="expanded">IV–V–vi</option><option value="doubledFifthWarning">vi 重复五音接 V（不佳）</option><option value="doubledThirdToDominant">vi 重复三音接 V₇</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="major-leading"><h2 id="major-leading">vii° 的属功能与转位</h2>
+      <p>vii° 的原位含减五度，作用近似省去根音的 V₇。根音为导音，通常不重复。五音同根音构成减五度，虽可重复却较少用。一般重复三音。第一转位比原位常见，可作经过或辅助和弦，也可替代 V，尤其适合高音从导音上行到主音。</p>
+      <p>第二转位把第四级放在低音，因而可以具有下属功能的一面。它直接回到 I 时可出现近似变格终止的效果。</p>
+      <div class="music-demo" data-harmony-options="majorLeading" id="majorLeading">
+        <div class="music-demo-toolbar"><h3>导三和弦的功能对照</h3><label>谱例 <select><option value="rootless">从属七到省根音的导三</option><option value="first">vii°₆–I</option><option value="second">vii°₆₄–I</option><option value="passing">vii°₆ 作经过</option><option value="neighbor">vii°₆ 作辅助</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="cadence-variants"><h2 id="cadence-variants">副三和弦参与的终止变体</h2>
+      <table class="lesson-table"><caption>常用终止骨架与替代进行</caption><thead><tr><th scope="col">类型</th><th scope="col">基本进行</th><th scope="col">常用变体</th></tr></thead><tbody>
+      <tr><th scope="row">正格</th><td>V–I</td><td>iii₆–I、vii°₆–I</td></tr><tr><th scope="row">变格</th><td>IV–I</td><td>vi–I、ii₆–I、vii°₆₄–I</td></tr><tr><th scope="row">复式</th><td>IV–V₇–I</td><td>vi、ii、vii°₆ 或 vii°₆₄ 接 V₇–I</td></tr>
+      </tbody></table>
+      <p>副三和弦可以扩充语汇，正三和弦仍承担结构重点。为旋律或低音配和声时，可借转位写出级进低音，在中段形成一串六和弦，开头、半终止和全终止常由功能明确的正三和弦支撑。副三和弦也可作为下一节经过、辅助四六的两端。</p>
+      <div class="music-demo" data-harmony-options="majorCadences" id="majorCadences">
+        <div class="music-demo-toolbar"><h3>副三和弦进入终止的位置</h3><label>谱例 <select><optgroup label="正格变体"><option value="authentic">iii₆–I</option><option value="authenticLeading">vii°₆–I</option></optgroup><optgroup label="变格变体"><option value="plagalSixth">vi–I</option><option value="plagalSecond">ii₆–I</option><option value="plagal">vii°₆₄–I</option></optgroup><optgroup label="复式变体"><option value="compoundSixth">vi–V₇–I</option><option value="compoundSecond">ii–V₇–I</option><option value="compoundLeadingSixth">vii°₆–V₇–I</option><option value="compoundLeadingFour">vii°₆₄–V₇–I</option><option value="compound">ii₆–K₆₄–V₇–I</option></optgroup></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+
+      <section aria-labelledby="secondary-six-four"><h2 id="secondary-six-four">副级上的经过与辅助四六</h2>
+      <p>第七章的构造法也能用在副三和弦上。经过四六连接同一个和弦的原位与六和弦，低音级进穿过中间一音。辅助四六则在保持同一低音时暂时离开原和弦，随后返回。</p>
+      <div class="music-demo" data-harmony-options="secondarySixFour" id="secondarySixFour">
+        <div class="music-demo-toolbar"><h3>副三和弦的低音级进与同音保持</h3><label>谱例 <select><option value="second">ii–vi₆₄–ii₆</option><option value="sixth">vi₆–iii₆₄–vi</option><option value="neighbor">vi–ii₆₄–vi</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="secondary-triads-in-a-phrase"><h2 id="secondary-triads-in-a-phrase">副三和弦在完整乐句中的分配</h2>
+      <p>和声配置可以先用 I、IV、V 确定结构支点，再按低音是否需要级进、旋律是否合适，以及此处是否要突出终止，决定加入哪些副三和弦和转位。副三和弦的加入会改变局部色彩，乐句的主要停顿和收束仍由功能走向确定。</p>
+      <figure data-harmony-example="secondaryTriadPhrase"><figcaption>C 大调六八拍乐句中的副三和弦与转位</figcaption></figure>
+      <table class="lesson-table"><caption>四个段落位置的选和弦依据</caption>
+      <thead><tr><th scope="col">位置</th><th scope="col">和声安排</th><th scope="col">这样写的作用</th></tr></thead>
+      <tbody><tr><th scope="row">弱起之后</th><td>I₆、IV、I₆₄、IV₆ 接连出现。</td><td>低音能从 E 经 F、G 到 A 再回落，转位服务于级进线条。</td></tr>
+      <tr><th scope="row">中间的停顿</th><td>vii°₆ 作为经过连接，停顿处用原位 V。</td><td>前者使低音继续下行，后者用明确的属低音建立半终止。</td></tr>
+      <tr><th scope="row">后句推进</th><td>ii、vi 参与变化，末尾接 IV₆、iii₆、ii₆。</td><td>一串六和弦承接旋律；同为第一转位的和弦分属不同功能。</td></tr>
+      <tr><th scope="row">全终止</th><td>ii₆ 引入 K₆₄，再由原位 V₇ 到原位 I。</td><td>低音 F 到 G 组织属前准备，属音到主音明确结束全句。</td></tr></tbody></table>
+      </section>
+    </main>
+  </body>
+</html>

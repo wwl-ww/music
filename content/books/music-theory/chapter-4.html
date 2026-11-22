@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第四章 音程｜乐理教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">基本乐理教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第四章　音程</h1>
+      <p class="intro">音程由度数和音数确定。C 到 E 和 C 到 E♭ 都是三度，分别相隔四个和三个半音。</p>
+
+      <section aria-labelledby="interval-types">
+        <h2 id="interval-types">旋律音程与和声音程</h2>
+        <p><strong>音程</strong>是两个音之间的音高距离。两个音先后发声，构成<strong>旋律音程</strong> <svg class="inline-staff" viewBox="0 0 76 36" role="img" aria-label="旋律音程，两个音符先后排列"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><path d="M18 32H33"/><text x="21" y="32">&#xE0A2;</text><text x="49" y="27">&#xE0A2;</text></svg>。旋律可以上行、下行，或同音反复。两个音同时发声，构成<strong>和声音程</strong> <svg class="inline-staff" viewBox="0 0 76 36" role="img" aria-label="和声音程，两个音符上下对齐"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><path d="M31 32H46"/><text x="34" y="32">&#xE0A2;</text><text x="34" y="27">&#xE0A2;</text></svg>。</p>
+        <p>两音中位置较低的叫<strong>底音</strong>，较高的叫<strong>冠音</strong>。就算旋律先出现高音，底音仍然指较低的音。</p>
+      </section>
+
+      <section aria-labelledby="interval-counting">
+        <h2 id="interval-counting">度数与音数</h2>
+        <p><strong>度数</strong>按音名顺序数，两端都算。C 到 E 经过 C、D、E，所以是三度。在五线谱上，同一条线或同一个间是一度，相邻的线与间是二度，谱号换了也能照样数。升降号改变实际音高，但并不改变所占的线或间。</p>
+        <p><strong>音数</strong>用全音量出实际距离。一个全音记作 1，半音是半个全音。网页的表格直接数半音，例如音数为 1 的音程等于 2 个半音。</p>
+<figure class="keyboard-intervals interval-comparison">
+          <figcaption>小二度与大二度</figcaption>
+          <div class="keyboard-degree"><ul>
+            <li class="piano-comparison"><strong>小二度</strong><span>E4 至 F4 · 1 个半音</span><div data-piano="4 5 1"></div></li>
+            <li class="piano-comparison"><strong>大二度</strong><span>F4 至 G4 · 2 个半音</span><div data-piano="5 7 1"></div></li>
+          </ul></div>
+        </figure>
+        <aside class="lesson-callout" aria-labelledby="counting-rule">
+          <h3 id="counting-rule">音程性质的判断</h3>
+          <p>度数取决于音名写法。半音数用来判断这个度数是纯、大、小、增还是减。同样的半音数也可能对应不同度数。</p>
+        </aside>
+      </section>
+
+      <section aria-labelledby="natural-intervals">
+        <h2 id="natural-intervals">自然音程与变化音程</h2>
+        <p>只用七个基本音级，可以得到十四种<strong>自然音程</strong>。一、四、五、八度有纯音程，二、三、六、七度有大、小两种，再加上 F–B 的增四度与 B–F 的减五度。这里说的「自然」是音程的类别，同一类音程也可以出现在带升降号的两个音之间。</p>
+        <table class="lesson-table duration-table">
+          <caption>十四种自然音程</caption>
+          <thead><tr><th scope="col">音程</th><th scope="col">半音数</th><th scope="col">一组示例</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">纯一度</th><td>0</td><td>C4–C4</td></tr>
+            <tr><th scope="row">小二度</th><td>1</td><td>E4–F4</td></tr>
+            <tr><th scope="row">大二度</th><td>2</td><td>C4–D4</td></tr>
+            <tr><th scope="row">小三度</th><td>3</td><td>D4–F4</td></tr>
+            <tr><th scope="row">大三度</th><td>4</td><td>C4–E4</td></tr>
+            <tr><th scope="row">纯四度</th><td>5</td><td>C4–F4</td></tr>
+            <tr><th scope="row">增四度</th><td>6</td><td>F4–B4</td></tr>
+            <tr><th scope="row">减五度</th><td>6</td><td>B4–F5</td></tr>
+            <tr><th scope="row">纯五度</th><td>7</td><td>C4–G4</td></tr>
+            <tr><th scope="row">小六度</th><td>8</td><td>E4–C5</td></tr>
+            <tr><th scope="row">大六度</th><td>9</td><td>C4–A4</td></tr>
+            <tr><th scope="row">小七度</th><td>10</td><td>D4–C5</td></tr>
+            <tr><th scope="row">大七度</th><td>11</td><td>C4–B4</td></tr>
+            <tr><th scope="row">纯八度</th><td>12</td><td>C4–C5</td></tr>
+          </tbody>
+        </table>
+        <div id="natural-interval-score" class="programmatic-score" role="group" aria-labelledby="natural-interval-caption">
+          <div class="score-toolbar">
+            <h3 id="natural-interval-caption">以 C 为底音的自然音程</h3>
+            <form class="score-choices">
+              <fieldset>
+                <legend id="natural-interval-choice">音程</legend>
+                <div class="score-tonic"><select name="interval" aria-labelledby="natural-interval-choice"></select></div>
+              </fieldset>
+              <output data-generated-description></output>
+            </form>
+          </div>
+          <figure data-generated-score></figure>
+          <figure class="keyboard-example">
+            <figcaption>对应琴键</figcaption>
+            <div data-generated-piano></div>
+          </figure>
+        </div>
+        <p>把自然音程按原度数扩大或缩小，可以得到<strong>变化音程</strong>。在增减类中，增四度和减五度仍属自然音程，其余增、减、倍增和倍减音程归入变化音程。</p>
+        <table class="lesson-table duration-table">
+          <caption>同度数音程的半音递增顺序</caption>
+          <thead><tr><th scope="col">度数家族</th><th scope="col">从窄到宽</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">一、四、五、八</th><td>倍减 → 减 → 纯 → 增 → 倍增</td></tr>
+            <tr><th scope="row">二、三、六、七</th><td>倍减 → 减 → 小 → 大 → 增 → 倍增</td></tr>
+          </tbody>
+        </table>
+        <p>纯一度已是同音，所以没有更窄的减一度。C 到 C♯ 仍是一个字母音级，称为增一度。C♯ 到 D♭ 虽在钢琴上是同一个键，却写成两个音级，因此是减二度。</p>
+        <p>例如固定底音 C4，让冠音依次为 F𝄫4、F♭4、F4、F♯4、F𝄪4，就得到倍减四度、减四度、纯四度、增四度和倍增四度。</p>
+      </section>
+
+      <section aria-labelledby="building-intervals">
+        <h2 id="building-intervals">从指定音构成音程</h2>
+        <p>先按指定方向数足音级，再用升降号调整另一端。扩大音程可升高冠音或降低底音。缩小音程可降低冠音或升高底音。题设或曲谱已经固定的那一个音要保留。</p>
+        <table class="lesson-table duration-table">
+          <caption>以 E4 为已知音的构成示例</caption>
+          <thead><tr><th scope="col">目标</th><th scope="col">先确定字母</th><th scope="col">再调实际距离</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">向上构成大三度</th><td>E4 到 G4 是三度，相隔 3 个半音</td><td>把 G4 升为 G♯4，得到 4 个半音 <svg class="inline-staff" viewBox="0 -5 76 45" role="img" aria-label="E 到 G，随后将 G 升为升 G"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><text x="17" y="27">&#xE0A2;</text><text x="17" y="22">&#xE0A2;</text><text x="53" y="27">&#xE0A2;</text><text x="45" y="22">&#xE262;</text><text x="53" y="22">&#xE0A2;</text></svg></td></tr>
+            <tr><th scope="row">向下构成小三度</th><td>E4 往下到 C4 是三度，相隔 4 个半音</td><td>把 C4 升为 C♯4，得到 3 个半音 <svg class="inline-staff" viewBox="0 -5 76 45" role="img" aria-label="C 和 E，随后将底音 C 升半音为升 C"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><path d="M13 32H27 M49 32H63"/><text x="17" y="27">&#xE0A2;</text><text x="17" y="32">&#xE0A2;</text><text x="53" y="27">&#xE0A2;</text><text x="44" y="32">&#xE262;</text><text x="53" y="32">&#xE0A2;</text></svg></td></tr>
+          </tbody>
+        </table>
+        <details class="lesson-aside">
+          <summary>从 D 向上或向下构成十四种自然音程</summary>
+          <div class="lesson-aside-content">
+            <table class="lesson-table duration-table">
+              <thead><tr><th scope="col">音程</th><th scope="col">从 D4 往上</th><th scope="col">从 D5 往下</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">纯一度</th><td>D4</td><td>D5</td></tr>
+                <tr><th scope="row">小二度</th><td>E♭4</td><td>C♯5</td></tr>
+                <tr><th scope="row">大二度</th><td>E4</td><td>C5</td></tr>
+                <tr><th scope="row">小三度</th><td>F4</td><td>B4</td></tr>
+                <tr><th scope="row">大三度</th><td>F♯4</td><td>B♭4</td></tr>
+                <tr><th scope="row">纯四度</th><td>G4</td><td>A4</td></tr>
+                <tr><th scope="row">增四度</th><td>G♯4</td><td>A♭4</td></tr>
+                <tr><th scope="row">减五度</th><td>A♭4</td><td>G♯4</td></tr>
+                <tr><th scope="row">纯五度</th><td>A4</td><td>G4</td></tr>
+                <tr><th scope="row">小六度</th><td>B♭4</td><td>F♯4</td></tr>
+                <tr><th scope="row">大六度</th><td>B4</td><td>F4</td></tr>
+                <tr><th scope="row">小七度</th><td>C5</td><td>E4</td></tr>
+                <tr><th scope="row">大七度</th><td>C♯5</td><td>E♭4</td></tr>
+                <tr><th scope="row">纯八度</th><td>D5</td><td>D4</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="compound-intervals">
+        <h2 id="compound-intervals">单音程与复音程</h2>
+        <p>不超过八度的是<strong>单音程</strong>，超过八度的是<strong>复音程</strong>。把一个单音程的冠音升高八度，半音数增加 12，度数增加 7，因为两段共用一个端点。音程性质保持不变。</p>
+        <table class="lesson-table duration-table">
+          <caption>单音程与对应的复音程</caption>
+          <thead><tr><th scope="col">原音程</th><th scope="col">扩大后</th><th scope="col">音名示例</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">大二度</th><td>大九度</td><td>C4–D5</td></tr>
+            <tr><th scope="row">大三度</th><td>大十度</td><td>C4–E5</td></tr>
+            <tr><th scope="row">纯四度</th><td>纯十一度</td><td>C4–F5</td></tr>
+            <tr><th scope="row">纯五度</th><td>纯十二度</td><td>C4–G5</td></tr>
+            <tr><th scope="row">大六度</th><td>大十三度</td><td>C4–A5</td></tr>
+            <tr><th scope="row">大七度</th><td>大十四度</td><td>C4–B5</td></tr>
+            <tr><th scope="row">纯八度</th><td>纯十五度</td><td>C4–C6</td></tr>
+          </tbody>
+        </table>
+        <details class="lesson-aside">
+          <summary>超过两个八度的复音程</summary>
+          <div class="lesson-aside-content"><p>教材以所隔的八度数加上相应的单音程来描述。例如一组相隔两个八度再加一个大三度的音，可写成「隔开两个八度的大三度」。</p></div>
+        </details>
+<figure class="keyboard-intervals interval-comparison">
+          <figcaption>纯五度与纯十二度</figcaption>
+          <div class="keyboard-degree"><ul>
+            <li class="piano-comparison"><strong>纯五度</strong><span>C4 至 G4 · 7 个半音</span><div data-piano="0 7 2"></div></li>
+            <li class="piano-comparison"><strong>纯十二度</strong><span>C4 至 G5 · 19 个半音</span><div data-piano="0 19 2"></div></li>
+          </ul></div>
+        </figure>
+        <details class="lesson-aside" id="interval-keyboard-reference">
+          <summary>一度至十二度的键盘图鉴</summary>
+          <div class="lesson-aside-content keyboard-intervals interval-reference">
+            <p>均从中央 C 出发，依度数排列纯、大、小、增、减的示例。蓝键为起点，橙键为终点。同键只标一次。</p>
+            <div class="keyboard-interval-list"></div>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="interval-inversion">
+        <h2 id="interval-inversion">音程的转位</h2>
+        <p>把底音升高八度，或把冠音降低八度，直到两音上下次序交换，就形成<strong>转位音程</strong>。也可以同时移动两音，只要最后交换底音与冠音。</p>
+        <aside class="lesson-callout" aria-labelledby="inversion-rule">
+          <h3 id="inversion-rule">单音程转为单音程时，两个度数相加等于 9</h3>
+          <p>一度和八度、二度和七度、三度和六度、四度和五度互换。纯仍为纯，大与小互换，增与减互换，倍增与倍减也互换。</p>
+        </aside>
+        <p>例如 D4–F4 是小三度，把 D4 抬到 F4 上方就成为 F4–D5，大六度。若把转位结果写成复音程，可按对应的单音程判断转位关系。</p>
+<figure class="keyboard-intervals interval-comparison">
+          <figcaption>小三度转位为大六度</figcaption>
+          <div class="keyboard-degree"><ul>
+            <li class="piano-comparison"><strong>原位 · 小三度</strong><span>D4 至 F4 · 3 个半音</span><div data-piano="2 5 2"></div></li>
+            <li class="piano-comparison"><strong>转位 · 大六度</strong><span>F4 至 D5 · 9 个半音</span><div data-piano="14 5 2"></div></li>
+          </ul></div>
+        </figure>
+      </section>
+
+      <section aria-labelledby="enharmonic-intervals">
+        <h2 id="enharmonic-intervals">等音程</h2>
+        <p>在十二平均律中，有些音程的两个实际音高都一样，写法或音乐含义却不同，这叫<strong>等音程</strong>。钢琴上的同一音对，可能因音名的不同而承担不同的功能。</p>
+        <ul>
+          <li>两端一起作等音改写，可以保留度数和名称。C♯4–E4 与 D♭4–F♭4 都是小三度。</li>
+          <li>只改写一端，可以改变度数和名称。C♯4–G4 是减五度，D♭4–G4 是增四度，两组音都相隔 6 个半音。</li>
+          <li>等音改写也能在自然音程与变化音程之间转换，如 C4–D♯4 的增二度与 C4–E♭4 的小三度。</li>
+        </ul>
+<figure class="interval-examples interval-comparison">
+          <figcaption>增二度与小三度的等音对照</figcaption>
+          <ul>
+            <li>
+              <strong>增二度</strong><span>C4 至 D♯4</span>
+              <svg viewBox="0 10 144 84" aria-hidden="true">
+              <path d="M8 30H136 M8 40H136 M8 50H136 M8 60H136 M8 70H136 M57 80H77" stroke="currentColor" fill="none"/>
+              <text x="14" y="60">&#xE050;</text><text x="61" y="80">&#xE0A2;</text>
+              <text x="93" y="75">&#xE262;</text><text x="108" y="75">&#xE0A2;</text>
+            </svg>
+              <div class="notation-keyboard" data-piano="0 3 1"></div>
+            </li>
+            <li>
+              <strong>小三度</strong><span>C4 至 E♭4</span>
+              <svg viewBox="0 10 144 84" aria-hidden="true">
+              <path d="M8 30H136 M8 40H136 M8 50H136 M8 60H136 M8 70H136 M57 80H77" stroke="currentColor" fill="none"/>
+              <text x="14" y="60">&#xE050;</text><text x="61" y="80">&#xE0A2;</text>
+              <text x="93" y="70">&#xE260;</text><text x="108" y="70">&#xE0A2;</text>
+            </svg>
+              <div class="notation-keyboard" data-piano="0 3 1"></div>
+            </li>
+          </ul>
+        </figure>
+        <p>D♯ 和 E♭ 在五线谱上位置不同，在钢琴上是同一个黑键。两个音程的实际音高相同。</p>
+      </section>
+
+      <section aria-labelledby="consonance-intervals">
+        <h2 id="consonance-intervals">协和与不协和</h2>
+        <p>两个音同时响起时，有的容易听成一个融合的整体，有的有更明显的紧张感。教材按音响效果对和声音程作以下分类。具体的音乐语境也会影响听感。</p>
+        <figure class="classification-tree">
+          <figcaption>和声音程的协和分类</figcaption>
+          <ul class="classification-branches">
+            <li>
+              <strong>协和音程</strong>
+              <ul>
+                <li><strong>极完全协和</strong><span>纯一度、纯八度</span></li>
+                <li><strong>完全协和</strong><span>纯四度、纯五度</span></li>
+                <li><strong>不完全协和</strong><span>大、小三度与大、小六度</span></li>
+              </ul>
+            </li>
+            <li>
+              <strong>不协和音程</strong>
+              <ul>
+                <li><strong>不协和</strong><span>大二度、小七度，增减及倍增倍减音程</span></li>
+                <li><strong>极不协和</strong><span>小二度、大七度</span></li>
+              </ul>
+            </li>
+          </ul>
+        </figure>
+        <p>转位后，协和音程仍归入协和，不协和音程仍归入不协和。谱例中的纯五度和大三度属于协和音程，增四度和小二度属于不协和音程。</p>
+        <figure id="consonance-intervals-score" aria-label="纯五度、大三度、增四度和小二度的和声音响对照"></figure>
+      </section>
+    </main>
+    <script type="module" src="./chapter-4.js"></script>
+  </body>
+</html>

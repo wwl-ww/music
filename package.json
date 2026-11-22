@@ -1,0 +1,13 @@
+{
+  "name": "music-theory-preview",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host 127.0.0.1"
+  },
+  "dependencies": {
+    "@coderline/alphatab": "1.9.0"
+  },
+  "devDependencies": {
+    "vite": "8.3.8"
+  }
+}

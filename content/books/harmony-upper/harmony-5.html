@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第五章　终止式与终止四六和弦｜和声学基础</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony-5-8.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 上</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第五章　终止式与终止四六和弦</h1>
+      <p class="intro">终止式组织乐句的停顿与收束。终止四六和弦让属功能在真正进入属和弦前得到强调。</p>
+      <section aria-labelledby="cadence-types"><h2 id="cadence-types">半终止、全终止与补充终止</h2>
+      <p>终止式是在乐句、乐段或全曲的结束位置使用的和声进行。同一种和弦连接出现在乐句中间时，是否具有终止作用，还要看它所在的结构位置和节奏。</p>
+      <table class="lesson-table"><caption>终止处的功能与和声语汇</caption><thead><tr><th scope="col">结构作用</th><th scope="col">种类</th><th scope="col">进行</th></tr></thead><tbody>
+      <tr><th scope="row" rowspan="2">半终止，停在不稳定功能</th><td>正格半终止</td><td>……→ V</td></tr><tr><td>变格半终止</td><td>……→ IV</td></tr>
+      <tr><th scope="row" rowspan="3">全终止，回到主和弦</th><td>正格终止</td><td>V → I</td></tr><tr><td>变格终止</td><td>IV → I</td></tr><tr><td>复式终止</td><td>IV → V → I</td></tr>
+      <tr><th scope="row">全终止后的补充</th><td>变格补充终止</td><td>全终止已确立后，再加 IV → I</td></tr></tbody></table>
+      <p>常见的两句式乐段，前句用半终止留下继续的倾向，后句用全终止收束。补充终止在已经收束之后加深结束感。相同的 IV–I 可以担任变格全终止，也可以担任变格补充终止，区别在于乐段此前是否已经结束。</p>
+      <div class="music-demo" data-harmony-options="cadences" id="cadences">
+        <div class="music-demo-toolbar"><h3>同一调内的六种终止</h3><label>谱例 <select><option value="halfV">正格半终止</option><option value="halfIV">变格半终止</option><option value="authentic">正格全终止</option><option value="plagal">变格全终止</option><option value="compound">复式全终止</option><option value="supplement">变格补充终止</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="perfect-cadence"><h2 id="perfect-cadence">完满终止与不完满终止</h2>
+      <p>全终止中，结尾主和弦和紧接在它前面的和弦均为原位，主和弦又在强拍、高音为主音时，构成完满终止。四项条件中有任何一项不满足，便是不完满终止。两种收束各有用处，由乐句需要决定。</p>
+      <table class="lesson-table"><caption>全终止的四个完满条件</caption><thead><tr><th scope="col">检查项</th><th scope="col">完满条件</th><th scope="col">不完满的情况</th></tr></thead><tbody>
+      <tr><th scope="row">终止主和弦</th><td>原位</td><td>I 或 i 的低音为三音、五音</td></tr><tr><th scope="row">主和弦前一和弦</th><td>原位</td><td>例如 V₆–I</td></tr><tr><th scope="row">终止拍位</th><td>主和弦落在强拍</td><td>主和弦落在弱拍</td></tr><tr><th scope="row">高音</th><td>主和弦的根音旋律位置</td><td>三音或五音在高音</td></tr>
+      </tbody></table>
+      <div class="music-demo" data-harmony-options="completion" id="completion">
+        <div class="music-demo-toolbar"><h3>全终止的四个条件</h3><label>谱例 <select><option value="perfect">完满</option><option value="tonicInverted">主和弦转位</option><option value="sopranoThird">高音落在三音</option><option value="weakBeat">主和弦落在弱拍</option><option value="dominantInverted">前一和弦转位</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="cadential-six-four"><h2 id="cadential-six-four">终止四六和弦 K₆₄</h2>
+      <p>终止处以属音作低音，上方叠入主和弦的根音和三音，就得到外形为主三和弦第二转位的 <strong>K<sup>6</sup><sub>4</sub></strong>。K 取自俄语 <i lang="ru">каданс</i>（终止式）的首字母。它重复低音，也就是这个三和弦的五音。低音已经进入属功能，低音上方的四度和六度通常分别下行到三度和五度，解决到 V 或 V₇。</p>
+      <table class="lesson-table"><caption>C 大调与 c 小调的典型解决</caption><thead><tr><th scope="col">与低音的关系</th><th scope="col">C 大调</th><th scope="col">c 和声小调</th></tr></thead><tbody>
+      <tr><th scope="row">低音</th><td>G 保持</td><td>G 保持</td></tr><tr><th scope="row">四度到三度</th><td>C → B</td><td>C → B</td></tr><tr><th scope="row">六度到五度</th><td>E → D</td><td>E♭ → D</td></tr><tr><th scope="row">上方重复的 G</th><td>到 V 时可保持，到 V₇ 时可下行到 F</td><td>同左</td></tr>
+      </tbody></table>
+      <p>K<sup>6</sup><sub>4</sub> 常由 I 或 IV 引入，避免先写 V 再回到 K<sup>6</sup><sub>4</sub>。它通常在强拍或强位，时值常等于或大于随后的 V。过短或落在弱位时，终止重心容易偏到后面的 V。K<sup>6</sup><sub>4</sub>–V 后可直接停在属，构成半终止，也可接 I 或 i 完成全终止。</p>
+      <div class="music-demo" data-harmony-options="cadential" id="cadential">
+        <div class="music-demo-toolbar"><h3>终止四六的进入与解决</h3><label>谱例 <select><option value="tonic">C 大调 I–K₆₄–V–I</option><option value="subdominant">C 大调 IV–K₆₄–V–I</option><option value="half">停在 V 的半终止</option><option value="minor">c 小调 iv–K₆₄–V–i</option><option value="seventh">解决到 V₇</option><option value="leapIn">以旋律跳进引入</option><option value="leapOut">跳进到属和弦</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      <p>使用较长的 K<sup>6</sup><sub>4</sub> 时，可在它的时值内改变上方和弦音的排列，低音保持属音或换八度。引入时允许旋律跳进。解决时个别声部也可上行，旋律还可跳到 V 的另一和弦音。此时仍以属功能的持续和四部连接的清楚为准。</p>
+      <div class="music-demo" data-harmony-options="cadentialRhythm" id="cadentialRhythm">
+        <div class="music-demo-toolbar"><h3>终止四六的拍位与时值</h3><label>谱例 <select><option value="strong">强位、与 V 等长</option><option value="brief">强位、短于 V</option><option value="weak">弱位引入</option><option value="revoiced">延长期间换位</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="bass-harmonization"><h2 id="bass-harmonization">为低音配四部和声</h2>
+      <ol>
+      <li><strong>定调并划分乐句。</strong>从调号、首尾音及低音的停顿判断调性，标出半终止、全终止和可能的补充终止。</li>
+      <li><strong>选和弦。</strong>限用原位正三和弦时，低音的Ⅰ、Ⅳ、Ⅴ分别配 I、IV、V，小调相应为 i、iv、V。只有在终止位置，才把属低音配成 K<sup>6</sup><sub>4</sub>。</li>
+      <li><strong>写高音。</strong>从各和弦可用音中组织有方向的旋律，多用平稳进行。需要更活跃时，可用和弦换位与三音跳进。</li>
+      <li><strong>补内声部。</strong>检查和弦音、排列、重复音和所有声部的连接。内声部难以写得平稳时，可回头修改高音。</li>
+      </ol>
+      <p>同一条低音可以先停在属音形成半终止，再用相同的 K<sup>6</sup><sub>4</sub>–V 进入主和弦。最后添加 IV–I，作用是补充已经完成的收束。</p>
+      <figure data-harmony-example="bassCadence"><figcaption>给定低音的半终止、全终止与补充终止</figcaption></figure>
+      </section>
+    </main>
+  </body>
+</html>

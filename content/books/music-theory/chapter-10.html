@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第十章 调的转换｜乐理教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">基本乐理教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第十章　调的转换</h1>
+      <p class="intro">本章区分转调、离调、调式交替和移调。关键线索是调性中心是否改变，以及新的中心怎样建立。</p>
+
+      <section aria-labelledby="modulation"><h2 id="modulation">转调</h2>
+      
+      <p>从原调进入新调，并在新主音或主和弦上形成稳定的结束，称为<strong>转调</strong>。原有调号和临时变音都提供线索，是否形成新调还要结合乐句终止判断。</p>
+      <table class="lesson-table duration-table">
+      <caption>近关系转调的常见情形</caption>
+      <thead><tr><th scope="col">调号关系</th><th scope="col">示范</th><th scope="col">新调线索</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">同调号</th><td>d 和声小调 → F 大调</td><td>C♯ 指向 D，后段以 F 收束</td></tr>
+      <tr><th scope="row">向属方向</th><td>E♭ 大调 → B♭ 大调</td><td>A♭ 还原为 A，乐段落在 B♭</td></tr>
+      <tr><th scope="row">向下属方向</th><td>F 大调 → B♭ 大调</td><td>E 降为 E♭，末段停在 B♭ 主和弦</td></tr>
+      </tbody>
+      </table>
+      <p>非近关系也可以转调。例如 a 小调转 A 大调，两段共用主音 A，后段以 A 大调的音列和终止建立新的调式。</p>
+      <details class="lesson-aside">
+        <summary>非近关系转调与五声调式转调</summary>
+        <div class="lesson-aside-content"><ul>
+          <li>a 和声小调中的 G♯ 已是小调导音。转入 A 大调要结合大调音列和终止判断。</li>
+          <li>D 大调转 a 小调时，可以经过过渡和声，再以 a 小调主和弦收束。</li>
+          <li>五声调式可结合各乐句的收束音和音列判断新调。G 宫转 C 宫属于近关系转调。G 徵转 C 羽时，主音仍是 G 转 C，但宫音由 C 变为 E♭，属于非近关系转调。</li>
+        </ul></div>
+      </details>
+      </section>
+      <section aria-labelledby="tonicization"><h2 id="tonicization">离调</h2>
+      
+      <p><strong>离调</strong>是在主调内短暂指向副调，随即回到主调。副调只获得临时强调，乐段的主要终止仍归于主调。例如 G 大调中短暂出现 C♯–D，C♯ 使 D 获得局部主音感，随后音乐回到 G。</p>
+      <aside class="lesson-callout"><h3>转调与离调的区别</h3><p>判断依据是新中心有没有建立并稳定收束。单独出现临时升降号，只能说明可能出现了新的半音关系。</p></aside>
+      <p>两段均从 C 大调开始，并出现指向 G 的 D 属七和弦。前段继续回到 C，后段在 G 上收束。</p>
+      <figure id="key-change-score" aria-label="C 大调短暂指向 G 后返回，与在 G 大调终止的对照"></figure>
+      </section>
+      <section aria-labelledby="mode-alternation"><h2 id="mode-alternation">调式交替</h2>
+      
+      <p>调式交替是两个调式在一段音乐中紧密交织，两个主音都起重要作用。大小调中可见同主音调式的交替，也可见关系大小调交替，例如 G 大调与 e 小调共用调号，两种主音先后成为乐句重心。</p>
+      <p>同宫调式交替共用宫音和基本音列，各乐句的主音不同。有时主体维持一个调式，末句才在另一主音上收束，称<strong>交替终止</strong>。例如前七小节呈 C 羽调式，最后归到 E♭ 宫音。</p>
+      </section>
+      <section aria-labelledby="transposition"><h2 id="transposition">移调</h2>
+      
+      <p><strong>移调</strong>将作品全部或局部整体移高或移低。各音的实际音高一同移动，相对音程、节奏和调式结构保持。移调可适应演唱音域、乐器音区或移调乐器的记谱需求。</p>
+      <table class="lesson-table duration-table">
+      <caption>移调的记谱方法</caption>
+      <thead><tr><th scope="col">方法</th><th scope="col">谱面的处理</th><th scope="col">示例</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">同名移调</th><td>音名的字母和谱位保留，改调号并重新计算临时记号</td><td>A 大调降半音成为 A♭ 大调。原来临时升高的 A、B，在新调里用还原号表达同样的半音变化。</td></tr>
+      <tr><th scope="row">非同名移调</th><td>以新调的相应音级替换原音，必要时调整临时变音记号</td><td>F–G–A <svg class="inline-staff" viewBox="0 -5 76 43" role="img" aria-label="F、G、A"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><text x="10" y="24.5">&#xE0A2;</text><text x="30" y="22">&#xE0A2;</text><text x="50" y="19.5">&#xE0A2;</text></svg> 上移纯四度成为 B♭–C–D <svg class="inline-staff" viewBox="0 -5 76 43" role="img" aria-label="降 B、C、D"><path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><text x="6" y="17">&#xE260;</text><text x="14" y="17">&#xE0A2;</text><text x="30" y="14.5">&#xE0A2;</text><text x="50" y="12">&#xE0A2;</text></svg>。</td></tr>
+      <tr><th scope="row">改变谱号</th><td>保持符头线间位置，以新谱号重新读音，再配新调号</td><td>在谱位上先找到原调主音，再选择能让该谱位成为新主音的谱号。</td></tr>
+      </tbody>
+      </table>
+      <p>新调通常选择调号较简洁的等音写法。临时变音应保持相对于所属音级的升降作用，书写的符号可能随调号改变。</p>
+      <details class="lesson-aside">
+      <summary>移调乐器的记谱与实音</summary>
+      <div class="lesson-aside-content">
+      <table class="lesson-table duration-table">
+      <caption>移调乐器的记谱与实音</caption>
+      <thead><tr><th scope="col">乐器类别</th><th scope="col">记谱 C 的实际音高</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">F 调圆号、英国管</th><td>低纯五度，响 F</td></tr>
+      <tr><th scope="row">B♭ 调单簧管、小号</th><td>低大二度，响 B♭</td></tr>
+      <tr><th scope="row">E♭ 高音移调乐器</th><td>高小三度，响 E♭</td></tr>
+      <tr><th scope="row">A 调单簧管</th><td>低小三度，响 A</td></tr>
+      </tbody>
+      </table>
+      <p>具体乐器的实音还可能与表中的音名相隔整八度，例如 E♭ 中音萨克斯比记谱低大六度。B♭ 单簧管的分谱应比所需实音写高大二度。</p>
+      </div>
+      </details>
+      </section>
+    </main>
+    <script type="module" src="./chapter-10.js"></script>
+  </body>
+</html>

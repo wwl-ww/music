@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第二十一章　徵调式和声｜和声学基础</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony-21-23.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 上</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第二十一章　徵调式和声</h1>
+      <p class="intro">徵调式以徵音为主音。以 C 宫 · G 徵为例，同宫记号 V 是这里的主和弦，商和弦 ii 才是常用的属和弦。</p>
+      <section aria-labelledby="zhi-scale">
+        <h2 id="zhi-scale">音阶与主、属、下属功能</h2>
+        <p>C 宫系统的五声徵调式是 G–A–C–D–E–G，加入 B（变宫）和 F（清角）成为七声徵调式。拿同主音的宫调式比较，七声音阶只有第Ⅶ级不同：G 徵的 F 比 G 低全音，G 宫的 F♯ 比 G 低半音。</p>
+        <table class="lesson-table">
+          <caption>C 宫 · G 徵的和弦选择</caption>
+          <thead><tr><th scope="col">功能方向</th><th scope="col">同宫标记</th><th scope="col">结构与使用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">主</th><td>V</td><td>G–B–D 有大调色彩。三音 B 是偏音，可换成 A 或 C，也可省去、降为 B♭，或在保留原三音的基础上加六度 E。</td></tr>
+            <tr><th scope="row">属</th><td>ii、IV、vii°</td><td>ii 最常用，三音 F 是偏音，可换音或升为 F♯。IV 的根音是偏音，较少用原位。vii° 有两个偏音 B、F，而且是减三和弦，较少用。</td></tr>
+            <tr><th scope="row">下属</th><td>I、vi、iii</td><td>I 位在徵音下方纯五度，常另起定调作用。vi 常代替 I 承担下属作用，iii 也可向主和弦进行。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" data-harmony-options="zhiStructures" id="zhiStructures">
+          <div class="music-demo-toolbar">
+            <h3>徵与商和弦的三音处理</h3>
+          <label>谱例 <select><option value="plain">徵和弦原形</option><option value="open">徵和弦省三音</option><option value="replaceSecond">徵和弦换二音</option><option value="replaceFourth">徵和弦换四音</option><option value="addedSixth">徵和弦加六音</option><option value="minor">徵和弦降三音</option><option value="shang">商和弦原形</option><option value="shangSecond">商和弦换二音</option><option value="shangFourth">商和弦换四音</option><option value="majorDominant">商和弦升三音</option></select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+      <section aria-labelledby="zhi-cadences">
+        <h2 id="zhi-cadences">徵调式的终止式</h2>
+        <p>以商为属、以徵为主时，ii–V 的根音上行四度，商音本身也是正音。这是徵调式常见的属到主终止。商和弦的三音 F 可放在内声部，让外声部更突出五声骨干。</p>
+        <table class="lesson-table">
+          <caption>以徵和弦为终点的连接</caption>
+          <thead><tr><th scope="col">终止方向</th><th scope="col">常用连接</th><th scope="col">处理方法</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">属到主</th><td>ii–V，ii₇–V</td><td>商七的七音 C 通常下行到 B。七音在旋律上时也可下行跳到主音 G。</td></tr>
+            <tr><th scope="row">变音属到主</th><td>II–V，II₇–V，II₉–V</td><td>F♯ 通常上行到 G，也可在内声部下跳到属音 D。属九常省三音，九音 E 通常下行到 D，在旋律上也可上跳到 G。</td></tr>
+            <tr><th scope="row">下属到主</th><td>vi–V，iii–V，I–V</td><td>羽到徵较常见，宫直接到徵的纯变格收束较少。也可把多个下属方向的和弦连起来，例如 iii–vi–V。</td></tr>
+            <tr><th scope="row">复式终止</th><td>vi–ii–V，I–ii–V，iii–ii–V</td><td>下属先到属，再归主。也见属先到下属再归主，例如 ii–I–V、ii–vi–V 或 ii–iii–V。</td></tr>
+          </tbody>
+        </table>
+        <p>提高商和弦三音会加强指向徵音的半音。大属可以用于终止，偶尔也可在起始出现。频繁使用会弱化徵调式色彩，甚至让听者转向同主音的宫调式。把 F♯ 放在内声部，可使五声性的旋律继续保持原有骨干。</p>
+        <div class="music-demo" data-harmony-options="zhiCadences" id="zhiCadences">
+          <div class="music-demo-toolbar">
+            <h3>属七、属九与复式终止</h3>
+          <label>谱例 <select><option value="minor">小属到主</option><option value="seventhStep">商七的七音级进</option><option value="seventhLeap">商七的旋律七音跳进</option><option value="major">大属的临时导音上行</option><option value="majorInner">大属的临时导音在内声部下跳</option><option value="ninthStep">属九省三音，九音下行</option><option value="ninthLeap">属九省三音，九音上跳</option><option value="plagal">羽和弦到主</option><option value="gongPlagal">宫和弦到主</option><option value="mediantPlagal">角和弦到主</option><option value="sdt">下属—属—主</option><option value="dst">属—下属—主</option></select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+      <section aria-labelledby="gong-defines-zhi">
+        <h2 id="gong-defines-zhi">宫和弦在徵调式中的定调作用</h2>
+        <p>同宫的宫、徵主音相隔纯五度，两种调式都可有大调性格。同一个宫和弦 I 既可能是徵调式中的下属，也可能主要用来确定宫音所属的音列。出现在引子后、主题开头时，I 能以宫确定徵。以徵为根音的空五度引子还可把徵音当作宫和弦的五音，为随后出现的宫音提供支撑。</p>
+        <p>宫和弦也可以稍晚出现。旋律和低音若只确立 G 与 D 两个支点，它们可分别落在几种同宫调式的不同级数上。进一步出现 C，尤其当 C–E 的大三度进入强位时，结合最后回到 G 的句法，便能更明确地判断 C 宫 · G 徵。</p>
+        <p>配和声时可根据旋律的宫、羽、角音，在较多位置选用 I、vi、iii，把商和弦留给明确的终止。徵和弦也可换音、加音，或用羽七等自然小七和弦衔接，使和声与五声骨干相合。</p>
+        <div class="music-demo" data-harmony-options="zhiGong" id="zhiGong">
+          <div class="music-demo-toolbar">
+            <h3>宫和弦出现的位置</h3>
+          <label>谱例 <select><option value="opening">空五度引出宫和弦</option><option value="later">中段补出宫和弦</option></select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

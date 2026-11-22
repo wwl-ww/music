@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第二十六章 离调｜和声学基础 · 下</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony-lower.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 下</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第二十六章　离调</h1>
+      <p class="intro">离调让本调里的某个和弦短暂取得主和弦的地位。副属和副下属可以共同支持这个临时中心，后续乐句仍由原调控制。</p>
+      <section aria-labelledby="tonicization">
+      <h2 id="tonicization">离调与临时功能</h2>
+      <p>A7–Dm 在 C 大调的乐句中可以形成短暂的 d 小调属—主关系。如果后面仍以 G7–C 确定原来的主音 C，这个局部变化叫<strong>离调</strong>。Dm 在该处是临时主和弦，在整段中仍是本调的 ii。</p>
+      <p>局部功能可写作 (D)–(T)。重属也是离调材料，因为它给原调的属和弦增加了局部主功能。一个临时升降号只表明音高发生变化。离调的判断还要听到和弦朝哪个局部中心进行。</p>
+      </section>
+      <section aria-labelledby="secondary-subdominant">
+      <h2 id="secondary-subdominant">副下属的构成</h2>
+      <p>在临时主和弦前，也可建立局部下属功能，称<strong>副下属和弦</strong>，可记作 (S)。它可直接进入临时主和弦，形成局部变格进行，也可以先接副属，再由副属解决。</p>
+      <table class="lesson-table duration-table">
+        <caption>按临时主和弦选择副下属</caption>
+        <thead><tr><th scope="col">临时主和弦</th><th scope="col">下属功能材料</th><th scope="col">以 C 大调内的目标为例</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">大三和弦</th><td>IV、ii 或 ii7</td><td>以 G 为中心：C、Am、Am7</td></tr>
+          <tr><th scope="row">小三和弦</th><td>iv、ii° 或 iiø7</td><td>以 Dm 为中心：Gm、E°、Eø7</td></tr>
+        </tbody>
+      </table>
+      <p>这些和弦在本调里可能已经存在。例如 C 大调的 C 大三和弦可以承担相对于 G 的 IV 功能。也可能需要变音，例如 d 小调的副下属 Eø7 含 B♭。判断依据是后面的局部走向。</p>
+      <p>临时调的Ⅱ级七和弦把Ⅱ级和Ⅳ级三和弦的音合在一起。以 d 小调为例，ii° 的 E–G–B♭ 加上 iv 中的 D，得到 E–G–B♭–D，仍承担下属功能。以 G 大调为局部中心时，Am7 中的 A–C–E–G 同样合并了 ii 与 IV 的材料。</p>
+      <p>副下属直接解决时，局部是 (S)–(T)。例如 C 大调中的 Gm–Dm，可以按临时 d 小调的 iv–i 理解。若加入副属，局部则是 (S)–(D)–(T)。同一个 Dm 因而可以由两种不同功能的和弦支持。</p>
+      <p>当目标是本调的下属和弦时，它自己的下属称<strong>重下属和弦</strong>。C 大调的下属是 F，F 的下属是 B♭，所以 B♭ 大三和弦可记为 SS。a 小调的下属是 Dm，其下属 Gm 可记作 ss。</p>
+      <div class="music-demo" id="tonicization-example" data-harmony-options="tonicization-example">
+        <div class="music-demo-toolbar">
+          <h3>离调中的副属与副下属</h3>
+          <label>进行
+            <select>
+              <option value="localDominant">副属 → 临时主和弦</option>
+              <option value="localCadence">副下属 → 副属 → 临时主和弦</option>
+              <option value="plagalAux">副下属 → 临时主和弦</option>
+              <option value="doubleSub">重下属 → 下属</option>
+            </select>
+          </label>
+        </div>
+        <output class="music-demo-cue">A7 把 Dm 暂时当作主和弦，后续 G7–C 回到原调。</output>
+        <figure aria-label="离调中的副属与副下属"></figure>
+      </div>
+      </section>
+      <section aria-labelledby="tonicization-usage">
+      <h2 id="tonicization-usage">经过性离调与终止性离调</h2>
+      <p>句中短暂指向另一个和弦，随即继续原调的功能过程，称经过性离调。若局部属功能落在乐句收束处，并加强收束和弦，可以形成终止性离调。例如主调半终止前的 V/V–V，局部把 V 当作目标，整句仍停在本调的属上。</p>
+      <p>终止性离调也可停在临时属和弦，形成局部半终止。临时主和弦可以暂不出现，仍可结合前面的副下属、旋律和后续原调进行判断。</p>
+      </section>
+      <section aria-labelledby="tonicization-sequences">
+      <h2 id="tonicization-sequences">离调模进与属七连锁</h2>
+      <p>把一组离调进行作为原型，按固定方向和音程移到新位置，就形成<strong>离调模进</strong>。原型可以只有 (D)–(T)，例如 D7–G 后接 C7–F，两个局部目标由 G 下降二度到 F。</p>
+      <p>谱例中的第二组声部分别比第一组低一个全音，临时导音也随整组移动，从 F♯–G 改为 E–F。模进原型也可以采用 (T)–(D)：先呈现临时主和弦，再给出它的属功能，然后把整个动机移到下一位置。</p>
+      <p>若每个临时目标继续改成一个新的属七和弦，就得到<strong>属七和弦的连锁进行</strong>。例如 E7–A7–D7–G7–C，根音连续下行纯五度或等效地上行纯四度。中间没有逐一停在稳定的临时主和弦上，持续的不稳定感直到回到 C 才消解。</p>
+      <div class="music-demo" id="tonicization-sequence" data-harmony-options="tonicization-sequence">
+        <div class="music-demo-toolbar">
+          <h3>离调模进与属七连锁</h3>
+          <label>进行
+            <select>
+              <option value="sequence">两组离调模进</option>
+              <option value="chain">属七和弦连锁</option>
+            </select>
+          </label>
+        </div>
+        <output class="music-demo-cue">先以 D7–G 指向 G，再把这种关系移到 C7–F。两个临时主和弦 G、F 依次下降二度。</output>
+        <figure aria-label="离调模进与属七连锁"></figure>
+      </div>
+      <details class="lesson-aside"><summary>连锁进行的转位与所在调判断</summary><div class="lesson-aside-content"><ul><li>连锁进行可以用转位或其他属功能结构。根音关系与连续解决比低音是否每次跳五度更能说明它的组织。</li><li>一段连续离调是否改变主调，要结合两端的调性和乐句终止。</li></ul></div></details>
+      </section>
+    </main>
+  </body>
+</html>

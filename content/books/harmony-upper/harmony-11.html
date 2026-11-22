@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第十一章　导七和弦、属七—十三和弦｜和声学基础</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony-9-12.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 上</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第十一章　导七和弦、属七—十三和弦</h1>
+      <p class="intro">导七和弦和属七—十三和弦都能集中不稳定音级。它们的写法从属和弦的声部解决延伸而来。</p>
+      <section aria-labelledby="leading-structures"><h2 id="leading-structures">导三、半减七与减七和弦</h2>
+      <p>导三和弦和导七和弦的根音都是导音。它们缺少根音与五音之间的纯五度支撑。在属功能中，可把导三听成省略根音的 V₇，把导七听成省略根音的 V₉。</p>
+      <table class="lesson-table"><caption>以 B 为导音的三种结构</caption><thead><tr><th scope="col">和弦</th><th scope="col">音的组成</th><th scope="col">性质和常用写法</th></tr></thead><tbody>
+      <tr><th scope="row">大调与和声小调的导三</th><td>B–D–F</td><td>减三和弦 vii°。旧式减号表示减五度。常用第一转位，通常重复三音 D，避免重复构成减五度的两音。</td></tr>
+      <tr><th scope="row">大调导七</th><td>B–D–F–A</td><td>减三和弦加小七度，半减七和弦 viiø₇。</td></tr>
+      <tr><th scope="row">和声小调导七</th><td>B–D–F–A♭</td><td>减三和弦加减七度，减七和弦 vii°₇。</td></tr>
+      </tbody></table>
+      <p>较早的终止写法可见导三的第一转位，之后导七运用更常见。四部中的导七多用完整形式，三个转位均可用，转位数字与属七相同。</p>
+      </section>
+      <section aria-labelledby="leading-resolution"><h2 id="leading-resolution">导七的典型解决和中间和弦</h2>
+      <p>导七按省根音属九的规则处理。以 C 为主音时，B 上行到 C，F 下行到 E 或 E♭，A 或 A♭ 下行到 G，D 可下行到 C 或上行到 E 或 E♭。D 与 F 若进入同一个三音，可以通过重复三音避免 D–A 平行到 C–G。</p>
+      <p>也可先把导七的七音降到属音 G，使它在属功能内部变成 V₇，再解决。若导七的五音 F 和七音 A 或 A♭ 一同保持，还可穿插经过性的 IV<sup>6</sup><sub>4</sub> 或 iv<sup>6</sup><sub>4</sub>，随后回到导七的另一转位。</p>
+      <div class="music-demo" data-harmony-options="leadingResolution" id="leadingResolution">
+        <div class="music-demo-toolbar"><h3>大、小调导七的四部解决</h3><label>谱例 <select><option value="major">大调半减导七</option><option value="minor">和声小调减导七</option><option value="first">五六转位</option><option value="second">三四转位</option><option value="third">二转位</option><option value="throughV">经属七解决</option><option value="throughIV">经下属四六回到导七</option><option value="throughMinorIV">小调经 iv₆₄ 回到导七</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="leading-usage"><h2 id="leading-usage">导七的功能与终止用法</h2>
+      <p>导七的各音都是调式的不稳定音级，可以直接强化归主的方向。属功能延长时，它还可与属七、属九交替。导七可紧随主和弦离开稳定点，也可直接置于主和弦前强化归向，例如 I–viiø₇–I。若五音或七音居低音，低音分别为第四或第六级，有时可直接到原位主和弦，形成近似变格终止的低音路线。</p>
+      <div class="music-demo" data-harmony-options="leadingUsage" id="leadingUsage">
+        <div class="music-demo-toolbar"><h3>低音从第四或第六级归主</h3><label>谱例 <select><option value="fromFour">五音在低音</option><option value="fromSix">七音在低音</option><option value="mixed">持续属功能中的导七与属七</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="thirteenth-structure"><h2 id="thirteenth-structure">实际四部中的属七—十三和弦</h2>
+      <p>从属九继续叠三度会得到属十一与属十三，完整叠置需要超过四个音。在这里使用的是<strong>保留根音、三音、七音与十三音</strong>的四音形态，可称为带六度音的属七和弦，记作 V<sup>13</sup><sub>7</sub>。</p>
+      <table class="lesson-table"><caption>十三音是主调第Ⅲ级</caption><thead><tr><th scope="col">调式</th><th scope="col">和弦音</th><th scope="col">十三音造成的音程</th></tr></thead><tbody>
+      <tr><th scope="row">C 大调</th><td>G–B–F–E</td><td>G 到 E 是大十三度，F 到 E 是大七度，B 到上方 E 是纯四度。</td></tr>
+      <tr><th scope="row">c 和声小调</th><td>G–B–F–E♭</td><td>G 到 E♭ 是小十三度，F 到 E♭ 是小七度，B 到上方 E♭ 是减四度。</td></tr>
+      </tbody></table>
+      <table class="lesson-table"><caption>从理论叠置到四部配置</caption>
+      <thead><tr><th scope="col">形式</th><th scope="col">C 大调的音</th></tr></thead>
+      <tbody><tr><th scope="row">属十一的完整叠置</th><td>G–B–D–F–A–C</td></tr>
+      <tr><th scope="row">属十三的完整叠置</th><td>G–B–D–F–A–C–E</td></tr>
+      <tr><th scope="row">四部常用的属七—十三</th><td>G–B–F–E，略去五音、九音、十一音</td></tr></tbody></table>
+      <p>属九已经把第Ⅳ、Ⅵ级纳入属功能，属七—十三再纳入第Ⅲ级。合起来，主音之外的各级均可出现在这一功能系统内。属七—十三的额外不协和带来特殊张力，在浪漫派及后来的和声中较常见。</p>
+      </section>
+      <section aria-labelledby="thirteenth-resolution"><h2 id="thirteenth-resolution">十三音的高音位置与解决</h2>
+      <p>十三音总在高音，可以随整个和弦直接引入，也可与其他属和弦音轮换出现。典型解决是十三音直接到主音，其他声部按属七处理。十三音偶尔也能保持为主和弦的三音，或移到五音，这两种较少见。</p>
+      <p>除了原位，还可用三音作低音的 V<sup>13</sup><sub>6/5</sub> 和七音作低音的 V<sup>13</sup><sub>2</sub>。两者继续遵守三音上行、七音下行的规则。</p>
+      <div class="music-demo" data-harmony-options="thirteenthResolution" id="thirteenthResolution">
+        <div class="music-demo-toolbar"><h3>十三音的常见和少见归向</h3><label>谱例 <select><option value="major">大调原位</option><option value="minor">小调原位</option><option value="first">三音在低音</option><option value="third">七音在低音</option><option value="kept">保留在主和弦三音</option><option value="toFifth">移到主和弦五音</option><option value="alternating">十三音在属功能延长中出现</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+
+      <section aria-labelledby="thirteenth-in-a-phrase"><h2 id="thirteenth-in-a-phrase">小调收束中的导七与属七—十三</h2>
+      <p>a 和声小调的导七是 G♯–B–D–F，以 D 为低音时是三四和弦。属七—十三以 E 为根音，保留 G♯、D 和高音 C。在功能相近的和弦之间，低音和旋律决定哪一种配置更合适。</p>
+      <figure data-harmony-example="thirteenthPhrase"><figcaption>a 小调乐句后半段的导七转位与属七—十三</figcaption></figure>
+      <table class="lesson-table"><caption>收束前各层属功能的处理</caption>
+      <thead><tr><th scope="col">阶段</th><th scope="col">实际写法</th></tr></thead>
+      <tbody><tr><th scope="row">导七转位经过</th><td>低音 D 下行到 C，导音 G♯ 与七音 F 在上方完成解决，进入主六。</td></tr>
+      <tr><th scope="row">属功能加强</th><td>先用 V，高音 B 是属五音。接着高音到 C，中音到 D，形成十三音与七音。次中音 G♯ 保持，属低音 E 换到低八度。</td></tr>
+      <tr><th scope="row">最终归主</th><td>高音 C 下行到 A，中音 D 下行到 C。次中音的导音 G♯ 上行到 A，和属低音的归主一起完成收束。</td></tr></tbody></table>
+      </section>
+    </main>
+  </body>
+</html>

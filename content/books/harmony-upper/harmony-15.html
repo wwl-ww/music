@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第十五章　模进｜和声学基础</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony-13-16.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 上</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第十五章　模进</h1>
+      <p class="intro">模进把一组和声移到新的音级重复。听清最小单位、移位间隔和每次重复的重音，才能辨认它的组织方式。</p>
+      <section aria-labelledby="sequence-motif"><h2 id="sequence-motif">模进动机与节奏</h2>
+      <p>旋律模进重复旋律型，和声模进把两个或更多和弦组成的进行移到不同高度重复。最初出现的单位叫模进动机，常由两三个和弦组成，也可以更长。动机越长，听众越需要依靠重复的节奏或鲜明的声部关系来辨认。</p>
+      <p>相同的根音关系可以从强位开始，也可从弱位起步并在强位收束。改变拍位会改变哪些和弦听起来像某次模进的起点。</p>
+      <div class="music-demo" data-harmony-options="sequenceRhythm" id="sequenceRhythm">
+        <div class="music-demo-toolbar"><h3>强位起步与弱位起步</h3><label>谱例 <select><option value="strong">强位起步</option><option value="weak">弱起，落在强位</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="diatonic-sequence"><h2 id="diatonic-sequence">调内移位、方向与步伐</h2>
+      <p>调内模进也叫守调模进，按同一调的自然音级移动各声部。由于相邻音级有全音与半音，动机的和弦性质及具体音程可以变，仍保留相对的音级关系。转调模进则让调性中心随每次移位而改变。</p>
+      <p>移位可以上行或下行，也可按二度、三度或四度前进。所谓步伐是相邻两次<strong>动机起点</strong>的距离。动机内部两个根音的距离是另一个量。动机被移到新位置后，和弦可能改变大小性质，也可能暂时出现原来少用的重复导音或增四度。平行五、八度仍须检查。</p>
+      <div class="music-demo" id="sequenceBuilder">
+        <div class="music-demo-toolbar"><h3>同一动机的调内移位</h3>
+          <form class="ornament-controls">
+            <label>方向 <select name="direction"><option value="1">上行</option><option value="-1">下行</option></select></label>
+            <label>步伐 <select name="step"><option value="1">二度</option><option value="2">三度</option><option value="3">四度</option></select></label>
+            <label>移位次数 <select name="copies"><option value="1">一次</option><option value="2" selected>两次</option><option value="3">三次</option></select></label>
+          </form>
+        </div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="triad-sequences"><h2 id="triad-sequences">三和弦模进与平行六和弦</h2>
+      <p>三和弦可采用不同的根音关系构成动机。先保证动机内部的声部连接，再重点核查第一个动机与第一次移位之间。这两处是之后重复的连接模型。长段仍要在移位后检查变质的音程与声部范围。</p>
+      <p>步伐要服从段落想达到的和声目标，决定动机会走到哪些级数。只移位一次时，系统性可能听不明显，第二、第三次出现后通常较易辨认。继续太多容易单调，常用中止或变化打破重复，也有色彩性段落或技术性写法持续较长时间。</p>
+      <p>旋律级进上行或下行时，可以写连续的第一转位。平行六和弦的四部配置以三个平行声部为基础，第四声部常放在内声部，轮流重复不同的和弦音。若所有声部一直重复同一个音并同向移动，就可能产生平行八度、五度。</p>
+      <div class="music-demo" data-harmony-options="triadSequences" id="triadSequences">
+        <div class="music-demo-toolbar"><h3>三和弦动机与连续六和弦</h3><label>谱例 <select><option value="fifths">根音四五度关系的模进</option><option value="sixths">平行六和弦</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="seventh-sequences"><h2 id="seventh-sequences">连续七和弦与七和弦—三和弦动机</h2>
+      <p>连续七和弦常按模进组织。先在每个和弦中辨出七音，再跟踪同一声部到下一个和弦，通常应级进下行。尤其要检查相邻动机的交界。七和弦也可与三和弦合成动机，典型写法是七和弦解决到根音在上四度或下五度的三和弦，原位和转位都可使用。</p>
+      <p>持续的重复关系会让功能主次暂时退居背景，和弦的省略、重复音可按动机的写法一贯处理。七音仍以解决为佳，平行五、八度仍应避免。离开模进时，再用足够明确的和声引向新的方向或终止。</p>
+      <div class="music-demo" data-harmony-options="seventhSequences" id="seventhSequences">
+        <div class="music-demo-toolbar"><h3>七和弦参与的两种动机</h3><label>谱例 <select><option value="sevenths">连续七和弦</option><option value="mixed">七和弦到三和弦</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+    </main>
+  </body>
+</html>

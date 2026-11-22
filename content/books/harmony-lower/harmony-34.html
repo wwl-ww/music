@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第三十四章 变和弦（二）· 增六和弦｜和声学基础 · 下</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony-34.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 下</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第三十四章　变和弦（二）· 增六和弦</h1>
+      <p class="intro">增六和弦的两个特征音常向外各走半音，汇合在同一个音级的两个八度位置。先辨认八度落在哪一级，再从和弦构成和前后进行判断它的功能。</p>
+      <section aria-labelledby="augmented-sixth-character">
+        <h2 id="augmented-sixth-character">增六度向外解决成八度</h2>
+        <p>以 C 为主音时，A♭ 和 F♯ 从 A 数到 F 是六度，实际距离是十个半音。低音 A♭ 下行到 G，高音 F♯ 上行到 G，两个 G 构成纯八度。
+          <svg class="inline-staff inline-staff-wide" viewBox="0 0 90 34" role="img" aria-label="降 A 与升 F 分别反向半音进行到两个八度位置的 G">
+            <path class="inline-staff-lines" d="M1 7H89 M1 12H89 M1 17H89 M1 22H89 M1 27H89"/>
+            <text x="14" y="19.5">&#xE260;</text><text x="14" y="7">&#xE262;</text><text x="29" y="19.5">&#xE0A2;</text><text x="29" y="7">&#xE0A2;</text>
+            <text x="68" y="22">&#xE0A2;</text><text x="68" y="4.5">&#xE0A2;</text>
+          </svg>
+        </p>
+        <p>在十二平均律里，A♭–F♯ 与 A♭–G♭ 的起始音响相同。A♭–G♭ 按字母计算是小七度，作为 A♭7 的根音与七音时，G♭ 通常下行到 F。加入 C、E♭ 后，两个完整和弦也用到相同的琴键。德意志增六导向 G 的八度，A♭7 则可导向 D♭ 大三和弦。</p>
+        <div class="music-demo" id="augmented-sixth-interval" data-harmony-options="augmented-sixth-interval">
+          <div class="music-demo-toolbar">
+            <h3>增六度与等音小七度的去向</h3>
+            <label>示例 <select>
+              <optgroup label="音程">
+                <option value="expanded">增六度到八度</option>
+                <option value="seventh">小七度到三度</option>
+              </optgroup>
+              <optgroup label="完整和弦">
+                <option value="chordAugmented">德意志增六到终止四六</option>
+                <option value="chordDominant">A♭7 到 D♭</option>
+              </optgroup>
+            </select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <p>典型排列把增六度放在低音与某个上声部之间，两个音可以拉开为复音程。把上下位置互换后，增六度的转位是减三度，这种排列较少见。</p>
+      </section>
+      <section aria-labelledby="augmented-sixth-double-dominant">
+        <h2 id="augmented-sixth-double-dominant">重属增六和弦的五种结构</h2>
+        <p>重属增六常用在终止的属和声之前。C 大调和 c 小调都能以降Ⅵ级 A♭ 和升Ⅳ级 F♯ 围住属音 G，构成降Ⅵ级重属增六和弦。c 小调原有 A♭，C 大调要把 A 降低。以下用低音 A♭ 上方的音程区分结构。它们的共同骨架是大三度 A♭–C 与增六度 A♭–F♯。</p>
+        <table class="lesson-table">
+          <caption>以 A♭ 为低音的重属增六和弦</caption>
+          <thead><tr><th scope="col">结构</th><th scope="col">构成音</th><th scope="col">由低音数起的附加音程</th><th scope="col">使用范围</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">意大利增六</th><td>A♭–C–F♯</td><td>基本结构，四部通常重复 C</td><td>大调、小调</td></tr>
+            <tr><th scope="row">法兰西增六<br>增三四和弦</th><td>A♭–C–D–F♯</td><td>增四度 A♭–D</td><td>大调、小调</td></tr>
+            <tr><th scope="row">德意志增六<br>增五六和弦</th><td>A♭–C–E♭–F♯</td><td>纯五度 A♭–E♭</td><td>大调、小调</td></tr>
+            <tr><th scope="row">倍增三四和弦</th><td>A♭–C–D♯–F♯</td><td>倍增四度 A♭–D♯</td><td>大调</td></tr>
+            <tr><th scope="row">大调倍增五六和弦</th><td>A♭–C–E–F♯</td><td>增五度 A♭–E</td><td>大调，偶见</td></tr>
+          </tbody>
+        </table>
+        <p>倍增三四和弦是德意志增六的等音写法，E♭ 改写为 D♯，便于显示 D♯ 向大调主和弦三音 E 上行。表中最后两种在示范里只用于大调。和声分析可统一标为 <strong>+6</strong>，也可标明具体结构。谱面上的 It、Fr、Ger 分别表示意大利式、法兰西式和德意志式。</p>
+        <div class="music-demo" id="augmented-sixth-types">
+          <div class="music-demo-toolbar">
+            <h3>大小调的重属增六结构</h3>
+            <form class="ornament-controls">
+              <label>调式 <select name="category"><option value="major">C 大调</option><option value="minor">c 小调</option></select></label>
+              <label>结构 <select name="example"><option value="italian">意大利增六</option></select></label>
+            </form>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+      <section aria-labelledby="augmented-sixth-voice-leading">
+        <h2 id="augmented-sixth-voice-leading">重属增六的引入与解决</h2>
+        <p>IV、I 或Ⅵ级和弦都可引入重属增六。两个特征音可各在原声部用变化半音引入。例如 C 大调 IV₆ 的 A 与 F 可分别下行到 A♭、上行到 F♯。在 c 小调，iv₆ 已有 A♭，只需把同一声部的 F 升到 F♯ 就能得到意大利式增六。从主和弦出发时也可调整转位或八度。例如 E 到 A♭，上行减四度比下行增五度的跳跃小，A♭ 的拼写取决于它下行到 G 的倾向。</p>
+        <aside class="lesson-callout">
+          <h3>常规解决落在属音</h3>
+          <p>A♭ 与 F♯ 向外各走半音落在 G，其他声部就近连接。典型进行是 +6–K₆₄–V；两条半音线先到达属低音上的终止四六，再进入属和弦。</p>
+        </aside>
+        <table class="lesson-table">
+          <caption>重属增六解决的目的和声</caption>
+          <thead><tr><th scope="col">目标</th><th scope="col">特征声部的走向</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">经终止四六到 V</th><td>反向半音到 G 的八度，终止四六的内声部再解决到属和弦。</td></tr>
+            <tr><th scope="row">直接到 V</th><td>反向半音到 G 的八度。德意志增六的 A♭–E♭ 若一起下行到 G–D，会形成平行纯五度。</td></tr>
+            <tr><th scope="row">直接到 V₇</th><td>A♭ 和 F♯ 同向各下半音到 G 和 F，形成属七里的小七度。</td></tr>
+            <tr><th scope="row">直接到 I 或 I₆</th><td>低音可跳到主和弦根音或三音。也可把主音预先放在低音，让上方增六度的两个音作辅助运动。</td></tr>
+            <tr><th scope="row">经主四六继续到下属</th><td>主四六承接增六度的八度解决。随后进入 IV 或 ii₆₅ 时，主四六处于这条连接的中间。</td></tr>
+          </tbody>
+        </table>
+        <p>德意志增六直接进入 V 时出现的特定平行五度称为<strong>莫扎特五度</strong>，在作品里可以见到。严格四部写作可以先把 E♭ 移到 D，把和弦变为法兰西式。也可以让属低音 G 先到，E♭ 在强位短暂延留再到 D，或增加终止四六来分开两个纯五度。</p>
+        <div class="music-demo" id="augmented-sixth-connections">
+          <div class="music-demo-toolbar">
+            <h3>重属增六的声部连接</h3>
+            <form class="ornament-controls">
+              <label>阶段 <select name="category"><option value="entries">引入</option><option value="resolutions">解决</option></select></label>
+              <label>写法 <select name="example"><option value="fromSubdominant">从 IV₆ 引入</option></select></label>
+            </form>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+      <section aria-labelledby="augmented-sixth-subdominant">
+        <h2 id="augmented-sixth-subdominant">下属增六与主和弦三音</h2>
+        <p>C 大调的附加六度下属和弦 F–A–C–D 以 F 为低音，D 是它上方的六度音。将 D 升为 D♯，得到 F–A–C–D♯，标为 IV<sup>+6</sup>。原来的四个音也可按 Dm7 的第一转位理解，附加六度的写法用来强调下属根音 F。</p>
+        <p>F 与 D♯ 反向各走半音，到达主和弦三音 E 的八度，这时 I₆ 重复三音。这种结构用于大调。c 小调的主三音是 E♭，F 到 E♭ 相隔全音，D♯ 则与 E♭ 等音。作变格终止时，也可把低音 F 下跳纯四度到 C，直接解决到原位 I。</p>
+      </section>
+      <section aria-labelledby="augmented-sixth-neapolitan">
+        <h2 id="augmented-sixth-neapolitan">附加导音的那波里和弦</h2>
+        <p>C 调的那波里和弦是 D♭–F–A♭，常用以 F 为低音的第一转位 ♭II₆。加入导音 B 后，上声部的 D♭ 与 B 可以构成增六度。D♭ 下行到 C、B 上行到 C，突出主音的八度。这种和弦仍可以保留下属功能，直接进入 I₆，或在变格收束中落到原位 I。</p>
+        <p>在小调中同样可用这种构成。例如 a 小调的 ♭II₆ 为 D–F–B♭，附加导音 G♯ 后，B♭ 与 G♯ 向外解决到 A。这种增六度导向主音，而重属增六围绕的是属音。</p>
+      </section>
+      <section aria-labelledby="augmented-sixth-secondary">
+        <h2 id="augmented-sixth-secondary">其他音级上的增六与离调</h2>
+        <p>把其他音级的和弦当作临时主和弦，也可按其局部调性构造副属增六、副下属增六。分析时先找增六度引出的音级，再判定目标和弦和临时功能。例如 C 大调中，将 Dm 当作临时主和弦，E♭ 与 C♯ 可形成指向 D 的增六度。围绕 G 大和弦作副下属时，C–A♯ 可指向 G 和弦的三音 B。</p>
+        <p>在 b 小调中，D 大三和弦与 G 大三和弦分别是中音 III 和下中音 VI。可分别把它们短暂当作大调主和弦，用各自的下属增六作变格式收束。乐句后续归回 b，就仍可理解为同一主调内的离调。</p>
+        <table class="lesson-table">
+          <caption>按解决音与和弦判断增六度的功能</caption>
+          <thead><tr><th scope="col">以 C 为主音时的写法</th><th scope="col">两个特征音</th><th scope="col">典型去向</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">重属增六</th><td>A♭–F♯</td><td>落在 G 的八度，到终止四六或 V。</td></tr>
+            <tr><th scope="row">下属增六</th><td>F–D♯</td><td>落在 E 的八度，到 I₆。</td></tr>
+            <tr><th scope="row">附加导音的那波里</th><td>D♭–B</td><td>落在 C 的八度，和弦以 F 为低音，保留下属功能。</td></tr>
+            <tr><th scope="row">降五音的变属七</th><td>D♭–B</td><td>同样落在 C 的八度，和弦仍有属七的 G 与 F。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="augmented-sixth-functions">
+          <div class="music-demo-toolbar">
+            <h3>下属、那波里与局部增六</h3>
+            <form class="ornament-controls">
+              <label>功能 <select name="category">
+                <option value="subdominant">下属增六</option>
+                <option value="neapolitan">那波里附加导音</option>
+                <option value="local">其他音级</option>
+              </select></label>
+              <label>进行 <select name="example"><option value="raiseSixth">附加六度升高半音</option></select></label>
+            </form>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <details class="lesson-aside">
+          <summary>含增六度的变和弦</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>当增六度出现在两个上声部时，先找出实际低音。含 D♭ 与 B 的两个和弦可以分别从 F 的下属和声与 G 的属和声来解释。</li>
+              <li>短时间内重复使用增六和弦，可以延续两个特征音，再用内声部的变动形成不同结构。例如在德意志式的 E♭ 移到 D 后，A♭ 与 F♯ 仍共同趋向 G。</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+    </main>
+  </body>
+</html>

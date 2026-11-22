@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第十六章 律学常识｜乐理教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">基本乐理教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第十六章　律学常识</h1>
+      <p class="intro">十二平均律、五度相生律与纯律采用不同的定音方法。同名音的实际频率可以略有差别。</p>
+
+      <section aria-labelledby="equal-temperament"><h2 id="equal-temperament">十二平均律与音分</h2>
+      <p><strong>律制</strong>规定各音的音高关系。十二平均律把一个八度分成十二个相等的半音。在<strong>音分</strong>尺度上，一个八度是 1200 音分，平均律的一个半音是 100 音分。</p>
+      <p>音分以频率比计算。八度的频率比为 2∶1，十二平均律每升半音，频率乘以 2 的 <span class="fraction" role="img" aria-label="十二分之一"><span aria-hidden="true">1</span><span aria-hidden="true">12</span></span> 次方。C 到 E 跨四个半音，为 400 音分。C♯ 和 D♭ 在十二平均律中是同一个音高，换到其他律制，等音拼写未必对应相同频率。</p>
+      <p>音分相加对应频率比相乘。连续两个八度的频率比是 2 × 2，也就是 4∶1，音程是 1200 + 1200＝2400 音分。计算两个音之间的音分差，只需用同一基准下的高音音分减去低音音分。</p>
+      <table class="lesson-table duration-table">
+      <caption>平均律的几个参照位置</caption>
+      <thead><tr><th scope="col">从 C 起算</th><th scope="col">半音数</th><th scope="col">音分</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">C → D</th><td>2</td><td>200</td></tr>
+      <tr><th scope="row">C → E</th><td>4</td><td>400</td></tr>
+      <tr><th scope="row">C → F</th><td>5</td><td>500</td></tr>
+      <tr><th scope="row">C → G</th><td>7</td><td>700</td></tr>
+      <tr><th scope="row">C → 上方 C</th><td>12</td><td>1200</td></tr>
+      </tbody>
+      </table>
+      </section>
+      <section aria-labelledby="harmonic-series"><h2 id="harmonic-series">泛音列</h2>
+      <p>弦发声时，全弦和它的各等分部分可同时振动。基音的频率记为 <var>f</var>，第 <var>n</var> 分音的频率为 <var>n</var> 倍的 <var>f</var>。基音是第一分音，第二分音起称为泛音。</p>
+      <table class="lesson-table duration-table">
+      <caption>以 C 为基音的部分分音</caption>
+      <thead><tr><th scope="col">分音</th><th scope="col">与基音的频率比</th><th scope="col">音高位置</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">第 1、2、4、8、16</th><td>1∶1、2∶1、4∶1、8∶1、16∶1</td><td>各八度的 C</td></tr>
+      <tr><th scope="row">第 3、6、12</th><td>3∶1、6∶1、12∶1</td><td>各八度的 G</td></tr>
+      <tr><th scope="row">第 5、10</th><td>5∶1、10∶1</td><td>各八度的 E</td></tr>
+      <tr><th scope="row">第 7、14</th><td>7∶1、14∶1</td><td>接近 B♭，但较平均律的 B♭ 低</td></tr>
+      <tr><th scope="row">第 9、15</th><td>9∶1、15∶1</td><td>接近 D、B</td></tr>
+      <tr><th scope="row">第 11、13</th><td>11∶1、13∶1</td><td>分别介于 F 与 F♯、A♭ 与 A 之间</td></tr>
+      </tbody>
+      </table>
+      <p>不同分音混合成为复合音。分音的强弱分布影响音色。</p>
+      <p>用较高分音的频率除以较低分音的频率，可以得到定律常用的音程。第 3 分音与第 2 分音之比是 3∶2，第 5 分音与第 4 分音之比是 5∶4，分别是纯五度与纯律大三度。</p>
+      <details class="lesson-aside">
+        <summary>分音编号与八度归并</summary>
+        <div class="lesson-aside-content"><ul>
+          <li>第一分音是基音，第二分音是第一泛音。两种编号相差一位。</li>
+          <li>把第 3 分音移低一个八度，频率比从 3∶1 变为 3∶2。把第 5 分音移低两个八度，则得到 5∶4。这种移位保留音级，把音程缩进同一个八度。</li>
+          <li>倍数相同的音程可以跨不同音区出现。例如第 3 到第 6 分音、第四到第八分音都相隔纯八度。</li>
+        </ul></div>
+      </details>
+      </section>
+      <section aria-labelledby="pythagorean"><h2 id="pythagorean">五度相生律</h2>
+      <p>第二分音与第三分音的频率比为 3∶2。由一个音向上或向下连续取这个纯五度，再把各音归到同一八度，便得到五度相生律。</p>
+      <p>以 C 为主音，取向下一个五度和向上五个五度，得到 F–C–G–D–A–E–B。重排后得到 C 大音阶，其全音约 204 音分，半音约 90 音分。C–D–E–F 与 G–A–B–C 两组的间隔都是全、全、半。</p>
+      <p>从 C 向上连续取两个纯五度得到高区的 D，频率比是 9∶4。归低一个八度后变为 9∶8，约 204 音分。这是五度相生律的大二度。E 与 F 在同一基准下分别约为 408、498 音分，相差约 90 音分，称为古代小半音。</p>
+      <aside class="lesson-callout"><h3>五度相生十二次的音差</h3><p>一个五度相生的纯五度约为 702 音分，比平均律的 700 音分宽约 2 音分。十二个纯五度减去七个八度，余约 23.46 音分，常近似记作 24 音分。</p></aside>
+      </section>
+      <section aria-labelledby="just-intonation"><h2 id="just-intonation">纯律</h2>
+      <p>纯律除了采用 3∶2 的纯五度，还使用第四分音到第五分音形成的 5∶4 大三度。以 C 大调为例，可在 F–C、C–G、G–D 三个纯五度内分别加入 A、E、B，构成三个大三和弦。</p>
+      <p>纯律 C 大音阶有约 204 音分的大全音、约 182 音分的小全音和约 112 音分的大半音。D–A 的五度仅约 680 音分，称为狭五度。</p>
+      <p>同一基准下，纯律的 E、A、B 比五度相生律的同名音各低约 21.51 音分，近似记作 22 音分，称为普通音差。</p>
+      <table class="lesson-table duration-table">
+        <caption>纯律 C 大音阶的相邻距离</caption>
+        <thead><tr><th scope="col">类型</th><th scope="col">频率比</th><th scope="col">音分</th><th scope="col">位置</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">大全音</th><td>9∶8</td><td>204</td><td>C–D、F–G、A–B</td></tr>
+          <tr><th scope="row">小全音</th><td>10∶9</td><td>182</td><td>D–E、G–A</td></tr>
+          <tr><th scope="row">大半音</th><td>16∶15</td><td>112</td><td>E–F、B–C</td></tr>
+        </tbody>
+      </table>
+      <p>大全音除以小全音，频率比为 81∶80，就是普通音差。两个音在五度相生律中是纯五度，改用纯律后，若上方音单独低了一个普通音差，音程便收窄。例如 C 大音阶中的 D–A 从约 702 音分变为约 680 音分。</p>
+      </section>
+      <section aria-labelledby="fifths-vs-equal"><h2 id="fifths-vs-equal">五度相生律与平均律的比较</h2>
+      <p>在十二平均律中，B♯、C、D𝄫 归到同一个键。按五度相生律由 C 向上连续取十二个五度，所得 B♯ 归到同一八度后比 C 高约 23.46 音分。反向连续取十二个五度所得 D𝄫 比 C 低约 23.46 音分。</p>
+      <table class="lesson-table duration-table">
+      <caption>两个律制中的同一拼写</caption>
+      <thead><tr><th scope="col">音名</th><th scope="col">平均律音分</th><th scope="col">五度相生律音分</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">C♯</th><td>100</td><td>114</td></tr>
+      <tr><th scope="row">D</th><td>200</td><td>204</td></tr>
+      <tr><th scope="row">D♯</th><td>300</td><td>318</td></tr>
+      <tr><th scope="row">E</th><td>400</td><td>408</td></tr>
+      <tr><th scope="row">E♯</th><td>500</td><td>522</td></tr>
+      <tr><th scope="row">F♯</th><td>600</td><td>612</td></tr>
+      <tr><th scope="row">G</th><td>700</td><td>702</td></tr>
+      <tr><th scope="row">G♯</th><td>800</td><td>816</td></tr>
+      <tr><th scope="row">A</th><td>900</td><td>906</td></tr>
+      <tr><th scope="row">A♯</th><td>1000</td><td>1020</td></tr>
+      <tr><th scope="row">B</th><td>1100</td><td>1110</td></tr>
+      <tr><th scope="row">上方 B♯</th><td>1200</td><td>1223</td></tr>
+      </tbody>
+      </table>
+      <p>在平均律中，同一音区的 D𝄫、C、B♯ 等音。在五度相生律中，D𝄫 约低于 C 23.46 音分，B♯ 约高于它 23.46 音分。两者相距约 46.92 音分。</p>
+      </section>
+      <section aria-labelledby="three-tunings"><h2 id="three-tunings">三种律制的大音阶比较</h2>
+      <p>以同一个 C 为基准，表中的音分取近似整数。三种律制的同度与八度一致。在五度相生律和纯律中，C 到 F、C 到 G 的距离也相同。E、A、B 在三种律制中的位置各异。</p>
+      <table class="lesson-table duration-table">
+      <caption>C 大音阶的音分对照</caption>
+      <thead><tr><th scope="col">音名</th><th scope="col">十二平均律</th><th scope="col">五度相生律</th><th scope="col">纯律</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">C</th><td>0</td><td>0</td><td>0</td></tr>
+      <tr><th scope="row">D</th><td>200</td><td>204</td><td>204</td></tr>
+      <tr><th scope="row">E</th><td>400</td><td>408</td><td>386</td></tr>
+      <tr><th scope="row">F</th><td>500</td><td>498</td><td>498</td></tr>
+      <tr><th scope="row">G</th><td>700</td><td>702</td><td>702</td></tr>
+      <tr><th scope="row">A</th><td>900</td><td>906</td><td>884</td></tr>
+      <tr><th scope="row">B</th><td>1100</td><td>1110</td><td>1088</td></tr>
+      <tr><th scope="row">上方 C</th><td>1200</td><td>1200</td><td>1200</td></tr>
+      </tbody>
+      </table>
+      <p>三种律制的差别有时只在几音分内。大三度、大六度、大七度中，纯律的上方音最低，五度相生律最高。纯五度里，纯律与五度相生律采用同一个频率比。</p>
+      <label for="tuning-interval">对照音程</label>
+      <select id="tuning-interval">
+        <option value="third">大三度 C–E</option>
+        <option value="fifth">纯五度 C–G</option>
+        <option value="sixth">大六度 C–A</option>
+        <option value="seventh">大七度 C–B</option>
+      </select>
+      <figure class="score-example tuning-audio" aria-label="三种律制的音程对照">
+      <button type="button" class="score-playback" aria-label="播放律制对照"><span class="score-playback-icon" aria-hidden="true"></span></button>
+      <ol class="tuning-steps"><li>纯律 · 约 386 音分</li><li>十二平均律 · 400 音分</li><li>五度相生律 · 约 408 音分</li></ol>
+      <p class="score-status" role="status"></p>
+      </figure>
+      </section>
+    </main>
+    <script type="module" src="./chapter-16.js"></script>
+  </body>
+</html>

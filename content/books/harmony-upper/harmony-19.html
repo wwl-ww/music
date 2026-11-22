@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第十九章　羽调式和声｜和声学基础</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony-17-20.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 上</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第十九章　羽调式和声</h1>
+      <p class="intro">羽调式以羽音为中心。五声正音能构成完整的小主三和弦；七声羽调式还可展开自然小调式的属、下属关系。</p>
+      <section aria-labelledby="yu-harmony-structure">
+        <h2 id="yu-harmony-structure">羽调式的音阶与和弦功能</h2>
+        <p>在 C 宫系统里，以 A 为主音的五声羽调式用 A、C、D、E、G。羽和弦 A–C–E 及羽七和弦 A–C–E–G 全由正音构成。加入 F（清角）和 B（变宫），七声羽调式的音阶便与 A 自然小调相同。其主音上方是小三度、小六度和小七度。</p>
+        <p>和声小调升高第Ⅶ级，属和弦随之变成大三和弦，中音和弦也会变成增三和弦。自然羽调式保留小属和弦。C 宫 · a 羽的主、属、下属和弦分别为 Am、Em、Dm，根音都是正音。</p>
+        <table class="lesson-table">
+          <caption>C 宫 · a 羽的常用和弦</caption>
+          <thead><tr><th scope="col">功能方向</th><th scope="col">同宫标记与用法</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">主功能</th><td>vi 是主和弦，vi₇ 也全由正音构成。</td></tr>
+            <tr><th scope="row">下属功能</th><td>ii 最常用。vii° 很少用，IV 有时也可承担下属作用。</td></tr>
+            <tr><th scope="row">属功能</th><td>iii 是小属和弦；徵和弦 V 常直接引向 vi；宫和弦 I 兼有定调作用，也可在终止中承担属向作用。</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section aria-labelledby="yu-cadences">
+        <h2 id="yu-cadences">羽调式的终止式</h2>
+        <table class="lesson-table">
+          <caption>以羽和弦为终点的连接</caption>
+          <thead><tr><th scope="col">终止方向</th><th scope="col">同宫标记</th><th scope="col">声部与根音走向</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">小属到主</th><td>iii–vi，ii–iii–vi</td><td>简单终止与复式终止都常用。小属三音是徵音，离主音一全音，归向柔和。复式终止也可在属和弦前加入终止四六。</td></tr>
+            <tr><th scope="row">下属到主</th><td>ii–vi，vi–iii–ii–vi</td><td>清角向下行至角音，形成 F–E 半音。下属根音 D 是正音，这一收束比宫调式的对应变格写法更常见。</td></tr>
+            <tr><th scope="row">徵和弦到主</th><td>V–vi 或 V₇–vi</td><td>低音的徵音上行二度到羽，常用来获得清楚的收束。也可在 iii 之后接 V₇。</td></tr>
+            <tr><th scope="row">宫和弦到主</th><td>I–vi，I₆–vi</td><td>原位根音下行三度，力度较弱。宫和弦常用第一转位并重复低音角音，使低音上行四度到羽，强化属向作用。I 的第二转位较少用于此处。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" data-harmony-options="yuCadences" id="yuCadences">
+          <div class="music-demo-toolbar">
+            <h3>羽调式的四种终止方向</h3>
+          <label>谱例 <select><option value="dominant">小属到主</option><option value="compound">下属—小属—主</option><option value="plagal">下属到主</option><option value="turnaround">主—小属—下属—主</option><option value="zhi">徵和弦到主</option><option value="zhiSeventh">徵七和弦到主</option><option value="gong">宫和弦到主：原位</option><option value="gongSixth">宫和弦到主：第一转位</option></select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+      <section aria-labelledby="yu-major-colors">
+        <h2 id="yu-major-colors">大主和弦与大属和弦</h2>
+        <p>把小主和弦的三音升高，可以让收束更明亮；提高小属三音，则在主音下方得到半音导音，增强解决倾向。以 A 羽为例，大主和弦把 C 升成 C♯，大属和弦把 G 升成 G♯。同宫标记随和弦性质改用大写，写作 VI、III 或 III₇。</p>
+        <p>这两种变音多用于终止。大属（含属七）的导音与七音按和声小调的方式解决，也可以在内部半终止使用。持续强化大属会接近和声小调，反复使用大主则容易建立大调色彩。需要保持羽调式时，两种大和弦通常分别用，连用更容易让听者转向同主音大调。</p>
+        <div class="music-demo" data-harmony-options="yuAlterations" id="yuAlterations">
+          <div class="music-demo-toolbar">
+            <h3>羽调式中升高三音的效果</h3>
+          <label>谱例 <select><option value="natural">自然小属与小主</option><option value="majorDominant">只用大属</option><option value="majorTonic">只用大主</option><option value="majorSeventh">大属七解决到小主</option><option value="both">大属与大主连用</option><option value="half">大属作句中半终止</option></select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+      <section aria-labelledby="gong-yu-interaction">
+        <h2 id="gong-yu-interaction">宫、羽调式的相互渗透</h2>
+        <p>同宫的宫、羽主音相距三度，共享音列与和弦。宫调式可以暂时围绕 vi 展开，羽调式也可以在重要位置延长 I，或用 V–I 带出宫调式的色彩。若连续数小节加强宫和弦并使用 I、IV、V，宫调色彩更明晰。</p>
+        <p>同一个宫和弦处在不同位置，效果并不一样。原位、重拍、长时值及旋律归宫会增强宫调色彩；羽调旋律继续围绕 A，宫和弦只用在弱位或作为第二转位经过时，通常仍从属于羽调式。回到羽调式时，即使旋律暂时停留在 C，也可把它配成 vi 的三音。</p>
+        <p>单个和弦改变色彩时，可从相对功能理解。若旋律和和声都形成了能够辨认的局部中心，才有更清楚的调式交替。</p>
+        <div class="music-demo" data-harmony-options="gongYuExchange" id="gongYuExchange">
+          <div class="music-demo-toolbar">
+            <h3>同一段羽调旋律的宫调色彩</h3>
+          <label>谱例 <select><option value="local">宫和弦从属于羽调式</option><option value="phrase">中段明确归宫，再回到羽</option></select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

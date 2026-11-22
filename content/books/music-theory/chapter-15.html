@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第十五章 中国古代乐理知识｜乐理教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">基本乐理教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第十五章　中国古代乐理知识</h1>
+      <p class="intro">三分损益法用长度比生律。十二律、均调、阶名和工尺谱分别描述相对音高、调式和记谱。</p>
+
+      <section aria-labelledby="sanfen"><h2 id="sanfen">三分损益法</h2>
+      <p>三分损益法按发音体的长度推得新音。把弦长或管长等分为三份，减去一份是<strong>三分损一</strong>，长度变为原来的 <span class="fraction" role="img" aria-label="三分之二"><span aria-hidden="true">2</span><span aria-hidden="true">3</span></span>，声音升高纯五度。增加一份是<strong>三分益一</strong>，长度变为原来的 <span class="fraction" role="img" aria-label="三分之四"><span aria-hidden="true">4</span><span aria-hidden="true">3</span></span>，声音降低纯四度。升五度和降四度所得音相隔八度。</p>
+      <table class="lesson-table duration-table">
+      <caption>以宫音长度 81 为例</caption>
+      <thead><tr><th scope="col">生成顺序</th><th scope="col">长度计算</th><th scope="col">结果</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">宫</th><td>起始长度</td><td>81</td></tr>
+      <tr><th scope="row">徵</th><td>81 × <span class="fraction" role="img" aria-label="三分之四"><span aria-hidden="true">4</span><span aria-hidden="true">3</span></span></td><td>108</td></tr>
+      <tr><th scope="row">商</th><td>108 × <span class="fraction" role="img" aria-label="三分之二"><span aria-hidden="true">2</span><span aria-hidden="true">3</span></span></td><td>72</td></tr>
+      <tr><th scope="row">羽</th><td>72 × <span class="fraction" role="img" aria-label="三分之四"><span aria-hidden="true">4</span><span aria-hidden="true">3</span></span></td><td>96</td></tr>
+      <tr><th scope="row">角</th><td>96 × <span class="fraction" role="img" aria-label="三分之二"><span aria-hidden="true">2</span><span aria-hidden="true">3</span></span></td><td>64</td></tr>
+      </tbody>
+      </table>
+      <p>把生成的各音通过八度调整集中在同一区域，再按音高排列，可得到宫、商、角、徵、羽的五声音列。</p>
+      <p>长度数越小，音高越高。108 长度的徵、96 长度的羽都低于 81 长度的宫，把它们的长度减半，分别得到高八度的徵和羽。同八度由低到高的长度依次是 <strong>81、72、64、54、48</strong>。这解释了相生顺序中的「宫→徵→商→羽→角」怎样重排成音阶。</p>
+      </section>
+      <section aria-labelledby="twelve-lu"><h2 id="twelve-lu">十二律</h2>
+      <p>十二律给一个八度内的十二个律位命名，相邻律位可用半音位置对应。以黄钟对照 C 时，可得到下表。黄钟的实际音高并非固定等于现代的 C，表中的音名用于展示相对位置。</p>
+      <table class="lesson-table duration-table">
+      <caption>十二律名与相对音高</caption>
+      <thead><tr><th scope="col">律名</th><th scope="col">对照音名</th><th scope="col">类别</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">黄钟</th><td>C</td><td>阳律</td></tr>
+      <tr><th scope="row">大吕</th><td>C♯／D♭</td><td>阴吕</td></tr>
+      <tr><th scope="row">太簇</th><td>D</td><td>阳律</td></tr>
+      <tr><th scope="row">夹钟</th><td>D♯／E♭</td><td>阴吕</td></tr>
+      <tr><th scope="row">姑洗</th><td>E</td><td>阳律</td></tr>
+      <tr><th scope="row">仲吕</th><td>F</td><td>阴吕</td></tr>
+      <tr><th scope="row">蕤宾</th><td>F♯／G♭</td><td>阳律</td></tr>
+      <tr><th scope="row">林钟</th><td>G</td><td>阴吕</td></tr>
+      <tr><th scope="row">夷则</th><td>G♯／A♭</td><td>阳律</td></tr>
+      <tr><th scope="row">南吕</th><td>A</td><td>阴吕</td></tr>
+      <tr><th scope="row">无射</th><td>A♯／B♭</td><td>阳律</td></tr>
+      <tr><th scope="row">应钟</th><td>B</td><td>阴吕</td></tr>
+      </tbody>
+      </table>
+      <p>按顺序奇数位为阳律，共六律。偶数位为阴吕，共六吕。六律、六吕合成十二律。</p>
+      <p>换一个黄钟基准时，整列律位一起移动。例如假定黄钟对应 F，大吕便对应 F♯，太簇对应 G。各律的相对次序保持不变。</p>
+      </section>
+      <section aria-labelledby="eighty-four"><h2 id="eighty-four">八十四调</h2>
+      <p><strong>均</strong>由宫音所在的律位确定。十二律各可为宫，形成十二均。以七声体系计，每均可从七个音级分别形成七种调式，理论上共十二乘七，即八十四调。</p>
+      <table class="lesson-table duration-table">
+      <caption>黄钟均的七种调式</caption>
+      <thead><tr><th scope="col">起始阶名</th><th scope="col">调名</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">宫</th><td>黄钟宫调</td></tr>
+      <tr><th scope="row">商</th><td>黄钟商调</td></tr>
+      <tr><th scope="row">角</th><td>黄钟角调</td></tr>
+      <tr><th scope="row">变徵</th><td>黄钟变徵调</td></tr>
+      <tr><th scope="row">徵</th><td>黄钟徵调</td></tr>
+      <tr><th scope="row">羽</th><td>黄钟羽调</td></tr>
+      <tr><th scope="row">变宫</th><td>黄钟变宫调</td></tr>
+      </tbody>
+      </table>
+      <p>五声同宫系统只有五种调式。八十四调是七声体系的理论总数，具体音乐传统常用其中一部分。</p>
+      <div id="ancient-modes" class="programmatic-score" role="group" aria-labelledby="ancient-modes-title">
+        <div class="score-toolbar">
+          <h3 id="ancient-modes-title">十二均的雅乐七声调式</h3>
+          <form class="score-choices">
+            <fieldset>
+              <legend id="ancient-gong-label">均</legend>
+              <div class="score-tonic"><select name="gong" aria-labelledby="ancient-gong-label"></select></div>
+            </fieldset>
+            <fieldset>
+              <legend id="ancient-degree-label">主音阶名</legend>
+              <div class="score-tonic"><select name="degree" aria-labelledby="ancient-degree-label"></select></div>
+            </fieldset>
+          </form>
+        </div>
+        <figure data-generated-score></figure>
+        <figure class="keyboard-example"><figcaption>音阶键位</figcaption><div data-generated-piano></div></figure>
+      </div>
+      <details class="lesson-aside"><summary>历史上的调数实例</summary><div class="lesson-aside-content"><ul><li>隋唐燕乐可将琵琶四弦分别对应宫、商、角、羽，每弦七调，共二十八调。</li><li>明清以来，南曲常称五宫八调，合称十三调。</li></ul></div></details>
+      </section>
+      <section aria-labelledby="zhi-wei"><h2 id="zhi-wei">「之调式」与「为调式」</h2>
+      <p><strong>之调式</strong>先定均，即先定宫音，再说明该均中的哪个音级作主音。<strong>为调式</strong>先给出调式主音的音高，再说明这个音担任宫、商、角、徵或羽中的哪一级。</p>
+      <table class="lesson-table duration-table">
+      <caption>以黄钟对应 C 的角调为例</caption>
+      <thead><tr><th scope="col">写法</th><th scope="col">不变的参照</th><th scope="col">结果</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">黄钟之角</th><td>C 为宫音</td><td>E 为主音，音列沿用 C 宫系统</td></tr>
+      <tr><th scope="row">黄钟为角</th><td>C 为调式主音</td><td>A♭ 为宫音，音列沿用 A♭ 宫系统</td></tr>
+      </tbody>
+      </table>
+      <p>固定同一个律名时，「之」的五种调式共用宫音，「为」的五种调式共用主音。</p>
+      <table class="lesson-table duration-table">
+        <caption>黄钟对应 C 时的五声主音与宫音</caption>
+        <thead><tr><th scope="col">阶名</th><th scope="col">黄钟之调的主音</th><th scope="col">黄钟为调的宫音</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">宫</th><td>C</td><td>C</td></tr>
+          <tr><th scope="row">商</th><td>D</td><td>B♭</td></tr>
+          <tr><th scope="row">角</th><td>E</td><td>A♭</td></tr>
+          <tr><th scope="row">徵</th><td>G</td><td>F</td></tr>
+          <tr><th scope="row">羽</th><td>A</td><td>E♭</td></tr>
+        </tbody>
+      </table>
+      </section>
+      <section aria-labelledby="fu-zeng"><h2 id="fu-zeng">辅曾阶名体系</h2>
+      <p>四基是宫、商、徵、羽。从每一基音向上取大三度得到<strong>辅</strong>，向下取大三度得到<strong>曾</strong>。四基、四辅、四曾合在一起形成十二个阶名。</p>
+      <table class="lesson-table duration-table">
+      <caption>宫音为 C 时的四基、四辅与四曾</caption>
+      <thead><tr><th scope="col">四基</th><th scope="col">上方大三度</th><th scope="col">下方大三度</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">宫 C</th><td>宫辅 E</td><td>宫曾 A♭</td></tr>
+      <tr><th scope="row">商 D</th><td>商辅 F♯</td><td>商曾 B♭</td></tr>
+      <tr><th scope="row">徵 G</th><td>徵辅 B</td><td>徵曾 E♭</td></tr>
+      <tr><th scope="row">羽 A</th><td>羽辅 C♯</td><td>羽曾 F</td></tr>
+      </tbody>
+      </table>
+      <p>同一个音高可以用与基音的关系命名。例如 E 是宫上方的大三度，所以叫宫辅。F 是羽下方的大三度，所以叫羽曾。</p>
+      <details class="lesson-aside">
+        <summary>十二阶名与十二律对照</summary>
+        <div class="lesson-aside-content">
+          <table class="lesson-table duration-table">
+            <thead><tr><th scope="col">律位</th><th scope="col">阶名</th><th scope="col">律位</th><th scope="col">阶名</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">黄钟</th><td>宫</td><th scope="row">蕤宾</th><td>商辅</td></tr>
+              <tr><th scope="row">大吕</th><td>羽辅</td><th scope="row">林钟</th><td>徵</td></tr>
+              <tr><th scope="row">太簇</th><td>商</td><th scope="row">夷则</th><td>宫曾</td></tr>
+              <tr><th scope="row">夹钟</th><td>徵曾</td><th scope="row">南吕</th><td>羽</td></tr>
+              <tr><th scope="row">姑洗</th><td>宫辅</td><th scope="row">无射</th><td>商曾</td></tr>
+              <tr><th scope="row">仲吕</th><td>羽曾</td><th scope="row">应钟</th><td>徵辅</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+      </section>
+      <section aria-labelledby="gongche"><h2 id="gongche">工尺谱</h2>
+      <p><strong>工尺谱</strong>用「上、尺、工、凡、六、五、乙」等字记音，用点或偏旁区分音区。传统谱常由右往左直写，近代流传的谱也有横写形式。</p>
+      <p>工尺谱也会在换八度时改用其他字。以小工调为例，「合、四」对应 A3、B3，唱高一个八度改用「六、五」。高音的谱字也可带人字旁，例如高八度的「上」写作「仩」。</p>
+      <table class="lesson-table duration-table">
+      <caption>小工调的七个基本谱字</caption>
+      <thead><tr><th scope="col">谱字</th><th scope="col">相对音高</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">上</th><td>D</td></tr>
+      <tr><th scope="row">尺</th><td>E</td></tr>
+      <tr><th scope="row">工</th><td>F♯</td></tr>
+      <tr><th scope="row">凡</th><td>G</td></tr>
+      <tr><th scope="row">六</th><td>A</td></tr>
+      <tr><th scope="row">五</th><td>B</td></tr>
+      <tr><th scope="row">乙</th><td>C♯</td></tr>
+      </tbody>
+      </table>
+      <p>工尺谱的节拍记号叫<strong>板眼</strong>，一板或一眼均为一拍。板通常对应强拍，眼通常对应弱拍。一板三眼有头眼、中眼、末眼。用常见符号示意，可写作「、 · ○ ·」：顿点是板，实点是头眼、末眼，空圈是中眼。</p>
+      <table class="lesson-table duration-table">
+      <caption>常见板式</caption>
+      <thead><tr><th scope="col">板式</th><th scope="col">组织</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">散板</th><td>没有固定的板眼循环</td></tr>
+      <tr><th scope="row">流水板</th><td>有板无眼</td></tr>
+      <tr><th scope="row">一板一眼</th><td>一板后接一眼</td></tr>
+      <tr><th scope="row">一板三眼</th><td>一板后接三眼</td></tr>
+      <tr><th scope="row">加赠板的一板三眼</th><td>一板三眼之后接一赠板三眼，示意为「、 · ○ · × · ○ ·」</td></tr>
+      </tbody>
+      </table>
+      <p>小工调中「工」对应 F♯。尺字调把小工调的「尺」音 E 定为新调的「工」，因此新调的「上」是 C。调名说明新调的「工」借用小工调的哪个谱字音高。</p>
+      <details class="lesson-aside"><summary>七种调名的换算</summary><div class="lesson-aside-content"><ul><li>小工调可对照 D 大调或 D 宫调。小工调中的各谱字也可作为新调的「工」，新调据该谱字命名。</li><li>上字调对应 B♭，尺字调对应 C，小工调对应 D，凡字调对应 E♭，六字调对应 F，五字调对应 G，乙字调对应 A。</li></ul></div></details>
+      </section>
+    </main>
+    <script type="module" src="./chapter-15.js"></script>
+  </body>
+</html>

@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>格式样板｜乐理教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="./shared/style.css">
+    <link rel="stylesheet" href="./shared/themes.css">
+    <link rel="stylesheet" href="./shared/formats/formats.css">
+    <script src="./shared/themes.js"></script>
+    <script type="module" src="./shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="library-home" href="./">乐理教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width format-library">
+      <h1>格式样板</h1>
+      <div class="format-preview-control">
+        <label for="preview-width">预览宽度</label>
+        <select id="preview-width">
+          <option value="current">随窗口</option>
+          <option value="narrow">窄屏 · 320 像素</option>
+        </select>
+      </div>
+      <nav class="sample-links" aria-label="样板目录">
+        <a href="#sample-title">可播放谱</a>
+        <a href="#static-samples">表格与静态谱</a>
+        <a href="#keyboard-example">键盘图</a>
+        <a href="#control-samples">控件与状态</a>
+      </nav>
+      <div class="format-showcase">
+      <section class="course-sample" aria-labelledby="sample-title">
+      <h2 class="sample-title" id="sample-title">五线谱与简谱</h2>
+      <p class="intro">五线谱用音符在谱表上的位置表示音高。简谱用数字表示音级，并用数字上下的圆点区分八度。这里以 C 为 1，两行谱记录同一段旋律。</p>
+
+      <figure id="melody-example" aria-label="四小节旋律的五线谱与简谱对照"></figure>
+
+      <p class="sample-links"><a href="./books/music-theory/chapter-5.html#major-scale-example">大调音阶</a><a href="./books/music-theory/chapter-6.html#minor-scale-example">小调音阶</a></p>
+
+      <section class="reading">
+        <h2>谱例说明</h2>
+        <dl>
+          <div>
+            <dt><span>第一小节</span>附点</dt>
+            <dd>附点把音符的时值延长一半。第一个音为一拍半，第二个音为半拍。</dd>
+          </div>
+          <div>
+            <dt><span>第二小节</span>八度与升号</dt>
+            <dd>简谱的高音 1 上方有一点。两种谱面都把升号写在对应音符的左边。</dd>
+          </div>
+          <div>
+            <dt><span>第三小节</span>休止</dt>
+            <dd>第三小节休止四拍，旋律在第四小节恢复。</dd>
+          </div>
+        </dl>
+      </section>
+      </section>
+      <h2 class="sample-title" id="static-samples">表格与静态谱</h2>
+      <figure class="format-long-staff">
+        <figcaption><strong>长谱 · C 大调半音阶上行</strong></figcaption>
+          <svg class="inline-staff scale-overlap chromatic-staff" viewBox="0 0 480 86" role="img" aria-label="C 大调上行音级：Ⅰ、♯Ⅰ、Ⅱ、♯Ⅱ、Ⅲ、Ⅳ、♯Ⅳ、Ⅴ、♯Ⅴ、Ⅵ、♭Ⅶ、Ⅶ、Ⅰ">
+            <path class="inline-staff-lines" d="M8 10H472 M8 18H472 M8 26H472 M8 34H472 M8 42H472"/>
+            <text class="scale-overlap-clef" x="14" y="34">&#xE050;</text>
+            <g class="scale-overlap-notes">
+              <path d="M47 50h20"/>
+              <text x="57" y="50" text-anchor="middle">&#xE0A2;</text>
+              <path d="M80 50h20"/>
+              <text x="71" y="50">&#xE262;</text>
+              <text x="90" y="50" text-anchor="middle">&#xE0A2;</text>
+              <text x="123" y="46" text-anchor="middle">&#xE0A2;</text>
+              <text x="137" y="46">&#xE262;</text>
+              <text x="156" y="46" text-anchor="middle">&#xE0A2;</text>
+              <text x="189" y="42" text-anchor="middle">&#xE0A2;</text>
+              <text x="222" y="38" text-anchor="middle">&#xE0A2;</text>
+              <text x="236" y="38">&#xE262;</text>
+              <text x="255" y="38" text-anchor="middle">&#xE0A2;</text>
+              <text x="288" y="34" text-anchor="middle">&#xE0A2;</text>
+              <text x="302" y="34">&#xE262;</text>
+              <text x="321" y="34" text-anchor="middle">&#xE0A2;</text>
+              <text x="354" y="30" text-anchor="middle">&#xE0A2;</text>
+              <text x="368" y="26">&#xE260;</text>
+              <text x="387" y="26" text-anchor="middle">&#xE0A2;</text>
+              <text x="401" y="26">&#xE261;</text>
+              <text x="420" y="26" text-anchor="middle">&#xE0A2;</text>
+              <text x="453" y="22" text-anchor="middle">&#xE0A2;</text>
+            </g>
+            <g class="chromatic-staff-degrees">
+              <text class="scale-overlap-label" x="57" y="79" text-anchor="middle">Ⅰ</text>
+              <text class="scale-overlap-label chromatic-staff-altered" x="90" y="79" text-anchor="middle">♯Ⅰ</text>
+              <text class="scale-overlap-label" x="123" y="79" text-anchor="middle">Ⅱ</text>
+              <text class="scale-overlap-label chromatic-staff-altered" x="156" y="79" text-anchor="middle">♯Ⅱ</text>
+              <text class="scale-overlap-label" x="189" y="79" text-anchor="middle">Ⅲ</text>
+              <text class="scale-overlap-label" x="222" y="79" text-anchor="middle">Ⅳ</text>
+              <text class="scale-overlap-label chromatic-staff-altered" x="255" y="79" text-anchor="middle">♯Ⅳ</text>
+              <text class="scale-overlap-label" x="288" y="79" text-anchor="middle">Ⅴ</text>
+              <text class="scale-overlap-label chromatic-staff-altered" x="321" y="79" text-anchor="middle">♯Ⅴ</text>
+              <text class="scale-overlap-label" x="354" y="79" text-anchor="middle">Ⅵ</text>
+              <text class="scale-overlap-label chromatic-staff-altered" x="387" y="79" text-anchor="middle">♭Ⅶ</text>
+              <text class="scale-overlap-label" x="420" y="79" text-anchor="middle">Ⅶ</text>
+              <text class="scale-overlap-label" x="453" y="79" text-anchor="middle">Ⅰ</text>
+            </g>
+          </svg>
+      </figure>
+      <table class="lesson-table">
+        <caption>宽表格 · 音符时值对照</caption>
+        <thead><tr><th scope="col">基准</th><th scope="col">二分音符</th><th scope="col">四分音符</th><th scope="col">八分音符</th><th scope="col">十六分音符</th></tr></thead>
+        <tbody><tr><th scope="row">四分音符为一拍</th><td>2 拍</td><td>1 拍</td><td><span class="fraction" role="img" aria-label="二分之一"><span aria-hidden="true">1</span><span aria-hidden="true">2</span></span> 拍</td><td><span class="fraction" role="img" aria-label="四分之一"><span aria-hidden="true">1</span><span aria-hidden="true">4</span></span> 拍</td></tr></tbody>
+      </table>
+      <details class="lesson-aside">
+        <summary>五线谱手写规范</summary>
+        <div class="lesson-aside-content">
+          <ul>
+            <li>加线略宽于符头。几个音都用到加线时，各自画自己的短线。</li>
+            <li>小节线从谱表的最上面一线连到最下面一线。</li>
+          </ul>
+        </div>
+      </details>
+      <table class="lesson-table">
+        <caption>常见音符时值（以四分音符为一拍）</caption>
+        <thead>
+          <tr><th scope="col">音符</th><th scope="col" class="numeric">时值</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row"><span class="music-symbol" aria-hidden="true">&#xE1D3;</span>二分音符</th><td class="numeric">2 拍</td></tr>
+          <tr><th scope="row"><span class="music-symbol" aria-hidden="true">&#xE1D5;</span>四分音符</th><td class="numeric">1 拍</td></tr>
+          <tr><th scope="row"><span class="music-symbol" aria-hidden="true">&#xE1D7;</span>八分音符</th><td class="numeric"><span class="fraction" role="img" aria-label="二分之一"><span aria-hidden="true">1</span><span aria-hidden="true">2</span></span> 拍</td></tr>
+        </tbody>
+      </table>
+      <figure class="notation-sample">
+        <figcaption>四分休止符与八分休止符</figcaption>
+        <ul>
+          <li><span class="music-symbol" aria-hidden="true">&#xE4E5;</span>四分休止符</li>
+          <li><span class="music-symbol" aria-hidden="true">&#xE4E6;</span>八分休止符</li>
+        </ul>
+      </figure>
+      <section class="interval-examples" aria-labelledby="interval-title">
+        <h2 id="interval-title">以中央 C 为底音的音程</h2>
+        <svg width="0" height="0" class="interval-definitions" aria-hidden="true">
+          <defs>
+            <g id="interval-staff">
+              <path d="M8 30H136 M8 40H136 M8 50H136 M8 60H136 M8 70H136 M57 80H77" stroke="currentColor" fill="none"/>
+              <text x="14" y="60">&#xE050;</text>
+              <text x="61" y="80">&#xE0A2;</text>
+            </g>
+          </defs>
+        </svg>
+        <ul>
+          <li>
+            <svg viewBox="0 10 144 84" aria-hidden="true"><use href="#interval-staff"/><text x="100" y="75">&#xE0A2;</text></svg>
+            <strong>大二度</strong><span>C4 至 D4</span>
+          </li>
+          <li>
+            <svg viewBox="0 10 144 84" aria-hidden="true"><use href="#interval-staff"/><text x="100" y="70">&#xE0A2;</text></svg>
+            <strong>大三度</strong><span>C4 至 E4</span>
+          </li>
+          <li>
+            <svg viewBox="0 10 144 84" aria-hidden="true"><use href="#interval-staff"/><text x="100" y="60">&#xE0A2;</text></svg>
+            <strong>纯五度</strong><span>C4 至 G4</span>
+          </li>
+          <li>
+            <svg viewBox="0 10 144 84" aria-hidden="true"><use href="#interval-staff"/><text x="100" y="45">&#xE0A2;</text></svg>
+            <strong>纯八度</strong><span>C4 至 C5</span>
+          </li>
+        </ul>
+      </section>
+      <figure class="keyboard-example" id="keyboard-example">
+        <figcaption>C、E、G 的键位</figcaption>
+        <svg viewBox="0 0 224 96" role="img" aria-label="一个八度的钢琴键盘，高亮 C、E、G 三个白键">
+          <use class="keyboard-white" href="./shared/formats/piano.svg#white-keys"/>
+          <g class="keyboard-highlight">
+            <use href="./shared/formats/piano.svg#key-c"/>
+            <use href="./shared/formats/piano.svg#key-e"/>
+            <use href="./shared/formats/piano.svg#key-g"/>
+          </g>
+          <use class="keyboard-black" href="./shared/formats/piano.svg#black-keys"/>
+          <g class="keyboard-label">
+            <text x="16" y="86">C</text>
+            <text x="80" y="86">E</text>
+            <text x="144" y="86">G</text>
+          </g>
+        </svg>
+      </figure>
+      <section class="keyboard-intervals" id="keyboard-intervals" aria-labelledby="keyboard-interval-title">
+        <h2 id="keyboard-interval-title">钢琴键盘上的一度至十二度</h2>
+        <aside class="lesson-callout" aria-labelledby="interval-rule-title">
+          <h3 id="interval-rule-title">音程的判断</h3>
+          <p>数度数时，两端音名都算在内。确定度数后，再用半音数区分纯、大、小、增、减。</p>
+        </aside>
+        <p>蓝色圆点标起点 C4，橙色菱形标终点。两个音落在同一个键时，只标一个键。</p>
+        <div class="keyboard-interval-list"></div>
+      </section>
+      <section class="course-sample" aria-labelledby="control-samples">
+        <h2 class="sample-title" id="control-samples">控件与状态</h2>
+        <div class="music-demo" id="library-route">
+          <div class="music-demo-toolbar">
+            <h3>演奏路线</h3>
+            <label>记法
+              <select><option value="repeat">一对反复线</option><option value="straight">顺序演奏</option></select>
+            </label>
+          </div>
+          <div data-route-staff></div>
+          <ol class="route-sequence" aria-label="已经演奏的小节"></ol>
+          <output class="music-demo-cue"></output>
+          <div class="route-actions">
+            <button type="button" data-route-back>上一步</button>
+            <button type="button" data-route-next>下一步</button>
+            <button type="button" data-route-reset>重置</button>
+          </div>
+        </div>
+        <div class="score-state-samples">
+          <figure class="score-example">
+            <figcaption>加载中</figcaption>
+            <button class="score-playback" type="button" aria-label="播放谱例" disabled><span class="score-playback-icon" aria-hidden="true"></span></button>
+            <p class="score-status">正在加载谱例…</p>
+          </figure>
+          <figure class="score-example">
+            <figcaption>加载失败</figcaption>
+            <button class="score-playback" type="button" aria-label="播放谱例" disabled><span class="score-playback-icon" aria-hidden="true"></span></button>
+            <p class="score-status">谱例加载失败，请刷新页面重试。</p>
+          </figure>
+        </div>
+      </section>
+      </div>
+    </main>
+    <script type="module" src="./format-library.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+:root, [data-theme] {
+  color-scheme: light;
+  --control-surface: var(--sheet);
+  --control-hover: color-mix(in srgb, var(--sheet) 89%, var(--accent));
+  --tint: color-mix(in srgb, var(--sheet) 94%, var(--accent));
+  --control-line: color-mix(in srgb, var(--line) 40%, var(--muted));
+  --score-paper: var(--sheet);
+  --score-cursor: color-mix(in srgb, var(--ink) 62%, var(--accent));
+  --piano-white: #fdfdfb;
+  --piano-stroke: #747d86;
+  --pitch-start: #c1ddfe;
+  --pitch-start-ink: #1d4c79;
+  --pitch-end: #ffcd92;
+  --pitch-end-ink: #784714;
+}
+:root, [data-theme="paper"] {
+  --paper: #f7f7f2;
+  --sheet: #fdfdf9;
+  --ink: #232824;
+  --muted: #56615b;
+  --accent: #305e50;
+  --line: #d5ddd4;
+}
+[data-theme="ivory"] {
+  --paper: #f6f1e7;
+  --sheet: #fffdf8;
+  --ink: #332822;
+  --muted: #615149;
+  --accent: #884c31;
+  --line: #dacabc;
+}
+[data-theme="mist"] {
+  --paper: #eff5fb;
+  --sheet: #fcfdff;
+  --ink: #162d48;
+  --muted: #425772;
+  --accent: #305c80;
+  --line: #c4d5e7;
+}
+[data-theme="lilac"] {
+  --paper: #f5f0fb;
+  --sheet: #fefcff;
+  --ink: #312245;
+  --muted: #574865;
+  --accent: #674987;
+  --line: #d9cbe9;
+}
+[data-theme="rose"] {
+  --paper: #fbf1f3;
+  --sheet: #fffcfd;
+  --ink: #412731;
+  --muted: #624a53;
+  --accent: #933c54;
+  --line: #e5ccd5;
+}
+[data-theme="mint"] {
+  --paper: #eef8f6;
+  --sheet: #fcfffe;
+  --ink: #183733;
+  --muted: #425e57;
+  --accent: #226855;
+  --line: #bedbd5;
+}
+[data-theme="amber"] {
+  --paper: #fff4dc;
+  --sheet: #fffcf3;
+  --ink: #3f2b13;
+  --muted: #665139;
+  --accent: #85500f;
+  --line: #e5cea6;
+}
+[data-theme="slate"] {
+  color-scheme: dark;
+  --paper: #1b1c1f;
+  --sheet: #26282d;
+  --ink: #f0f1f3;
+  --muted: #b6b9c1;
+  --accent: #bbd1c5;
+  --line: #4c505a;
+  --score-paper: #f2f4f0;
+  --score-cursor: #426754;
+  --piano-white: #edf0eb;
+}
+[data-theme="midnight"] {
+  color-scheme: dark;
+  --paper: #121a2c;
+  --sheet: #1b2740;
+  --ink: #ecf2ff;
+  --muted: #b3c1dd;
+  --accent: #adc9ff;
+  --line: #46597c;
+  --score-paper: #edf2fa;
+  --score-cursor: #365a94;
+  --piano-white: #eef2f8;
+}

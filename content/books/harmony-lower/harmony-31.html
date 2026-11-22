@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第三十一章 和弦外音的运用｜和声学基础 · 下</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony-31.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 下</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第三十一章　和弦外音的运用</h1>
+      <p class="intro">和弦外音可以使旋律更流畅，也能在换和弦时形成张力。本章从辨认旋律骨干开始，再把同一和声连接加饰成不同的声部织体。</p>
+      <section aria-labelledby="melodic-framework">
+        <h2 id="melodic-framework">弱位外音与旋律骨干</h2>
+        <p>配和声时，可先按重音、时值、反复和句尾圈出旋律的骨干音，再让弱拍与一拍内部的弱分位回到和声中检验。外音的名称取决于它与相邻音的关系。经过音级进连接两个音，辅助音离开后回到原音，先现音提前带出后一个和弦的音。也可能有靠跳进引入或离开的自由音。这几类音可参见<a href="../harmony-upper/harmony-7.html">上册旋律中的和弦外音</a>。</p>
+        <p>例如 C 大调 I 上的 E–F–E
+          <svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="E、F、E，F 是上方辅助音">
+            <path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/>
+            <text x="12" y="27">&#xE0A2;</text><text x="34" y="24.5">&#xE0A2;</text><text x="56" y="27">&#xE0A2;</text>
+          </svg>
+          中，F 在弱位短暂出现。把三音归在同一和弦下，既能保留旋律，又能让和声节奏保持稳定。
+        </p>
+        <ol>
+          <li>先把显著的旋律音连成骨干，再用弱位音检验候选和弦。弱位上较有支持力的和弦音，可以帮助决定两个候选和弦中的一个。</li>
+          <li>写出实际低音，再确定原位或转位。相同的高音可有几种低音配法。</li>
+          <li>按句法调整原有方案。需要时可用副三和弦、七和弦或副属替代，仍保留通往终止的方向。</li>
+        </ol>
+        <div class="music-demo" id="weak-tone-harmonization" data-harmony-options="weak-tone-harmonization">
+          <div class="music-demo-toolbar">
+            <h3>同一旋律的骨干与两种配法</h3>
+            <label>谱例 <select>
+        <option value="outline">旋律骨干</option>
+        <option value="basic">保留弱位外音</option>
+        <option value="alternate">改用转位与七和弦</option>
+            </select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <p>外音要相对于发声那一刻的和弦来判定。以下例子的高音 A 位于第二拍的后半拍，并延续到第三拍。把 IV 分别放在这两个位置，旋律音高与时值保持一致，只有 A 起音时所属的和弦改变。</p>
+        <div class="music-demo" id="weak-beat-harmony" data-harmony-options="weak-beat-harmony">
+          <div class="music-demo-toolbar">
+            <h3>弱位和弦音与先现音</h3>
+            <label>换和弦时点
+              <select>
+                <option value="early">和弦随 A 进入</option>
+                <option value="late">A 先于和弦进入</option>
+              </select>
+            </label>
+          </div>
+          <figure aria-label="同一弱位音在两个和弦时点上的归属"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+      <section aria-labelledby="accented-nonchord-tones">
+        <h2 id="accented-nonchord-tones">强位上的留音与倚音</h2>
+        <p>留音与倚音会在强位与当前和弦形成不协和，随后级进解决。两者的区别从进入方式判断。留音由前一和弦同音保持到新和弦，倚音由另一个音引入，常以跳进进入。跨小节连线、切分和强位到弱位的二度，都可以帮助辨认它们。</p>
+        <table class="lesson-table">
+          <caption>旋律重音与换和弦时点</caption>
+          <thead><tr><th scope="col">写法</th><th scope="col">旋律与和声的关系</th><th scope="col">效果</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">换和弦与切分重叠</th><td>C 从 I 延续到 V₇，占据第三拍，随后下行到 B。</td><td>C 在属和声上成为留音，解决点落在第四拍。</td></tr>
+            <tr><th scope="row">换和弦推迟一拍</th><td>I 延续到第三拍，V₇ 从 B 出现的第四拍才开始。</td><td>同一个 C 仍是 I 的和弦音，不产生留音的张力。</td></tr>
+            <tr><th scope="row">强位倚音</th><td>新和弦与跳进的外音同时出现，弱一点的位置才奏出解决音。</td><td>重音落在不协和上。和声更换可参照解决音来定。</td></tr>
+          </tbody>
+        </table>
+        <p>分析时也要区分和弦的进入方式与它在整小节的地位。例如某个 V 由经过性的连接引入，仍可成为小节主体。V–IV–V 中，第二个 V 若带倚音，夹在中间的 IV 可视为辅助和声。相似的和声节奏和辅助关系出现多次时，可以成为后续乐句共同的写法。</p>
+        <p>遇到显著的重音外音，可由解决音反推应配的和弦，再把它放回真正的换和弦时点。旋律在强拍休止时，伴奏仍可先确立和声。确定换和弦时点与次数之后，再由低音、转位和终止检验整句。</p>
+        <div class="music-demo" id="accented-tone-harmonization" data-harmony-options="accented-tone-harmonization">
+          <div class="music-demo-toolbar">
+            <h3>和弦更换与强位外音</h3>
+            <label>谱例 <select>
+        <option value="suspension">第三拍换和弦 · 留音</option>
+        <option value="harmonyBeforeMelody">旋律休止 · 伴奏先奏</option>
+        <option value="later">第四拍换和弦</option>
+        <option value="appoggiatura">强拍倚音</option>
+        <option value="neighborHarmony">属和弦之间的辅助和声</option>
+            </select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+      <section aria-labelledby="single-voice-decoration">
+        <h2 id="single-voice-decoration">单声部加饰</h2>
+        <p>清楚的和声骨架可以支撑更丰富的旋律。可以保留骨干音，在它们之间加入经过音、辅助音等，也可以依照原有和声另写一条旋律。弱位外音常带来流动感，强位外音会强化重音。加饰声部可以放在高音、内声部或低音，主要旋律也可以随之转到那个声部。</p>
+        <table class="lesson-table">
+          <caption>两种加饰风格</caption>
+          <thead><tr><th scope="col">风格</th><th scope="col">节奏与音区</th><th scope="col">和弦外音的用法</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">歌唱性</th><td>速度相对舒缓，长短结合，音域较集中，乐句呼吸清楚。</td><td>外音相对少，可用局部的经过、辅助或留音强化旋律。</td></tr>
+            <tr><th scope="row">华彩性</th><td>分割较密而均匀，可扩展到较宽音区，句逗常连成连续音型。</td><td>外音较多，通常按规则组织成流畅的音型。</td></tr>
+          </tbody>
+        </table>
+        <p>标记外音前先确定和弦结构。C 大调的 F 在 G 大三和弦里可能是外音，在 V₇ 里则是七音，通常下行到 E。低音加饰也可先还原成骨干低音，再核对转位与换和弦的位置。这样能分清低音的经过、辅助与真正改变和声的低音。</p>
+        <div class="music-demo" id="voice-decoration" data-harmony-options="voice-decoration">
+          <div class="music-demo-toolbar">
+            <h3>同一骨架的声部变奏</h3>
+            <label>谱例 <select>
+        <option value="theme">和声骨架</option>
+        <option value="singing">高音歌唱性加饰</option>
+        <option value="inner">内声部加饰</option>
+        <option value="bass">低音线条加饰</option>
+        <option value="florid">高音华彩性加饰</option>
+            </select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+      <section aria-labelledby="multiple-voices-decoration">
+        <h2 id="multiple-voices-decoration">同步加饰与复调化加饰</h2>
+        <p>同步加饰让几条声部在相同的节奏位置运动。多重外音一起发声时，要横向核对每条线怎样进入和离开，再纵向看它们的音响由哪一个骨干和弦支撑。低音若稳定地给出根音与换和弦的位置，上方短促的纵向组合可以是经过、辅助、留音或倚音形成的音响。</p>
+        <table class="lesson-table">
+          <caption>同步外音的判断依据</caption>
+          <thead><tr><th scope="col">同步方式</th><th scope="col">每条声部的音高轨迹</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">双经过音</th><td>两条线同时级进，分别连到后面的骨干音。</td></tr>
+            <tr><th scope="row">双辅助音</th><td>两条线短暂离开原音，分别回到各自的原音。</td></tr>
+            <tr><th scope="row">双留音</th><td>两条线都由前一和弦同音延续，在新和弦上成为外音，再级进解决。</td></tr>
+            <tr><th scope="row">双倚音</th><td>两条线都在新和弦开始时进入外音，再级进到和弦音。</td></tr>
+          </tbody>
+        </table>
+        <p>复调化加饰让声部使用不同的节奏进行。各声部可依次进入、模仿前声部的动机，模仿时也可把一个跳进扩展成另一种音程。常见织体是高、低声部形成活跃的外轮廓，内声部的起伏与速度较平缓，仍能补足旋律。</p>
+        <p>在同一和声主题上，可以轮流加饰高音与低音，也可让数条声部彼此衔接。每条旋律有自己的走向，和声的重音、低音与终止仍然清楚。判断时先找各声部的和弦骨干，再辨认弱位经过的音和同时发声的多重外音。</p>
+        <div class="music-demo" id="multi-voice-decoration" data-harmony-options="multi-voice-decoration">
+          <div class="music-demo-toolbar">
+            <h3>同一骨架上的多声部加饰</h3>
+            <label>谱例 <select>
+        <option value="synchronous">同步 · 平行三度</option>
+        <option value="doublePassing">同步 · 双经过音</option>
+        <option value="doubleNeighbor">同步 · 双辅助音</option>
+        <option value="doubleSuspension">同步 · 双留音</option>
+        <option value="doubleAppoggiatura">同步 · 双倚音</option>
+        <option value="alternating">交替 · 高音和低音接续</option>
+        <option value="polyphonic">复调化 · 不同节奏</option>
+        <option value="imitation">复调化 · 依次进入与模仿</option>
+            </select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

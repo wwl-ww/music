@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第十七章　同宫系统自然调式｜和声学基础</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony-17-20.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 上</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第十七章　同宫系统自然调式</h1>
+      <p class="intro">宫音确定一组音与和弦的共同归属，主音决定这组材料围绕哪个音展开。用同宫标记可以把这两件事分开。</p>
+      <section aria-labelledby="gong-names">
+        <h2 id="gong-names">音名、律名与阶名</h2>
+        <p>C、D、E 等音名用来指定音高。黄钟、大吕、太簇等是传统律名，也用来指定音高。宫、商、角、徵、羽是相对的阶名，随宫音一起移动，作用与首调唱名相近。阶名还可以用来命名调式，例如以角音为主音的是角调式。</p>
+        <table class="lesson-table">
+          <caption>七个阶名与首调唱名</caption>
+          <thead><tr><th scope="col">阶名</th><th scope="col">首调唱名</th><th scope="col">C 宫系统</th><th scope="col">五声地位</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">宫</th><td>do</td><td>C</td><td>正音</td></tr>
+            <tr><th scope="row">商</th><td>re</td><td>D</td><td>正音</td></tr>
+            <tr><th scope="row">角</th><td>mi</td><td>E</td><td>正音</td></tr>
+            <tr><th scope="row">清角</th><td>fa</td><td>F</td><td>偏音</td></tr>
+            <tr><th scope="row">徵</th><td>sol</td><td>G</td><td>正音</td></tr>
+            <tr><th scope="row">羽</th><td>la</td><td>A</td><td>正音</td></tr>
+            <tr><th scope="row">变宫</th><td>si</td><td>B</td><td>偏音</td></tr>
+          </tbody>
+        </table>
+        <p>这里的正音指五声骨干音。大小调和声里的正三和弦则指主、属、下属三个和弦，判断依据是它们在调式中的位置与功能。</p>
+      </section>
+      <section aria-labelledby="gong-system">
+        <h2 id="gong-system">同宫系统的音阶与调式</h2>
+        <p>自然调式按自然音列取音，各阶与宫音之间的音程固定。例如 D 宫系统的角音是 F♯，与 D 相隔大三度。同一自然音列可分别以宫、商、角、徵、羽为主音，形成同宫的五种调式。C 宫系统的 D 在商调式是主音，在 G 徵调式是属音，在 A 羽调式是下属音。音高和阶名保持一致，音级作用随主音改变。</p>
+        <p>单首作品实际使用的音可能只有三、四个，也可能扩展到五、六或七个。和声分析通常以五声音阶及其带清角、变宫的七声音阶作对照。五声音阶相邻各级只隔大二度或小三度，加入两个偏音后，清角与角、变宫与宫之间出现小二度。</p>
+        <div class="music-demo" id="gongModes">
+          <div class="music-demo-toolbar">
+            <h3>同宫系统的五种自然调式</h3>
+          <form class="ornament-controls">
+        <label>宫音 <select name="gong"><option>C</option><option>D</option><option>F</option><option>G</option></select></label>
+        <label>主音阶名 <select name="mode"><option value="0">宫</option><option value="1">商</option><option value="2">角</option><option value="4">徵</option><option value="5">羽</option></select></label>
+        <label>音列 <select name="size"><option value="five">五声</option><option value="seven">七声</option></select></label>
+          </form>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+      <section aria-labelledby="gong-notation">
+        <h2 id="gong-notation">三度叠置与同宫固定标记</h2>
+        <p>旋律以五声为骨干时，各级三和弦通常仍从同宫七声音列按三度叠置取音。偏音可以出现在相应的和弦中。加音、换音及空五度等五声性结构也可与这些三和弦混用。</p>
+        <table class="lesson-table">
+          <caption>C 宫系统的七个三和弦</caption>
+          <thead><tr><th scope="col">根音阶名</th><th scope="col">固定标记</th><th scope="col">构成音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">宫</th><td>I</td><td>C–E–G</td></tr>
+            <tr><th scope="row">商</th><td>ii</td><td>D–F–A</td></tr>
+            <tr><th scope="row">角</th><td>iii</td><td>E–G–B</td></tr>
+            <tr><th scope="row">清角</th><td>IV</td><td>F–A–C</td></tr>
+            <tr><th scope="row">徵</th><td>V</td><td>G–B–D</td></tr>
+            <tr><th scope="row">羽</th><td>vi</td><td>A–C–E</td></tr>
+            <tr><th scope="row">变宫</th><td>vii°</td><td>B–D–F</td></tr>
+          </tbody>
+        </table>
+        <p>和弦罗马数字依根音相对宫音的位置固定，大三和弦用大写，小三和弦用小写。谱首标出宫音和调式，如「C 宫 · a 羽」。宫音的字母用大写，调式主音的字母在徵调式用大写，在商、角、羽调式用小写。需要时另标 T、D、S 或 t、d、s 表示当地功能。例如 C 宫系统的 vi 是羽调式的主和弦，iii 是它的属和弦。</p>
+        <aside class="lesson-callout">
+          <h3>同宫标记与功能标记</h3>
+          <p>同一个徵和弦
+            <svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="徵和弦，G、B、D">
+              <path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/>
+              <text x="34" y="22">&#xE0A2;</text><text x="34" y="17">&#xE0A2;</text><text x="34" y="12">&#xE0A2;</text>
+            </svg>
+            在 C 宫系统中始终写 V。以宫为主音时可另标 D，以徵为主音时可另标 T。
+          </p>
+        </aside>
+      </section>
+      <section aria-labelledby="gong-field">
+        <h2 id="gong-field">同宫场、定调作用与相对功能</h2>
+        <p>同宫场指同一宫音下各调式的和弦能够相互联系。每种调式可以形成自己的主音中心，共用的音与和弦也让不同中心的色彩进入同一个乐句。某些段落从开头就能判断调式，有时则到收束才听得出哪个音成为主音。</p>
+        <p>宫音可以帮助辨认音列。某五声旋律以 D 收束时，主音已经确定；若完整骨干中唯一的大三度是 F–A，F 是宫音，D 是羽音，因而可判断为 F 宫系统的 D 羽调式。宫音即使出现较晚、处在弱位，仍能提供这条线索。缺少关键音时，可结合其他乐句判断。</p>
+        <p>宫和弦也有定调作用。C 宫系统中，它在 G 徵调式可以有下属功能，在 A 羽调式可起中音或终止前的属向作用。若用它作为 G 徵或 D 商旋律的引子，它还可交代共同的宫音系统。这一作用跨越单个调式，人们也把它称为超调式功能。</p>
+        <p>相对功能指某和弦在短时间内成为另一个和弦的支点或目标，例如用根音上行四度的连接临时强调某一级。一次强调可能只让目标短暂突出；反复停留、旋律重心转移和明确收束，才为调式交替提供更充分的证据。</p>
+        <div class="music-demo" data-harmony-options="gongCenters" id="gongCenters">
+          <div class="music-demo-toolbar">
+            <h3>同宫和弦与不同的收束中心</h3>
+          <label>谱例 <select><option value="gong">归宫</option><option value="shang">归商</option><option value="yu">局部强调羽，最终归宫</option></select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+      <section aria-labelledby="gong-root-motion">
+        <h2 id="gong-root-motion">根音关系与进行力度</h2>
+        <p>根音关系以两个和弦的根音计算，低音转位后仍按原根音计算。听觉上的力度还取决于共同音、低音位置以及进行方向。下表采用常见的自然三和弦作比较。</p>
+        <table class="lesson-table">
+          <caption>四种根音进行</caption>
+          <thead><tr><th scope="col">方向</th><th scope="col">共同音</th><th scope="col">一般效果</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">上四度或下五度</th><td>通常一个</td><td>原位连接最强；前和弦根音成为后和弦的五音。转位会减弱这种效果，尤其是四六和弦。</td></tr>
+            <tr><th scope="row">上二度或下二度</th><td>通常没有</td><td>切换清楚，接近强进行；转位与原位的力度差异相对较小。</td></tr>
+            <tr><th scope="row">上五度或下四度</th><td>通常一个</td><td>较弱；前和弦的五音成为后和弦的根音。</td></tr>
+            <tr><th scope="row">上三度或下三度</th><td>通常两个</td><td>较柔和。下行三度的后和弦根音先前没有出现，一般比上行三度略强。转位也能强化或削弱它。</td></tr>
+          </tbody>
+        </table>
+        <p>六度和七度进行可联系反向的三度和二度来理解，实际低音的跳进仍会影响听感。力度描述连接效果，可以按句法与风格选用。角调式的属和弦以偏音变宫为根音，又是减三和弦，难以承担骨干；其他调式也有属音或下属音落在偏音上的情况。因此各级和弦应结合具体调式判断。</p>
+        <div class="music-demo" data-harmony-options="gongRootMoves" id="gongRootMoves">
+          <div class="music-demo-toolbar">
+            <h3>四种根音关系与原位、转位对照</h3>
+          <label>谱例 <select><option value="fourth">上四度：V–I</option><option value="inverted">上四度，前和弦转位</option><option value="second">下二度：ii–I</option><option value="fifth">上五度：I–V</option><option value="thirdUp">上三度：I–iii</option><option value="thirdDown">下三度：iii–I</option></select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

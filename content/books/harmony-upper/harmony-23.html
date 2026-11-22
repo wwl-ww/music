@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第二十三章　调式交替与调式复合｜和声学基础</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony-21-23.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 上</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第二十三章　调式交替与调式复合</h1>
+      <p class="intro">同宫各调式共用自然音列。两个调式中心可以先后成立，也可以分别出现在同一时段的旋律和和声中。</p>
+      <section aria-labelledby="modal-centres">
+        <h2 id="modal-centres">调式中心的判定</h2>
+        <p>调式交替是在同宫自然音列上，从一个已建立的调式中心走向另一个中心。主音需在显著位置反复出现或承担收束，和声也要在关键位置给予支持。通常要有一个乐段的规模，中心非常清楚时，一个完整乐句也可成立。</p>
+        <aside class="lesson-callout"><h3>局部强调与调式交替</h3><p>一次终止或一个突出和弦可以加强某个音级。若其余音乐仍围绕原有中心展开，这一强调可作为相对功能理解。判定调式交替时，需要看到两个中心各自得到旋律、和声和句法的支持。</p></aside>
+        <p>五度关系的中心常互相交替，例如商、徵。三度关系中宫、羽对比较明显，徵、角也可交替。二度关系中羽、徵较常见。相同调号可以贯穿全段，识别依据是中心及其收束改变。</p>
+      </section>
+      <section aria-labelledby="modal-alternation">
+        <h2 id="modal-alternation">调式交替的三种方式</h2>
+        <table class="lesson-table">
+          <caption>交替的曲式位置与边界</caption>
+          <thead><tr><th scope="col">方式</th><th scope="col">前后中心的连接</th><th scope="col">同宫示例</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">逐步转换</th><td>原中心成立后，经一段归属较灵活的音乐，新的中心才逐渐明确。过渡和弦可优先支持当下的旋律。</td><td>先由商到徵确立 G，然后经数个和弦，到羽–商的终止才明确 D 商。</td></tr>
+            <tr><th scope="row">直接转换</th><td>前一段有完整收束。下一段从新主和弦开始，或以新属到主开头，段落边界清楚。</td><td>宫调式收束后另起羽调乐句，并以角–羽支持新中心。</td></tr>
+            <tr><th scope="row">曲终转换</th><td>段落曾按原调式终止，最后一次结尾换中心，或另加一个在新调式终止的后奏。</td><td>前段始终归宫，最后一次改归徵；也可先完整归宫，再以归徵的后奏结束。</td></tr>
+          </tbody>
+        </table>
+        <p>同宫场中的开头与结尾都可以落在不同中心。判断曲终转换时，仍按各自的乐句判断先前的中心。</p>
+        <div class="music-demo" data-harmony-options="modalAlternation" id="modalAlternation">
+          <div class="music-demo-toolbar">
+            <h3>相对功能与三种交替的句法</h3>
+          <label>谱例 <select><option value="relative">短暂强调羽</option><option value="gradual">徵到商的逐步转换</option><option value="direct">宫到羽的直接转换</option><option value="lastEnding">最后一次换结尾</option><option value="postlude">用后奏换中心</option></select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+      <section aria-labelledby="modal-compound">
+        <h2 id="modal-compound">旋律主音与和声主和弦的复合</h2>
+        <p>调式复合发生在同一时段。旋律保持一个调式的主音中心，伴奏则建立另一个调式中心。两者可以贯穿全曲，也可在局部或最后的收束中复合。共有的音列与和弦使两层能同时成立。终止处通常让旋律主音成为和声主和弦的一个构成音。</p>
+        <table class="lesson-table">
+          <caption>按和声根音到旋律主音的音程分类</caption>
+          <thead><tr><th scope="col">关系</th><th scope="col">旋律主音在和弦中的位置</th><th scope="col">C 宫系统的配对<br>旋律调式 → 和声调式</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">五度</th><td>和声主和弦的五音，较常见。</td><td>徵→宫、商→徵、角→羽、羽→商</td></tr>
+            <tr><th scope="row">三度</th><td>和声主和弦的三音，角宫复合较常见。</td><td>角→宫、徵→角、宫→羽</td></tr>
+            <tr><th scope="row">四度</th><td>可用四度换音。</td><td>宫→徵，如旋律 C 落在以 G 为根音的四度换音和弦上。</td></tr>
+            <tr><th scope="row">二度</th><td>可用二度加音或换音。</td><td>商→宫，如旋律 D 落在宫和弦加二度上。</td></tr>
+            <tr><th scope="row">七度</th><td>以小七和弦的七音作为旋律主音。</td><td>徵→羽，如旋律 G 落在 A–C–E–G 上。</td></tr>
+          </tbody>
+        </table>
+        <p>二度与七度在转位或换八度时彼此对应，分类依据是和声根音到旋律主音的功能位置。二度、四度、七度的复合较少用。实际写作中，低音与旋律主音是两个显著支点，复合音响需与全段的和弦选择协调。</p>
+        <div class="music-demo" id="compoundModes">
+          <div class="music-demo-toolbar">
+            <h3>调式复合的两层音响</h3>
+          <form class="ornament-controls">
+          <label>音程关系 <select name="relation"><option value="fifth">五度</option><option value="third">三度</option><option value="fourth">四度</option><option value="second">二度</option><option value="seventh">七度</option></select></label>
+          <label>调式配对 <select name="pair"><option value="zhiGong">徵 → 宫</option></select></label>
+          </form>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+      <section aria-labelledby="modal-combinations">
+        <h2 id="modal-combinations">旋律与和声各自的交替</h2>
+        <table class="lesson-table">
+          <caption>交替发生的声部层次</caption>
+          <thead><tr><th scope="col">旋律</th><th scope="col">和声</th><th scope="col">结果</th></tr></thead>
+          <tbody>
+            <tr><td>换中心</td><td>随旋律一起换</td><td>两个层次相继到达同一个新中心。</td></tr>
+            <tr><td>保持原中心</td><td>换中心</td><td>后段形成复合，例如商旋律与徵和声。</td></tr>
+            <tr><td>换中心</td><td>保持原中心</td><td>后段也形成复合，例如旋律末句落徵，和声仍归宫。</td></tr>
+          </tbody>
+        </table>
+        <p>某些和弦具有两种读法，可以连接两层。C 宫系统中，商七可以是宫调式的下属方向和弦，也是徵调式的属和弦。终点若以宫为低音，在宫和弦上加二度并把徵音放在高声部，和声仍归宫，旋律可收束在徵。</p>
+        <div class="music-demo" data-harmony-options="modalLayers" id="modalLayers">
+          <div class="music-demo-toolbar">
+            <h3>旋律与和声同步或分别转换</h3>
+          <label>谱例 <select><option value="both">旋律与和声一起换</option><option value="harmonyOnly">只有和声换</option><option value="melodyOnly">只有旋律换</option></select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+      <section aria-labelledby="modal-summary">
+        <h2 id="modal-summary">同宫调式和声的判断顺序</h2>
+        <ol>
+          <li>先确定共同宫音和自然音列，再辨认各段旋律的收束中心。</li>
+          <li>按同宫标记确认和弦根音，用功能和乐句位置判断局部支点、定调和弦和终止。</li>
+          <li>分别追踪旋律与和声。中心先后改变时标明交替位置，同时出现两个中心时辨认其复合关系。</li>
+        </ol>
+        <p>同宫与大小调和声都可以围绕主音建立功能，也都以三度叠置和弦为基础。同宫场允许数种中心共享材料，也可用五声性加音、换音和省略来适应旋律。<a href="../harmony-lower/harmony-24.html">下一章重属和弦</a>回到以大小调主音为基准的和弦标记。</p>
+      </section>
+    </main>
+  </body>
+</html>

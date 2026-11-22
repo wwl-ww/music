@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第八章 和弦｜乐理教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">基本乐理教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第八章　和弦</h1>
+      <p class="intro">和弦是三个或三个以上不同音高的乐音按一定音程关系组成的音响。本章的三和弦和七和弦都可以还原为三度叠置。</p>
+
+      <section aria-labelledby="triads">
+        <h2 id="triads">原位三和弦</h2>
+        <p>三个音按三度叠置，从下往上叫<strong>根音、三音、五音</strong>，记作 1、3、5。根音在最低声部时，和弦处于原位。C–E–G 每相邻两音都构成三度，C–D–G 则包含二度叠置。</p>
+        <table class="lesson-table duration-table">
+          <caption>四类原位三和弦</caption>
+          <thead><tr><th scope="col">类别</th><th scope="col">下方三度</th><th scope="col">上方三度</th><th scope="col">根音到五音</th><th scope="col">以 C 为根音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">大</th><td>大三度</td><td>小三度</td><td>纯五度</td><td>C E G</td></tr>
+            <tr><th scope="row">小</th><td>小三度</td><td>大三度</td><td>纯五度</td><td>C E♭ G</td></tr>
+            <tr><th scope="row">增</th><td>大三度</td><td>大三度</td><td>增五度</td><td>C E G♯</td></tr>
+            <tr><th scope="row">减</th><td>小三度</td><td>小三度</td><td>减五度</td><td>C E♭ G♭</td></tr>
+          </tbody>
+        </table>
+        <p>大、小三和弦的各组音程都协和。大三和弦常有明亮的色彩，小三和弦较柔和。增、减三和弦分别含有不协和的增五度、减五度，常有扩张、收缩的听感。</p>
+        <figure id="triad-colors" aria-label="根音为 C 的大、小、增、减三和弦依次响起"></figure>
+      </section>
+
+      <section aria-labelledby="triad-inversions">
+        <h2 id="triad-inversions">三和弦的转位</h2>
+        <p><strong>低音</strong>是当前和弦的最低音。转位改变低音，根音和和弦性质依然由三度叠置确定。把三音放在低音得到第一转位，把五音放在低音得到第二转位。</p>
+        <p>同一个和弦音可以出现在不同八度。C–E–G–C 有四个音符，其中两个 C 都是根音，仍是 C 大三和弦。</p>
+        <figure>
+          <figcaption>C 大三和弦的原位、第一转位与第二转位</figcaption>
+          <svg class="inline-staff" viewBox="0 0 91 39" role="img" aria-label="五线谱从左到右为 C4 E4 G4、E4 G4 C5、G4 C5 E5" style="width: 9em; max-width: 100%">
+            <path class="inline-staff-lines" d="M1 8H90 M1 13H90 M1 18H90 M1 23H90 M1 28H90"/>
+            <path d="M20 33H32"/>
+            <text x="4" y="23">&#xE050;</text>
+            <text x="22" y="33">&#xE0A2;</text><text x="22" y="28">&#xE0A2;</text><text x="22" y="23">&#xE0A2;</text>
+            <text x="46" y="28">&#xE0A2;</text><text x="46" y="23">&#xE0A2;</text><text x="46" y="15.5">&#xE0A2;</text>
+            <text x="70" y="23">&#xE0A2;</text><text x="70" y="15.5">&#xE0A2;</text><text x="70" y="10.5">&#xE0A2;</text>
+          </svg>
+        </figure>
+        <table class="lesson-table duration-table">
+          <caption>三和弦各转位的低音与上方音程</caption>
+          <thead><tr><th scope="col">位置</th><th scope="col">由低到高</th><th scope="col">低音到上方各音</th><th scope="col">简记</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">原位</th><td>C–E–G</td><td>三度、五度</td><td><span class="chord-figure" aria-label="上五下三"><span>5</span><span>3</span></span></td></tr>
+            <tr><th scope="row">第一转位（六和弦）</th><td>E–G–C</td><td>三度、六度</td><td>6</td></tr>
+            <tr><th scope="row">第二转位（四六和弦）</th><td>G–C–E</td><td>四度、六度</td><td><span class="chord-figure" aria-label="上六下四"><span>6</span><span>4</span></span></td></tr>
+          </tbody>
+        </table>
+        <p>指定 G 为五音，构成小三和弦的第二转位时，先从 G 下找纯五度得到根音 C，再叠成 C–E♭–G，最后排成 G–C–E♭。已经知道紧密排列的音程结构时，也可直接构成，例如大三和弦的第一转位从低到高叠小三度和纯四度，D–F–B♭ 就是以 D 作低音的一组。</p>
+      </section>
+
+      <section aria-labelledby="sevenths">
+        <h2 id="sevenths">原位七和弦</h2>
+        <p>在原位三和弦的五音上再叠一个三度，得到四个音。最上方的音与根音相距七度，叫<strong>七音</strong>，记作 7。七和弦的名称结合下方三和弦的性质和根音到七音的音程。G–B–D–F
+          <svg class="inline-staff" viewBox="0 0 41 37" role="img" aria-label="G4、B4、D5、F5 在四条线上逐级叠成三个三度">
+            <path class="inline-staff-lines" d="M1 8H40 M1 13H40 M1 18H40 M1 23H40 M1 28H40"/>
+            <text x="17" y="23">&#xE0A2;</text><text x="17" y="18">&#xE0A2;</text><text x="17" y="13">&#xE0A2;</text><text x="17" y="8">&#xE0A2;</text>
+          </svg>
+          的四个符头落在连续四条线上，顶端的 F 是七音。</p>
+        <table class="lesson-table duration-table">
+          <caption>七和弦的三和弦基础与七度</caption>
+          <thead><tr><th scope="col">类别</th><th scope="col">下方三和弦</th><th scope="col">五音到七音</th><th scope="col">根音到七音</th><th scope="col">以 C 为根音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">大小七</th><td>大</td><td>小三度</td><td>小七度</td><td>C E G B♭</td></tr>
+            <tr><th scope="row">小七（小小七）</th><td>小</td><td>小三度</td><td>小七度</td><td>C E♭ G B♭</td></tr>
+            <tr><th scope="row">半减七（减小七）</th><td>减</td><td>大三度</td><td>小七度</td><td>C E♭ G♭ B♭</td></tr>
+            <tr><th scope="row">减七（减减七）</th><td>减</td><td>小三度</td><td>减七度</td><td>C E♭ G♭ B𝄫</td></tr>
+            <tr><th scope="row">大七（大大七）</th><td>大</td><td>大三度</td><td>大七度</td><td>C E G B</td></tr>
+            <tr><th scope="row">增大七</th><td>增</td><td>小三度</td><td>大七度</td><td>C E G♯ B</td></tr>
+            <tr><th scope="row">小大七</th><td>小</td><td>大三度</td><td>大七度</td><td>C E♭ G B</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><th scope="row">共同性质</th><td colspan="4">根音与七音构成不协和的七度，因此七和弦属于不协和和弦。</td></tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <section aria-labelledby="seventh-inversions">
+        <h2 id="seventh-inversions">七和弦的转位与识别</h2>
+        <table class="lesson-table duration-table">
+          <caption>G 大小七和弦的原位与转位</caption>
+          <thead><tr><th scope="col">位置</th><th scope="col">由低到高</th><th scope="col">从低音量起的特征音程</th><th scope="col">简记</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">原位</th><td>G–B–D–F</td><td>到七音为七度</td><td>7</td></tr>
+            <tr><th scope="row">第一转位（五六和弦）</th><td>B–D–F–G</td><td>到七音为五度、到根音为六度</td><td><span class="chord-figure" aria-label="上六下五"><span>6</span><span>5</span></span></td></tr>
+            <tr><th scope="row">第二转位（三四和弦）</th><td>D–F–G–B</td><td>到七音为三度、到根音为四度</td><td><span class="chord-figure" aria-label="上四下三"><span>4</span><span>3</span></span></td></tr>
+            <tr><th scope="row">第三转位（二和弦）</th><td>F–G–B–D</td><td>到根音为二度</td><td>2</td></tr>
+          </tbody>
+        </table>
+        <aside class="lesson-callout" aria-labelledby="identify-seventh">
+          <h3 id="identify-seventh">按根音、结构、低音识别转位</h3>
+          <p>紧密排列的转位七和弦中，二度的下方是七音，上方是根音。小七度转成大二度，减七度转成增二度，大七度转成小二度。开放排列时，可先按音名重排为连续三度，再用实际低音判定转位。</p>
+        </aside>
+        <p>D–F–G–B
+          <svg class="inline-staff" viewBox="0 0 54 34" role="img" aria-label="高音谱表中由下向上为 D4、F4、G4、B4，F 和 G 的符头错开">
+            <path class="inline-staff-lines" d="M1 8H53 M1 13H53 M1 18H53 M1 23H53 M1 28H53"/>
+            <text x="4" y="23">&#xE050;</text>
+            <text x="27" y="30.5">&#xE0A2;</text><text x="27" y="25.5">&#xE0A2;</text>
+            <text x="34" y="23">&#xE0A2;</text><text x="27" y="18">&#xE0A2;</text>
+          </svg>
+          中 F–G 是二度，两个符头错开。按 G–B–D–F 可确认性质是大小七。实际低音 D 是五音，因此是第二转位。
+        </p>
+        <div id="chord-builder" class="programmatic-score" role="group" aria-labelledby="chord-builder-title">
+          <div class="score-toolbar">
+            <h3 id="chord-builder-title">和弦的构成与转位</h3>
+            <form class="score-choices">
+              <fieldset>
+                <legend id="chord-root-label">根音</legend>
+                <div class="score-tonic">
+                  <select name="tonic" aria-labelledby="chord-root-label"></select>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend id="chord-type-label">类型</legend>
+                <div class="score-tonic">
+                  <select name="type" aria-labelledby="chord-type-label">
+                    <optgroup label="三和弦">
+                      <option value="major">大三</option>
+                      <option value="minor">小三</option>
+                      <option value="augmented">增三</option>
+                      <option value="diminished">减三</option>
+                    </optgroup>
+                    <optgroup label="七和弦">
+                      <option value="dominant">大小七</option>
+                      <option value="minor7">小七</option>
+                      <option value="halfDim">半减七</option>
+                      <option value="dim7">减七</option>
+                      <option value="major7">大七</option>
+                      <option value="augMajor7">增大七</option>
+                      <option value="minorMajor7">小大七</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </fieldset>
+              <fieldset class="score-directions">
+                <legend id="chord-position-label">位置</legend>
+                <div class="score-tonic">
+                  <select name="inversion" aria-labelledby="chord-position-label">
+                      <option value="0">原位</option>
+                      <option value="1">第一转位</option>
+                      <option value="2">第二转位</option>
+                      <option value="3">第三转位</option>
+                  </select>
+                </div>
+              </fieldset>
+            </form>
+            <output class="score-key-summary" data-generated-description></output>
+          </div>
+          <figure data-generated-score></figure>
+          <figure class="keyboard-example">
+            <figcaption>和弦键位</figcaption>
+            <div data-generated-piano></div>
+          </figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="enharmonic-chords">
+        <h2 id="enharmonic-chords">等和弦</h2>
+        <p><strong>等和弦</strong>指十二平均律中音响相同而拼写和意义有别的和弦。把各音一致地改写为等音，可保留音程和性质。例如 F♯–A–C♯ 与 G♭–B𝄫–D♭ 同为小三和弦。只改写部分音时，可能改变音程结构、根音和转位。</p>
+        <p>把 C–E–G♯ 的 G♯ 改写为 A♭
+          <svg class="inline-staff inline-staff-wide" viewBox="0 0 76 37" role="img" aria-label="左边和弦的最高音为第二线 G♯4，右边和弦的最高音为第二间 A♭4，两个低音都是 C4 和 E4">
+            <path class="inline-staff-lines" d="M1 8H75 M1 13H75 M1 18H75 M1 23H75 M1 28H75"/>
+            <path d="M16 33h13 M53 33h13"/><text x="10" y="23">&#xE262;</text><text x="19" y="23">&#xE0A2;</text><text x="19" y="28">&#xE0A2;</text><text x="19" y="33">&#xE0A2;</text><text x="47" y="20.5">&#xE260;</text><text x="56" y="20.5">&#xE0A2;</text><text x="56" y="28">&#xE0A2;</text><text x="56" y="33">&#xE0A2;</text>
+          </svg>，最高音的符头从第二线移到第二间，琴键位置相同。</p>
+        <figure class="keyboard-example">
+          <figcaption>增三和弦等音改写前后的琴键</figcaption>
+          <svg viewBox="0 0 224 96" role="img" aria-label="三个高亮琴键分别为 C、E 或降 F、升 G 或降 A">
+            <use class="keyboard-white" href="../../shared/formats/piano.svg#white-keys"/>
+            <use class="keyboard-highlight" href="../../shared/formats/piano.svg#key-c"/>
+            <use class="keyboard-highlight" href="../../shared/formats/piano.svg#key-e"/>
+            <use class="keyboard-black" href="../../shared/formats/piano.svg#black-keys"/>
+            <use class="keyboard-highlight-black" href="../../shared/formats/piano.svg#key-g-sharp"/>
+            <g class="keyboard-label">
+              <text x="16" y="76">C</text><text x="80" y="76">E / F♭</text>
+              <text x="160" y="33">G♯</text><text x="160" y="46">A♭</text>
+            </g>
+          </svg>
+        </figure>
+        <table class="lesson-table duration-table">
+          <caption>同一组琴键形成三种增三和弦拼写</caption>
+          <thead><tr><th scope="col">由低到高</th><th scope="col">按三度还原</th><th scope="col">名称</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">C–E–G♯</th><td>C–E–G♯</td><td>C 增三和弦原位</td></tr>
+            <tr><th scope="row">C–E–A♭</th><td>A♭–C–E</td><td>A♭ 增三和弦第一转位</td></tr>
+            <tr><th scope="row">C–F♭–A♭</th><td>F♭–A♭–C</td><td>F♭ 增三和弦第二转位</td></tr>
+          </tbody>
+        </table>
+        <p>增三和弦把八度等分为三个大三度，任何一个音都可通过等音改写成为根音。减七和弦把八度等分为四个小三度，因此有四种根音与转位的组合。</p>
+        <details class="lesson-aside">
+          <summary>同一组琴键形成的四种减七和弦拼写</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>C–E♭–G♭–B𝄫，根音为 C，原位。</li>
+              <li>C–E♭–G♭–A，根音为 A，C 是三音，第一转位。</li>
+              <li>D𝄫–F𝄫–G♭–B𝄫，根音为 G♭，D𝄫 是五音，第二转位。</li>
+              <li>D𝄫–E♭–G♭–B𝄫，根音为 E♭，D𝄫 是七音，第三转位。</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="diatonic-chords">
+        <h2 id="diatonic-chords">大小调中的和弦</h2>
+        <p>在调式音阶的每一级向上隔一级取音，就能构成调内三和弦。I、IV、V 是<strong>正音级</strong>，其三和弦分别叫主和弦、下属和弦、属和弦。II、III、VI、VII 是副音级，其三和弦叫副三和弦。</p>
+        <aside class="lesson-callout" aria-labelledby="chord-degree-rule">
+          <h3 id="chord-degree-rule">调式音级与和弦音</h3>
+          <p>在 C 大调里，G 是调式第 Ⅴ 级。以 G 构成 G–B–D，G、B、D 分别是这个和弦的根音、三音、五音。把 B 放到低音，和弦根音仍是 G，级数仍是 Ⅴ。</p>
+        </aside>
+        <p>用罗马数字标根音的级数，大三和弦用大写，小三和弦用小写，增、减三和弦可加 +、°，半减七可用 ø7。数字 7 或转位数字表示七和弦及其位置。例如 C 大调的 G–B–D–F 是 V7，E–G–C 是 I6。</p>
+        <table class="lesson-table">
+          <caption>自然与和声大小调的三和弦分布</caption>
+          <thead><tr><th scope="col">类型</th><th scope="col">自然大调</th><th scope="col">自然小调</th><th scope="col">和声大调</th><th scope="col">和声小调</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">大</th><td>I、IV、V</td><td>III、VI、VII</td><td>I、V</td><td>V、VI</td></tr>
+            <tr><th scope="row">小</th><td>ii、iii、vi</td><td>i、iv、v</td><td>iii、iv</td><td>i、iv</td></tr>
+            <tr><th scope="row">增</th><td>无</td><td>无</td><td>♭VI+</td><td>III+</td></tr>
+            <tr><th scope="row">减</th><td>vii°</td><td>ii°</td><td>ii°、vii°</td><td>ii°、vii°</td></tr>
+          </tbody>
+        </table>
+        <p>反查和弦可能属于哪些调时，先找该类和弦可出现的音级，再从根音倒推主音。例如 G–B–D 作为 I、IV、V 分别属于 G、D、C 自然大调，作为 V、VI 则分别属于 c、b 和声小调。C–E–G♯ 是 a 和声小调的 III+，也可以是 E 和声大调的 ♭VI+。</p>
+        <div id="diatonic-triad-example" class="programmatic-score" role="group" aria-labelledby="diatonic-triad-example-title">
+          <div class="score-toolbar">
+            <h3 id="diatonic-triad-example-title">C 大小调的调内三和弦</h3>
+            <form class="score-choices">
+              <fieldset>
+                <legend id="triad-scale-label">音阶</legend>
+                <div class="score-tonic">
+                  <select name="scale" aria-labelledby="triad-scale-label">
+                      <option value="major">C 自然大调</option>
+                      <option value="harmonicMajor">C 和声大调</option>
+                      <option value="minor">C 自然小调</option>
+                      <option value="harmonicMinor">C 和声小调</option>
+                  </select>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend id="triad-degree-label">根音级数</legend>
+                <div class="score-tonic">
+                  <select name="degree" aria-labelledby="triad-degree-label">
+                      <option value="0">Ⅰ</option>
+                      <option value="1">Ⅱ</option>
+                      <option value="2">Ⅲ</option>
+                      <option value="3">Ⅳ</option>
+                      <option value="4">Ⅴ</option>
+                      <option value="5">Ⅵ</option>
+                      <option value="6">Ⅶ</option>
+                  </select>
+                </div>
+              </fieldset>
+            </form>
+            <output class="score-key-summary" data-generated-description></output>
+          </div>
+          <figure data-generated-score></figure>
+          <figure class="keyboard-example">
+            <figcaption>和弦键位</figcaption>
+            <div data-generated-piano></div>
+          </figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="resolution">
+        <h2 id="resolution">属七与导七和弦的解决</h2>
+        <p>不协和和弦进行到协和和弦，叫<strong>解决</strong>。属七是在 Ⅴ 级上的大小七和弦。导七在 Ⅶ 级上，自然大调中是半减七，和声大调与和声小调中是减七。</p>
+        <table class="lesson-table duration-table">
+          <caption>属七与导七解决到主和弦时的声部走向</caption>
+          <thead><tr><th scope="col">声部</th><th scope="col">属七</th><th scope="col">导七</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">导音</th><td>Ⅶ → Ⅰ</td><td>Ⅶ → Ⅰ</td></tr>
+            <tr><th scope="row">下属音</th><td>Ⅳ → Ⅲ</td><td>Ⅳ → Ⅲ</td></tr>
+            <tr><th scope="row">上主音</th><td>Ⅱ → Ⅰ</td><td>Ⅱ → Ⅲ</td></tr>
+            <tr><th scope="row">其余声部</th><td>Ⅴ → Ⅰ 或保持 Ⅴ</td><td>Ⅵ → Ⅴ</td></tr>
+          </tbody>
+        </table>
+        <p>C 大调与 c 和声小调的属七同为 G–B–D–F。F 向下解决到 E 或 E♭，分别形成大、小三和弦。属七第三转位的低音是 F，F 走向主和弦的三音，所以解决到第一转位。导七有两个声部走向 Ⅲ，解决后的主和弦常重复三音。</p>
+        <div id="resolution-example" class="programmatic-score" role="group" aria-labelledby="resolution-example-title">
+          <div class="score-toolbar">
+            <h3 id="resolution-example-title">属七、导七的解决对照</h3>
+            <form class="score-choices">
+              <fieldset>
+                <legend id="resolution-scale-label">调式</legend>
+                <div class="score-tonic">
+                  <select name="scale" aria-labelledby="resolution-scale-label">
+                      <option value="major">C 自然大调</option>
+                      <option value="minor">C 和声小调</option>
+                  </select>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend id="resolution-family-label">和弦</legend>
+                <div class="score-tonic">
+                  <select name="family" aria-labelledby="resolution-family-label">
+                      <option value="dominant">属七</option>
+                      <option value="leading">导七</option>
+                  </select>
+                </div>
+              </fieldset>
+              <fieldset class="score-directions">
+                <legend id="resolution-position-label">位置</legend>
+                <div class="score-tonic">
+                  <select name="inversion" aria-labelledby="resolution-position-label">
+                      <option value="0">原位</option>
+                      <option value="1">第一转位</option>
+                      <option value="2">第二转位</option>
+                      <option value="3">第三转位</option>
+                  </select>
+                </div>
+              </fieldset>
+            </form>
+            <output class="score-key-summary" data-generated-description></output>
+          </div>
+          <figure data-generated-score></figure>
+          <figure class="keyboard-example">
+            <figcaption>和弦键位</figcaption>
+            <div data-generated-piano></div>
+          </figure>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./chapter-8.js"></script>
+  </body>
+</html>

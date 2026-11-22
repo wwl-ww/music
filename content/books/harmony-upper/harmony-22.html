@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第二十二章　商调式、角调式和声｜和声学基础</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony-21-23.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 上</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第二十二章　商调式、角调式和声</h1>
+      <p class="intro">商调式和角调式都有小调色彩。选择终止和弦时，根音是否为正音、三和弦是否稳定，决定哪些级数更适合支撑主音。</p>
+      <section aria-labelledby="shang-structure">
+        <h2 id="shang-structure">商调式音阶与功能</h2>
+        <p>C 宫 · d 商的五声骨干是 D–E–G–A–C–D。七声音阶加入 F、B，主音到 B 是大六度；七声羽调式的第Ⅵ级是小六度。这是两种七声音阶唯一的音程差别。</p>
+        <table class="lesson-table">
+          <caption>C 宫 · d 商的和声骨干</caption>
+          <thead><tr><th scope="col">功能</th><th scope="col">常用和弦</th><th scope="col">偏音与声部选择</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">主</th><td>ii · D–F–A</td><td>F 是偏音，可换音或省去，偶尔可升为 F♯。</td></tr>
+            <tr><th scope="row">属</th><td>vi · A–C–E，I · C–E–G</td><td>羽和弦全由正音构成，原位三和弦及小七和弦均常用。I 在终止中可有属向作用，IV 也有属向作用但较少用。</td></tr>
+            <tr><th scope="row">下属</th><td>V · G–B–D，iii · E–G–B</td><td>V 最常用，三音 B 为偏音，可作五声性处理或降为 B♭。vii° 少用。iii₇ 可结合两个下属方向的三和弦音。</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section aria-labelledby="shang-cadences">
+        <h2 id="shang-cadences">商调式的终止与三个小七和弦</h2>
+        <p>典型的属到主终止是 vi–ii，羽和弦可以用三和弦、七和弦，或用省三音的九和弦。主和弦可省三音形成空五度。I–ii 也可收束，I 可用原位或第一转位。IV–ii 少见。由于徵与商三和弦的三音都是偏音，V–ii 的下属到主终止较少用，反向的 ii–V 在句中较常见。</p>
+        <table class="lesson-table">
+          <caption>商调式中的小七和弦</caption>
+          <thead><tr><th scope="col">和弦</th><th scope="col">主要作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">羽七 vi₇</th><td>四个音全是正音，用于句中和终止，也可转位。七音 G 下行至 F 时，后面的商和弦宜保留五音 A；若 G 上行至 A，上方可与另一声部形成平行四度。</td></tr>
+            <tr><th scope="row">角七 iii₇</th><td>E–G–B 与 G–B–D 合在一起形成 E–G–B–D，汇合角、徵两个下属方向的三和弦。可在复式终止中引向羽和弦。</td></tr>
+            <tr><th scope="row">商七 ii₇</th><td>D–F–A–C 可承担主功能。vi₇–ii₇ 可以反复出现，以较柔和的七和弦音响维持主、属关系。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" data-harmony-options="shangCadences" id="shangCadences">
+          <div class="music-demo-toolbar">
+            <h3>商调式的终止与小七和弦</h3>
+          <label>谱例 <select><option value="basic">羽和弦到商和弦</option><option value="seventhDown">羽七的七音下行</option><option value="seventhUp">羽七的七音上行</option><option value="ninth">羽九到主</option><option value="open">商和弦省去三音</option><option value="gong">宫和弦原位到主</option><option value="gongSixth">宫和弦第一转位到主</option><option value="compound">角七—羽七—商</option><option value="tonicSeventh">以商七为主和弦</option></select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+      <section aria-labelledby="shang-alteration">
+        <h2 id="shang-alteration">大主、大属与小下属</h2>
+        <p>商和弦可升高三音 F，成为大主和弦 II，用于句中或终止。大主用于终止时，前面的羽和弦通常保留 C。羽和弦本身全由正音构成，一般保留小属原形；若将三音 C 升为 C♯，成为大属 VI，终点通常保留小主和弦。两种变音同时突出，容易带出同主音大调的色彩。</p>
+        <p>徵和弦 G–B–D 作下属时，可把偏音 B 降成 B♭，成为小下属 v。用在复式终止前段，B♭ 向下到 A，低音 G 向上到 A，反向收为八度，能加强下属到属的连接。</p>
+        <div class="music-demo" data-harmony-options="shangColors" id="shangColors">
+          <div class="music-demo-toolbar">
+            <h3>商调式三种变音的声部走向</h3>
+          <label>谱例 <select><option value="majorTonic">只用大主</option><option value="majorDominant">只用大属</option><option value="minorSubdominant">小下属进入羽和弦</option><option value="both">大主、大属连用对照</option></select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+      <section aria-labelledby="jue-structure">
+        <h2 id="jue-structure">角调式音阶与属和弦的变化</h2>
+        <p>C 宫 · e 角的五声骨干是 E–G–A–C–D–E。七声音阶加入 F、B。和七声羽调式相比，唯一差异是主音上方的二级音较低。E–F 构成小二度
+          <svg class="inline-staff" viewBox="0 0 76 34" role="img" aria-label="角调式主音 E 与第二级 F 相距小二度">
+            <path class="inline-staff-lines" d="M1 7H75 M1 12H75 M1 17H75 M1 22H75 M1 27H75"/><text x="21" y="27">&#xE0A2;</text><text x="49" y="24.5">&#xE0A2;</text>
+          </svg>，是与七声弗里几亚调式相同的特征音程。
+        </p>
+        <p>主和弦 iii（E–G–B）的五音 B 是偏音。位于属音上的 vii°（B–D–F）的根音和五音都是偏音，又是减三和弦。下属 vi（A–C–E）却全由正音构成，因此经常支持角调式的收束。</p>
+        <table class="lesson-table">
+          <caption>指向角和弦的主要终止材料</caption>
+          <thead><tr><th scope="col">来源</th><th scope="col">处理</th><th scope="col">终止效果</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">变宫和弦</th><td>vii° 少用原形，可用半减七或转位；把五音升为 F♯ 得小属 Bm，再把三音升为 D♯ 得大属 B。</td><td>B 根音解决到 E。主和弦偶尔可升三音变成 E 大和弦。</td></tr>
+            <tr><th scope="row">商和弦</th><td>可用 ii、ii₇、升三音后的 II，或把商七三音 F 换为 G。</td><td>根音 D–E 上行二度，连接力量较强。换四音的商七 D–G–A–C 包含五声角调式除主音 E 外的四个正音。</td></tr>
+            <tr><th scope="row">羽和弦、宫和弦</th><td>vi–iii，I–iii，也可与其他和弦连用。</td><td>下属 vi 到主较重要，I–iii 较弱。若先前长时间突出羽，E 小和弦也可能听作羽调式的属和弦。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" data-harmony-options="jueCadences" id="jueCadences">
+          <div class="music-demo-toolbar">
+            <h3>角调式的属向与变格收束</h3>
+          <label>谱例 <select><option value="halfDiminished">变宫半减七到主</option><option value="minorDominant">升五音得到小属</option><option value="majorDominant">同时升三音、五音</option><option value="majorTonic">终点改用大主</option><option value="shang">商七到主</option><option value="alteredShang">升高商和弦三音</option><option value="replacedShang">商七换四音到主</option><option value="yu">羽和弦到主</option><option value="gong">宫和弦到主</option></select></label>
+          </div>
+          <figure></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

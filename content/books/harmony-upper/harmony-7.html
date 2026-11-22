@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第七章　旋律中的和弦外音及经过、辅助四六和弦｜和声学基础</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony-5-8.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 上</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第七章　旋律中的和弦外音及经过、辅助四六和弦</h1>
+      <p class="intro">把旋律的骨干音和装饰性音区分开，可以在保留旋律细节的同时，维持清楚的和声节奏。</p>
+      <section aria-labelledby="non-chord-tones"><h2 id="non-chord-tones">和弦外音与和声节奏</h2>
+      <p>在某个和弦持续期间，与和弦一起响起、但不属于它的音，是<strong>和弦外音</strong>。判断以这一刻的实际和声为准。它可以位于两个骨干音之间，也可以在新和弦出现前后产生局部张力。速度较快或旋律较活跃时，保留一段连续的和声，通常比每个音都换一个和弦更清楚。同一条旋律采用不同和声时，划分出的和弦外音也可能改变。</p>
+      <table class="lesson-table"><caption>按拍位和进入、离开的关系识别</caption><thead><tr><th scope="col">常见拍位</th><th scope="col">种类</th><th scope="col">旋律特征</th></tr></thead><tbody>
+      <tr><th scope="row" rowspan="3">弱拍或弱位</th><td>经过音</td><td>沿同一方向级进，连接两个不同的骨干音。</td></tr>
+      <tr><td>辅助音</td><td>从和弦音走到上方或下方邻音，再回原音。</td></tr>
+      <tr><td>先现音</td><td>下一和弦的音提早出现，随后同音重复进入下一和弦。</td></tr>
+      <tr><th scope="row" rowspan="2">强拍或强位</th><td>延留音</td><td>原来是和弦音，换和弦后被保留，随后级进解决。</td></tr>
+      <tr><td>倚音</td><td>强位直接出现的和弦外音，随后级进解决。</td></tr>
+      <tr><th scope="row">多见于弱位</th><td>自由和弦外音</td><td>进入或离开至少一侧有跳进，不能归入上述典型结构。</td></tr>
+      </tbody></table>
+      </section>
+      <section aria-labelledby="weak-position"><h2 id="weak-position">弱位的经过音、辅助音与先现音</h2>
+      <p><strong>经过音</strong>可上行或下行，也可连续出现几个。级进以所用音列为准，五声、七声与半音音列都能形成经过。短的非和弦音只填补两个骨干音之间的距离。</p>
+      <p><strong>辅助音</strong>夹在两个同音的和弦音之间。向上绕行是上辅助音，向下绕行是下辅助音。辅助音既可以是调式内的音，也可以有临时升降号。</p>
+      <p><strong>先现音</strong>在前一和弦的弱拍或弱位上就奏出后一和弦中的音。和弦换过来后同音再发，该音就成为新和弦的成员。</p>
+      <div class="music-demo" data-harmony-options="weakTones" id="weakTones">
+        <div class="music-demo-toolbar"><h3>弱位和弦外音的四部谱</h3><label>谱例 <select><option value="passing">调内经过音</option><option value="chromaticPassing">连续半音经过</option><option value="upper">上辅助音</option><option value="lower">下辅助音</option><option value="chromatic">变化辅助音</option><option value="anticipation">先现音</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="strong-position"><h2 id="strong-position">强位的延留音与倚音</h2>
+      <p>延留音依次经历<strong>预备、延留、解决</strong>。预备音在旧和弦里是和弦音，可在强拍或弱拍出现。到了新和弦的强拍或强位，它成为和弦外音。通常在较弱的位置下行二度解决，也可以上行半音。预备和延留可用延音线相连，也可同音再发。解决前还可以加入短促的装饰音。</p>
+      <p>倚音具有强位上的张力和级进解决，缺少前一和弦中的同音预备。通常下行二度，也可上行半音。这里按实际声部功能识别倚音，即使谱上使用正常大小的音符，也能形成这种和声外音。</p>
+      <div class="music-demo" data-harmony-options="strongTones" id="strongTones">
+        <div class="music-demo-toolbar"><h3>强位和弦外音的四部谱</h3><label>谱例 <select><option value="suspension">预备后连线延留</option><option value="repeated">同音再发的延留</option><option value="upward">上行半音解决</option><option value="decorated">装饰后解决</option><option value="appoggiatura">无预备的倚音</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="free-tones"><h2 id="free-tones">自由和弦外音的进出方式</h2>
+      <p>五类常见外音之外，还有以跳进进入或离开的自由和弦外音。它们常较短，多在弱拍或弱位。</p>
+      <table class="lesson-table"><caption>依照外音前后的运动区分</caption><thead><tr><th scope="col">进入</th><th scope="col">离开</th></tr></thead><tbody><tr><td>级进</td><td>跳进</td></tr><tr><td>跳进</td><td>级进</td></tr><tr><td>跳进</td><td>跳进</td></tr></tbody></table>
+      <div class="music-demo" data-harmony-options="freeTones" id="freeTones">
+        <div class="music-demo-toolbar"><h3>自由和弦外音的进出方式</h3><label>谱例 <select><option value="stepLeap">前级进、后跳进</option><option value="leapStep">前跳进、后级进</option><option value="bothLeap">前后均跳进</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="passing-six-four"><h2 id="passing-six-four">经过四六和弦</h2>
+      <p>三和弦以五音作低音时，是第二转位。低音上方有四度和六度，简称四六和弦，常重复低音。传统写作中，四六和弦具有不稳定性，常作为邻近和弦进行中的一环。</p>
+      <p>经过四六位于同功能的原位与六和弦之间，低音级进穿过中间一音。通常用在弱拍或弱位，时值较短。典型写法保留一个上方共同音，另一个声部与低音反向级进，剩余声部也作级进。</p>
+      <p>正三和弦范围内，I 与 I₆ 之间用 V<sup>6</sup><sub>4</sub>，IV 与 IV₆ 之间用 I<sup>6</sup><sub>4</sub>。低音可上行或下行，小调也适用。</p>
+      <div class="music-demo" data-harmony-options="passingSixFour" id="passingSixFour">
+        <div class="music-demo-toolbar"><h3>经过四六的四部进行</h3><label>谱例 <select><option value="tonicUp">I → V₆₄ → I₆</option><option value="tonicDown">I₆ → V₆₄ → I</option><option value="subdominantUp">IV → I₆₄ → IV₆</option><option value="subdominantDown">IV₆ → I₆₄ → IV</option><option value="minor">c 小调 i → V₆₄ → i₆</option><option value="minorTonicDown">c 小调 i₆ → V₆₄ → i</option><option value="minorSubdominantUp">c 小调 iv → i₆₄ → iv₆</option><option value="minorSubdominantDown">c 小调 iv₆ → i₆₄ → iv</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="neighbor-six-four"><h2 id="neighbor-six-four">辅助四六和弦</h2>
+      <p>辅助四六夹在同一个和弦及其重复之间。低音保持，典型写法中另一个声部也保持，另外两个声部同向级进离开，再返回。通常位于弱拍、弱位，时值较短。</p>
+      <p>正三和弦范围内，I–IV<sup>6</sup><sub>4</sub>–I 和 V–I<sup>6</sup><sub>4</sub>–V 最典型。前者还可用于乐段末尾的补充终止过程。相同的 I<sup>6</sup><sub>4</sub> 若以 V 为延长背景、出现在弱位并回到 V，是辅助四六。它处在终止强位、引向 V 并强调属功能时，才是终止四六。</p>
+      <div class="music-demo" data-harmony-options="neighborSixFour" id="neighborSixFour">
+        <div class="music-demo-toolbar"><h3>辅助四六的四部进行</h3><label>谱例 <select><option value="tonic">I → IV₆₄ → I</option><option value="dominant">V → I₆₄ → V</option><option value="minorTonic">i → iv₆₄ → i</option><option value="minorDominant">V → i₆₄ → V</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      <p>配和声时可以让同一稳定功能贯穿两个骨干位置，在中间穿插经过或辅助四六。乐句真正需要造成收束时，再用强位的 K<sup>6</sup><sub>4</sub>–V。</p>
+      <figure data-harmony-example="sixFourPhrase"><figcaption>同一乐句中的经过四六、终止四六与辅助四六</figcaption></figure>
+      </section>
+    </main>
+  </body>
+</html>

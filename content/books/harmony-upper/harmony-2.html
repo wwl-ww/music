@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第二章 正三和弦｜和声学基础</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 上</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第二章　正三和弦</h1>
+      <p class="intro">把三个和弦音分给四个声部，并在保持每条声部清楚的条件下连接正三和弦。</p>
+      <section aria-labelledby="doubling"><h2 id="doubling">和弦音的重复与省略</h2>
+      <p>四部写三和弦通常要重复一个和弦音。原位正三和弦优先重复根音。本阶段的写法把省略五音用在终止的主和弦中。若为声部进行需要省去五音，就再补一个根音，形成三个根音和一个三音。三音决定大、小性质，保留三音也能辨认调式。</p>
+      <figure data-harmony="doubling"><figcaption>完整主和弦与省略五音的终止主和弦</figcaption></figure>
+      </section>
+      <section aria-labelledby="spacing"><h2 id="spacing">排列法与旋律位置</h2>
+      <p><strong>排列法</strong>看上方三个声部的距离。相邻两声部都在四度以内是密集排列。都在五度至八度之间是开放排列。次中音与低音可同度，也可相隔超过八度。<strong>旋律位置</strong>看高音声部写的是根音、三音还是五音。低音仍是根音时，旋律位置的变化不改变原位。</p>
+      <table class="lesson-table">
+      <caption>C 大调原位主和弦的六种规范排列</caption><thead><tr><th scope="col">旋律位置</th><th scope="col">密集排列（次中音—中音—高音）</th><th scope="col">开放排列（次中音—中音—高音）</th></tr></thead>
+      <tbody><tr><th scope="row">根音</th><td>E4–G4–C5</td><td>G3–E4–C5</td></tr><tr><th scope="row">三音</th><td>G3–C4–E4</td><td>C4–G4–E5</td></tr><tr><th scope="row">五音</th><td>C4–E4–G4</td><td>E3–C4–G4</td></tr></tbody></table>
+      <div id="voicing-score" class="music-demo" data-harmony-switch="voicings"><div class="music-demo-toolbar"><h3>排列与旋律位置</h3><label>谱例 <select><option value="close">密集排列</option><option value="open">开放排列</option></select></label></div><figure><figcaption>依次以根音、三音、五音为高音</figcaption></figure></div>
+      </section>
+      <section aria-labelledby="motion"><h2 id="motion">声部进行</h2>
+      <p>单个声部从一个和弦到下一个和弦，可以同音保持、级进、作三度小跳，或作四度及以上的大跳。前三种叫平稳进行。大跳多见于低音，也可用于较活跃的高音旋律。</p>
+      <table class="lesson-table"><caption>两个声部的方向关系</caption><thead><tr><th scope="col">同向</th><th scope="col">斜向</th><th scope="col">反向</th></tr></thead><tbody><tr><td>都上行或都下行</td><td>一个保持，另一个移动</td><td>一个上行，另一个下行</td></tr></tbody></table>
+      <p>四部连接里，同向、斜向和反向可以同时出现在不同声部对中。例如 I–V 时次中音保持 G，高音与中音分别下行，它们之间是同向，与次中音都是斜向。若低音由 C3 上行到 G3，上方相同的下行旋律与低音就构成反向。</p>
+      </section>
+      <section aria-labelledby="connections"><h2 id="connections">共同音与两种连接法</h2>
+      <p><strong>和声的连接法</strong>把共同音留在同一声部，其余上方声部通常就近移动。<strong>旋律的连接法</strong>让上方声部就近进入下一个和弦。若两个和弦有共同音，旋律的连接法把共同音交给另一个声部。两个和弦没有共同音时，采用旋律的连接法。原位和弦的低音按根音进行。</p>
+      <figure data-harmony="connection"><figcaption>同一组 I–V 的两种连接，共同音 G 留在次中音或移到高音</figcaption></figure>
+      </section>
+      <section aria-labelledby="voice-errors"><h2 id="voice-errors">需要避免的声部进行</h2>
+      <table class="lesson-table"><caption>从相邻和弦检查不良进行</caption><thead><tr><th scope="col">现象</th><th scope="col">识别方法</th></tr></thead>
+      <tbody><tr><th scope="row">平行五度、八度</th><td>同一对声部同向从纯五度到纯五度，或从纯八度到纯八度，复音程按同类处理。</td></tr>
+      <tr><th scope="row">反向五度、八度</th><td>同一对声部反向，在五度与十二度之间转换，或在八度与同度、十五度之间转换。</td></tr>
+      <tr><th scope="row">隐伏五度、八度</th><td>两外声部同向进入纯五度或纯八度，且高音跳进。高音级进时通常允许。</td></tr>
+      <tr><th scope="row">声部交错</th><td>在同一个和弦里，位置应较低的声部实际高于上一声部。</td></tr>
+      <tr><th scope="row">声部超越</th><td>跨两个和弦时，某声部移进了相邻声部在前一和弦占据的音区，越过它原来的音高。</td></tr>
+      </tbody></table>
+      <div class="music-demo" data-harmony-errors>
+        <div class="music-demo-toolbar">
+          <h3>不良进行的声部对照</h3>
+          <label>现象 <select>
+            <optgroup label="连续纯音程"><option value="parallelOctave">平行八度</option><option value="parallelFifth">平行五度</option><option value="contraryOctave">反向八度</option><option value="contraryFifth">反向五度</option></optgroup>
+            <optgroup label="同向到达纯音程"><option value="hiddenOctave">隐伏八度</option><option value="hiddenFifth">隐伏五度</option></optgroup>
+            <optgroup label="声部次序"><option value="crossing">声部交错</option><option value="overlap">声部超越</option></optgroup>
+          </select></label>
+        </div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      <p>连续的纯五、八度会让两条线听起来像在同步加厚同一声部。交错和超越则使相邻声部难以辨认。排查时既要看同一时刻的音高顺序，也要逐对比较相邻和弦。四部写作里，即使每个和弦单独都成立，两者之间仍可能出现平行或超越。</p>
+      </section>
+    </main>
+  </body>
+</html>

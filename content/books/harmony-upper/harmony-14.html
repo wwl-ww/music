@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第十四章　副七和弦｜和声学基础</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony-13-16.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 上</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第十四章　副七和弦</h1>
+      <p class="intro">副七和弦把不协和的七音带入属和弦之外的各级。写作时同时判断功能方向与七音所在声部。</p>
+      <section aria-labelledby="secondary-seventh-types"><h2 id="secondary-seventh-types">副七和弦的结构与分类</h2>
+      <p>各级三和弦上再叠一个三度即可形成七和弦。除属七之外都归为副七。可先区分建立在副三和弦上的 ii、iii、vi、vii 各级，与建立在正三和弦上的主七和下属七。</p>
+      <table class="lesson-table"><caption>自然大调与和声小调的副七和弦</caption><thead><tr><th scope="col">级数</th><th scope="col">C 大调</th><th scope="col">a 和声小调</th></tr></thead><tbody>
+      <tr><th scope="row">Ⅱ</th><td>D–F–A–C，小七</td><td>B–D–F–A，半减七</td></tr>
+      <tr><th scope="row">Ⅲ</th><td>E–G–B–D，小七</td><td>C–E–G♯–B，增大七</td></tr>
+      <tr><th scope="row">Ⅵ</th><td>A–C–E–G，小七</td><td>F–A–C–E，大七</td></tr>
+      <tr><th scope="row">Ⅶ</th><td>B–D–F–A，半减七</td><td>G♯–B–D–F，减七</td></tr>
+      <tr><th scope="row">Ⅰ</th><td>C–E–G–B，大七</td><td>A–C–E–G♯，小大七</td></tr>
+      <tr><th scope="row">Ⅳ</th><td>F–A–C–E，大七</td><td>D–F–A–C，小七</td></tr></tbody></table>
+      <p>原位用 7，第一、第二、第三转位分别用 6/5、4/3、2，低音依次换成三音、五音、七音。</p>
+      <div class="music-demo" id="secondarySeventhBuilder">
+        <div class="music-demo-toolbar"><h3>副七和弦的级数与转位</h3>
+          <form class="ornament-controls">
+            <label>调式 <select name="key"><option value="major">C 大调</option><option value="minor">a 和声小调</option></select></label>
+            <label>级数 <select name="degree"><option>Ⅱ</option><option>Ⅲ</option><option>Ⅵ</option><option>Ⅶ</option><option>Ⅰ</option><option>Ⅳ</option></select></label>
+            <label>位置 <select name="position"><option value="0">原位</option><option value="1">第一转位</option><option value="2">第二转位</option><option value="3">第三转位</option></select></label>
+          </form>
+        </div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="supertonic-seventh"><h2 id="supertonic-seventh">Ⅱ级七和弦的预备与解决</h2>
+      <p>Ⅱ级七和弦也叫上主七和弦，是重要的下属功能和弦。C 大调 ii₇ 的 F 若变成 F♯，便成了 G 大调的属七结构。a 小调 iiø₇ 的 D、F 若都升高，便成了 e 小调的属七结构。三、五音须按主调拼写，两类结构虽不同，根音到七音都仍是小七度。</p>
+      <p>大调最常用第一转位 ii₆₅，以 F 为低音，上方的 A、C、D 可听成 IV 上加六度 D。写副七通常保留根音与七音，省七音会失去七和弦性质，省根音可能把它变为另一级的三和弦。常省五音，偶尔省三音。补足声部时可重复根音、三音或五音，通常不重复七音。</p>
+      <p>七音可在前一和弦中同音预备，也可由邻音引入。随后通常级进下行，有时保留作后一个和弦的共同音。副七与三和弦的功能连接沿用相应级数的基本走向，七音的实际处理比属七稍灵活。</p>
+      <div class="music-demo" data-harmony-options="supertonicSeventh" id="supertonicSeventh">
+        <div class="music-demo-toolbar"><h3>Ⅱ级七和弦的音高与去向</h3><label>谱例 <select><option value="major">大调 ii₆₅ 到 V</option><option value="minor">小调 iiø₆₅ 到 V</option><option value="prepared">七音同音预备后下行</option><option value="majorQuality">ii₇ 与 D 属七结构</option><option value="minorQuality">iiø₇ 与 B 属七结构</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="mediant-seventh"><h2 id="mediant-seventh">Ⅲ级七和弦与附加六度的属色彩</h2>
+      <p>Ⅲ级七和弦又叫中音七和弦。大调 iii₇ 是小七，和声小调 III+₇ 是增大七。第一转位比原位常见。大调 iii₆₅ 以属音作低音，可听成属和弦上加六度，例如 C 大调 G–B–D–E。和声小调的增五音和大七音比较尖锐，常作经过或辅助式运动，嵌入较稳定的连接中。</p>
+      <div class="music-demo" data-harmony-options="mediantSeventh" id="mediantSeventh">
+        <div class="music-demo-toolbar"><h3>Ⅲ级七和弦的主要用法</h3><label>谱例 <select><option value="major">大调 iii₆₅ 到 I</option><option value="minor">小调 III+₆₅ 到 i</option><option value="neighbor">小调增五音、大七音作辅助</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="submediant-seventh"><h2 id="submediant-seventh">Ⅵ级七和弦的主功能一面</h2>
+      <p>下中音七和弦含完整的主三和弦，归主倾向较弱。第一转位可以听成主和弦上附加六度，例如 C–E–G 上添 A。大调 vi₇ 可接 ii，再到属七，也可直接接属和弦。a 小调 VI₇ 接 ii° 时，低音 F 下行到 B 是减五度，避免把 B 放到 F 的上方形成上行增四度。</p>
+      <div class="music-demo" data-harmony-options="submediantSeventh" id="submediantSeventh">
+        <div class="music-demo-toolbar"><h3>Ⅵ级七和弦的两个去向</h3><label>谱例 <select><option value="supertonic">vi₇–ii</option><option value="dominant">vi₇–V</option><option value="minor">小调 VI₇–ii°</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="leading-secondary-seventh"><h2 id="leading-secondary-seventh">Ⅶ级七和弦的属功能</h2>
+      <p>Ⅶ级七和弦以导音为根音。大调半减导七与和声小调减导七都可看成省略根音的属九，导音与其他不稳定音级仍参与归主。转位的标记和具体声部解决参见<a href="./harmony-11.html#leading-resolution">导七的典型解决</a>。</p>
+      </section>
+      <section aria-labelledby="other-secondary-sevenths"><h2 id="other-secondary-sevenths">主七、下属七与解决例外</h2>
+      <p>主七和弦因七音的加入而失去原位主三和弦的稳定性。它的七音同时是导音，除下行解决外，也可按导音的倾向上行到主音，后者常更合适。a 和声小调若让 G♯ 下行，应避开直接到 F 的增二度，可让 G♯ 上趋 A，或在前一和弦中预备并改换声部走向。</p>
+      <p>下属七和弦常接属和弦。C 大调 IV₇–V 中，如 A 与 E 同时下行到 G 与 D，可能形成平行五度。可把两音上下位置调换成平行四度，或在特定位置让后面的 V 重复其三音，从而避免五度。这是导音通常不重复的例外，需同时检查两个导音的后续走向。</p>
+      <div class="music-demo" data-harmony-options="otherSevenths" id="otherSevenths">
+        <div class="music-demo-toolbar"><h3>主七与下属七的声部处理</h3><label>谱例 <select><option value="tonicUp">主七的七音上行</option><option value="tonicDown">主七的七音下行</option><option value="minorTonic">小调主七避免增二度</option><option value="doubledLeading">IV₇–V 的导音重复</option><option value="fourths">大调 IV₇–V 的平行四度</option><option value="minorFourths">小调 iv₇–V 的平行四度</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+    </main>
+  </body>
+</html>

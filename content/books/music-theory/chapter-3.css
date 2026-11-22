@@ -1,0 +1,42 @@
+.pitch-diagram {
+  margin-block: 1.2rem;
+  width: min(100%, 34rem);
+}
+
+.pitch-diagram figcaption {
+  margin-block-start: 0.45rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.pitch-keyboard, .pitch-staff-diagram {
+  display: block;
+  width: 100%;
+}
+
+.pitch-staff-diagram { background: var(--sheet); border-radius: 0.4rem; }
+.pitch-staff-lines { stroke: var(--ink); fill: none; stroke-width: 1; }
+.pitch-clef-glyph { fill: var(--ink); font: 40px "Lesson Music Symbols"; }
+.staff-labels { fill: var(--muted); dominant-baseline: central; font-size: 11px; }
+.staff-labels text:nth-child(-n+5) { text-anchor: end; }
+
+.lesson-chapter .lesson-table :is(th, td) {
+  padding-inline: clamp(0.35rem, 2vw, 0.85rem);
+}
+.pitch-full-diagram { width: 100%; }
+.pitch-full-scroll { overflow-x: auto; }
+.pitch-full-scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.pitch-full-keyboard { display: block; width: 100%; min-width: 43rem; }
+.pitch-full-notes, .pitch-full-groups { text-anchor: middle; font-weight: 700; }
+.pitch-full-notes { fill: #182636; font-size: 23px; }
+.pitch-full-groups { fill: var(--ink); font-size: 29px; }
+.pitch-group-lines { fill: none; stroke: var(--muted); stroke-width: 2; }
+.pitch-full-guides { fill: none; stroke: var(--line); stroke-width: 1.5; stroke-dasharray: 4 6; }
+.pitch-full-middle-guide { fill: none; stroke: #376895; stroke-width: 2; stroke-dasharray: 5 6; }
+.pitch-full-staff, .pitch-full-ledgers { fill: none; stroke: var(--ink); stroke-width: 1.4; }
+.pitch-full-clef { fill: var(--ink); font: 40px "Lesson Music Symbols"; }
+.pitch-full-white-notes { fill: var(--ink); }
+.pitch-middle-c { fill: #376895; }
+.pitch-annotated { max-width: 22rem; }
+.pitch-annotated-heads { fill: var(--ink); }
+.pitch-annotated-labels { fill: var(--accent); font-size: 15px; font-weight: 700; text-anchor: middle; }

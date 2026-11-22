@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第六章　正三和弦的第一转位｜和声学基础</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony-5-8.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 上</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第六章　正三和弦的第一转位</h1>
+      <p class="intro">第一转位把三音放在低音，使功能走向可以沿着更连贯的低音线展开。</p>
+      <section aria-labelledby="first-inversion"><h2 id="first-inversion">六和弦的低音与标记</h2>
+      <p>正三和弦以三音作低音时，成为<strong>第一转位</strong>。从低音到其他和弦音可整理为三度与六度，简称六和弦。在级数右下角加 6，例如 I₆、IV₆、V₆。转位改变最低音和音响，根音、和弦性质与基本功能仍由原来的三个音决定。</p>
+      <p>第一转位通常没有原位那样稳。大三和弦的第一转位色彩往往较淡，小三和弦的第一转位则常较明亮。C 大调 I₆ 的低音为 E，c 小调 i₆ 的低音为 E♭。两调的 V₆ 均以导音 B 为低音。</p>
+      <div class="music-demo" data-harmony-options="inversionBasics" id="inversionBasics">
+        <div class="music-demo-toolbar"><h3>原位与第一转位的低音对照</h3><label>谱例 <select><option value="major">C 大调</option><option value="minor">c 和声小调</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="sixth-voicing"><h2 id="sixth-voicing">重复音与十种规范排列</h2>
+      <p>四部写六和弦，通常重复根音或五音，低音的三音通常只写一次。依旧只用上方三声部来判别排列。同度可计入较小的间距。</p>
+      <table class="lesson-table"><caption>六和弦的上三声部排列</caption><thead><tr><th scope="col">排列</th><th scope="col">两个相邻间距</th></tr></thead><tbody><tr><th scope="row">密集（M）</th><td>都在四度以内</td></tr><tr><th scope="row">开放（K）</th><td>都在五度至八度之间</td></tr><tr><th scope="row">混合（H）</th><td>一个在四度以内，另一个在五度至八度之间</td></tr></tbody></table>
+      <p>以 C 大调 I₆ 为例，重复根音与重复五音各有五种规范排列。小三和弦沿用同一排列原则，只把低音三音调整到小三度。谱中的各次发声是独立的排列示例。</p>
+      <div class="music-demo" data-harmony-options="sixthVoicings" id="sixthVoicings">
+        <div class="music-demo-toolbar"><h3>重复根音或五音的十种排列</h3><label>谱例 <select><option value="majorRoot">C 大调 I₆ · 重复根音</option><option value="majorFifth">C 大调 I₆ · 重复五音</option><option value="minorRoot">c 小调 i₆ · 重复根音</option><option value="minorFifth">c 小调 i₆ · 重复五音</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="root-and-sixth"><h2 id="root-and-sixth">同一功能的原位与六和弦</h2>
+      <p>同一和弦可以在原位和六和弦之间转换。六和弦接在原位之后较常见，也可先出现六和弦。连接时保留一至两个声部，避免四个声部一起运动。</p>
+      <p>为了平稳，原位之后的六和弦有时可重复三音。处理这类例外仍必须检查下一和弦，尤其要慎重重复属六和弦低音的导音。</p>
+      <div class="music-demo" data-harmony-options="sameFunction" id="sameFunction">
+        <div class="music-demo-toolbar"><h3>原位与六和弦的相互转换</h3><label>谱例 <select><option value="normal">原位 → 六和弦</option><option value="reverse">六和弦 → 原位</option><option value="doubledThird">原位之后重复三音</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="smooth-sixths"><h2 id="smooth-sixths">不同功能的六和弦怎样平稳连接</h2>
+      <table class="lesson-table"><caption>根音关系与连接方法</caption><thead><tr><th scope="col">组合</th><th scope="col">根音相隔四、五度</th><th scope="col">根音相隔二度</th></tr></thead><tbody>
+      <tr><th scope="row">一个原位、一个六和弦</th><td>用和声连接，保留共同音，其余上方声部就近移动。</td><td>用旋律连接。IV–V₆ 的低音 F 与 B 之间，宜下行减五度，避免上行增四度。</td></tr>
+      <tr><th scope="row">两个六和弦</th><td>用和声连接。小调 i₆–V₆ 的低音宜作减四度，避免增五度。</td><td>用旋律连接。IV₆ 重复根音，并把根音放在高音。V₆ 重复五音。</td></tr></tbody></table>
+      <p>a 小调的 iv₆–V₆，低音 F 到 G♯ 若按邻级上行，会出现增二度。可以把 G♯ 放低一个八度，从 F 下行减七度，也可采用上行旋律小调，把 F 升成 F♯，再上行大二度到 G♯。</p>
+      <p>若上方声部难以平稳接到下一和弦，可先在六和弦内换位，改变重复音，让共同音或级进出现在合适的声部。</p>
+      <div class="music-demo" data-harmony-options="smoothSixths" id="smoothSixths">
+        <div class="music-demo-toolbar"><h3>六和弦的平稳连接</h3><label>谱例 <select><option value="rootToSixth">I–V₆ · 保留共同音</option><option value="tritone">IV–V₆ · 低音减五度</option><option value="bothShared">I₆–V₆ · 保留共同音</option><option value="minorFourth">i₆–V₆ · 低音减四度</option><option value="bothStep">IV₆–V₆ · 调整重复音</option><option value="minorSeventh">iv₆–V₆ · 低音减七度</option><option value="minorMelodic">IV₆–V₆ · 旋律小调</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="sixth-leaps"><h2 id="sixth-leaps">有六和弦参与时的声部跳进</h2>
+      <p>原位与六和弦之间、两个六和弦之间，都可出现根音到根音、五音到五音、根音到五音或五音到根音的跳进。这里的根音、五音指跳进声部在各自和弦中担任的音，未必出现在低音。</p>
+      <ul>
+      <li>一般安排一个声部跳进，有时两个，其余声部用保持或级进支撑。避免三个声部同时跳进。</li>
+      <li>六度及以上的大跳用于高音，并由内声部的平稳进行支撑。</li>
+      <li>若根音与五音同时作同类跳进，把根音放在五音上方，避免两条声部作平行五度。</li>
+      </ul>
+      <div class="music-demo" data-harmony-options="sixthLeaps" id="sixthLeaps">
+        <div class="music-demo-toolbar"><h3>六和弦参与的跳进</h3><label>谱例 <select><option value="root">原位与六和弦 · 根音到根音</option><option value="fifth">原位与六和弦 · 五音到五音</option><option value="cross">原位与六和弦 · 五音到根音</option><option value="both">两个六和弦 · 根音到根音</option><option value="bothFifth">两个六和弦 · 五音到五音</option><option value="bothCross">两个六和弦 · 五音到根音</option><option value="large">高音六度以上跳进</option><option value="paired">根音与五音同时跳进</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      <p>写进乐句时，六和弦先服务于旋律和低音线条。跳进前后仍要检查平行、反向和隐伏五八度，并给内声部留出合适的音区。</p>
+      <figure data-harmony-example="sixthPhrase"><figcaption>V₆ 使低音 C–B–C 保持级进，IV₆ 在终止前为属低音留下级进空间</figcaption></figure>
+      </section>
+    </main>
+  </body>
+</html>

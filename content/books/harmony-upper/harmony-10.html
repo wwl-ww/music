@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第十章　属九和弦｜和声学基础</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony-9-12.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 上</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第十章　属九和弦</h1>
+      <p class="intro">在属七上添入调式第Ⅵ级，得到紧张度更高的属九和弦。四部写作的重点是安排九音、选择省略音和安排解决。</p>
+      <section aria-labelledby="ninth-structure"><h2 id="ninth-structure">大属九与小属九</h2>
+      <p>属九和弦在属七上再叠一个三度。新增的九音是调式第Ⅵ级。C 大调的 V₉ 为 G–B–D–F–A，c 和声小调为 G–B–D–F–A♭，两者都保留导音 B 和属七的三全音。</p>
+      <table class="lesson-table"><caption>九音带来的特性音程</caption><thead><tr><th scope="col">从下方和弦音到九音</th><th scope="col">C 大调，A</th><th scope="col">c 和声小调，A♭</th></tr></thead><tbody>
+      <tr><th scope="row">根音 G 到九音</th><td>大九度</td><td>小九度</td></tr><tr><th scope="row">三音 B 到九音</th><td>小七度</td><td>减七度</td></tr><tr><th scope="row">五音 D 到九音</th><td>纯五度</td><td>减五度</td></tr>
+      </tbody></table>
+      <p>属九和弦纳入更多不稳定音级，往主和弦的倾向较强。九音处在高音时，听众容易听清附加不协和以及随后的下行。</p>
+      </section>
+      <section aria-labelledby="ninth-voicing"><h2 id="ninth-voicing">四部排列与转位</h2>
+      <p>五个和弦音进入四部时必须取舍。最常省略五音，偶尔省略三音或七音。九音通常放在高音。若把它写在内声部，应避免和根音靠成大二度，转位时尤其要检查根音与九音的位置。</p>
+      <p>原位最常用。转位中，低音为导音的第一转位较常见，其次是七音在低音的第三转位，再次是五音在低音的第二转位。九音位于最低处的第四转位在这一传统写法中不用。转位数字沿用相应属七转位，再加 9。</p>
+      <table class="lesson-table"><caption>属九的低音与转位数字</caption>
+      <thead><tr><th scope="col">位置</th><th scope="col">C 大调的低音</th><th scope="col">标记</th></tr></thead>
+      <tbody><tr><th scope="row">原位</th><td>根音 G</td><td>V₉</td></tr>
+      <tr><th scope="row">第一转位</th><td>三音 B</td><td>V<sup>9</sup><sub>6/5</sub></td></tr>
+      <tr><th scope="row">第二转位</th><td>五音 D</td><td>V<sup>9</sup><sub>4/3</sub></td></tr>
+      <tr><th scope="row">第三转位</th><td>七音 F</td><td>V<sup>9</sup><sub>2</sub></td></tr>
+      <tr><th scope="row">第四转位</th><td>九音 A</td><td>传统四部写法不用</td></tr></tbody></table>
+      <div class="music-demo" data-harmony-options="ninthVoicing" id="ninthVoicing">
+        <div class="music-demo-toolbar"><h3>属九的省略与转位</h3><label>谱例 <select><option value="root">原位 · 省五音</option><option value="minor">c 小调原位</option><option value="withoutThird">原位 · 省三音</option><option value="withoutSeventh">原位 · 省七音</option><option value="first">第一转位</option><option value="second">第二转位</option><option value="third">第三转位</option><option value="innerSpaced">内声部九音与根音分开</option><option value="innerClose">内声部九音靠近根音</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="ninth-preparation"><h2 id="ninth-preparation">九音的引入和两条解决路径</h2>
+      <p>九音可以从前一个和弦以共同音保持引入，这是常见写法。也可以从邻近音级进到九音，偶尔跳进引入。预备有助于缓和不协和，跳进及较密的排列会突出紧张感。</p>
+      <p>九音原则上<strong>下行一级到属音</strong>。这一步既可随整个 V₉ 直接去向主和弦，使九音成为主和弦的五音，也可先在属功能内部把 V₉ 变为 V₇，再让 V₇ 解决到主和弦。</p>
+      <div class="music-demo" data-harmony-options="ninthPaths" id="ninthPaths">
+        <div class="music-demo-toolbar"><h3>九音的引入与解决</h3><label>谱例 <select><option value="prepared">预备后直接解决</option><option value="stepwise">级进引入后直接解决</option><option value="leaping">跳进引入后直接解决</option><option value="internal">先回到属七再归主</option><option value="minor">c 小调下行解决</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="ninth-errors"><h2 id="ninth-errors">解决中的连续五度与七八、九八进行</h2>
+      <p>保留属九的五音时，五音与九音若同向分别到 C 与 G，在大调中容易形成平行五度。可让 D 改到 E，重复主和弦三音。也可以重新安排两个声部的高低，把五度的关系转成四度。</p>
+      <p>同一对声部从七度或九度同向到八度，分别称为七八进行、九八进行，也是应避免的写法。判断的是前后两个和弦中同一对声部的音程及方向。</p>
+      <div class="music-demo" data-harmony-options="ninthChecks" id="ninthChecks">
+        <div class="music-demo-toolbar"><h3>平行五度与两种修正</h3><label>谱例 <select><option value="fifths">平行五度</option><option value="doubleThird">重复主和弦三音</option><option value="fourths">调换为平行四度</option><option value="seventhOctave">七八进行</option><option value="ninthOctave">九八进行</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="ninth-usage"><h2 id="ninth-usage">用属九控制张力</h2>
+      <p>原来用 V₇ 的位置，若需要更强的属功能，可以考虑 V₉。强奏时音响厚实，弱奏时也可能有较柔和的朦胧感，常用在发展段或高潮。旋律中的第Ⅵ级可以成为九音。第Ⅲ级小三和弦的分解片段里，属于属九的音可写成骨架，其余音仍按外音处理。</p>
+      <h3>属功能内部的两条张力路线</h3>
+      <p><strong>高张力进入，再逐层退回。</strong>在 V<sup>9</sup><sub>6/5</sub> 跳进引入九音，把较强的张力放在属功能的开头。九音先下行到属音，低音同时可由 B 移到 D，再经 F 下行到主六的 E。属九到属七的变化发生在归主之前。</p>
+      <p><strong>先建立属功能，再增加不协和。</strong>从 V 出发，在固定属低音上用分解进行引出七音和九音。九音到属音时，先退回 V₇，导音与七音仍有解决需要，直到主和弦出现才完成收束。</p>
+      <div class="music-demo" data-harmony-options="ninthExpansion" id="ninthExpansion">
+        <div class="music-demo-toolbar"><h3>属功能内部的张力变化</h3><label>谱例 <select><option value="buildup">属三 → 属七 → 属九</option><option value="release">属九 → 属七 → 主</option><option value="invertedRelease">转位属九经属七归主</option><option value="arpeggioBuildup">属低音上的七音与九音</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+
+      <section aria-labelledby="ninth-in-a-phrase"><h2 id="ninth-in-a-phrase">属九在乐句中的选择</h2>
+      <p>同是旋律第Ⅵ级，可以是主功能或下属功能的和弦音，也可以进入属九。属九尤其适合旋律第Ⅵ级随后下行到第Ⅴ级、而低音或内声部已经形成属功能的场合。若旋律还要继续发展，可以在属低音上先回到属七，再决定何时归主。</p>
+      <figure data-harmony-example="ninthHalfCadence"><figcaption>G 大调属九第三转位与半终止</figcaption></figure>
+      <p>第一小节末的低音 C 是 D 属九的七音，高音 E 是九音。下一小节，C 下行到 B，E 下行到 D，进入以 B 为低音的主六和弦。次中音的 D 继续保持，第二次回到原位主和弦后仍可向属功能发展。这一段最后停在 V，属九的局部解决和整个乐句的半终止处于不同层次。</p>
+      <p>谱例最后的小节把属低音写在低八度，以便在四部谱里单独辨认。</p>
+      </section>
+    </main>
+  </body>
+</html>

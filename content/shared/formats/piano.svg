@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <rect id="key-c" x="1" y="1" width="30" height="94" rx="2"/>
+    <rect id="key-d" x="33" y="1" width="30" height="94" rx="2"/>
+    <rect id="key-e" x="65" y="1" width="30" height="94" rx="2"/>
+    <rect id="key-f" x="97" y="1" width="30" height="94" rx="2"/>
+    <rect id="key-g" x="129" y="1" width="30" height="94" rx="2"/>
+    <rect id="key-a" x="161" y="1" width="30" height="94" rx="2"/>
+    <rect id="key-b" x="193" y="1" width="30" height="94" rx="2"/>
+    <rect id="key-c-sharp" x="22" y="1" width="20" height="58" rx="2"/>
+    <rect id="key-d-sharp" x="54" y="1" width="20" height="58" rx="2"/>
+    <rect id="key-f-sharp" x="118" y="1" width="20" height="58" rx="2"/>
+    <rect id="key-g-sharp" x="150" y="1" width="20" height="58" rx="2"/>
+    <rect id="key-a-sharp" x="182" y="1" width="20" height="58" rx="2"/>
+  </defs>
+  <g id="white-keys">
+    <use href="#key-c"/><use href="#key-d"/><use href="#key-e"/><use href="#key-f"/>
+    <use href="#key-g"/><use href="#key-a"/><use href="#key-b"/>
+  </g>
+  <g id="black-keys">
+    <use href="#key-c-sharp"/><use href="#key-d-sharp"/><use href="#key-f-sharp"/>
+    <use href="#key-g-sharp"/><use href="#key-a-sharp"/>
+  </g>
+</svg>

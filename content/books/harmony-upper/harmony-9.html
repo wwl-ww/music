@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第九章　属七和弦的转位｜和声学基础</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./harmony-9-12.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和声学基础教程 · 上</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第九章　属七和弦的转位</h1>
+      <p class="intro">同一个属七和弦可以由不同的和弦音担任低音。低音的改变使属功能能够沿级进线条延长或进入主和弦。</p>
+      <section aria-labelledby="seventh-inversions"><h2 id="seventh-inversions">属七和弦的三个转位</h2>
+      <p>转位移动的是低音，根音和和弦组成保持不变。以 C 大调与 c 和声小调的 G–B–D–F 为例，原位低音是 G，三个转位的低音依次是 B、D、F。数字取自低音和上方音之间的音程，读法沿用复音程的单音程名称。</p>
+      <table class="lesson-table"><caption>低音、数字及典型归向</caption><thead><tr><th scope="col">转位</th><th scope="col">低音</th><th scope="col">数字的来源</th><th scope="col">典型解决</th></tr></thead><tbody>
+      <tr><th scope="row">第一转位 · 五六和弦 V<sup>6</sup><sub>5</sub></th><td>三音 B</td><td>七音 F 与根音 G 在低音上方分别为五度与六度。</td><td>B 上行到 C，进入 I 或 i。</td></tr>
+      <tr><th scope="row">第二转位 · 三四和弦 V<sup>4</sup><sub>3</sub></th><td>五音 D</td><td>七音 F 与根音 G 分别为三度与四度。</td><td>D 下行到 C，进入原位。D 上行到 E 或 E♭，进入第一转位。</td></tr>
+      <tr><th scope="row">第三转位 · 二和弦 V₂</th><td>七音 F</td><td>与根音 G 构成二度。</td><td>F 下行到 E 或 E♭，进入 I₆ 或 i₆。</td></tr>
+      </tbody></table>
+      <div class="music-demo" data-harmony-options="seventhInversions" id="seventhInversions">
+        <div class="music-demo-toolbar"><h3>各转位的低音与归向</h3><label>谱例 <select><option value="first">五六 → 原位主</option><option value="secondRoot">三四 → 原位主</option><option value="secondSixth">三四 → 主六</option><option value="third">二 → 主六</option><option value="minor">c 小调 二 → 主六</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="inversion-doubling"><h2 id="inversion-doubling">省略和重复</h2>
+      <p>四部写作里的转位属七通常四音俱全。为配合声部进行，偶尔可省五音或三音，再重复根音或五音。不重复组成三全音的三音与七音。三音或五音担任低音时，该音必须保留，才能维持所标的转位。</p>
+      <p>省掉五音，导音与七音之间的三全音还在。省掉三音则同时失去导音和三全音，属七的紧张度减弱。谱例中可对比同一转位省略前后的音响。</p>
+      <div class="music-demo" data-harmony-options="inversionOmissions" id="inversionOmissions">
+        <div class="music-demo-toolbar"><h3>完整、略五音与略三音</h3><label>谱例 <select><option value="full">完整 V₂</option><option value="omitFifth">V₂ 略五音</option><option value="omitThird">V₂ 略三音</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="inverted-resolution"><h2 id="inverted-resolution">转位属七的声部解决</h2>
+      <p>典型进行中，<strong>三音上行一级、七音下行一级、根音留在原声部</strong>，五音则向上或向下一级。低音恰是某个和弦音时也按相应规则移动，所以同一个 V<sup>4</sup><sub>3</sub> 可就近解决到 I 或 I₆，V₂ 正常解决到 I₆。</p>
+      <p>在 I–V<sup>4</sup><sub>3</sub>–I₆ 中，有时为了避免主六和弦重复低音的三音，可让七音随声部上行到主和弦的五音。若转位属七进入 IV 或 IV₆，七音已经是后一个和弦的根音，可以原声部保持。</p>
+      <p>为使旋律活跃，可让上方的其他和弦音跳进，例如让五音落到目标和弦的五音，三音和七音仍按原来的级进法解决。全曲最后的结束终止偶尔允许两个外声部以反向八度收束，这是此前一般禁忌的特例。</p>
+      <div class="music-demo" data-harmony-options="invertedExceptions" id="invertedExceptions">
+        <div class="music-demo-toolbar"><h3>七音例外、旋律跳进和结尾</h3><label>谱例 <select><option value="rising">七音上行</option><option value="heldRoot">七音保持 → IV</option><option value="heldSixth">七音保持 → IV₆</option><option value="leaping">上方五音跳进</option><option value="finalOctaves">结束终止的反向八度</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+      <section aria-labelledby="prolonged-seventh"><h2 id="prolonged-seventh">经过性低音与属功能延长</h2>
+      <p>乐段中部，转位属七与主和弦可以多次交替。低音既可由 B–C 逐级上行，到 D–E–F 后折回 E，也可由 G 经 F–E–D–C 下行，再以 B–C 回到主音。同一转位因此可以填入两级之间，也可以作邻音式往返。</p>
+      <p>延长属功能时，属七的原位及各转位构成长段的支点。低音下行 F–E–D–C–B–A–G 时，可在 E、C、A 处短暂插入 I₆、IV₆₄、IV₆。辨认主体时，既看低音线，也看哪些和弦占据更重要的拍位、持续更久，以及全段最后如何走向 I。</p>
+      <div class="music-demo" data-harmony-options="inversionUsage" id="inversionUsage">
+        <div class="music-demo-toolbar"><h3>属七转位在乐段中的两种用法</h3><label>谱例 <select><option value="passing">与主和弦交替</option><option value="prolonged">属功能内部转位轮换</option><option value="interpolated">属功能延长中插入经过和弦</option></select></label></div>
+        <figure></figure>
+        <output class="music-demo-cue"></output>
+      </div>
+      </section>
+
+      <section aria-labelledby="seventh-in-a-phrase"><h2 id="seventh-in-a-phrase">转位属七在八小节乐句中的安排</h2>
+      <p>给旋律配转位属七时，先看旋律中哪一音需要保留或解决，再选能与它配合的低音。如果低音已经指定，第三、第五、第七音在低音时分别对应五六、三四、二和弦。需要级进低音时，用同一个属七的不同转位即可改变路线。</p>
+      <figure data-harmony-example="invertedSeventhPhrase"><figcaption>C 大调三八拍乐句中的属七转位</figcaption></figure>
+      <table class="lesson-table"><caption>乐句中的属七转位与声部安排</caption>
+      <thead><tr><th scope="col">位置</th><th scope="col">和声作用</th><th scope="col">声部依据</th></tr></thead>
+      <tbody><tr><th scope="row">第 1–3 小节</th><td>短时值的 V₂ 和 V₆₅ 插在主功能之间。</td><td>V₂ 的低音 F 进入 E，第一转位的低音 B 进入 C。中音 G 以延音线跨过两次变换。</td></tr>
+      <tr><th scope="row">第 5–6 小节</th><td>两种转位先后引向主六和原位主和弦。</td><td>低音由 F 经 E、D 到 C。上方的共同音把这一段连在一起。</td></tr>
+      <tr><th scope="row">第 7–8 小节</th><td>属七第一转位转入原位属功能，最终落到 I。</td><td>原位低音 G 到 C，高音导音 B 到 C，终止比前面的短暂归主更明确。</td></tr></tbody></table>
+      </section>
+    </main>
+  </body>
+</html>

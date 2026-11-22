@@ -1,0 +1,621 @@
+.score-example {
+  margin-block: 1rem 1.35rem;
+  padding: 0.2rem 0.45rem 0.45rem;
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+}
+.scroll-frame { min-width: 0; max-width: 100%; overflow-x: auto; scrollbar-color: var(--control-line) var(--paper); }
+.scroll-frame:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.scroll-frame-hint {
+  margin-block: 0.18rem 0.35rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-align: end;
+}
+.scroll-frame-hint:not([hidden]) { display: block; }
+.music-demo > .scroll-frame-hint { padding-inline: 0.85rem; }
+.staff-scroll > svg { min-width: var(--staff-min-width, 0); }
+.table-scroll > table { min-width: var(--table-min-width, 0); }
+.format-library .table-scroll > table { margin-block-start: 1.25rem; }
+.is-scrollable { padding-block-end: 0.35rem; }
+.score-notation { position: relative; min-width: 0; overflow-x: auto; background: var(--score-paper); border-radius: 0.35rem; }
+.score-status { padding-inline: 0.45rem; color: var(--muted); font-size: 0.875rem; }
+.score-status:empty { display: none; }
+.score-controls { display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; }
+.score-controls[hidden], .score-timbre[hidden], .score-reading[hidden], .score-reading-toggle[hidden] { display: none; }
+.score-timbre { display: flex; align-items: center; gap: 0.45rem; color: var(--muted); font-size: 0.8rem; }
+.score-timbre select, .score-reading button, .score-reading-toggle {
+  min-height: 32px;
+  padding-inline: 0.45rem;
+  border: 1px solid var(--control-line);
+  border-radius: 0.4rem;
+  background: var(--control-surface);
+  color: var(--ink);
+  font: inherit;
+}
+.score-reading-toggle { margin-inline-end: auto; font-size: 0.8rem; }
+.score-reading button, .score-reading-toggle { cursor: pointer; }
+.score-reading button:disabled { opacity: 0.5; cursor: default; }
+:is(.score-reading button, .score-reading-toggle):not(:disabled):hover { background: var(--control-hover); }
+.score-reading-toggle[aria-expanded="true"] { border-color: var(--accent); color: var(--accent); }
+.score-reading {
+  margin-block: 0.3rem 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--sheet);
+  font-size: 0.8rem;
+}
+.score-reading-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; }
+.score-reading-position { color: var(--muted); font-variant-numeric: tabular-nums; }
+.score-reading-parts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.4rem;
+  margin: 0.5rem 0 0;
+}
+.score-reading-parts > div { min-width: 0; padding: 0.3rem 0.42rem; border-radius: 0.35rem; background: var(--control-hover); }
+.score-reading-parts dt { color: var(--muted); }
+.score-reading-parts dd { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 0.35rem; margin: 0; }
+.score-reading-note { font-size: 1rem; font-weight: 650; }
+.score-reading-parts small { color: var(--muted); }
+.score-reading-marker {
+  position: absolute;
+  z-index: 1;
+  width: 18px;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  border-block: 2px solid var(--score-cursor);
+  background: color-mix(in srgb, var(--score-cursor) 15%, transparent);
+  pointer-events: none;
+}
+.score-example.playing .score-reading-marker { visibility: hidden; }
+@media (max-width: 380px) {
+  .score-reading-parts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (pointer: coarse) {
+  .score-timbre select, .score-reading button, .score-reading-toggle { min-height: 44px; }
+}
+.at-cursor-bar { background: color-mix(in srgb, var(--score-cursor) 14%, transparent); }
+.at-cursor-beat { background: var(--score-cursor); width: 2px; }
+.score-example:not(.playing) .score-notation :is(.at-cursor-bar, .at-cursor-beat) { visibility: hidden; }
+.at-highlight * { fill: var(--score-cursor); stroke: var(--score-cursor); }
+
+.score-playback {
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 34px;
+  margin-inline-start: -0.2rem;
+  padding: 0;
+  cursor: pointer;
+}
+@media (pointer: coarse) {
+  .score-playback { height: 44px; }
+}
+.score-playback:not(:disabled):hover,
+.score-example.playing .score-playback { background: var(--control-hover); }
+.score-playback[hidden] { display: none; }
+.score-playback:disabled { opacity: 0.45; cursor: default; }
+.score-playback:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+.score-playback-icon {
+  width: 13px;
+  height: 14px;
+  background: currentColor;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  margin-inline-start: 2px;
+}
+.score-example.playing .score-playback-icon {
+  width: 12px;
+  height: 12px;
+  clip-path: none;
+  margin-inline-start: 0;
+}
+
+.lesson-table {
+  width: min(100%, 25rem);
+  margin-block: clamp(2rem, 5vw, 3rem) 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: start;
+  line-height: 1.55;
+}
+
+.lesson-table caption {
+  padding-block-end: 0.6rem;
+  text-align: start;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.lesson-table :is(th, td) {
+  padding: 0.55rem 0.9rem;
+  text-align: start;
+  overflow-wrap: anywhere;
+}
+
+.lesson-table thead th {
+  background: var(--tint);
+  color: var(--ink);
+  font-size: 0.875rem;
+  border-block-end: 1px solid var(--line);
+}
+.lesson-table tbody :is(th, td) { background: var(--sheet); }
+.lesson-table tbody tr + tr > * { border-top: 1px solid var(--line); }
+.lesson-table thead th:first-child { border-start-start-radius: 0.55rem; }
+.lesson-table thead th:last-child { border-start-end-radius: 0.55rem; }
+.lesson-table tbody tr:last-child > :first-child { border-end-start-radius: 0.55rem; }
+.lesson-table tbody tr:last-child > :last-child { border-end-end-radius: 0.55rem; }
+.lesson-table tbody th { font-weight: 500; }
+.lesson-table tbody th:first-child { min-width: 3.65em; }
+.lesson-table .numeric { width: 38%; font-variant-numeric: tabular-nums; }
+
+.fraction, .time-signature {
+  display: inline-grid;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 0.85em;
+  line-height: 1.05;
+}
+
+:is(.fraction, .time-signature) > span { padding-inline: 0.2em; }
+:is(.fraction, .time-signature) > span + span { border-block-start: 1px solid currentColor; }
+
+.music-symbol {
+  display: inline-block;
+  margin-inline: 0.08em;
+  vertical-align: 0.12em;
+  font-family: "Lesson Music Symbols";
+  font-size: 1.25em;
+  line-height: 1;
+}
+
+.lesson-table .music-symbol,
+.notation-sample .music-symbol {
+  width: 1.25em;
+  margin-inline: 0 0.4rem;
+}
+
+.notation-sample {
+  margin-block: 1.75rem 0;
+}
+
+.notation-sample figcaption { font-weight: 700; }
+
+.notation-sample ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+}
+
+.notation-sample li {
+  padding: 0.45rem 0.75rem;
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  border-radius: 0.4rem;
+}
+
+.interval-examples { margin-block-start: 2rem; }
+.interval-examples h2 { font-family: var(--title-font); font-size: 1.375rem; }
+.interval-definitions { position: absolute; }
+.interval-examples ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  list-style: none;
+  margin: 0.65rem 0 0;
+  padding: 0;
+}
+.interval-examples li {
+  padding: 0.5rem 0.65rem 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 0.4rem;
+  background: var(--sheet);
+}
+.interval-examples li svg {
+  display: block;
+  width: 100%;
+  max-width: 10rem;
+  color: var(--ink);
+  fill: currentColor;
+  font: 40px "Lesson Music Symbols";
+}
+.interval-examples li strong, .interval-examples li span { display: block; }
+.interval-examples li span { color: var(--muted); font-size: 0.875rem; }
+
+@media (min-width: 40rem) {
+  .interval-examples ul { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+.keyboard-example { margin-block-start: 2rem; }
+.keyboard-example figcaption { font-weight: 700; }
+.keyboard-example svg {
+  display: block;
+  width: min(100%, 23rem);
+  margin-block-start: 0.65rem;
+}
+.keyboard-white { fill: var(--piano-white); stroke: var(--piano-stroke); }
+.keyboard-black { fill: #24272d; stroke: #24272d; }
+.keyboard-highlight { fill: var(--pitch-start); stroke: var(--pitch-start-ink); }
+.keyboard-highlight-black { fill: #75ace6; stroke: #315f91; }
+.keyboard-label {
+  fill: #102f4d;
+  font-size: 10px;
+  text-anchor: middle;
+  font-weight: 700;
+}
+
+.keyboard-intervals { margin-block-start: 2.5rem; }
+.keyboard-intervals h2 { font-family: var(--title-font); font-size: 1.375rem; }
+.keyboard-intervals > p, .keyboard-degree li span { color: var(--muted); }
+.keyboard-degree { margin-block-start: 1.5rem; }
+.keyboard-degree h3 { margin: 0 0 0.45rem; font-size: 1rem; }
+.keyboard-degree ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.keyboard-degree li {
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  border-radius: 0.4rem;
+  padding: 0.5rem 0.6rem;
+}
+.keyboard-degree li span { display: block; font-size: 0.875rem; }
+.keyboard-degree svg { display: block; width: 100%; margin-block-start: 0.45rem; }
+.keyboard-end { fill: var(--pitch-end); stroke: var(--pitch-end-ink); }
+.keyboard-start-marker { fill: var(--pitch-start-ink); }
+.keyboard-end-marker { fill: var(--pitch-end-ink); }
+.keyboard-playing { fill: #ffac55; stroke: #925525; }
+
+.programmatic-score {
+  margin-block: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  background: var(--sheet);
+}
+.score-toolbar {
+  display: grid;
+  gap: 0.45rem;
+  padding: 0.75rem 0.85rem 0.85rem;
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--sheet) 85%, var(--accent));
+  border-radius: 0.7rem 0.7rem 0 0;
+}
+.score-toolbar h3 { margin: 0; font-size: 1rem; }
+.score-choices {
+  display: grid;
+  grid-template-columns: minmax(4.1rem, auto) minmax(0, 1fr);
+  gap: 0.45rem 0.75rem;
+  width: fit-content;
+  max-width: 100%;
+}
+.score-choices fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+.score-choices output { align-self: end; padding-block: 0.55rem; color: var(--muted); font-size: 0.875rem; }
+.score-key-summary { color: var(--muted); font-size: 0.875rem; }
+.score-choices legend { padding: 0 0 0.2rem; color: var(--muted); font-size: 0.8rem; font-weight: 650; }
+.score-choices.seven-tone-choices { grid-template-columns: 1fr; }
+.score-directions { grid-column: 1 / -1; }
+.score-tonic { position: relative; }
+.score-tonic::after {
+  content: "";
+  position: absolute;
+  inset: 0 0.7rem 0 auto;
+  margin-block: auto;
+  width: 0.4rem;
+  height: 0.4rem;
+  border: solid currentColor;
+  border-width: 0 1.5px 1.5px 0;
+  transform: translateY(-2px) rotate(45deg);
+  pointer-events: none;
+}
+.score-choices select {
+  appearance: none;
+  width: 100%;
+  min-height: 46px;
+  padding-inline: 0.65rem 1.45rem;
+  border: 1px solid var(--control-line);
+  border-radius: 0.55rem;
+  background: var(--control-surface);
+  color: var(--ink);
+  cursor: pointer;
+  font: 600 0.925rem system-ui, sans-serif;
+}
+.score-choices select:hover { background: var(--control-hover); }
+.score-segments {
+  display: flex;
+  padding: 1px;
+  border-radius: 0.55rem;
+  background: var(--sheet);
+  box-shadow: inset 0 0 0 1px var(--control-line);
+}
+.score-segments label { position: relative; flex: 1 0 auto; cursor: pointer; }
+.score-segments input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.score-segments span {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25em;
+  padding-inline: clamp(0.4rem, 2vw, 0.8rem);
+  border-radius: 0.48rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 650;
+  white-space: nowrap;
+}
+.score-segments b { font-family: system-ui, sans-serif; }
+.score-segments label:hover span { background: var(--control-hover); }
+.score-segments input:checked + span { background: var(--accent); color: var(--sheet); }
+.score-choices select:focus-visible, .score-segments input:focus-visible + span {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 38rem) {
+  .score-choices { grid-template-columns: auto auto auto; }
+  .score-choices.seven-tone-choices { grid-template-columns: auto auto auto; }
+  .score-directions { grid-column: auto; }
+}
+.programmatic-score .score-example { margin: 0; border: 0; background: transparent; }
+.programmatic-score .keyboard-example {
+  margin: 0;
+  padding: 0.55rem 0.75rem 0.75rem;
+  border-top: 1px solid var(--line);
+}
+.programmatic-score .keyboard-example figcaption { font-size: 0.875rem; }
+.programmatic-score .keyboard-example svg { width: min(100%, 25rem); margin-block-start: 0.35rem; }
+
+.interval-comparison { max-width: 40rem; margin-block: 1.25rem; }
+.interval-comparison figcaption { font-weight: 700; }
+.interval-comparison .keyboard-degree { margin-block-start: 0.5rem; }
+.interval-comparison ul, .interval-comparison .keyboard-degree ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.interval-comparison .notation-keyboard svg {
+  max-width: 100%;
+  margin-block: 0.35rem 0.1rem;
+}
+.interval-reference { margin-block-start: 0; }
+
+@media (min-width: 48rem) {
+  .keyboard-degree ul { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@font-face {
+  font-family: "Lesson Music Symbols";
+  src: url("/node_modules/@coderline/alphatab/dist/font/Bravura.woff2") format("woff2");
+}
+
+.lesson-aside {
+  max-width: 40rem;
+  margin-block: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  padding-inline: 0.85rem;
+  background: var(--sheet);
+}
+
+.lesson-aside summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 44px;
+  padding-block: 0.4rem;
+  color: var(--ink);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lesson-aside summary::-webkit-details-marker { display: none; }
+.lesson-aside summary::after {
+  flex: 0 0 auto;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  color: var(--muted);
+  transform: translateY(-2px) rotate(45deg);
+  content: "";
+}
+.lesson-aside summary:hover { color: var(--accent); }
+.lesson-aside[open] summary::after { transform: translateY(2px) rotate(225deg); }
+.lesson-aside[open] summary { border-block-end: 1px solid var(--line); }
+.lesson-aside summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.lesson-aside-content { padding-block: 0.7rem; color: var(--muted); }
+.lesson-aside-content p + p { margin-block-start: 0.65rem; }
+.lesson-aside-content ul { margin: 0; padding-inline-start: 1.2em; }
+.lesson-aside-content li + li { margin-block-start: 0.3rem; }
+.lesson-callout {
+  max-width: 40rem;
+  margin-block: 1rem;
+  padding: 0.75rem 1rem;
+  border-inline-start: 3px solid var(--accent);
+  border-radius: 0 0.4rem 0.4rem 0;
+  background: var(--tint);
+}
+
+.lesson-callout h3 { margin: 0; font-size: 1rem; color: var(--accent); }
+.lesson-callout p { margin-block-start: 0.15rem; }
+
+.inline-staff {
+  display: inline-block;
+  width: var(--inline-notation-width, 4em);
+  height: auto;
+  margin-inline: 0.2em;
+  vertical-align: middle;
+  color: var(--ink);
+  fill: currentColor;
+  font: inherit;
+}
+
+.inline-staff path { fill: none; stroke: currentColor; stroke-width: 1.1; }
+.inline-staff .inline-staff-lines { stroke-width: 0.65; }
+.inline-staff text { font: 20px "Lesson Music Symbols"; }
+.inline-staff .inline-staff-count { font: 700 9px system-ui, sans-serif; }
+.inline-staff-wide { --inline-notation-width: 5.4em; }
+.inline-staff.scale-overlap { display: block; width: min(100%, 39rem); margin: 0; }
+.inline-staff.sized-staff {
+  width: min(100%, calc(var(--staff-units) * 0.071875rem), calc(var(--staff-units) / 451 * 100%));
+}
+.scale-overlap :is(.scale-overlap-clef, .scale-overlap-notes text) { font-size: 32px; }
+.scale-overlap .scale-overlap-label { font: 600 16px system-ui, sans-serif; }
+.chromatic-staff .chromatic-staff-altered { fill: var(--accent); }
+
+.music-demo {
+  max-width: 38rem;
+  margin-block: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  background: var(--sheet);
+}
+.music-demo-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem 0.9rem;
+  padding: 0.7rem 0.85rem;
+  border-bottom: 1px solid var(--line);
+}
+.music-demo-toolbar :is(h3, h4) { margin: 0; }
+.music-demo-toolbar label { display: flex; align-items: center; gap: 0.45rem; font-size: 0.9rem; }
+.ornament-controls { display: flex; flex-wrap: wrap; gap: 0.4rem 0.7rem; margin: 0; }
+.music-demo :is(select, .route-actions button) {
+  min-height: 44px;
+  padding-inline: 0.7rem;
+  border: 1px solid var(--control-line);
+  border-radius: 0.5rem;
+  background: var(--control-surface);
+  color: var(--ink);
+  font: inherit;
+}
+.music-demo :is(select, .route-actions button):enabled:hover { background: var(--control-hover); }
+.music-demo .route-actions [data-route-next]:enabled { background: var(--accent); color: var(--sheet); border-color: var(--accent); }
+.music-demo .route-actions [data-route-next]:enabled:hover { background: color-mix(in srgb, var(--accent) 88%, var(--ink)); }
+@media (prefers-reduced-motion: no-preference) {
+  .route-actions button, .score-playback { transition: transform 150ms ease; }
+  :is(.route-actions button, .score-playback):enabled:active { transform: scale(0.96); }
+}
+.music-demo :is(button, select):focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ornament-compare-layout { display: grid; gap: 0.8rem; padding: 0.75rem 0.85rem; }
+.ornament-compare-layout h4 { margin: 0 0 0.35rem; font-size: 0.93rem; }
+.ornament-source { width: 8rem; margin-inline: 0; }
+.ornament-source .ornament-grace { font-size: 14px; }
+.music-demo-cue { display: block; margin: 0.15rem 0.85rem 0.55rem; color: var(--muted); }
+.music-demo .score-example { margin: 0; border: 0; border-top: 1px solid var(--line); border-radius: 0; }
+.route-staff { display: block; width: calc(100% - 1.7rem); min-width: var(--staff-min-width); margin: 0.5rem 0.85rem; }
+.route-staff .route-bar-highlight { fill: transparent; }
+.route-staff g.current .route-bar-highlight { fill: color-mix(in srgb, var(--accent) 24%, var(--sheet)); }
+.route-staff .route-symbol { font-size: 24px; }
+.route-staff .route-bar-name { font: 700 15px system-ui, sans-serif; paint-order: stroke; stroke: var(--sheet); stroke-width: 2.5px; }
+.route-staff .route-label { font: 600 10px system-ui, sans-serif; }
+.route-sequence, .route-actions { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.5rem 0.85rem 0.8rem; padding: 0; list-style: none; }
+.route-sequence li { min-width: 1.9rem; padding-inline: 0.25rem; border: 1px solid var(--line); border-radius: 0.3rem; text-align: center; }
+.route-sequence li[aria-current] { background: var(--accent); color: var(--sheet); }
+.route-actions button:enabled { cursor: pointer; }
+.route-actions button:disabled { opacity: 0.55; }
+.classification-tree { margin-block: 1.25rem; }
+.classification-tree ul { margin: 0; padding: 0; list-style: none; }
+.classification-tree figcaption,
+.classification-branches > li > strong {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 0.4rem;
+  background: var(--sheet);
+  color: var(--ink);
+  font-weight: 700;
+}
+.classification-tree figcaption { background: color-mix(in srgb, var(--sheet) 88%, var(--accent)); }
+.classification-tree .classification-branches,
+.classification-branches > li > ul {
+  margin-inline-start: 0.65rem;
+  padding-inline-start: 0.9rem;
+  border-inline-start: 1px solid var(--line);
+}
+.classification-branches li { position: relative; padding-block-start: 0.55rem; }
+.classification-branches li::before {
+  position: absolute;
+  inset-inline-start: -0.9rem;
+  inset-block-start: 1.45rem;
+  width: 0.9rem;
+  border-block-start: 1px solid var(--line);
+  content: "";
+}
+.classification-branches > li > ul > li strong { display: block; font-size: 0.9rem; }
+.classification-branches > li > ul > li span { display: block; color: var(--muted); font-size: 0.875rem; }
+
+@media (min-width: 42rem) {
+  .classification-tree { position: relative; text-align: center; }
+  .classification-tree .classification-branches {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    border: 0;
+  }
+  .classification-branches::before {
+    position: absolute;
+    top: 2.3rem;
+    left: 50%;
+    height: 0.85rem;
+    border-inline-start: 1px solid var(--line);
+    content: "";
+  }
+  .classification-branches > li { padding: 0; text-align: start; justify-self: center; width: max-content; max-width: calc(100% - 1.5rem); }
+  .classification-branches > li::before {
+    inset: -1rem auto auto 50%;
+    width: 0;
+    height: 1rem;
+    border: 0;
+    border-inline-start: 1px solid var(--line);
+  }
+  .classification-branches::after {
+    position: absolute;
+    top: 3.15rem;
+    inset-inline: 25%;
+    border-block-start: 1px solid var(--line);
+    content: "";
+  }
+  .classification-branches > li > strong { position: relative; display: block; width: max-content; margin-inline: auto; }
+  .classification-branches > li > strong::after {
+    position: absolute;
+    inset: 100% auto auto 50%;
+    height: 0.4rem;
+    border-inline-start: 1px solid var(--line);
+    content: "";
+  }
+  .classification-branches > li > ul { position: relative; margin-block-start: 0.4rem; }
+  .classification-branches > li > ul::before {
+    position: absolute;
+    inset: 0 calc(50% + 0.325rem) auto 0;
+    border-block-start: 1px solid var(--line);
+    content: "";
+  }
+}
+.music-term { font-family: "Times New Roman", Times, serif; font-style: italic; font-weight: 400; }
+.tempo-range { font-variant-numeric: tabular-nums; }
+.dynamic-mark {
+  display: inline-block;
+  vertical-align: 0.12em;
+  font: 1.25em/1 "Lesson Music Symbols";
+  color: var(--ink);
+}
+.tuning-steps { display: flex; flex-wrap: wrap; gap: 0.25rem 0.55rem; margin: 0 0.65rem 0.35rem; padding: 0; list-style: none; }
+.tuning-steps li { padding: 0.15rem 0.5rem; border: 1px solid var(--line); border-radius: 0.35rem; font-size: 0.875rem; }
+.tuning-steps .current { background: var(--accent); color: var(--sheet); }

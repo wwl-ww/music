@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第十章 多声部综合织体写作｜复调音乐 · 上篇</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./counterpoint-learning.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./counterpoint.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">复调音乐 · 上篇</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第十章 多声部综合织体写作</h1>
+      <p class="intro">现在把开篇的题头写成一个能出现多次的段落。两个声部先后呈示 G–A–B，第三声部提供对位。后续版本保留进入时差，分别改变声部位置和旋律轮廓。</p>
+      <section aria-labelledby="imitation-and-free-line">
+        <h2 id="imitation-and-free-line">模仿与自由声部</h2>
+        <p>高声部和中声部先后唱同一个 G–A–B 题头。低声部先保持 B，随后在高声部的长音处补入短音。低声这条按独立的旋律和节奏进行的线叫<strong>自由声部</strong>。将它移到上方后，可以用它自己的长音和短音辨认它，题头的入口仍按开始的时刻来找。</p>
+        <div class="music-demo" id="combined-texture" data-counterpoint-score>
+        <div class="music-demo-toolbar">
+          <h3>模仿声部与自由声部的配置</h3>
+          <label>写法 <select><option value="original">原位模仿</option><option value="swap">转位模仿</option><option value="invert">倒影与转位</option></select></label>
+        </div>
+        <output class="music-demo-cue"></output>
+        <figure aria-label="模仿声部与自由声部的配置"></figure>
+      </div>
+        <p>模仿声部先后呈示同一材料。自由声部可以补充和声，也可以承担更活跃的节奏，其活动不应掩盖题头的进入。</p>
+        <details class="lesson-aside">
+          <summary>自由声部的位置与作用</summary>
+          <div class="lesson-aside-content">
+        <table class="lesson-table lesson-table-wide">
+          <thead><tr><th scope="col">自由声部的位置</th><th scope="col">常见作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">下方</th><td>用较长的线或独立的低音动机同上方应答对比，也能支撑和声走向。</td></tr>
+            <tr><th scope="row">中间</th><td>填补高、低部入口间的节奏与和声空隙，保留两端的听觉呼应。</td></tr>
+            <tr><th scope="row">上方</th><td>以较均匀的音阶或装饰线突出下方模仿的节奏轮廓。</td></tr>
+            <tr><th scope="row">前后换位</th><td>原在高部的自由线可移到低部，模仿组调整音区，材料的身份继续由动机与进入次序决定。</td></tr>
+          </tbody>
+        </table>
+          </div>
+        </details>
+      </section>
+      <section aria-labelledby="imitation-and-exchange">
+        <h2 id="imitation-and-exchange">模仿与复对位</h2>
+        <p>三条线都可以参加模仿。下面先让题头从高声部依次传到低声部，再把高、低两条线整体换位。谱上的起句和两次应句按<strong>时间</strong>命名，换位后名字仍跟着原来的那条旋律。</p>
+        <div class="music-demo" id="triple-imitation-order" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h3>三部模仿的原位与换位</h3>
+            <label>入口位置
+              <select>
+                <option value="original">高 → 中 → 低</option>
+                <option value="reordered">低 → 中 → 高</option>
+              </select>
+            </label>
+          </div>
+          <figure aria-label="时差不变、入口由高到低或由低到高的三部模仿"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <p>第三小节第一拍原位的最低音是 C，上方两个声部是 E。换位后 E 在最下方，高处变成 C。第 3 章的检查法仍适用。低音改变了，重拍和句尾的纵向音程就要重新计算。</p>
+        <h3>三部模仿加自由声部的整体换位</h3>
+        <p>把自由声部加在三部模仿之上，得到四条线。换位时可以把自由声部移到最下方，原来的三条模仿线依次占据它上面的三个位置。谱上的起句和两次应句仍相隔一小节，原来的自由旋律也保留自己的节奏。</p>
+        <div class="music-demo" id="imitation-free-four" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h3>自由旋律由最高声部移到最低声部</h3>
+            <label>声部位置 <select><option value="original">自由声部在上</option><option value="swapped">自由声部在下</option></select></label>
+          </div>
+          <output class="music-demo-cue"></output>
+          <figure aria-label="四部原位和换位，标出三次模仿入口与自由声部"></figure>
+        </div>
+        <p>第 3 小节三条模仿线都在发声。原位首拍以第二应句的 C 为低音，换位后由自由声部的 E 作低音。保留入口的先后关系之外，还要按这个新的低音检查四部结合。</p>
+      </section>
+      <section aria-labelledby="inversion-and-exchange">
+        <h2 id="inversion-and-exchange">倒影与复对位</h2>
+        <p>倒影与复对位也能用于全部声部都模仿、或各部彼此对比的组合。写原位时就要选定倒影轴和将来交换高低的声部。若两条线翻过同一条音高轴，它们原有的高低关系会翻转，再把整条线移到合适的音区，逐拍检查新低音上方的音程。</p>
+        <p>“倒影与转位”沿用转位后的声部位置。两处 G–A–B 以 A 为轴翻成 B–A–G，短短长的节奏和相隔一小节的入口都保留。第五章的模仿决定谁先唱题头，第三章的复对位决定它在哪个音区，第四章的倒影决定它往哪边走。</p>
+        <p>翻成倒影以后，最下面的第一个音从 G 变成 B，上面的自由声部也正好是 B。第一拍因此构成协和的八度。倒影后的其他时点也要按新音高逐一核对音程。</p>
+        <aside class="lesson-callout"><p>从一条线写到三条线，始终要能指出哪一段材料在继续，哪一条线在改变，几条线又在何处合拢。下篇的复调小曲、卡农小曲和赋格，会把这些局部关系组织成完整的曲子。</p></aside>
+      </section>
+    </main>
+  </body>
+</html>

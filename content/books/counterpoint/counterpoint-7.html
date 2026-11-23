@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第七章 模进｜复调音乐 · 上篇</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./counterpoint-learning.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./counterpoint.js"></script>
+    <script type="module" src="./counterpoint-writing.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">复调音乐 · 上篇</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第七章 模进</h1>
+      <p class="intro">模进在新的音高上重现同一旋律材料。本章从一组二声部谱例出发，比较两条不同旋律的共同移位、连续模仿中的移位，以及移位后交换声部位置。</p>
+      <section aria-labelledby="sequence-basics">
+        <h2 id="sequence-basics">模进的基本特点</h2>
+        <h3>旋律、和声与复调模进</h3>
+        <p>第一次呈现材料叫<strong>模进原型</strong>，移到新高度的版本叫<strong>模进音组</strong>。下面三个版本的上方都保留同一组移位。区分写法时，要看下方有没有材料、它与上方是否一起移位，以及下方能否连成自己的旋律。</p>
+        <div class="music-demo counterpoint-steps" id="sequence-textures" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h3>同一上声部的三种模进织体</h3>
+            <fieldset class="counterpoint-choices" aria-label="同时移位的材料">
+              <label><input type="radio" name="sequence-textures-option" value="melodic" checked><span>只有旋律</span></label>
+              <label><input type="radio" name="sequence-textures-option" value="harmonic"><span>旋律与和弦</span></label>
+              <label><input type="radio" name="sequence-textures-option" value="polyphonic"><span>两条旋律</span></label>
+            </fieldset>
+          </div>
+          <figure aria-label="同一上声部的三种模进织体"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <h3>方向、步伐与调性</h3>
+        <p>上声部第一小节的开头是 E–F–G，第二小节变成 F–G–A，第三小节到了 G–A–B。每次都用原来的节奏，而且每个音都往 C 大调音阶上挪一级。这样让同一个短句在新的高度再次出现，就叫<strong>模进</strong>。这里每次往上走一级，就是上行二度。</p>
+        <div class="music-demo counterpoint-steps" id="sequence" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h3>二声部模进的写法对照</h3>
+            <div class="counterpoint-score-controls">
+              <label>声部结合 <select><option value="contrast">对比模进</option><option value="canonic">卡农模进</option><option value="invertible">复对位模进</option></select></label>
+              <label>调性移动 <select><option value="tonal">调内</option><option value="modulating">转调</option></select></label>
+            </div>
+          </div>
+          <output class="music-demo-cue"></output>
+          <figure aria-label="二声部模进的写法对照"></figure>
+        </div>
+        <p>声部结合要看两条线如何配合。它们可以各唱自己的旋律，先后模仿同一条旋律，也可以在移位时交换高低。调性移动要看每组是否确立新的主音。这两个条件可以组合。谱中的复对位版用两条不同旋律来示范换位，卡农模进也可以加入换位。</p>
+        <p>以对比模进为例，调内版的两次移位 E→F、F→G 分别是半音和全音，仍用 C 大调音阶。转调版的三组分别由 B、C♯、D♯ 引向 C、D、E，低音配合各组的新主音收束。</p>
+      </section>
+      <section aria-labelledby="contrasting-sequence">
+        <h2 id="contrasting-sequence">对比模进</h2>
+        <p>记录模进可以把三个问题分开。方向是向上还是向下，步伐是这两组起点相隔几度，调性是下一组是否建立了新中心。整组严格移位会保留原来的半音间隔。是否已经转调，还要看下一组的支点和和声终止。</p>
+        <p>原型短，听众容易认出下一组。较长的原型通常只移位一两次，短动机可多推几次。方向和步伐也有作用。上行通常能累积紧张，下行通常能舒缓，实际还要看节奏和力度。</p>
+        <p>“调内对比模进”的第一小节，上方用两个八分音符开头，低声部先在 C 上保持一拍。两条线的节奏不同，但第一拍的低音 C 和高音 E 刚好配成三度。</p>
+        <table class="lesson-table lesson-table-wide">
+          <caption>对比模进的首拍音程</caption>
+          <thead><tr><th scope="col">小节</th><th scope="col">上方开头</th><th scope="col">下方开头</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">第 1 小节</th><td>E</td><td>C</td></tr>
+            <tr><th scope="row">第 2 小节</th><td>F</td><td>D</td></tr>
+            <tr><th scope="row">第 3 小节</th><td>G</td><td>E</td></tr>
+          </tbody>
+        </table>
+        <p>第二小节沿用第一小节的节奏，两个声部都上移一级。如果仅把 E 升到 F，低音仍为 C，第一拍会由三度变为四度。低音一同从 C 移到 D，第一拍仍构成三度。两条不同的旋律以同一步伐移位，叫<strong>对比模进</strong>。</p>
+        <details class="lesson-aside">
+          <summary>单声部模进与自由对位</summary>
+          <div class="lesson-aside-content"><p>也可以保留上方逐次升高的短句，让下方接着唱一条更长的曲调。这时下方每次要配的上方音都变了，不能把第一小节的配法原样重抄。</p></div>
+        </details>
+      </section>
+      <section aria-labelledby="canonic-sequence">
+        <h2 id="canonic-sequence">卡农模进</h2>
+        <p>第一小节的前两拍，上方唱 G–A–B。等上方唱完这三个音、停在长 D 上，下方才唱刚才的 G–A–B，音区低一个八度。这里的应句相隔两拍，是卡农式的模仿。</p>
+        <p>第二小节开头，上方按原来的节奏再唱一次，不过从低一级的 F 起，变成 F–G–A。下方也在两拍之后唱 F–G–A。上声部的题头每小节下移一级，应句仍比起句晚两拍。这就是<strong>卡农模进</strong>。</p>
+        <table class="lesson-table lesson-table-wide">
+          <caption>卡农模进的应句时差与移位</caption>
+          <thead><tr><th scope="col">小节</th><th scope="col">前两拍</th><th scope="col">后两拍</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">第 1 小节</th><td>上方 G–A–B<br>下方休止</td><td>上方长 D<br>下方 G–A–B</td></tr>
+            <tr><th scope="row">第 2 小节</th><td>上方 F–G–A<br>下方这时才唱长 D</td><td>上方长 C<br>下方 F–G–A</td></tr>
+          </tbody>
+        </table>
+        <p>长音 D 要在两个不同的时点形成合理的对位。它第一次在上面响时，下面正唱 G–A–B，开始的 G 和结束的 B 都能跟 D 配合。到了下一小节，同一个 D 轮到下方唱，D 又要与上声部的 F–G–A 形成对位。配好眼前的两条线，还要留出下一小节能照唱的位置。</p>
+        <h3>用辅助谱表写原型的尾句</h3>
+        <p>下面改用低声部先唱、上声部晚一小节的卡农。写原型的尾句时有两个接缝。尾句第一次在低声部唱，要配当前正在上方响的应句。它被抄到上声部后，又要配低声部下一组的题头。</p>
+        <figure class="notation-sample" data-sequence-draft aria-label="三行草稿谱，上方是当前应句，中间是正在写的尾句，下方是下一组题头的参照位置"></figure>
+        <p>辅助谱表把下一组的 D 题头先摆到草稿上，与正在写的 A–E 对齐。成谱第 2 小节起拍是低音 A 配上方 C，第 3 小节起拍是低音 D 配晚一小节、提高八度的 A。同一条尾句因此通过了两个接缝。若改用十一度模仿，要先按新音程折算下一组题头的参照位置。</p>
+        <div class="music-demo" id="canonic-seam-map">
+          <div class="music-demo-toolbar"><h4>同一尾句的两次结合</h4></div>
+          <div class="timeline-frame" data-voice-timeline></div>
+          <output class="music-demo-cue" data-voice-description></output>
+        </div>
+        <div class="music-demo" id="canonic-draft-result" data-counterpoint-score>
+          <div class="music-demo-toolbar"><h3>尾句在两组题头之间的交接</h3></div>
+          <output class="music-demo-cue"></output>
+          <figure aria-label="低声部尾句与当前应句、上声部尾句与下一组题头"></figure>
+        </div>
+        <h3 id="bitonal-canonic-sequence">双调叠置的卡农模进</h3>
+        <p>这个谱例的起句每组占两小节，应句晚一小节，调式中心低纯五度。两条线的中心都以下行大二度进入下一组。<strong>模仿距离</strong>比较同一组的起句和应句，<strong>模进步伐</strong>比较同一声部相邻两组的起点。</p>
+        <table class="lesson-table">
+          <caption>两条声部各自的调式中心</caption>
+          <thead><tr><th scope="col">声部</th><th scope="col">原型</th><th scope="col">下一组</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">上方起句</th><td>第 1–2 小节 · a 小调<br>A–C 勾出小三度，末尾 A–G♯ 把旋律指回 A。</td><td>第 3–4 小节 · g 小调<br>G–B♭ 勾出小三度，末尾 G–F♯ 指向 G。</td></tr>
+            <tr><th scope="row">下方应句</th><td>第 2–3 小节 · d 小调<br>D–F 勾出小三度，末尾 D–C♯ 指向 D。</td><td>第 4–5 小节 · c 小调<br>C–E♭ 勾出小三度，末尾 C–B 指向 C。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="bitonal-sequence-score" data-counterpoint-score>
+          <div class="music-demo-toolbar"><h4>起句与应句各自下行大二度</h4></div>
+          <output class="music-demo-cue"></output>
+          <figure aria-label="上方从 a 小调到 g 小调，下方晚一小节从 d 小调到 c 小调"></figure>
+        </div>
+        <p>横着读，上方是 a→g，下方是 d→c。竖着读，第 2 小节是上方 a 与下方 d 同响，第 3 小节上方已换到 g，下方还在 d。第 4 小节才是 g 与 c 同响。判断中心时，比较表里的题头、重拍和导音。第一组中，上方用 B♭ 经过到 A，下方则用 E 经过到 D。</p>
+      </section>
+      <section aria-labelledby="invertible-sequence">
+        <h2 id="invertible-sequence">复对位模进</h2>
+        <p>“调内复对位模进”的前两小节，高声部节奏较密，低声部使用较长时值。第三小节，两部按原来的步伐上移一级。此时原高声部从 G 开始，原低声部从 E 开始。随后两部交换高低位置。</p>
+        <table class="lesson-table lesson-table-wide">
+          <caption>第三小节的声部转位</caption>
+          <thead><tr><th scope="col">旋律</th><th scope="col">移高一级后的开头</th><th scope="col">交换后的位置</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">原高声部</th><td>G–A–B</td><td>低声部</td></tr>
+            <tr><th scope="row">原低声部</th><td>E–G–E</td><td>高声部</td></tr>
+          </tbody>
+        </table>
+        <p>模进保留两部的节奏和走向，转位改变两部的相对位置。第三小节由低声部奏出原先位于高处的短音题头。<strong>同一组旋律既做模进，又做声部转位</strong>，这就是复对位模进。</p>
+        <p>第三小节换完，第一拍是低音 G、高音 E，这一拍仍然协和。若原来的一对音是 C 在下面、G 在上面，交换后就会出现低音 G 上方的四度 C。它若刚好落在重拍上，可以把 C 接到下面的 B，让这次交换得到合理的解决。</p>
+        <details class="lesson-aside">
+          <summary>原位与转位的整体模进</summary>
+          <div class="lesson-aside-content"><p>也可以先把原位与转位写成相邻的两个小节，再把这两小节作为一组整体移位。每一组内部仍保留一次声部转位。</p></div>
+        </details>
+      </section>
+    </main>
+  </body>
+</html>

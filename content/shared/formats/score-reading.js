@@ -54,6 +54,7 @@ function chordAt(sounding) {
       name: `${root.name} ${name}`,
       inversion: inversions[inversion],
       bass: `最低音 ${bass} 是${chordMembers[inversion]}`,
+      bassMidi: pitches[0].midi,
       members: members.map(member => member.name)
     };
   }
@@ -91,7 +92,7 @@ function readingSteps(display, material) {
     const beat = written[0] ?? allBeats.find(part => part.absolutePlaybackStart === tick);
     const sounding = parts.map(part => part.findLast(noteBeat => noteBeat.absolutePlaybackStart <= tick
       && tick < noteBeat.absolutePlaybackStart + noteBeat.playbackDuration)).filter(Boolean);
-    return { tick, beat, written, chord: chordAt(sounding) };
+    return { tick, beat, written, chord: chordAt(sounding), rest: sounding.every(part => part.isRest) };
   });
 }
 
@@ -139,9 +140,10 @@ export function mountScoreReading(figure, notation, api, stopPlayback) {
   function renderMarker() {
     const step = steps[current];
     const bounds = panel.hidden || !step ? null : api.boundsLookup?.findBeat(step.beat);
-    marker.hidden = !bounds;
+    // The renderer can still hold bounds from the previous version of this score.
+    marker.hidden = !bounds || bounds.beat !== step.beat;
     labels.replaceChildren();
-    if (!bounds) return;
+    if (marker.hidden) return;
     const bar = bounds.barBounds.masterBarBounds.lineAlignedBounds;
     marker.style.left = `${bounds.onNotesX}px`;
     marker.style.top = `${bar.y - 4}px`;
@@ -149,18 +151,20 @@ export function mountScoreReading(figure, notation, api, stopPlayback) {
 
     const heads = step.written.flatMap(beat => (api.boundsLookup.findBeat(beat)?.notes ?? []).map(note => ({
       name: noteName(note.note),
+      midi: note.note.realValue,
       box: note.noteHeadBounds,
       right: beat.voice.index === 1
     }))).sort((a, b) => a.box.y - b.box.y);
     let leftY = -Infinity;
     let rightY = -Infinity;
-    for (const { name, box, right } of heads) {
+    for (const { name, midi, box, right } of heads) {
       const y = box.y + box.h / 2;
       const onRight = right ? y - rightY >= 14 || y - leftY < 14 : y - leftY < 14 && y - rightY >= 14;
       const label = document.createElement('span');
       label.className = 'score-reading-label';
       label.textContent = name;
       label.dataset.side = onRight ? 'right' : 'left';
+      if (midi === step.chord?.bassMidi) label.dataset.bass = '';
       const leftGap = name.length > 1 ? 17 : 7;
       label.style.left = `${onRight ? box.x + box.w + 7 : box.x - leftGap}px`;
       label.style.top = `${Math.max(y, (onRight ? rightY : leftY) + 14)}px`;
@@ -176,7 +180,7 @@ export function mountScoreReading(figure, notation, api, stopPlayback) {
     next.disabled = !step || current === steps.length - 1;
     position.textContent = step ? `第 ${step.beat.voice.bar.index + 1} 小节 · ${current + 1}/${steps.length}` : '正在加载…';
     const chord = step?.chord;
-    chordName.textContent = chord?.name ?? (step ? '当前音组' : '');
+    chordName.textContent = chord?.name ?? (step ? (step.rest ? '休止' : '当前音组') : '');
     inversion.textContent = chord?.inversion ?? '';
     bass.textContent = chord?.bass ?? '';
     members.textContent = chord ? `三度排列 ${chord.members.join('–')}` : '';
@@ -214,6 +218,13 @@ export function mountScoreReading(figure, notation, api, stopPlayback) {
   toggle.addEventListener('click', () => openReader(panel.hidden));
   prev.addEventListener('click', () => move(-1));
   next.addEventListener('click', () => move(1));
+  api.beatMouseUp.on(beat => {
+    if (panel.hidden || following || !beat) return;
+    const selected = steps.findIndex(step => step.tick === beat.absolutePlaybackStart);
+    if (selected < 0 || selected === current) return;
+    current = selected;
+    renderStep();
+  });
   api.playerPositionChanged.on(followPlayback);
 
   return {

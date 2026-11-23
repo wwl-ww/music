@@ -100,13 +100,13 @@ function addOutline() {
 }
 
 async function addChapterNavigation() {
-  const chapter = location.pathname.match(/\/(chapter|harmony)-(\d+)\.html$/);
+  const chapter = location.pathname.match(/\/(chapter|harmony|counterpoint)-(\d+)\.html$/);
   if (!chapter) return;
   const [, series, chapterNumber] = chapter;
   const number = Number(chapterNumber);
   const lowerVolume = location.pathname.includes('/harmony-lower/');
   const first = lowerVolume ? 24 : 1;
-  const last = lowerVolume ? 44 : series === 'harmony' ? 23 : 16;
+  const last = lowerVolume ? 44 : { chapter: 16, harmony: 23, counterpoint: 19 }[series];
   const book = './index.html';
   const titles = await chapterTitles(book);
   const previousPage = `./${series}-${number - 1}.html`;

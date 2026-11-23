@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第三章 二声部复对位｜复调音乐 · 上篇</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./counterpoint-learning.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./counterpoint.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">复调音乐 · 上篇</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第三章 二声部复对位</h1>
+      <p class="intro">一段二声部音乐再次出现时，原先在下面的旋律可以移到上面。交换高低后，两条线合起来是否仍然顺畅，决定了这段材料能不能这样使用。</p>
+      <section aria-labelledby="double-concept">
+        <h2 id="double-concept">复对位的基本概念</h2>
+        <ul>
+          <li><strong>单对位</strong>只要求 A 在上、B 在下时写得通。至于 B 在上、A 在下，写这段音乐时可以不作安排。</li>
+          <li><strong>复对位</strong>要让 A 在上、B 在下成立，也要让 B 在上、A 在下成立。换位时整条旋律一起移高或移低，旋律内部的音程和节奏照旧。</li>
+        </ul>
+        <p>A 在上、B 在下的组合叫<strong>原位结合</strong>，交换后的组合叫<strong>转位结合</strong>。复对位移动的是整条声部，移动距离可以是八度、十二度或十度等。比较时取原位和换位的同一拍，都从实际的低音向上算。</p>
+        <div class="music-demo counterpoint-steps" id="octave-fourth" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h3>单对位与复对位的换位对照</h3>
+            <fieldset class="counterpoint-choices" aria-label="写法与声部位置">
+              <label><input type="radio" name="octave-fourth-option" value="original" checked><span>单对位 · 原位</span></label>
+              <label><input type="radio" name="octave-fourth-option" value="exchange"><span>单对位 · 试换位</span></label>
+              <label><input type="radio" name="octave-fourth-option" value="revised"><span>复对位 · 原位</span></label>
+              <label><input type="radio" name="octave-fourth-option" value="revisedExchange"><span>复对位 · 换位</span></label>
+            </fieldset>
+          </div>
+          <figure aria-label="单对位与复对位的换位对照"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <p>这里把 A 整条降八度，B 留在原高度。单对位版本的结尾原是 C–G 五度，试换后变成低音 G 上方的四度，并停在重拍。改写时只把 A 的末音 G 改成 E。原位以 C–E 三度结束，换位后以 E–C 六度结束，两个位置都能用。这个改写得到的就是<strong>八度复对位</strong>。</p>
+        <p>八度和十二度最常用。下谱中起音较密的是同一条线，它从原位的下方移到两种换位的上方。其他距离也可以使用，但往往有更多音程需要按不协和处理。</p>
+        <div class="music-demo counterpoint-steps" id="double-counterpoint" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h3>同一段对位的原位与两种换位</h3>
+            <fieldset class="counterpoint-choices" aria-label="交换高低声部">
+              <label><input type="radio" name="double-counterpoint-option" value="original" checked><span>原位</span></label>
+              <label><input type="radio" name="double-counterpoint-option" value="octave"><span>八度换位</span></label>
+              <label><input type="radio" name="double-counterpoint-option" value="twelfth"><span>十二度换位</span></label>
+            </fieldset>
+          </div>
+          <figure aria-label="同一段对位的原位与两种换位"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <p>试听中的 A 是原位的上声部，B 是原位的下声部。换位后选择同一个字母，可以继续听同一条旋律。</p>
+        <p>十二度换位里，上声部下降八度，下声部上升五度。两者合计 8＋5−1＝12，因为两个度数都把起点算了一次。第一个音程从三度变成十度。<strong>十二度是交换的距离，十度是交换后听到的音程。</strong></p>
+        <details class="lesson-aside">
+          <summary>复对位的度数计算</summary>
+          <div class="lesson-aside-content">
+            <p>相向移动时，两个移动度数相加减一。若同向移动，按两条旋律经过的音级步数之差，再加一。原、转位的音程度数之和等于复对位度数加一。</p>
+            <ul><li>8＋8−1＝15，属八度复对位。</li><li>8＋12−1＝19，属十二度复对位。</li><li>8＋10−1＝17，属十度复对位。</li></ul>
+          </div>
+        </details>
+      </section>
+      <section aria-labelledby="octave-invertible">
+        <h2 id="octave-invertible">八度复对位</h2>
+        <p>八度换位可以只移动一条线。例如 C 到上方 G 是五度，把 G 移到 C 下方后，新低音 G 到 C 就是四度。两个度数相加为九，因为两次计算都把共同的端点算进去了。原位三度同理会变成六度。</p>
+        <p>三度和六度换位后仍能放在重拍。五度会翻成低音上方的四度，若原位的五度占住重拍，换位置后就可能失去稳定。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">原位 ⇄ 转位</th><th scope="col">位置</th><th scope="col">文本谱</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">一度 ⇄ 八度</th><td>可用于开头或收束。</td><td><svg class="inline-staff" viewBox="0 0 72 43" role="img" aria-label="E4 E4 是一度，E4 E5 是八度">
+        <path class="inline-staff-lines" d="M1 6H71 M1 11H71 M1 16H71 M1 21H71 M1 26H71"/>
+        <text x="13" y="26">&#xE0A4;</text><text class="inline-staff-count" x="17" y="40" text-anchor="middle">1</text><text x="59" y="26">&#xE0A4;</text><text x="59" y="8.5">&#xE0A4;</text><text class="inline-staff-count" x="63" y="40" text-anchor="middle">8</text>
+      </svg></td></tr>
+            <tr><th scope="row">三度 ⇄ 六度</th><td>两边都可用于重拍。</td><td><svg class="inline-staff" viewBox="0 0 76 43" role="img" aria-label="E4 G4 是三度，G4 E5 是六度">
+        <path class="inline-staff-lines" d="M1 6H75 M1 11H75 M1 16H75 M1 21H75 M1 26H75"/>
+        <text x="13" y="26">&#xE0A4;</text><text x="13" y="21">&#xE0A4;</text><text class="inline-staff-count" x="17" y="40" text-anchor="middle">3</text><text x="63" y="21">&#xE0A4;</text><text x="63" y="8.5">&#xE0A4;</text><text class="inline-staff-count" x="67" y="40" text-anchor="middle">6</text>
+      </svg></td></tr>
+            <tr><th scope="row">四度 ⇄ 五度</th><td>宜安排在经过、辅助的位置。</td><td><svg class="inline-staff" viewBox="0 0 76 43" role="img" aria-label="C4 G4 是五度，G4 C5 是四度">
+        <path class="inline-staff-lines" d="M1 6H75 M1 11H75 M1 16H75 M1 21H75 M1 26H75"/>
+        <path d="M11 31h13"/><text x="13" y="31">&#xE0A4;</text><text x="13" y="21">&#xE0A4;</text><text class="inline-staff-count" x="17" y="40" text-anchor="middle">5</text><text x="63" y="21">&#xE0A4;</text><text x="63" y="13.5">&#xE0A4;</text><text class="inline-staff-count" x="67" y="40" text-anchor="middle">4</text>
+      </svg></td></tr>
+            <tr><th scope="row">二度 ⇄ 七度</th><td>两边都需要处理。</td><td><svg class="inline-staff" viewBox="0 0 76 43" role="img" aria-label="E4 F4 是二度，F4 E5 是七度">
+        <path class="inline-staff-lines" d="M1 6H75 M1 11H75 M1 16H75 M1 21H75 M1 26H75"/>
+        <text x="13" y="26">&#xE0A4;</text><text x="13" y="23.5">&#xE0A4;</text><text class="inline-staff-count" x="17" y="40" text-anchor="middle">2</text><text x="63" y="23.5">&#xE0A4;</text><text x="63" y="8.5">&#xE0A4;</text><text class="inline-staff-count" x="67" y="40" text-anchor="middle">7</text>
+      </svg></td></tr>
+          </tbody>
+        </table>
+        <p>八度、十五度、二十二度、二十九度都属于八度复对位。保持原调时，可以让上声部下移八度或下声部上移八度，也可以让两部各移八度，或让一部移十五度、另一部移八度。</p>
+        <p>相对距离也可由不同音程合成。上部下移五度、下部上移四度，5＋4−1＝8。七度和二度也可合成八度，7＋2−1＝8。移动整句后还要核对新的调性。八度复对位常让已经听过的材料换一个高低位置再次呈示。</p>
+      </section>
+      <section aria-labelledby="twelfth-invertible">
+        <h2 id="twelfth-invertible">十二度复对位</h2>
+        <p>若两个声部相对移动了十二度，两次音程的度数相加为十三。原位六度换位后是七度，原位四度换位后是九度。写作时先标出原位的重拍、长音和句尾，再把原位和换位逐拍对好，检查同一个支点在两个版本里是否都能成立。</p>
+        <p>原位的六度会变成七度，四度会变成九度。这两类音程宜放在能级进离开的弱位。重拍多用三度、五度和八度。</p>
+        <p>只把一部上下移十二度即可换位。也可以让上部下移八度、下部上移五度，或反过来让上部下移五度、下部上移八度。十九度、二十六度是十二度复对位的宽音区形式。这种换位常用于中部展开，原先的协和类型变化较多。</p>
+        <div class="music-demo counterpoint-steps" id="twelfth-sixth" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h3>弱位的六度与七度</h3>
+            <fieldset class="counterpoint-choices" aria-label="弱位音程换位">
+              <label><input type="radio" name="twelfth-sixth-option" value="original" checked><span>原位</span></label>
+              <label><input type="radio" name="twelfth-sixth-option" value="exchange"><span>十二度换位</span></label>
+            </fieldset>
+          </div>
+          <figure aria-label="弱位的六度与七度"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <details class="lesson-aside">
+          <summary>十二度换位的音程对应</summary>
+          <div class="lesson-aside-content">
+            <p>一度 ⇄ 十二度、三度 ⇄ 十度、五度 ⇄ 八度。二度 ⇄ 十一度、四度 ⇄ 九度、六度 ⇄ 七度。十九度、二十六度和三十三度是同类的宽音区形式。</p>
+          </div>
+        </details>
+      </section>
+      <section aria-labelledby="invertible-writing">
+        <h2 id="invertible-writing">写作示范</h2>
+        <p>指定旋律是有上下两句的 C 大调曲调。只准备八度复对位时，可以在主要位置用三度、六度，把四度和五度放在过渡处。若还准备作十二度换位，六度翻成七度，也要按过渡音程安排，主要位置便更倚重三度。</p>
+        <div class="music-demo counterpoint-steps" id="double-writing" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h3>八度方案与兼顾十二度的写法</h3>
+            <fieldset class="counterpoint-choices" aria-label="写作示范的换位方式">
+              <label><input type="radio" name="double-writing-option" value="octaveOnly" checked><span>八度方案 · C 大调</span></label>
+              <label><input type="radio" name="double-writing-option" value="octaveToF"><span>八度方案 · F 大调</span></label>
+              <label><input type="radio" name="double-writing-option" value="original"><span>兼顾两种换位的原位</span></label>
+              <label><input type="radio" name="double-writing-option" value="octave"><span>改写后 · 八度换位</span></label>
+              <label><input type="radio" name="double-writing-option" value="twelfth"><span>改写后 · 十二度换位</span></label>
+            </fieldset>
+          </div>
+          <figure aria-label="八度方案与兼顾十二度的写法"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <p>谱例节录原书各谱的开头两小节。八度方案也可以转到 F 大调，上部下移五度、下部上移十一度，合成十五度。兼顾两种换位的版本，作八度换位时保留 C 大调，作十二度换位时把指定旋律降五度，对位旋律跟随它改为 F 大调。</p>
+        <details class="lesson-aside"><summary>七类复对位的度数与使用限制</summary><div class="lesson-aside-content">
+          <p>表中列出基本距离和加宽八度后的同类距离。给定转位距离，原位与转位的音程度数相加等于距离加一。最后一列列出需要关注不协和处理的对应音程，两边都要检查节拍位置和前后连接。</p>
+          <table class="lesson-table lesson-table-wide">
+            <thead><tr><th scope="col">类型</th><th scope="col">相对移位度数</th><th scope="col">需检查的对应音程</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">八度</th><td>8、15、22、29</td><td>2↔7、4↔5</td></tr>
+              <tr><th scope="row">十二度</th><td>12、19、26、33</td><td>2↔11、4↔9、6↔7</td></tr>
+              <tr><th scope="row">十度</th><td>10、17、24、31</td><td>2↔9、4↔7</td></tr>
+              <tr><th scope="row">十一度</th><td>11、18、25、32</td><td>2↔10、3↔9、4↔8、5↔7</td></tr>
+              <tr><th scope="row">九度</th><td>9、16、23、30</td><td>1↔9、3↔7、4↔6</td></tr>
+              <tr><th scope="row">十三度</th><td>13、20、27、34</td><td>1↔13、2↔12、3↔11、4↔10、5↔9、7↔7</td></tr>
+              <tr><th scope="row">十四度</th><td>14、21、28、35</td><td>1↔14、2↔13、4↔11、6↔9</td></tr>
+            </tbody>
+          </table>
+          <p>十度换位尤其要检查原来的平行三度或六度。例如 C4–E4、D4–F4 两个三度，把低声部上移十度成为 E5、F5，原上部留在 E4、F4，两对音便成为平行八度。平行六度也可能翻成平行五度，可以从原谱改为反向或斜向来避免。</p>
+        </div></details>
+      </section>
+    </main>
+  </body>
+</html>

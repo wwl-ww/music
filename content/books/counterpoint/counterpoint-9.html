@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第九章 多声部模仿｜复调音乐 · 上篇</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./counterpoint-learning.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./counterpoint.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">复调音乐 · 上篇</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第九章 多声部模仿</h1>
+      <p class="intro">以前一个题头只从一条线交给另一条线。多声部可以连续模仿同一题头，也可以引入另一组模仿材料。声部越多，先确定每个入口带来的材料，越容易弄清它和哪一条线在呼应。</p>
+      <section aria-labelledby="entry-order">
+        <h2 id="entry-order">原形模仿</h2>
+        <p>把三次起音按时间排出来，可以分别比较两段时差和两段音程。下面固定相邻入口都晚一小节，单独改变后一条线从什么音开始。</p>
+        <div class="music-demo counterpoint-steps" id="multi-entry-distances" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h3>固定时差下的同距与异距进入</h3>
+            <fieldset class="counterpoint-choices" aria-label="相邻应句的距离">
+              <label><input type="radio" name="multi-entry-distances-option" value="same" checked><span>相邻都差八度</span></label>
+              <label><input type="radio" name="multi-entry-distances-option" value="mixed"><span>相邻距离不同</span></label>
+            </fieldset>
+          </div>
+          <figure aria-label="固定时差下的同距与异距进入"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <p>假设低声部第一小节从 C3 唱出一个题头，中声部第二小节从 C4 照唱，高声部第三小节从 C5 再唱。三处相隔八度，还是同一句。同一时刻在响的其他旋律，要看它们已经唱到了哪一步，不能都当作新的题头。</p>
+        <p>最早出现的一条叫起句，之后的两条依次叫第一应句、第二应句。如果顺序换成中声部先唱，接着高声部，最后低声部，名称也跟出现时间一起换。</p>
+        <table class="lesson-table lesson-table-wide">
+          <thead><tr><th scope="col">组织形式</th><th scope="col">进入距离示意</th><th scope="col">特征</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">相同的音程距离</th><td>起句 C3 → 第一应句 C4 → 第二应句 C5。</td><td>相邻入口均为上方八度。也可统一使用五度、三度等距离。</td></tr>
+            <tr><th scope="row">不同的音程距离</th><td>起句 C4 → 第一应句 C5 → 第二应句 G4。</td><td>第一应句比起句高八度，第二应句比第一应句低四度，比起句高五度。</td></tr>
+          </tbody>
+        </table>
+        <p>三个入口拉近时，下一声部可能在上一条的题头还没唱完时就进来了。这样的效果更紧密，但要检查两句在重叠部分构成的音程。若每次多隔一点时间，上一条线的开头就更容易被单独听清。</p>
+      </section>
+      <section aria-labelledby="multi-variation">
+        <h2 id="multi-variation">变形模仿</h2>
+        <p>每条应句都与同一个起句比较。旋律上行或下行属于音高方向，音值缩短或拉长属于节奏，两项可以分别改变。</p>
+        <div class="music-demo counterpoint-steps" id="multi-entry-transformations" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h3>两条应句采用相同或不同变形</h3>
+            <fieldset class="counterpoint-choices" aria-label="应句的变形方法">
+              <label><input type="radio" name="multi-entry-transformations-option" value="like" checked><span>两部都紧缩</span></label>
+              <label><input type="radio" name="multi-entry-transformations-option" value="different"><span>一部倒影、一部扩大</span></label>
+            </fieldset>
+          </div>
+          <figure aria-label="两条应句采用相同或不同变形"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <p>变形类型与入口时间是两项不同决定。多个应句可以依次进入，也可以像上例在同一位置开始。即使用同一种扩大手法，也可采用不同比例或局部自由调整。</p>
+        <p>设起句是 G–A–B，占两拍。第一应句照原来的顺序唱得更慢，变成四拍。第二应句仍用两拍，却唱 B–A–G。第一条靠相同的音序被认出来，第二条靠原有节奏和反向的轮廓被认出来。同一个题头的不同应答可以同时出现。</p>
+      </section>
+      <section aria-labelledby="double-imitation-structure">
+        <h2 id="double-imitation-structure">二重模仿与复卡农</h2>
+        <p>谱例使用两种节奏特征不同的题头。A 以八分音符开始，B 以二分音符开始。“对比在前”让两组起句同时呈示，随后由两个高声部应答。“模仿在前”先呈示 A。第二小节，高声部奏出 A′，低声部同时引入 B。B 的应句在第三小节出现。</p>
+        <p>谱中 A′ 跟随 A，B′ 跟随 B。两种不同旋律各被另一条线接过来，构成<strong>二重模仿</strong>。当起句唱出下一句时，应句继续追唱上一句，两对都保持自己的时差和音程，便形成<strong>复卡农</strong>。</p>
+        <details class="lesson-aside">
+          <summary>二重模仿的进入类型</summary>
+          <div class="lesson-aside-content">
+        <table class="lesson-table lesson-table-wide">
+          <thead><tr><th scope="col">进入组织</th><th scope="col">先出现的关系</th><th scope="col">随后加入的关系</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">对比在前</th><td>A 与 B 同时由两个声部建立对比。</td><td>其余两部进入 A′ 与 B′，起句声部可形成对句。</td></tr>
+            <tr><th scope="row">模仿在前</th><td>A 先出现，另一部以 A′ 应答。</td><td>B 与 B′ 依次加入，在已有的模仿上再形成另一组对比。</td></tr>
+          </tbody>
+        </table>
+          </div>
+        </details>
+        <p>谱上的 1、2、3 是接续的乐句。A₂ 刚开始时，A′₁ 仍在唱 A 的第一句。下一小节 A′₂ 才唱到第二句。B 组也有同样的接续关系。切换入口顺序只会改变 B 组何时加入，两组各自的应句都晚一小节。</p>
+        <div class="music-demo" id="double-imitation" data-counterpoint-score>
+        <div class="music-demo-toolbar">
+          <h3>两种入口次序的复卡农</h3>
+          <label>顺序 <select><option value="contrast">对比在前</option><option value="imitation">模仿在前</option></select></label>
+        </div>
+        <output class="music-demo-cue"></output>
+        <figure aria-label="两对应句逐小节连续跟进的复卡农"></figure>
+      </div>
+        <p>分听 A 与 A′ 时，可以跟住同一条旋律怎样晚一小节重现。切到 B 与 B′，四条线仍在谱上，只有 B 组发声。</p>
+        <p>A 可以在高八度有自己的回答，B 也可以在同度答另一遍。各组应句按所模仿的起句配对，音程距离可以各自设定。两对都可用原形，也可都作倒影，或一对用原形、另一对变形。比较时把两对的进入次序、距离和手法分别记下。</p>
+      </section>
+    </main>
+  </body>
+</html>

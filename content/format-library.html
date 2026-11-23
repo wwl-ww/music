@@ -45,6 +45,8 @@
         <a href="#sample-title">可播放谱</a>
         <a href="#static-samples">表格与静态谱</a>
         <a href="#keyboard-example">键盘图</a>
+        <a href="#analysis-samples">曲式与声部关系</a>
+        <a href="#comparison-samples">对照与写作</a>
         <a href="#control-samples">控件与状态</a>
       </nav>
       <div class="format-showcase">
@@ -207,6 +209,70 @@
         </aside>
         <p>蓝色圆点标起点 C4，橙色菱形标终点。两个音落在同一个键时，只标一个键。</p>
         <div class="keyboard-interval-list"></div>
+      </section>
+      <section class="course-sample" aria-labelledby="analysis-samples">
+        <h2 class="sample-title" id="analysis-samples">曲式与声部关系</h2>
+        <details class="lesson-aside">
+          <summary>格式的继承关系</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li><strong>共享时间轴</strong>沿用主题、控件和局部滚动样式。每个格子表示同样大小的时间单位。</li>
+              <li><strong>曲式分析谱</strong>组合时间轴与可播放谱，增加段落、小节范围和调性说明。</li>
+              <li><strong>声部关系图</strong>在时间轴上增加声部行与关系箭头。虚线框表示预先写在辅助谱表上的材料。</li>
+            </ul>
+          </div>
+        </details>
+        <div class="music-demo" id="library-form-analysis">
+          <div class="music-demo-toolbar">
+            <h3>曲式分析谱 · 三段式教学例</h3>
+            <button type="button" aria-pressed="true" data-analysis-whole>全曲</button>
+          </div>
+          <div class="timeline-frame" data-analysis-timeline></div>
+          <dl class="analysis-description" aria-live="polite">
+            <dt data-analysis-section>全曲</dt>
+            <dd data-analysis-description>A 呈示 → B 对比 → A′ 再现</dd>
+          </dl>
+          <p class="music-demo-cue analysis-status" data-analysis-status role="status"></p>
+          <figure data-analysis-score aria-label="带有三个段落的二声部五线谱"></figure>
+        </div>
+        <div class="music-demo" id="library-voice-relations">
+          <div class="music-demo-toolbar">
+            <h3>声部关系图 · 卡农模进</h3>
+          </div>
+          <div class="timeline-frame" data-voice-timeline></div>
+          <output class="music-demo-cue" data-voice-description>两组题头分别相隔两拍应答，第二组起句上移二度。</output>
+        </div>
+      </section>
+      <section class="course-sample" aria-labelledby="comparison-samples">
+        <h2 class="sample-title" id="comparison-samples">对照与写作</h2>
+        <div class="music-demo score-comparison" id="library-score-comparison">
+          <div class="music-demo-toolbar">
+            <h3>对照谱 · 八度换位</h3>
+            <div class="score-comparison-actions">
+              <div data-comparison-playback></div>
+              <div class="score-choice-buttons" data-comparison-choices role="group" aria-label="试听版本"></div>
+            </div>
+          </div>
+          <p class="music-demo-cue" data-comparison-description></p>
+          <div class="score-comparison-panes">
+            <div class="score-comparison-pane" data-comparison-pane>
+              <h4 data-version-title></h4>
+              <figure></figure>
+            </div>
+            <div class="score-comparison-pane" data-comparison-pane>
+              <h4 data-version-title></h4>
+              <figure></figure>
+            </div>
+          </div>
+        </div>
+        <div class="music-demo" id="library-writing-steps">
+          <div class="music-demo-toolbar">
+            <h3>分步写作谱 · 卡农</h3>
+            <div class="score-choice-buttons" data-writing-choices role="group" aria-label="写作阶段"></div>
+          </div>
+          <output class="music-demo-cue" data-writing-description></output>
+          <figure data-writing-score aria-label="三小节卡农的写作步骤"></figure>
+        </div>
       </section>
       <section class="course-sample" aria-labelledby="control-samples">
         <h2 class="sample-title" id="control-samples">控件与状态</h2>

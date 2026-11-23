@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第六章 卡农｜复调音乐 · 上篇</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./counterpoint-learning.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./counterpoint.js"></script>
+    <script type="module" src="./counterpoint-writing.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">复调音乐 · 上篇</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第六章 卡农</h1>
+      <p class="intro">第五章里，低声部答过 G–A–B 就可以另唱一句。现在让它连后面那句也照唱，而且总是晚一小节。每写一句新旋律，都得给这句将来再响一次的位置留出余地。</p>
+      <section aria-labelledby="canon-principles">
+        <h2 id="canon-principles">卡农的基本特点</h2>
+        <p>第二小节的下声部唱的是第一小节上面的内容，第三小节的下声部唱的是第二小节上面的内容。<strong>卡农</strong>把这条模仿规则持续下去。本例的规则是晚一小节、低八度。段落要结束时，还要安排先到和晚到的两条线如何收束。</p>
+        <div class="music-demo" id="canon-ending" data-counterpoint-score>
+        <div class="music-demo-toolbar">
+          <h3>有终卡农与无终卡农对照</h3>
+          <label>结构 <select><option value="finite">有终 · 改写结尾</option><option value="strict">有终 · 保持模仿</option><option value="loop">无终卡农</option></select></label>
+        </div>
+        <output class="music-demo-cue"></output>
+        <figure aria-label="有终卡农与无终卡农对照"></figure>
+      </div>
+        <p>局部模仿只接过一个片段，之后可以换成不同的旋律。卡农会继续复制起句的新片段，因此会出现追逐感。写出长音与短音交错、句尾与下一次入口错开的乐节，可以让两部清楚地各自进行。</p>
+        <p>无终版到了第三小节，上方已经回到第一小节。下方慢一小节，所以它还在唱第二小节。这里听到的是一个新组合，循环能否成立，取决于两条旋律在这一处的结合。</p>
+        <table class="lesson-table lesson-table-wide">
+          <caption>无终卡农的循环衔接</caption>
+          <thead><tr><th scope="col">声部</th><th scope="col">开头</th><th scope="col">第 2 小节</th><th scope="col">第 3 小节</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">上方</th><td>题头 a</td><td>后句 b</td><td>回到题头 a</td></tr>
+            <tr><th scope="row">下方</th><td>休止</td><td>题头 a′</td><td>后句 b′</td></tr>
+          </tbody>
+        </table>
+        <p>表里的 a 是开头那句，b 是接着写的那句。带撇号的 a′、b′ 是它们在下方低八度的副本。写 b 时要检查两次。第二小节里，b 在上面，和开头的副本 a′ 相遇。第三小节回到开头后，b 自己变成下方的副本，又要跟上方的 a 配好。</p>
+      </section>
+      <section aria-labelledby="canon-writing">
+        <h2 id="canon-writing">卡农的写作步骤</h2>
+        <p>把上声部按乐句记作 A、B、C。若下声部固定晚一小节，第二小节就是 B 对 A，第三小节就是 C 对 B。需要检查的是同一小节正在叠响的两句。</p>
+        <h3>声部横纵交错写法</h3>
+        <p>实际排谱时，第一小节上方一写好，就把副本抄到第二小节的下方。第二小节的上方写完，再把它复制到第三小节的下方。这样每一小节都以已经确定的应句为参照，继续写起句声部。</p>
+        <div class="music-demo" id="canon-drafting">
+          <div class="music-demo-toolbar">
+            <h4>先确定应句，再续写起句声部</h4>
+            <div class="score-choice-buttons" data-writing-choices role="group" aria-label="横纵交错写作阶段"></div>
+          </div>
+          <output class="music-demo-cue" data-writing-description></output>
+          <figure data-writing-score aria-label="逐句写作，先抄应句，再补上方的后句"></figure>
+        </div>
+        <h3>声部重叠调整写法</h3>
+        <p>手里若已有一条完整曲调，可以把整条复制到下方，晚一小节进入。叠在一起后再按拍检查。改动一个音时，也要改它在应句里的副本。</p>
+        <div class="music-demo" id="canon-overlap-revision">
+          <div class="music-demo-toolbar">
+            <h4>整条旋律重叠与同步修正</h4>
+            <div class="score-choice-buttons" data-writing-choices role="group" aria-label="声部重叠调整阶段"></div>
+          </div>
+          <output class="music-demo-cue" data-writing-description></output>
+          <figure data-writing-score aria-label="完整旋律、错开重叠、原句与副本同步修正"></figure>
+        </div>
+      </section>
+      <section aria-labelledby="finite-canon">
+        <h2 id="finite-canon">有终卡农</h2>
+        <p>有终版本在第三小节结束严格模仿。低声部以 G–C 收束，上声部以 D–C 与其形成共同终止。</p>
+        <p>「保持模仿」里，下方第三小节仍复制上方第二小节，上方用长 C 等到下方也落在 C。有终卡农也可以采用三度、五度原形模仿，或倒影、扩大、紧缩。距离或比例复杂时，逐乐节安排新句及其未来的复制位置，比先写完再修更容易保住模仿关系。</p>
+      </section>
+      <section aria-labelledby="endless-canon">
+        <h2 id="endless-canon">无终卡农</h2>
+        <p>无终版本保留第三小节的应句，让它与上声部的开头同时出现。第一次进入时只有上声部起音。随后的每次循环都把上声部的开头与低声部尚在进行的末句叠合。</p>
+        <p>写尾句时，可以先把下一轮的题头放到草稿上。这行只供检查音程的谱表叫<strong>辅助声部</strong>，放在起句声部同一侧。八度卡农仍用题头原来的音名。五度卡农则要按与应答相反的方向预移题头，才能在抄出应句时让它回到原高度。</p>
+        <h3 id="fifth-canon-seam">下方五度应答的循环接缝</h3>
+        <p>上声部的题头 a 是 D–D♯。下声部晚一小节、低纯五度模仿。准备写尾句 f 时，下方已经抄好前一句的应句 e′。f 这时要配 e′，下一小节它变成低五度的 f′，还要配重新出现的 a。</p>
+        <ol>
+          <li><strong>预写题头。</strong> 把 D–D♯ 提高纯五度成 A–A♯，写在第 6 小节上方的辅助声部。</li>
+          <li><strong>配出尾句。</strong> 在第 6 小节上声部写整小节的 C，让它配当下的 e′，也检查它与辅助谱 A–A♯ 的结合。</li>
+          <li><strong>一起抄低五度。</strong> 第 7 小节里，A–A♯ 降回 D–D♯，回到上声部的题头 a。C 降成 F，成为下声部的 f′。两条线同时下移，所以草稿上检查过的音程关系仍然成立。</li>
+        </ol>
+        <div class="music-demo" id="fifth-canon-writing">
+          <div class="music-demo-toolbar">
+            <h4>五度无终卡农的预移与抄回</h4>
+            <div class="score-choice-buttons" data-writing-choices role="group" aria-label="五度无终卡农写作阶段"></div>
+          </div>
+          <output class="music-demo-cue" data-writing-description></output>
+          <figure data-writing-score aria-label="辅助题头、尾句及循环接缝"></figure>
+        </div>
+        <p>第 7 小节已经响过题头，反复时从第 2 小节接下去。上声部继续唱 b，下声部照常唱题头的应句 a′。若改成上方五度应答，预写题头时就要先移低纯五度，再把配好的两条线一起移高。</p>
+        <aside class="lesson-callout"><p><strong>连续模仿是卡农的共同条件。</strong> 有终卡农在终止处结束，无终卡农的起句能够与应句末段衔接，形成循环。</p></aside>
+      </section>
+    </main>
+  </body>
+</html>

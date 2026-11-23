@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第十四章 创意曲（二）· 民族调式创意曲｜复调音乐 · 下篇</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./counterpoint-learning.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./counterpoint-scores.js"></script>
+    <script type="module" src="./invention-analysis.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">复调音乐 · 下篇</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第十四章　创意曲（二）· 民族调式创意曲</h1>
+      <p class="intro">同一动机可以继续往高处移动，也可以让它从同一点往反方向走。这一章把第二种变化用于五声音列。</p>
+      <section aria-labelledby="study-14">
+        <h2 id="study-14">五声旋律的倒影与结合</h2>
+        <p>倒影要先确定轴音，也就是保持原位的音。下面以 D 为轴。C 在 D 下方两个半音，E 在 D 上方两个半音，所以这两个音可以互换而保持到轴的距离。</p>
+        <div class="music-demo counterpoint-steps" id="path-inversion" data-counterpoint="path-inversion">
+          <div class="music-demo-toolbar">
+            <fieldset class="counterpoint-choices" aria-label="以 D 为轴，把旋律翻到另一边">
+              <label><input type="radio" name="path-inversion" value="original" checked><span>五声原句</span></label>
+              <label><input type="radio" name="path-inversion" value="reflected"><span>沿 D 倒影</span></label>
+              <label><input type="radio" name="path-inversion" value="paired"><span>倒影加另一条线</span></label>
+            </fieldset>
+          </div>
+          <figure aria-label="以 D 为轴，把旋律翻到另一边"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <p>这次倒影仍从 C、D、E、G、A 取音。给结果添低声部时，在相同拍位还要重新检查纵向音程和句末的落点。</p>
+        <div class="counterpoint-next">
+          <p>能认出保持节奏的变形，就能比较同一主题在新高度出现时，哪些音可以照搬，哪些音值得调整。</p>
+          <a href="./counterpoint-15.html">第 15 章 · 给主题配第一个答题 <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+      <section aria-labelledby="modal-invention-study">
+        <h2 id="modal-invention-study">《小创意曲》的主题、倒影与再现</h2>
+        <p>黄阮的这首小创意曲共 16 小节。T 是两小节的主题，CT 是跟它配合的固定对题。第 7 小节把两条线都写成倒影。第 11 小节原形从低声部回来，第 13 小节才回到高声部。</p>
+        <div class="music-demo invention-analysis" id="modal-invention" data-invention-analysis>
+          <div class="music-demo-toolbar">
+            <h3>黄阮《小创意曲》</h3>
+            <label>段落 <select data-analysis-jump></select></label>
+          </div>
+          <div class="timeline-frame" data-analysis-timeline></div>
+          <dl class="analysis-description" aria-live="polite">
+            <dt data-analysis-section>全曲</dt>
+            <dd data-analysis-description></dd>
+          </dl>
+          <p class="music-demo-cue analysis-status" data-analysis-status role="status"></p>
+          <figure data-analysis-score aria-label="小创意曲原谱，标出主题、固定对题及其倒影"></figure>
+        </div>
+      </section>
+      <section aria-labelledby="explore-14">
+        <h2 id="explore-14">从五声倒影到单主题和双主题创意曲</h2>
+        <details class="lesson-aside" id="modal-inversion-notes">
+          <summary>五声倒影与小创意曲</summary>
+          <div class="lesson-aside-content">
+            <p>倒影围绕所选轴音安排相反的音程方向。固定轴音后，逐个检查映出的音是否仍在预期的五声音列，调式主音的地位是否仍然清楚。例如 C 宫音列 C–D–E–G–A <svg class="inline-staff inline-staff-wide" viewBox="0 0 76 39" style="width: 6.3em" role="img" aria-label="C4、D4、E4、G4、A4"><path class="inline-staff-lines" d="M1 8H75 M1 13H75 M1 18H75 M1 23H75 M1 28H75"/><path d="M9 33.0h10"/><text x="11" y="33.0">&#xE0A2;</text><text x="23" y="30.5">&#xE0A2;</text><text x="35" y="28.0">&#xE0A2;</text><text x="47" y="23.0">&#xE0A2;</text><text x="59" y="20.5">&#xE0A2;</text></svg> 以商音 D 为轴时，D 保持，C 与 E 互映，G 与 A 的音级互映。音级关系可以相同，实际音区仍能按线条需要移动。</p>
+            <p>下面的短例单独对照两个动作。变成倒影时，动机内部的上行和下行反转。再换位时，同一段倒影从上方移到下方。</p>
+            <div class="music-demo" id="pentatonic-inversion" data-counterpoint="pentatonic-inversion">
+              <div class="music-demo-toolbar"><h3>商音倒影与复对位</h3><label>写法 <select><option value="original">原形</option><option value="inverted">商音倒影</option><option value="exchanged">倒影后换位</option></select></label></div>
+              <figure aria-label="商音倒影与复对位"></figure>
+              <output class="music-demo-cue"></output>
+            </div>
+            <p>较长的一种可以安排成三段。第一段反复让主题 A 和一条醒目的副题 X 合唱。中间先在属方向重新合唱，再截取 A 的开头逐步上移，到了高处把走势翻过来，转为下行模进。第三段带回原调，让 A 在下、X 在上，结尾把此前句子的几个片段合起来。三段的区别能从材料怎样换位、向哪个音收束听出来。</p>
+          </div>
+        </details>
+        <details class="lesson-aside" id="one-theme-plan">
+          <summary>单主题创意曲的两段安排</summary>
+          <div class="lesson-aside-content">
+            <p>分析第二段时可以逐项对照原段。整条主题换到另一条谱线，是声部换位。主题内部的上行变为下行，是倒影。听到新的调式中心或音列色彩，则另外记录调式变化。这三项可以同时发生。若主题整段换位，接着重现的补充终止仍可沿用第一次的音区和收束方式。</p>
+            <table class="lesson-table">
+            <caption>从同一主题写出不同的第二段</caption>
+            <thead>
+            <tr>
+            <th scope="col">第一段</th>
+            <th scope="col">第二段</th>
+            <th scope="col">收束组织</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <th scope="row">主题与对题先作对比，中途用八度模仿，时差从一拍缩到半拍</th>
+            <td>前段作八度复对位，主题改到下方</td>
+            <td>两段共享补充终止，必要时用重奏加强</td>
+            </tr>
+            <tr>
+            <th scope="row">以局部倒影起句，再在模仿与对比之间切换</th>
+            <td>第一段整体倒影，并作八度复对位</td>
+            <td>一段可停在新调式支点，末段回到原调式</td>
+            </tr>
+            </tbody>
+            </table>
+            <p>全曲统一既来自同一主题，也来自保留地方性材料的音调特点。以曲牌素材写作时，倒影后的线条应可唱并能保留原有节奏和风格。判断其中的模仿只需指明相似的片段和进入关系，整段上声部和下声部仍可能属于对比写法。</p>
+          </div>
+        </details>
+        <details class="lesson-aside" id="two-theme-plan">
+          <summary>双主题的持续结合</summary>
+          <div class="lesson-aside-content">
+            <p>本谱的 T₁ 用起音较密的短句，T₂ 用几处明显的长音。只看哪条线在上，容易漏掉换过位置的主题。切换到「取 T₁ 作插段」时，短句开始在不同高度出现，下面接唱原来的短句，暂时让两个主题分开。后面可以把长句加回来。另一个插段也可用 T₂ 或两句的结合，顺势走回主调。</p>
+            <div class="music-demo" id="two-theme-roles" data-counterpoint="two-theme-roles">
+              <div class="music-demo-toolbar"><h3>双主题结合与单一动机插段</h3><label>段落 <select><option value="first">双主题原位</option><option value="swapped">双主题换位</option><option value="episode">取 T₁ 作插段</option></select></label></div>
+              <figure aria-label="双主题结合与单一动机插段"></figure>
+              <output class="music-demo-cue"></output>
+            </div>
+            <p>双主题也可从 T₁ 的陈述开始。T₂ 以雏形进入，随后发展为可辨认的完整乐句，并与 T₁ 多次互换。听辨 T₂ 是否成为主题，要检查它能否在多次陈述中独立发展、何时承担过渡与再现，而不能只看第一次是否同时响起。再现开端可以先突出一条线造高潮，再回到双主题的原先分工。</p>
+          </div>
+        </details>
+        <details class="lesson-aside" id="prelude-form">
+          <summary>序曲中可辨认的创意曲结构</summary>
+          <div class="lesson-aside-content">
+            <p>一条节奏较自由的民歌旋律，可以整理为十二八拍，每小节四个大拍，每拍分三份。这样两个声部晚一点进入时，也有共同的拍点可对照。开头先让主题在主调被接唱，再到属调被接唱。发展时截取每句尾部，逐次抬高，形成不完整主题的插段。然后让完整主题在同调号的另一调出现，推向高潮，最后再回主调。</p>
+            <p>双主题序曲可以按显示、中部、再现三部分读。前段把第二主题从附加音调发展到完整乐句。两个插段可分别来自不同主题，一个承担调性过渡，一个以自由模仿推动展开和高潮。中部同时变换两主题的上下位置和调式，再现则恢复主调、回顾二者结合并用主题动机作结束句。标题的自由度允许主调和复调织体交替，分析曲式仍以实际陈述和终止为准。</p>
+          </div>
+        </details>
+        <details class="lesson-aside" id="modal-invention-types">
+          <summary>篇幅、主题数与标题</summary>
+          <div class="lesson-aside-content">
+            <p>小创意曲以篇幅较小为特征，可以是单主题，也可让一条有鲜明特点的对位旋律取得副题的地位。单主题创意曲由一个主要主题统领，另一个声部即使有清楚音调，也常以支持和衬托为主。双主题创意曲让两个相对独立、都能反复呈现的主题一同陈述并结合发展。“序曲”则是体裁或标题，既可独立，也可和赋格配合，织体和曲式更自由。有些标题为序曲的篇章，在实际材料发展上属于创意曲。</p>
+          </div>
+        </details>
+      </section>
+    </main>
+  </body>
+</html>

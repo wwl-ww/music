@@ -3,6 +3,8 @@ import bravura from '@coderline/alphatab/font/Bravura.woff2?url';
 import { enableScrollFrame } from './readable-layout.js';
 import { encodeScore, fourPartHarmony } from './four-part.js';
 import { mountScoreReading } from './score-reading.js';
+import { mountScoreSections } from './score-sections.js';
+import { mountScoreNoteHighlights } from './score-note-highlights.js';
 
 const soundFont = new URL('../assets/piano-and-strings.sf3', import.meta.url).href;
 const views = {
@@ -13,12 +15,17 @@ const views = {
 
 let activePlayer;
 
-export function mountScore(figure, { notes, tempo = 90, notation = 'both', audio = true, onPitchesChange }) {
+export function mountScore(figure, {
+  notes, tempo = 90, notation = 'both', audio = true, onPitchesChange,
+  onScoreLoaded, sectionNavigation, noteHighlights, voiceAudition
+}) {
   const staves = views[notation];
   const tracks = staves.map((_, index) => index);
   let material = notes;
   let timbre = 'strings';
   let playingTimbre = 'piano';
+  const splitVoices = Boolean(audio && voiceAudition?.length);
+  let auditionVoices = null;
   let reading;
 
   figure.classList.add('score-example');
@@ -27,7 +34,8 @@ export function mountScore(figure, { notes, tempo = 90, notation = 'both', audio
       <button class="score-playback" type="button" aria-label="播放谱例" disabled>
         <span class="score-playback-icon" aria-hidden="true"></span>
       </button>
-      <button class="score-reading-toggle" type="button" aria-expanded="false" hidden>标出音名和和弦</button>
+      <button class="score-reading-toggle" type="button" aria-expanded="false" hidden>音名与和弦</button>
+      ${splitVoices ? '<label class="score-voice-audition">试听 <select aria-label="试听声部"></select></label>' : ''}
       <label class="score-timbre" hidden>音色
         <select aria-label="四部和声音色">
           <option value="piano">钢琴</option>
@@ -43,8 +51,9 @@ export function mountScore(figure, { notes, tempo = 90, notation = 'both', audio
   const button = figure.querySelector('.score-playback');
   const timbreControl = figure.querySelector('.score-timbre');
   const timbreSelect = timbreControl.querySelector('select');
+  const voiceSelect = figure.querySelector('.score-voice-audition select');
   const status = figure.querySelector('.score-status');
-  const updateScroll = enableScrollFrame(score, '谱例');
+  const updateScroll = enableScrollFrame(score, '谱例', { vertical: Boolean(sectionNavigation) });
 
   const api = new AlphaTabApi(score, {
     core: { smuflFontSources: new Map([[FontFileFormat.Woff2, bravura]]), enableLazyLoading: false },
@@ -60,6 +69,31 @@ export function mountScore(figure, { notes, tempo = 90, notation = 'both', audio
     reading?.setPlaying(false);
     api.stop();
   }
+  const sections = sectionNavigation && mountScoreSections(score, api, {
+    ...sectionNavigation,
+    stopPlayback,
+    isPlaying: () => figure.classList.contains('playing')
+  });
+  if (sections) figure.dataset.sectionNavigation = '';
+  const clearHighlights = noteHighlights ? mountScoreNoteHighlights(score, api, noteHighlights) : undefined;
+
+  function applyVoiceAudition() {
+    if (!splitVoices || !api.isReadyForPlayback || !api.score) return;
+    const voices = api.score.tracks.slice(staves.length);
+    voices.forEach((track, index) => {
+      const voice = material.auditionOrder?.[index] ?? index + 1;
+      api.changeTrackMute([track], Boolean(auditionVoices && !auditionVoices.includes(voice)));
+    });
+  }
+
+  if (voiceSelect) {
+    voiceSelect.add(new Option('全部声部', ''));
+    voiceAudition.forEach(({ label }, index) => voiceSelect.add(new Option(label, String(index))));
+    voiceSelect.addEventListener('change', () => {
+      auditionVoices = voiceAudition[voiceSelect.value]?.voices ?? null;
+      applyVoiceAudition();
+    });
+  }
 
   const showError = (error) => {
     console.error(error);
@@ -68,16 +102,17 @@ export function mountScore(figure, { notes, tempo = 90, notation = 'both', audio
   };
   api.error.on(showError);
   api.scoreLoaded.on(scoreModel => {
+    onScoreLoaded?.(scoreModel);
     reading?.load(scoreModel);
     if (playingTimbre !== 'strings') return;
-    const balance = [10, 12, 6, 4];
+    const balance = splitVoices ? [4, 6, 12, 10] : [10, 12, 6, 4];
     scoreModel.tracks.slice(staves.length).forEach((track, index) => {
       track.playbackInfo.balance = balance[index];
     });
   });
   api.midiLoad.on(file => {
     // Keep the tempo and timeline, but leave note events only on audible tracks.
-    const firstSilentTrack = playingTimbre === 'strings' ? 0 : 1;
+    const firstSilentTrack = playingTimbre === 'strings' || splitVoices ? 0 : 1;
     for (const track of file.tracks) {
       const events = track.events;
       for (let i = events.length - 1; i >= 0; i--) {
@@ -92,15 +127,21 @@ export function mountScore(figure, { notes, tempo = 90, notation = 'both', audio
   });
   api.renderFinished.on(() => {
     updateScroll();
-    reading?.renderMarker();
     if (!audio || api.isReadyForPlayback) {
       button.disabled = false;
       status.textContent = '';
     }
   });
+  api.postRenderFinished.on(() => reading?.renderMarker());
 
   if (audio) {
+    api.soundFontLoaded.on(() => {
+      // The first score can finish preparing MIDI before the sound font is available.
+      if (!api.isReadyForPlayback) api.loadMidiForScore();
+    });
+
     api.playerReady.on(() => {
+      applyVoiceAudition();
       api.masterVolume = 0.65;
       button.disabled = false;
       status.textContent = '';
@@ -110,9 +151,11 @@ export function mountScore(figure, { notes, tempo = 90, notation = 'both', audio
       const playing = state === synth.PlayerState.Playing;
       const wasPlaying = figure.classList.contains('playing');
       figure.classList.toggle('playing', playing);
+      button.toggleAttribute('data-playing', playing);
       button.setAttribute('aria-label', playing ? '停止播放' : '播放谱例');
       reading?.setPlaying(playing);
       if (!playing) onPitchesChange?.([]);
+      if (!playing) sections?.clearPosition();
       // A score update can report its stopped state while a new play request is pending.
       if (!playing && wasPlaying && activePlayer === api) activePlayer = undefined;
     });
@@ -127,8 +170,13 @@ export function mountScore(figure, { notes, tempo = 90, notation = 'both', audio
         return;
       }
       activePlayer?.stop();
-      activePlayer = api;
+      applyVoiceAudition();
       reading?.preparePlayback();
+      if (sections && !sections.preparePlayback()) {
+        status.textContent = '该段落在当前演奏路线中未出现。';
+        return;
+      }
+      activePlayer = api;
       if (api.play()) {
         status.textContent = '';
       } else {
@@ -148,13 +196,14 @@ export function mountScore(figure, { notes, tempo = 90, notation = 'both', audio
     timbreControl.hidden = !audio || !fourPart;
     if (audio && fourPart && !reading) reading = mountScoreReading(figure, score, api, stopPlayback);
     reading?.setMaterial(material, fourPart);
-    if (api.settings.core.includeNoteBounds !== (audio && fourPart)) {
-      api.settings.core.includeNoteBounds = audio && fourPart;
+    const includeNoteBounds = Boolean(noteHighlights) || (audio && fourPart);
+    if (api.settings.core.includeNoteBounds !== includeNoteBounds) {
+      api.settings.core.includeNoteBounds = includeNoteBounds;
       api.updateSettings();
     }
     playingTimbre = fourPart ? timbre : 'piano';
     try {
-      api.tex(encodeScore(material, staves, tempo, playingTimbre), tracks);
+      api.tex(encodeScore(material, staves, tempo, playingTimbre, splitVoices), tracks);
     } catch (error) {
       showError(error);
     }
@@ -163,12 +212,17 @@ export function mountScore(figure, { notes, tempo = 90, notation = 'both', audio
 
   function update(message) {
     if (activePlayer === api) stopPlayback();
+    clearHighlights?.();
     button.disabled = true;
     status.textContent = message;
     render();
   }
 
   return {
+    ...(sections && { selectBars: sections.select }),
+    stop() {
+      if (activePlayer === api) stopPlayback();
+    },
     setNotes(phrase) {
       material = phrase;
       update('正在更新谱例…');

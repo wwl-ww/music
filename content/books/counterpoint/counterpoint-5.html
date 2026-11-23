@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第五章 二声部模仿｜复调音乐 · 上篇</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./counterpoint-learning.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./counterpoint.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">复调音乐 · 上篇</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第五章 二声部模仿</h1>
+      <p class="intro">第一章的 G–A–B 原本只在上方。它也可以从另一个声部再出现一次。晚进入时，上方已经写到别处，两个声部因此在不同的时间呈示同一材料，并在重叠处形成对位。</p>
+      <section aria-labelledby="imitation-basics">
+        <h2 id="imitation-basics">模仿的基本特点</h2>
+        <p>最早呈示题头的声部唱<strong>起句</strong>，稍后接过题头的声部唱<strong>应句</strong>。应句开始后，先来的声部可以接着唱自己新写的旋律，这段同时进行的旋律叫<strong>对句</strong>。下面固定第一小节的起句，改变第二小节下方的应句。</p>
+        <div class="music-demo" id="imitation" data-counterpoint-score>
+        <div class="music-demo-toolbar">
+          <h3>原形模仿与变形模仿对照</h3>
+          <label>应句 <select><option value="direct">原形</option><option value="augment">扩大</option><option value="diminish">紧缩</option><option value="invert">倒影</option><option value="invertedShort">倒影再紧缩</option><option value="reverse">逆行</option><option value="rhythm">节奏模仿</option><option value="split">分体综合</option></select></label>
+        </div>
+        <output class="music-demo-cue"></output>
+        <figure aria-label="原形模仿与变形模仿对照"></figure>
+      </div>
+        <p>原形版第二小节的上声部在前两拍各奏一次 D。下方刚进入的 G 与 D 构成五度，走到下一拍的 B 时变成三度。写对句时，已经选定的应句给出了每个拍位需要配合的音。</p>
+        <details class="lesson-aside">
+          <summary>反复、模进与模仿</summary>
+          <div class="lesson-aside-content">
+        <table class="lesson-table lesson-table-wide">
+          <thead><tr><th scope="col">手法</th><th scope="col">材料下一次出现的位置</th><th scope="col">谱例</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">反复</th><td>同一声部、同一高度再次出现。</td><td><svg class="inline-staff" viewBox="0 0 92 43" role="img" aria-label="同一声部重复 E G E G">
+        <path class="inline-staff-lines" d="M1 6H91 M1 11H91 M1 16H91 M1 21H91 M1 26H91"/>
+        <text x="13" y="26">&#xE0A4;</text><text x="35" y="21">&#xE0A4;</text><text x="57" y="26">&#xE0A4;</text><text x="79" y="21">&#xE0A4;</text>
+      </svg></td></tr>
+            <tr><th scope="row">模进</th><td>同一声部在新的高度移位重复。</td><td><svg class="inline-staff" viewBox="0 0 92 43" role="img" aria-label="E G 之后上移一级到 F A">
+        <path class="inline-staff-lines" d="M1 6H91 M1 11H91 M1 16H91 M1 21H91 M1 26H91"/>
+        <text x="13" y="26">&#xE0A4;</text><text x="35" y="21">&#xE0A4;</text><text x="57" y="23.5">&#xE0A4;</text><text x="79" y="18.5">&#xE0A4;</text>
+      </svg></td></tr>
+            <tr><th scope="row">模仿</th><td>同一材料在另一声部随后进入，可以同度、移位或变形。</td><td>起句由应句接续，两条线在时间上可重叠。</td></tr>
+          </tbody>
+        </table>
+          </div>
+        </details>
+        <p>记录模仿要分开写三个条件。参与的声部、两个入口之间的音程度数、两个入口之间的时间。强拍起句通常配强拍应句，弱起通常配弱起。一至两小节是常见间距，具体还看题头的长度和重叠的位置。</p>
+        <p>谱例的应句由低声部呈示，比起句晚一小节，开头的 G 比起句低八度。若将应句提前为间隔半小节进入，两条线重叠的地方就会改变。原来的对句需要根据两部新的音程关系调整。</p>
+        <p>第二小节先确定低声部的应句，再给上声部写出能够延续前句的对句。应句的音高和时值为对句提供了参照。写完应句、对句后，若不再模仿，先给应句声部写小结尾，再给先进入的声部写能与它配合的结尾。</p>
+      </section>
+      <section aria-labelledby="direct-imitation">
+        <h2 id="direct-imitation">原形模仿</h2>
+        <p>模仿的音程度数比较两次起音，从第一个音名数到第二个音名，首尾都算。下面固定时差为两拍，只改变应句的起点。同度和八度可以照搬所有音程。同调的其他移位常保留音级数，个别大、小音程会随音阶改变。</p>
+        <div class="music-demo counterpoint-steps" id="imitation-distances" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h3>同一题头的八种音程距离</h3>
+            <fieldset class="counterpoint-choices" aria-label="起句与应句相隔的度数">
+              <label><input type="radio" name="imitation-distances-option" value="0" checked><span>同度</span></label>
+              <label><input type="radio" name="imitation-distances-option" value="1"><span>二度</span></label>
+              <label><input type="radio" name="imitation-distances-option" value="2"><span>三度</span></label>
+              <label><input type="radio" name="imitation-distances-option" value="3"><span>四度</span></label>
+              <label><input type="radio" name="imitation-distances-option" value="4"><span>五度</span></label>
+              <label><input type="radio" name="imitation-distances-option" value="5"><span>六度</span></label>
+              <label><input type="radio" name="imitation-distances-option" value="6"><span>七度</span></label>
+              <label><input type="radio" name="imitation-distances-option" value="7"><span>八度</span></label>
+            </fieldset>
+          </div>
+          <figure aria-label="同一题头的八种音程距离"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <p>「八度」版的应句虽写在下面的谱表，却从比起句 G4 高八度的 G5 开始。下方谱表的位置表示是谁在接唱，实际唱多高要看音符。两个短音和上行轮廓仍在，这属于<strong>原形模仿</strong>。四度和五度也是常用的入口距离。</p>
+        <p>把 E–F–G 按 C 大调上移一级，会唱成 F–G–A。起点改变以后，原来的半音 E–F 变成全音 F–G，仍保留两次上行级进。写五声调式时，也可以用相同的办法按五声音阶的级数移位，相隔小三度的两个相邻音仍相差一级。</p>
+      </section>
+      <section aria-labelledby="changed-imitation">
+        <h2 id="changed-imitation">变形模仿</h2>
+        <p><a href="#imitation">应句的变形谱例</a>固定同一个起句。扩大或紧缩会改变两条线重叠的时长，对句要跟着重新安排。时值变化的比例越大，越适合取较短的材料，以便留下共同收束的空间。</p>
+        <p>作倒影时，可以保留各音程的半音数，也可以保留调式内的级数。作逆行时，要确定倒排的单位，可以把整句从尾到头重排，也可以让每小节各自倒排。</p>
+      </section>
+      <section aria-labelledby="compound-imitation">
+        <h2 id="compound-imitation">综合模仿</h2>
+        <p>把<a href="#imitation">上面的谱</a>从「倒影」换到「倒影再紧缩」。下方两次都唱 B–A–G，第二次只用一拍。这个应句同时改变了旋律方向和每个音的长短，叫<strong>一体综合</strong>。</p>
+        <p>也可以让前半句只低八度照唱，到后半句才改成向下走。这样两种办法各用在一句的不同位置，叫<strong>分体综合</strong>。谱例中的「分体综合」把八度原形和倒影分配给先后两个入口。两种综合都可以同时采用原形、变形，区别在于手法作用在同一入口还是前后两个入口。</p>
+      </section>
+    </main>
+  </body>
+</html>

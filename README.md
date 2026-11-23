@@ -1,6 +1,6 @@
 # 乐理教程
 
-这个项目把《基本乐理教程》和《和声学基础教程》上下册改编成中文网页教程。正文负责讲清概念、规则和例外。简谱、五线谱和声音用于解释具体知识点。
+这个项目把《基本乐理教程》《和声学基础教程》和《复调音乐基础教程》改编成中文网页教程。正文负责讲清概念、规则和例外。简谱、五线谱和声音用于解释具体知识点。
 
 ## 运行课程网页
 
@@ -9,7 +9,7 @@ npm ci
 npm run dev
 ```
 
-打开终端显示的本地地址，先选择教材，再进入章节。[基本乐理教程](./content/books/music-theory/index.html)与[和声学基础教程 · 上](./content/books/harmony-upper/index.html)各有独立目录。预制格式在[格式样板页](./content/format-library.html)查看。
+打开终端显示的本地地址，先选择教材，再进入章节。复调音乐的上、下两篇共用同一个课程目录。[复调音乐基础教程](./content/books/counterpoint/index.html) · [格式样板页](./content/format-library.html)
 
 课程内容集中放在 `content/`。教材的章节和专用脚本归入各自的目录，参考 PDF 可留在本地的 `sources/`，并由 Git 忽略。课程网页由同一套 Vite 配置运行。
 
@@ -21,6 +21,7 @@ npm run dev
 | `content/books/music-theory/` | 《基本乐理教程》章节、专用资产与参考 PDF |
 | `content/books/harmony-upper/` | 《和声学基础教程 · 上》章节、专用脚本与参考 PDF |
 | `content/books/harmony-lower/` | 《和声学基础教程 · 下》章节、四部和声谱例与参考 PDF |
+| `content/books/counterpoint/` | 《复调音乐基础教程》上下篇、全书目录与可调谱例 |
 | `content/shared/` | 共用的排版、主题、谱例组件与钢琴音源 |
 
 ## 课程
@@ -107,11 +108,57 @@ npm run dev
 
 可调四部谱根据同节所讲的和声骨架重新配写，谱面和播放共用同一组声部数据。
 
+### 复调音乐基础教程 · 上篇
+
+教材目录在 PDF 12–16，上篇的篇题与导言在印刷 1–2 / PDF 17–18。根据目录、每章起页和练习标题核对了第 1–19 章的 403 张扫描页，含章末练习。上下篇下表均记到各章讲解及示范谱例的末页，包含与练习共页的部分。
+
+| 章节 | 印刷页 | PDF 页 | 练习起点 |
+| --- | --- | --- | --- |
+| [第一章 对位旋律写作原则](./content/books/counterpoint/counterpoint-1.html) | 3–19 | 19–35 | 印刷 20 / PDF 36，页首 |
+| [第二章 对位中旋律的类型](./content/books/counterpoint/counterpoint-2.html) | 22–41 | 38–57 | 印刷 41 / PDF 57，写作示范说明之后 |
+| [第三章 二声部复对位](./content/books/counterpoint/counterpoint-3.html) | 45–57 | 61–73 | 印刷 57 / PDF 73，十二度复对位的续谱之后 |
+| [第四章 倒影与逆行](./content/books/counterpoint/counterpoint-4.html) | 60–73 | 76–89 | 印刷 73 / PDF 89，主题变形谱例及说明之后 |
+| [第五章 二声部模仿](./content/books/counterpoint/counterpoint-5.html) | 75–88 | 91–104 | 印刷 89 / PDF 105，页首 |
+| [第六章 卡农](./content/books/counterpoint/counterpoint-6.html) | 92–102 | 108–118 | 印刷 102 / PDF 118，五度无终卡农的说明之后 |
+| [第七章 模进](./content/books/counterpoint/counterpoint-7.html) | 105–119 | 121–135 | 印刷 119 / PDF 135，先复对位再模进的谱例及说明之后 |
+| [第八章 多声部对比式写作](./content/books/counterpoint/counterpoint-8.html) | 121–132 | 137–148 | 印刷 133 / PDF 149，页首 |
+| [第九章 多声部模仿](./content/books/counterpoint/counterpoint-9.html) | 136–148 | 152–164 | 印刷 149 / PDF 165，页首 |
+| [第十章 多声部综合织体写作](./content/books/counterpoint/counterpoint-10.html) | 150–160 | 166–176 | 印刷 160 / PDF 176，最后一例的转位结合续谱之后 |
+
+章节用文本内谱呈现音程与动机，用可调谱比较声部节奏、进入顺序和原位与变形。程序谱使用为相应概念配写的短句。
+
+### 复调音乐基础教程 · 下篇
+
+下篇题页为印刷 163 / PDF 179。第 19 章之后从印刷 407 / PDF 423 起为附录。
+
+[下篇学习路径](./content/books/counterpoint/index.html#counterpoint-study-route)用同一个四音材料贯穿九章。每章先完成一项谱面对照，完整分类和延伸分析集中在相应的选读块中。
+
+| 章节 | 印刷页 | PDF 页 | 讲解与练习的分界 |
+| --- | --- | --- | --- |
+| [第十一章 复调小曲](./content/books/counterpoint/counterpoint-11.html) | 164–184 | 180–200 | 印刷 182 / PDF 198，倒影再现的分析之后 |
+| [第十二章 卡农小曲](./content/books/counterpoint/counterpoint-12.html) | 185–204 | 201–220 | 印刷 204 / PDF 220，复合调式示意谱末行之后 |
+| [第十三章 创意曲（一）· 巴赫的创意曲](./content/books/counterpoint/counterpoint-13.html) | 205–225 | 221–241 | 印刷 225 / PDF 241，第三部创意曲分析图的图例之后 |
+| [第十四章 创意曲（二）· 民族调式创意曲](./content/books/counterpoint/counterpoint-14.html) | 226–250 | 242–266 | 印刷 249 / PDF 265，双主题序曲的结构图之后 |
+| [第十五章 赋格曲（一）· 显示部分](./content/books/counterpoint/counterpoint-15.html) | 251–271 | 267–287 | 印刷 269 / PDF 285，页首 |
+| [第十六章 赋格曲（二）· 间插段、中部与再现部](./content/books/counterpoint/counterpoint-16.html) | 272–294 | 288–310 | 印刷 293 / PDF 309，结束句分析之后 |
+| [第十七章 赋格曲（三）· 民族调式赋格](./content/books/counterpoint/counterpoint-17.html) | 295–336 | 311–352 | 印刷 336 / PDF 352，节奏赋格的结构图之后 |
+| [第十八章 支声复调](./content/books/counterpoint/counterpoint-18.html) | 337–364 | 353–380 | 本章无练习 |
+| [第十九章 复调写法在主调音乐中的运用](./content/books/counterpoint/counterpoint-19.html) | 365–406 | 381–422 | 本章无练习，下一页为附录 |
+
+技法示范多用重新配写的短句。第十三、十四、十六、十九章另有曲式分析谱，可选择小节范围，在同一份谱上查看声部、音型和调性变化。第十四章的黄阮《小创意曲》据教材谱例转录。
+
+巴赫谱例按音乐声部分谱表重排，并加入分析标签。下列许可适用于对应谱例的转录数据。
+
+- BWV 772、777 来自 Jeff Covey 为 Mutopia 排印的 Bach-Gesellschaft 版，转录沿用 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)。[BWV 772](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=40) · [BWV 777](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=159)
+- BWV 791、801 来自 Olivier Vermersch 为 Mutopia 排印的公有领域版本。[BWV 791](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=204) · [BWV 801](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=145)
+- BWV 847 来自 Urs Metzger 为 Mutopia 排印的 Edition Peters 版。按声部重排并加上分析标记，转录沿用 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)。[BWV 847](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1941)
+- 贝多芬《悲怆奏鸣曲》第三乐章第 78–107 小节转录自 Chris Sawer 为 Mutopia 排印的公有领域版本（Berners 1908 年版）。[Op. 13 第三乐章](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=296)
+
 ## 预制格式库
 
 课程中的可调谱例集中列在[程序谱目录](./content/programmatic-scores.html)，每项链接到原章的谱面。
 
-章节页面引入 `content/shared/formats/formats.css`，在 `style.css` 里统一管理颜色和字体。各章只填写谱例数据或表格内容。[格式样板页](./content/format-library.html)同时演示了两种格式。
+章节页面引入 `content/shared/formats/formats.css`，在 `style.css` 里统一管理颜色和字体。各章填写谱例数据、时间轴事件或表格内容。[格式样板页](./content/format-library.html)演示这些共用组件。
 
 ### 阅读尺寸与验收
 
@@ -144,9 +191,38 @@ mountScore(document.querySelector('#example'), {
 
 `notation` 可选 `staff`（五线谱）、`numbered`（简谱）或 `both`（默认双谱对照）。纯读谱示例可设 `audio: false`。谱面与试听共用一份 alphaTex，双谱的小节线由 alphaTab 对齐。页面有多条谱例时，开始下一条会停止当前试听。
 
+可播放谱可用 `voiceAudition` 开启分声部试听。每项填写 `label` 和 `voices`，后者是选中时发声的声部编号。例如 `{ label: 'A 与 A′', voices: [1, 3] }`。声部从上到下自 1 编号。四部和声可直接复用现有数据。其他谱可传入 `notes: { scoreNotation, voices, key, meter }`，用生成完整谱面的同一组声部字符串填写 `voices`。若新版本交换了旋律位置，用 `auditionOrder` 指定新的声部顺序，使选择仍跟随原来的旋律。
+
 ### 程序性谱子
 
 第五章的[大调音阶](chapter-5.html#major-scale-example)与第六章的[小调音阶](chapter-6.html#minor-scale-example)共用 `mountProgrammaticScore`。复用时，在容器内放置含命名控件的 `form`、`[data-generated-score]` 谱例和 `[data-generated-piano]` 键盘容器。传入 `build(choices)`，返回同一音列生成的 alphaTex（`notes`）、MIDI 音高（`pitches`）和可读的谱例描述（`description`）。`lowestPitch` 是键盘最左侧 C 的 MIDI 音高，`octaves` 决定键盘范围。
+
+### 曲式分析谱与声部关系图
+
+两种格式从共用时间轴继承等长分格、选择状态、键盘操作和窄屏滚动。曲式分析谱另外复用可播放谱；声部关系图在时间轴上叠加连接箭头。主题颜色和控件样式由 `formats.css` 统一提供。两种格式的页面结构和调用数据可从[曲式与声部关系样板](./content/format-library.html#analysis-samples)复制。
+
+| 格式 | 接口与数据 | 何时使用 |
+|---|---|---|
+| 共用时间轴 | `mountTimeline` 接收 `unitCount`、`unitName`、`lanes` 和 `onSelect`。每个事件填写 `id`、`label`、`start` 和 `length`。位置从 1 开始，长度以时间单位计。 | 多组材料需要在同一时间尺度上比较。 |
+| 曲式分析谱 | `mountFormAnalysis` 接收一个 `score` 与按时间排列的 `sections`。段落填写首末小节 `first`、`last`，以及 `material`、`voice`、`key`、`role` 中与分析有关的说明。 | 追踪同一首作品的呈示、发展、再现等结构。可定位并试听所选段或全曲。 |
+| 声部关系图 | `mountVoiceRelations` 接收时间单位、各声部的事件和 `links`。连接写明 `from`、`to`，并在 `label` 说明时差、音程或关系。辅助谱表事件可用 `guide: true`。 | 对照几个声部的起句、应句、移位或重叠。 |
+
+曲式分析谱按写在谱上的小节编号定位，选段试听从所选小节的首次进入开始，演奏路线离开所选小节范围时停止。全曲播放遵循谱中的演奏路线。
+
+段落起点在小节内部时，可用 `entry: { bar, staff, voice, beat }` 指定从哪一个记谱事件起播，编号从 1 开始，`staff` 和 `voice` 默认取 1。`first` 和 `last` 仍用于排布时间轴，可用 `rangeLabel` 显示准确的拍内起点。
+
+### 对照谱与分步写作谱
+
+两种格式共用可播放谱、谱面高亮与切换按钮。容器、控件和传入数据的示范见[对照与写作样板](./content/format-library.html#comparison-samples)。
+
+| 格式 | 接口与数据 | 何时使用 |
+|---|---|---|
+| 对照谱 | `mountScoreComparison` 接收两份 `versions` 和一段 `description`。每份填写 `label`、`score` 与 `highlights`。两份谱同时显示，选择对应版本试听。 | 同一材料经过换位、变形或修正，需要直接比对相应音符。 |
+| 分步写作谱 | `mountScoreWritingSteps` 接收共用 `score` 设置与按写作顺序排列的 `steps`。每步填写 `label`、`notes`、`description` 与 `highlights`。 | 一条写作规则需要通过材料的加入、重叠与修正来说明。各步使用同一个谱面和播放键。 |
+
+高亮位置使用 `{ staff, bar, voice, beat }`，所有编号从 1 开始，`staff` 和 `voice` 默认取 1。`beat` 对应谱上该声部的第几个记谱事件，八分音符和休止各占一个事件。需要标出冲突时可加 `kind: 'conflict'`，并在说明中交代涉及的音和音程。
+
+程序谱按正文的判断维度组织选择。可以同时成立的属性分别说明，例如模进的声部写法和调性处理。只提供若干预设时，用示例名称和简短说明交代可比较的组合。
 
 ### 教学表格
 

@@ -142,6 +142,8 @@
 .lesson-chapter section > p { margin-block-start: 0.75rem; }
 .lesson-chapter .lesson-table { margin-block-start: 1.25rem; }
 .lesson-chapter .duration-table { width: min(100%, 36rem); }
+.lesson-chapter .lesson-table-wide { width: min(100%, 38rem); }
+.lesson-table-wide tbody th:first-child { min-width: clamp(4.25rem, 12vw, 8rem); }
 .duration-table :is(th, td) { padding-inline: clamp(0.35rem, 1vw, 0.9rem); }
 .duration-table .music-symbol { margin: 0; }
 .signature-table :is(th, td) { padding-inline: clamp(0.2rem, 0.75vw, 0.65rem); }

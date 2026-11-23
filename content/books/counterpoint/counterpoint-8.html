@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第八章 多声部对比式写作｜复调音乐 · 上篇</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./counterpoint-learning.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./counterpoint.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">复调音乐 · 上篇</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第八章 多声部对比式写作</h1>
+      <p class="intro">两条旋律之间留出的空隙可以交给第三条线。如果三条线一起换音，听觉会把它们合成和弦。让中间这条线在合适的时机进来，就能增加一个听得出的声部。</p>
+      <section aria-labelledby="polyphonic-harmony">
+        <h2 id="polyphonic-harmony">和声基础</h2>
+        <h3>和弦的运用</h3>
+        <p>写作从和弦支点出发，但让各声部有单独的线条。几个声部可以依次补足和弦，或让持续的声音在另一声部换音时继续充当和弦音。三声部可以省略和弦某一音来腾出旋律位置，重拍则要能辨认和声方向。</p>
+        <p>把 G 放进 C 和 E 之间，刚好补成 C 大三和弦。这个和弦只说明这一刻音放得合适。若中间声部接下来只是每拍将和弦补齐，听觉仍以和弦更替为主。要形成独立声部，还需安排中声部自己的旋律走向。</p>
+        <h3>和弦外音</h3>
+        <p>判断<strong>和弦外音</strong>，先把持续或反复出现的和弦骨架找出来，再顺着各声部辨认临时离开骨架的音。下面多数例子让低音 C 保持。C 大三和弦的骨架是 C、E、G，短暂出现的 F、D 或 A 可以各有不同的去向。红色标记指向承担变化的声部。</p>
+        <div class="music-demo" id="polyphonic-nonchord" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h4>三声部的单个与二重和弦外音</h4>
+            <label>外音类型
+              <select>
+                <option value="single">单个经过音</option>
+                <option value="passing">二重经过音</option>
+                <option value="neighbor">二重辅助音</option>
+                <option value="appoggiatura">二重倚音</option>
+                <option value="escape">二重换音</option>
+                <option value="suspension">二重延留音</option>
+              </select>
+            </label>
+          </div>
+          <figure aria-label="三声部中各自解决的和弦外音"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <details class="lesson-aside">
+          <summary>交替、三重与混合外音</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>各部可以轮流使用外音。某一声部活动时，其余声部以和弦音交代支点，下一处再把活动交给另一条线。</li>
+              <li>三个声部可同时出现外音。前后的和弦骨架仍须辨认得出来，每个外音的接近、拍位和去向都须分别成立。</li>
+              <li>不同类型也能重叠。例如一部的延留保持到后半拍，这时另一部用经过音接向下一个和弦音。</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+      <section aria-labelledby="polyphonic-rhythm">
+        <h2 id="polyphonic-rhythm">多声部的节奏组合</h2>
+        <p><strong>起音</strong>是音符开始响的时刻。下面三个版本保留各声部使用的音和和弦变化，专门比较起音的先后。一条线保持长音时，另一条线可以在中间加入新的起音，让独立进行的声部更容易听见。</p>
+        <div class="music-demo" id="three-part-rhythm" data-counterpoint-score>
+        <div class="music-demo-toolbar">
+          <h3>三声部节奏的同步与异步</h3>
+          <label>组合 <select><option value="sync">同步</option><option value="mixed">同、异结合</option><option value="independent">异步</option></select></label>
+        </div>
+        <output class="music-demo-cue"></output>
+        <figure aria-label="三声部节奏的同步与异步"></figure>
+      </div>
+      </section>
+      <section aria-labelledby="texture-types">
+        <h2 id="texture-types">三声部织体的主题分工</h2>
+        <table class="lesson-table lesson-table-wide">
+          <thead><tr><th scope="col">结合方式</th><th scope="col">声部分工</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">一个主题＋两个对位旋律</th><td>主题集中陈述乐思，其余声部相对独立，同时补充、呼应或衬托。</td></tr>
+            <tr><th scope="row">两个主题＋一个对位旋律</th><td>两个主题分别表达有区分度的材料，第三条线为两者提供节奏和和声支撑。</td></tr>
+            <tr><th scope="row">三个主题</th><td>每条线都有自己的主要材料，可以分别用不同音调、特征节奏、句幅和音区描绘不同形象。</td></tr>
+          </tbody>
+        </table>
+        <p>如果上方唱一段让人容易记住的曲调，中间只是跟着几处空隙加入，整段仍主要围绕一个主题。如果中间也有一个反复出现、能单独辨认的开头，就可能在同一段里听见两个主题。谁在最高处或谁唱得最响，都不能单独决定主题的数量。</p>
+      </section>
+      <section aria-labelledby="multi-invertible">
+        <h2 id="multi-invertible">复对位</h2>
+        <p>A、B、C 各指一条固定的旋律。交换高低时，字母跟着旋律走。检验新排列时，从新低音向上分别算到中声部和高声部，再比较重拍和句尾是否稳定。</p>
+        <div class="music-demo counterpoint-steps" id="three-voice-permutation" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h3>三条旋律的六种位置</h3>
+            <fieldset class="counterpoint-choices" aria-label="从高到低的声部排列">
+              <label><input type="radio" name="three-voice-permutation-option" value="abc" checked><span>A–B–C</span></label>
+              <label><input type="radio" name="three-voice-permutation-option" value="acb"><span>A–C–B</span></label>
+              <label><input type="radio" name="three-voice-permutation-option" value="bac"><span>B–A–C</span></label>
+              <label><input type="radio" name="three-voice-permutation-option" value="bca"><span>B–C–A</span></label>
+              <label><input type="radio" name="three-voice-permutation-option" value="cab"><span>C–A–B</span></label>
+              <label><input type="radio" name="three-voice-permutation-option" value="cba"><span>C–B–A</span></label>
+            </fieldset>
+          </div>
+          <figure aria-label="三条旋律的六种位置"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <p>三条旋律已经能够结合时，可以让高、低声部交换位置，中声部保持不变。这是三声部复对位的一种。交换前后，低音的改变会直接影响和弦的位置。</p>
+        <details class="lesson-aside">
+          <summary>三声部与四声部的排列数</summary>
+          <div class="lesson-aside-content"><p>三条线的高、中、低有六种排法，四条线有二十四种，都把原位算在内。曲子可以只取其中一种换法。把一条线高唱或低唱一个八度时，同名音还能保持原来的调式。</p></div>
+        </details>
+        <p>三条线在一个结构点同时形成 C–E–G 时，G 若被换到低音，原来的 C 大三和弦成为四六和弦。
+          <svg class="inline-staff" viewBox="0 0 82 39" role="img" aria-label="低音为 C 的 C E G，换位成低音为 G 的 G C E">
+            <path class="inline-staff-lines" d="M1 6H81 M1 11H81 M1 16H81 M1 21H81 M1 26H81"/>
+            <path d="M10 31H23"/>
+            <text x="13" y="31">&#xE0A4;</text><text x="13" y="26">&#xE0A4;</text><text x="13" y="21">&#xE0A4;</text>
+            <text x="57" y="21">&#xE0A4;</text><text x="57" y="13.5">&#xE0A4;</text><text x="57" y="8.5">&#xE0A4;</text>
+          </svg>
+          G 到最低处时，上方的 C 和 E 分别在它上面四度、六度，所以叫四六和弦。
+        </p>
+        <p>如果新版本的这一拍需要稳住，可以让根音 C 继续在最低处，或用另一个 C 代替要移到低处的 G。若想保留 G 在低处，则可把换位安排在经过处，让上方的音接着走。换到低音的若是七音或九音，也要检查它下一步怎样解决。最后沿着三条线从头检查音域和交错，再看换位有没有造成连续的五度或八度平行。</p>
+      </section>
+    </main>
+  </body>
+</html>

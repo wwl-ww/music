@@ -1,4 +1,4 @@
-export function enableScrollFrame(frame, label) {
+export function enableScrollFrame(frame, label, { vertical = false } = {}) {
   frame.classList.add('scroll-frame');
   const hint = document.createElement('small');
   hint.className = 'scroll-frame-hint';
@@ -6,13 +6,17 @@ export function enableScrollFrame(frame, label) {
   hint.setAttribute('aria-hidden', 'true');
   frame.after(hint);
   const update = () => {
-    const overflow = frame.clientWidth > 0 && frame.scrollWidth > frame.clientWidth + 1;
+    const horizontalOverflow = frame.clientWidth > 0 && frame.scrollWidth > frame.clientWidth + 1;
+    const verticalOverflow = vertical && frame.clientHeight > 0 && frame.scrollHeight > frame.clientHeight + 1;
+    const overflow = horizontalOverflow || verticalOverflow;
     frame.classList.toggle('is-scrollable', overflow);
     hint.hidden = !overflow;
     if (overflow) {
+      const direction = horizontalOverflow && verticalOverflow ? '' : horizontalOverflow ? '横向' : '纵向';
+      hint.textContent = direction + '滚动查看';
       frame.tabIndex = 0;
       frame.setAttribute('role', 'region');
-      frame.setAttribute('aria-label', `${label}，可横向滚动`);
+      frame.setAttribute('aria-label', `${label}，可${direction}滚动`);
     } else {
       frame.removeAttribute('tabindex');
       frame.removeAttribute('role');

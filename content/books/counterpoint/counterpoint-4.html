@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第四章 倒影与逆行｜复调音乐 · 上篇</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./counterpoint-learning.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./counterpoint.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">复调音乐 · 上篇</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第四章 倒影与逆行</h1>
+      <p class="intro">本章用 G–A–B–D 对照两种旋律变形。倒影改变音程的进行方向。逆行改变音符在时间上的次序。</p>
+      <section aria-labelledby="mirror-melody">
+        <h2 id="mirror-melody">倒影</h2>
+        <h3>原形与倒影</h3>
+        <p>以 A 为<strong>轴音</strong>，G 在红线下方一个全音，倒影后的 B 在红线上方一个全音。B 同样对应 G，A 本身的位置不变。</p>
+        <figure class="counterpoint-axis-diagram">
+          <figcaption>以 A 为轴的等距离倒影</figcaption>
+          <div class="counterpoint-axis-key" aria-hidden="true"><span>原形</span><span class="counterpoint-axis-image">倒影</span></div>
+          <svg class="inline-staff counterpoint-axis-staff" viewBox="0 0 360 113" role="img" aria-label="高音谱表上的红线为 A4 轴。G4 向上对应 B4，A4 保持原位，B4 向下对应 G4，D5 向下对应 E4。">
+            <defs>
+              <marker id="a-axis-arrow" class="counterpoint-axis-arrow" viewBox="0 0 4 4" refX="4" refY="2" markerWidth="4" markerHeight="4" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0L4 2L0 4Z"/></marker>
+            </defs>
+            <path class="inline-staff-lines" d="M4 33H306 M4 45H306 M4 57H306 M4 69H306 M4 81H306"/>
+            <text x="12" y="69">&#xE050;</text>
+            <path class="counterpoint-axis-line" d="M42 63H309"/>
+            <text class="counterpoint-axis-label" x="315" y="67">A4 轴</text>
+            <path class="counterpoint-axis-connection" d="M76 67V58" marker-end="url(#a-axis-arrow)"/>
+            <path class="counterpoint-axis-connection" d="M204 59V68" marker-end="url(#a-axis-arrow)"/>
+            <path class="counterpoint-axis-connection" d="M268 47V80" marker-end="url(#a-axis-arrow)"/>
+            <g text-anchor="middle">
+              <g><text x="63" y="69">&#xE0A4;</text><text x="127" y="63">&#xE0A4;</text><text x="191" y="57">&#xE0A4;</text><text x="255" y="45">&#xE0A4;</text></g>
+              <g class="counterpoint-axis-image"><text x="89" y="57">&#xE0A4;</text><text x="153" y="63">&#xE0A4;</text><text x="217" y="69">&#xE0A4;</text><text x="281" y="81">&#xE0A4;</text></g>
+              <g class="counterpoint-axis-pair"><text x="76" y="105">G → B</text><text x="140" y="105">A → A</text><text x="204" y="105">B → G</text><text x="268" y="105">D → E</text></g>
+            </g>
+          </svg>
+        </figure>
+        <p>D 在 A 上方五个半音，倒影音 E 在 A 下方五个半音。等距离倒影保留每个音离轴的半音数，把它移到另一侧。原形与倒影在轴音处相交，任意音级都可以选作轴。原来的上行变成下行，音符的先后和时值照旧。</p>
+        <h3 id="pentatonic-inversion">倒影的轴</h3>
+        <h4>五声音阶的倒影</h4>
+        <p>以 C 宫五声音阶为例，红线标出宫音 C。向上数一级是商音 D，向下数一级是羽音 A，所以 D 对应 A。向上数两级是角音 E，向下数两级是徵音 G，所以 E 对应 G。</p>
+        <p>宫音上方的 D 相隔两个半音，下方的 A 相隔三个半音。两者在五声音阶里都与宫音相邻。五声倒影按<strong>音级数</strong>配对，把相邻音间的小三度也算作一级，因此可以保留五声音列。若把原来的主音理解为调式中心，它对应的倒影音就可以成为新主音。例如宫轴使商与羽互换，原来以 D 为中心的商调便可变成以 A 为中心的羽调。</p>
+        <div class="music-demo counterpoint-steps" id="pentatonic-axes" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h4>同一五声旋律的五种轴</h4>
+            <fieldset class="counterpoint-choices" aria-label="五声倒影轴">
+              <label><input type="radio" name="pentatonic-axes-option" value="0" checked><span>宫</span></label>
+              <label><input type="radio" name="pentatonic-axes-option" value="1"><span>商</span></label>
+              <label><input type="radio" name="pentatonic-axes-option" value="2"><span>角</span></label>
+              <label><input type="radio" name="pentatonic-axes-option" value="3"><span>徵</span></label>
+              <label><input type="radio" name="pentatonic-axes-option" value="4"><span>羽</span></label>
+            </fieldset>
+          </div>
+          <figure class="counterpoint-axis-diagram counterpoint-axis-preview" data-counterpoint-axis>
+            <figcaption>原形、轴音与倒影音</figcaption>
+            <div class="counterpoint-axis-key" aria-hidden="true"><span>原形</span><span class="counterpoint-axis-image">倒影</span></div>
+            <svg class="inline-staff counterpoint-axis-staff" viewBox="0 0 360 113" role="img" aria-label="高音谱表上的红线为宫音 C5。原形 C5、D5、E5、G5、A5 依次对应 C5、A4、G4、E4、D4。">
+              <defs>
+                <marker id="gong-axis-arrow" class="counterpoint-axis-arrow" viewBox="0 0 4 4" refX="4" refY="2" markerWidth="4" markerHeight="4" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0L4 2L0 4Z"/></marker>
+              </defs>
+              <path class="inline-staff-lines" d="M4 33H306 M4 45H306 M4 57H306 M4 69H306 M4 81H306"/>
+              <path d="M247 21H273"/>
+              <text x="12" y="69">&#xE050;</text>
+              <path class="counterpoint-axis-line" d="M42 51H309"/>
+              <text class="counterpoint-axis-label" x="312" y="55">C5 宫轴</text>
+              <path class="counterpoint-axis-connection" d="M114 47V62" marker-end="url(#gong-axis-arrow)"/>
+              <path class="counterpoint-axis-connection" d="M167 41V68" marker-end="url(#gong-axis-arrow)"/>
+              <path class="counterpoint-axis-connection" d="M220 29V80" marker-end="url(#gong-axis-arrow)"/>
+              <path class="counterpoint-axis-connection" d="M273 23V86" marker-end="url(#gong-axis-arrow)"/>
+              <g text-anchor="middle">
+                <g><text x="48" y="51">&#xE0A4;</text><text x="101" y="45">&#xE0A4;</text><text x="154" y="39">&#xE0A4;</text><text x="207" y="27">&#xE0A4;</text><text x="260" y="21">&#xE0A4;</text></g>
+                <g class="counterpoint-axis-image"><text x="74" y="51">&#xE0A4;</text><text x="127" y="63">&#xE0A4;</text><text x="180" y="69">&#xE0A4;</text><text x="233" y="81">&#xE0A4;</text><text x="286" y="87">&#xE0A4;</text></g>
+                <g class="counterpoint-axis-pair"><text x="61" y="105">宫 → 宫</text><text x="114" y="105">商 → 羽</text><text x="167" y="105">角 → 徵</text><text x="220" y="105">徵 → 角</text><text x="273" y="105">羽 → 商</text></g>
+              </g>
+            </svg>
+          </figure>
+          <figure aria-label="同一五声旋律的五种轴"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <details class="lesson-aside">
+          <summary>五声调式的轴音对应</summary>
+          <div class="lesson-aside-content">
+          <p>宫、商、角、徵、羽都可以作轴。每一行的两对音都可以双向互换，轴音保留。</p>
+          <ul>
+            <li>宫轴：商与羽互换，角与徵互换。</li>
+            <li>商轴：宫与角互换，徵与羽互换。</li>
+            <li>角轴：商与徵互换，宫与羽互换。</li>
+            <li>徵轴：角与羽互换，宫与商互换。</li>
+            <li>羽轴：宫与徵互换，商与角互换。</li>
+          </ul></div>
+        </details>
+        <details class="lesson-aside">
+          <summary>大小调倒影的轴音</summary>
+          <div class="lesson-aside-content">
+            <p>大调以第 Ⅱ 级为轴，自然小调以第 Ⅳ 级为轴时，轴两侧的全音与半音位置对称，可以保持原音阶。C 大调以 D 作轴，C 与 E 对换、B 与 F 对换。a 自然小调也以 D 作轴，D 是它的第 Ⅳ 级。</p>
+            <p>另一种办法以第 Ⅲ 级作音级轴，使主音和属音互换。C 大调以 E 作轴，C 向上数两级到 E，再向上数两级到 G。C–E 是四个半音，E–G 是三个半音。这个用法以主属互换为目标，个别音程的半音数会改变。</p>
+          </div>
+        </details>
+        <h3>倒影的形式</h3>
+        <p>以同一个轴将两条线一起作半音倒影时，高低位置互换，同时发声的两音仍相隔同样多的半音。只翻一条线时，另一条线会遇到不同的音，写作时可让固定声部同时配合原形与倒影，分别检查两种结合。也可在倒影后把整条声部搬到新的音区，或结合移调，使材料在新的调性和高低位置再次出现。</p>
+        <div class="music-demo counterpoint-steps" id="inversion-voices" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h4>单部倒影与两部倒影</h4>
+            <fieldset class="counterpoint-choices" aria-label="倒影的声部">
+              <label><input type="radio" name="inversion-voices-option" value="original" checked><span>原形</span></label>
+              <label><input type="radio" name="inversion-voices-option" value="upper"><span>只翻上部</span></label>
+              <label><input type="radio" name="inversion-voices-option" value="both"><span>翻转两部</span></label>
+            </fieldset>
+          </div>
+          <figure aria-label="单部倒影与两部倒影"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+      <section aria-labelledby="reverse-melody">
+        <h2 id="reverse-melody">逆行</h2>
+        <h3>原形与逆行</h3>
+        <p>同一个音在原句里有自己的音高和时值。末尾的 D 是二分音符，响两拍。把 D 搬到开头时，可以沿用开头的半拍，也可以连它原来的两拍一起搬。两种办法得到同样的音高顺序，却会得到不同的节奏。</p>
+        <div class="music-demo counterpoint-steps" id="melodic-transform" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h4>音高逆序与严格逆行</h4>
+            <fieldset class="counterpoint-choices" aria-label="逆行的次序和范围">
+              <label><input type="radio" name="melodic-transform-option" value="joined" checked><span>原形与逆行连奏</span></label>
+              <label><input type="radio" name="melodic-transform-option" value="original"><span>原形</span></label>
+              <label><input type="radio" name="melodic-transform-option" value="pitchesOnly"><span>音高逆序</span></label>
+              <label><input type="radio" name="melodic-transform-option" value="retrograde"><span>严格逆行</span></label>
+              <label><input type="radio" name="melodic-transform-option" value="invertedRetrograde"><span>倒影加逆行</span></label>
+            </fieldset>
+          </div>
+          <figure aria-label="音高逆序与严格逆行"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <p>时值排列对称时，逆行后节奏形状照旧，例如“短—长—短”。不对称的“短—短—长”会变成“长—短—短”。开头或结尾的休止也连着时值一起倒排。</p>
+        <h3>逆行的镜相点</h3>
+        <figure class="counterpoint-timing">
+          <figcaption>原形与逆行的时值对照。每格为半拍。</figcaption>
+          <div class="counterpoint-timing-grid" role="img" aria-label="原形 G 半拍、A 半拍、B 一拍、D 两拍。小节线是镜相点。逆行 D 两拍、B 一拍、A 半拍、G 半拍。">
+            <span class="counterpoint-timing-heading">原形</span>
+            <span class="counterpoint-timing-heading counterpoint-timing-edge">逆行</span>
+            <span class="counterpoint-timing-note">G</span><span class="counterpoint-timing-note">A</span>
+            <span class="counterpoint-timing-note" style="--steps: 2">B</span><span class="counterpoint-timing-note" style="--steps: 4">D</span>
+            <span class="counterpoint-timing-note counterpoint-timing-edge" style="--steps: 4">D</span><span class="counterpoint-timing-note" style="--steps: 2">B</span>
+            <span class="counterpoint-timing-note">A</span><span class="counterpoint-timing-note">G</span>
+            <span class="counterpoint-timing-marker">镜相点</span>
+          </div>
+        </figure>
+        <p>原形在小节线折回，这条线就是<strong>镜相点</strong>。离折返点半拍的两个位置都在 D 内，离它两拍半的两个位置都在 B 内。折回时重新奏一次 D，两段各保留原来的两拍。</p>
+        <p>镜相点落定后，离它最近的那组先响，最远的那组最后响。若最后一个音原本贴着镜相点结束，它在逆行中就从镜相点开始。若原句在末尾留了半拍休止，逆行也要在这一侧先留半拍静默。</p>
+        <p>镜相点可以放在两个动机、乐句或乐段之间，也可放在句子内部。放在句中时，原形与逆行要能连成同一句。把前两小节都算进原句，后半便先倒奏第二小节，再倒奏第一小节。第 17 章的<a href="./counterpoint-17.html#mirror-fugue">两声部谱例</a>展示了这种结构。</p>
+        <h3>逆行的形式</h3>
+        <p>一音对一音时，两部同步逆行，原来的音程顺序整体倒过来。一音对数音时，两部若从同一时刻严格倒排，长音仍与原来的短音组相叠，但这一组短音的次序和重拍位置会改变。只让一部逆行，就会产生新的音高搭配，需要重新检查协和与解决。</p>
+        <p>逆行可用于单声部或多声部。二声部可以保留原来的高低位置，也可以结合复对位，在向后重排时交换高低。还可以只反转一个乐句、再移到新调，或同时沿音高轴倒影并沿时间倒排，形成<strong>逆行倒影</strong>。</p>
+        <p>带歌词的作品还可以连唱词一起倒排，形成回文。为配合反向的字音和句读，节奏可作局部调整。</p>
+        <div class="music-demo counterpoint-steps" id="retrograde-voices" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h4>单部逆行与两部逆行</h4>
+            <fieldset class="counterpoint-choices" aria-label="逆行的声部">
+              <label><input type="radio" name="retrograde-voices-option" value="original" checked><span>原形</span></label>
+              <label><input type="radio" name="retrograde-voices-option" value="upper"><span>上部逆行</span></label>
+              <label><input type="radio" name="retrograde-voices-option" value="both"><span>两部逆行</span></label>
+              <label><input type="radio" name="retrograde-voices-option" value="exchanged"><span>逆行后换位</span></label>
+            </fieldset>
+          </div>
+          <figure aria-label="单部逆行与两部逆行"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

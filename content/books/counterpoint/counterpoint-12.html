@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第十二章 卡农小曲｜复调音乐 · 下篇</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./counterpoint-learning.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./counterpoint-scores.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">复调音乐 · 下篇</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第十二章　卡农小曲</h1>
+      <p class="intro">上一章的下声部唱的是自己的一条线。这一章让它接过上声部的曲调，并保持固定的时间距离。</p>
+      <section aria-labelledby="study-12">
+        <h2 id="study-12">从局部模仿到卡农</h2>
+        <p>上方的短曲有两句。第一句从 C 起，停在 G；第二句从 G 起，收回 C。应句已经模仿了第一句，下一步是确定它怎样接第二句。时差改变后，先后两句会在新的位置叠响。</p>
+        <div class="music-demo counterpoint-steps" id="path-canon" data-counterpoint="path-canon">
+          <div class="music-demo-toolbar">
+            <fieldset class="counterpoint-choices" aria-label="让第二声部接着追第二句">
+              <label><input type="radio" name="path-canon" value="head" checked><span>只模仿第一句</span></label>
+              <label><input type="radio" name="path-canon" value="continue"><span>两句都晚一拍</span></label>
+              <label><input type="radio" name="path-canon" value="wider"><span>两句都晚两拍</span></label>
+            </fieldset>
+          </div>
+          <figure aria-label="让第二声部接着追第二句"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <p>写两句卡农时，第二句既是新出现的旋律，也会稍后变成下方的应句。选好时差后，要核对新句与当时仍在响的前一句能否配合。</p>
+        <div class="counterpoint-next">
+          <p>固定时差会让一条旋律与自己的前后部分相叠。下一章只取其中一个短动作，看看它怎样发展成一句。</p>
+          <a href="./counterpoint-13.html">第 13 章 · 用三个音发展出一个段落 <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+      <section aria-labelledby="explore-12">
+        <h2 id="explore-12">改变卡农的音程、形态和收束</h2>
+        <details class="lesson-aside" id="direct-canon">
+          <summary>原形卡农的音程、节奏和分段</summary>
+          <div class="lesson-aside-content">
+            <p>谱里上方从 E5 开始，下方从 E4 开始，音名一样，低一个八度，后面的每个音也按同样的办法处理。这是最容易辨认的<strong>原形卡农</strong>。如果把 E5 的对应音改成下方的 A4，移位便成了下方纯五度。两种情况都要检查后来重叠的音，因为下方换了起音后，原来合得上的地方可能变了。十三度是八度加六度的实际跨度，判断是哪两个音时可先看同一八度内的六度。</p>
+            <p>假设上方第一拍用两颗八分音符，第二拍只保持一个四分音符。下方晚一拍进来，就会把第一拍的两个短音放到上方的长音下面。若两拍都写成同样的音型，错开之后两边仍容易一齐换音。二拍子可以让两拍各有不同节奏，三拍子则给三拍安排不同的长短。短句里用跳进开头、接着级进，也容易写出能和自己相叠的线条。</p>
+            <div class="music-demo" id="canon-delay" data-counterpoint="canon-delay">
+              <div class="music-demo-toolbar"><h3>同一起句的三种卡农时差</h3><label>时差 <select><option value="beat">一拍</option><option value="half">两拍</option><option value="measure">一小节</option></select></label></div>
+              <figure aria-label="同一起句的三种卡农时差"></figure>
+              <output class="music-demo-cue"></output>
+            </div>
+            <p>乐段内部可有数次同型模仿。过渡句能暂时加厚织体，最后再收紧进入。补充中可混用较自由的七度模仿、严格的八度模仿和相对自由的终止。一个段落保持一拍时差，另一段改用四拍时差、改变律动并转入另一调式，便能同时改变情绪、速度感和句法。结尾可作第一段的严格再现，另加短尾声。也可在两个段落的补充句中保持追逐节奏，改写调性使后段回主。</p>
+            <p>有时第一声部唱出一句，另一条线在五度上答它。后来还可以把两条现成的线重新挪到不同的高低位置。这里用了两次不同的操作。第一次的五度决定应句从哪个音进入，第二次的九度说的是两条线换位置时总共挪多远。写完新的摆法，要重新看重拍上的音能否合住。空弦持续音可以另加在下方，给两条追随的旋律提供背景。</p>
+            <p>同一首小曲的补充句可以保留五度模仿，却把时差从两拍缩到一拍。两次入口靠得更近，句首重音也错开了。若两线此时都有连续的八分音符，细小起音依然可能对齐，听觉上的追逐还要靠每组的句首和轻重区别。</p>
+            <details class="lesson-aside">
+              <summary>十三度模仿中的九声音列</summary>
+              <p>以 A 为中心的一种写法让 A 固定，另外四个音级各有两种可选的记法与音高。C／C♯、E／E♭、G／G♯、B／B♭，合起来是八个音，再加 A 就成了九声音列。其中有 A–E、C–G、C♯–G♯、E♭–B♭、E–B 五个纯五度框架。不同片段可以突出不同的框架，中心 A 仍可通过句尾和长音听出来。</p>
+              <p>两声部时差为一拍。乐段的变化重复沿用这一模仿距离，调整个别音调和语气，最后用补充句收束。</p>
+            </details>
+          </div>
+        </details>
+        <details class="lesson-aside" id="canon-parameters">
+          <summary>连续模仿与三项独立条件</summary>
+          <div class="lesson-aside-content">
+            <p>判断卡农先找起句和应句。若应句追随的已是起句之后的下一句，而关系持续成立，就进入了连续模仿。只有一个主题入口彼此相似、后面各自发展的写法，可以是局部模仿。卡农小曲可以在主要段落使用连续模仿，把引子、过渡、补充或尾声留给较自由的写法。</p>
+            <table class="lesson-table">
+            <caption>卡农关系的不同维度</caption>
+            <thead>
+            <tr>
+            <th scope="col">维度</th>
+            <th scope="col">要比较的对象</th>
+            <th scope="col">常见选择</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <th scope="row">时间距离</th>
+            <td>同一材料的两次起点相差多少</td>
+            <td>一拍、半小节、整小节或一句</td>
+            </tr>
+            <tr>
+            <th scope="row">移位音程</th>
+            <td>应句首音与起句首音的距离和方向</td>
+            <td>八度、五度、十三度等</td>
+            </tr>
+            <tr>
+            <th scope="row">材料变形</th>
+            <td>音程方向、节奏比例或次序是否改变</td>
+            <td>原形、倒影、扩大等</td>
+            </tr>
+            <tr>
+            <th scope="row">段尾组织</th>
+            <td>末句怎样收束或回接</td>
+            <td>有终卡农，能回接开头的无终卡农</td>
+            </tr>
+            </tbody>
+            </table>
+            <p>速度较舒缓时，入口的距离容易形成领与合。较快时，同一关系可能成为紧迫的追逐。听感还取决于时差内实际包含多少音符，不能仅由速度术语决定。</p>
+          </div>
+        </details>
+        <details class="lesson-aside" id="transformed-canon" open>
+          <summary>倒影与比率不同的扩大卡农</summary>
+          <div class="lesson-aside-content">
+            <p>譬如上方按 A、B、C 的顺序唱三句。切到「倒影」时，下方依旧晚进，但每次用反方向呼应上方。上方唱 B 的时候，下方正在唱 A 的倒影。写 B 时得让它一方面能和正在响的 A 倒影配在一起，另一方面又能给之后的声部照着翻。按实际调式改少量全音和半音时，变化较自由，仍要保住可辨认的走向与节奏。</p>
+            <p>假设原先一个音唱半拍，对应的音唱一拍，原来一拍的就唱两拍。每个音都用同一个倍数延长，这就是<strong>扩大</strong>。上方唱完两次短句时，下方可能才唱完一次。三部示范里，同一句在三个声部用了原来、两倍和四倍的时间。高声部唱四次的这段时间，中声部唱两次，低声部唱一次。也可让外侧两条线保持这种关系，中间另写旋律。</p>
+            <div class="music-demo" id="canon-transform" data-counterpoint="canon-transform">
+              <div class="music-demo-toolbar"><h3>原形、倒影和扩大应句</h3><label>应句 <select><option value="original">原形</option><option value="inversion">倒影</option><option value="double">两倍时值</option><option value="tripleLayer">三部 1∶2∶4</option></select></label></div>
+              <figure aria-label="原形、倒影和扩大应句"></figure>
+              <output class="music-demo-cue"></output>
+            </div>
+            <p>连续模仿容易把段落串成无停顿的长链。用动机再现、逐步变化的音区、可辨认的高潮与终止明确方向。末尾可以暂时退出连续模仿，改用同时发生的倒影。两条线相反进行，最后以齐奏或稳定和声结束。另有小调段落借同主音大三和弦收尾的写法，常称皮卡第三度。</p>
+          </div>
+        </details>
+        <details class="lesson-aside" id="mixed-canon" open>
+          <summary>卡农、对比与复对位的组合</summary>
+          <div class="lesson-aside-content">
+            <p>A 段先让两条线各唱各的内容。B 段换另一个主题，安排它从一条线进入，另一条线晚一点接唱。<strong>A′</strong> 表示 A 再出现并改变了写法，例如两条曲调都作倒影，再交换上下。<strong>B′</strong> 可保留卡农、缩短两个入口的时间差，也可同时交换声部。<strong>A″</strong> 只回顾 A 的几小句来结束。这样读 A–B–A′–B′–A″，每次回来时都有能认出的材料和听得出的变化。</p>
+            <h3 id="four-note-mirror-scales">四音列倒影与七声减调式</h3>
+            <p>两条声部各用纯四度内的四个音，音域互不交越。每组图先把互为倒影的音用线连起来，再把两组音按高度排在同一谱表上。以 A 段为例，G♯4 与 A4 离轴最近，D♯4 与 D5 离轴最远。D♯4 到 A4、G♯4 到 D5 都是减五度，两个同字母的端点 D♯4 与 D5 相隔减八度。</p>
+            <figure class="counterpoint-axis-diagram counterpoint-mode-diagram">
+              <figcaption>A 段 · 倒影轴在 G♯4 与 A4 之间</figcaption>
+              <div class="counterpoint-mode-pair">
+                <svg class="inline-staff counterpoint-axis-staff counterpoint-mode-staff" viewBox="0 -13 342 132" role="img" aria-label="四音列的倒影。G♯4 对应 A4，F♯4 对应 B4，E♯4 对应 C5，D♯4 对应 D5。倒影轴在G♯4 与 A4 之间。">
+                <path class="inline-staff-lines" d="M4 26H340 M4 40H340 M4 54H340 M4 68H340 M4 82H340"/>
+                <text x="9" y="68">&#xE050;</text>
+                <path class="counterpoint-axis-line" stroke-dasharray="4 3" d="M39 64.5H337"/>
+                <path class="counterpoint-axis-connection" d="M71 68L89 61 M143 75L161 54 M215 82L233 47 M287 89L305 40"/>
+                <text x="56" y="68">&#xE262;</text>
+                <text x="71" y="68">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="80" y="111">G♯4↔A4</text>
+                <text class="counterpoint-axis-image" x="89" y="61">&#xE0A2;</text>
+                <text x="128" y="75">&#xE262;</text>
+                <text x="143" y="75">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="152" y="111">F♯4↔B4</text>
+                <text class="counterpoint-axis-image" x="161" y="54">&#xE0A2;</text>
+                <text x="200" y="82">&#xE262;</text>
+                <text x="215" y="82">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="224" y="111">E♯4↔C5</text>
+                <text class="counterpoint-axis-image" x="233" y="47">&#xE0A2;</text>
+                <text x="272" y="89">&#xE262;</text>
+                <text x="287" y="89">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="296" y="111">D♯4↔D5</text>
+                <text class="counterpoint-axis-image" x="305" y="40">&#xE0A2;</text>
+                </svg>
+                <svg class="inline-staff counterpoint-axis-staff counterpoint-mode-staff" viewBox="0 0 342 166" role="img" aria-label="合并音列。D♯4、E♯4、F♯4、G♯4、A4、B4、C5、D5。减五度为 D♯4、A4、G♯4、D5。首尾为减八度。">
+                <path class="inline-staff-lines" d="M4 73H340 M4 87H340 M4 101H340 M4 115H340 M4 129H340"/>
+                <text x="9" y="115">&#xE050;</text>
+                <path class="counterpoint-axis-connection" d="M50 21v-7H323v7"/>
+                <text class="counterpoint-mode-label counterpoint-mode-interval" x="186.5" y="12">减八度</text>
+                <path class="counterpoint-axis-connection" d="M50 40v-7H206v7"/>
+                <text class="counterpoint-mode-label counterpoint-mode-interval" x="128" y="31">减五度</text>
+                <path class="counterpoint-axis-connection" d="M167 59v-7H323v7"/>
+                <text class="counterpoint-mode-label counterpoint-mode-interval" x="245" y="50">减五度</text>
+                <text x="35" y="136">&#xE262;</text>
+                <text x="50" y="136">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="50" y="158">D♯4</text>
+                <text x="74" y="129">&#xE262;</text>
+                <text x="89" y="129">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="89" y="158">E♯4</text>
+                <text x="113" y="122">&#xE262;</text>
+                <text x="128" y="122">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="128" y="158">F♯4</text>
+                <text x="152" y="115">&#xE262;</text>
+                <text x="167" y="115">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="167" y="158">G♯4</text>
+                <text class="counterpoint-axis-image" x="206" y="108">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="206" y="158">A4</text>
+                <text class="counterpoint-axis-image" x="245" y="101">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="245" y="158">B4</text>
+                <text class="counterpoint-axis-image" x="284" y="94">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="284" y="158">C5</text>
+                <text class="counterpoint-axis-image" x="323" y="87">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="323" y="158">D5</text>
+                </svg>
+              </div>
+            </figure>
+            <figure class="counterpoint-axis-diagram counterpoint-mode-diagram">
+              <figcaption>B 段 · 倒影轴在 C♯4 与 D4 之间</figcaption>
+              <div class="counterpoint-mode-pair">
+                <svg class="inline-staff counterpoint-axis-staff counterpoint-mode-staff" viewBox="0 -13 342 160" role="img" aria-label="四音列的倒影。C♯4 对应 D4，B3 对应 E4，A♯3 对应 F4，G♯3 对应 G4。倒影轴在C♯4 与 D4 之间。">
+                <path class="inline-staff-lines" d="M4 26H340 M4 40H340 M4 54H340 M4 68H340 M4 82H340"/>
+                <text x="9" y="68">&#xE050;</text>
+                <path class="counterpoint-axis-line" stroke-dasharray="4 3" d="M39 92.5H337"/>
+                <path class="counterpoint-axis-connection" d="M71 96L89 89 M143 103L161 82 M215 110L233 75 M287 117L305 68"/>
+                <path d="M62 96h18"/>
+                <text x="56" y="96">&#xE262;</text>
+                <text x="71" y="96">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="80" y="139">C♯4↔D4</text>
+                <text class="counterpoint-axis-image" x="89" y="89">&#xE0A2;</text>
+                <path d="M134 96h18"/>
+                <text x="143" y="103">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="152" y="139">B3↔E4</text>
+                <text class="counterpoint-axis-image" x="161" y="82">&#xE0A2;</text>
+                <path d="M206 96h18"/>
+                <path d="M206 110h18"/>
+                <text x="200" y="110">&#xE262;</text>
+                <text x="215" y="110">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="224" y="139">A♯3↔F4</text>
+                <text class="counterpoint-axis-image" x="233" y="75">&#xE0A2;</text>
+                <path d="M278 96h18"/>
+                <path d="M278 110h18"/>
+                <text x="272" y="117">&#xE262;</text>
+                <text x="287" y="117">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="296" y="139">G♯3↔G4</text>
+                <text class="counterpoint-axis-image" x="305" y="68">&#xE0A2;</text>
+                </svg>
+                <svg class="inline-staff counterpoint-axis-staff counterpoint-mode-staff" viewBox="0 0 342 194" role="img" aria-label="合并音列。G♯3、A♯3、B3、C♯4、D4、E4、F4、G4。减五度为 G♯3、D4、C♯4、G4。首尾为减八度。">
+                <path class="inline-staff-lines" d="M4 73H340 M4 87H340 M4 101H340 M4 115H340 M4 129H340"/>
+                <text x="9" y="115">&#xE050;</text>
+                <path class="counterpoint-axis-connection" d="M50 21v-7H323v7"/>
+                <text class="counterpoint-mode-label counterpoint-mode-interval" x="186.5" y="12">减八度</text>
+                <path class="counterpoint-axis-connection" d="M50 40v-7H206v7"/>
+                <text class="counterpoint-mode-label counterpoint-mode-interval" x="128" y="31">减五度</text>
+                <path class="counterpoint-axis-connection" d="M167 59v-7H323v7"/>
+                <text class="counterpoint-mode-label counterpoint-mode-interval" x="245" y="50">减五度</text>
+                <path d="M41 143h18"/>
+                <path d="M41 157h18"/>
+                <text x="35" y="164">&#xE262;</text>
+                <text x="50" y="164">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="50" y="186">G♯3</text>
+                <path d="M80 143h18"/>
+                <path d="M80 157h18"/>
+                <text x="74" y="157">&#xE262;</text>
+                <text x="89" y="157">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="89" y="186">A♯3</text>
+                <path d="M119 143h18"/>
+                <text x="128" y="150">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="128" y="186">B3</text>
+                <path d="M158 143h18"/>
+                <text x="152" y="143">&#xE262;</text>
+                <text x="167" y="143">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="167" y="186">C♯4</text>
+                <text class="counterpoint-axis-image" x="206" y="136">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="206" y="186">D4</text>
+                <text class="counterpoint-axis-image" x="245" y="129">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="245" y="186">E4</text>
+                <text class="counterpoint-axis-image" x="284" y="122">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="284" y="186">F4</text>
+                <text class="counterpoint-axis-image" x="323" y="115">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="323" y="186">G4</text>
+                </svg>
+              </div>
+            </figure>
+            <figure class="counterpoint-axis-diagram counterpoint-mode-diagram">
+              <figcaption>A′ 段 · 倒影轴在 E5 与 F5 之间</figcaption>
+              <div class="counterpoint-mode-pair">
+                <svg class="inline-staff counterpoint-axis-staff counterpoint-mode-staff" viewBox="0 -13 342 125" role="img" aria-label="四音列的倒影。E5 对应 F5，D5 对应 G5，C♯5 对应 A♭5，B4 对应 B♭5。倒影轴在E5 与 F5 之间。">
+                <path class="inline-staff-lines" d="M4 26H340 M4 40H340 M4 54H340 M4 68H340 M4 82H340"/>
+                <text x="9" y="68">&#xE050;</text>
+                <path class="counterpoint-axis-line" stroke-dasharray="4 3" d="M39 29.5H337"/>
+                <path class="counterpoint-axis-connection" d="M71 33L89 26 M143 40L161 19 M215 47L233 12 M287 54L305 5"/>
+                <text x="71" y="33">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="80" y="104">E5↔F5</text>
+                <text class="counterpoint-axis-image" x="89" y="26">&#xE0A2;</text>
+                <text x="143" y="40">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="152" y="104">D5↔G5</text>
+                <text class="counterpoint-axis-image" x="161" y="19">&#xE0A2;</text>
+                <text x="200" y="47">&#xE262;</text>
+                <text x="215" y="47">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="224" y="104">C♯5↔A♭5</text>
+                <path d="M224 12h18"/>
+                <text x="218" y="12">&#xE260;</text>
+                <text class="counterpoint-axis-image" x="233" y="12">&#xE0A2;</text>
+                <text x="287" y="54">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="296" y="104">B4↔B♭5</text>
+                <path d="M296 12h18"/>
+                <text x="290" y="5">&#xE260;</text>
+                <text class="counterpoint-axis-image" x="305" y="5">&#xE0A2;</text>
+                </svg>
+                <svg class="inline-staff counterpoint-axis-staff counterpoint-mode-staff" viewBox="0 0 342 180" role="img" aria-label="合并音列。B4、C♯5、D5、E5、F5、G5、A♭5、B♭5。减五度为 B4、F5、E5、B♭5。首尾为减八度。">
+                <path class="inline-staff-lines" d="M4 94H340 M4 108H340 M4 122H340 M4 136H340 M4 150H340"/>
+                <text x="9" y="136">&#xE050;</text>
+                <path class="counterpoint-axis-connection" d="M50 21v-7H323v7"/>
+                <text class="counterpoint-mode-label counterpoint-mode-interval" x="186.5" y="12">减八度</text>
+                <path class="counterpoint-axis-connection" d="M50 40v-7H206v7"/>
+                <text class="counterpoint-mode-label counterpoint-mode-interval" x="128" y="31">减五度</text>
+                <path class="counterpoint-axis-connection" d="M167 59v-7H323v7"/>
+                <text class="counterpoint-mode-label counterpoint-mode-interval" x="245" y="50">减五度</text>
+                <text x="50" y="122">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="50" y="172">B4</text>
+                <text x="74" y="115">&#xE262;</text>
+                <text x="89" y="115">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="89" y="172">C♯5</text>
+                <text x="128" y="108">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="128" y="172">D5</text>
+                <text x="167" y="101">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="167" y="172">E5</text>
+                <text class="counterpoint-axis-image" x="206" y="94">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="206" y="172">F5</text>
+                <text class="counterpoint-axis-image" x="245" y="87">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="245" y="172">G5</text>
+                <path d="M275 80h18"/>
+                <text x="269" y="80">&#xE260;</text>
+                <text class="counterpoint-axis-image" x="284" y="80">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="284" y="172">A♭5</text>
+                <path d="M314 80h18"/>
+                <text x="308" y="73">&#xE260;</text>
+                <text class="counterpoint-axis-image" x="323" y="73">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="323" y="172">B♭5</text>
+                </svg>
+              </div>
+            </figure>
+            <figure class="counterpoint-axis-diagram counterpoint-mode-diagram">
+              <figcaption>B′ 段 · 倒影轴在 D4 与 E♭4 之间</figcaption>
+              <div class="counterpoint-mode-pair">
+                <svg class="inline-staff counterpoint-axis-staff counterpoint-mode-staff" viewBox="0 -13 342 153" role="img" aria-label="四音列的倒影。D4 对应 E♭4，C4 对应 F4，B3 对应 G♭4，A3 对应 A♭4。倒影轴在D4 与 E♭4 之间。">
+                <path class="inline-staff-lines" d="M4 26H340 M4 40H340 M4 54H340 M4 68H340 M4 82H340"/>
+                <text x="9" y="68">&#xE050;</text>
+                <path class="counterpoint-axis-line" stroke-dasharray="4 3" d="M39 85.5H337"/>
+                <path class="counterpoint-axis-connection" d="M71 89L89 82 M143 96L161 75 M215 103L233 68 M287 110L305 61"/>
+                <text x="71" y="89">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="80" y="132">D4↔E♭4</text>
+                <text x="74" y="82">&#xE260;</text>
+                <text class="counterpoint-axis-image" x="89" y="82">&#xE0A2;</text>
+                <path d="M134 96h18"/>
+                <text x="143" y="96">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="152" y="132">C4↔F4</text>
+                <text class="counterpoint-axis-image" x="161" y="75">&#xE0A2;</text>
+                <path d="M206 96h18"/>
+                <text x="215" y="103">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="224" y="132">B3↔G♭4</text>
+                <text x="218" y="68">&#xE260;</text>
+                <text class="counterpoint-axis-image" x="233" y="68">&#xE0A2;</text>
+                <path d="M278 96h18"/>
+                <path d="M278 110h18"/>
+                <text x="287" y="110">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="296" y="132">A3↔A♭4</text>
+                <text x="290" y="61">&#xE260;</text>
+                <text class="counterpoint-axis-image" x="305" y="61">&#xE0A2;</text>
+                </svg>
+                <svg class="inline-staff counterpoint-axis-staff counterpoint-mode-staff" viewBox="0 0 342 187" role="img" aria-label="合并音列。A3、B3、C4、D4、E♭4、F4、G♭4、A♭4。减五度为 A3、E♭4、D4、A♭4。首尾为减八度。">
+                <path class="inline-staff-lines" d="M4 73H340 M4 87H340 M4 101H340 M4 115H340 M4 129H340"/>
+                <text x="9" y="115">&#xE050;</text>
+                <path class="counterpoint-axis-connection" d="M50 21v-7H323v7"/>
+                <text class="counterpoint-mode-label counterpoint-mode-interval" x="186.5" y="12">减八度</text>
+                <path class="counterpoint-axis-connection" d="M50 40v-7H206v7"/>
+                <text class="counterpoint-mode-label counterpoint-mode-interval" x="128" y="31">减五度</text>
+                <path class="counterpoint-axis-connection" d="M167 59v-7H323v7"/>
+                <text class="counterpoint-mode-label counterpoint-mode-interval" x="245" y="50">减五度</text>
+                <path d="M41 143h18"/>
+                <path d="M41 157h18"/>
+                <text x="50" y="157">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="50" y="179">A3</text>
+                <path d="M80 143h18"/>
+                <text x="89" y="150">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="89" y="179">B3</text>
+                <path d="M119 143h18"/>
+                <text x="128" y="143">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="128" y="179">C4</text>
+                <text x="167" y="136">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="167" y="179">D4</text>
+                <text x="191" y="129">&#xE260;</text>
+                <text class="counterpoint-axis-image" x="206" y="129">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="206" y="179">E♭4</text>
+                <text class="counterpoint-axis-image" x="245" y="122">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="245" y="179">F4</text>
+                <text x="269" y="115">&#xE260;</text>
+                <text class="counterpoint-axis-image" x="284" y="115">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="284" y="179">G♭4</text>
+                <text x="308" y="108">&#xE260;</text>
+                <text class="counterpoint-axis-image" x="323" y="108">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="323" y="179">A♭4</text>
+                </svg>
+              </div>
+            </figure>
+            <figure class="counterpoint-axis-diagram counterpoint-mode-diagram">
+              <figcaption>A″ 段 · 倒影轴在 D4</figcaption>
+              <div class="counterpoint-mode-pair">
+                <svg class="inline-staff counterpoint-axis-staff counterpoint-mode-staff" viewBox="0 -13 342 153" role="img" aria-label="四音列的倒影。D♭4 对应 E♭4，C♭4 对应 F4，B♭3 对应 G♭4，A♭3 对应 A♭4。倒影轴在D4。">
+                <path class="inline-staff-lines" d="M4 26H340 M4 40H340 M4 54H340 M4 68H340 M4 82H340"/>
+                <text x="9" y="68">&#xE050;</text>
+                <path class="counterpoint-axis-line" stroke-dasharray="4 3" d="M39 85.5H337"/>
+                <path class="counterpoint-axis-connection" d="M71 89L89 82 M143 96L161 75 M215 103L233 68 M287 110L305 61"/>
+                <text x="56" y="89">&#xE260;</text>
+                <text x="71" y="89">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="80" y="132">D♭4↔E♭4</text>
+                <text x="74" y="82">&#xE260;</text>
+                <text class="counterpoint-axis-image" x="89" y="82">&#xE0A2;</text>
+                <path d="M134 96h18"/>
+                <text x="128" y="96">&#xE260;</text>
+                <text x="143" y="96">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="152" y="132">C♭4↔F4</text>
+                <text class="counterpoint-axis-image" x="161" y="75">&#xE0A2;</text>
+                <path d="M206 96h18"/>
+                <text x="200" y="103">&#xE260;</text>
+                <text x="215" y="103">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="224" y="132">B♭3↔G♭4</text>
+                <text x="218" y="68">&#xE260;</text>
+                <text class="counterpoint-axis-image" x="233" y="68">&#xE0A2;</text>
+                <path d="M278 96h18"/>
+                <path d="M278 110h18"/>
+                <text x="272" y="110">&#xE260;</text>
+                <text x="287" y="110">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="296" y="132">A♭3↔A♭4</text>
+                <text x="290" y="61">&#xE260;</text>
+                <text class="counterpoint-axis-image" x="305" y="61">&#xE0A2;</text>
+                </svg>
+                <svg class="inline-staff counterpoint-axis-staff counterpoint-mode-staff" viewBox="0 0 342 159" role="img" aria-label="降 E 自然小调。E♭4、F4、G♭4、A♭4、B♭4、C♭5、D♭5、E♭5。">
+                <path class="inline-staff-lines" d="M4 73H340 M4 87H340 M4 101H340 M4 115H340 M4 129H340"/>
+                <text x="9" y="115">&#xE050;</text>
+                <path class="counterpoint-axis-connection" d="M50 21v-7H167v7"/>
+                <text class="counterpoint-mode-label counterpoint-mode-interval" x="108.5" y="12">纯四度</text>
+                <path class="counterpoint-axis-connection" d="M167 40v-7H284v7"/>
+                <text class="counterpoint-mode-label counterpoint-mode-interval" x="225.5" y="31">纯四度</text>
+                <text x="35" y="129">&#xE260;</text>
+                <text x="50" y="129">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="50" y="151">E♭4</text>
+                <text x="89" y="122">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="89" y="151">F4</text>
+                <text x="113" y="115">&#xE260;</text>
+                <text x="128" y="115">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="128" y="151">G♭4</text>
+                <text x="152" y="108">&#xE260;</text>
+                <text x="167" y="108">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="167" y="151">A♭4</text>
+                <text x="191" y="101">&#xE260;</text>
+                <text class="counterpoint-axis-image" x="206" y="101">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="206" y="151">B♭4</text>
+                <text x="230" y="94">&#xE260;</text>
+                <text class="counterpoint-axis-image" x="245" y="94">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="245" y="151">C♭5</text>
+                <text x="269" y="87">&#xE260;</text>
+                <text class="counterpoint-axis-image" x="284" y="87">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="284" y="151">D♭5</text>
+                <text x="308" y="80">&#xE260;</text>
+                <text class="counterpoint-axis-image" x="323" y="80">&#xE0A2;</text>
+                <text class="counterpoint-mode-label" x="323" y="151">E♭5</text>
+                </svg>
+              </div>
+            </figure>
+            <p>前四段归纳出的特性七声减调式，首末用同一个音名字母，音高相差 11 个半音。末段 A″ 的两组四音仍互为倒影。把它们合并并从主音 E♭ 排列，首尾的 E♭ 形成纯八度，中间依次是 F、G♭、A♭、B♭、C♭、D♭，两条声部共同组成降 E 自然小调。</p>
+          </div>
+        </details>
+      </section>
+    </main>
+  </body>
+</html>

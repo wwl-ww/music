@@ -7,10 +7,10 @@ const stringParts = [
   ['第一小提琴', 40]
 ];
 
-export function encodeScore(material, staves, tempo, timbre) {
+export function encodeScore(material, staves, tempo, timbre, splitVoices = false) {
   const fourPart = material.type === fourPartHarmony;
   const useStrings = fourPart && timbre === 'strings';
-  let phrase = material;
+  let phrase = material.scoreNotation ?? material;
 
   if (fourPart) {
     const { voices: [bass, tenor, alto, soprano], key, meter, pickup, displayPhrase } = material;
@@ -21,7 +21,7 @@ export function encodeScore(material, staves, tempo, timbre) {
   }
 
   const displayTracks = staves.map((staff, index) => String.raw`
-    \track "" ${index > 0 || useStrings ? '{ mute }' : ''}
+    \track "" ${index > 0 || useStrings || splitVoices ? '{ mute }' : ''}
     \staff { ${staff} }
     \instrument 0
     \tuning (none)
@@ -30,14 +30,20 @@ export function encodeScore(material, staves, tempo, timbre) {
 
   // The visible grand staff stays in place for layout and the synchronized cursor.
   // Playback-only tracks give each of the same four voices its own MIDI channel.
-  const playbackTracks = useStrings ? stringParts.map(([name, instrument], index) => String.raw`
+  const voiceParts = splitVoices && fourPart ? [...material.voices].reverse() : material.voices;
+  const playbackTracks = useStrings || splitVoices ? voiceParts.map((voice, index) => {
+    const [name, instrument] = useStrings ? stringParts[splitVoices ? 3 - index : index] : ['', 0];
+    return String.raw`
     \track "${name}"
     \staff { score }
     \instrument ${instrument}
     \tuning (none)
-    \ks ${material.key}
-    ${material.voices[index]}
-  `).join('') : '';
+    \ks ${material.key ?? 'C'}
+    ${splitVoices && material.meter ? '\\ts (' + material.meter + ')' : ''}
+    ${splitVoices && material.pickup ? '\\ac ' : ''}
+    ${voice}
+  `;
+  }).join('') : '';
 
   return String.raw`\tempo ${tempo}` + displayTracks + playbackTracks;
 }

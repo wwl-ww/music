@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第一章 对位旋律写作原则｜复调音乐 · 上篇</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./counterpoint-learning.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./counterpoint.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">复调音乐 · 上篇</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第一章 对位旋律写作原则</h1>
+      <p class="intro">二声部对位把两条各自成句的旋律合在一起。原来选定的曲调叫<strong>指定旋律</strong>，另外写的一条叫<strong>对位旋律</strong>。两条线都能单独成立，合奏时还要顾到音程、节奏和句幅。</p>
+      <p>五线谱从左向右读出每条旋律，从下往上读出同一时刻的两音。若低声部是长音，上声部中途换音，要用这个仍在持续的低音计算新的音程。两部何时换音、何时收句，则决定两条线听起来有多独立。</p>
+
+      <section aria-labelledby="pitch-relations">
+        <h2 id="pitch-relations">音高关系</h2>
+
+        <h3 id="interval-types">音程的性质</h3>
+        <p>两条旋律同时发声时形成一个和声音程。连续八度容易融合成一条线，开头或结尾可借同度、八度落稳，中间则少量使用。三度、六度是<strong>不完全协和音程</strong>，较能保留两部的独立性，也适合放在重拍。连续写到三次左右，就可以换音程或改一个声部的方向。</p>
+        <div class="music-demo counterpoint-steps" id="interval-contrast" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h4>同一旋律的八度、三度与反向写法</h4>
+            <fieldset class="counterpoint-choices" aria-label="音程写法">
+              <label><input type="radio" name="interval-contrast-option" value="octaves" checked><span>平行八度</span></label>
+              <label><input type="radio" name="interval-contrast-option" value="thirds"><span>平行三度</span></label>
+              <label><input type="radio" name="interval-contrast-option" value="contrary"><span>反向三六度</span></label>
+            </fieldset>
+          </div>
+          <figure aria-label="同一旋律的八度、三度与反向写法"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">音程</th><th scope="col">用法</th><th scope="col">文本谱</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">同度、八度</th><td>开头或终止常用，避免平行。</td><td><svg class="inline-staff" viewBox="0 0 66 45" role="img" aria-label="E4 到 E5 构成纯八度"><path class="inline-staff-lines" d="M1 6H65 M1 11H65 M1 16H65 M1 21H65 M1 26H65"/><text x="14" y="26" text-anchor="middle">&#xE0A4;</text><text x="14" y="8.5" text-anchor="middle">&#xE0A4;</text><text class="inline-staff-count" x="14" y="42" text-anchor="middle">8</text></svg></td></tr>
+            <tr><th scope="row">三度、六度</th><td>适合强拍，连续几次可转向。</td><td><svg class="inline-staff" viewBox="0 0 75 45" role="img" aria-label="E 到 G 为三度，E 到 C 为六度"><path class="inline-staff-lines" d="M1 6H74 M1 11H74 M1 16H74 M1 21H74 M1 26H74"/><text x="14" y="26" text-anchor="middle">&#xE0A4;</text><text x="14" y="21" text-anchor="middle">&#xE0A4;</text><text class="inline-staff-count" x="14" y="42" text-anchor="middle">3</text><text x="61" y="26" text-anchor="middle">&#xE0A4;</text><text x="61" y="13.5" text-anchor="middle">&#xE0A4;</text><text class="inline-staff-count" x="61" y="42" text-anchor="middle">6</text></svg></td></tr>
+            <tr><th scope="row">纯四度、纯五度</th><td>四度常解决到三度或五度。五度避免平行。</td><td><svg class="inline-staff" viewBox="0 0 75 45" role="img" aria-label="上方 A 下行到 G，低音 E 保持，四度解决到三度"><path class="inline-staff-lines" d="M1 6H74 M1 11H74 M1 16H74 M1 21H74 M1 26H74"/><text x="14" y="26" text-anchor="middle">&#xE0A4;</text><text x="14" y="18.5" text-anchor="middle">&#xE0A4;</text><text class="inline-staff-count" x="14" y="42" text-anchor="middle">4</text><text x="61" y="26" text-anchor="middle">&#xE0A4;</text><text x="61" y="21" text-anchor="middle">&#xE0A4;</text><text class="inline-staff-count" x="61" y="42" text-anchor="middle">3</text></svg></td></tr>
+            <tr><th scope="row">二度、七度</th><td>通常需要解决。小二度和大七度较尖锐。</td><td><svg class="inline-staff" viewBox="0 0 75 45" role="img" aria-label="E 到 F 为小二度，E 到 D 为小七度"><path class="inline-staff-lines" d="M1 6H74 M1 11H74 M1 16H74 M1 21H74 M1 26H74"/><text x="14" y="26" text-anchor="middle">&#xE0A4;</text><text x="18" y="23.5" text-anchor="middle">&#xE0A4;</text><text class="inline-staff-count" x="14" y="42" text-anchor="middle">2</text><text x="61" y="26" text-anchor="middle">&#xE0A4;</text><text x="61" y="11" text-anchor="middle">&#xE0A4;</text><text class="inline-staff-count" x="61" y="42" text-anchor="middle">7</text></svg></td></tr>
+            <tr><th scope="row">增四度、减五度</th><td>常随和声解决，如增四度向外展开。</td><td><svg class="inline-staff" viewBox="0 0 75 45" role="img" aria-label="增四度 F B 向外解决为小六度 E C"><path class="inline-staff-lines" d="M1 6H74 M1 11H74 M1 16H74 M1 21H74 M1 26H74"/><text x="14" y="23.5" text-anchor="middle">&#xE0A4;</text><text x="14" y="16" text-anchor="middle">&#xE0A4;</text><text x="61" y="26" text-anchor="middle">&#xE0A4;</text><text x="61" y="13.5" text-anchor="middle">&#xE0A4;</text></svg></td></tr>
+          </tbody>
+        </table>
+        <details class="lesson-aside">
+          <summary>民族调式中的四度与大二度</summary>
+          <div class="lesson-aside-content"><p>纯四度在一些民族调式中用得更自由。带有民歌色彩的写法有时也会突出大二度，使它成为比较稳定的音响色彩。</p></div>
+        </details>
+
+        <h3 id="dissonance-treatment">不协和音程的处理</h3>
+        <p>短暂的不协和可以给旋律增加推动力。低音持续时，只要上方换了一个音，同一和声里就可能先出现不协和，随后恢复稳定。分析时同时找出两声部当时响的音，再判断是哪条线带来了变化、怎样把紧张带过去。</p>
+        <p>两声部从不协和音程回到协和音程，叫<strong>解决</strong>。旋律走到相邻的音级叫<strong>级进</strong>，跨过一个或多个音级叫<strong>跳进</strong>。</p>
+        <p>强拍、弱拍说的是整拍的位置。四四拍的第 1 拍强，第 3 拍次强，第 2、4 拍弱。强位、弱位还可以比较一拍里面的位置。一拍分成两个八分音符时，后半拍是这一拍内的弱位。</p>
+        <div class="music-demo counterpoint-steps" id="dissonance-contrast" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h4>不协和音的拍位与走向</h4>
+            <fieldset class="counterpoint-choices" aria-label="不协和音类型">
+              <label><input type="radio" name="dissonance-contrast-option" value="passing" checked><span>经过音</span></label>
+              <label><input type="radio" name="dissonance-contrast-option" value="neighbor"><span>辅助音</span></label>
+              <label><input type="radio" name="dissonance-contrast-option" value="escape"><span>换音</span></label>
+              <label><input type="radio" name="dissonance-contrast-option" value="appoggiatura"><span>倚音</span></label>
+              <label><input type="radio" name="dissonance-contrast-option" value="suspension"><span>延留音</span></label>
+            </fieldset>
+          </div>
+          <p class="music-demo-cue"></p>
+          <figure aria-label="不协和音的进入与解决"></figure>
+        </div>
+
+        <p>以上五种用旋律变化形成的和弦外音，属于<strong>对位性不协和音</strong>。像 G₇ 中的七音 F，则来自和弦本身，属于<strong>和声性不协和音</strong>，通常随和弦下行解决到 E。</p>
+        <details class="lesson-aside">
+          <summary>二度、四度、七度与九度的延留</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li><strong>二度延留</strong>常置于下声部，下声部降一级后形成三度。置于上声部容易解决到同度，两条线会收在同一音高。</li>
+              <li><strong>四度延留</strong>在上方可解决到三度，在下方可解决到五度。下方延留时若以纯五度预备，还要当心预备和解决处形成平行五度的效果。例如 G–D 的五度经过 G–C 的四度，落到 F–C 的五度，两端的五度都向下移了一步。</li>
+              <li><strong>七度延留</strong>常置于上方，解决到六度。若置于下方，应避免用纯八度预备后又解决到八度，两端容易形成平行八度。</li>
+              <li><strong>九度延留</strong>置于上方时可解决到八度，置于下方时可解决到十度。上方延留时同样要检查预备和解决处是否形成平行八度。</li>
+            </ul>
+          </div>
+        </details>
+
+        <h3 id="intervals-and-harmony">音程与调式和声</h3>
+        <p>单听 A–C <svg class="inline-staff" viewBox="0 0 42 35" role="img" aria-label="A4 &#19982; C5 &#26500;&#25104;&#23567;&#19977;&#24230;"><path class="inline-staff-lines" d="M1 7H41 M1 12H41 M1 17H41 M1 22H41 M1 27H41"/><text x="21" y="19.5" text-anchor="middle">&#xE0A4;</text><text x="21" y="14.5" text-anchor="middle">&#xE0A4;</text></svg>，只能确定它是小三度。在 C 大调中，F–A–C 的 IV、A–C–E 的 vi、D–F–A–C 的 ii₇、D–F♯–A–C 的 V₇/V 都含它。若下一处出现 G 和弦，前面的 A–C 便可能暗示 D₇ 到 G。强拍与句尾的音程要支持这样的和声方向，弱位则可多照顾级进的流畅。</p>
+        <p>C 大调可以用 B–C 确立主音。C 宫五声调式可以用 D–C 或 G–C 收束，使对位旋律延续指定旋律的调式色彩。</p>
+      </section>
+
+      <section aria-labelledby="rhythmic-relation">
+        <h2 id="rhythmic-relation">节奏关系</h2>
+        <h3 id="rhythm-types">节奏型</h3>
+        <p>小节线右边是强拍。它可以让出起音的位置，也可以用与前一个音相同、更长或更短的时值。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">节奏型</th><th scope="col">强拍</th><th scope="col">文本谱</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">让板（A）</th><td>休止，或由延音、切分跨过强拍。</td><td><svg class="inline-staff" viewBox="0 0 73 35" role="img" aria-label="让板，前小节八分音符，新小节强拍休止"><path class="inline-staff-lines" d="M1 8H72 M1 13H72 M1 18H72 M1 23H72 M1 28H72"/><path d="M37 8V28"/><text x="16" y="23" text-anchor="middle">&#xE0A4;</text><path d="M19.1 23V9"/><text x="19.1" y="9">&#xE240;</text><text x="54" y="18" text-anchor="middle">&#xE4E5;</text></svg></td></tr>
+            <tr><th scope="row">均分（B）</th><td>新音与前一个音等长。</td><td><svg class="inline-staff" viewBox="0 0 73 35" role="img" aria-label="均分，小节线两边都是八分音符"><path class="inline-staff-lines" d="M1 8H72 M1 13H72 M1 18H72 M1 23H72 M1 28H72"/><path d="M37 8V28"/><text x="16" y="23" text-anchor="middle">&#xE0A4;</text><path d="M19.1 23V9"/><text x="19.1" y="9">&#xE240;</text><text x="54" y="23" text-anchor="middle">&#xE0A4;</text><path d="M57.1 23V9"/><text x="57.1" y="9">&#xE240;</text></svg></td></tr>
+            <tr><th scope="row">停留（C）</th><td>新音较长。</td><td><svg class="inline-staff" viewBox="0 0 73 35" role="img" aria-label="停留，八分音符后是四分音符"><path class="inline-staff-lines" d="M1 8H72 M1 13H72 M1 18H72 M1 23H72 M1 28H72"/><path d="M37 8V28"/><text x="16" y="23" text-anchor="middle">&#xE0A4;</text><path d="M19.1 23V9"/><text x="19.1" y="9">&#xE240;</text><text x="54" y="23" text-anchor="middle">&#xE0A4;</text><path d="M57.1 23V9"/></svg></td></tr>
+            <tr><th scope="row">细分（D）</th><td>新音较短。</td><td><svg class="inline-staff" viewBox="0 0 73 35" role="img" aria-label="细分，四分音符后是八分音符"><path class="inline-staff-lines" d="M1 8H72 M1 13H72 M1 18H72 M1 23H72 M1 28H72"/><path d="M37 8V28"/><text x="16" y="23" text-anchor="middle">&#xE0A4;</text><path d="M19.1 23V9"/><text x="54" y="23" text-anchor="middle">&#xE0A4;</text><path d="M57.1 23V9"/><text x="57.1" y="9">&#xE240;</text></svg></td></tr>
+          </tbody>
+        </table>
+
+        <p>让板也可以保留声音。延留用连线把前一小节的同音连到强拍 <svg class="inline-staff" viewBox="0 0 73 36" role="img" aria-label="两个同音用延音线跨小节线相连，第二小节强拍没有再次起音">
+          <path class="inline-staff-lines" d="M1 8H72 M1 13H72 M1 18H72 M1 23H72 M1 28H72"/>
+          <path d="M37 8V28 M19 23V9 M57 23V9 M20 26Q36 35 52 26"/>
+          <text x="16" y="23" text-anchor="middle">&#xE0A4;</text><text x="54" y="23" text-anchor="middle">&#xE0A4;</text>
+        </svg>。切分把起音和重心提前到弱位，长音跨过原来的强拍。</p>
+        <h3 id="rhythm-combinations">节奏型组合形式</h3>
+        <p>让板给另一部在强拍留出的空间最大，细分的起音最密，留出的空间最少，均分和停留居中。一部让板、另一部标清强拍，容易形成层次。两部都让板，强拍会一起变轻。均分配停留或细分，也能形成一部保持脉动、另一部改变时值的效果。</p>
+        <details class="lesson-aside">
+          <summary>四种节奏型的十种组合</summary>
+          <div class="lesson-aside-content"><table class="lesson-table lesson-table-wide">
+          <thead><tr><th scope="col">组合</th><th scope="col">效果与用法</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">让板＋让板</th><td>两部都没有新起音，强拍容易失去重心。</td></tr>
+            <tr><th scope="row">均分＋均分</th><td>脉动清楚。两条旋律采用反向进行时，更容易分辨。</td></tr>
+            <tr><th scope="row">停留＋停留</th><td>两部同时拉长，容易停滞。延续长度错开可以缓解。</td></tr>
+            <tr><th scope="row">细分＋细分</th><td>强拍附近两部都加密，起音容易彼此遮盖。</td></tr>
+            <tr><th scope="row">让板＋均分</th><td>均分声部确立强拍，另一部在强拍后的起音有独立位置。</td></tr>
+            <tr><th scope="row">让板＋停留</th><td>停留声部用一个清楚的长音标出强拍，让板声部可稍后进入。</td></tr>
+            <tr><th scope="row">让板＋细分</th><td>细分的声部在强拍附近较活跃，让板减轻两部同时密集的效果。</td></tr>
+            <tr><th scope="row">均分＋停留</th><td>一部维持脉动，一部延长音值，动静对比清楚。</td></tr>
+            <tr><th scope="row">均分＋细分</th><td>一部保持原来的节奏单位，另一部加密。适当错开重音可增加层次。</td></tr>
+            <tr><th scope="row">停留＋细分</th><td>长音与密集起音同时出现，繁简层次明显。</td></tr>
+          </tbody>
+        </table></div>
+        </details>
+
+        <h3 id="rhythm-density">节奏的繁简相对</h3>
+        <p>“繁”和“简”比较的是同样长的时间里有多少次起音。长音仍在响时，另一部可以换音。同步版与繁简交替版使用相同的音高，只有第一小节下方的时值改变。</p>
+        <div class="music-demo counterpoint-steps" id="rhythm-contrast" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h4>二声部的同步与繁简配置</h4>
+            <fieldset class="counterpoint-choices" aria-label="二声部节奏配置">
+              <label><input type="radio" name="rhythm-contrast-option" value="together" checked><span>节奏同步</span></label>
+              <label><input type="radio" name="rhythm-contrast-option" value="alternating"><span>繁简交替</span></label>
+              <label><input type="radio" name="rhythm-contrast-option" value="upperBusy"><span>上繁下简</span></label>
+              <label><input type="radio" name="rhythm-contrast-option" value="lowerBusy"><span>上简下繁</span></label>
+            </fieldset>
+          </div>
+          <figure aria-label="二声部的同步与繁简配置"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+
+      <section aria-labelledby="phrasing">
+        <h2 id="phrasing">句幅关系</h2>
+        <h3 id="line-length">旋律线的长短</h3>
+        <p>长线条常是一个乐句，中线条常是乐节，短线条常是动机。这是同一段音乐里相对的长度。</p>
+        <table class="lesson-table lesson-table-wide">
+          <caption>一个四小节乐句的三个层次</caption>
+          <thead><tr><th scope="col">层次</th><th scope="col">第 1 小节</th><th scope="col">第 2 小节</th><th scope="col">第 3 小节</th><th scope="col">第 4 小节</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">长线条</th><td colspan="4">一个乐句</td></tr>
+            <tr><th scope="row">中线条</th><td colspan="2">第一乐节</td><td colspan="2">第二乐节</td></tr>
+            <tr><th scope="row">短线条</th><td>动机</td><td>动机</td><td>动机</td><td>动机</td></tr>
+          </tbody>
+        </table>
+
+        <h3 id="line-combinations">线条的组合形式</h3>
+        <p>两条旋律可以同时收住，也可以一部收句时另一部仍在进行。同一段对位旋律晚进一小节，原来重合的句尾就会错开。</p>
+        <div class="music-demo counterpoint-steps" id="phrase-contrast" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h4>同起同落与起落交错</h4>
+            <fieldset class="counterpoint-choices" aria-label="对位旋律的进入位置">
+              <label><input type="radio" name="phrase-contrast-option" value="aligned" checked><span>同时起句</span></label>
+              <label><input type="radio" name="phrase-contrast-option" value="staggered"><span>错开一小节</span></label>
+            </fieldset>
+          </div>
+          <div class="counterpoint-phrase-map" aria-hidden="true">
+            <span class="counterpoint-phrase-label">小节</span><span>1</span><span>2</span><span>3</span><span>4</span>
+            <span class="counterpoint-phrase-label">指定旋律</span><span class="counterpoint-phrase-first">第一句</span><span class="counterpoint-phrase-second">第二句</span>
+            <span class="counterpoint-phrase-label counterpoint-phrase-lower">对位旋律</span><span class="counterpoint-phrase-answer">对位句</span>
+          </div>
+          <figure aria-label="同起同落与起落交错"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+        <details class="lesson-aside">
+          <summary>长、中、短线条的六种组合</summary>
+          <div class="lesson-aside-content"><table class="lesson-table lesson-table-wide">
+          <thead><tr><th scope="col">句幅组合</th><th scope="col">写作中的效果</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">长＋长</th><td>两条线都能舒展，若长期同起同落，结构容易拖长。模仿写作尤其需要区分两条长线的起落。</td></tr>
+            <tr><th scope="row">长＋中</th><td>中等线条可在长句内部收束，在其中形成一个清楚的层次。</td></tr>
+            <tr><th scope="row">长＋短</th><td>短动机可在长音或长线延续时进入，长句保持连贯。</td></tr>
+            <tr><th scope="row">中＋中</th><td>长度接近，错开进入与结束的位置可以增加对比。</td></tr>
+            <tr><th scope="row">中＋短</th><td>较短的动机可以同较长的乐节呼应，句幅区别清楚。</td></tr>
+            <tr><th scope="row">短＋短</th><td>可以写出紧凑的问答。连续使用过多，段落容易显得零碎。</td></tr>
+          </tbody>
+        </table></div>
+        </details>
+
+        <h3 id="voice-motion">声部进行</h3>
+        <p>两部可以同向上行、同向下行、一上一下、上行对保持、下行对保持，或两部都保持，共六种组合。两部同向且保持同样的音程度数，称为<strong>平行进行</strong>。两部都保持，音程也保持。持续同向或平行容易削弱独立性，反向与斜向更容易听清各自的路线。</p>
+        <p>两部可以<strong>同向</strong> <svg class="inline-staff" viewBox="0 0 75 45" role="img" aria-label="两声部共同上行并保持三度"><path class="inline-staff-lines" d="M1 6H74 M1 11H74 M1 16H74 M1 21H74 M1 26H74"/><text x="14" y="26" text-anchor="middle">&#xE0A4;</text><text x="14" y="21" text-anchor="middle">&#xE0A4;</text><text class="inline-staff-count" x="14" y="42" text-anchor="middle">3</text><text x="61" y="23.5" text-anchor="middle">&#xE0A4;</text><text x="61" y="18.5" text-anchor="middle">&#xE0A4;</text><text class="inline-staff-count" x="61" y="42" text-anchor="middle">3</text></svg>、<strong>反向</strong> <svg class="inline-staff" viewBox="0 0 75 45" role="img" aria-label="低声部 E 到 F 上行，高声部 B 到 A 下行"><path class="inline-staff-lines" d="M1 6H74 M1 11H74 M1 16H74 M1 21H74 M1 26H74"/><text x="14" y="26" text-anchor="middle">&#xE0A4;</text><text x="14" y="16" text-anchor="middle">&#xE0A4;</text><text x="61" y="23.5" text-anchor="middle">&#xE0A4;</text><text x="61" y="18.5" text-anchor="middle">&#xE0A4;</text></svg>，或一部保持、另一部移动，构成<strong>斜向</strong> <svg class="inline-staff" viewBox="0 0 75 45" role="img" aria-label="高声部 G 保持，低声部从 C 上行到 E"><path class="inline-staff-lines" d="M1 6H74 M1 11H74 M1 16H74 M1 21H74 M1 26H74"/><path d="M8 31h12"/><text x="14" y="31" text-anchor="middle">&#xE0A4;</text><text x="14" y="21" text-anchor="middle">&#xE0A4;</text><text x="61" y="26" text-anchor="middle">&#xE0A4;</text><text x="61" y="21" text-anchor="middle">&#xE0A4;</text></svg>。句幅相同的两条线也可以采用不同方向。音高关系中的反向版本，正是用这一点把两条线拉开。</p>
+      </section>
+
+      <section aria-labelledby="writing-demonstration">
+        <h2 id="writing-demonstration">写作示范</h2>
+        <ol>
+          <li>从指定旋律找出调式、起拍、句尾和活动最密的地方。这些位置决定对位旋律在哪里保留和声支点，在哪里有空间换音。</li>
+          <li>写出对位旋律的开头，保留一个可以继续发展的动机。若指定旋律密集而上扬，对位旋律可以用较长的音取相反方向。</li>
+          <li>发展动机并安排终止。分别检查每条线能否唱成一句，再核对两条线在强拍和句尾的音程，以及不协和是否解决。</li>
+        </ol>
+
+        <h3 id="czech-dance">捷克民歌《跳吧，跳吧》的对位旋律</h3>
+        <p>上声部的舞曲以四分和八分音符为主。下声部用下行长音回应，随后两次发展这个动机。中段的 F♯ 增添色彩，第 7–8 小节回到属到主的终止。分听可以检查下声部自己能否连成一句，合奏可以检查它是否给舞曲的节奏留下空间。</p>
+        <div class="music-demo counterpoint-steps" id="czech-writing" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h4>八小节对位写作谱</h4>
+            <fieldset class="counterpoint-choices" aria-label="《跳吧，跳吧》播放声部">
+              <label><input type="radio" name="czech-writing-option" value="both" checked><span>合奏</span></label>
+              <label><input type="radio" name="czech-writing-option" value="given"><span>指定旋律</span></label>
+              <label><input type="radio" name="czech-writing-option" value="counter"><span>对位旋律</span></label>
+            </fieldset>
+          </div>
+          <figure aria-label="八小节对位写作谱"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+
+        <h3 id="copper-drum-dance">苗族铜鼓舞风格曲调的对位旋律</h3>
+        <p>上声部多在强拍起句。下方从第 1 小节的次强拍进入，长音跨过小节线，在第 3 小节落到 C。上方恰在这一拍以 E 开始下一句。下方第二个乐节用变化模进承接这个写法，第 5–8 小节安排它自己的高潮，末尾再用短音收束。</p>
+        <div class="music-demo counterpoint-steps" id="copper-writing" data-counterpoint-score>
+          <div class="music-demo-toolbar">
+            <h4>铜鼓舞曲调对位写作谱</h4>
+            <fieldset class="counterpoint-choices" aria-label="铜鼓舞风格曲调播放声部">
+              <label><input type="radio" name="copper-writing-option" value="both" checked><span>合奏</span></label>
+              <label><input type="radio" name="copper-writing-option" value="given"><span>指定旋律</span></label>
+              <label><input type="radio" name="copper-writing-option" value="counter"><span>对位旋律</span></label>
+            </fieldset>
+          </div>
+          <figure aria-label="铜鼓舞曲调对位写作谱"></figure>
+          <output class="music-demo-cue"></output>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

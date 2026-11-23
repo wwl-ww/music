@@ -40,21 +40,6 @@
 .counterpoint-next { margin-block-start: 1rem; }
 .counterpoint-next a { display: inline-flex; align-items: center; gap: 0.45em; font-weight: 650; }
 
-.counterpoint-route-list > li { padding: 0.75rem 0.25rem; border-bottom: 1px solid var(--line); }
-.counterpoint-route-list p { margin: 0.2rem 0 0.45rem; color: var(--muted); }
-.counterpoint-route-links { display: flex; flex-wrap: wrap; gap: 0.45rem; }
-.course-index .counterpoint-route-links a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 36px;
-  padding: 0.15rem 0.55rem;
-  border: 1px solid var(--line);
-  border-radius: 0.4rem;
-  color: var(--accent);
-  font-size: 0.85rem;
-}
-.counterpoint-route-links a::after { content: none; }
-
 .counterpoint-phrase-map {
   display: grid;
   grid-template-columns: max-content repeat(4, minmax(0, 1fr));
@@ -166,5 +151,4 @@
 
 @media (pointer: coarse) {
   .counterpoint-choices span { min-block-size: 44px; }
-  .course-index .counterpoint-route-links a { min-height: 44px; }
 }

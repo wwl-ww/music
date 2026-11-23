@@ -131,8 +131,6 @@ npm run dev
 
 下篇题页为印刷 163 / PDF 179。第 19 章之后从印刷 407 / PDF 423 起为附录。
 
-[下篇学习路径](./content/books/counterpoint/index.html#counterpoint-study-route)用同一个四音材料贯穿九章。每章先完成一项谱面对照，完整分类和延伸分析集中在相应的选读块中。
-
 | 章节 | 印刷页 | PDF 页 | 讲解与练习的分界 |
 | --- | --- | --- | --- |
 | [第十一章 复调小曲](./content/books/counterpoint/counterpoint-11.html) | 164–184 | 180–200 | 印刷 182 / PDF 198，倒影再现的分析之后 |

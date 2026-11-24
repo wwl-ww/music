@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第十一章 变奏曲（一）｜曲式学基础教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./form-analysis-11.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">曲式学基础教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第十一章 变奏曲（一）</h1>
+      <p class="intro">变奏曲让同一主题经过一连串变化。连续出现的几轮可以共用一条可辨认的低音，也可以共用一组和声。听清每轮保留什么，才能解释变奏之间怎样连接、形成高潮或带来再现感。</p>
+
+      <section aria-labelledby="theme-and-variations">
+        <h2 id="theme-and-variations">主题与变奏</h2>
+        <p>重复的材料经装饰、换声部或改换织体，就产生了变奏。分节歌可以随每节歌词变动唱法，同一戏曲板式也可以因唱词和流派而变化。器乐曲中的动力性再现同样可以用到变奏手法。当同一个主题及其一连串变化承担全曲的结构时，这一组织称为<strong>变奏曲</strong>。通常先呈示主题 T，随后依次进入 V₁、V₂、V₃ 等变奏。</p>
+        <p>适合作变奏的主题通常取乐段或二段结构，具有容易辨认的旋律、清楚的和声与句法，也有可发展的动机或节奏。识别变奏时要先找不变的层面，再判断一轮中哪些因素变了。固定低音与装饰变奏通常属于严格变奏，自由变奏对主题结构和材料的处理更灵活。</p>
+        <table class="lesson-table">
+          <caption>变奏曲整体的组织</caption>
+          <thead><tr><th scope="col">结构任务</th><th scope="col">安排方式</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">确立主题</th><td>清楚呈示原形，开头可接几次接近主题的变奏以加深印象。</td></tr>
+            <tr><th scope="row">形成对比和发展</th><td>安排调式、节奏、奏法或织体的对照。若连续几轮向同一方向变密、扩大音域或远离主题，可把它们视为较大的发展阶段。</td></tr>
+            <tr><th scope="row">回归与收束</th><td>变化较远之后，主题的近似形态再回来，可产生类似再现的功能。高潮的位置还要结合力度、密度和后续段落判断。</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="passacaglia-principles">
+        <h2 id="passacaglia-principles">固定低音与帕萨卡利亚</h2>
+        <p><strong>固定低音</strong>是一条反复出现的低声部旋律，其他声部在它上面作变奏。帕萨卡利亚是以这种写法组织的古老形式之一。传统例子常用慢速三拍子，四小节或八小节的低音先单独陈述，句末明确收束，再随各轮变奏回返。固定低音常见于管风琴作品，声部可交给脚键盘演奏。</p>
+        <p>固定低音保留可辨认的主题轮廓和反复周期，也为和声提供基本方向。旋律相同，各轮配上的具体和弦仍可以变化。同一主题也可移到内声部或最高声部，或略加装饰。主题在什么位置变得难以辨认、在哪一轮恢复原貌，常能划分全曲的发展阶段。</p>
+        <div class="music-demo" id="ground-bass-variation-score">
+          <div class="music-demo-toolbar">
+            <h3>同一固定低音上的三次陈述</h3>
+            <button type="button" aria-pressed="true" data-analysis-whole>全曲</button>
+          </div>
+          <div class="timeline-frame" data-analysis-timeline style="--score-timeline-unit-min: 1.25rem"></div>
+          <dl class="analysis-description" aria-live="polite">
+            <dt data-analysis-section>全曲</dt>
+            <dd data-analysis-description>主题单独陈述，随后两轮保留相同的四小节低音。</dd>
+          </dl>
+          <p class="music-demo-cue analysis-status" data-analysis-status role="status"></p>
+          <figure data-analysis-score aria-label="十二小节教学例。低音同样陈述三次，上声部由休止到四分音符再到八分音符。"></figure>
+        </div>
+        <aside class="lesson-callout"><p><strong>按三个层级分析。</strong> 乐句终止属于每轮内部，低音回到起点标示下一轮，几轮共同的密度和材料走向又会形成全曲的发展阶段。</p></aside>
+      </section>
+
+      <section aria-labelledby="bach-passacaglia">
+        <h2 id="bach-passacaglia">巴赫《c 小调帕萨卡利亚与赋格》</h2>
+        <p>巴赫先用脚键盘单独呈示八小节低音主题。它是一个不分句乐段。开头从弱拍走向下一小节强拍，逐小节推动，整体趋向下行，最后以长属音解决到主音。低音可以独立唱成一条旋律，也能为上方声部提供清楚的和声支点。</p>
+        <figure class="notation-sample">
+          <figcaption>固定低音题头的弱起与后续节奏</figcaption>
+          <svg class="inline-staff" style="--inline-notation-width: min(100%, 15em)" viewBox="0 0 186 49" role="img" aria-label="低音谱号，四分音符 C 弱起，接 G 二分音符、降 E 四分音符，F 二分音符、G 四分音符，降 A 二分音符、F 四分音符。">
+            <path class="inline-staff-lines" d="M2 10h181m-181 5h181m-181 5h181m-181 5h181m-181 5h181"/>
+            <text x="5" y="15">&#xE062;</text><text x="28" y="22.5">&#xE0A4;</text><text x="54" y="12.5">&#xE0A3;</text><text x="65" y="17.5">&#xE260;</text><text x="73" y="17.5">&#xE0A4;</text><text x="99" y="15">&#xE0A3;</text><text x="117" y="12.5">&#xE0A4;</text><text x="133" y="10">&#xE260;</text><text x="142" y="10">&#xE0A3;</text><text x="164" y="15">&#xE0A4;</text>
+            <path d="M33 22.5V9M54 12.5v15M73 17.5v16M99 15v15m18-17.5v16M142 10v16m22-11v16M42 10v20m44-20v20m43-20v20"/>
+            <text class="inline-staff-count" x="21" y="44">弱起</text>
+          </svg>
+        </figure>
+        <p>主题之后有二十次变奏。整体的分界可由主题所在声部、节奏密度以及高潮的位置确定。</p>
+        <table class="lesson-table">
+          <caption>巴赫二十次变奏的发展层次</caption>
+          <thead><tr><th scope="col">阶段与范围</th><th scope="col">主题的位置与形态</th><th scope="col">织体与曲式作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">呈示 · T 至 V₂</th><td>主题由独奏进入低音循环。</td><td>V₁ 至 V₂ 连成一气。上方声部以休止、切分与留音避开主题起音，使低音清楚。</td></tr>
+            <tr><th scope="row">第一阶段 · V₃ 至 V₅</th><td>主题仍在低音，V₅ 的节奏参与变化。</td><td>V₃ 在声部间重复动机，V₄ 引入活跃的新节奏，V₅ 加多跳进，并让低音与上方节奏相互呼应。</td></tr>
+            <tr><th scope="row">第一阶段 · V₆ 至 V₈</th><td>低音恢复原形。</td><td>上方转为连续十六分音符，依次以上行、下行和两者结合展开。声部从交替进入到同时活跃，V₈ 形成第一次高潮。</td></tr>
+            <tr><th scope="row">第一阶段 · V₉ 至 V₁₀</th><td>低音逐渐参与节奏化的模进。</td><td>V₉ 改用琶音式模进。V₁₀ 让低声部与中声部形成和弦运动，最上方保持连续十六分音符，通向主题换声部。</td></tr>
+            <tr><th scope="row">第二阶段 · V₁₁ 至 V₁₃</th><td>主题在 V₁₁ 移到高声部，随后进入内声部并加装饰。</td><td>V₁₀ 的上声部在 V₁₁ 移到主题下方，两者以复对位交换高低。前一轮的材料因此得以延续，主题离开低音则开启新阶段。V₁₂ 增添活跃低音并扩大为四声部，V₁₃ 的音型更加自由。</td></tr>
+            <tr><th scope="row">第二阶段 · V₁₄ 至 V₁₅</th><td>主题各音有规律地藏入分解和弦。</td><td>主题的连续旋律被织体淡化，为完整低音回归拉开距离。</td></tr>
+            <tr><th scope="row">第三阶段 · V₁₆ 至 V₁₈</th><td>V₁₆ 让主题完整回到低音。</td><td>上方回到类似开头的让位写法，产生再现感。V₁₇ 转入连续半拍三连音，V₁₈ 以弱拍休止和新旧节奏组合继续推动。</td></tr>
+            <tr><th scope="row">第三阶段 · V₁₉ 至 V₂₀</th><td>脚键盘仍以 C 弱起，接 G 二分音符与降 E 四分音符，每轮末尾仍从长 G 回到低音 C。</td><td>上方的装饰性持续音与三拍子主题形成两拍对三拍的错位。V₂₀ 再加一组持续音，最后四个声部汇合成变奏部分的高潮。</td></tr>
+          </tbody>
+        </table>
+        <p>V₁₆ 的再现感来自位置和清晰度。此前主题从低音移向高声部和内声部，又融入分解和弦。它完整回到原声部时，上方也恢复开头让出主题起音的写法。V₁₉ 至 V₂₀ 仍可在脚键盘听到八小节主题，和声却随着上方持续线的叠入重新组织。两轮连成变奏部分的尾声，在高潮收住低音循环，随后赋格沿用低音主题的前半段发展。</p>
+      </section>
+
+      <section aria-labelledby="shostakovich-passacaglia">
+        <h2 id="shostakovich-passacaglia">肖斯塔科维奇《第一小提琴协奏曲》第三乐章</h2>
+        <p>这首帕萨卡利亚保留慢速三拍子，主题却扩展为十七小节，由不等长的乐节组成。f 小调主题有八度线条、大跳和休止，也出现弗里几亚色彩的降二级。现代写法仍以循环主题组织变奏，主题长度、节拍与音乐性格可以随作品而改变。</p>
+        <figure class="notation-sample">
+          <figcaption>固定主题的断续节奏与降二级，八度齐奏化为单线</figcaption>
+          <svg class="inline-staff" style="--inline-notation-width: min(100%, 15em)" viewBox="0 0 173 45" role="img" aria-label="低音片段，F 长音接 G，降 B 两次短奏后休止。随后 F 长音接降 G。">
+            <path class="inline-staff-lines" d="M2 10h169m-169 5h169m-169 5h169m-169 5h169m-169 5h169"/>
+            <text x="6" y="15">&#xE062;</text><text x="27" y="15">&#xE0A3;</text><text x="45" y="30">&#xE0A4;</text><text x="64" y="25">&#xE260;</text><text x="72" y="25">&#xE0A4;</text><text x="88" y="25">&#xE0A4;</text><text x="101" y="20">&#xE4E5;</text><text x="124" y="15">&#xE0A3;</text><text x="143" y="30">&#xE260;</text><text x="152" y="30">&#xE0A4;</text>
+            <path d="M27 15v15m23 0V14m27 11V9m16 16V9m31 6v15m33 0V14M58 10v20m56-20v20"/>
+          </svg>
+        </figure>
+        <p>最初的主题 T 在低音出现时，上面已有带同音三连音和琶音的旋律 M₁，两条线相互呼应。V₁ 用平稳的木管和声 M₂ 代替 M₁，此后独奏小提琴写出自己的旋律。下面的 M₁ 至 M₄ 标示不同的声部材料，V₁ 至 V₈ 标示整个乐章的一轮轮变奏。</p>
+        <table class="lesson-table">
+          <caption>固定主题与独奏旋律的两条结构线</caption>
+          <thead><tr><th scope="col">范围</th><th scope="col">声部关系</th><th scope="col">听觉与结构作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">T、V₁</th><td>低音 T 上先有 M₁，随后改为木管和声 M₂。</td><td>T 得到进一步呈示，这两轮也像独奏进入前的前奏。</td></tr>
+            <tr><th scope="row">V₂、V₃</th><td>V₂ 的独奏是围绕属音的 M₃。V₃ 让英国管低八度接过 M₃，独奏发展成 M₄。由下到上形成 T、M₂、M₃、M₄ 四层。</td><td>独奏材料在合奏基础上呈示、成长，高潮逐步推进。</td></tr>
+            <tr><th scope="row">V₄、V₅</th><td>V₄ 让 M₄ 担任低声部，T 转到内声部。V₅ 的独奏小提琴连续模进。</td><td>先在八度运动中形成第一次高潮，再用模进通向更大的高潮。</td></tr>
+            <tr><th scope="row">V₆</th><td>小提琴以强力度八度奏出 T，低声部有与 M₄ 相关的新旋律。</td><td>固定主题移到最突出的位置，形成全乐章高潮。</td></tr>
+            <tr><th scope="row">V₇</th><td>独奏小提琴低八度带回 M₃，乐队写法也接近 V₂。后半独奏材料逐渐分裂。</td><td>独奏自己的主题重现，产生最明显的再现感。</td></tr>
+            <tr><th scope="row">V₈</th><td>独奏奏出开头的 M₁，T 由弦乐拨奏并加上和声。</td><td>功能近似尾声。第十七小节的 F 是 Ⅵ 级和弦第一转位的低音，收束仍开放，随后由 F 音上的过渡进入独奏华彩。</td></tr>
+          </tbody>
+        </table>
+        <p>巴赫使固定主题偏离原声部和织体后再恢复，由此产生再现感。在这首协奏曲中，T 每轮都可辨认，V₆ 奏得再突出也主要是高潮。V₇ 带回此前离开的独奏旋律 M₃，才听起来像再现。同一首曲子里，固定主题的连续性与独奏旋律的呈示、展开、再现可以同时成立。</p>
+      </section>
+
+      <section aria-labelledby="chaconne-principles">
+        <h2 id="chaconne-principles">夏空</h2>
+        <p>夏空常以一组可以反复辨认的和声为基础。典型的和声主题在高声部形成旋律，在低声部形成支撑线。和声支点与终止位置保留下来时，低音本身可以改变时值、转位或写成新的旋律。这一差别有助于区分夏空与通常以同一条低音旋律为骨架的帕萨卡利亚。传统上两者都常见于三拍子，实际作品在命名和写法上有交叉。</p>
+        <div class="music-demo" id="chaconne-harmony-score">
+          <div class="music-demo-toolbar">
+            <h3>同一和声骨架上的低音变形</h3>
+            <button type="button" aria-pressed="true" data-analysis-whole>全曲</button>
+          </div>
+          <div class="timeline-frame" data-analysis-timeline style="--score-timeline-unit-min: 1.25rem"></div>
+          <dl class="analysis-description" aria-live="polite">
+            <dt data-analysis-section>全曲</dt>
+            <dd data-analysis-description>主题、转位与流动低音共享同一个四小节和声框架。</dd>
+          </dl>
+          <p class="music-demo-cue analysis-status" data-analysis-status role="status"></p>
+          <figure data-analysis-score aria-label="十二小节教学例，三轮的上方和声相同，低音由根音变为转位再变为分解和弦。"></figure>
+        </div>
+        <h3>亨德尔《G 大调夏空舞曲》</h3>
+        <p>这首作品共有二十一次变奏。V₁ 大体保留主题低音，个别和弦发生变化。V₂ 改用连续八分音符组织低音，V₃ 又回到原低音，V₄ 换一种旋律性写法。主题和 V₂ 的低音走法不同，开头从主到属的和声方向仍能辨认。</p>
+        <table class="lesson-table">
+          <caption>主题与第二变奏的前两小节</caption>
+          <thead><tr><th scope="col">位置</th><th scope="col">主题</th><th scope="col">第二变奏</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">第 1 小节<br>主和弦</th><td>低音从 G 下移一个八度，上方维持 G 大三和弦。</td><td>低音用八分音符走 G–D–G–A–B–C，第一拍仍是 G 大三和弦。</td></tr>
+            <tr><th scope="row">第 2 小节<br>属和弦</th><td>重拍落到 D 大三和弦。</td><td>第二拍以低音 D 和右手升 F、D 确立属功能。</td></tr>
+          </tbody>
+        </table>
+        <h3>布拉姆斯《第四交响曲》第四乐章</h3>
+        <p>主题原在上方声部，每小节给出一个音，级进上行后从属音回到主音。第 4 至第 9 变奏把这条旋律移到低音，原来为它配的低音从 V₂ 起便已发生变化。亨德尔例可凭共同的和声支点联系不同的低音写法，布拉姆斯例则可凭八小节旋律在不同声部的重现追踪每轮变奏。</p>
+        <figure class="notation-sample">
+          <figcaption>主题上方旋律的音高骨架</figcaption>
+          <svg class="inline-staff" style="--inline-notation-width: min(100%, 15em)" viewBox="0 -6 189 53" role="img" aria-label="旋律依次为 E、升 F、G、A、升 A、B，接低八度的 B，最后回到 E。">
+            <path class="inline-staff-lines" d="M2 11h184m-184 5h184m-184 5h184m-184 5h184m-184 5h184"/>
+            <text x="4" y="26">&#xE050;</text><text x="29" y="13.5">&#xE0A2;</text><text x="44" y="11">&#xE262;</text><text x="51" y="11">&#xE0A2;</text><text x="70" y="8.5">&#xE0A2;</text><text x="89" y="6">&#xE0A2;</text><text x="102" y="6">&#xE262;</text><text x="111" y="6">&#xE0A2;</text><text x="131" y="3.5">&#xE0A2;</text><text x="149" y="21">&#xE0A2;</text><text x="169" y="13.5">&#xE0A2;</text>
+            <path d="M87 6h12m10 0h12m8 0h12"/>
+            <text class="inline-staff-count" x="142" y="43">属音到主音</text>
+          </svg>
+        </figure>
+        <p>帕萨卡利亚常以复调声部的变化展开，夏空也常改变主调和声织体和华彩音型，并可在各轮之间作调式对比。作品即使只以「变奏曲」为题，也可以从和声循环、旋律走向和低音变化判断它是否具有夏空特征。下一章从主题结构、和声骨架和旋律轮廓出发，比较装饰变奏与自由变奏。</p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -8,6 +8,8 @@
 }
 
 .orchestra-score { width: min(100%, 23rem); }
+.score-reader-body > .orchestra-score { width: clamp(30rem, 100%, 38rem); margin-inline: auto; }
+.score-reader[data-view="fit"] .score-reader-body > .orchestra-score { width: min(100%, 38rem); }
 
 :is(.orchestra-score, .harmonic-staff) :is(path, use) {
   fill: none;
@@ -53,4 +55,82 @@
 .woodwind-shared-staff .inline-staff {
   display: block;
   margin: 0.3rem 0 0;
+}
+
+.range-atlas-entry { margin-block-start: 2rem; }
+.range-atlas-top { margin-block-start: 1rem; }
+.range-atlas { max-width: 56rem; --range-common-ink: #a32b2b; }
+:is([data-theme="slate"], [data-theme="midnight"]) .range-atlas { --range-common-ink: #ffa5a0; }
+.range-atlas h1 { font-family: var(--title-font); }
+.range-atlas .intro { max-width: 42rem; }
+.range-atlas-header {
+  display: grid;
+  gap: 0.75rem;
+  border-block: 1px solid var(--line);
+  padding-block: 0.8rem;
+  margin-block: 1.35rem;
+}
+.range-atlas-header[hidden] { display: none; }
+.range-atlas-header label { display: flex; align-items: center; gap: 0.6rem; }
+.range-atlas-filters { display: flex; flex-wrap: wrap; gap: 0.55rem 1rem; }
+.range-atlas-filters label { flex: 1 1 13rem; min-width: 0; white-space: nowrap; }
+.range-atlas-filters :is(input, select) { flex: 1; min-height: 2.75rem; min-width: 0; max-width: 100%; }
+.range-atlas-filter-note {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.9rem;
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.range-atlas-filter-note span { color: var(--range-common-ink); font-weight: 650; }
+.range-atlas [data-range-common] :is(th, .range-keyboard-label strong),
+.range-atlas-note [data-range-common] { color: var(--range-common-ink); }
+.range-atlas [data-range-common] :is(.instrument-range-name, .staff-range-name) {
+  fill: var(--range-common-ink);
+  font-weight: 750;
+}
+.range-atlas-views { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.range-atlas-views a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding-inline: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 0.35rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+.range-atlas-views [aria-current="location"] {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, var(--sheet));
+  font-weight: 650;
+}
+.range-atlas-views a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.range-atlas [data-family] + [data-family] { margin-block-start: 1.8rem; }
+.range-atlas section[id] { scroll-margin-block-start: 1rem; }
+.range-atlas h3 { margin-block: 1.3rem 0.5rem; }
+.range-atlas-table { width: 100%; min-width: 0; }
+.range-atlas-table th:first-child { width: 26%; }
+.range-atlas-table td:nth-child(2) { width: 23%; }
+.range-atlas-table [data-range-main] { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.range-atlas-table .range-name-note { display: block; color: var(--muted); font-weight: 400; font-size: 0.8em; }
+.range-atlas-horizontal { width: 100%; max-width: 44rem; }
+.range-atlas-horizontal text { font-size: 15px; }
+@media (max-width: 35rem) {
+  .range-atlas-horizontal text { font-size: 20px; }
+  .range-atlas-table th:first-child { width: 29%; }
+}
+.range-atlas-staves { display: grid; gap: 0.75rem 1.25rem; }
+.range-atlas-staves .staff-range-plot { max-width: 27rem; }
+.range-atlas-staves .staff-range-plot[data-columns="1"] { max-width: 13rem; }
+.range-atlas-staves .staff-range-plot[data-columns="2"] { max-width: 20rem; }
+.range-atlas [data-ranges-keyboard] { max-width: 48rem; }
+.range-atlas .range-atlas-note { color: var(--muted); font-size: 0.85rem; }
+@media (min-width: 52rem) {
+  .range-atlas-header { grid-template-columns: 1fr auto; align-items: center; }
+  .range-atlas-filters { grid-column: 1; grid-row: 2; }
+  .range-atlas-filter-note { grid-column: 2; grid-row: 2; justify-content: end; }
+  .range-atlas-staves { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>乐器音域总览｜配器法基础教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./orchestration.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./instrument-ranges.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">配器法基础教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width range-atlas">
+      <h1>乐器音域总览</h1>
+      <p class="intro">各视图统一按实际发声音高比较，C4 为中央 C。音域随乐器型号、定弦和演奏条件变化，表中列出各项的参照条件与记谱方法。</p>
+      <div class="range-atlas-header" hidden>
+        <nav class="range-atlas-views" aria-label="音域视图">
+          <a href="#range-table" aria-current="location">音域表</a>
+          <a href="#range-horizontal">横向音域图</a>
+          <a href="#range-staves">共用谱表音域图</a>
+          <a href="#range-keyboards">键盘音域图</a>
+        </nav>
+        <div class="range-atlas-filters">
+          <label>搜索 <input type="search" placeholder="乐器名，如长笛" spellcheck="false"></label>
+          <label>分组
+            <select>
+              <option value="all">全部乐器</option>
+              <option value="common">常用乐器</option>
+              <option value="strings">弓弦乐器</option>
+              <option value="woodwinds">木管乐器</option>
+              <option value="brass">铜管乐器</option>
+              <option value="pitched">打击乐器（有固定音高）</option>
+              <option value="unpitched">打击乐器（无固定音高）</option>
+              <option value="other">拨弹与键盘乐器</option>
+              <option value="supplemental">临时补充性乐器</option>
+            </select>
+          </label>
+        </div>
+        <p class="range-atlas-filter-note"><span>常用乐器标红</span><output data-range-count></output></p>
+      </div>
+      <section id="range-table" aria-labelledby="range-table-heading">
+        <h2 id="range-table-heading">音域表</h2>
+        <section data-family="strings">
+          <h3>弓弦乐器</h3>
+          <table class="lesson-table range-atlas-table">
+            <thead><tr><th scope="col">乐器</th><th scope="col">参考实音</th><th scope="col">边界与记谱</th></tr></thead>
+            <tbody>
+              <tr data-range-common><th scope="row">小提琴</th><td data-range-main>G3–C7</td><td>上限 <span data-range-high>E7</span> · 空弦 <span data-range-open>G3 · D4 · A4 · E5</span>。高音谱号，实音记谱。</td></tr>
+              <tr data-range-common><th scope="row">中提琴</th><td data-range-main>C3–C6</td><td>上限 <span data-range-high>F6</span> · 空弦 <span data-range-open>C3 · G3 · D4 · A4</span>。常用中音谱号，高处可换高音谱号。</td></tr>
+              <tr data-range-common><th scope="row">大提琴</th><td data-range-main>C2–E5</td><td>上限 <span data-range-high>A5</span> · 空弦 <span data-range-open>C2 · G2 · D3 · A3</span>。常用低音谱号；高处可用次中音或高音谱号。</td></tr>
+              <tr data-range-common data-range-low="C1"><th scope="row">低音提琴</th><td data-range-main>E1–A3</td><td>下限 C1 · 上限 <span data-range-high>D4</span> · 空弦 <span data-range-open>E1 · A1 · D2 · G2</span>。四弦定弦。加低音延伸时可下探至 C1。分谱比实音写高八度。</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section data-family="woodwinds">
+          <h3>木管乐器</h3>
+          <table class="lesson-table range-atlas-table">
+            <thead><tr><th scope="col">乐器</th><th scope="col">参考实音</th><th scope="col">边界与记谱</th></tr></thead>
+            <tbody>
+              <tr data-range-common data-range-low="B3"><th scope="row">长笛</th><td data-range-main>C4–C7</td><td>下限 B3 · 上限 <span data-range-high>E7</span>。B3 需要 B 尾管。实音记谱。</td></tr>
+              <tr data-range-name="短笛"><th scope="row">短笛（C 调）</th><td data-range-main>D5–C8</td><td>实音比书写音高八度。型号有低音扩展之别。</td></tr>
+              <tr data-range-name="中音长笛"><th scope="row">中音长笛（G 调）</th><td data-range-main>G3–G6</td><td>按书写 C4–C7 换算，实音低纯四度。</td></tr>
+              <tr data-range-common><th scope="row">双簧管</th><td data-range-main>B♭3–F6</td><td>上限 <span data-range-high>G6</span>。实音记谱。</td></tr>
+              <tr data-range-name="英国管"><th scope="row">英国管（F 调）</th><td data-range-main>E3–A5</td><td>上限 <span data-range-high>B5</span>。实音比书写音低纯五度。</td></tr>
+              <tr data-range-name="抒情双簧管"><th scope="row">抒情双簧管（A 调）</th><td data-range-main>G3–E6</td><td>以书写 B♭3–G6 为参照，实音低小三度。</td></tr>
+              <tr data-range-common data-range-name="降B单簧管"><th scope="row">降 B 调单簧管</th><td data-range-main>D3–F6</td><td>上限 <span data-range-high>A♭6</span>。实音比书写音低大二度。</td></tr>
+              <tr data-range-name="A调单簧管"><th scope="row">A 调单簧管</th><td data-range-main>C♯3–E6</td><td>上限 <span data-range-high>G6</span>。与降 B 调单簧管的记谱参照相同，实音低小三度。</td></tr>
+              <tr data-range-name="降E单簧管"><th scope="row">降 E 调高音单簧管</th><td data-range-main>G3–B♭6</td><td>按书写 E3–G6 换算，实音高小三度。</td></tr>
+              <tr data-range-name="低音单簧管"><th scope="row">降 B 调低音单簧管</th><td data-range-main>B♭1–F5</td><td>上限 <span data-range-high>B5</span>。低音 C 键型号。高音谱号分谱比实音高大九度。</td></tr>
+              <tr data-range-common><th scope="row">大管</th><td data-range-main>B♭1–D5</td><td>上限 <span data-range-high>E5</span>。实音记谱，高处可改用次中音谱号。</td></tr>
+              <tr data-range-low="A0"><th scope="row">低音大管</th><td data-range-main>B♭0–C4</td><td>下限 A0。以低至 B♭0 的号口为例。延长号口可下探 A0。分谱比实音高八度。</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section data-family="brass">
+          <h3>铜管乐器</h3>
+          <table class="lesson-table range-atlas-table">
+            <thead><tr><th scope="col">乐器</th><th scope="col">参考实音</th><th scope="col">边界与记谱</th></tr></thead>
+            <tbody>
+              <tr data-range-common data-range-name="F调圆号" data-range-low="B1"><th scope="row">F 调圆号</th><td data-range-main>F2–C5</td><td>下限 B1 · 上限 <span data-range-high>F5</span>。现代 F 调分谱比实音高纯五度。双重圆号换管不改变分谱调种。</td></tr>
+              <tr data-range-common data-range-name="降B小号" data-range-low="E3"><th scope="row">降 B 调小号</th><td data-range-main>B♭3–B♭5</td><td>下限 E3 · 上限 <span data-range-high>D6</span>。实音比书写音低大二度。</td></tr>
+              <tr data-range-name="C调小号" data-range-low="F♯3"><th scope="row">C 调小号</th><td data-range-main>C4–C6</td><td>下限 F♯3 · 上限 <span data-range-high>E6</span>。按同一小号书写参照换算，实音记谱。</td></tr>
+              <tr data-range-name="A调小号" data-range-low="E♭3"><th scope="row">A 调小号</th><td data-range-main>A3–A5</td><td>下限 E♭3 · 上限 <span data-range-high>C♯6</span>。按同一小号书写参照换算，实音比书写音低小三度。</td></tr>
+              <tr data-range-name="短号"><th scope="row">短号（降 B 调）</th><td data-range-main>E3–B♭5</td><td>按书写 F♯3–C6 作参照，实音低大二度。</td></tr>
+              <tr data-range-name="高音小号"><th scope="row">高音小号（降 B 调短管）</th><td data-range-main>E4–B♭6</td><td>按书写 F♯3–C6 作参照，降 B 调短管实音高小七度。第四阀的低音扩展随型号变化。</td></tr>
+              <tr data-no-range><th scope="row">中音小号</th><td>按调种定</td><td>历史总谱须先辨认具体调种及所用乐器，再按分谱换算。</td></tr>
+              <tr data-range-name="低音小号"><th scope="row">低音小号（降 B 调）</th><td data-range-main>E2–C5</td><td>高音谱号分谱比实音高大九度。</td></tr>
+              <tr data-range-common data-range-name="次中音长号" data-range-low="G1" data-range-gap="B1–E♭2"><th scope="row">无附加阀次中音长号</th><td data-range-main>E2–B♭4</td><td>下限 G1 · 上限 <span data-range-high>D5</span>。实音记谱。低踏板区 G1–B♭1，断档 B1–E♭2。</td></tr>
+              <tr data-range-name="低音长号" data-range-low="B♭0"><th scope="row">双阀低音长号</th><td data-range-main>F1–B♭3</td><td>下限 B♭0 · 上限 <span data-range-high>F5</span>。含踏板音的扩展边界。按双阀型号核对实际极限。</td></tr>
+              <tr data-range-name="尤风宁号"><th scope="row">降 B 调次中音大号（尤风宁号）</th><td data-range-main>C2–B♭4</td><td>以四阀型号为例。管弦乐低音谱号可写实音，铜管乐队高音谱号写高大九度。</td></tr>
+              <tr data-range-name="上低音大号"><th scope="row">上低音大号（B♭ 上低音号示例）</th><td data-range-main>E2–B♭4</td><td>以三阀 B♭ 上低音号的连续音域为例，避免把踏板区混入连续范围。</td></tr>
+              <tr data-range-name="降E低音大号"><th scope="row">降 E 调低音大号（邦巴东号）</th><td data-range-main>A1–E♭4</td><td>以降 E 调低音型作参照，低音扩展取决于阀数和补偿系统。</td></tr>
+              <tr data-range-common data-range-name="倍低音大号" data-range-low="D1"><th scope="row">倍低音大号</th><td data-range-main>F♯1–B♭3</td><td>下限 D1 · 上限 <span data-range-high>D4</span>。以 C 或降 B 调管弦乐常见倍低音型作编配参照，低音谱号按实音记谱。</td></tr>
+              <tr data-no-range><th scope="row">自然圆号、自然小号</th><td>按基管调种定</td><td>固定管长对应一列自然分音，不能画成一条连续的半音音域。</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section data-family="pitched">
+          <h3>打击乐器（有固定音高）</h3>
+          <table class="lesson-table range-atlas-table">
+            <thead><tr><th scope="col">乐器</th><th scope="col">参考实音</th><th scope="col">边界与记谱</th></tr></thead>
+            <tbody>
+              <tr data-range-common data-range-name="定音鼓"><th scope="row">定音鼓（四面鼓组）</th><td data-range-main>D2–A♭3</td><td>四面鼓的合计范围。换音与滑奏须落在同一面鼓的调音区间。<a href="./orchestration-7.html#timpani-drum-ranges">各鼓的调音范围</a>。</td></tr>
+              <tr data-range-common data-range-name="木琴"><th scope="row">木琴（三个半八度）</th><td data-range-main>F4–C8</td><td>分谱写 F3–C7，实音高八度。</td></tr>
+              <tr data-range-common data-range-name="钟琴"><th scope="row">钟琴（两个半八度参照）</th><td data-range-main>G5–C8</td><td>槌击式参照。分谱写 G3–C6，实音高两个八度。</td></tr>
+              <tr data-range-common data-range-name="排钟"><th scope="row">排钟（18 管）</th><td data-range-main>C4–F5</td><td>按实际击音。旧谱的八度写法应结合版本核对。</td></tr>
+              <tr data-no-range><th scope="row">定音锣</th><td>按套组定</td><td>每面锣对应指定音高。音列取决于实际配套的锣。</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section data-family="unpitched">
+          <h3>打击乐器（无固定音高）</h3>
+          <table class="lesson-table range-atlas-table">
+            <thead><tr><th scope="col">乐器</th><th scope="col">参考实音</th><th scope="col">边界与记谱</th></tr></thead>
+            <tbody>
+              <tr data-range-common data-no-range><th scope="row">小鼓</th><td>无固定音高</td><td>通常用一线谱，区分响弦开合与击奏方式。</td></tr>
+              <tr data-range-common data-no-range><th scope="row">大鼓</th><td>无固定音高</td><td>一线谱标击点、力度与滚奏。</td></tr>
+              <tr data-range-common data-no-range><th scope="row">钹（对钹、吊钹）</th><td>无固定音高</td><td>写清器型、敲击、余响与制音。</td></tr>
+              <tr data-range-common data-no-range><th scope="row">三角铁</th><td>无固定音高</td><td>写清单击、滚奏及制音。</td></tr>
+              <tr data-range-common data-no-range><th scope="row">铃鼓</th><td>无固定音高</td><td>区分敲击、摇奏和摩擦滚奏。</td></tr>
+              <tr data-range-common data-no-range><th scope="row">响板</th><td>无固定音高</td><td>记节奏与力度。</td></tr>
+              <tr data-range-common data-no-range><th scope="row">锣（tam-tam）</th><td>无固定音高</td><td>通常用一线谱。音色偏低，余响随器型和击奏位置而变。</td></tr>
+              <tr data-no-range><th scope="row">民间打击乐器</th><td>按具体乐器定</td><td>鼓、板、钹与定音乐器的记谱和音高要分别查看。</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section data-family="other">
+          <h3>拨弹与键盘乐器</h3>
+          <table class="lesson-table range-atlas-table">
+            <thead><tr><th scope="col">乐器</th><th scope="col">参考实音</th><th scope="col">边界与记谱</th></tr></thead>
+            <tbody>
+              <tr data-range-common data-range-name="竖琴"><th scope="row">竖琴（47 弦踏板式）</th><td data-range-main>C♭1–G♯7</td><td>最低 C、D 弦的变音须核对所用琴。踏板影响变音与和弦可奏性。</td></tr>
+              <tr data-range-common data-range-name="钢琴"><th scope="row">钢琴（88 键）</th><td data-range-main>A0–C8</td><td>大谱表，实音记谱。扩展键型号另计。</td></tr>
+              <tr data-range-common data-range-name="钢片琴"><th scope="row">钢片琴（五个半八度）</th><td data-range-main>C3–F8</td><td>分谱通常写低八度，即 C2–F7。较少键数的型号边界不同。</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section data-family="supplemental">
+          <h3>临时补充性乐器</h3>
+          <table class="lesson-table range-atlas-table">
+            <thead><tr><th scope="col">乐器</th><th scope="col">参考实音</th><th scope="col">边界与记谱</th></tr></thead>
+            <tbody>
+              <tr data-range-name="吉他" data-range-low="D2"><th scope="row">吉他（19 品古典吉他）</th><td data-range-main>E2–B5</td><td>下限 D2 · 空弦 <span data-range-open>E2 · A2 · D3 · G3 · B3 · E4</span>。标准定弦参照，最低弦可改调至 D2。分谱写高八度。</td></tr>
+              <tr data-range-name="曼多林"><th scope="row">曼多林（23 品）</th><td data-range-main>G3–E♭7</td><td>按 G3、D4、A4、E5 定弦和 23 品计算。指板最高处的实际可用性按琴核对。</td></tr>
+              <tr data-range-name="欧洲扬琴"><th scope="row">欧洲扬琴（音乐会钦巴隆）</th><td data-range-main>E2–E6</td><td>以一种音乐会钦巴隆的主体音域为例，部分琴另配低音 D2。其他欧洲击弦琴的弦列不同。</td></tr>
+              <tr data-range-name="尺八"><th scope="row">日本尺八（1 尺 8 寸）</th><td data-range-main>D4–D6</td><td>两八度作常用参照，管长改变起音。变音还取决于指法和吹口角度。</td></tr>
+              <tr data-range-name="高音唢呐"><th scope="row">唢呐（加键高音型）</th><td data-range-main>D4–F6</td><td>上限 <span data-range-high>G6</span>。高音型号示例。传统唢呐、加键型及其他调种的指法和音高表各异。</td></tr>
+              <tr data-range-name="曲笛"><th scope="row">笛子（C 调曲笛）</th><td data-range-main>G4–A6</td><td>上限 <span data-range-high>C7</span>。以全按 G4 的曲笛为例。高音依超吹，具体变音须核对指法。</td></tr>
+              <tr data-range-name="高音笙"><th scope="row">笙（加键高音笙）</th><td data-range-main>G3–F♯6</td><td>以加键高音笙为例。传统笙的管数和可用半音随型号而变。</td></tr>
+              <tr><th scope="row">琵琶</th><td data-range-main>A2–E6</td><td>空弦 <span data-range-open>A2 · D3 · E3 · A3</span>。以四弦常用定弦与所列指板为参照，分谱先确认八度写法。</td></tr>
+              <tr data-range-name="大三弦"><th scope="row">三弦（大三弦）</th><td data-range-main>G2–D5</td><td>上限 <span data-range-high>G5</span> · 空弦 <span data-range-open>G2 · D3 · G3</span>。此处为大三弦定弦示例。小三弦及转调定弦的边界不同。</td></tr>
+              <tr data-range-name="扬琴"><th scope="row">扬琴（半音型）</th><td data-range-main>G2–A6</td><td>以大型半音扬琴为例，音域随琴竹侧弦列布局变化。</td></tr>
+              <tr data-no-range><th scope="row">板胡</th><td>按高音型或中音型定</td><td>按具体琴型、定弦与谱面风格确定可用音区。</td></tr>
+              <tr><th scope="row">高胡</th><td data-range-main>G4–A6</td><td>上限 <span data-range-high>D7</span> · 空弦 <span data-range-open>G4 · D5</span>。以乐团用琴为例，最高把位依演奏者而变。</td></tr>
+              <tr><th scope="row">二胡</th><td data-range-main>D4–D6</td><td>上限 <span data-range-high>A6</span> · 空弦 <span data-range-open>D4 · A4</span>。以 D4、A4 定弦为参照，实际音高记谱。</td></tr>
+              <tr data-no-range><th scope="row">坠胡</th><td>按实际定弦定</td><td>伴奏地区和制式会影响定弦、把位与实用范围。</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+      <section id="range-horizontal" aria-labelledby="range-horizontal-heading" hidden>
+        <h2 id="range-horizontal-heading">横向音域图</h2>
+        <p>各组使用同一半音轴。实带为参考音域，虚线为延伸，圆点标空弦，断档留空。</p>
+        <div data-range-groups></div>
+      </section>
+      <section id="range-staves" aria-labelledby="range-staves-heading" hidden>
+        <h2 id="range-staves-heading">共用谱表音域图</h2>
+        <p>每幅图内的乐器共用高、低音谱表。实线连接参考边界，虚线与空心符头标延伸，圆点标空弦。</p>
+        <details class="lesson-aside range-atlas-full-staff">
+          <summary>全书共用谱表</summary>
+          <div data-full-staff></div>
+        </details>
+        <div data-range-groups></div>
+      </section>
+      <section id="range-keyboards" aria-labelledby="range-keyboards-heading" hidden>
+        <h2 id="range-keyboards-heading">键盘音域图</h2>
+        <p>每行使用同一组键位，按颜色区分参考音域、延伸与空弦。键位显示可达范围，具体音列和指法以型号说明为准。</p>
+        <div data-range-groups></div>
+      </section>
+      <p><a href="./orchestration-8.html">返回第八章</a></p>
+    </main>
+  </body>
+</html>

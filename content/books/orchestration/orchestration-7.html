@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第七章 打击乐器及其在乐队中的运用｜配器法基础教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./orchestration.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./orchestration-7.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">配器法基础教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第七章 打击乐器及其在乐队中的运用</h1>
+      <p class="intro">给打击乐写谱，先决定要的是某个音高、某次起音，还是延续下去的声音。定音鼓能承担和声低音，小鼓擅长把节奏说清楚，钹与锣则要把击后留下的余响一起写进配器。</p>
+
+      <section aria-labelledby="pitched-percussion">
+        <h2 id="pitched-percussion">第一节 有固定音高的打击乐器</h2>
+        <p>有固定音高，指每次敲击能得到可辨认、可写入旋律或和声的音。定音鼓通过张紧鼓面选音；木琴、钟琴、排钟通过选敲不同长度的木条、金属片或金属管取音。总体上，打击乐早先多负责重音、节奏和色彩。随着调音、奏法与乐器种类增多，独奏旋律和多音织体也成了它的工作。</p>
+        <h3 id="percussion-ranges">实际音域与八度记谱</h3>
+        <figure class="notation-sample staff-range-comparison" id="percussion-vertical-ranges">
+          <figcaption>同一谱表上的打击乐器实际音域</figcaption>
+          <p class="instrument-range-key range-keyboard-legend">
+            <span class="range-legend-common">实线连接示例音域两端</span>
+          </p>
+          <svg class="staff-range-plot" viewBox="0 0 433 322" role="img" aria-labelledby="percussion-vertical-ranges-title percussion-vertical-ranges-described">
+            <title id="percussion-vertical-ranges-title">同一谱表上的打击乐器实际音域</title>
+            <desc id="percussion-vertical-ranges-described">定音鼓（四面鼓组） D2 至 A♭3；木琴（三个半八度） F4 至 C8；钟琴（约两个半八度） G5 至 C8；排钟（18 管） C4 至 F5。</desc>
+            <path class="staff-range-guide" d="M44 58H429 M44 100H429 M44 142H429 M44 226H429"/>
+            <path class="range-staff-lines" d="M44 166H429 M44 178H429 M44 190H429 M44 202H429 M44 214H429 M44 238H429 M44 250H429 M44 262H429 M44 274H429 M44 286H429"/>
+            <text class="range-staff-clef" x="48" y="202">&#xE050;</text>
+            <text class="range-staff-clef" x="48" y="250">&#xE062;</text>
+            <g class="staff-range-axis" text-anchor="end">
+              <text x="35" y="62">C8</text>
+              <text x="35" y="104">C7</text>
+              <text x="35" y="146">C6</text>
+              <text x="35" y="188">C5</text>
+              <text x="35" y="230">C4</text>
+              <text x="35" y="272">C3</text>
+            </g>
+            <g data-instrument-range="1">
+              <text class="staff-range-name" x="107" y="22">定音鼓</text>
+              <text class="staff-range-tuning" x="107" y="40">四面鼓组</text>
+              <path class="staff-range-span" d="M107 238V304"/>
+              <g class="staff-range-pitch" data-staff-endpoint="A♭3">
+                <text class="range-staff-symbol range-staff-accidental" x="91" y="238">&#xE260;</text>
+                <text class="range-staff-symbol" x="101" y="238">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="120" y="242" text-anchor="start">A♭3</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="D2">
+                <path class="range-staff-ledger" d="M96 298h22"/>
+                <text class="range-staff-symbol" x="101" y="304">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="120" y="308" text-anchor="start">D2</text>
+              </g>
+            </g>
+            <g data-instrument-range="2">
+              <text class="staff-range-name" x="197" y="22">木琴</text>
+              <text class="staff-range-tuning" x="197" y="40">三个半八度</text>
+              <path class="staff-range-span" d="M197 58V208"/>
+              <g class="staff-range-pitch" data-staff-endpoint="C8">
+                <path class="range-staff-ledger" d="M186 154h22 M186 142h22 M186 130h22 M186 118h22 M186 106h22 M186 94h22 M186 82h22 M186 70h22 M186 58h22"/>
+                <text class="range-staff-symbol" x="191" y="58">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="210" y="62" text-anchor="start">C8</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="F4">
+                <text class="range-staff-symbol" x="191" y="208">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="210" y="212" text-anchor="start">F4</text>
+              </g>
+            </g>
+            <g data-instrument-range="3">
+              <text class="staff-range-name" x="287" y="22">钟琴</text>
+              <text class="staff-range-tuning" x="287" y="40">约两个半八度</text>
+              <path class="staff-range-span" d="M287 58V160"/>
+              <g class="staff-range-pitch" data-staff-endpoint="C8">
+                <path class="range-staff-ledger" d="M276 154h22 M276 142h22 M276 130h22 M276 118h22 M276 106h22 M276 94h22 M276 82h22 M276 70h22 M276 58h22"/>
+                <text class="range-staff-symbol" x="281" y="58">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="300" y="62" text-anchor="start">C8</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="G5">
+                <text class="range-staff-symbol" x="281" y="160">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="300" y="164" text-anchor="start">G5</text>
+              </g>
+            </g>
+            <g data-instrument-range="4">
+              <text class="staff-range-name" x="377" y="22">排钟</text>
+              <text class="staff-range-tuning" x="377" y="40">18 管</text>
+              <path class="staff-range-span" d="M377 166V226"/>
+              <g class="staff-range-pitch" data-staff-endpoint="F5">
+                <text class="range-staff-symbol" x="371" y="166">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="390" y="170" text-anchor="start">F5</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="C4">
+                <path class="range-staff-ledger" d="M366 226h22"/>
+                <text class="range-staff-symbol" x="371" y="226">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="390" y="230" text-anchor="start">C4</text>
+              </g>
+            </g>
+          </svg>
+          <p class="staff-range-summary">这是所列型号的实音范围。木琴与钟琴同到 C8，在分谱上分别写 C7 和 C6。</p>
+        </figure>
+        <figure class="notation-sample" id="percussion-range-keyboards" hidden></figure>
+        <table class="lesson-table" id="percussion-range-table">
+          <caption>不同型号的示例音域</caption>
+          <thead><tr><th scope="col">乐器</th><th scope="col">实际音高</th><th scope="col">现代常用记谱</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">定音鼓（四面鼓组）</th><td data-range-main>D2–A♭3</td><td>低音谱号，按实音记谱。单面鼓只覆盖其中一段。</td></tr>
+            <tr><th scope="row">木琴（三个半八度）</th><td data-range-main>F4–C8</td><td>高音谱号，写 F3–C7，实音高一个八度。</td></tr>
+            <tr><th scope="row">钟琴（约两个半八度）</th><td data-range-main>G5–C8</td><td>槌击钟琴的常用记法是高音谱号写 G3–C6，实音高两个八度。</td></tr>
+            <tr><th scope="row">排钟（18 管）</th><td data-range-main>C4–F5</td><td>常用高音谱号，直接写击音。击音指决定钟声所听音名的音高。</td></tr>
+          </tbody>
+        </table>
+        <p>同一个书写 C5，木琴通常发 C6，槌击钟琴通常发 C7。旧总谱或键盘式钟琴可能采用不同八度。排钟的实际音高以<strong>击音</strong>为准，也就是听起来决定钟声音名的音高。旧谱有按实音低八度记写的版本，先按该谱的记法还原，再核对是否落在所用管钟的音域内。</p>
+        <table class="lesson-table">
+          <caption>同一个排钟击音 C5 的两种写法</caption>
+          <thead><tr><th scope="col">记谱方式</th><th scope="col">书写音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">按击音记谱</th><td>C5 <svg class="inline-staff" viewBox="0 0 55 36" role="img" aria-label="高音谱号，第三间 C5"><path class="inline-staff-lines" d="M2 7H53 M2 12H53 M2 17H53 M2 22H53 M2 27H53"/><text x="5" y="22">&#xE050;</text><text x="34" y="14.5">&#xE0A2;</text></svg></td></tr>
+            <tr><th scope="row">旧谱写低八度</th><td>C4 <svg class="inline-staff" viewBox="0 0 55 36" role="img" aria-label="高音谱号，下加一线 C4"><path class="inline-staff-lines" d="M2 7H53 M2 12H53 M2 17H53 M2 22H53 M2 27H53 M31 32H45"/><text x="5" y="22">&#xE050;</text><text x="34" y="32">&#xE0A2;</text></svg></td></tr>
+          </tbody>
+        </table>
+
+        <h3>定音鼓的鼓径、定音与改音</h3>
+        <p>定音鼓由锅形共鸣体和张紧的鼓面组成。鼓槌敲在中心与边缘之间的发音区，音高较清楚。踩下踏板会改变鼓面张力，调紧升高，放松降低。每面鼓只能在有限区间内调音。鼓径较大的适合低些的音，较小的适合高些的音。同一个音若落在两面鼓的重叠音区，可优先考虑发音稳、余量足的那面鼓。</p>
+        <table class="lesson-table" id="timpani-drum-ranges">
+          <caption>一组踏板定音鼓的调音参照</caption>
+          <thead><tr><th scope="col">鼓径</th><th scope="col">可调实音</th><th scope="col">在示例里的分工</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">32 英寸</th><td>D2–B♭2</td><td>C 调示例可取 G2。</td></tr>
+            <tr><th scope="row">29 英寸</th><td>F2–D♭3</td><td>C 调示例可取 C3，D 调示例可取 A2。</td></tr>
+            <tr><th scope="row">26 英寸</th><td>A2–F3</td><td>D 调示例可取 D3。</td></tr>
+            <tr><th scope="row">23 英寸</th><td>C3–A♭3</td><td>覆盖更高的鼓音。</td></tr>
+            <tr><th scope="row">20 英寸（可另加）</th><td>E3–C4</td><td>帮助扩展上方音域。</td></tr>
+          </tbody>
+        </table>
+        <p>古典式两面鼓常分别承担主音和属音。较大的编制会备三至四面鼓，省去部分临时改音。现代分谱按实音写，可在开头列出各鼓初始定音。<i lang="it">muta D in E</i> 表示把原来定为 D 的鼓调成 E；须看前面已标的音区与鼓号，并留足改音时间。早期谱有写成 C、G 而在谱头注明实际定音的惯例，宜按 <i>Timpani in …</i> 还原。</p>
+
+        <h3>单击、滚击与余音</h3>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">奏法</th><th scope="col">鼓槌与音高怎么运动</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">单槌</th><td>用同一只槌作较疏的敲击。</td></tr>
+            <tr><th scope="row">双槌分奏</th><td>左右槌交替，适合连贯的节奏、重复或换鼓。</td></tr>
+            <tr><th scope="row">双槌齐奏</th><td>两槌同时落在一面或两面鼓上，可加强音头或同时取得两个鼓音。</td></tr>
+            <tr><th scope="row">同鼓滚奏</th><td>两槌在同一面鼓上快速交替，使声响持续，可同时渐强或渐弱。常用音符符干上的斜线记写，旧谱也见 <i>tr</i>。</td></tr>
+            <tr><th scope="row">两鼓交替颤奏</th><td>两槌在两面定有不同音高的鼓之间快速交替，声音中出现两个交替的音。</td></tr>
+            <tr><th scope="row">踏板滑奏</th><td>在一面鼓还在振动或滚奏时移动踏板，音高连续改变。全程须在这一面鼓的可调范围内。</td></tr>
+          </tbody>
+        </table>
+        <p>软槌起音圆而弱，常规毡槌适合一般音响，硬槌可让音头更明确。木槌会使质地更干。需要敲击后立刻收音时可制音；盖绒布改变整段音色可标 <i lang="it">coperti</i>，撤布标 <i lang="it">aperti</i>。</p>
+        <div id="timpani-tuning" class="programmatic-score" role="group" aria-labelledby="timpani-tuning-title">
+          <div class="score-toolbar">
+            <h3 id="timpani-tuning-title">两面定音鼓的定音与滚奏</h3>
+            <form class="score-choices">
+              <fieldset>
+                <legend id="timpani-key-label">定音</legend>
+                <div class="score-tonic">
+                  <select id="timpani-key" name="tuning" aria-labelledby="timpani-key-label">
+                    <option value="c">C3 与 G2</option>
+                    <option value="d">D3 与 A2</option>
+                  </select>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend id="timpani-stroke-label">收尾</legend>
+                <div class="score-tonic">
+                  <select id="timpani-stroke" name="ending" aria-labelledby="timpani-stroke-label">
+                    <option value="strike">单击</option>
+                    <option value="roll">同鼓滚奏</option>
+                  </select>
+                </div>
+              </fieldset>
+              <output class="score-key-summary score-directions" for="timpani-key timpani-stroke" data-generated-description></output>
+            </form>
+          </div>
+          <figure data-generated-score></figure>
+          <figure class="keyboard-example">
+            <figcaption>两面鼓的实际定音</figcaption>
+            <div data-generated-piano></div>
+          </figure>
+        </div>
+        <p>在乐队里，定音鼓可独奏低音短句，也可和铜管和声的低音、低弦拨奏或大管吐音重叠。单击适合点明重音，滚奏适合支持长和弦与渐强。跨越和声变化时，响着的旧鼓音是否需要制止，也要和下一和弦一起考虑。</p>
+
+        <h3>木琴、钟琴与排钟</h3>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">乐器</th><th scope="col">发音构造</th><th scope="col">适用的织体</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">木琴</th><td>木条按音高排列，常见管弦乐型号像钢琴键盘分两排，条下的共鸣管增强发音。也有按四列纵排的形式。</td><td>音头短而清楚，适合快音、音阶、琶音、双音和干脆的旋律。延长靠重复敲击，可与拨弦、短吐音和带弱音器的铜管结合。</td></tr>
+            <tr><th scope="row">钟琴</th><td>用木、金属或其他不同硬度的小槌击打按音高排好的金属音条。管弦乐常用槌击式，也有键盘式。</td><td>明亮、穿透且余音比木琴长，适合较疏的单音、双音和旋律支点。与拨弦、竖琴、长笛或短笛配合可点亮高处。</td></tr>
+            <tr><th scope="row">排钟</th><td>长短不同的金属管悬挂在架上，用槌敲管上部。管数决定音域，18 管是常见形式，也有较少或较多管的型号。</td><td>音头厚重而洪亮，余响长。多用于点明少数钟声、庄重的信号或段落轮廓。需要收住余音时，可用可控制音器的型号。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="mallet-motif">
+          <div class="music-demo-toolbar">
+            <h4>木琴、钟琴与排钟的起音和余音</h4>
+            <label>乐器 <select>
+              <option value="xylophone">木琴</option>
+              <option value="glockenspiel">钟琴</option>
+              <option value="chimes">排钟</option>
+            </select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="比较三个乐器演奏同一动机时的起音和余音"></figure>
+        </div>
+        <p>示例谱和采样试听一律使用实际音高。木琴和钟琴同音高比较，排钟的动机置于低八度，以便落在示例型号的音域内。</p>
+      </section>
+
+      <section aria-labelledby="unpitched-percussion">
+        <h2 id="unpitched-percussion">第二节 无固定音高的打击乐器</h2>
+        <p>小鼓、大鼓、钹、三角铁、铃鼓、锣和响板也有偏高、偏低的听感，谱上主要写它们的节奏、力度、奏法和制音。常用一线谱记录单件乐器。每根线由乐器名称确定含义。两件合写时可用符干向上与向下区分，或者使用明确的谱例图例。</p>
+        <figure class="notation-sample">
+          <figcaption>一线谱的单件与双件记法</figcaption>
+          <p>单件的一线谱
+            <svg class="inline-staff inline-staff-wide" viewBox="0 0 88 36" role="img" aria-label="三次敲击都写在同一根线上，符干朝下。">
+              <path class="inline-staff-lines" d="M2 14H86"/><path d="M85 8V22"/>
+              <text x="15" y="14">&#xE0A4;</text><text x="39" y="14">&#xE0A4;</text><text x="63" y="14">&#xE0A4;</text><path d="M15.6 14V29 M39.6 14V29 M63.6 14V29"/>
+            </svg>
+            双件合写时用符干区分
+            <svg class="inline-staff inline-staff-wide" viewBox="0 0 88 39" role="img" aria-label="三拍分别是上符干的一件敲击、下符干的一件敲击、两件齐击。">
+              <path class="inline-staff-lines" d="M2 19H86"/><path d="M85 13V25"/>
+              <text x="15" y="19">&#xE0A4;</text><text x="39" y="19">&#xE0A4;</text><text x="63" y="19">&#xE0A4;</text><path d="M20 19V4 M39.6 19V34 M68 19V4 M63.6 19V34"/>
+            </svg>。
+          </p>
+        </figure>
+
+        <h3>小鼓与大鼓</h3>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">乐器</th><th scope="col">起音与延续</th><th scope="col">乐队中的任务</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">小鼓</th><td>两面蒙皮，下鼓皮贴响弦。双槌单击、短促的双击、三击和快速滚奏都清楚。滚奏可突然变强弱，也可逐渐起伏。</td><td>擅长行进与舞蹈中的节奏轮廓，也可配合铜管和弦乐使起音更鲜明。松开响弦写 <i lang="it">senza corde</i>，重新接上写 <i lang="it">con corde</i>。蒙布也能令声音变暗。</td></tr>
+            <tr><th scope="row">大鼓</th><td>较大的双面鼓，没有小鼓的响弦。包毡或软皮的槌适合单击。用可连续交替的鼓槌可滚奏，低处的余响会把密集节奏黏在一起。</td><td>常随低音乐器、定音鼓或钹强调重拍。弱击可厚而柔，强击能突出高潮。复杂的细分节奏通常交给起音更短的乐器。</td></tr>
+          </tbody>
+        </table>
+
+        <h3 id="percussion-damping">钹的互击、悬挂敲击和制音</h3>
+        <p>双钹是两片金属盘相撞，撞后分开能让余响充分展开。吊钹用一片悬挂的钹，由槌敲击。用软槌在吊钹上滚奏，能把冲击转化成渐强的连续声。双钹也可相贴后快速摇动形成连续音，较少使用。</p>
+        <p>钹的单击只在起点发力，后面是金属的余响。<i>l.v.</i> 或末端开放的延音弧表示任其自然衰减。要在指定拍子收音，把延续的时值写到这一拍，并在收音点标明制音。演奏者用手或身体止住振动。</p>
+        <table class="lesson-table">
+          <caption>钹的自然余响与定点制音</caption>
+          <thead><tr><th scope="col">写法</th><th scope="col">一线谱示例</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">自由延续</th><td><svg class="inline-staff inline-staff-wide" viewBox="0 0 112 34" role="img" aria-label="钹敲击后标 l.v.，余响自由衰减"><path class="inline-staff-lines" d="M2 23H110"/><text x="18" y="23">&#xE0A4;</text><path d="M23.5 23V10 M24 26Q40 33 58 27" fill="none"/><text class="inline-staff-count" x="62" y="15">l.v.</text></svg></td></tr>
+            <tr><th scope="row">第二拍制音</th><td><svg class="inline-staff inline-staff-wide" viewBox="0 0 112 34" role="img" aria-label="第一拍敲击，第二拍在四分休止符处标制音"><path class="inline-staff-lines" d="M2 23H110"/><text x="18" y="23">&#xE0A4;</text><path d="M23.5 23V10"/><text x="57" y="23">&#xE4E5;</text><text class="inline-staff-count" x="72" y="15">damp</text></svg></td></tr>
+          </tbody>
+        </table>
+        <details class="lesson-aside">
+          <summary>吊钹的槌与声音</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>定音鼓槌、大鼓槌较软，起音较柔，可做单击或均匀滚奏。</li>
+              <li>木质小鼓槌带来较硬的点状起音；三角铁的金属槌会增加直接撞击的质地。要得到特定效果，在分谱上写明用什么槌。</li>
+              <li>强奏钹常配大鼓或定音鼓强调高潮。弱奏吊钹也能只增加色彩，滚奏可把声音逐渐带到下一次重音。</li>
+            </ul>
+          </div>
+        </details>
+
+        <h3>三角铁、铃鼓、锣与响板</h3>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">乐器</th><th scope="col">敲击或持续的方式</th><th scope="col">配器上的用法</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">三角铁</th><td>敲悬挂的开口钢三角。可单击，也可在内角相邻两边快速交替形成滚奏；敲击位置会改变色彩。</td><td>金属声清亮、穿透，轻快句子常和铃鼓、弦乐拨奏搭配。需要精确停声时用手制音。</td></tr>
+            <tr><th scope="row">铃鼓</th><td>浅框上有鼓皮和小金属片。击鼓面兼有鼓音和金属响；摇动或拇指摩擦边缘可得到较连续的响声。</td><td>击奏强调节奏，摇奏和摩擦滚奏可写成长时值并标清方法。常用于舞蹈、戏剧与高处的点缀。</td></tr>
+            <tr><th scope="row">锣</th><td>管弦乐常用的 <i>tam-tam</i> 是无明确音高的大锣，用软槌敲击会留下较长余响。定音锣可能有可辨音高，若指定音名须辨明器型。</td><td>适合突出少数起音，也可让低沉声响从弱到强随着段落展开。换和声或进入静默时可能需要制音。</td></tr>
+            <tr><th scope="row">响板</th><td>两片贝壳形硬材相击，管弦乐常用有柄型。声音短、脆，起音明显。</td><td>用清楚的节奏支持舞蹈，常作伴奏。快速响板的质地即使在合奏中也容易被听见。</td></tr>
+          </tbody>
+        </table>
+
+        <div class="music-demo" id="percussion-accents">
+          <div class="music-demo-toolbar">
+            <h4>同一重拍的打击乐配置</h4>
+            <label>乐器组合 <select>
+              <option value="snare">小鼓</option>
+              <option value="bass">大鼓</option>
+              <option value="cymbal">钹</option>
+              <option value="both">大鼓＋钹</option>
+              <option value="triangle">三角铁</option>
+            </select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="一线谱上同样两次重拍的不同打击乐声音"></figure>
+        </div>
+        <p>以上各版的起音位置和写出的节奏相同。试听采用通用打击乐采样，大鼓和钹用于示意音头与余响的区别。实际分谱还应明确何时让余响自然结束、何时主动制音。</p>
+
+        <h3>总谱顺序、人数与换奏</h3>
+        <p>打击乐组没有固定编制，按作品需要选用。总谱里定音鼓通常放在组首，其余声部可按音区和换奏关系安排。一个常见次序是三角铁、铃鼓、响板、小鼓、钹、大鼓、锣，之后列排钟、钟琴、木琴。每件乐器或每位演奏者的换奏谱都要有清楚的名称和记号。</p>
+        <p>定音鼓一般由专人承担。其他打击乐可以由几位演奏者兼奏，常见中等编制可从三至四位打击乐手安排起，但人数由同时发声的声部与换奏时间决定。两件乐器在同一拍齐击、演奏者需要两手持钹，或上一件还需要人工制音时，都应按实际动作分配。</p>
+        <aside class="lesson-callout"><p><strong>打击乐分谱既写何时响，也写何时收。</strong> 音高乐器再核对实际音高、每面鼓的换音余量和八度移调关系。无固定音高的乐器优先写清器材、击奏和制音。</p></aside>
+      </section>
+    </main>
+  </body>
+</html>

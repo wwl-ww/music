@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第六章 二段曲式｜曲式学基础教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./form-analysis-6.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">曲式学基础教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第六章 二段曲式</h1>
+      <p class="intro">二段曲式里，第一段交代主要乐思，第二段接着发展。材料即使在最后回来，也可能只是第二段的收尾。辨认这种曲式，需要同时看段落的功能、边界和结尾。</p>
+
+      <section aria-labelledby="binary-structure">
+        <h2 id="binary-structure">二段曲式的结构原理</h2>
+        <p><strong>二段曲式</strong>由功能不同的两个乐段组成。第一段呈示主要乐思，通常有清楚的开始和收束。第二段从这个乐思继续，引入新材料或改造原有材料，再完成全曲。新材料常在第二段开头出现，形成能听出的转折。第二段还可以与第一段共享某一动机、伴奏或调性，使转折和前文相连。</p>
+        <p>先确定第一段收束，再观察其后的开头。前几章的乐句划分、终止和句长，同样适用于这两个段落。第一段常用容易辨认的两句结构，第二段承担较多发展。两段可等长，也可随乐思扩充。</p>
+        <table class="lesson-table">
+          <caption>一段式、复乐段和二段式的边界证据</caption>
+          <thead><tr><th scope="col">结构</th><th scope="col">主要判断依据</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">一段式</th><td>若干乐句共同完成一个乐段。句内重复、对比或扩充都服从这一次完整陈述。</td></tr>
+            <tr><th scope="row">复乐段</th><td>后段从前段句首材料出发，两段构成相应的陈述，后段通常完成更充分的终止。</td></tr>
+            <tr><th scope="row">二段式</th><td>第一段呈示，第二段开头换用或改造材料，形成较高层次的继续与发展。</td></tr>
+          </tbody>
+        </table>
+        <p>二段式可以构成独立的一首曲子。用在大型作品内部时，也可以形成一个局部的二段结构，例如变奏曲或回旋曲的主题。</p>
+      </section>
+
+      <section aria-labelledby="binary-reprise">
+        <h2 id="binary-reprise">带再现的二段式</h2>
+        <p><strong>带再现的二段式</strong>在第二段的最后一个乐句重现第一段的主要材料。再现可以取第一段上句、下句或其中辨识度较高的部分。实际较常见的是重现下句。第二段开头负责承接与改变乐思，在有再现的器乐曲里常称为<strong>中间句</strong>，有时会在属持续音上蓄势，直接进入再现。</p>
+        <p>用大写字母标两个乐段，用小写字母标乐句材料，常见图式是 A（a＋a′）＋B（b＋a′）。其中 b 是中间句，最后的 a′ 与第一段的下句对应。四句也可以分别承担起、承、转、合的作用。中间句的对比或不稳定性使转折清楚，末句的材料回归使全曲收合。</p>
+        <p>贝多芬《第九交响曲》终乐章中，《欢乐颂》的十六小节主题就是大型作品内部的二段结构实例。</p>
+        <div class="music-demo" id="binary-ode-to-joy">
+          <div class="music-demo-toolbar">
+            <h3>《欢乐颂》的二段结构与句尾再现</h3>
+            <label>段落<select data-analysis-jump aria-label="选择欢乐颂的段落"></select></label>
+          </div>
+          <div class="timeline-frame" data-analysis-timeline></div>
+          <dl class="analysis-description" aria-live="polite">
+            <dt data-analysis-section>全曲</dt>
+            <dd data-analysis-description>A 段为呈示和变尾重复，B 段为中间句和再现句。</dd>
+          </dl>
+          <p class="music-demo-cue analysis-status" data-analysis-status role="status"></p>
+          <figure data-analysis-score aria-label="贝多芬欢乐颂的十六小节主题，前八小节为第一段，后八小节为第二段"></figure>
+        </div>
+        <p>《欢乐颂》的第一段共八小节。下句重复上句的前部，改用主音结束。第二段的中间句增加八分音符，句内由两个短单位接一个较长单位，形成 1＋1＋2。再现句与第一段下句对应。第 12 小节最后一拍先发出 F♯，再用延音线进入第 13 小节，说明两个乐句可以连在一起而仍有不同的结构功能。</p>
+        <details class="lesson-aside">
+          <summary>中间句与再现的常见变体</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>中间句可从前段结尾取一个短音型做模进，也可改写动机、换织体或引入较独立的新旋律。</li>
+              <li>对比明显的中间句常加密运动或在属和声上维持不稳定状态。材料贯穿性强时，也可以主要用调性、和声色彩或音区形成对照。</li>
+              <li>再现可以原样出现，也可以取上句的开头和下句的结尾重新组合。只恢复有特征的开头时，后面仍可沿用中间句的织体。再现可保持、加强或减弱此前积累的力度。调性走远以后，材料再现往往与主调回归同时出现。</li>
+              <li>再现后的终止还可以延长。属和弦先向下属功能展开，最后再到主和弦，也能推迟全段收束。</li>
+            </ul>
+          </div>
+        </details>
+        <table class="lesson-table">
+          <caption>句尾再现的材料范围</caption>
+          <thead><tr><th scope="col">实例</th><th scope="col">中间句怎样承接</th><th scope="col">末句怎样回归</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">《欢乐颂》</th><td>加密节奏，延音接入再现。</td><td>重现第一段的整个下句。</td></tr>
+            <tr><th scope="row">舒曼《蝴蝶》选段</th><td>取第一段第 8 小节的句尾音型，去掉起拍的休止后移位模进。</td><td>第一段上句的前两小节与下句的后两小节连成新的末句。</td></tr>
+            <tr><th scope="row">贝多芬 Op. 2 No. 1 慢板</th><td>新旋律配上持续属音，加密的织体不断开，直接接入再现。</td><td>开头一小节回到原材料，音区提高，后续保留中间句较密的织体。</td></tr>
+          </tbody>
+        </table>
+        <table class="lesson-table" id="scriabin-return-and-cadence">
+          <caption>斯克里亚宾《前奏曲》Op. 11 第 10 首的主调回归与终止</caption>
+          <thead><tr><th scope="col">小节</th><th scope="col">调性与结构作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">1–8</th><td>第一段用两个四小节乐句呈示动机，从升 C 小调出发，句末回到升 C 小调。</td></tr>
+            <tr><th scope="row">9–12</th><td>中间句沿用同一动机，E 大调相对稳定，与前段形成调性色彩的对比。句尾才改用升 C 小调的属和弦，准备再现。</td></tr>
+            <tr><th scope="row">13–16</th><td>第 13 小节起重现材料，低音以主持续音确认升 C 小调的回归。第 15 小节的属和弦随后走向下属功能，终止推迟。</td></tr>
+            <tr><th scope="row">17–20</th><td>第 17 小节的强拍仍是下属和弦，到第 19 小节才解决到主和弦，完成延后的收束。</td></tr>
+          </tbody>
+        </table>
+        <h3>不带再现的二段式</h3>
+        <p>第二段可以沿新的材料或变化后的材料进行到底，在新写的乐句上收束。器乐小品中，这种情况较少，声乐曲中更常遇到。两段之间仍有继续与发展的关系。判断时要看最后一句是否借原材料的回归来收束，即使回来的只有能辨认的题头。</p>
+        <div class="music-demo" id="binary-return-variants">
+          <div class="music-demo-toolbar">
+            <h3>第二段有无再现的对照</h3>
+            <div class="score-choice-buttons" data-writing-choices role="group" aria-label="选择第二段结尾"></div>
+          </div>
+          <output class="music-demo-cue" data-writing-description></output>
+          <figure data-writing-score aria-label="八小节钢琴教学曲，各版本共用前六小节，结尾可完整再现下句、局部再现题头或续写新材料"></figure>
+        </div>
+        <aside class="lesson-callout"><p><strong>再现的层级取决于长度与功能。</strong> 末句回到旧材料，仍可属于第二段的收尾。独立的第三部分需要有自己的段落展开与结构分量。</p></aside>
+      </section>
+
+      <section aria-labelledby="binary-song-and-instrument">
+        <h2 id="binary-song-and-instrument">声乐曲与器乐曲的曲式结构</h2>
+        <p>声乐曲和器乐曲都可以用主题呈示、重复、变奏、对比、展开和再现组织材料，也都有方正或非方正的结构。舞曲、摇篮曲、无词歌等体裁中的节奏或歌唱性，还可以在不同编制之间借用。器乐常用的许多曲式也可用于声乐，奏鸣曲式在声乐中较少见。</p>
+        <table class="lesson-table">
+          <caption>分析声乐曲时的歌词证据</caption>
+          <thead><tr><th scope="col">比较维度</th><th scope="col">在声乐曲中观察的材料</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">句读与语气</th><td>歌词停顿、重音和语调会影响自然的旋律分句。艺术歌曲的乐句可随语意延长、缩短或保持连续。</td></tr>
+            <tr><th scope="row">句段的对应</th><td>常见一行词配一个乐句，一节词配一个乐段。词曲也可不同步，一句词可分两个乐句，几句词也可合进一个较大的音乐句段。</td></tr>
+            <tr><th scope="row">材料的延续</th><td>歌曲可反复使用接近口语和歌唱语气的短音调。器乐常见的细碎动机分割与展开，在歌曲中受到歌词发展和可歌唱性的限制。</td></tr>
+          </tbody>
+        </table>
+        <p>民歌、戏曲也常采用上下句，艺术歌曲则较多采用不等长或多句的结构。分界不清时，把歌词、旋律与伴奏一同放进较大的结构，观察何处形成真正的收束或转折。</p>
+      </section>
+
+      <section aria-labelledby="binary-strophic-song">
+        <h2 id="binary-strophic-song">分节歌与叠歌构成的二段式</h2>
+        <p><strong>分节歌</strong>用同一段曲调反复配不同的歌词，多半用来叙述或逐步抒情，可由独唱或齐唱唱出。<strong>叠歌</strong>反复时通常同时保留原词和原曲，多用齐唱或合唱。其词曲常简练、鲜明，用来集中表达主题，也可以是一句反复呼号。两部分可以分别形成一个结构完整的乐段，例如都按 4＋4 的乐句组织。</p>
+        <p>这种歌曲可以从分节歌开始，也可以先唱叠歌，随后在各节之间插入叠歌并以它收束。判定叠歌要看固定歌词和音乐功能。开头和结尾听到同一旋律，是叠歌重复的一种演唱安排。结构上仍有分节歌和叠歌两个曲调部分。</p>
+        <div class="music-demo" id="binary-verse-refrain">
+          <div class="music-demo-toolbar">
+            <h3>分节歌与叠歌的演唱顺序</h3>
+            <div class="score-choice-buttons" data-writing-choices role="group" aria-label="选择演唱顺序"></div>
+          </div>
+          <output class="music-demo-cue" data-writing-description></output>
+          <figure data-writing-score aria-label="分节歌和叠歌各简写为两小节，比较分节歌先唱与叠歌先唱的行进顺序"></figure>
+        </div>
+        <p>示意谱将每部分缩为两个小节，以钢琴演示曲调和顺序。A₁ 和 A₂ 代表分节歌的两节歌词，曲调相同。B 每次都代表固定词曲的叠歌。</p>
+      </section>
+
+      <section aria-labelledby="binary-art-songs">
+        <h2 id="binary-art-songs">二段式艺术歌曲</h2>
+        <p>二段式艺术歌曲的两段通常共同展开一个情境或情感。第二段可以加强第一段的表达，也可以从描写转向感情抒发。判断段落时，需要看新的词意、音调、和声、伴奏或织体是否共同指向一个新的结构任务。艺术歌曲里较常见的是没有完整再现的二段式。末句即使回归，前面也可以沿歌词连贯发展。有时回归的材料只在伴奏尾声出现。</p>
+
+        <h3>《索尔维格之歌》的调式与节奏对比</h3>
+        <p>格里格在第一段用相同旋律处理不同节的歌词，以叙述为主。四句可标作 a、a′、b、b′，第三句缩短并停在属，第四句重复其材料并收回主和弦。第二段改用无词歌唱，以更活跃的三拍子和附点音型形成舞蹈感，并转入同主音大调。其开头短句先重复，接着连贯推进。伴奏在主、属持续音上交替主属和弦，使注意力集中到歌唱的变化。这种词曲配置兼有分节歌和叠歌的特点。</p>
+        <p>第二段开头的附点音型
+          <svg class="inline-staff" style="--inline-notation-width: 10em" viewBox="0 0 146 44" role="img" aria-label="第二段开头的三组附点八分接十六分音符，呈活跃的三拍子。">
+            <path class="inline-staff-lines" d="M2 9H144 M2 15H144 M2 21H144 M2 27H144 M2 33H144"/>
+            <text x="4" y="27">&#xE050;</text>
+            <text x="19" y="9">&#xE262;</text><text x="24" y="18">&#xE262;</text><text x="29" y="6">&#xE262;</text>
+            <text x="47" y="12" text-anchor="middle">&#xE0A4;</text><text x="61" y="9" text-anchor="middle">&#xE0A4;</text>
+            <text x="79" y="12" text-anchor="middle">&#xE0A4;</text><text x="93" y="15" text-anchor="middle">&#xE0A4;</text>
+            <text x="111" y="18" text-anchor="middle">&#xE0A4;</text><text x="125" y="15" text-anchor="middle">&#xE0A4;</text>
+            <path d="M44 12V30 M58 9V27 M76 12V30 M90 15V33 M108 18V36 M122 15V33"/>
+            <path d="M44 30L58 27 M76 30L90 33 M108 36L122 33 M53 25L58 24 M85 29L90 30 M117 31L122 30" style="stroke-width:2"/>
+            <circle cx="52.5" cy="12" r=".85"/><circle cx="84.5" cy="12" r=".85"/><circle cx="116.5" cy="18" r=".85"/>
+            <path d="M137 9V33"/>
+          </svg>
+        </p>
+
+        <h3>《丁香花》的连续发展</h3>
+        <p>拉赫玛尼诺夫用两个 4＋4 的乐段组织歌唱，并在它们之前、之间和之后放置简短的引子、过门和尾声。第一段的短音调带五声性，首句落在主和弦三音，次句落在属和弦三音。第二段开头继承第一段第二句的音调，但音区活动、节奏、钢琴织体和调性都起了变化，并一度离向下属小调。</p>
+        <p>前奏的钢琴音型
+          <svg class="inline-staff" style="--inline-notation-width: 8.75em" viewBox="0 0 144 42" role="img" aria-label="前奏的伴奏反复使用降 A、C、降 B、降 E、C、降 E 的波动音型。">
+            <path class="inline-staff-lines" d="M2 8H142 M2 14H142 M2 20H142 M2 26H142 M2 32H142"/>
+            <text x="4" y="26">&#xE050;</text>
+            <text x="20" y="20">&#xE260;</text><text x="25" y="11">&#xE260;</text><text x="30" y="23">&#xE260;</text><text x="35" y="14">&#xE260;</text>
+            <text x="49" y="23" text-anchor="middle">&#xE0A4;</text><text x="63" y="17" text-anchor="middle">&#xE0A4;</text>
+            <text x="77" y="20" text-anchor="middle">&#xE0A4;</text><text x="91" y="11" text-anchor="middle">&#xE0A4;</text>
+            <text x="105" y="17" text-anchor="middle">&#xE0A4;</text><text x="119" y="11" text-anchor="middle">&#xE0A4;</text>
+            <path d="M46 23V37 M60 17V35.5 M74 20V34 M88 11V32.5 M102 17V31 M116 11V29.5"/>
+            <path d="M46 37L116 29.5" style="stroke-width:2"/>
+          </svg>
+        </p>
+        <p>舒展的伴奏音型反复出现，贯穿两段。第二段的末句再次承接前段第二句的音调，推向高潮后停在较不稳定的和弦三音上。人声结束后，钢琴才回忆前段首句结尾。这段回忆处在尾声，声乐主线仍体现连续发展的二段关系。反复的歌腔多用调内音，并保留五声性色彩。</p>
+
+        <h3>《思乡》的歌腔与末句回归</h3>
+        <p>黄自在钢琴前奏先呈示一个上行歌腔。第一段上句从短片段逐渐综合为较长的乐节，下句继续使用原来的歌腔。过门接过同一材料，变化后模拟杜鹃叫声，铺垫后段。歌曲的叙述从写景转向思乡，第二段用反向进行加厚伴奏，歌声以短音、休止和半音上行推进高潮。</p>
+        <p>贯穿全曲的歌腔
+          <svg class="inline-staff" style="--inline-notation-width: 9.25em" viewBox="0 0 144 43" role="img" aria-label="钢琴前奏的歌腔节奏骨架，短休止后为三个上行八分音符，跨小节接两个四分音符。">
+            <path class="inline-staff-lines" d="M2 9H142 M2 15H142 M2 21H142 M2 27H142 M2 33H142"/>
+            <text x="5" y="27">&#xE050;</text>
+            <text x="20" y="21">&#xE260;</text><text x="25" y="12">&#xE260;</text><text x="30" y="24">&#xE260;</text>
+            <text x="40" y="21" text-anchor="middle">&#xE4E6;</text>
+            <text x="49" y="30">&#xE262;</text>
+            <text x="60" y="30" text-anchor="middle">&#xE0A4;</text><text x="73" y="27" text-anchor="middle">&#xE0A4;</text>
+            <text x="86" y="21" text-anchor="middle">&#xE0A4;</text><text x="111" y="15" text-anchor="middle">&#xE0A4;</text><text x="126" y="18" text-anchor="middle">&#xE0A4;</text>
+            <path d="M63 30V14 M76 27V11 M89 21V8 M108 15V31 M123 18V34 M98 9V33"/>
+            <path d="M63 14L89 8" style="stroke-width:2"/>
+          </svg>
+        </p>
+        <p>第二段把三句歌词处理成两个音乐乐句。「满怀别绪」不停顿地接入「问落花」，两句词合成一个乐句，情绪在这里推向高潮。最后一句歌词单独配成总结性的乐句，拉宽第一段下句的开头材料，伴奏也再用原来的歌腔。这样，词的句读和音乐的句界分开，音乐仍形成上句变化、下句回归的二段式关系。</p>
+      </section>
+    </main>
+  </body>
+</html>

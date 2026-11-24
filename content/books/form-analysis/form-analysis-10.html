@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第十章 回旋曲式｜曲式学基础教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./form-analysis-10.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">曲式学基础教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第十章 回旋曲式</h1>
+      <p class="intro">回旋曲从一个明确的主题出发，离开它，又多次回到它。每次离开可以出现另一种音乐，主部的回返让这些不同的段落仍属于同一首曲子。</p>
+
+      <section aria-labelledby="rondo-structure">
+        <h2 id="rondo-structure">回旋曲式的构成</h2>
+        <p>全曲开头确立的主题称为<strong>叠部</strong>，也可称为<strong>主部</strong>。主部通常回返两次或更多次，与不同的<strong>插部</strong>交替。用 A 标主部，B、C 标两个不同的插部，典型图式是 A–B–A–C–A。还可以增添 D、E 等插部，扩展交替的次数。</p>
+        <p>这一组织方式与分节歌、叠歌的交替有关。相同的叠歌是每次回来的参照，各节歌词及音乐的变化则发展为不同的插部。回旋曲的器乐主部也常具有鲜明的歌唱性或舞蹈性。</p>
+        <table class="lesson-table">
+          <caption>主部回返次数与中间材料</caption>
+          <thead><tr><th scope="col">材料次序</th><th scope="col">判断依据</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">A–B–A</th><td>A 回返一次，可形成三段式。</td></tr>
+            <tr><th scope="row">A–B–A–B–A</th><td>A 回返两次，间隔两次采用同一种 B 材料，可形成双三段式。</td></tr>
+            <tr><th scope="row">A–B–A–C–A</th><td>A 回返两次，两个间隔分别采用 B、C 两种材料，是回旋曲式的典型图式。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="rondo-refrain-and-episodes">
+          <div class="music-demo-toolbar">
+            <h3>主部回返与不同插部</h3>
+            <div class="score-choice-buttons" data-writing-choices role="group" aria-label="选择材料次序"></div>
+          </div>
+          <output class="music-demo-cue" data-writing-description></output>
+          <figure data-writing-score aria-label="用相同主部和两种插部比较三段式、双三段式和回旋曲的材料次序"></figure>
+        </div>
+        <p>示范把每部分缩为两小节。A 有固定的短短长题头，B 改为小调和较均匀的节奏，C 用另一种节奏轮廓。在实际作品中，应先辨认有独立分量的主部，再判断两次主部之间出现的是重复材料还是另一段音乐。完整的主题回返可伴随装饰、织体或调性的改变。</p>
+      </section>
+
+      <section aria-labelledby="rondo-baroque">
+        <h2 id="rondo-baroque">古回旋曲</h2>
+        <p>十七世纪末至十八世纪的法国古键盘回旋曲，常带有舞蹈性。每个部分通常较短，多次回返及插部累积成全曲。叠部多为两句方正型乐段，在主调收住。多次回返时，某次叠部可以加入装饰。</p>
+        <p>插部与叠部往往共享动机，听觉上的对比一般较小。插部可留在主调，也可短暂转向近关系调，篇幅可以与叠部相当或略长。插部结束后，叠部常直接回来。精细的装饰与相对稳定的舞步，使这种写法适合表现风景、生活场景和个人情感。</p>
+
+        <h3>拉莫《铃鼓舞曲》的材料发展</h3>
+        <p>上行后回落的弱起、舞蹈性节奏和反复出现的主音低音，使叠部容易辨认。全曲的次序是 A–B–A–C–A–D–A。三个插部都与 A 有材料联系，依次扩大对比和展开的程度。</p>
+        <div class="music-demo" id="rondo-tambourin-excerpts">
+          <div class="music-demo-toolbar">
+            <h4>《铃鼓舞曲》的叠部与插部材料</h4>
+            <div class="score-choice-buttons" data-writing-choices role="group" aria-label="选择铃鼓舞曲的片段"></div>
+          </div>
+          <output class="music-demo-cue" data-writing-description></output>
+          <figure data-writing-score aria-label="铃鼓舞曲中叠部和三个插部的开头片段，部分伴奏经缩编"></figure>
+        </div>
+        <p>谱例摘出各段开头，保留主要旋律，省略倚音等装饰。第二插部的伴奏只保留持续低音，便于辨认短音型和半音变化。全曲中，第一次回返的叠部与第二插部按反复记号一起重奏。段落图式仍按叠部和插部的类型标记。</p>
+        <table class="lesson-table">
+          <caption>《铃鼓舞曲》三个插部的推进</caption>
+          <thead><tr><th scope="col">插部</th><th scope="col">材料与结构</th><th scope="col">怎样引回叠部</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">B</th><td>沿用叠部的弱起和第二小节的副动机。两句共八小节，仍是方正结构。</td><td>副动机反复展开，半终止停在属。随后的叠部基本原样回返。</td></tr>
+            <tr><th scope="row">C</th><td>扩为三个四小节乐句。第一句在主音持续上作半音下行模进，第二句回用叠部开头。</td><td>末句用连续八分音符推动，停在属功能上，形成连接。</td></tr>
+            <tr><th scope="row">D</th><td>由三个乐句构成，高音区的重复音型逐步积累成小高潮。</td><td>连续八分音符下行并渗入最后一次回返。叠部首句缩短两小节，下句也采用这种八分音符作装饰。</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="rondo-classical">
+        <h2 id="rondo-classical">维也纳古典时期的回旋曲</h2>
+        <p>维也纳古典时期的回旋曲常用作奏鸣曲、交响曲等套曲的一个乐章，尤其常放在终乐章。A–B–A–C–A 成为典型的五部布局。与古回旋曲相比，插部有时减少，主部、插部和连接段各自扩大，整体篇幅也随之增大。主题鲜明的舞曲或歌唱性仍然常见，插部推动和调性冲突可以使全曲带有戏剧性。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">部分</th><th scope="col">常见写法</th><th scope="col">结构作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">主部 A</th><td>可扩大为二段结构，也可用乐段的重复或变化重复扩大。回返通常仍在主调。</td><td>从清楚的旋律中建立记忆。再次出现时，可换织体、装饰或缩短。</td></tr>
+            <tr><th scope="row">插部 B、C</th><td>常有独立的新主题、各自的调性及调性展开。C 往往比 B 更长。</td><td>主部之后常直接进入插部，使对比清楚。第二插部或紧随其后的展开常承担较强的推动。</td></tr>
+            <tr><th scope="row">连接部</th><td>可承接插部音型，也可提前取出主部动机，经过模进和属功能准备。</td><td>在插部和主部回返之间改变调性、织体或运动方向。</td></tr>
+            <tr><th scope="row">尾声</th><td>有时紧接最后的主部，有时由主部直接发展出去。</td><td>进一步回顾材料、集中张力或巩固主调。</td></tr>
+          </tbody>
+        </table>
+
+        <h3>贝多芬《黎明》奏鸣曲末乐章</h3>
+        <p>这首奏鸣曲是贝多芬的作品第 53 号。末乐章前的慢速序奏从 F 大调出发，在 C 大调的属功能上留下期待。回旋曲随即建立 C 大调和可辨认的歌唱旋律。主题摘录对应开头第 2–3 小节，省略分解和弦伴奏。</p>
+        <p>主部旋律片段
+          <svg class="inline-staff" style="--inline-notation-width: 8.25em" viewBox="0 0 122 44" role="img" aria-label="黎明奏鸣曲末乐章第 2 至 3 小节的主旋律，G5 附点四分音符、E5 八分音符、D5 与 G4 各为四分音符。">
+            <path class="inline-staff-lines" d="M2 9H120 M2 15H120 M2 21H120 M2 27H120 M2 33H120"/>
+            <text x="4" y="27">&#xE050;</text>
+            <text x="34" y="6" text-anchor="middle">&#xE0A4;</text><circle cx="40" cy="6" r=".9"/>
+            <text x="52" y="12" text-anchor="middle">&#xE0A4;</text>
+            <text x="78" y="15" text-anchor="middle">&#xE0A4;</text><text x="99" y="27" text-anchor="middle">&#xE0A4;</text>
+            <path d="M31 6V23 M49 12V29 M75 15V32 M102 27V11 M63 9V33"/>
+            <path d="M49 29Q57 25 54 20"/>
+          </svg>
+        </p>
+        <p>主题由前短后长的两句构成。下句因同主音大小调交替而扩展，并于第 20–23 小节在属音上延宕。在第一次完整的主部内部，同一主题已经呈示两次半。先用单音和分解和弦，之后把旋律加成八度并拉大伴奏的音区，第 55 小节起在属音颤音上只重奏上句。全曲层级上的第一次主部回返发生在第一插部及其连接结束之后。</p>
+        <table class="lesson-table">
+          <caption>末乐章由回返组织起来的大段落</caption>
+          <thead><tr><th scope="col">次序</th><th scope="col">调性和结构证据</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">A 与连接</th><td>C 大调。主部从轻声单音到八度、颤音上的强奏。结束后，低音保持 C，三连音准备第一插部。</td></tr>
+            <tr><th scope="row">B 与连接</th><td>a 小调。旋律转到低声部，上方有分散八度。两个乐句各自重复，后附主音持续上的补充。第 99 小节起，连接在小调中用叠部主题模进，经 F 大调走向主调的属功能。</td></tr>
+            <tr><th scope="row">A 回返</th><td>C 大调。主部旋律基本按原样回来，和两侧的小调插部构成明确对照。</td></tr>
+            <tr><th scope="row">C 与展开</th><td>c 小调。旋律在高低音区间交换，重复时改变织体。停留在 C 音的补充引出第 221 小节起的展开，主部主题先以和弦式织体经过数个调，之后缩为动机，至第 287 小节起用主调属功能准备回返。</td></tr>
+            <tr><th scope="row">A 回返与连接</th><td>C 大调。省去最初的单音呈示，从八度主题进入，并把原来的弱奏变为强奏。第 345 小节起的连接回用三连音材料，经延长的属功能进尾声。</td></tr>
+            <tr><th scope="row">尾声</th><td>第 408 小节起进入最急板，在主调中压缩、变奏主部。第 441 小节起再次展开调性，之后引回主题，最终在 C 持续低音上以压缩的主题作收束。</td></tr>
+          </tbody>
+        </table>
+        <p>第 99 小节已经出现叠部主题，模进却继续把音乐推向主调的属和弦，起的是连接作用。接下来主题在 C 大调重新形成独立的陈述，才是叠部回返。《朱丽叶姑娘》的叠部即使移调，也保留这种独立陈述的作用。</p>
+        <details class="lesson-aside">
+          <summary>第二插部与尾声怎样扩大张力</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>第二插部在 c 小调的两句各自重复。上句重复时升到高音区，第 189 小节附近移回低声部作装饰，随后上下声部交换，以八度复对位继续。第 200 小节附近的声部交换可以帮助判断这还是同一插部材料。</li>
+              <li>第 221 小节展开用叠部主题起头，经过降 A 大调、f 小调、降 D 大调等调域，随后只保留弱拍通向强拍的动机。调性扩张与力度减弱同时发生，下一次主部的强奏回返因此更突出。</li>
+              <li>尾声先在 C 大调压缩叠部主题。第 441 小节起向下属方向展开，经过降 A 大调、f 小调、降 D 大调和降 b 小调。第 457 小节回到主调属和弦，第 459 小节却假终止到降 A 大三和弦，转入音阶连接。</li>
+              <li>叠部主题再次出现时，从 C 大调转入 c 小调，又经过降 A 大调和 f 小调。此前出现过的调性集中在这一轮主题变奏中，尾声末段则在 C 持续低音上回顾主题，确立主功能。前两次游移延缓了归主，最后的主持续音明确了收束的落点。</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="rondo-romantic">
+        <h2 id="rondo-romantic">浪漫时期及以后的回旋曲</h2>
+        <p>后来的回旋曲更自由地改变主部回返的方式和插部次序。主部仍起统一作用，可以靠主题的节奏、音程轮廓或独特音响被认出。主部调性是否保持、插部是否相邻，以及各部分是否能独立成立，需要分别判断。</p>
+        <p>舒曼《维也纳狂欢节》第一乐章有五个插部，各次叠部回返都守在降 B 大调，叠部本身是三段式。插部既用近关系的 g 小调和降 E 大调，也在升 F 大调上展开，叠部维持主调仍能与远关系调形成鲜明的对照。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">变化维度</th><th scope="col">典型写法</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">插部次数与次序</th><td>可以增加到五个插部，有时省去一次主部，让两个插部直接相接。被再次使用的插部也可以换调或变奏。</td></tr>
+            <tr><th scope="row">主部内部与回返</th><td>主部可从单个乐段扩大为完整三段式。回返可以加装饰、重组结构，甚至先在另一调上出现，最后再回原调。</td></tr>
+            <tr><th scope="row">调性与边界</th><td>插部可转到距离较远的调，内部也可继续转调。插部有时少用收拢式终止，连接部因而承担较多调性和材料衔接。</td></tr>
+            <tr><th scope="row">部分的独立性</th><td>插部可发展成性格不同、结构较完整的小品。回返的主部在这些小品之间也可充当前奏、间奏或尾声。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="rondo-expanded-refrain">
+          <div class="music-demo-toolbar">
+            <h3>回旋主部的变调与插部连缀</h3>
+            <div class="score-choice-buttons" data-writing-choices role="group" aria-label="选择回旋曲主部和插部的变化"></div>
+          </div>
+          <output class="music-demo-cue" data-writing-description></output>
+          <figure data-writing-score aria-label="比较主部原调回返、移调回返和插部直接相接的三种结构"></figure>
+        </div>
+        <h3 id="rondo-young-juliet">普罗科菲耶夫《朱丽叶姑娘》的叠部与插部</h3>
+        <p>全曲依次为 <strong>A–B–A–C–A–D–C′–A＋尾声</strong>。A 的四次进入依次从 C、E、A、C 大调出发，以急速上行接下行的题头维持辨识度。D 结束后直接进入 C′，直到 C′ 结束才回到原调的 A。</p>
+        <table class="lesson-table">
+          <caption>插部 C 与 C′ 的题头</caption>
+          <thead><tr><th scope="col">位置与题头</th><th scope="col">调性与句法</th></tr></thead>
+          <tbody>
+            <tr>
+              <th scope="row">C · 第 27 小节<br>
+                <svg class="inline-staff" style="--inline-notation-width: 7em" viewBox="0 0 113 43" role="img" aria-label="高音谱号，降 E、降 A、降 B 三个八分音符，依次上行纯四度、大二度，接八分休止。">
+                  <path class="inline-staff-lines" d="M2 11h109m-109 5h109m-109 5h109m-109 5h109m-109 5h109"/>
+                  <text x="4" y="26">&#xE050;</text>
+                  <text x="24" y="31">&#xE260;</text><text x="34" y="31">&#xE0A4;</text>
+                  <text x="47" y="23.5">&#xE260;</text><text x="57" y="23.5">&#xE0A4;</text>
+                  <text x="70" y="21">&#xE260;</text><text x="80" y="21">&#xE0A4;</text>
+                  <text x="98" y="21">&#xE4E6;</text>
+                  <path d="M39 31V16M62 23.5V12.25M85 21V8.5"/>
+                  <path d="M39 16L85 8.5" style="stroke-width: 2.5"/>
+                </svg>
+              </th>
+              <td>低音持续降 A。题头休止后，下一组八分音符再向上展开。</td>
+            </tr>
+            <tr>
+              <th scope="row">C′ · 第 64 小节<br>
+                <svg class="inline-staff" style="--inline-notation-width: 7em" viewBox="0 0 113 43" role="img" aria-label="高音谱号，C、F、G 三个八分音符，同样依次上行纯四度、大二度，接八分休止。">
+                  <path class="inline-staff-lines" d="M2 11h109m-109 5h109m-109 5h109m-109 5h109m-109 5h109"/>
+                  <text x="4" y="26">&#xE050;</text>
+                  <text x="34" y="18.5">&#xE0A4;</text><text x="57" y="11">&#xE0A4;</text><text x="80" y="8.5">&#xE0A4;</text>
+                  <text x="98" y="21">&#xE4E6;</text>
+                  <path d="M34 18.5V34M57 11V30.25M80 8.5V26.5"/>
+                  <path d="M34 34L80 26.5" style="stroke-width: 2.5"/>
+                </svg>
+              </th>
+              <td>低音换成持续 F。开头仍用同样的节奏分组，后续音型加密。</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>C 与 C′ 都以纯四度接大二度上行，节奏分组也相同。题头移位、伴奏和后续节奏改变，使这次出现成为 C 的变化回归。这里两段插部 D、C′ 直接相接，省去原本可放在其间的叠部。</p>
+        <h3>回旋关系与组曲性</h3>
+        <p>穆索尔斯基《图画展览会》的各首小品具有各自的题材和写法。反复出现的《漫步》在小品之间转换速度、音区和织体，开头特有的五拍、六拍交替节奏和旋律轮廓仍可以辨认。这一回返材料像回旋曲的叠部一样串联各首，但小品的独立性很强，整体可看作<strong>带回旋性的组曲</strong>。</p>
+        <p>《漫步》首小节的主题轮廓
+          <svg class="inline-staff" style="--inline-notation-width: 9.5em" viewBox="0 0 140 42" role="img" aria-label="漫步的开头一小节，G4、F4、降 B4、C5 与 F5 的八分音符连接到 D5。">
+            <path class="inline-staff-lines" d="M2 9H138 M2 15H138 M2 21H138 M2 27H138 M2 33H138"/>
+            <text x="5" y="27">&#xE050;</text><text x="21" y="21">&#xE260;</text><text x="26" y="12">&#xE260;</text>
+            <text x="40" y="27" text-anchor="middle">&#xE0A4;</text><text x="55" y="30" text-anchor="middle">&#xE0A4;</text>
+            <text x="70" y="21" text-anchor="middle">&#xE0A4;</text><text x="84" y="18" text-anchor="middle">&#xE0A4;</text>
+            <text x="98" y="9" text-anchor="middle">&#xE0A4;</text><text x="116" y="15" text-anchor="middle">&#xE0A4;</text>
+            <path d="M43 27V12 M58 30V15 M67 21V36 M81 18V35 M95 9V29 M113 15V31 M133 9V33"/>
+            <path d="M81 35L95 29" style="stroke-width:2"/>
+          </svg>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

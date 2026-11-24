@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>导论 流行乐团编曲的基本知识｜图解编曲入门</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+    <script type="module" src="./arrangement-intro.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解编曲入门</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">导论</span> 流行乐团编曲的基本知识</h1>
+      <p class="intro">一段单旋律变成乐队合奏时，鼓和贝斯先给它一个容易跟上的节拍，和弦与副旋律再给它层次。编曲要决定每个声部什么时候进入、与谁配合，以及哪条线最容易被听见。</p>
+
+      <section aria-labelledby="pulse-and-phrase">
+        <h2 id="pulse-and-phrase">节拍骨架与可哼唱乐句</h2>
+        <p>明快的节拍有容易辨认的拍点和重音，速度可以快，也可以慢。四拍的流行乐中，稳定的底鼓、小鼓重音和踩镲细分就能提供骨架。拍点越容易辨认，弱位起音、变化和装饰越有参照。</p>
+        <p>主旋律拉长一个音或停下来时，吉他、钢琴等乐器可以接一句短的副旋律。它有可以记住的节奏与音高轮廓，能独立哼唱。主旋律正在推进时也可以放副旋律，这时它承担背景作用，在音区、起音密度或力度上要给主旋律留空间。</p>
+      </section>
+
+      <section aria-labelledby="four-operations">
+        <h2 id="four-operations">编曲的加法、减法、乘法与除法</h2>
+        <p>这四种说法对应四个不同的判断。乐队缺少怎样的声音，已有声音里哪里太密，哪些声部合在一起能互相增强，以及谁应该在某一刻被听得最清楚。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">方法</th><th scope="col">编曲决定</th><th scope="col">主要用途</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">加法</th><td>加入有明确任务的声音。</td><td>补齐节拍和和声，再加入能接住主旋律的短句。</td></tr>
+            <tr><th scope="row">减法</th><td>删去造成拥挤的声音。</td><td>挪出主旋律的空间，让伴奏乐句的出现有起伏。</td></tr>
+            <tr><th scope="row">乘法</th><td>安排声部在重音、节奏或旋律上合作。</td><td>底鼓与贝斯同时起音，低音有清楚的音高和集中的冲击声。</td></tr>
+            <tr><th scope="row">除法</th><td>按重要程度调整声部的显著性。</td><td>优先级较低的声部可减轻力度、缩短时值或换音区，重点声部由此突出。</td></tr>
+          </tbody>
+        </table>
+        <div id="arrangement-operations" class="music-demo">
+          <div class="music-demo-toolbar"><h3>同一旋律的五个编配版本</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">主旋律两小节。第二小节后两拍留空。</p>
+          <figure data-writing-score aria-label="两小节旋律的四种编曲操作"></figure>
+        </div>
+        <aside class="lesson-callout">
+          <h3>从节拍到合奏</h3>
+          <p>节拍篇先搭鼓、贝斯、吉他和钢琴的骨架。乐句篇用加法和减法组织前景与背景。合奏篇进一步处理声部合作与优先性。</p>
+        </aside>
+      </section>
+
+      <section aria-labelledby="reading-the-grid">
+        <h2 id="reading-the-grid">鼓组对照表与钢琴卷帘图</h2>
+        <p>两种图都从左向右表示时间。拍号与拍内的划分决定一格有多长。下面是一小节四拍，每拍两格，每格相当于一个八分音符。每拍开头的竖线较深，便于分清正拍与后半拍。</p>
+        <figure class="arrangement-example">
+          <figcaption><strong>鼓组对照表</strong></figcaption>
+          <div id="drum-chart"></div>
+          <p>每行是一件鼓或镲。圆点表示击打，较大的点表示重音。同一列的踩镲和鼓一起响。第一、三拍是底鼓，第二、四拍是小鼓；踩镲每格击一次。</p>
+        </figure>
+        <figure class="arrangement-example">
+          <figcaption><strong>钢琴卷帘图</strong></figcaption>
+          <div id="piano-roll"></div>
+          <p>每行是一种音高，相邻两行相差一个半音。色块左端是起音，长度是时值。E4 从第 1 拍后半拍开始，向右持续两格。G4 从第 3 拍开始，持续四格直到小节结束。钢琴卷帘图也可用来显示贝斯、吉他等有音高声部。</p>
+        </figure>
+      </section>
+
+      <section aria-labelledby="reading-an-arrangement">
+        <h2 id="reading-an-arrangement">分谱与总谱的阅读顺序</h2>
+        <ol>
+          <li><strong>全段轮廓。</strong>先从整段看声部有多少、在哪里进出、哪里变稠或留空。</li>
+          <li><strong>单轨与分谱。</strong>把整段听感和某一件乐器的实际写法对上。例如单看贝斯分谱，辨认长音、短音和停顿。数字音频工作站（DAW）可以独奏该轨，或收轻其他轨道。</li>
+          <li><strong>合奏与总谱。</strong>在同一拍上对照各声部，理解重音怎样叠合、主副旋律在哪些位置交接。MIDI 可调慢播放速度，声部关系看清后再恢复原速。</li>
+        </ol>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻篇章">
+        <a href="./index.html"><span>返回</span><strong>本书目录</strong></a>
+        <a href="./arrangement-1.html" rel="next"><span>第一篇</span><strong>明快节拍</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

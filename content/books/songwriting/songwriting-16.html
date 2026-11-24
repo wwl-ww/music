@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第十六章 艺术歌曲特征｜歌曲写作教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./songwriting-16.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">歌曲写作教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第十六章 艺术歌曲特征</h1>
+      <p class="intro">艺术歌曲把诗的语言、独唱旋律与伴奏组织成一个整体。谱写一首诗时，诗句可以决定人声何时像说话、何时展开歌唱，钢琴则可以描写诗中情景、回应歌声，或者把歌声没有说尽的情绪带到下一段。</p>
+
+      <section aria-labelledby="song-art-classical">
+        <h2 id="song-art-classical">古典艺术歌曲</h2>
+        <p>广义的艺术性歌曲包括多种有较强艺术表现力的抒情作品。这里的<strong>艺术歌曲</strong>指与西方浪漫主义 <i lang="de">Lied</i> 传统相联系的一类独唱歌曲。诗歌或富有诗意的歌词、为具体声部写作的独唱旋律、能承担表现任务的钢琴伴奏，是辨认这类歌曲的重要依据。伴奏也可以采用钢琴与另一件乐器，或改用乐队。</p>
+        <p>写作从理解诗的层次开始。意象、叙述的视角、重复处和语气转折，可以转化成动机、音区和结构的选择。一些作品用细腻而舒展的歌唱性旋律表现情感，一些作品突出吟诵和朗诵。句长、切分、弱起、三连音和休止可跟随语气而改变。调性与和声也能参与表达，例如借局部变化音改变色彩，或在情绪转折处建立新的调中心。</p>
+        <p>独唱声部需要考虑具体的嗓音。写给女高音、男高音或男中低音时，同一峰值的效果可以不同。应比较常用音区、音色和气息，再决定高潮在哪个字、哪个音域，以及需要持续多久。伴奏的强弱和密度应回应人声在该音区能够发出的声音。</p>
+      </section>
+
+      <section aria-labelledby="song-art-poem-structure">
+        <h2 id="song-art-poem-structure">诗的结构与谱曲布局</h2>
+        <p>诗节的排列提供的是词的顺序。音乐可以选择<strong>分节歌</strong>，让曲调反复、每次换词。也可以选择<strong>通谱歌</strong>，根据各节的诗意另写音乐，形成一个连续的谱面。通谱处理中仍可重现主题，例如当开头的诗句回归时再现 A 段，或只让开头动机回到钢琴。</p>
+        <table class="lesson-table">
+          <caption>同一组诗节的两种音乐组织</caption>
+          <thead><tr><th scope="col">布局</th><th scope="col">诗节处理</th><th scope="col">音乐分工</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">同曲换词</th><td>多节歌词使用同一组乐句。</td><td>主要音型和句尾反复。词意的变化由歌者的吐字、力度和伴奏细节呈现。谱面可把各节分别写出。</td></tr>
+            <tr><th scope="row">随诗发展</th><td>每节依意象和情绪另写材料。</td><td>可由钢琴前奏建立意象，中段的发展、转调或间奏展开诗意，歌声或钢琴在结尾呼应开头。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="song-art-forms">
+          <div class="music-demo-toolbar">
+            <h3>同组歌词的分节与通谱处理</h3>
+            <label>谱曲布局 <select><option value="strophic">同曲换词</option><option value="through">随诗发展</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="三节歌词的分节式与逐节发展式谱曲对照"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="song-art-accompaniment-roles">
+        <h2 id="song-art-accompaniment-roles">人声与钢琴的分工</h2>
+        <p>钢琴既能提供和声和脉冲，也能描写诗中可听或可见的意象。高音区细密的反复音可以模拟雨点。低音持续与缓慢移动的内声部可以提供更沉郁的背景。歌者休止或停在长音时，钢琴还可以作答、接过动机或把音乐引向另一个段落。</p>
+        <p>伴奏织体应随全曲的表达变化。开头可用和弦型织体托住朴素叙述，推进处可以增加活动内声、连续节奏、八度或富于色彩的和弦，到高潮后再收回疏朗的织体。伴奏和人声可以同向加强，也可以借反向进行和强弱对照形成两层。这样即使人声音域较窄，由和声与织体承担的变化仍能形成深刻的起伏。</p>
+        <div class="music-demo" id="song-art-accompaniment">
+          <div class="music-demo-toolbar">
+            <h3>同一旋律的三种钢琴织体</h3>
+            <label>谱面层次 <select><option value="voice">独唱旋律</option><option value="support">持续和弦</option><option value="imagery">独立伴奏音型</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="独唱旋律、和声衬托和高区雨声动机的对应谱面"></figure>
+        </div>
+        <p>带歌词的一行代表独唱声部，试听以钢琴示意音高和时值。三个版本里这行的音符完全相同，听感的变化来自伴奏是否有自己的节奏和走势。</p>
+      </section>
+
+      <section aria-labelledby="song-art-chinese">
+        <h2 id="song-art-chinese">中国艺术歌曲的写作</h2>
+        <p>中国艺术歌曲以古典诗词、现代诗和有诗意的歌词为题材。诗的字调与节奏可通过倚音、短小起伏、拖腔和乐节的分组保留。五声性旋律、多声部和声、变化音和调性变化可以同时参与塑造诗意。钢琴也能用恰当的音型表现自然声响，把歌词中的景物与歌者的心理活动联系起来。</p>
+        <table class="lesson-table">
+          <caption>艺术歌曲的三种结构构思</caption>
+          <thead><tr><th scope="col">构思</th><th scope="col">独唱写法</th><th scope="col">伴奏写法</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">两段式写景与转情</th><td>A 段用细小的乐节和叹息式语气写景，B 段加宽音域，进入直接抒发。</td><td>前奏先提示主题，间奏模仿景物的声响并引出 B 段。在歌声的长音或休止中，钢琴继续作答。</td></tr>
+            <tr><th scope="row">两段式叙述与高潮</th><td>前段的匀整句式与共同附点节奏维持叙述。后段用较丰富的调性色彩、逐步蓄积的音区与力度展开。</td><td>从安静和弦逐渐变为活动内声、密集节奏和有冲击力的和弦。高潮后减薄，尾声延续回想。</td></tr>
+            <tr><th scope="row">短动机贯穿多句乐段</th><td>句子多、长度可变。保留同一节奏轮廓，逐步抬高或移低音区，配合衬词和变化音形成高潮。</td><td>先给句间留钢琴间隔，随后缩短或取消间隔，让几个乐句紧密相接。高潮后由熟悉的音型回落并收束。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="song-art-piano-arc">
+          <div class="music-demo-toolbar"><h3>钢琴动机贯穿全曲</h3><label>段落 <select data-analysis-jump aria-label="选择试听段落"></select></label></div>
+          <div class="timeline-frame" data-analysis-timeline></div>
+          <dl class="analysis-description" aria-live="polite"><dt data-analysis-section>全曲</dt><dd data-analysis-description>钢琴前奏 → 写景 → 追问 → 写景再现 → 钢琴后奏</dd></dl>
+          <p class="music-demo-cue analysis-status" data-analysis-status role="status"></p>
+          <figure data-analysis-score aria-label="按前奏、写景、追问、再现和后奏分段的原创艺术歌曲。后奏开始时人声仍在唱。"></figure>
+        </div>
+        <p>第 12 小节仍由人声承担主题。第 13 小节，钢琴重现前奏主题，人声放轻，唱完再现段最后三个字。第 14 小节留给钢琴独奏。再现与后奏在第 13 小节重叠。</p>
+      </section>
+    </main>
+  </body>
+</html>

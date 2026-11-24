@@ -38,6 +38,7 @@ function addCoursePath() {
   separator.setAttribute('aria-hidden', 'true');
   if (location.pathname.includes('/harmony-upper/')) bookLink.textContent = '和声学 · 上册';
   if (location.pathname.includes('/harmony-lower/')) bookLink.textContent = '和声学 · 下册';
+  if (location.pathname.includes('/counterpoint/')) bookLink.textContent = '复调音乐';
   bookLink.setAttribute('aria-label', `${bookLink.textContent.trim()}目录`);
   bookLink.before(path);
   path.append(libraryLink, separator, bookLink);
@@ -113,13 +114,20 @@ function addOutline() {
 }
 
 async function addChapterNavigation() {
-  const chapter = location.pathname.match(/\/(chapter|harmony|counterpoint|orchestration)-(\d+)\.html$/);
-  if (!chapter) return;
-  const [, series, chapterNumber] = chapter;
-  const number = Number(chapterNumber);
+  const chapter = location.pathname.match(/\/(chapter|harmony|counterpoint|orchestration|form-analysis|songwriting)-(\d+)\.html$/);
+  const songwritingAppendix = location.pathname.endsWith('/songwriting/songwriting-reference.html');
+  if (!chapter && !songwritingAppendix) return;
+  const songwritingChapterCount = 17;
+  const [, series = 'songwriting', chapterNumber] = chapter ?? [];
+  const number = songwritingAppendix ? songwritingChapterCount + 1 : Number(chapterNumber);
   const lowerVolume = location.pathname.includes('/harmony-lower/');
   const first = lowerVolume ? 24 : 1;
-  const last = lowerVolume ? 44 : ({ chapter: 16, harmony: 23, counterpoint: 19 }[series] ?? number);
+  const last = lowerVolume ? 44 : ({
+    chapter: 16,
+    harmony: 23,
+    counterpoint: 19,
+    songwriting: songwritingChapterCount
+  }[series] ?? number);
   const book = './index.html';
   const titles = await chapterTitles(book);
   const previousPage = `./${series}-${number - 1}.html`;
@@ -155,6 +163,9 @@ async function addChapterNavigation() {
     appendChapter(nextPage, '下一章', number + 1, 'next');
   } else if (!lowerVolume && series === 'harmony') {
     appendLink('../harmony-lower/harmony-24.html', '下册 · 第 24 章', '重属和弦', 'next');
+  } else if (series === 'songwriting' && number === last) {
+    const appendix = './songwriting-reference.html';
+    appendLink(appendix, '接着读 · 附录', titles?.get(appendix) ?? '演唱、定调与歌曲题头', 'next');
   } else if (!nav.querySelector(`[href="${book}"]`)) appendLink(book, '返回', '本书目录');
   main.append(nav);
 }

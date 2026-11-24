@@ -17,18 +17,9 @@
 .counterpoint-choices span {
   display: grid;
   place-items: center;
-  min-block-size: 2.35rem;
   padding: 0.25rem 0.65rem;
-  border: 1px solid var(--control-line);
-  border-radius: 0.45rem;
-  background: var(--control-surface);
-  color: var(--ink);
   font-size: 0.82rem;
 }
-
-.counterpoint-choices label:hover span { background: var(--control-hover); }
-.counterpoint-choices input:checked + span { border-color: var(--accent); background: var(--accent); color: var(--sheet); }
-.counterpoint-choices input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
 .counterpoint-steps .music-demo-cue { min-block-size: 3em; }
 .music-demo-toolbar > .counterpoint-score-definition { inline-size: 100%; font-size: 0.95rem; }
 .counterpoint-score-controls { display: flex; flex-wrap: wrap; gap: 0.55rem 0.9rem; }

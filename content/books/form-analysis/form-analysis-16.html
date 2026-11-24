@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第十六章 奏鸣回旋曲式｜曲式学基础教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./form-analysis-16.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">曲式学基础教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第十六章 奏鸣回旋曲式</h1>
+      <p class="intro">叠部 A 一次次回来，听觉上像回旋曲。第一插部 B 又在后半段回来，并从副调移到主调，形成奏鸣曲式常见的调性对应。两种关系同时成立，构成奏鸣回旋曲式。</p>
+
+      <section aria-labelledby="sonata-rondo-principle">
+        <h2 id="sonata-rondo-principle">奏鸣回旋曲式的构成</h2>
+        <p><strong>奏鸣回旋曲式</strong>把回旋曲的叠部反复与奏鸣式的主、副调对应结合起来。典型布局记作 <strong>A B A │ C │ A B′ A</strong>。C 两侧各有一组三部性结构，常在奏鸣套曲中作终曲。</p>
+        <table class="lesson-table">
+          <caption>回旋曲、奏鸣曲式与奏鸣回旋曲式</caption>
+          <thead><tr><th scope="col">形式</th><th scope="col">略去连接和尾声的典型布局</th><th scope="col">判断依据</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">回旋曲</th><td>A B A C A D A</td><td>叠部反复回来，中间可换用不同插部。</td></tr>
+            <tr><th scope="row">奏鸣曲式</th><td>主部、副部 │ 展开部 │ 主部、副部再现</td><td>呈示部通常收在副调，再现部使副部材料回归主调。</td></tr>
+            <tr><th scope="row">奏鸣回旋曲式</th><td>A B A │ C │ A B′ A</td><td>呈示部已在回来的 A 处回到主调。后半仍有 B 的材料回归，由主调上的 B′ 对应前面的副调 B。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="sonata-rondo-key-return">
+          <div class="music-demo-toolbar">
+            <h3>叠部反复与插部的调性回归</h3>
+            <label>段落 <select data-analysis-jump></select></label>
+          </div>
+          <div class="timeline-frame" data-analysis-timeline style="--score-timeline-unit-min: 1.25rem"></div>
+          <dl class="analysis-description" aria-live="polite">
+            <dt data-analysis-section>全曲</dt>
+            <dd data-analysis-description>A B A │ C │ A B′ A</dd>
+          </dl>
+          <p class="music-demo-cue analysis-status" data-analysis-status role="status"></p>
+          <figure data-analysis-score aria-label="奏鸣回旋曲式教学例，七段各四小节"></figure>
+        </div>
+        <p>谱例省去较长的连接和尾声。B 的长音题头在 G 大调。B′ 的旋律移高纯四度，保持时值与音程关系。伴奏的和声功能也随之移到 C 大调，属七和弦另降低一个八度，以保持低音的支撑。各次 A 都在 C 大调。C 从 a 小调出发，结尾借 C 大调的属七和弦接回 A。</p>
+      </section>
+
+      <section aria-labelledby="sonata-rondo-exposition">
+        <h2 id="sonata-rondo-exposition">呈示部的叠部、连接与插部</h2>
+        <p>叠部 A 与普通回旋曲的叠部相近，常有舞蹈性或歌唱性，结构方整而收拢。用带再现的二段式较常见，也可用乐段。由于它承担多次回归，主题需要在不同位置都容易认出来。</p>
+        <p>A → B 的连接有两项作用。它要在材料上过渡到第一插部，又要调到副调，常停在新调的属和弦上。B 在副调呈示一个主题，篇幅常为一个乐段。它可以从 A 派生，或用另一种织体和旋律与 A 对照。B → A 的连接则把材料和调性重新引回叠部。</p>
+        <p>呈示部末的 A 可以准确再现，也可作装饰、改写或部分省略。若只保留一部分，后面常顺势变成通往中部的过渡。这次主调回归使呈示部本身已有两端呼应的结构。</p>
+      </section>
+
+      <section aria-labelledby="sonata-rondo-middle">
+        <h2 id="sonata-rondo-middle">中部、再现部与尾声</h2>
+        <p>C 通常形成更鲜明的对比，可以是一段、二段或三段结构。它常直接进入下属调或同主音调，末尾接出通向再现部的连接。也有作品用呈示部材料作展开，奏鸣性随之加强。</p>
+        <p>再现部通常由 A 开始，接着出现回归主调的 B′，再由 A 收束。若中部已充分展开叠部材料，再现部起首的 A 有时省略，直接进入 B′，但后面仍出现叠部。小调作品的 B′ 也可回到同主音大调，主音层面的回归仍清楚。尾声常回顾先前材料并加强终止，有的作品还会扩大它的篇幅。</p>
+      </section>
+
+      <section aria-labelledby="sonata-rondo-cases">
+        <h2 id="sonata-rondo-cases">贝多芬奏鸣曲中的三种布局</h2>
+        <table class="lesson-table">
+          <caption>第一插部的调性回归与末次叠部的功能</caption>
+          <thead><tr><th scope="col">乐章</th><th scope="col">B 到 B′</th><th scope="col">最后一次 A</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Op. 2 No. 2 末乐章</th><td>E 大调 → A 大调。B′ 在主调完全终止。</td><td>末 A 扩充下句并以 A 大调收束。随后另有较长的尾声，继续使用叠部和中部材料。</td></tr>
+            <tr><th scope="row">Op. 13《悲怆》末乐章</th><td>降 E 大调 → C 大调。B′ 回到原来的主音 C，采用大调。</td><td>末 A 恢复主调的 c 小调，从强拍进入，加四小节补充终止后进入尾声。</td></tr>
+            <tr><th scope="row">Op. 90 第二乐章</th><td>B 大调 → E 大调。B′ 回到主调，之后的结束材料继续展开。</td><td>末 A 扩展中段，压缩最后的主题回顾，再加补充终止，兼有尾声功能。</td></tr>
+          </tbody>
+        </table>
+        <h3>第二钢琴奏鸣曲末乐章</h3>
+        <p>叠部在 A 大调建立方整、收拢的二段结构。十小节连接引入属调 E 大调。B 是歌唱性的十三小节乐段，句法与织体均比 A 自由，两小节音阶式进行带出叠部。C 直接进入同主音 a 小调，用相互重叠的乐句和乐节形成连续的三连音。它内部仍有带再现的二段结构，重复后把下句改写成连接。</p>
+        <p>再现部用装饰过的 A 和缩短的连接引出 A 大调的 B′。最后一次叠部扩大句尾，尾声又运用叠部和中部的材料，经过降 B 大调，回顾 A 后以补充终止收束。主题依然按清楚的块状段落出现，第一插部的调性对应把前后部分联系起来。</p>
+
+        <h3>《悲怆奏鸣曲》末乐章</h3>
+        <p>c 小调叠部以八小节乐段开始。连接经 f 小调并在降 E 大调模进，引出第一插部。B 在降 E 大调，经过同主音小调后返回降 E。它后面另有以新材料写成的结束部分，再接十小节连接回到主调属和弦。B 后另设结束部分，使呈示布局更接近奏鸣曲式。</p>
+        <p>C 在下属方向的降 A 大调，以四小节乐句为基础作切分、音阶装饰和声部交换。它最后接入在 G 属音上延续的连接。再现部缩短叠部，连接以增六和弦导向 C 大调属功能，引出在同主音 C 大调的 B′。结束材料继续展开，过渡到 c 小调的最后一次 A。</p>
+        <p>尾声先借用早先的连接，再用新乐汇的连续重复加强收束。音响推到高潮后突然变弱，低音区回顾叠部，再以强奏终止。<a href="../counterpoint/counterpoint-19.html#pathetique-c-episode">中间插部的分段谱</a>保留了主题交换、高八度再陈与回到 G 属音的过程。</p>
+
+        <h3>第二十七钢琴奏鸣曲第二乐章</h3>
+        <p>叠部 A 在 E 大调有完整的三段结构，中段也在主调终止，后面仍有清楚的原样回归。第一插部 B 在 B 大调，持续使用属功能，直至后面的结束部分才充分确立 B 大调。这一段前后的连接及结束材料都可以成为后续展开的来源。</p>
+        <p>中部从第 106 小节进入展开。中心段自第 114 小节起，反复移用呈示部的结束材料，经 C 大调、c 小调、升 c 小调、升 C 大调，再到 E 大调的属和弦。上声部起音形成半音推进，左手的三连音、四连音织体交替，使相似的句子不断向前。</p>
+        <p>第 140 小节开始再现。B′ 回到 E 大调，结束材料用模进和卡农继续展开。第四次 A 的中段得到扩展，末段变为缩减的回顾并加补充终止，叠部兼起尾声作用。这部奏鸣曲只有两个乐章，第二乐章的抒情性与大型终曲的布局同时存在。</p>
+
+        <aside class="lesson-callout"><p><strong>中部写成插部或展开部都可以。</strong> 对照两次 B 的材料与终止调性，再追踪叠部的反复，才能看清奏鸣性与回旋性分别在哪里。</p></aside>
+      </section>
+    </main>
+  </body>
+</html>

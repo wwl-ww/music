@@ -1,4 +1,4 @@
-import { AlphaTabApi, FontFileFormat, midi, synth } from '@coderline/alphatab';
+import { AlphaTabApi, FontFileFormat, NotationElement, Settings, midi, model, synth } from '@coderline/alphatab';
 import bravura from '@coderline/alphatab/font/Bravura.woff2?url';
 import { enableScrollFrame } from './readable-layout.js';
 import { encodeScore, fourPartHarmony } from './four-part.js';
@@ -15,10 +15,20 @@ const views = {
 
 let activePlayer;
 
+export function startExclusivePlayback(player) {
+  const previous = activePlayer;
+  activePlayer = player;
+  if (previous !== player) previous?.stop();
+}
+
+export function endExclusivePlayback(player) {
+  if (activePlayer === player) activePlayer = undefined;
+}
+
 export function mountScore(figure, {
   notes, tempo = 90, notation = 'both', audio = true, onPitchesChange,
   onScoreLoaded, sectionNavigation, noteHighlights, voiceAudition,
-  soundFontUrl = soundFont, preservePosition = false
+  soundFontUrl = soundFont, preservePosition = false, notationVisible = true, onPlaybackPosition
 }) {
   const staves = views[notation];
   const tracks = staves.map((_, index) => index);
@@ -31,6 +41,7 @@ export function mountScore(figure, {
   let requestedPosition;
 
   figure.classList.add('score-example');
+  figure.toggleAttribute('data-audio-only', !notationVisible);
   figure.innerHTML = `
     <div class="score-controls"${audio ? '' : ' hidden'}>
       <button class="score-playback" type="button" aria-label="播放谱例" disabled>
@@ -45,19 +56,21 @@ export function mountScore(figure, {
         </select>
       </label>
     </div>
-    <div class="score-notation"></div>
+    <div class="score-notation"${notationVisible ? '' : ' aria-hidden="true" inert'}>${sectionNavigation ? '<div class="score-render-surface"></div>' : ''}</div>
     <p class="score-status" role="status">正在加载谱例…</p>
   `;
 
-  const score = figure.querySelector('.score-notation');
+  const viewport = figure.querySelector('.score-notation');
+  const score = viewport.firstElementChild ?? viewport;
   const button = figure.querySelector('.score-playback');
   const timbreControl = figure.querySelector('.score-timbre');
   const timbreSelect = timbreControl.querySelector('select');
   const voiceSelect = figure.querySelector('.score-voice-audition select');
   const status = figure.querySelector('.score-status');
-  const updateScroll = enableScrollFrame(score, '谱例', { vertical: Boolean(sectionNavigation) });
+  const updateScroll = notationVisible && enableScrollFrame(viewport, '谱例', { vertical: Boolean(sectionNavigation) });
 
-  const api = new AlphaTabApi(score, {
+  const settings = new Settings();
+  settings.fillFromJson({
     core: { smuflFontSources: new Map([[FontFileFormat.Woff2, bravura]]), enableLazyLoading: false },
     display: { padding: [5, 5, 7, 3], lastSystemPaddingBottom: 2, lastSystemFillThreshold: 0 },
     player: {
@@ -66,6 +79,10 @@ export function mountScore(figure, {
       scrollMode: 'off'
     }
   });
+  settings.display.resources.elementFonts.set(
+    NotationElement.EffectLyrics, model.Font.withFamilyList(['Noto Sans SC', 'Microsoft YaHei', 'sans-serif'], 14)
+  );
+  const api = new AlphaTabApi(score, settings);
   function getPosition() {
     if (requestedPosition) return requestedPosition;
     const tick = api.tickPosition;
@@ -94,11 +111,11 @@ export function mountScore(figure, {
   }
 
   function stopPlayback() {
-    if (activePlayer === api) activePlayer = undefined;
+    endExclusivePlayback(api);
     reading?.setPlaying(false);
     api.stop();
   }
-  const sections = sectionNavigation && mountScoreSections(score, api, {
+  const sections = sectionNavigation && mountScoreSections(viewport, score, api, {
     ...sectionNavigation,
     stopPlayback,
     isPlaying: () => figure.classList.contains('playing')
@@ -140,14 +157,17 @@ export function mountScore(figure, {
     });
   });
   api.midiLoad.on(file => {
-    if (material.scoreTracks) return;
     // Keep the tempo and timeline, but leave note events only on audible tracks.
     const firstSilentTrack = playingTimbre === 'strings' || splitVoices ? 0 : 1;
+    const scoreTracks = material.scoreTracks;
+    const isSilentTrack = index => scoreTracks
+      ? Boolean(scoreTracks[index]?.notationOnly)
+      : index >= firstSilentTrack && index < staves.length;
     for (const track of file.tracks) {
       const events = track.events;
       for (let i = events.length - 1; i >= 0; i--) {
         const event = events[i];
-        if (event.track >= firstSilentTrack && event.track < staves.length
+        if (isSilentTrack(event.track)
           && (event instanceof midi.NoteEvent || event instanceof midi.NoteBendEvent
             || event instanceof midi.ProgramChangeEvent)) {
           events.splice(i, 1);
@@ -156,7 +176,7 @@ export function mountScore(figure, {
     }
   });
   api.renderFinished.on(() => {
-    updateScroll();
+    if (updateScroll) updateScroll();
     if (!audio || api.isReadyForPlayback) {
       button.disabled = false;
       status.textContent = '';
@@ -188,13 +208,19 @@ export function mountScore(figure, {
       button.setAttribute('aria-label', playing ? '停止播放' : '播放谱例');
       reading?.setPlaying(playing);
       if (!playing) onPitchesChange?.([]);
+      if (!playing) onPlaybackPosition?.(null);
       if (!playing) sections?.clearPosition();
       // A score update can report its stopped state while a new play request is pending.
-      if (!playing && wasPlaying && activePlayer === api) activePlayer = undefined;
+      if (!playing && wasPlaying) endExclusivePlayback(api);
     });
 
     if (onPitchesChange) {
       api.playedBeatChanged.on((beat) => onPitchesChange(beat.notes.map(note => note.realValue)));
+    }
+    if (onPlaybackPosition) {
+      api.playerPositionChanged.on(({ currentTick }) => {
+        if (figure.classList.contains('playing')) onPlaybackPosition(currentTick);
+      });
     }
 
     button.addEventListener('click', () => {
@@ -203,10 +229,11 @@ export function mountScore(figure, {
         stopPlayback();
         return;
       }
-      activePlayer?.stop();
+      startExclusivePlayback(api);
       applyVoiceAudition();
       reading?.preparePlayback();
       if (sections && !sections.preparePlayback()) {
+        endExclusivePlayback(api);
         status.textContent = '该段落在当前演奏路线中未出现。';
         return;
       }
@@ -215,12 +242,11 @@ export function mountScore(figure, {
         const offset = bar && Math.round((bar.end - bar.start) * requestedPosition.fraction);
         api.tickPosition = bar ? Math.min(bar.end - 1, bar.start + offset) : 0;
       }
-      activePlayer = api;
       if (api.play()) {
         requestedPosition = undefined;
         status.textContent = '';
       } else {
-        activePlayer = undefined;
+        endExclusivePlayback(api);
         status.textContent = '暂时无法播放，请再试一次。';
       }
     });
@@ -244,7 +270,7 @@ export function mountScore(figure, {
     }
     playingTimbre = fourPart && !material.scoreTracks ? timbre : 'piano';
     try {
-      const visibleTracks = material.scoreTracks?.map((_, index) => index) ?? tracks;
+      const visibleTracks = material.scoreTracks?.flatMap((track, index) => track.playbackOnly ? [] : [index]) ?? tracks;
       api.tex(encodeScore(material, staves, tempo, playingTimbre, splitVoices), visibleTracks);
     } catch (error) {
       showError(error);
@@ -261,7 +287,7 @@ export function mountScore(figure, {
   }
 
   return {
-    ...(sections && { selectBars: sections.select }),
+    ...(sections && { selectBars: sections.select, preserveSectionView: sections.preserveView }),
     ...(preservePosition && { getPosition, setPosition }),
     stop() {
       if (activePlayer === api) stopPlayback();

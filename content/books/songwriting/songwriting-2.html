@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第二章 主题乐句的写作｜歌曲写作教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./songwriting-2.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">歌曲写作教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第二章 主题乐句的写作</h1>
+      <p class="intro">第一句给听者建立对整首歌的预期。歌词的重心落在哪里、开头从怎样的音区出发、句尾留下还是解除张力，都会成为后面续写的线索。</p>
+
+      <section aria-labelledby="song-rhythm">
+        <h2 id="song-rhythm">节奏的安排</h2>
+        <p><strong>歌词节奏</strong>组织字与词组的起音、延长、重轻和停顿。歌唱可以比朗诵拉得更宽、压得更密，原来的词义和语气仍给这种伸缩划出范围。可以先有词再谱曲，也可以先有曲再填词。先列词的节奏骨架便于比较，实际创作中也常把词位、音高、节拍和速度一起定。</p>
+        <p><strong>词位</strong>是一个字在旋律上的起音位置。「河风轻过，灯影摇动」适合分成两个四字组。把每组放在一小节，语气平稳。前组的关键字拉长并留出换气，描写会更舒展。把两组压进一个小节，动作就更紧凑。截断一个完整词组或把轻字连连摆到重拍，会使词意难辨。通俗歌曲也可以有意让重音偏到拍间，词组仍要听得完整。</p>
+
+        <div class="music-demo" id="song-word-rhythm">
+          <div class="music-demo-toolbar">
+            <h3>同一歌词的词位与节奏</h3>
+            <label>词位安排 <select><option value="even">均匀陈述</option><option value="spaced">延长与停顿</option><option value="compact">紧凑连贯</option><option value="syncopated">拍间起音</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="固定音高的四种词位安排"></figure>
+        </div>
+
+        <h3>歌词节奏与曲调节奏</h3>
+        <p>单字的起音可以保持在原来的拍位，同一个字内部则可唱多个音。反过来，一条曲调也可以重新划分字界。若旋律音符依拍组织，而一个字从弱拍或拍的弱部分开始、一直唱过下一强点，就形成<strong>曲不切分，词切分</strong>。词组重复或加入衬词，同样会改变句内重心和可用的时值。</p>
+
+        <div class="music-demo" id="song-word-sync">
+          <div class="music-demo-toolbar">
+            <h3>一字一音、拖腔与词位切分</h3>
+            <label>词曲结合 <select><option value="plain">一字一音</option><option value="decorated">正拍词位加花</option><option value="crossing">旋律不变，词位切分</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="多个旋律音与歌词起音的对照"></figure>
+        </div>
+
+        <h3>节奏的体裁与风格特征</h3>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">体裁</th><th scope="col">常见的节奏组织</th><th scope="col">形成的句感</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">队列歌曲</th><td>强弱拍清楚，时值均衡，或在拍内加附点。</td><td>步伐鲜明，合唱或齐唱容易对齐。</td></tr>
+            <tr><th scope="row">劳动歌曲</th><td>用短句、重音和衬词呼号组织节奏。</td><td>顿挫有力，便于发出领唱与应答。</td></tr>
+            <tr><th scope="row">山歌、朗诵体和部分抒情歌曲</th><td>散体、拖腔、字间伸缩。</td><td>呼吸和词意组织乐句，时值弹性较大。</td></tr>
+            <tr><th scope="row">舞蹈性歌曲</th><td>按舞步组织重音，二拍可鲜明跳跃，三拍可形成回旋。具体舞种可使用切分、附点或短音群。</td><td>重音位置和反复的节奏型维持身体律动。</td></tr>
+          </tbody>
+        </table>
+        <details class="lesson-aside">
+          <summary>民间舞蹈与拉丁舞节奏的典型片段</summary>
+          <div class="lesson-aside-content"><ul>
+            <li>维吾尔族舞蹈风格片段可把十六、八分、十六组成短长短，随后用两个八分音符收住一轮。</li>
+            <li>朝鲜族舞蹈风格片段可在较后的延长音上给重音，随后以三次较短的起音带回下一个周期。</li>
+            <li>汉族秧歌风格片段可在四分音符的步伐中交替使用八分音群、附点和拍内休止。</li>
+            <li>探戈片段常从弱部分提前起音，或在拍末的半拍上给短重音。伦巴风格片段可用短音群与均匀八分音符交替。</li>
+          </ul></div>
+        </details>
+      </section>
+
+      <section aria-labelledby="song-mode">
+        <h2 id="song-mode">调式的安排</h2>
+        <p>给主题句选调式，先确定哪里是主音，再决定从哪个音列取材。七声大调与小调、五声的宫商角徵羽以及加入偏音的六声或七声写法，都能用于歌曲。同一歌词往往容许多个方案。取舍要结合词的形象、地域或体裁所需的音乐语言，以及后文还要怎样展开、形成对比。</p>
+        <div class="music-demo" id="song-mode-choice">
+          <div class="music-demo-toolbar">
+            <h3>固定节奏下的调式色彩</h3>
+            <label>调式与用音 <select><option value="major">C 大调</option><option value="minor">c 自然小调</option><option value="gong">C 宫调式</option><option value="zhi">C 徵调式</option><option value="color">大调中的降三、降六色彩</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="保持 C 为主音和每字一拍的调式对照"></figure>
+        </div>
+        <p>C 大调背景下，蓝调风格常把 E♭（降Ⅲ级）或 G♭（降Ⅴ级）放进旋律中。它们可以和 E、G 并存。下面的短句让 G♭ 上行半音到 G，句尾仍收在 C。</p>
+        <table class="lesson-table">
+          <caption>同一四音句的蓝调色彩</caption>
+          <thead><tr><th scope="col">处理</th><th scope="col">音高</th><th scope="col">谱例</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">大调原句</th><td>E–G–G–C</td><td><svg class="inline-staff inline-staff-wide" viewBox="0 1 103 34" role="img" aria-label="四个四分音符，E、G、G、C"><path class="inline-staff-lines" d="M1 7H102 M1 12H102 M1 17H102 M1 22H102 M1 27H102"/><path d="M19 27V12 M44 22V7 M69 22V7 M88 14.5V29.5"/><text x="13" y="27">&#xE0A4;</text><text x="38" y="22">&#xE0A4;</text><text x="63" y="22">&#xE0A4;</text><text x="88" y="14.5">&#xE0A4;</text></svg></td></tr>
+            <tr><th scope="row">蓝调色彩</th><td>E♭–G♭–G♮–C</td><td><svg class="inline-staff inline-staff-wide" viewBox="0 1 103 34" role="img" aria-label="同样的时值，前两个音改为 E 降和 G 降，第三个音还原为 G"><path class="inline-staff-lines" d="M1 7H102 M1 12H102 M1 17H102 M1 22H102 M1 27H102"/><path d="M19 27V12 M44 22V7 M69 22V7 M88 14.5V29.5"/><text x="4" y="27">&#xE260;</text><text x="13" y="27">&#xE0A4;</text><text x="29" y="22">&#xE260;</text><text x="38" y="22">&#xE0A4;</text><text x="54" y="22">&#xE261;</text><text x="63" y="22">&#xE0A4;</text><text x="88" y="14.5">&#xE0A4;</text></svg></td></tr>
+          </tbody>
+        </table>
+        <details class="lesson-aside">
+          <summary>羽调式与徵调式中的偏音</summary>
+          <div class="lesson-aside-content"><p>以 C 为宫，A 羽调式的雅乐音列可写 A–B–C–D–E–F♯–G–A，其中 F♯ 是相对 A 的升六级。以 C 为宫的 G 徵调式采用燕乐音列时，可写 G–A–B♭–C–D–E–F–G，其中 B♭ 是相对 G 的降三级。确定宫音和调式主音后，再说明偏音属于哪一级。</p></div>
+        </details>
+      </section>
+
+      <section aria-labelledby="song-contour">
+        <h2 id="song-contour">旋律的构成</h2>
+        <p>音高与节奏共同形成旋律。判断旋律时，可以分别看局部音程怎样连接，以及整句走势上行、下行、平稳还是波状。一句里可以同时出现几种进行方式。跳进后常以反向级进缓和，高点也可以由一连串小动作逐步抵达。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">进行方式</th><th scope="col">谱面判断</th><th scope="col">写作作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">重复音</th><td>同音高多次起音。</td><td>重心交给语气与节奏，既可表现低声叙说，也可形成齐整的号召。</td></tr>
+            <tr><th scope="row">级进</th><td>相邻音级连续连接，可用全音或半音。</td><td>形成连续的上行或下行。半音级进会带来更细密的运动。</td></tr>
+            <tr><th scope="row">跳进</th><td>相邻音或旋律骨架相隔三度或以上。</td><td>突出高点和语气转折。缓慢、较弱的长音也能让大跳显得舒展。</td></tr>
+            <tr><th scope="row">和弦分解</th><td>同一和弦的音依次出现，例如 C–E–G–C。</td><td>让跳进由和弦组织。分解和弦可以展开音区，也可以引向终止。</td></tr>
+            <tr><th scope="row">波浪</th><td>在一段连续旋律内，比较最低音和最高音，八度以内为小幅，超过八度为大幅。</td><td>用升降起伏形成方向。高点的分量还受时值和在全曲中的位置影响。</td></tr>
+            <tr><th scope="row">回音</th><td>小幅上扬后反向折回，形成锯齿状轮廓。</td><td>使曲线边推进边回环，可用来写波动的情绪或形象。</td></tr>
+            <tr><th scope="row">递音</th><td>前一拍后半出现的音，在后一拍正点以相同音高重新起音。</td><td>提前给出下一拍的音高，让逐拍变化更柔和。谱上可出现同音的两次起音。</td></tr>
+          </tbody>
+        </table>
+
+        <div class="music-demo" id="song-melodic-contour">
+          <div class="music-demo-toolbar">
+            <h3>同一词位下的旋律走向</h3>
+            <label>旋律进行 <select><option value="level">重复音</option><option value="step">上行再下行级进</option><option value="leap">跳进与反向级进</option><option value="chord">和弦分解</option><option value="wave">大幅度波浪</option><option value="echo">回音</option><option value="passing">递音</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="固定时值和词位下的七种旋律轮廓"></figure>
+        </div>
+
+        <h3>起点音区、音域与声韵</h3>
+        <p>低起点给逐渐抬高留出空间，中起点容易向两侧展开，高起点能一开始突出材料，也可能占用后面高潮的音区。试写同一调式与节奏的几个起点时，同时核对最高、最低音、长时间停留的位置和演唱者的舒适音区。上行可以低声蓄势，下行也可以用重拍和渐强积累力量。旋律的方向、速度、力度和词义共同决定语气。</p>
+        <p>主题句的第一批字尤其需要容易辨认。汉语声调、词的轻重和停连提供旋律线索。如果旋律把关键词唱得像另一种读音，可以调整重音、起音或相邻音的方向。曲调仍要维持自己的节奏和走向，声调与曲调的具体结合留到下篇展开。</p>
+      </section>
+
+      <section aria-labelledby="song-syntax">
+        <h2 id="song-syntax">句法的安排</h2>
+        <p>乐句靠旋律走向、停顿和收束形成。划分时同时看词句和前后句的关系。四拍的乐句常用两、四或八小节，二拍、三拍时也常用四、八小节，必要时可更长。句长本身与前后句是否均衡是两层判断。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">判断对象</th><th scope="col">方正写法</th><th scope="col">非方正写法</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">单个乐句</th><td>用两小节为单位组织为 2、4、8 小节等。小拍号中也可用 16 小节。</td><td>如 3、5、6、7 小节。绪势、衬词或一个关键字的拖腔都可能把乐句拉长。</td></tr>
+            <tr><th scope="row">整个乐段</th><td>常见两句或四句，各句方正且等长，如 4＋4。</td><td>句子长短不等，或各句等长但本身非方正，如 4＋4＋8＋4 或 5＋5＋5＋5。</td></tr>
+          </tbody>
+        </table>
+        <p>一句词对应一个完整的乐句，称为<strong>词曲句法同步</strong>。两句或多句词可以放进同一个乐句，在共同的音乐收束处结束，形成<strong>不同步</strong>。两者都可以用方正或非方正的句长。</p>
+
+        <div class="music-demo" id="song-phrase-shape">
+          <div class="music-demo-toolbar">
+            <h3>词曲句法与句长</h3>
+            <label>乐句组织 <select><option value="balanced">同步，2＋2 小节</option><option value="extended">同步，2＋3 小节</option><option value="combined">不同步，两句词合成一句曲</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="两句词分别形成两个乐句或合成一个乐句"></figure>
+        </div>
+
+        <h3>两大句乐段中的主题句</h3>
+        <p>有些乐段的四个分句按 <strong>〔分句 1＋2〕＋〔分句 3＋4〕</strong>组织。若第 3 分句回到第 1 分句的题头，后面的分句接着收束，每两句就会被听成一个大句。主题材料有时要写满前两个分句才交代完整。前两句结合紧密时，可以同时构思它们的开头、句尾与换气。</p>
+      </section>
+
+      <section aria-labelledby="song-model">
+        <h2 id="song-model">临摹歌曲主题句</h2>
+        <p>临摹借用一个适合新歌词的句法或节奏经验。范句与新词在形象、情绪、体裁和呼吸上接近，原有词位才容易迁移。临摹通常以第一句为范围，后句与它联系紧密时可以一并考虑。新词在套入节奏时可以稍加调整，或使用词组重复和衬词。完成后要重新听新旋律的走向与句尾，检查它是否还符合自己的音乐构思。</p>
+
+        <div class="music-demo" id="song-model-writing">
+          <div class="music-demo-toolbar">
+            <h3>临摹主题句的三个步骤</h3>
+            <div class="score-choice-buttons" data-writing-choices role="group" aria-label="写作阶段"></div>
+          </div>
+          <output class="music-demo-cue" data-writing-description></output>
+          <figure data-writing-score aria-label="从范型到新歌词和原创曲调"></figure>
+        </div>
+        <aside class="lesson-callout"><p><strong>可发展的题头。</strong> 开头给出可以认出的节奏或音调，句尾决定它接下来要留在原来的气息中，还是转向新的音区、力度或终止。</p></aside>
+      </section>
+    </main>
+  </body>
+</html>

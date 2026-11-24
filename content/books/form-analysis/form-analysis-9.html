@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第九章 三部曲式｜曲式学基础教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./form-analysis-9.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">曲式学基础教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第九章 三部曲式</h1>
+      <p class="intro">三段曲式和三部曲式都能写成 A–B–A。真正决定曲式层级的是 A 回来时带回了什么。如果它带回首部内部的多个乐段，再现的范围就是一个完整的乐部。</p>
+
+      <section aria-labelledby="form-levels">
+        <h2 id="form-levels">曲式结构的层次</h2>
+        <p>由小到大，可以从<strong>乐汇、乐节、乐句、乐段、乐部</strong>分析到完整乐章或乐曲。动机是可以发展出更多音乐的小材料，常在乐汇这一层辨认。前几章的一段、二段、三段曲式和多段结构，通常以乐段为基本构成单位，可以统称<strong>单曲式</strong>。</p>
+        <p><strong>乐部</strong>是较大曲式中承担完整结构任务的部分。它通常能再分为二段、三段或更多乐段。一个单乐段也可以承担乐部的功能，条件是它有相对独立的位置，能和其他乐部并列。奏鸣曲式的呈示部、展开部与再现部同样是这一层级，其中的组织方式各有特点。</p>
+        <p><strong>乐章</strong>是套曲内部的组成单位。一首作品可以短至一个乐段，也可以大至多个乐章的套曲。单独演奏某个完整乐章时，它也能作为一首乐曲来听。名称所表示的结构规模要结合具体作品判断。</p>
+      </section>
+
+      <section aria-labelledby="compound-ternary-structure">
+        <h2 id="compound-ternary-structure">三部曲式的基本结构</h2>
+        <p><strong>三部曲式</strong>由第一乐部、中间乐部和再现乐部构成，常写作 A–B–A 或 A–B–A′，也叫复三部曲式。首部和再现部通常在内部另有二段或三段结构。中部可以是二段、三段、一个相对独立的乐段，或一串有较强展开性的音乐。三部曲式常见于独立器乐作品，也常用作交响曲或奏鸣套曲的慢板和舞曲乐章。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">比较对象</th><th scope="col">外层轮廓</th><th scope="col">关键证据</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">三段曲式</th><td>A–B–A′</td><td>呈示和再现分别处在单个乐段的层级。</td></tr>
+            <tr><th scope="row">三部曲式</th><td>A–B–A′</td><td>第一乐部内部已经有二段或三段的组织。再现往往带回整个乐部，也可缩减其中一部分。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="compound-ternary-score">
+          <div class="music-demo-toolbar">
+            <h3>三部曲式的部与内部段</h3>
+            <label>段落 <select data-analysis-jump></select></label>
+          </div>
+          <div class="timeline-frame" data-analysis-timeline hidden></div>
+          <dl class="analysis-description" aria-live="polite">
+            <dt data-analysis-section>全曲</dt>
+            <dd data-analysis-description>A 的 a、b 段，对比中部 B，A 两段回归</dd>
+          </dl>
+          <p class="music-demo-cue analysis-status" data-analysis-status role="status"></p>
+          <figure data-analysis-score aria-label="四十小节三部曲式教学例，两个外部各有前后两段，中部是一个 c 小调乐段"></figure>
+        </div>
+        <p>教学例的前 16 小节已经属于一个完整的二段结构。a、b 两段各有两句，a 段末尾在 G 大调收束，b 段回到 C 大调完成首部。第 17 小节改为 c 小调，B 部用连续八分音符写出一个新的两句乐段。第 25 小节重新进入 C 大调，a、b 两段整体回归。第 9 小节开始 b 段，是首部内部的分界，第 17 小节才是两个乐部之间的分界。</p>
+      </section>
+
+      <section aria-labelledby="compound-ternary-contrast">
+        <h2 id="compound-ternary-contrast">中部的对比层级</h2>
+        <p>第一乐部内部已经有一次陈述与发展。中部若要和整个第一乐部形成对比，往往另立主题，也可以从歌唱性、舞蹈性、速度、力度、调性或织体中形成更显著的区别。慢板的悠长旋律可以对比活跃的舞曲，密集的音型也可以对应原先较开阔的节奏。</p>
+        <p>对比的强度要从全曲判断。转换可以很鲜明，连接处仍可能保留一个节奏形态、旋律轮廓或调性联系。中部主题本身也可以沿用前面某个小音型，借重新组织获得独立的性格。判断这个中部是否足以和外部并列，需要同时看它承担的结构任务。</p>
+      </section>
+
+      <section aria-labelledby="compound-ternary-parts">
+        <h2 id="compound-ternary-parts">第一乐部、中部与再现部</h2>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">乐部或连接</th><th scope="col">常见安排</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">第一乐部</th><td>陈述主要主题，通常采用二段结构或单主题三段结构。内部可以展开，主要对比则留给中部。古典作品的外部常在主调完全终止，后来也出现半终止或停在从属调的写法。</td></tr>
+            <tr><th scope="row">中间乐部</th><td>常直接接在首部的终止之后，让新主题和音响立刻形成对照。古典作品常用三声中部或插部式中部，后来两者也可兼有各自特点。</td></tr>
+            <tr><th scope="row">再现准备</th><td>中部末尾可以用过渡重新建立主调方向。首部主题在别的调上短暂露面、随即被继续发展时，形成<strong>假再现</strong>，它可作为真正再现的预示。</td></tr>
+            <tr><th scope="row">再现乐部</th><td>主题与主调通常一同回来。再现可以照原样，也可以加密节奏、提高音区、扩充高潮、变奏，或者缩为首部的头一个乐段。中部的材料有时也会渗入再现。</td></tr>
+          </tbody>
+        </table>
+        <p>古典舞曲和谐谑曲常用 <strong>D.C.（Da capo）</strong>指示从头回到第一乐部，由 <strong>Fine</strong> 标明结束位置。遇到另有尾声的作品，按它给出的演奏顺序在再现后进入 <strong>Coda</strong>。这些记号可以节省重复抄写的篇幅，引子和尾声仍有独立的结构作用。</p>
+      </section>
+
+      <section aria-labelledby="compound-ternary-trio">
+        <h2 id="compound-ternary-trio">三声中部</h2>
+        <p><strong>三声中部（Trio）</strong>源于小步舞曲、谐谑曲中以三重奏写成的中部。名称后来沿用到更多编制和写法。常见特征是新主题独立呈示，新调性常在开头即建立，内部句段清楚而对比相对小，末尾有较明确的收束。中部可为二段、三段或一段；有时完全终止后才接短小的再现连接。</p>
+        <p>两端为大调、中部转入小调时，可以写 <strong>Minore（小调部）</strong>。两端为小调、中部转入大调时，可以写 <strong>Maggiore（大调部）</strong>。调式变化能加强对比，判断三声中部仍要结合主题和结构。</p>
+        <h3>贝多芬 f 小调钢琴奏鸣曲 Op. 2 No. 1 第三乐章</h3>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">范围</th><th scope="col">结构与调性</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">小步舞曲 A</th><td>单主题三段结构。a 段由三个四小节乐句及两小节补充组成，终止在降 A 大调。中段分裂发展开头动机，转向降 b 小调，经补充终止和四小节连接回到主调属音。</td></tr>
+            <tr><th scope="row">A 内部的再现</th><td>原来三个乐句压为两个不停顿的四小节句，加两处补充终止回到 f 小调。提高音区、加密节奏和新增声部形成动力再现。</td></tr>
+            <tr><th scope="row">三声中部 B</th><td>同主音 F 大调，流畅的八分音符与外部较多的四分音符对照。内部 10＋15＋8 小节，三个声部轮流呈示主题。C 大调的展开仍围绕 F 大调的属功能，最后完全终止于 F 大调。</td></tr>
+            <tr><th scope="row">回到 A</th><td>中部终止后没有过渡，直接用 D.C. 指示原样再现小步舞曲。</td></tr>
+          </tbody>
+        </table>
+        <p>主题轮换和中段移调为 Trio 增加活动，中部自己的前后段仍比小步舞曲与 Trio 的对比更接近。第 63–65 小节的附点二分音符半音下行曾先在伴奏出现，后来承担 Trio 内部回归的连接功能。</p>
+      </section>
+
+      <section aria-labelledby="compound-ternary-episode">
+        <h2 id="compound-ternary-episode">以插部为中部</h2>
+        <p>把<strong>插部</strong>安排在两个外部之间，常见于慢板乐章。插部也可从新主题与从属调直接开始，常用下属方向的调性。它比典型的 Trio 更容易不停顿地展开，引入新的材料和调性，内部反复与对称结构较少。末尾的连接常在音乐仍未收稳时准备再现。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">观察依据</th><th scope="col">三声中部</th><th scope="col">插部式中部</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">内部组织</th><td>段落划分清楚。相近的主题与写法贯穿全段。</td><td>主题可以完整陈述后立即转入展开，新材料与调性变化更活跃。</td></tr>
+            <tr><th scope="row">通向再现</th><td>常在本部调性完全终止，可直接返回，也可接连接。</td><td>常用连续的发展或连接把听觉重心引向主调，再由真正再现收住回归。</td></tr>
+          </tbody>
+        </table>
+        <h3>贝多芬降 E 大调钢琴奏鸣曲 Op. 7 第二乐章</h3>
+        <p>这个慢板的主体在 C 大调。第一乐部内部是 8＋6＋10 的三段结构。a 段保持歌唱性，动机 b 保留动机 a 的停顿布局，改用更活跃的短音。b 的发展推动中段，也带动首部内部再现的扩充。第 23–24 小节完成第一乐部的终止，第 24 小节接入过渡。
+          <svg class="inline-staff" style="--inline-notation-width: 10em" viewBox="0 0 174 51" role="img" aria-label="动机 a 从四分音符 E 接八分音符 F。动机 b 改为附点八分 G、十六分 D、八分 E。两组末尾都是八分休止和四分休止">
+            <path class="inline-staff-lines" d="M2 12H172 M2 17H172 M2 22H172 M2 27H172 M2 32H172"/>
+            <path d="M22.7 32V16M43.7 29.5V13.5M90 12v20M108.7 27V11M125.7 34.5V15M144.7 32V16"/>
+            <path d="M108.7 11l17 4m-5 2l5 1" style="stroke-width:2.25"/>
+            <path d="M19 35Q28 45 39 33 M104 31Q120 45 138 35"/>
+            <text x="17" y="32">&#xE0A4;</text><text x="38" y="29.5">&#xE0A4;</text><text x="43.7" y="13.5">&#xE240;</text>
+            <text x="54" y="22">&#xE4E6;</text><text x="69" y="22">&#xE4E5;</text>
+            <text x="103" y="27">&#xE0A4;</text><circle cx="112" cy="25" r="1"/><text x="120" y="34.5">&#xE0A4;</text>
+            <text x="139" y="32">&#xE0A4;</text><text x="144.7" y="16">&#xE240;</text>
+            <text x="152" y="22">&#xE4E6;</text><text x="163" y="22">&#xE4E5;</text>
+            <text class="inline-staff-count" x="17" y="49">动机 a</text><text class="inline-staff-count" x="103" y="49">动机 b</text>
+          </svg>
+        </p>
+        <table class="lesson-table">
+          <caption>插部、假再现与真正再现</caption>
+          <thead><tr><th scope="col">位置</th><th scope="col">音乐进程</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">插部开头</th><td>两句各四小节，从降 A 大调到 f 小调，形成方整的转调乐段。</td></tr>
+            <tr><th scope="row">随后的四小节</th><td>主题在降 D 大调重新出现，继续转调。第 36 小节的增六和弦导向主调的属和弦。</td></tr>
+            <tr><th scope="row">再现连接</th><td>第 37 小节出现属音 G。第 41 小节的和声又转成降 B 大调属七的框架，首部主题在降 B 大调只出现三小节，形成假再现。接着，c 小调的下行引出 c 小调的导七和弦，再转到 C 大调的属七。这个属七和弦导回 C 大调，首部主题才正式再现。</td></tr>
+            <tr><th scope="row">再现与尾声</th><td>真正再现先照原样，后来加入装饰。第 74 小节既结束再现又开始尾声，插部主题转入 C 大调的内声部。第 79 小节起在属持续音上重用动机 b，第 84 小节完全终止，其后还有补充终止和对主题的回顾。</td></tr>
+          </tbody>
+        </table>
+        <p>这里有完整的插部开头，也有强烈的后续展开。能否找到局部的方整乐段，只是判断的一项依据。中部的后半怎样脱离局部调性并通向主调回归，同样决定中部的作用。</p>
+      </section>
+
+      <section aria-labelledby="tchaikovsky-ternary">
+        <h2 id="tchaikovsky-ternary">柴科夫斯基《第五交响曲》第二乐章</h2>
+        <p>整个乐章的轮廓是<strong>引子–A–B–A′–尾声</strong>。低弦引子从 b 小调出发，向下属方向游移，再过渡到乐章的 D 大调。第一乐部以圆号唱出的 a 与双簧管呈示的 b 为主要主题。中部另有两首田园色彩的旋律，展开中又突然插入整部交响曲序奏中的主题。</p>
+        <table class="lesson-table">
+          <caption>三个乐部的主题与展开</caption>
+          <thead><tr><th scope="col">乐部</th><th scope="col">内部结构</th><th scope="col">形成转折的依据</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">A</th><td>a–b–a′–b′</td><td>a 首句转向升 f 小调，下句从 D 大调出发，转至 b 小调的属和弦。第 24 小节，双簧管接入 b，把这同一个升 F 大三和弦重新解释为升 F 大调的主和弦。第二次陈述时 a′ 缩短，b′ 在 D 大调由弦乐充分展开，第 56 小节形成高潮，第 61 小节完全终止。</td></tr>
+            <tr><th scope="row">B</th><td>c、d 交替展开，序奏主题闯入。</td><td>单簧管呈示 c，弦乐呈示由 c 衍生的 d。起初两主题各自重复，后来衔接缩紧，调性大体按五度关系推进。序奏主题突然压过田园主题，和声落到通向 D 大调的属七和弦。</td></tr>
+            <tr><th scope="row">A′</th><td>a、b 各自成组展开，序奏主题再入。</td><td>四小节弦乐拨奏连接后，a 由小提琴奏出，第二次改到木管。b 在第 142 小节高潮中进入，后来序奏主题以强力度打断收束。</td></tr>
+            <tr><th scope="row">尾声</th><td>主持续音上的 b。</td><td>小提琴完整演奏 b，逐渐减弱，在全曲最强高潮之后安静收束。</td></tr>
+          </tbody>
+        </table>
+        <p>首部交替安排 a 与 b，再现部则把两种材料各自扩展。再现的内容仍能和首部对应，内部次序与配器可以因发展需要而改变。两次序奏主题的闯入还在 A、B 对照之外建立了贯穿全乐章的一条戏剧线索。</p>
+        <details class="lesson-aside">
+          <summary>主题 b 的扩大与中部调性的转折</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>主题 b 第一次在升 F 大调只出现四小节，随即分裂为连接。第二次进入 D 大调，转由弦乐铺开，并通过三次陈述形成首部高潮。主调的回归与主题地位的上升是同一个结构变化。</li>
+              <li>中部临近结束时，d 在升 c 小调的属音升 G 上展开，低音降半音到 G 后，成为 D 大调属七和弦的七音。序奏主题在这个属七和弦上突入，紧接着由属七转向主和弦的第一转位。四小节拨奏既接续和声，也预示再现部的伴奏。</li>
+              <li>再现部的 b 准备结束时，序奏主题再次闯入，随后由五小节连接进入尾声。主持续音将抒情的 b 留到最后。</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="compound-binary">
+        <h2 id="compound-binary">二部曲式</h2>
+        <p><strong>二部曲式</strong>由两个较大的乐部构成，记作 A–B。两部常在速度、节奏、主题或调性上形成鲜明对比。第二乐部承担全曲收束，因而篇幅常较长。各乐部内部可以有主题再现，整首仍按两个乐部组织。第六章的二段式则以乐段为主要结构单位。</p>
+        <p>二部式的 B 要在自身的调性和主题发展中完成全曲。《流浪者之歌》的快板在新的调性中心 a 小调结束。三部式的插部承担中间对比，即使内部已有完整终止，全曲的收束仍由后续的再现乐部承担。</p>
+        <h3>萨拉萨蒂《流浪者之歌》</h3>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">乐部</th><th scope="col">内部组织与调性</th><th scope="col">全曲功能</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">A · 中板与慢板</th><td>引子接 a、b、c 三段，围绕 c 小调。引子和前两段有较自由的速度与华彩，c 段进入明确的二拍子。升四级及其增二度、减七和弦使色彩统一。</td><td>由自由的倾诉渐渐收拢，末尾在主持续音上作补充终止。</td></tr>
+            <tr><th scope="row">B · 快板</th><td>有多个舞蹈性段落及变化重复。乐队先以 C 大调色彩进入，小提琴乐句转向 a 小调，在近关系调间展开，最终回到 a 小调。</td><td>速度与节奏的推进建立主要对比，最后由第二乐部完成作品。</td></tr>
+          </tbody>
+        </table>
+        <p>第二乐部内部多次重复、再现、转调，持续的舞蹈节奏把这些部分联成一个整体。它和前部的主要区别是整个乐部由散板、慢板转为快板舞曲，并换到新的调性重心。</p>
+        <details class="lesson-aside">
+          <summary>器乐与声乐中的二部组织</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>李斯特《第二匈牙利狂想曲》以较慢的 Lassan 与较快的 Friska 形成两部。后者本身可以分出多个段落。</li>
+              <li>西贝柳斯《芬兰颂》的两部各有三段结构。首部庄重，调性变化较多。第二部转向快速的降 A 大调，先用低声部动机展开，再引入歌唱性中段。首部再现中新出的铜管节奏动机也贯穿到第二部。</li>
+              <li>冼星海《黄河颂》的首部是一个多句乐段。过门之后，第二部由三次感叹式陈述和一个结论乐段构成。两部的并列功能可以在声乐作品中表现为不同规模的结构。</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+    </main>
+  </body>
+</html>

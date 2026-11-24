@@ -5,6 +5,7 @@ export function mountProgrammaticScore(container, { build, lowestPitch, octaves,
   const scoreFigure = container.querySelector('[data-generated-score]');
   const piano = container.querySelector('[data-generated-piano]');
   const form = container.querySelector('form');
+  const title = container.querySelector('.score-toolbar h3');
   const descriptionLabel = container.querySelector('[data-generated-description]');
   let score;
   let activeKeys = [];
@@ -26,6 +27,12 @@ export function mountProgrammaticScore(container, { build, lowestPitch, octaves,
       score.setNotes(notes);
     } else {
       score = mountScore(scoreFigure, { notes, notation: 'staff', onPitchesChange: highlightPitches, soundFontUrl });
+      if (title) {
+        const header = document.createElement('div');
+        header.className = 'programmatic-score-heading';
+        title.before(header);
+        header.append(title, scoreFigure.querySelector('.score-controls'));
+      }
     }
   }
 

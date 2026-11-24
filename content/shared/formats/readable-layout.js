@@ -12,7 +12,7 @@ export function enableScrollFrame(frame, label, { vertical = false } = {}) {
     frame.classList.toggle('is-scrollable', overflow);
     hint.hidden = !overflow;
     if (overflow) {
-      const direction = horizontalOverflow && verticalOverflow ? '' : horizontalOverflow ? '横向' : '纵向';
+      const direction = horizontalOverflow && verticalOverflow ? '横向与纵向' : horizontalOverflow ? '横向' : '纵向';
       hint.textContent = direction + '滚动查看';
       frame.tabIndex = 0;
       frame.setAttribute('role', 'region');
@@ -47,6 +47,7 @@ export function prepareReadingContent(main) {
   for (const table of main.querySelectorAll('.lesson-table')) {
     const columns = [...table.rows[0]?.cells ?? []].reduce((count, cell) => count + cell.colSpan, 0);
     if (columns >= 4) table.style.setProperty('--table-min-width', `${columns * 4.75}rem`);
+    if (columns >= 5) table.classList.add('lesson-table-dense');
     frameContent(table, table.caption?.textContent.trim() || '对照表', 'table-scroll');
   }
   const longStaves = [

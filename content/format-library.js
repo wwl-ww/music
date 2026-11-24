@@ -5,6 +5,7 @@ import { mountFormAnalysis } from './shared/formats/form-analysis.js';
 import { mountVoiceRelations } from './shared/formats/voice-relations.js';
 import { mountScoreComparison } from './shared/formats/score-comparison.js';
 import { mountScoreWritingSteps } from './shared/formats/score-writing-steps.js';
+import { mountArrangementGrid } from './shared/formats/arrangement-grid.js';
 
 const preview = document.querySelector('#preview-width');
 const showcase = document.querySelector('.format-showcase');
@@ -13,6 +14,15 @@ function setPreviewWidth() {
 }
 preview.addEventListener('change', setPreviewWidth);
 setPreviewWidth();
+
+mountArrangementGrid(document.querySelector('#arrangement-grid-sample'), {
+  label: '贝斯与底鼓的起音对照',
+  subdivisions: 2,
+  rows: [
+    { label: '贝斯 C3', events: [{ step: 0, length: 2 }, { step: 4, length: 3 }] },
+    { label: '底鼓', events: [{ step: 0 }, { step: 4 }] }
+  ]
+});
 
 mountScore(document.querySelector('#melody-example'), {
   tempo: 88,

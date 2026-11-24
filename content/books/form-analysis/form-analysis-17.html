@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第十七章 套曲——组曲｜曲式学基础教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./form-analysis-17.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">曲式学基础教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第十七章 套曲——组曲</h1>
+      <p class="intro">套曲把几个可以各自成立的乐章放在同一个整体里。古组曲主要用不同舞曲的节拍和性格形成对比，新型组曲还可以用标题、调性布局和终曲中的主题回顾把各章连起来。</p>
+
+      <section aria-labelledby="suite-definition">
+        <h2 id="suite-definition">套曲的定义及种类</h2>
+        <p><strong>套曲</strong>由两个或更多相对独立的乐章组成。各章可以用不同曲式，速度、节拍、调性和体裁也可以对比，但要服从一个统一的构思。单章常能单独演奏，有些片段的写法和结束却需要放回全曲才能理解。</p>
+        <p>按常见的组织方式，可分为组曲、奏鸣或交响套曲、声乐套曲。组曲中有用特定舞曲排列的古组曲，也有更自由的新型组曲。奏鸣套曲常有一个主要乐章采用奏鸣曲式，声乐套曲则常借歌词和演唱编制组织各章。</p>
+      </section>
+
+      <section aria-labelledby="baroque-suite">
+        <h2 id="baroque-suite">古组曲的基本舞曲</h2>
+        <p>十七世纪欧洲的古组曲逐渐形成阿勒芒德、库朗特、萨拉班德、吉格的次序。各章通常在同一个调上。音乐靠节拍、速度、重心和织体形成对比。开头可以加前奏曲，萨拉班德与吉格之间也常有加沃特、小步舞曲、布雷舞曲或咏叹调等。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">舞曲</th><th scope="col">节拍与起句</th><th scope="col">常见听感</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">阿勒芒德</th><td>中速四拍子，德国舞曲。常用短弱起，强拍后音型连续进行。</td><td>节奏匀整，旋律与低音相互接续。</td></tr>
+            <tr><th scope="row">库朗特</th><td>中速或较快的三拍子，法国舞曲。常由短弱起进入，如三四拍或三二拍。</td><td>音型有流动感，三拍组合清楚。</td></tr>
+            <tr><th scope="row">萨拉班德</th><td>缓慢的三拍子，源自西班牙。通常从强拍起，第二拍常加重或延长。</td><td>节奏较庄重，和声变化可和第二拍的重心相配合。</td></tr>
+            <tr><th scope="row">吉格</th><td>快速活泼，源自英国。常用三八拍、六八拍或十二八拍。</td><td>三分的律动，常见赋格式模仿或声部接应。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="suite-dance-meters">
+          <div class="music-demo-toolbar">
+            <h3>古组曲的舞曲节拍对照</h3>
+            <div class="score-choice-buttons" data-writing-choices role="group" aria-label="选择舞曲"></div>
+          </div>
+          <output class="music-demo-cue" data-writing-description></output>
+          <figure data-writing-score aria-label="同一调性的四种舞曲节拍短例"></figure>
+        </div>
+        <p>这些短例保持 G 大调并突出节拍典型。吉格里的六个八分音符组成两组，每组三个。萨拉班德的一小节虽是三个四分拍，第二拍又可因时值和换和弦听得更重。</p>
+      </section>
+
+      <section aria-labelledby="old-binary-form">
+        <h2 id="old-binary-form">古二段曲式的调性布局</h2>
+        <p><strong>古二段曲式</strong>常用开头动机贯穿全曲。复调声部常连续进行，乐句间没有明显停顿，终止和调性改变比小节数更有助于划段。第一段有时能分两、三句，也可以是连续的一段。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">段落</th><th scope="col">调性倾向</th><th scope="col">材料写法</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">A 前段</th><td>大调作品常在属调结束，小调作品常到关系大调或属小调。前段也可留在主调，停在主调的属和弦上形成半终止。</td><td>呈示动机并不断接续。段末常在明确终止后按反复记号将前段再演一次，随后进入后段。</td></tr>
+            <tr><th scope="row">B 后段</th><td>多从前段所到的调或和声功能出发，经其他调性，常在下属方向活动，最终回到主调。</td><td>把同一材料移调、模进、倒影或模仿发展，也可把前段的句尾移至主调再用。</td></tr>
+          </tbody>
+        </table>
+        <p>以前段由 C 大调开始为例，若音乐转到 G 大调，并以 D 属七和弦解决到 G 主和弦收束，前段就在属调终止。若和声始终围绕 C 大调，末尾停在 G 属和弦上，则是在主调半终止。相同的结尾和弦可以承担两种功能，判断依据是它前面的和声建立了哪个调。</p>
+        <p>古二段式常用同一个题头把两段连起来。题头在后段开头换调、换声部或倒影，通常仍承担继续发展的作用。到末尾，有时只有前段的终止音型随调性一道回来。若前段的主要材料重新成为一个收束性的乐句，就有主题再现的依据。第六章的典型例子常让前段下句承担这个任务。<a href="./form-analysis-6.html#binary-reprise">带再现的二段式</a></p>
+        <p>后段经常较长，因为它要处理发展和回归两个任务。古二段曲式已能听到由主到副、再归主的布局。展开性的写法仍在后段内部，和后来有独立展开部的奏鸣曲式属于不同的组织层级。</p>
+      </section>
+
+      <section aria-labelledby="bach-french-suite">
+        <h2 id="bach-french-suite">巴赫第四套《法国组曲》</h2>
+        <p>七个乐章都在降 E 大调，采用古二段曲式。前段收向属调降 B，后段常经 c 小调、f 小调或降 A 大调等相关调性回归。各章有自己的主题节奏，段与段则常用同一个动机相接。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">乐章</th><th scope="col">分段与音乐证据</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">阿勒芒德</th><td>前后各十小节。前段 5＋5，后段由三个不等长的句子构成。后段从高声部重用起始动机，两段句尾在不同调上呼应。</td></tr>
+            <tr><th scope="row">库朗特</th><td>前段十六、后段二十小节。后一段的调性活动较多，两段末尾三小节的音型相同而调高不同。</td></tr>
+            <tr><th scope="row">萨拉班德</th><td>重第二拍的动机在声部间持续。前八小节不易分句，后十六小节可分成两个八小节乐句。后段第二句延续发展，没有重新建立一个乐段。</td></tr>
+            <tr><th scope="row">加沃特、小步舞曲、咏叹调</th><td>加沃特前后为 8＋14，后段有两拍时差的卡农式应答，直到末句才一起结束。小步舞曲两段等长，后段开头有新节奏。咏叹调的后段十六小节分 6＋4＋6，第三句带回开头四拍。</td></tr>
+            <tr><th scope="row">吉格</th><td>两段为 26＋30 小节。开始由几个声部分次进入，后段以倒影模仿从属和弦起，最后肯定主调。局部三声部出现，其余段落仍保持较透明的织体。</td></tr>
+          </tbody>
+        </table>
+        <p>这套组曲主要靠乐章之间的舞曲节奏对比。各乐章内部多从少量材料发展，保持连贯。终止落点和调性关系因此是划分乐句的重要证据。</p>
+      </section>
+
+      <section aria-labelledby="modern-suite">
+        <h2 id="modern-suite">新型组曲的组合方式</h2>
+        <p>新型组曲仍由若干相对独立的乐章组成，也可以使用舞曲。乐章的数量、顺序、长度、体裁和内部曲式都更自由。有的由戏剧、舞剧或配乐中的段落选编，有的是围绕一个标题或形象专门写成。</p>
+        <p>各乐章可以用节奏、音色、调性和体裁形成对比。整体也可以靠主导动机、统一题材、曲目之间的过门或终曲回顾维持联系。首尾常在同一调上，但也可以另作布局。有些乐章很短，甚至只起插段作用，结构功能需结合前后乐章判断。</p>
+      </section>
+
+      <section aria-labelledby="carnival-of-animals">
+        <h2 id="carnival-of-animals">《动物狂欢节》的音色对比与终曲回顾</h2>
+        <p>圣-桑为两架钢琴和多种乐器写了十四个乐章。各章多抓住一种动物的动作或声音。情绪和织体的主要对比发生在乐章之间。少数乐章只有一个插段大小，也能在套曲里发挥作用。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">范围</th><th scope="col">主要音响与结构</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">1–3</th><td>序奏的钢琴颤音与弦乐模仿建立狂欢气氛，随后以齐奏和低音半音音型刻画狮王。母鸡与公鸡用同音顿奏、突出的单簧管回应。羚羊用快速八度上下奔跑。</td></tr>
+            <tr><th scope="row">4–6</th><td>乌龟把熟悉的旋律拉成慢速弦乐齐奏，下面伴以三连音。大象让低音提琴奏圆舞曲，音色和舞步形成幽默。袋鼠以有倚音的上行和弦表现跳跃，结尾还导向下一章。</td></tr>
+            <tr><th scope="row">7–10</th><td>水族馆用琶音与明亮装饰支持流动的二段旋律。长耳的动物用小提琴半音下行模拟叫声。杜鹃的两个固定音在钢琴和声变化中持续。鸣禽馆用长笛、钢琴和弦乐震音组织喧响。</td></tr>
+            <tr><th scope="row">11–13</th><td>钢琴家把音阶练习逐次提高半音，再用过门引出后章。化石把熟悉歌曲材料排成回旋曲。天鹅用大提琴长旋律与连续琶音作较平静的三段结构，再现句末扩充。</td></tr>
+            <tr><th scope="row">14 终曲</th><td>回到 C 大调，恢复序奏材料并扩展为更明亮的合奏。终曲的主旋律与先前羚羊、母鸡、袋鼠和长耳动物的音型相间，最后在属到主的推进中收束。</td></tr>
+          </tbody>
+        </table>
+        <p>首尾都确立 C 大调。中间多用关系较近的调，也会短暂离开较远。相邻乐章可以在最后准备下一章的属和弦，或者共用一个等音。第八章的降 A 到第九章可按升 G 理解，成为升 c 小调属和弦的根音。终曲主要回顾动作性强的音型，使音色再现、调性回归和热烈结束同时成立。</p>
+      </section>
+    </main>
+  </body>
+</html>

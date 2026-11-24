@@ -1,0 +1,151 @@
+:root {
+  --control-radius: 0.65rem;
+  --control-height: 2.625rem;
+  --control-compact-height: 2.25rem;
+  --control-font: 650 0.875rem/1.25 system-ui, sans-serif;
+  --control-shadow: 0 1px 2px rgb(25 35 51 / 9%);
+}
+
+:root, [data-theme] {
+  --control-stroke: color-mix(in srgb, var(--line) 74%, var(--muted));
+  --control-selected: color-mix(in srgb, var(--control-surface) 87%, var(--accent));
+  --control-selected-line: color-mix(in srgb, var(--control-line) 40%, var(--accent));
+  --control-track: color-mix(in srgb, var(--paper) 86%, var(--line));
+}
+
+@media (pointer: coarse) {
+  :root { --control-height: 2.75rem; --control-compact-height: 2.75rem; }
+}
+
+:where(button, select, input[type="search"], .course-start, .course-resource, .library-program-link, .counterpoint-choices input + span) {
+  --control-fill: var(--control-surface);
+  --control-edge: var(--control-stroke);
+  --control-text: var(--ink);
+  --control-depth: var(--control-shadow);
+  min-height: var(--control-height);
+  padding-inline: 0.78rem;
+  border: 1px solid var(--control-edge);
+  border-radius: var(--control-radius);
+  background-color: var(--control-fill);
+  color: var(--control-text);
+  box-shadow: var(--control-depth);
+  font: var(--control-font);
+}
+
+:where(button, select, .course-start, .course-resource, .library-program-link) { cursor: pointer; }
+
+:where(button:not(:disabled), select:not(:disabled), .course-start, .course-resource, .library-program-link):where(:hover),
+:where(.counterpoint-choices label:hover input:not(:checked) + span) {
+  --control-fill: var(--control-hover);
+  --control-edge: var(--control-selected-line);
+}
+
+:where(button[aria-pressed="true"], button[aria-expanded="true"], .counterpoint-choices input:checked + span) {
+  --control-fill: var(--control-selected);
+  --control-edge: var(--control-selected-line);
+  --control-text: var(--accent);
+  --control-depth: none;
+}
+
+:where(.course-start, .score-playback, [data-route-next]) {
+  --control-fill: var(--accent);
+  --control-edge: var(--accent);
+  --control-text: var(--sheet);
+}
+:where(.course-start, .score-playback:not(:disabled), [data-route-next]:not(:disabled)):where(:hover) {
+  --control-fill: color-mix(in srgb, var(--accent) 86%, var(--ink));
+  --control-edge: var(--control-fill);
+}
+
+:where(button, select, input):where(:disabled) {
+  --control-fill: var(--control-track);
+  --control-edge: var(--line);
+  --control-text: var(--muted);
+  --control-depth: none;
+  cursor: default;
+}
+
+:where(a, button, select, input[type="search"], summary):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+select {
+  appearance: none;
+  padding-inline-end: 1.95rem;
+  background-image:
+    linear-gradient(45deg, transparent 39%, currentColor 44% 59%, transparent 64%),
+    linear-gradient(135deg, transparent 39%, currentColor 44% 59%, transparent 64%);
+  background-position: right calc(0.72rem + 4px) center, right 0.72rem center;
+  background-size: 5px 5px;
+  background-repeat: no-repeat;
+}
+
+:where(select, input[type="search"]):focus-visible { --control-edge: var(--accent); }
+:where(select, input[type="search"]) { font-size: 1rem; }
+
+:where(.score-segments, .score-reader-modes) {
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--control-stroke);
+  border-radius: var(--control-radius);
+  background: var(--control-track);
+}
+
+:where(.score-segments input + span, .score-reader-modes button) {
+  border: 1px solid transparent;
+  border-radius: calc(var(--control-radius) - 3px);
+  background-color: transparent;
+  color: var(--muted);
+  box-shadow: none;
+}
+
+:where(.score-segments label:hover input:not(:checked) + span, .score-reader-modes button:not([aria-pressed="true"]):hover) {
+  background-color: var(--control-hover);
+  color: var(--ink);
+}
+
+:where(.score-segments input:checked + span, .score-reader-modes button[aria-pressed="true"]) {
+  border-color: var(--control-selected-line);
+  background-color: var(--control-surface);
+  color: var(--accent);
+  box-shadow: var(--control-shadow);
+}
+
+:where(.score-segments, .counterpoint-choices) input:focus-visible + span {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+:where(.chapter-outline, .lesson-aside) summary:hover { color: var(--accent); }
+:where(.chapter-outline, .lesson-aside) summary::after {
+  content: "";
+  flex: none;
+  width: 1.55rem;
+  height: 1.55rem;
+  border: 1px solid var(--control-stroke);
+  border-radius: 0.46rem;
+  color: var(--accent);
+  background:
+    linear-gradient(currentColor, currentColor) center / 0.62rem 1.5px no-repeat,
+    linear-gradient(currentColor, currentColor) center / 1.5px 0.62rem no-repeat,
+    var(--control-surface);
+}
+:where(.chapter-outline details[open], .lesson-aside[open]) summary::after {
+  border-color: var(--control-selected-line);
+  background:
+    linear-gradient(currentColor, currentColor) center / 0.62rem 1.5px no-repeat,
+    var(--control-selected);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :where(button, .course-start, .course-resource, .library-program-link, .score-segments label span, .counterpoint-choices label span) {
+    transition: background-color 140ms ease, border-color 140ms ease, transform 140ms var(--interface-ease);
+  }
+  :where(button:not(:disabled), .course-start, .course-resource, .library-program-link):active,
+  :where(.score-segments label, .counterpoint-choices label):active span { transform: scale(0.97); }
+}
+
+@media (forced-colors: active) {
+  select { appearance: auto; background-image: none; padding-inline-end: 0.5rem; }
+}

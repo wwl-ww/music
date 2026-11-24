@@ -70,21 +70,26 @@
         </table>
         <p>分音从基频起算，第 2 分音比基频高八度。F 管的第 1 分音很少用，示范从第 2 分音开始。例如，空按的第 4 分音是 F3。按下第二活塞，仍吹第 4 分音，得到 E3；若想得到同一指法上的 E4，须跳到第 8 分音。中高区的相邻泛音较密，起奏和跨区跳进容易落在邻近的泛音上。</p>
         <div id="horn-harmonic-series" class="programmatic-score" role="group" aria-labelledby="horn-harmonic-caption">
-          <h3 id="horn-harmonic-caption">F 管的活塞与泛音列</h3>
-          <form class="score-choices">
-            <label>活塞
-              <select name="valves">
-                <option value="0">全部松开</option>
-                <option value="1">第二</option>
-                <option value="2">第一</option>
-                <option value="3">第三／第一＋第二</option>
-                <option value="4">第二＋第三</option>
-                <option value="5">第一＋第三</option>
-                <option value="6">第一＋第二＋第三</option>
-              </select>
-            </label>
-          </form>
-          <p data-generated-description aria-live="polite"></p>
+          <div class="score-toolbar">
+            <h3 id="horn-harmonic-caption">F 管的活塞与泛音列</h3>
+            <form class="score-choices">
+              <fieldset>
+                <legend id="horn-valves-label">活塞</legend>
+                <div class="score-tonic">
+                  <select id="horn-valves" name="valves" aria-labelledby="horn-valves-label">
+                    <option value="0">全部松开</option>
+                    <option value="1">第二</option>
+                    <option value="2">第一</option>
+                    <option value="3">第三／第一＋第二</option>
+                    <option value="4">第二＋第三</option>
+                    <option value="5">第一＋第三</option>
+                    <option value="6">第一＋第二＋第三</option>
+                  </select>
+                </div>
+              </fieldset>
+            </form>
+            <output class="score-key-summary" for="horn-valves" data-generated-description></output>
+          </div>
           <figure data-generated-score></figure>
           <figure class="keyboard-example">
             <figcaption>实际音高的键位</figcaption>
@@ -98,6 +103,76 @@
       <section aria-labelledby="horn-range">
         <h2 id="horn-range">二、音域、音区、力度与音色</h2>
         <p>F 调圆号的总音域约为实际 B1–F5，常用范围为 F2–C5。同一个力度落在不同音区，发音难度和听感会改变。写旋律或长音伴奏时，通常从中区选音，再根据需要往低处加厚，或往高处突出线条。</p>
+        <figure class="notation-sample staff-range-comparison staff-range-comparison-compact" id="horn-vertical-ranges">
+          <figcaption>圆号的实际音域与现代 F 调记谱</figcaption>
+          <p class="instrument-range-key range-keyboard-legend">
+            <span class="range-legend-common">实线连接参考音域两端</span>
+            <span class="range-legend-extension">虚线标延伸音</span>
+          </p>
+          <svg class="staff-range-plot" viewBox="0 0 279 250" role="img" aria-labelledby="horn-vertical-ranges-title horn-vertical-ranges-described">
+            <title id="horn-vertical-ranges-title">圆号的实际音域与现代 F 调记谱</title>
+            <desc id="horn-vertical-ranges-described">实际音高 F2 至 C5，下延至 B1，上延至 F5；F 调分谱 C3 至 G5，下延至 F♯2，上延至 C6。</desc>
+            <path class="staff-range-guide" d="M44 58H275 M44 142H275 M44 226H275"/>
+            <path class="range-staff-lines" d="M44 82H275 M44 94H275 M44 106H275 M44 118H275 M44 130H275 M44 154H275 M44 166H275 M44 178H275 M44 190H275 M44 202H275"/>
+            <text class="range-staff-clef" x="48" y="118">&#xE050;</text>
+            <text class="range-staff-clef" x="48" y="166">&#xE062;</text>
+            <g class="staff-range-axis" text-anchor="end">
+              <text x="35" y="62">C6</text>
+              <text x="35" y="104">C5</text>
+              <text x="35" y="146">C4</text>
+              <text x="35" y="188">C3</text>
+              <text x="35" y="230">C2</text>
+            </g>
+            <g data-instrument-range="1">
+              <text class="staff-range-name" x="107" y="22">实际音高</text>
+              <path class="staff-range-span" d="M107 100V208"/>
+              <path class="staff-range-extension" d="M107 100V82h-17"/>
+              <g class="staff-range-pitch range-staff-limit" data-staff-endpoint="F5">
+                <text class="range-staff-symbol" x="84" y="82">&#xE0A3;</text>
+                <text class="staff-range-note-label" x="120" y="86">F5</text>
+              </g>
+              <path class="staff-range-extension" d="M107 208V232h-17"/>
+              <g class="staff-range-pitch range-staff-limit" data-staff-endpoint="B1">
+                <path class="range-staff-ledger" d="M79 214h22 M79 226h22"/>
+                <text class="range-staff-symbol" x="84" y="232">&#xE0A3;</text>
+                <text class="staff-range-note-label" x="78" y="236" text-anchor="end">B1</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="C5">
+                <text class="range-staff-symbol" x="101" y="100">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="120" y="104" text-anchor="start">C5</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="F2">
+                <text class="range-staff-symbol" x="101" y="208">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="120" y="212" text-anchor="start">F2</text>
+              </g>
+            </g>
+            <g data-instrument-range="2">
+              <text class="staff-range-name" x="223" y="22">F 调分谱</text>
+              <path class="staff-range-span" d="M223 76V184"/>
+              <path class="staff-range-extension" d="M223 76V58h-17"/>
+              <g class="staff-range-pitch range-staff-limit" data-staff-endpoint="C6">
+                <path class="range-staff-ledger" d="M195 70h22 M195 58h22"/>
+                <text class="range-staff-symbol" x="200" y="58">&#xE0A3;</text>
+                <text class="staff-range-note-label" x="194" y="62" text-anchor="end">C6</text>
+              </g>
+              <path class="staff-range-extension" d="M223 184V208h-17"/>
+              <g class="staff-range-pitch range-staff-limit" data-staff-endpoint="F♯2">
+                <text class="range-staff-symbol range-staff-accidental" x="190" y="208">&#xE262;</text>
+                <text class="range-staff-symbol" x="200" y="208">&#xE0A3;</text>
+                <text class="staff-range-note-label" x="186" y="212" text-anchor="end">F♯2</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="G5">
+                <text class="range-staff-symbol" x="217" y="76">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="236" y="80" text-anchor="start">G5</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="C3">
+                <text class="range-staff-symbol" x="217" y="184">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="236" y="188" text-anchor="start">C3</text>
+              </g>
+            </g>
+          </svg>
+          <p class="staff-range-summary">F 调分谱各音比实音写高纯五度。两列对应同一支圆号。</p>
+        </figure>
         <figure class="notation-sample" id="horn-range-keyboards" hidden></figure>
         <table class="lesson-table" id="horn-range-table">
           <caption>实际音高与现代 F 调记谱</caption>
@@ -148,6 +223,13 @@
             <circle cx="43" cy="9" r="3" fill="none" stroke="currentColor"/>
             <text x="15" y="29">&#xE0A4;</text><text x="40" y="29">&#xE0A4;</text><text x="65" y="29">&#xE0A4;</text>
             <path d="M20 29V15 M45 29V15 M70 29V15"/>
+          </svg>。
+        </p>
+        <p>安装或取下弱音器通常比改变手的阻塞程度需要更多时间。<i lang="it">con sord.</i> 标在开始用弱音器的音上，<i lang="it">senza sord.</i> 标在取下弱音器后恢复普通奏法的第一个音上。休止长度由换奏所需时间决定
+          <svg class="inline-staff inline-staff-wide" viewBox="0 0 116 43" role="img" aria-label="两个相同音之间写休止以便取下弱音器，前音标 con sord.，后音标 senza sord.。">
+            <path class="inline-staff-lines" d="M2 19H114 M2 24H114 M2 29H114 M2 34H114 M2 39H114"/>
+            <text class="inline-staff-count" x="6" y="10">con sord.</text><text class="inline-staff-count" x="63" y="10">senza sord.</text>
+            <text x="18" y="29">&#xE0A4;</text><text x="51" y="29">&#xE4E5;</text><text x="88" y="29">&#xE0A4;</text><path d="M23.5 29V15 M93.5 29V15"/>
           </svg>。
         </p>
       </section>

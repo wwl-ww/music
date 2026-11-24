@@ -1,6 +1,6 @@
 # 乐理教程
 
-这个项目把《基本乐理教程》《和声学基础教程》《复调音乐基础教程》和《配器法基础教程》改编成中文网页教程。正文负责讲清概念、规则和例外。简谱、五线谱和声音用于解释具体知识点。
+这个项目把《基本乐理教程》《和声学基础教程》《复调音乐基础教程》《配器法基础教程》《曲式学基础教程》《歌曲写作教程》和《图解编曲入门》改编成中文网页教程。正文负责讲清概念、规则和例外。谱面、图表和声音用于解释具体知识点。
 
 ## 运行课程网页
 
@@ -23,6 +23,9 @@ npm run dev
 | `content/books/harmony-lower/` | 《和声学基础教程 · 下》章节、四部和声谱例与参考 PDF |
 | `content/books/counterpoint/` | 《复调音乐基础教程》上下篇、全书目录与可调谱例 |
 | `content/books/orchestration/` | 《配器法基础教程》章节、总谱示意与音响对照 |
+| `content/books/songwriting/` | 《歌曲写作教程》章节、词曲逐字对齐谱与歌曲结构分析 |
+| `content/books/form-analysis/` | 《曲式学基础教程》章节与曲式分析谱 |
+| `content/books/arrangement/` | 《图解编曲入门》导论、三篇正文与制作流程 |
 | `content/shared/` | 共用的排版、主题、谱例组件与钢琴音源 |
 
 ## 课程
@@ -161,12 +164,90 @@ npm run dev
 | [第二章 弓弦乐器与弓弦乐器组](./content/books/orchestration/orchestration-2.html) | 13–87 | 23–97 | 四节分别从印刷 34、57、76、87 页起，印刷 35、77、87 页按正文／习题分界处理 |
 | [第三章 木管乐器与木管乐器组](./content/books/orchestration/orchestration-3.html) | 90–146 | 100–156 | 习题从印刷 103、118、135、145 页起，104、135 页按正文／习题分界处理 |
 | [第四章 圆号](./content/books/orchestration/orchestration-4.html) | 147–158 | 157–168 | 印刷 157 / PDF 167，合唱型多声部范例之后 |
+| [第五章 木管乐器、圆号与弓弦乐器的组合](./content/books/orchestration/orchestration-5.html) | 159–186 | 169–196 | 印刷 185 / PDF 195 起为习题 |
+| [第六章 铜管乐器与铜管乐器组](./content/books/orchestration/orchestration-6.html) | 187–232 | 197–242 | 各节习题从印刷 198、208、222、231 页起，198、222、223 页按正文与习题分界处理 |
+| [第七章 打击乐器及其在乐队中的运用](./content/books/orchestration/orchestration-7.html) | 233–259 | 243–269 | 习题从印刷 244、259 页起，244、245、259 页按正文与习题分界处理 |
+| [第八章 管弦乐全奏中的音质组合](./content/books/orchestration/orchestration-8.html) | 260–294 | 270–304 | 两节习题从印刷 278、293 页起，278、280 页按正文与习题分界处理 |
 
 第二章的[乐器音域图](./content/books/orchestration/orchestration-2.html#string-ranges)沿同一实际音高轴比较不同乐器。可复用 `.instrument-range` 的 SVG 结构，实线色带表示常用音域，虚线表示扩展或极限，圆点为空弦等明确的定弦音，轴上相邻的 C 标记相隔一个八度。移调乐器用实际音高绘图，另用表格标明记谱关系与精确边界。
 
 第三章的木管程序谱为每支管指定独立的谱表和音色。可复用 `mountScore` 的 `notes.scoreTracks`，每条包含谱表名 `name`、MIDI 音色编号 `program` 和 alphaTex 片段 `phrase`。木管试听用 alphaTab 附带的 SONiVOX 音库，随构建输出版权声明和 Apache 2.0 许可说明。
 
 第四章沿用音域键盘和 SONiVOX 音库。F 管活塞程序谱按分音频率比计算键位，并以十二平均律近似播放。现代双重圆号的管路和旧式低音谱号换算已另行核对。[雅马哈圆号构造](https://www.yamaha.com/en/musical_instrument_guide/horn/mechanism/mechanism003.html) · [瑞典音乐遗产圆号四重奏校勘说明](https://www.swedishmusicalheritage.com/downloadMedia.php?f=Crusell_Bernhard-Tre_kvartetter_for_fyra_horn-%28hn%29-%28SMH-ed%29-%28SMH-M1828%29.pdf&m=1828)
+
+第六章的音域键盘可用 `data-range-gap` 标记连续音域中的断档，如无附加阀长号的 B1–E♭2。单 F 阀与双阀低音长号的可用音、常规滑奏条件已另行核对。[雅马哈长号把位指南](https://www.yamaha.com/en/musical_instrument_guide/trombone/play/play003.html) · [维也纳交响音库低音长号手册](https://www.vsl.co.at/academy/brass/bass-trombone) · [次中音长号手册](https://www.vsl.co.at/academy/brass/tenor-trombone)
+
+第七章按现代定音鼓实音写法和排钟的击音记法说明，调音范围选用一组踏板鼓实例。无固定音高试听沿用标准 MIDI 打击映射，`scoreTracks` 支持 `program: 'percussion'` 和指定谱线数 `staffLines`。[雅马哈定音鼓调音表](https://data.yamaha.com/files/download/other_assets/1/332701/Timpani_E_om_web.pdf) · [定音鼓记谱](https://www.vsl.co.at/academy/percussion/timpani) · [排钟记谱](https://www.vsl.co.at/academy/percussion/tubular-bells) · [木琴记谱](https://www.vsl.co.at/academy/percussion/xylophone)
+
+第八章用 `scoreTracks` 保留各乐器的独立音色，`notationOnly` 标记可见且静音的缩编谱，`playbackOnly` 标记只用于试听的乐器轨。
+
+### 曲式学基础教程
+
+| 章节 | 已逐页核对的印刷页 | PDF 页 |
+| --- | --- | --- |
+| [第一章 绪论](./content/books/form-analysis/form-analysis-1.html) | 1–9 | 11–19 |
+| [第二章 乐段（一）](./content/books/form-analysis/form-analysis-2.html) | 10–26 | 20–36 |
+| [第三章 乐段（二）](./content/books/form-analysis/form-analysis-3.html) | 27–49 | 37–59 |
+| [第四章 乐段（三）](./content/books/form-analysis/form-analysis-4.html) | 50–70 | 60–80 |
+| [第五章 一段曲式](./content/books/form-analysis/form-analysis-5.html) | 71–82 | 81–92 |
+| [第六章 二段曲式](./content/books/form-analysis/form-analysis-6.html) | 83–105 | 93–115 |
+| [第七章 三段曲式](./content/books/form-analysis/form-analysis-7.html) | 106–131 | 116–141 |
+| [第八章 多段结构](./content/books/form-analysis/form-analysis-8.html) | 132–139 | 142–149 |
+| [第九章 三部曲式](./content/books/form-analysis/form-analysis-9.html) | 140–165 | 150–175 |
+| [第十章 回旋曲式](./content/books/form-analysis/form-analysis-10.html) | 166–179 | 176–189 |
+| [第十一章 变奏曲（一）](./content/books/form-analysis/form-analysis-11.html) | 180–217 | 190–227 |
+| [第十二章 变奏曲（二）](./content/books/form-analysis/form-analysis-12.html) | 218–233 | 228–243 |
+| [第十三章 奏鸣曲式（一）](./content/books/form-analysis/form-analysis-13.html) | 234–261 | 244–271 |
+| [第十四章 奏鸣曲式（二）](./content/books/form-analysis/form-analysis-14.html) | 262–278 | 272–288 |
+| [第十五章 奏鸣曲式（三）](./content/books/form-analysis/form-analysis-15.html) | 279–285 | 289–295 |
+| [第十六章 奏鸣回旋曲式](./content/books/form-analysis/form-analysis-16.html) | 286–294 | 296–304 |
+| [第十七章 套曲——组曲](./content/books/form-analysis/form-analysis-17.html) | 295–311 | 305–321 |
+| [第十八章 奏鸣（交响）套曲](./content/books/form-analysis/form-analysis-18.html) | 312–323 | 322–333 |
+| [第十九章 声乐套曲与大合唱](./content/books/form-analysis/form-analysis-19.html) | 324–357 | 334–367 |
+
+第一章的十二小节钢琴教学例为本课程编写，用于比较相同的开头材料在半终止和主调收束中的不同作用。
+
+第二章印刷第 26 页、第三章印刷第 48 页下半至第 49 页、第四章印刷第 70 页后半为作业。第 48、70 页保留作业标题前的正文和谱例说明。
+第五至第八章各章末页的「分析曲目」清单已省略，保留清单之前的作品分析。第五章的肖邦 e 小调前奏曲按 Roland Goretzki 的公版乐谱转录重排。[肖邦 Op.28 No.4](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=921)
+第九、第十一、第十二章保留各章末页「分析曲目」之前的正文。第十章的清单从印刷第 178 页中部开始，第 179 页是清单续页。
+第十三至第十八章各章末的「分析曲目」清单已省略。第十九章正文止于印刷第 357 页。
+
+### 歌曲写作教程
+
+| 章节 | 印刷页 | PDF 页 | 练习起点或分界 |
+| --- | --- | --- | --- |
+| [第一章 歌曲写作的整体构思](./content/books/songwriting/songwriting-1.html) | 3–13 | 17–27 | 第 12 页起 |
+| [第二章 主题乐句的写作](./content/books/songwriting/songwriting-2.html) | 14–43 | 28–57 | 第 40 页起 |
+| [第三章 旋律发展手法](./content/books/songwriting/songwriting-3.html) | 44–72 | 58–86 | 第 70 页后段起 |
+| [第四章 乐段结构歌曲的写作（上）](./content/books/songwriting/songwriting-4.html) | 73–96 | 87–110 | 第 95 页起 |
+| [第五章 乐段结构歌曲的写作（中）](./content/books/songwriting/songwriting-5.html) | 97–119 | 111–133 | 无 |
+| [第六章 乐段结构歌曲的写作（下）](./content/books/songwriting/songwriting-6.html) | 120–147 | 134–161 | 第 145 页后段起 |
+| [第七章 两段体歌曲写作](./content/books/songwriting/songwriting-7.html) | 148–209 | 162–223 | 第 207 页后段起 |
+| [第八章 三段体歌曲写作](./content/books/songwriting/songwriting-8.html) | 210–284 | 224–298 | 第 281 页后段起 |
+| [第九章 多段体歌曲写作和歌曲结构布局](./content/books/songwriting/songwriting-9.html) | 285–331 | 299–345 | 第 327 页起 |
+| [第十章 固定音调、固定节奏的贯串和音调引用](./content/books/songwriting/songwriting-10.html) | 332–343 | 346–357 | 无 |
+| [第十一章 前奏（引子）、间奏、后奏（尾声）](./content/books/songwriting/songwriting-11.html) | 344–378 | 358–392 | 无。第 377–378 页为下篇分隔及空白 |
+| [第十二章 曲调与声调](./content/books/songwriting/songwriting-12.html) | 379–388 | 393–402 | 无 |
+| [第十三章 装饰变音、色彩变音、离调、特性调式变音和转调](./content/books/songwriting/songwriting-13.html) | 389–410 | 403–424 | 无 |
+| [第十四章 拖腔、重复歌词、衬词](./content/books/songwriting/songwriting-14.html) | 411–423 | 425–437 | 无 |
+| [第十五章 歌曲的常见体裁](./content/books/songwriting/songwriting-15.html) | 424–430 | 438–444 | 无 |
+| [第十六章 艺术歌曲特征](./content/books/songwriting/songwriting-16.html) | 431–468 | 445–482 | 无 |
+| [第十七章 通俗歌曲特征](./content/books/songwriting/songwriting-17.html) | 469–491 | 483–505 | 无 |
+| [附录一、二 演唱、定调与歌曲题头](./content/books/songwriting/songwriting-reference.html) | 492–497 | 506–511 | 第 498 页起为习题解答提示 |
+
+歌曲写作教学例使用原创歌词和旋律。`songwriting-score.js` 的 `lyricBars` 将每个唱词字挂到相应音符，休止及同字延续的音不推进歌词。分节歌可把多段歌词排到同一谱面，结构对照复用 `mountFormAnalysis`。
+
+### 图解编曲入门
+
+| 课程 | 印刷页 | PDF 页 |
+| --- | --- | --- |
+| [导论 流行乐团编曲的基本知识](./content/books/arrangement/arrangement-intro.html) | 13–23 | 14–24 |
+| [第一篇 明快节拍](./content/books/arrangement/arrangement-1.html) | 25–77 | 26–78 |
+| [第二篇 可哼唱乐句](./content/books/arrangement/arrangement-2.html) | 79–129 | 80–130 |
+| [第三篇 流行乐团合奏](./content/books/arrangement/arrangement-3.html) | 131–173 | 132–174 |
+| [附录 编曲构思与制作流程](./content/books/arrangement/arrangement-3-appendix.html) | 174–177 | 175–178 |
+
+课程用短句示范鼓、贝斯、吉他与钢琴的编写，以及主副旋律和合奏重心的变化。原书教材曲的分析保留编配手法和听辨目标，网页另配便于比较的短谱。
 
 ## 预制格式库
 
@@ -210,6 +291,14 @@ mountScore(document.querySelector('#example'), {
 ### 程序性谱子
 
 第五章的[大调音阶](chapter-5.html#major-scale-example)与第六章的[小调音阶](chapter-6.html#minor-scale-example)共用 `mountProgrammaticScore`。复用时，在容器内放置含命名控件的 `form`、`[data-generated-score]` 谱例和 `[data-generated-piano]` 键盘容器。传入 `build(choices)`，返回同一音列生成的 alphaTex（`notes`）、MIDI 音高（`pitches`）和可读的谱例描述（`description`）。`lowestPitch` 是键盘最左侧 C 的 MIDI 音高，`octaves` 决定键盘范围。
+
+### 编曲网格
+
+[编曲网格样板](./content/format-library.html#arrangement-grid-samples)展示底鼓和贝斯的落点。`mountArrangementGrid` 复用主题和横向滚动框，横轴标拍点与细分，纵轴可标鼓件、音高或乐器。圆点表示击打，色块的长度表示持续时间。
+
+传入 `beats`（总拍数）、`beatsPerBar`（每小节拍数）、`subdivisions`（每拍格数）、`label` 和 `rows`。每行用 `label` 标明鼓件或音高，`events` 里的 `step` 从 0 开始计，`length` 按格计，`accent` 标出重音。切换版本时调用 `update(rows)`。
+
+需要试听时可复用 `mountScore`，以 `notationVisible: false` 仅显示播放键。用 `onPlaybackPosition(tick)` 把 MIDI 时钟换算成格号，再调用网格的 `markStep(step)`。停止时回调提供 `null`，清除播放位置。
 
 ### 曲式分析谱与声部关系图
 
@@ -257,6 +346,10 @@ mountScore(document.querySelector('#example'), {
 **音域键盘**用于在同一音高轴上比较不同乐器。[弓弦乐器](./content/books/orchestration/orchestration-2.html#string-ranges)和[木管乐器](./content/books/orchestration/orchestration-3.html#woodwind-ranges)共用 `mountRangeKeyboards(figure, table)`。在音域表里用 `data-range-main` 标记音域单元格（如 C4–C7），用 `data-range-high` 标记高端极限音。低音扩展写在该行的 `data-range-low`，空弦通过 `data-range-open` 标记（如 G3 · D4 · A4 · E5）。键盘使用实际发声音高。
 
 **谱键对照图**把五线谱与钢琴键盘画在同一个坐标系里，让符头中心纵向对齐对应琴键中心。第三章「全音列的谱键对照」是静态样板，大谱表和键盘在窄屏一起滚动。基础音列示例只画自然音。讲音阶、音程或和弦时，按需要标出对应的白键或黑键，琴键轮廓继续复用 `content/shared/formats/piano.svg`。
+
+**共用谱表音域图**用静态大谱表统一纵向音高，每件乐器占一列。实线连接参考音域的两端，虚线与空心符头标延伸，圆点标空弦，断档留空。图内以实际音高比较乐器，若要比较分谱，则给书写音另列一栏。样板见[木管音域](./content/books/orchestration/orchestration-3.html#woodwind-vertical-ranges)，图下的键盘可单独查找连续半音。
+
+[配器法乐器音域总览](./content/books/orchestration/instrument-ranges.html)的三种图以本页音域表的 `data-range-main`、`data-range-low`、`data-range-high`、`data-range-gap` 和 `data-range-open` 为数据源。没有固定音域的条目用 `data-no-range`。常用乐器沿用各章的参照范围，变形乐器和民乐补充数据按所注明的型号、定弦和记谱换算。[维也纳交响音库乐器手册](https://www.vsl.co.at/academy/) · [香港中乐团乐器音域及编制表](https://www.hkco.org/uploads/docs/682542ced6d771.pdf) · [古典吉他音域](https://www.yamaha.com/en/musical_instrument_guide/classical_guitar/play/play003.html) · [曼多林型号规格](https://www.eastmanguitars.com/mandolin_a_style) · [音乐会钦巴隆](https://www.cimbalom.net/en/pages/about-cimbalom/)
 
 批量生成两音对照时，可复用 `content/shared/formats/piano.js` 的 `pianoMarkup(start, end, octaves)`。两个位置用距键盘第一个 C 的半音数填写，C 为 0。第四章的局部对照和一至十二度图鉴都使用这套键盘。为每张图保留可见的音名和音程说明。
 

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第一章 绪论｜曲式学基础教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./form-analysis-1.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">曲式学基础教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第一章 绪论</h1>
+      <p class="intro">一首曲子在开头交代了什么，后来发生了什么，结尾又怎么回应开头？曲式分析从这三件事入手，把听到的变化同谱上的材料、终止与音响联系起来。</p>
+
+      <section aria-labelledby="form-concept">
+        <h2 id="form-concept">曲式的概念</h2>
+        <p><strong>曲式</strong>是音乐作品的结构形式。它包括作品由哪些部分组成、这些部分按什么次序出现，以及它们怎样相互承接、对比或呼应。<strong>曲式学</strong>研究这些组织方式及其规律。作品各有自己的细节，反复出现的结构关系才归纳成不同的曲式类型。</p>
+        <p>曲式是在时间里形成的。旋律刚出现时，它只是开头的一段音乐。经过中间的对比，同样的旋律再次出现，就有了回到开头的意义。听者记住先前的材料，通过后来发生的事理解整个结构。</p>
+        <div class="music-demo" id="form-opening-return">
+          <div class="music-demo-toolbar">
+            <h3>开头材料的呈示、对比与回归</h3>
+            <button type="button" aria-pressed="true" data-analysis-whole>全曲</button>
+          </div>
+          <div class="timeline-frame" data-analysis-timeline style="--score-timeline-unit-min: 1.25rem"></div>
+          <dl class="analysis-description" aria-live="polite">
+            <dt data-analysis-section>全曲</dt>
+            <dd data-analysis-description>A 呈示、B 对比、A′ 回归</dd>
+          </dl>
+          <p class="music-demo-cue analysis-status" data-analysis-status role="status"></p>
+          <figure data-analysis-score aria-label="十二小节钢琴教学例，三段各四小节"></figure>
+        </div>
+        <p>全曲从短短长的题头出发，中间改变材料，随后又回到开头。第 4 小节停在 C 大调的属和弦，第 12 小节则由属和弦解决到主和弦。两处都结束了一个四小节单位，只有后一处完成了全曲的收束。</p>
+      </section>
+
+      <section aria-labelledby="form-content">
+        <h2 id="form-content">内容与形式</h2>
+        <p>旋律、节奏、和声、音色是音乐的表现手段，曲式组织这些手段在时间中的出现。一段渐渐积累的紧张感，可以借和声推进、音区抬高或织体加密形成。开头材料在这样的过程中再现，便可能获得和初次出现时不同的意味。</p>
+        <p>同一个题材可以写成有分场的舞剧音乐，也可以写成连续发展的器乐作品。同一种曲式也可以表现很不相同的情绪。标题和模仿性的音响可以提供联想，段落怎样发展、作品形成怎样的张力和情绪，仍要从音乐的具体写法理解。选择形式时，表达需要与材料自身能够怎样发展都需要考虑。</p>
+      </section>
+
+      <section aria-labelledby="form-style">
+        <h2 id="form-style">曲式与风格</h2>
+        <p>风格来自一个时代、民族、地区或流派中反复出现的音乐手法。风格影响常用的句长、调性安排、织体和收束方式。例如古二部曲式形成于复调兴盛时期，古典时期的主调音乐则常用对称的乐句组织乐段。某种结构在一种风格里很典型，在另一种风格里可能发生变化。</p>
+        <table class="lesson-table">
+          <caption>风格影响的结构判断</caption>
+          <thead><tr><th scope="col">判断依据</th><th scope="col">代表性写法</th><th scope="col">对分析的影响</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">句长与对称</th><td>十八世纪主调音乐常见 4＋4 或 8＋8 的方整句法。浪漫时期常可见扩展或缩减。</td><td>句长提供线索，前后句的终止和材料关系仍须分别确认。</td></tr>
+            <tr><th scope="row">调性布局</th><td>十八世纪形成的调性安排在十九世纪得到继承，转调范围和返回主调的路线也更加多样。</td><td>局部出现变化音、建立新的调中心、回到主调，三者在结构上的分量不同。</td></tr>
+            <tr><th scope="row">段落收束</th><td>古典风格常凭和声终止划分段落，如终止四六和弦到属和弦可以形成半终止。有些现代作品通过节奏停顿、音区或音响织体的转换形成边界。</td><td>判断边界时，先确定哪一种手段承担了收束或转换的功能。</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="form-traditions">
+        <h2 id="form-traditions">西方传统曲式、现代音乐与中国传统音乐</h2>
+        <p>通常所学的西方传统曲式，主要从古典至浪漫时期的作品中归纳。清楚呈示材料、安排重复与对比、平衡各部分以及处理连接与过渡，这些组织问题仍会出现在二十世纪以来的音乐中。有些作品继续使用传统形式，有些作品则让节奏、音色或织体承担过去常由调性和和声承担的结构作用。</p>
+        <p>分析中国传统音乐时，从作品自身的材料组织、段落衔接和演出传统出发。例如中国传统戏曲中的板式变化，可以从节拍、速度以及同一腔调怎样反复和变化来理解。西方曲式分析提供了比较的参照，也让不同传统各自采用的组织手段更清楚。</p>
+      </section>
+
+      <section aria-labelledby="form-genre">
+        <h2 id="form-genre">曲式与体裁</h2>
+        <p><strong>曲式</strong>说明作品内部怎样组织。<strong>体裁</strong>说明作品属于怎样的艺术类型，可涉及演出方式、篇幅和乐章关系，也可由典型节奏、速度和音乐性格来辨认。这些是体裁的不同依据，可以同时成立。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">判断维度</th><th scope="col">体裁例子</th><th scope="col">能够说明什么</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">演出方式</th><td>独唱曲、重奏曲</td><td>辨认由谁、以怎样的编制表演。</td></tr>
+            <tr><th scope="row">规模与整体安排</th><td>组曲、大合唱</td><td>理解多个部分或乐章怎样构成一部作品，以及所需的演出编制。</td></tr>
+            <tr><th scope="row">音乐性格</th><td>葬礼进行曲、练习曲</td><td>缓慢而沉重的步伐或持续的技巧性音型，也可成为其他体裁中某一段落的特征。</td></tr>
+          </tbody>
+        </table>
+        <p>体裁和曲式常有习惯性的搭配。例如小步舞曲常采用三部曲式，但三部曲式也可以用来写别的体裁。<strong>奏鸣曲</strong>作为体裁，通常指一部器乐套曲。<strong>奏鸣曲式</strong>指乐章内部的一种结构，常用于古典奏鸣曲的首乐章，也可出现在交响曲等其他体裁的乐章中。「回旋曲」「变奏曲」还可直接用作作品名，名称同时提示了主要的组织手法。</p>
+      </section>
+
+      <section aria-labelledby="form-techniques">
+        <h2 id="form-techniques">曲式与作曲技术</h2>
+        <p>段落的功能来自音乐的写法。分析时可以把旋律、和声、复调与配器放到同一条时间线上，看哪些变化共同划出了边界，哪些变化跨过边界、维持了连贯。</p>
+        <ul>
+          <li><strong>旋律与节奏。</strong> 题头的节奏和音程轮廓便于辨认，反复、改变或回归都可以据此追踪。短曲中的 A′ 保留题头，改写结尾。</li>
+          <li><strong>调式、调性与和声。</strong> 终止给一个部分不同程度的收束，主调、转调与回归组织更大的进程。短曲开头停留于属和弦，末尾回到主和弦。</li>
+          <li><strong>复调。</strong> 模仿能延续同一材料，主题与对题的交错能改变声部重心。在赋格等作品中，主题分次进入本身就参与组织段落。</li>
+          <li><strong>织体、音色与配器。</strong> 同一旋律转交另一乐器，可以保持材料连续。新织体、力度和音区同时出现时，往往使段落对比更明显。</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="form-method">
+        <h2 id="form-method">曲式分析的步骤</h2>
+        <p><a href="#form-opening-return">本章的十二小节谱例</a>可以分三步分析。三组小节先用编号定位，字母由材料之间的关系得出。</p>
+        <ol>
+          <li><strong>从材料找到变化点。</strong> 第 5 小节开始改用较均匀的四分音符，第 9 小节重新出现短短长的题头。这两个位置是候选的分界。</li>
+          <li><strong>用收束确认分界和功能。</strong> 第 4 小节在 C 大调的属和弦上半终止，为下一段留下空间。第 8 小节在 a 小调由属到主，收住中间的材料。第 12 小节同样由属到主，此时回到了全曲的主调，因而能作全曲结尾。</li>
+          <li><strong>用材料的关系标记结构。</strong> 第 1–4 小节是 A，第 5–8 小节有新节奏和不同的调性，记作 B。第 9–11 小节重现第 1–3 小节，只有最后一小节为主调收束而改写，所以记作 A′。A–B–A′ 由此概括了呈示、对比和回归。</li>
+        </ol>
+        <p>同一曲式的作品可以比较句长、调性或再现方式。已有的分析也可以用乐谱和声音复核。若两种归类各有依据，可以说明各自强调的层次和能够解释的现象。把分析与实际演奏和写作联系起来，才能理解同一组织原则如何产生不同的音乐。</p>
+      </section>
+    </main>
+  </body>
+</html>

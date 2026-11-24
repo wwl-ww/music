@@ -1,10 +1,44 @@
-export function mountScoreSections(viewport, api, { stopPlayback, isPlaying, onBarChange }) {
+export function mountScoreSections(viewport, surface, api, { stopPlayback, isPlaying, onBarChange }) {
   const marks = document.createElement('div');
   marks.className = 'score-section-marks';
   marks.setAttribute('aria-hidden', 'true');
-  viewport.append(marks);
+  surface.append(marks);
   let range = null;
   let currentBar = null;
+  let viewAnchor;
+  let alignedView;
+
+  function boundsFor(number) {
+    return api.boundsLookup?.findMasterBarByIndex(number - 1)?.lineAlignedBounds;
+  }
+
+  function revealBar(number, align = false) {
+    const box = boundsFor(number);
+    if (!box) return;
+    if (align || box.y < viewport.scrollTop || box.y + box.h > viewport.scrollTop + viewport.clientHeight) {
+      const topSpace = api.score?.masterBars[number - 1]?.section ? 26 : 12;
+      viewport.scrollTop = Math.max(0, box.y - topSpace);
+    }
+    const entry = range?.entry?.bar === number && entryBeat(range.entry);
+    const entryX = entry && api.boundsLookup.findBeat(entry)?.onNotesX;
+    if (entryX && entryX > box.x + viewport.clientWidth - 24) {
+      viewport.scrollLeft = Math.max(0, entryX - viewport.clientWidth / 2);
+    } else if (align || box.x < viewport.scrollLeft || box.x + box.w > viewport.scrollLeft + viewport.clientWidth) {
+      viewport.scrollLeft = Math.max(0, box.x - 12);
+    }
+    if (align) alignedView = { bar: number, top: viewport.scrollTop, left: viewport.scrollLeft };
+  }
+
+  function visibleBar() {
+    const { scrollTop, scrollLeft, clientHeight, clientWidth } = viewport;
+    if (alignedView?.top === scrollTop && alignedView.left === scrollLeft) return alignedView.bar;
+    const visible = api.score?.masterBars.find(({ index }) => {
+      const box = boundsFor(index + 1);
+      return box && box.y + box.h > scrollTop + 16 && box.x + box.w > scrollLeft + 16
+        && box.y < scrollTop + clientHeight && box.x < scrollLeft + clientWidth;
+    });
+    return visible && visible.index + 1;
+  }
 
   function entryBeat(entry) {
     if (!entry) return undefined;
@@ -15,15 +49,17 @@ export function mountScoreSections(viewport, api, { stopPlayback, isPlaying, onB
   function paint(reveal = false) {
     marks.replaceChildren();
     if (!range) {
-      if (reveal) viewport.scrollTo(0, 0);
+      if (reveal) {
+        viewport.scrollTo(0, 0);
+        alignedView = undefined;
+      }
       return;
     }
     const { first, last, entry } = range;
     const beat = entryBeat(entry);
     const beatBounds = beat && api.boundsLookup?.findBeat(beat);
     for (let number = first; number <= last; number++) {
-      const bounds = api.boundsLookup?.findMasterBarByIndex(number - 1);
-      const box = bounds?.lineAlignedBounds;
+      const box = boundsFor(number);
       if (!box) continue;
       const mark = document.createElement('span');
       mark.className = 'score-section-mark';
@@ -33,14 +69,16 @@ export function mountScoreSections(viewport, api, { stopPlayback, isPlaying, onB
       mark.style.width = Math.max(0, box.x + box.w - left) + 'px';
       mark.style.height = box.h + 'px';
       marks.append(mark);
-      if (reveal && number === first) {
-        viewport.scrollTop = bounds.staffSystemBounds?.realBounds.y ?? bounds.visualBounds.y;
-        viewport.scrollLeft = Math.max(0, box.x - 12);
-      }
     }
+    if (reveal) revealBar(first, true);
   }
 
-  api.postRenderFinished.on(() => paint());
+  api.postRenderFinished.on(() => {
+    paint();
+    if (viewAnchor == null) return;
+    revealBar(currentBar ?? viewAnchor, true);
+    viewAnchor = undefined;
+  });
   api.playerPositionChanged.on(({ currentTick, isSeek }) => {
     if (!isPlaying() || isSeek) return;
     const playbackRange = api.playbackRange;
@@ -50,18 +88,30 @@ export function mountScoreSections(viewport, api, { stopPlayback, isPlaying, onB
     const number = lookup.masterBar.index + 1;
     if (number === currentBar) return;
     currentBar = number;
-    const box = api.boundsLookup?.findMasterBarByIndex(number - 1)?.lineAlignedBounds;
-    if (box && (box.y < viewport.scrollTop || box.y + box.h > viewport.scrollTop + viewport.clientHeight)) {
-      viewport.scrollTop = Math.max(0, box.y - 18);
-    }
+    revealBar(number);
     onBarChange?.(number);
+  });
+  api.playedBeatChanged.on(beat => {
+    if (!isPlaying() || viewport.scrollWidth <= viewport.clientWidth) return;
+    const x = api.boundsLookup?.findBeat(beat)?.onNotesX;
+    if (x != null && (x < viewport.scrollLeft || x > viewport.scrollLeft + viewport.clientWidth - 18)) {
+      viewport.scrollLeft = Math.max(0, x - 24);
+    }
   });
 
   return {
     select(first, last, entry) {
       if (isPlaying()) stopPlayback();
       range = first == null ? null : { first: entry?.bar ?? first, last, entry };
+      viewAnchor = range && !boundsFor(range.first) ? range.first : undefined;
       paint(true);
+    },
+    preserveView(change) {
+      const anchor = viewAnchor ?? currentBar ?? visibleBar() ?? range?.first ?? 1;
+      const width = surface.clientWidth;
+      change();
+      if (width === surface.clientWidth) revealBar(anchor, true);
+      else viewAnchor = anchor;
     },
     preparePlayback() {
       if (!range) {

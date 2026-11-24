@@ -1,5 +1,9 @@
 import { mountScore } from '../../shared/formats/score.js';
 import { mountScoreComparison } from '../../shared/formats/score-comparison.js';
+import { mountScoreReader } from '../../shared/formats/score-reader.js';
+
+const orchestraScore = document.querySelector('.orchestra-score');
+mountScoreReader(document.getElementById('orchestra-layout-caption'), orchestraScore);
 
 const timbre = document.querySelector('#string-timbres');
 const instrument = timbre.querySelector('select');

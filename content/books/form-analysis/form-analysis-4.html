@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第四章 乐段（三）｜曲式学基础教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./form-analysis-4.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">曲式学基础教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第四章 乐段（三）</h1>
+      <p class="intro">一个乐段可以有三句、四句，也可以从开头一气推进到终止。两个近似的乐段还可以结成更大的单位。判断时先找收束，再辨认材料关系，最后确认各条边界所在的层级。</p>
+
+      <section aria-labelledby="three-phrase-period">
+        <h2 id="three-phrase-period">三句乐段</h2>
+        <p>三句乐段有三个可辨认的乐句。三句的排列天然有奇数句的不对称性，重复能够把其中两句联系起来，再由第三句延伸、对比或再现，形成听觉上的平衡。句长也可以相同或不同。</p>
+        <table class="lesson-table">
+          <caption>三句乐段的材料关系</caption>
+          <thead><tr><th scope="col">示例</th><th scope="col">辨认依据</th><th scope="col">常见的组织方式</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">a a′ a″</th><td>三句都可认出同一主要材料。</td><td>改变句尾、调性、旋律方向或力度，使三句分别承担展开与收束。</td></tr>
+            <tr><th scope="row">a a b</th><td>第二句重复第一句，第三句改变写法。</td><td>先形成稳定预期，第三句延伸或加入对比。变化可能来自节奏加密。</td></tr>
+            <tr><th scope="row">a b b</th><td>第二句延伸或对比第一句，第三句重复第二句。</td><td>后两句形成一组。八度、长度或高潮位置可以变化。</td></tr>
+            <tr><th scope="row">a b c</th><td>三句都没有在全句层面重复另一句。</td><td>三句可以相继延伸或对比。局部节奏仍可呼应，整句各异的情况相对少见。</td></tr>
+            <tr><th scope="row">a b a</th><td>第三句再现第一句的主要材料。</td><td>两端相互呼应，中间形成变化。再现可以保留旋律而改变伴奏和声。</td></tr>
+          </tbody>
+        </table>
+        <p>重复关系由一整句的材料判断。乐句的起音时值改变，后续的节奏就可能在小节内重新错开，重复的材料依然可辨。相同的句尾则只能证明局部呼应。若各句因为加拍、延长终止而逐渐增长，这种增长还可能推动高潮。</p>
+        <div class="music-demo" id="three-phrase-period-score">
+          <div class="music-demo-toolbar">
+            <h3>重复后延伸的三句乐段</h3>
+            <button type="button" aria-pressed="true" data-analysis-whole>全段</button>
+          </div>
+          <div class="timeline-frame" data-analysis-timeline style="--score-timeline-unit-min: 1.25rem"></div>
+          <dl class="analysis-description" aria-live="polite">
+            <dt data-analysis-section>全段</dt>
+            <dd data-analysis-description>第一、第二句重复题头，第三句加密节奏并在主调收束。</dd>
+          </dl>
+          <p class="music-demo-cue analysis-status" data-analysis-status role="status"></p>
+          <figure data-analysis-score aria-label="十二小节三句乐段，前两句变尾重复，第三句延伸"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="four-phrase-period">
+        <h2 id="four-phrase-period">四句乐段</h2>
+        <p>四句乐段由四个可辨认的乐句构成，常见于歌曲，也见于器乐。四句允许在更多位置安排重复。可以连续重复，如 <span lang="en">a a a a</span>、<span lang="en">a a a b</span>，可以成对重复，如 <span lang="en">a a b b</span>、<span lang="en">a b a b</span>，也可以隔句或隔两句回归，如 <span lang="en">a b b a</span>、<span lang="en">a b a c</span>、<span lang="en">a b c a</span>。四句各不相同的情形较少，第四句仍可借用第一句的一部分。五句及以上的乐段称为多句乐段，在声乐中较常见。</p>
+        <h3>起承转合</h3>
+        <p>起承转合描述四句在整个乐段里承担的功能。<strong>起</strong>呈示题头，<strong>承</strong>重复或延伸已出现的材料，<strong>转</strong>带来变化，<strong>合</strong>收束全段，常回到开头的材料。<span lang="en">a a b a</span> 是一种典型布局，变化较小的第三句也可记作 <span lang="en">a′</span>。判断「转」要结合第三句对音区、节奏、材料或落音的改变。第四句可以只回到前句的局部，还可以延长时值，加强句末收束。</p>
+        <p>起承转合也可以从各句的落音听见。例如徵调式四句民歌可依次落在商、徵、羽、徵。第二句已经落在调式主音徵，第三句转向较不稳定的羽，第四句再落回徵，给全段最后的收束。</p>
+        <div class="music-demo" id="four-phrase-period-score">
+          <div class="music-demo-toolbar">
+            <h3>起承转合的四句乐段</h3>
+            <button type="button" aria-pressed="true" data-analysis-whole>全段</button>
+          </div>
+          <div class="timeline-frame" data-analysis-timeline style="--score-timeline-unit-min: 1.25rem"></div>
+          <dl class="analysis-description" aria-live="polite">
+            <dt data-analysis-section>全段</dt>
+            <dd data-analysis-description>每句两小节，第三句变化，第四句回归并收束。</dd>
+          </dl>
+          <p class="music-demo-cue analysis-status" data-analysis-status role="status"></p>
+          <figure data-analysis-score aria-label="八小节四句乐段，依次标示起、承、转、合"></figure>
+        </div>
+        <table class="lesson-table">
+          <caption>《梁祝》主题的材料与落音</caption>
+          <thead><tr><th scope="col">乐句</th><th scope="col">长度与材料关系</th><th scope="col">落音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">起</th><td>2 小节，呈示旋律。</td><td>商</td></tr>
+            <tr><th scope="row">承</th><td>2 小节，接续并延伸第一句。</td><td>徵</td></tr>
+            <tr><th scope="row">转</th><td>2 小节，曲调与前两句形成小幅对比。</td><td>羽</td></tr>
+            <tr><th scope="row">合</th><td>3 小节，末尾借第二句后半，将这部分时值拉长一倍，增加一小节。</td><td>徵</td></tr>
+          </tbody>
+        </table>
+        <p>第四句在材料上呼应的是第二句的后半，在调式上也同第二句一样归到徵。材料的回顾与落音的回归是两项可以分别确认的证据。</p>
+      </section>
+
+      <section aria-labelledby="continuous-period">
+        <h2 id="continuous-period">不分句乐段</h2>
+        <p>不分句乐段是从呈示到终止连续展开的乐段。内部可以辨认出动机、乐节和较大的组合，但这些部分在终止、呼吸和材料作用上仍相互依存，难以分成两个或更多可独立辨认的乐句。全段末尾有明确终止，也可以在转调后终止。</p>
+        <p>常见写法是很早就开始发展。开头的乐节可以立即重复，随后移位、模进、扩充或紧缩。将开头的节奏型截成越来越短的片段，可以逐步淡化原动机，使推进连成一气。也可以让一个动机退场，由另一个动机接管强拍和终止。这种陈述后立即发展的写法具有持续的动力，常用于奏鸣曲式的主题。</p>
+        <figure id="continuous-period-score" aria-label="八小节不分句乐段，前六小节围绕主功能连续推进，最后两小节作全段唯一明确终止"></figure>
+        <table class="lesson-table">
+          <caption>连续推进中的内部组合</caption>
+          <thead><tr><th scope="col">小节范围</th><th scope="col">材料与和声作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">1–2</th><td>呈示并立即重复短动机，低音持续围绕主音。</td></tr>
+            <tr><th scope="row">3–6</th><td>动机向上推进，节奏在第 6 小节加密，接入终止进行。</td></tr>
+            <tr><th scope="row">7–8</th><td>下属方向经过属和弦解决到主和弦，结束全段。</td></tr>
+          </tbody>
+        </table>
+        <aside class="lesson-callout">
+          <h3>题头重现的两个结构层级</h3>
+          <ul>
+            <li><strong>不分句乐段。</strong> 上例第 2 小节就重提题头。此前低音持续在主音上，句子仍在推进，随后节奏加密，三个内部组合 2＋4＋2 一起走向第 8 小节的终止。</li>
+            <li><strong>两句重复型乐段。</strong> 第三章的<a href="./form-analysis-3.html#period-statement-types">重复型谱例</a>在第 4 小节以半终止划出上句边界。第 5 小节再用同一题头，承担下句的开始。</li>
+          </ul>
+        </aside>
+        <p>和声可以在主音持续低音上由内声部走出主、下属、属、主的功能进程，也可以通过半音低音把许多表层和弦串成一条由主向属的路线。属和弦还可以先作阻碍进行，再经下属方向回到终止。分析时把局部和声变化与全段唯一的终止分开。</p>
+        <table class="lesson-table">
+          <caption>江定仙《赶场》的换拍与连续推进</caption>
+          <thead><tr><th scope="col">位置</th><th scope="col">进行方式</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">第 1–5 小节</th><td>同一动机接连重复，从羽音开始。第 5 小节由 <span class="time-signature" role="img" aria-label="四三拍"><span aria-hidden="true">3</span><span aria-hidden="true">4</span></span> 改为 <span class="time-signature" role="img" aria-label="四二拍"><span aria-hidden="true">2</span><span aria-hidden="true">4</span></span>，节奏缩短并简化。</td></tr>
+            <tr><th scope="row">第 7 小节</th><td>切分改变重音位置，把旋律继续推向句尾。</td></tr>
+            <tr><th scope="row">第 9–10 小节</th><td>回到 <span class="time-signature" role="img" aria-label="四三拍"><span aria-hidden="true">3</span><span aria-hidden="true">4</span></span> 后，由收束音型落到宫音，形成全段的终止。</td></tr>
+          </tbody>
+        </table>
+        <p>换拍与切分使同一动机的推进发生变化，调式落音则把羽起、宫终的全过程连成一个乐段。</p>
+        <p>有些八小节主题内部没有停顿、材料也少变化，整体像一条很长的乐句。若它已有完整乐思、明确终止，且能在变奏结构中独立承担主题功能，也可按不分句乐段理解。</p>
+      </section>
+
+      <section aria-labelledby="compound-period">
+        <h2 id="compound-period">复乐段</h2>
+        <p>复乐段由两个相似的乐段组成，分别称为前乐段、后乐段。各乐段常各有上句和下句。后乐段的上句重复前乐段的上句，可以原样重复，也可以变化或只重复句首。若每个乐段的上下句本身也是重复关系，四句便都出自同一材料。两个乐段末尾的终止在调性或稳定程度上有差别，合起来形成一个完整的进程。</p>
+        <table class="lesson-table">
+          <caption>教学例的乐段与乐句层级</caption>
+          <thead><tr><th scope="col">乐段</th><th scope="col">上句</th><th scope="col">下句</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">A · 前乐段</th><td>1–4 小节，C 大调半终止</td><td>5–8 小节，转到 G 大调终止</td></tr>
+            <tr><th scope="row">A′ · 后乐段</th><td>9–12 小节，原样重复前乐段上句</td><td>13–16 小节，改写后半，回到 C 大调完全终止</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="compound-period-score">
+          <div class="music-demo-toolbar">
+            <h3>前后乐段的重复与终止变化</h3>
+            <button type="button" aria-pressed="true" data-analysis-whole>全段</button>
+          </div>
+          <div class="timeline-frame" data-analysis-timeline style="--score-timeline-unit-min: 1.25rem"></div>
+          <dl class="analysis-description" aria-live="polite">
+            <dt data-analysis-section>全段</dt>
+            <dd data-analysis-description>两个相似的八小节乐段，分别在 G 大调与 C 大调终止。</dd>
+          </dl>
+          <p class="music-demo-cue analysis-status" data-analysis-status role="status"></p>
+          <figure data-analysis-score aria-label="十六小节复乐段，按四个乐句定位，前后乐段各含两句"></figure>
+        </div>
+        <table class="lesson-table">
+          <caption>相邻结构的判断依据</caption>
+          <thead><tr><th scope="col">结构</th><th scope="col">材料关系</th><th scope="col">收束关系</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">复乐段</th><td>后乐段的上句重复前乐段的上句。</td><td>前、后乐段终止有差别，合成更大的进程。</td></tr>
+            <tr><th scope="row">乐段重复</th><td>同一个乐段再次出现，可以有表面的变化。</td><td>两次陈述的终止保持相同功能。</td></tr>
+            <tr><th scope="row">二段曲式</th><td>两个部分各有自己的结构作用，第二部分通常发展或对比第一部分。</td><td>各段的终止结合材料与功能判断。</td></tr>
+          </tbody>
+        </table>
+        <p>复乐段的句界有时很清楚，有时一个乐段内部依靠相同节奏和织体连成一气。连续的三连音也能形成分句，识别线索来自相同句首的重复与和声转折。两个乐段的终止也可以共享一个旋律结尾，因为同一组音能在不同调性中获得不同的和声功能。转调复乐段可以由前乐段在主调结束，后乐段在新调结束。</p>
+      </section>
+    </main>
+  </body>
+</html>

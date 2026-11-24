@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第八章 多段结构｜曲式学基础教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./form-analysis-8.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">曲式学基础教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第八章 多段结构</h1>
+      <p class="intro">几段音乐可以一段接一段地换材料，也可以让其中一个主题回来。关键是分清每段如何站住、前后怎样连起来，以及回来的材料在全曲里承担什么作用。</p>
+
+      <section aria-labelledby="multi-section-concept">
+        <h2 id="multi-section-concept">多段结构的判断依据</h2>
+        <p><strong>多段结构</strong>以乐段为基本单位，包括末段没有再现开头材料的三段结构，以及由四个或更多乐段构成的结构。后者可以带再现，也可以连续使用新材料。每段的材料关系与段落数可以有多种安排，因此用「多段结构」统称。</p>
+        <p>多段结构可以独立成曲，也可以构成更大曲式的一个乐部。独立成曲时，中间各段常换调，结尾常回到起始的主音。同一主音可以换用大调或小调，主题是否再现仍由段落的主要材料决定。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">材料关系的示例</th><th scope="col">结构听感与分析依据</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">A B C</th><td>第三段有自己的主要材料。它可以承接 B 的线索，也可以回到 A 的调，三段仍各有独立的陈述和收束。</td></tr>
+            <tr><th scope="row">A B A′</th><td>最后一段让开头的主要材料在段落层级回来，B 与两端构成对比，形成有再现的三段式。</td></tr>
+            <tr><th scope="row">A B C A</th><td>中间可以有多个独立段落，末端回到 A，带来首尾呼应。A 若在不同插段之间规律地多次出现，也可能表现出回旋的组织原则。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="multi-section-tonic-return">
+          <div class="music-demo-toolbar">
+            <h3>主调回归与主题再现</h3>
+            <div class="score-choice-buttons" data-writing-choices role="group" aria-label="选择末段材料"></div>
+          </div>
+          <output class="music-demo-cue" data-writing-description></output>
+          <figure data-writing-score aria-label="两首只改变末段材料的十二小节钢琴短曲"></figure>
+        </div>
+        <p>两个版本的调性路线都是 C 大调 → G 大调 → C 大调，末段都在主调上收束。新材料版的末段由连续的八分音符起步。再现版恢复第一段的短短长题头和下一小节，改写句尾。同样的调性路线可以承载不同的段落关系。</p>
+        <aside class="lesson-callout"><p><strong>段落数、调性路线、主题关系分别判断。</strong> 找到各段的边界后，听清下一段的主要材料从哪里来。取自前段的一小截音型可以起连接作用，整段沿用前段的主要材料才形成段落层级的回归。</p></aside>
+      </section>
+
+      <section aria-labelledby="delphi-section">
+        <h2 id="delphi-section">《德尔菲舞女》的三个乐段</h2>
+        <p>德彪西这首前奏曲以降 B 大调开始，经属调 F 大调回到主调。A、B、C 的基本篇幅各为十小节，最后的主和弦延长一小节。主题依次变化，前段的音调和和弦形态还会进入后段，维持全曲的连贯。</p>
+        <table class="lesson-table">
+          <caption>《德尔菲舞女》的材料衔接与调性</caption>
+          <thead><tr><th scope="col">段落</th><th scope="col">主要材料与织体</th><th scope="col">终止与承接</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">A · 1–10 小节</th><td>缓慢的重步节奏与声部反向进行建立性格。旋律从内声移到上方，第二句强化重复，抬高音区并加入切分，和声骨架保持。</td><td>两句从降 B 大调出发，句末指向 F。反复显出的增三和弦在全曲末段得到呼应。</td></tr>
+            <tr><th scope="row">B · 11–20 小节</th><td>前四小节在 F 低音上展开，两个乐节分别经过降 B、降 E，旋律带五声性。级进的平行三和弦像一条与旋律反向的线。末三小节把 A 段第 4 小节的音调拉长。</td><td>加二度和弦与半音下行的平行三和弦逐步落到 F 大调主和弦。局部和弦主要提供色彩，段末才确认属调。</td></tr>
+            <tr><th scope="row">C · 21–31 小节</th><td>开头接续 B 的尾部音调向上发展。平行大三和弦与旋律同向，旋律成为和弦三音。低音出现降 B 后，才进入明确的收束。</td><td>低音反复交替属音与主音，上方用半音级进的增三和弦、升五音的属和弦与九度音延缓清晰的主和弦，最后稳定在降 B。</td></tr>
+          </tbody>
+        </table>
+        <p>第 20 小节的 F 大调主和弦完成 B 的收束。C 虽接着 B 的尾部音调上行，却改用同向平行的和弦，并最终在降 B 大调另成一段。材料承接与段落分界可以同时成立。B、C 段内部也都有材料变化，前一部分缺少乐句终止，因而还要结合后半部的收束来判断层级。</p>
+      </section>
+
+      <section aria-labelledby="friska-section">
+        <h2 id="friska-section">《匈牙利狂想曲》第二首快板的多段连接</h2>
+        <p>李斯特以慢板拉撒（Lassan）和快板富力斯卡（Friska）构成全曲的两个乐部。富力斯卡自身又是多段结构，依次为 <strong>A → B → C → D → E → F → G → F → H → 尾声</strong>。F 的第二次出现形成快板的主要高潮，尾声则变奏 G 的材料。这里的字母表示快板内部的乐段，整部狂想曲的两部划分依据是慢板与快板之间的速度、题材和组织差别。</p>
+        <table class="lesson-table">
+          <caption>快板的调性路线与主题回归</caption>
+          <thead><tr><th scope="col">范围</th><th scope="col">调性与材料变化</th><th scope="col">结构作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">A、B</th><td>从升 f 小调起始。</td><td>建立快板的舞曲性格与主音。</td></tr>
+            <tr><th scope="row">C、D、E</th><td>进入升 F 大调，后移向属调升 C 大调。C 的开头动机随后进入 D 段，也在 F 的主题和两次 F 的连接部中出现。</td><td>C 起处形成第一处高潮，后续新段借用它的局部材料。</td></tr>
+            <tr><th scope="row">第一次 F、G</th><td>回到升 F 大调。G 后部移到升 C 大调重复。</td><td>第一次 F 形成第二处高潮。连接部综合 C 段连接部与 D 段的材料。</td></tr>
+            <tr><th scope="row">第二次 F、H、尾声</th><td>F 在 A 大调重现，随后回归升 F，经过小调，以同主音大调结束。H 引出装饰乐段，尾声用 G 的变奏。</td><td>第二次 F 形成主要高潮。插段、装饰与熟悉材料一起通向全曲终止。</td></tr>
+          </tbody>
+        </table>
+        <p>各主题保有明快、周期性强的舞曲节奏，常见四加四或八加八。重复可以发生在动机、乐句和整个乐段，可以原样，也可以变奏或移调。和声以主、属为骨架，偶用下属功能及强拍和弦外音。调性多成块移换，前后的速度、舞曲性格及近关系调性使大规模转换保持统一。</p>
+        <p>C 的题头多次出现，为 D、F 及连接部留下共同的线索。第二次 F 则带回已经建立的舞曲主题，在 A 大调形成新的高潮。两者占据的层级不同。连接部有时比主题更长，仍可通过它怎样导入下一主题来辨认结构作用。</p>
+      </section>
+    </main>
+  </body>
+</html>

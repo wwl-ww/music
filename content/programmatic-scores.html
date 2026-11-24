@@ -7,7 +7,7 @@
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="./shared/style.css">
     <link rel="stylesheet" href="./shared/themes.css">
-    <link rel="stylesheet" href="./shared/formats/formats.css">
+    <link rel="stylesheet" href="./shared/score-catalogue.css">
     <script src="./shared/themes.js"></script>
     <script type="module" src="./shared/score-catalogue.js"></script>
   </head>
@@ -33,22 +33,45 @@
       </div>
     </header>
     <main class="page-width score-directory">
-      <h1>程序谱</h1>
-      <p class="intro">按主题查找可切换音阶、和弦、奏法或演奏路线的谱例。</p>
-      <nav class="score-book-jumps" aria-label="跳到教材谱例">
-        <a href="#theory-programmatic">基本乐理</a>
-        <a href="#harmony-programmatic">和声学上册</a>
-        <a href="#harmony-lower-programmatic">和声学下册</a>
-        <a href="#counterpoint-programmatic">复调上篇</a>
-        <a href="#counterpoint-forms-programmatic">复调下篇</a>
-        <a href="#orchestration-programmatic">配器法</a>
-      </nav>
+      <header class="score-banner">
+        <div class="score-banner-copy">
+          <h1>程序谱</h1>
+          <p>按主题查找可切换音阶、和弦、奏法或演奏路线的谱例。</p>
+        </div>
+        <div class="score-banner-art" aria-hidden="true">
+          <span data-cover="theory"></span>
+          <span data-cover="harmony-upper"></span>
+          <span data-cover="counterpoint"></span>
+        </div>
+      </header>
+      <div class="score-index-layout">
+      <aside class="score-sidebar">
+        <h2>教材</h2>
+        <nav class="score-book-jumps" aria-label="跳到教材谱例">
+          <a href="#theory-programmatic" data-cover="theory">基本乐理</a>
+          <a href="#harmony-programmatic" data-cover="harmony-upper">和声学上册</a>
+          <a href="#harmony-lower-programmatic" data-cover="harmony-lower">和声学下册</a>
+          <a href="#counterpoint-programmatic" data-cover="counterpoint">复调</a>
+          <a href="#orchestration-programmatic" data-cover="orchestration">配器法</a>
+          <a href="#form-analysis-programmatic" data-cover="form-analysis">曲式学</a>
+          <a href="#songwriting-programmatic" data-cover="songwriting">歌曲写作</a>
+          <a href="#arrangement-programmatic" data-cover="arrangement" data-source-unit="篇">图解编曲</a>
+        </nav>
+      </aside>
+      <div class="score-index-results">
       <form class="score-filters" role="search" aria-label="查找程序谱" hidden>
-        <label>教材 <select name="book"><option value="">全部教材</option></select></label>
-        <label>谱例名称 <input type="search" name="query" placeholder="例如：音阶、赋格"></label>
+        <label class="score-book-select">教材 <select name="book"><option value="">全部教材</option></select></label>
+        <div class="score-query">
+          <label for="score-query">搜索谱例</label>
+          <div class="score-query-field">
+            <input id="score-query" type="search" name="query" placeholder="音阶、赋格、配器……">
+            <button type="button" class="score-query-clear" hidden>清除</button>
+          </div>
+        </div>
+        <p class="score-filter-count" role="status" hidden></p>
       </form>
       <p class="score-filter-empty" role="status" hidden>没有找到符合条件的谱例。</p>
-      <section class="score-book" aria-labelledby="theory-programmatic">
+      <section class="score-book" aria-labelledby="theory-programmatic" data-cover="theory">
       <h2 id="theory-programmatic" tabindex="-1"><a href="./books/music-theory/index.html">基本乐理教程</a></h2>
       <nav class="course-index" aria-label="基本乐理教程的程序谱">
         <section class="course-group" aria-labelledby="score-group-0">
@@ -106,9 +129,9 @@
         </section>
       </nav>
       </section>
-      <section class="score-book" aria-labelledby="harmony-programmatic">
+      <section class="score-book" aria-labelledby="harmony-programmatic" data-cover="harmony-upper">
       <h2 id="harmony-programmatic" tabindex="-1"><a href="./books/harmony-upper/index.html">和声学基础教程 · 上册</a></h2>
-      <nav class="course-index single-book-index" aria-label="和声学基础教程上册的程序谱">
+      <nav class="course-index" aria-label="和声学基础教程上册的程序谱">
         <section class="course-group" aria-labelledby="score-group-7">
           <h3 id="score-group-7">四部和声</h3>
           <ul>
@@ -284,7 +307,7 @@
         </section>
       </nav>
       </section>
-      <section class="score-book" aria-labelledby="harmony-lower-programmatic">
+      <section class="score-book" aria-labelledby="harmony-lower-programmatic" data-cover="harmony-lower">
       <h2 id="harmony-lower-programmatic" tabindex="-1"><a href="./books/harmony-lower/index.html">和声学基础教程 · 下册</a></h2>
       <nav class="course-index" aria-label="和声学基础教程下册的程序谱">
         <section class="course-group" aria-labelledby="lower-dominant-scores">
@@ -396,138 +419,142 @@
         </section>
       </nav>
       </section>
-      <section class="score-book" aria-labelledby="counterpoint-programmatic">
-      <h2 id="counterpoint-programmatic" tabindex="-1"><a href="./books/counterpoint/index.html">复调音乐基础教程 · 上篇</a></h2>
-      <nav class="course-index" aria-label="复调音乐基础教程上篇的程序谱">
-        <section class="course-group" aria-labelledby="counterpoint-writing-principles">
-          <h3 id="counterpoint-writing-principles">二声部对位与旋律变形</h3>
-          <ul>
-            <li><a href="./books/counterpoint/counterpoint-1.html#interval-contrast">同一旋律的八度、三度与反向写法</a></li>
-            <li><a href="./books/counterpoint/counterpoint-1.html#dissonance-contrast">不协和音的五种解决方式</a></li>
-            <li><a href="./books/counterpoint/counterpoint-1.html#rhythm-contrast">二声部的同步与繁简配置</a></li>
-            <li><a href="./books/counterpoint/counterpoint-1.html#phrase-contrast">同起同落与起落交错</a></li>
-            <li><a href="./books/counterpoint/counterpoint-1.html#czech-writing">舞曲的对位写作与声部分听</a></li>
-            <li><a href="./books/counterpoint/counterpoint-1.html#copper-writing">铜鼓舞风格曲调的对位与声部分听</a></li>
-            <li><a href="./books/counterpoint/counterpoint-2.html#melody-shapes">主题、歌唱线条与衬托线条</a></li>
-            <li><a href="./books/counterpoint/counterpoint-2.html#implied-lines">隐伏声部的合写与分听</a></li>
-            <li><a href="./books/counterpoint/counterpoint-2.html#melody-combinations">主题与衬托、两个主题的组合</a></li>
-            <li><a href="./books/counterpoint/counterpoint-2.html#melodic-roles">同一主题的四种对位</a></li>
-            <li><a href="./books/counterpoint/counterpoint-2.html#reed-writing">弱起与开头四小节</a></li>
-            <li><a href="./books/counterpoint/counterpoint-3.html#octave-fourth">单对位与复对位的换位对照</a></li>
-            <li><a href="./books/counterpoint/counterpoint-3.html#double-counterpoint">同一段对位的原位与两种换位</a></li>
-            <li><a href="./books/counterpoint/counterpoint-3.html#twelfth-sixth">十二度换位中的弱位六度与七度</a></li>
-            <li><a href="./books/counterpoint/counterpoint-3.html#double-writing">复对位写作示范</a></li>
-            <li><a href="./books/counterpoint/counterpoint-4.html#pentatonic-axes">同一五声旋律的五种轴</a></li>
-            <li><a href="./books/counterpoint/counterpoint-4.html#inversion-voices">单部倒影与两部倒影</a></li>
-            <li><a href="./books/counterpoint/counterpoint-4.html#melodic-transform">音高逆序与严格逆行</a></li>
-            <li><a href="./books/counterpoint/counterpoint-4.html#retrograde-voices">单部逆行与两部逆行</a></li>
-          </ul>
+      <section class="score-book" aria-labelledby="counterpoint-programmatic" data-cover="counterpoint">
+        <h2 id="counterpoint-programmatic" tabindex="-1"><a href="./books/counterpoint/index.html">复调音乐基础教程</a></h2>
+        <section class="score-book-part" aria-labelledby="counterpoint-writing-programmatic">
+          <h3 id="counterpoint-writing-programmatic">上篇</h3>
+          <div class="course-index">
+            <section class="course-group" aria-labelledby="counterpoint-writing-principles">
+              <h4 id="counterpoint-writing-principles">二声部对位与旋律变形</h4>
+              <ul>
+                <li><a href="./books/counterpoint/counterpoint-1.html#interval-contrast">同一旋律的八度、三度与反向写法</a></li>
+                <li><a href="./books/counterpoint/counterpoint-1.html#dissonance-contrast">不协和音的五种解决方式</a></li>
+                <li><a href="./books/counterpoint/counterpoint-1.html#rhythm-contrast">二声部的同步与繁简配置</a></li>
+                <li><a href="./books/counterpoint/counterpoint-1.html#phrase-contrast">同起同落与起落交错</a></li>
+                <li><a href="./books/counterpoint/counterpoint-1.html#czech-writing">舞曲的对位写作与声部分听</a></li>
+                <li><a href="./books/counterpoint/counterpoint-1.html#copper-writing">铜鼓舞风格曲调的对位与声部分听</a></li>
+                <li><a href="./books/counterpoint/counterpoint-2.html#melody-shapes">主题、歌唱线条与衬托线条</a></li>
+                <li><a href="./books/counterpoint/counterpoint-2.html#implied-lines">隐伏声部的合写与分听</a></li>
+                <li><a href="./books/counterpoint/counterpoint-2.html#melody-combinations">主题与衬托、两个主题的组合</a></li>
+                <li><a href="./books/counterpoint/counterpoint-2.html#melodic-roles">同一主题的四种对位</a></li>
+                <li><a href="./books/counterpoint/counterpoint-2.html#reed-writing">弱起与开头四小节</a></li>
+                <li><a href="./books/counterpoint/counterpoint-3.html#octave-fourth">单对位与复对位的换位对照</a></li>
+                <li><a href="./books/counterpoint/counterpoint-3.html#double-counterpoint">同一段对位的原位与两种换位</a></li>
+                <li><a href="./books/counterpoint/counterpoint-3.html#twelfth-sixth">十二度换位中的弱位六度与七度</a></li>
+                <li><a href="./books/counterpoint/counterpoint-3.html#double-writing">复对位写作示范</a></li>
+                <li><a href="./books/counterpoint/counterpoint-4.html#pentatonic-axes">同一五声旋律的五种轴</a></li>
+                <li><a href="./books/counterpoint/counterpoint-4.html#inversion-voices">单部倒影与两部倒影</a></li>
+                <li><a href="./books/counterpoint/counterpoint-4.html#melodic-transform">音高逆序与严格逆行</a></li>
+                <li><a href="./books/counterpoint/counterpoint-4.html#retrograde-voices">单部逆行与两部逆行</a></li>
+              </ul>
+            </section>
+            <section class="course-group" aria-labelledby="counterpoint-imitation-techniques">
+              <h4 id="counterpoint-imitation-techniques">模仿、卡农与模进</h4>
+              <ul>
+                <li><a href="./books/counterpoint/counterpoint-5.html#imitation">原形模仿与变形模仿对照</a></li>
+                <li><a href="./books/counterpoint/counterpoint-5.html#imitation-distances">同一题头的八种音程距离</a></li>
+                <li><a href="./books/counterpoint/counterpoint-6.html#canon-ending">有终卡农与无终卡农对照</a></li>
+                <li><a href="./books/counterpoint/counterpoint-6.html#canon-drafting">卡农的横纵交错写法</a></li>
+                <li><a href="./books/counterpoint/counterpoint-6.html#fifth-canon-writing">五度无终卡农的预移与抄回</a></li>
+                <li><a href="./books/counterpoint/counterpoint-6.html#canon-overlap-revision">卡农的重叠调整写法</a></li>
+                <li><a href="./books/counterpoint/counterpoint-7.html#sequence-textures">同一上声部的三种模进织体</a></li>
+                <li><a href="./books/counterpoint/counterpoint-7.html#sequence">二声部模进的声部结合与调性移动</a></li>
+                <li><a href="./books/counterpoint/counterpoint-7.html#canonic-draft-result">辅助谱表与卡农模进的尾句</a></li>
+                <li><a href="./books/counterpoint/counterpoint-7.html#bitonal-sequence-score">双调叠置的卡农模进</a></li>
+                <li><a href="./books/counterpoint/counterpoint-7.html#canonic-seam-map">卡农模进的两次尾句结合</a></li>
+              </ul>
+            </section>
+            <section class="course-group" aria-labelledby="counterpoint-polyphonic-texture">
+              <h4 id="counterpoint-polyphonic-texture">多声部复调织体</h4>
+              <ul>
+                <li><a href="./books/counterpoint/counterpoint-8.html#polyphonic-nonchord">三声部的单个与二重和弦外音</a></li>
+                <li><a href="./books/counterpoint/counterpoint-8.html#three-part-rhythm">三声部节奏的同步与异步</a></li>
+                <li><a href="./books/counterpoint/counterpoint-8.html#three-voice-permutation">三条旋律的六种位置</a></li>
+                <li><a href="./books/counterpoint/counterpoint-9.html#multi-entry-distances">固定时差下的同距与异距进入</a></li>
+                <li><a href="./books/counterpoint/counterpoint-9.html#multi-entry-transformations">两条应句采用相同或不同变形</a></li>
+                <li><a href="./books/counterpoint/counterpoint-9.html#double-imitation">两种入口次序的复卡农</a></li>
+                <li><a href="./books/counterpoint/counterpoint-10.html#combined-texture">模仿声部与自由声部的配置</a></li>
+                <li><a href="./books/counterpoint/counterpoint-10.html#triple-imitation-order">三部模仿的原位与换位</a></li>
+                <li><a href="./books/counterpoint/counterpoint-10.html#imitation-free-four">三部模仿加自由声部的整体换位</a></li>
+              </ul>
+            </section>
+          </div>
         </section>
-        <section class="course-group" aria-labelledby="counterpoint-imitation-techniques">
-          <h3 id="counterpoint-imitation-techniques">模仿、卡农与模进</h3>
-          <ul>
-            <li><a href="./books/counterpoint/counterpoint-5.html#imitation">原形模仿与变形模仿对照</a></li>
-            <li><a href="./books/counterpoint/counterpoint-5.html#imitation-distances">同一题头的八种音程距离</a></li>
-            <li><a href="./books/counterpoint/counterpoint-6.html#canon-ending">有终卡农与无终卡农对照</a></li>
-            <li><a href="./books/counterpoint/counterpoint-6.html#canon-drafting">卡农的横纵交错写法</a></li>
-            <li><a href="./books/counterpoint/counterpoint-6.html#fifth-canon-writing">五度无终卡农的预移与抄回</a></li>
-            <li><a href="./books/counterpoint/counterpoint-6.html#canon-overlap-revision">卡农的重叠调整写法</a></li>
-            <li><a href="./books/counterpoint/counterpoint-7.html#sequence-textures">同一上声部的三种模进织体</a></li>
-            <li><a href="./books/counterpoint/counterpoint-7.html#sequence">二声部模进的声部结合与调性移动</a></li>
-            <li><a href="./books/counterpoint/counterpoint-7.html#canonic-draft-result">辅助谱表与卡农模进的尾句</a></li>
-            <li><a href="./books/counterpoint/counterpoint-7.html#bitonal-sequence-score">双调叠置的卡农模进</a></li>
-            <li><a href="./books/counterpoint/counterpoint-7.html#canonic-seam-map">卡农模进的两次尾句结合</a></li>
-          </ul>
+        <section class="score-book-part" aria-labelledby="counterpoint-forms-programmatic">
+          <h3 id="counterpoint-forms-programmatic" tabindex="-1">下篇</h3>
+          <div class="course-index">
+            <section class="course-group" aria-labelledby="score-polyphonic-miniatures">
+              <h4 id="score-polyphonic-miniatures">复调小曲与创意曲</h4>
+              <ul>
+                <li><a href="./books/counterpoint/counterpoint-11.html#path-two-lines">从一条旋律搭出两条声部</a></li>
+                <li><a href="./books/counterpoint/counterpoint-11.html#miniature-texture">不同密度的声部组合</a></li>
+                <li><a href="./books/counterpoint/counterpoint-11.html#miniature-echo">对比段中的八度模仿</a></li>
+                <li><a href="./books/counterpoint/counterpoint-11.html#miniature-forms">同主题分节与 A–B–A 再现</a></li>
+                <li><a href="./books/counterpoint/counterpoint-12.html#path-canon">让第二声部接着追第二句</a></li>
+                <li><a href="./books/counterpoint/counterpoint-12.html#canon-delay">同一起句的三种卡农时差</a></li>
+                <li><a href="./books/counterpoint/counterpoint-12.html#canon-transform">原形、倒影和扩大应句</a></li>
+                <li><a href="./books/counterpoint/counterpoint-13.html#path-motive">截下前两拍，把它发展成段落</a></li>
+                <li><a href="./books/counterpoint/counterpoint-13.html#bwv772">巴赫 C 大调二部创意曲 · BWV 772</a></li>
+                <li><a href="./books/counterpoint/counterpoint-13.html#bwv777">巴赫 E 大调二部创意曲 · BWV 777</a></li>
+                <li><a href="./books/counterpoint/counterpoint-13.html#bwv791">巴赫降 E 大调三部创意曲 · BWV 791</a></li>
+                <li><a href="./books/counterpoint/counterpoint-13.html#bwv801">巴赫 b 小调三部创意曲 · BWV 801</a></li>
+                <li><a href="./books/counterpoint/counterpoint-13.html#invention-motive">同一动机的接应和模进</a></li>
+                <li><a href="./books/counterpoint/counterpoint-13.html#invention-exchange">两个主题的八度换位</a></li>
+                <li><a href="./books/counterpoint/counterpoint-13.html#invention-three-parts">两条模仿线与持续的和声层</a></li>
+                <li><a href="./books/counterpoint/counterpoint-14.html#path-inversion">以 D 为轴，把旋律翻到另一边</a></li>
+                <li><a href="./books/counterpoint/counterpoint-14.html#modal-invention">黄阮《小创意曲》 · 主题、倒影与再现</a></li>
+                <li><a href="./books/counterpoint/counterpoint-14.html#pentatonic-inversion">商音倒影与复对位</a></li>
+                <li><a href="./books/counterpoint/counterpoint-14.html#two-theme-roles">双主题结合与单一动机插段</a></li>
+              </ul>
+            </section>
+            <section class="course-group" aria-labelledby="score-fugue-forms">
+              <h4 id="score-fugue-forms">赋格曲</h4>
+              <ul>
+                <li><a href="./books/counterpoint/counterpoint-15.html#path-answer">让另一个声部把主题接过去</a></li>
+                <li><a href="./books/counterpoint/counterpoint-15.html#fugue-answer-types">同一主题的纯正答题和守调答题</a></li>
+                <li><a href="./books/counterpoint/counterpoint-15.html#fugue-answer-key-path">主题转入属调与答题回主调</a></li>
+                <li><a href="./books/counterpoint/counterpoint-15.html#fugue-handoff">主题末音与答题入口</a></li>
+                <li><a href="./books/counterpoint/counterpoint-15.html#fugue-entry">三部赋格显示的四种次序</a></li>
+                <li><a href="./books/counterpoint/counterpoint-16.html#path-episode">让主题暂时退开，然后完整回来</a></li>
+                <li><a href="./books/counterpoint/counterpoint-16.html#bwv847">巴赫 c 小调赋格 · BWV 847</a></li>
+                <li><a href="./books/counterpoint/counterpoint-16.html#fugue-episode">主题首部发展成间插段</a></li>
+                <li><a href="./books/counterpoint/counterpoint-16.html#fugue-development-forms">同一主题的中部变形</a></li>
+                <li><a href="./books/counterpoint/counterpoint-16.html#fugue-stretto">主题入口距离与重叠</a></li>
+                <li><a href="./books/counterpoint/counterpoint-16.html#fugue-pedal">属持续音与主持续音</a></li>
+                <li><a href="./books/counterpoint/counterpoint-17.html#path-modal-centers">用同一组音，写出两个不同的中心</a></li>
+                <li><a href="./books/counterpoint/counterpoint-17.html#modal-stretto">羽调式的重叠入口</a></li>
+                <li><a href="./books/counterpoint/counterpoint-17.html#compound-mode">十一声综合音列与赋格主题</a></li>
+                <li><a href="./books/counterpoint/counterpoint-17.html#mirror-fugue">两条声部的镜相逆行</a></li>
+                <li><a href="./books/counterpoint/counterpoint-17.html#fugue-canon-chain">卡农式赋格的原句接唱与倒影接唱</a></li>
+                <li><a href="./books/counterpoint/counterpoint-17.html#rhythm-fugue">单音主题与移位答题</a></li>
+              </ul>
+            </section>
+            <section class="course-group" aria-labelledby="score-heterophony-and-homophony">
+              <h4 id="score-heterophony-and-homophony">支声与主调织体</h4>
+              <ul>
+                <li><a href="./books/counterpoint/counterpoint-18.html#path-heterophony">同一拍会合，拍内各自加花</a></li>
+                <li><a href="./books/counterpoint/counterpoint-18.html#heterophony-harmonic">同一旋律的分岔、分层与长音</a></li>
+                <li><a href="./books/counterpoint/counterpoint-18.html#heterophony-density">骨干、加花及长音衬托</a></li>
+                <li><a href="./books/counterpoint/counterpoint-18.html#heterophony-intervals">共同支点之间的二度、三度与四度</a></li>
+                <li><a href="./books/counterpoint/counterpoint-18.html#heterophony-variations">同一骨干的四种起音密度</a></li>
+                <li><a href="./books/counterpoint/counterpoint-19.html#path-foreground">让伴奏从托住旋律，变成接过旋律</a></li>
+                <li><a href="./books/counterpoint/counterpoint-19.html#secondary-melody">同一主旋律的三种副旋律</a></li>
+                <li><a href="./books/counterpoint/counterpoint-19.html#contrapuntal-middle">和声内声部与对位化内声部</a></li>
+                <li><a href="./books/counterpoint/counterpoint-19.html#contrapuntal-bass">和声性低音与对位化低音</a></li>
+                <li><a href="./books/counterpoint/counterpoint-19.html#imitation-in-homophony">主调织体中的模仿安排</a></li>
+                <li><a href="./books/counterpoint/counterpoint-19.html#texture-exchange">主调与复调的两种转换次序</a></li>
+                <li><a href="./books/counterpoint/counterpoint-19.html#species-counterpoint">同一固定调的五类对位</a></li>
+                <li><a href="./books/counterpoint/counterpoint-19.html#pathetique-c-episode">《悲怆奏鸣曲》C 插部的对位转换</a></li>
+                <li><a href="./books/counterpoint/counterpoint-19.html#fugato-layout">赋格段在开头与中间的位置</a></li>
+              </ul>
+            </section>
+          </div>
         </section>
-        <section class="course-group" aria-labelledby="counterpoint-polyphonic-texture">
-          <h3 id="counterpoint-polyphonic-texture">多声部复调织体</h3>
-          <ul>
-            <li><a href="./books/counterpoint/counterpoint-8.html#polyphonic-nonchord">三声部的单个与二重和弦外音</a></li>
-            <li><a href="./books/counterpoint/counterpoint-8.html#three-part-rhythm">三声部节奏的同步与异步</a></li>
-            <li><a href="./books/counterpoint/counterpoint-8.html#three-voice-permutation">三条旋律的六种位置</a></li>
-            <li><a href="./books/counterpoint/counterpoint-9.html#multi-entry-distances">固定时差下的同距与异距进入</a></li>
-            <li><a href="./books/counterpoint/counterpoint-9.html#multi-entry-transformations">两条应句采用相同或不同变形</a></li>
-            <li><a href="./books/counterpoint/counterpoint-9.html#double-imitation">两种入口次序的复卡农</a></li>
-            <li><a href="./books/counterpoint/counterpoint-10.html#combined-texture">模仿声部与自由声部的配置</a></li>
-            <li><a href="./books/counterpoint/counterpoint-10.html#triple-imitation-order">三部模仿的原位与换位</a></li>
-            <li><a href="./books/counterpoint/counterpoint-10.html#imitation-free-four">三部模仿加自由声部的整体换位</a></li>
-          </ul>
-        </section>
-      </nav>
       </section>
-      <section class="score-book" aria-labelledby="counterpoint-forms-programmatic">
-        <h2 id="counterpoint-forms-programmatic" tabindex="-1"><a href="./books/counterpoint/index.html#polyphonic-miniatures">复调音乐基础教程 · 下篇</a></h2>
-        <div class="course-index single-book-index">
-          <section class="course-group" aria-labelledby="score-polyphonic-miniatures">
-            <h3 id="score-polyphonic-miniatures">复调小曲与创意曲</h3>
-            <ul>
-              <li><a href="./books/counterpoint/counterpoint-11.html#path-two-lines">从一条旋律搭出两条声部</a></li>
-              <li><a href="./books/counterpoint/counterpoint-11.html#miniature-texture">不同密度的声部组合</a></li>
-              <li><a href="./books/counterpoint/counterpoint-11.html#miniature-echo">对比段中的八度模仿</a></li>
-              <li><a href="./books/counterpoint/counterpoint-11.html#miniature-forms">同主题分节与 A–B–A 再现</a></li>
-              <li><a href="./books/counterpoint/counterpoint-12.html#path-canon">让第二声部接着追第二句</a></li>
-              <li><a href="./books/counterpoint/counterpoint-12.html#canon-delay">同一起句的三种卡农时差</a></li>
-              <li><a href="./books/counterpoint/counterpoint-12.html#canon-transform">原形、倒影和扩大应句</a></li>
-              <li><a href="./books/counterpoint/counterpoint-13.html#path-motive">截下前两拍，把它发展成段落</a></li>
-              <li><a href="./books/counterpoint/counterpoint-13.html#bwv772">巴赫 C 大调二部创意曲 · BWV 772</a></li>
-              <li><a href="./books/counterpoint/counterpoint-13.html#bwv777">巴赫 E 大调二部创意曲 · BWV 777</a></li>
-              <li><a href="./books/counterpoint/counterpoint-13.html#bwv791">巴赫降 E 大调三部创意曲 · BWV 791</a></li>
-              <li><a href="./books/counterpoint/counterpoint-13.html#bwv801">巴赫 b 小调三部创意曲 · BWV 801</a></li>
-              <li><a href="./books/counterpoint/counterpoint-13.html#invention-motive">同一动机的接应和模进</a></li>
-              <li><a href="./books/counterpoint/counterpoint-13.html#invention-exchange">两个主题的八度换位</a></li>
-              <li><a href="./books/counterpoint/counterpoint-13.html#invention-three-parts">两条模仿线与持续的和声层</a></li>
-              <li><a href="./books/counterpoint/counterpoint-14.html#path-inversion">以 D 为轴，把旋律翻到另一边</a></li>
-              <li><a href="./books/counterpoint/counterpoint-14.html#modal-invention">黄阮《小创意曲》 · 主题、倒影与再现</a></li>
-              <li><a href="./books/counterpoint/counterpoint-14.html#pentatonic-inversion">商音倒影与复对位</a></li>
-              <li><a href="./books/counterpoint/counterpoint-14.html#two-theme-roles">双主题结合与单一动机插段</a></li>
-            </ul>
-          </section>
-          <section class="course-group" aria-labelledby="score-fugue-forms">
-            <h3 id="score-fugue-forms">赋格曲</h3>
-            <ul>
-              <li><a href="./books/counterpoint/counterpoint-15.html#path-answer">让另一个声部把主题接过去</a></li>
-              <li><a href="./books/counterpoint/counterpoint-15.html#fugue-answer-types">同一主题的纯正答题和守调答题</a></li>
-              <li><a href="./books/counterpoint/counterpoint-15.html#fugue-answer-key-path">主题转入属调与答题回主调</a></li>
-              <li><a href="./books/counterpoint/counterpoint-15.html#fugue-handoff">主题末音与答题入口</a></li>
-              <li><a href="./books/counterpoint/counterpoint-15.html#fugue-entry">三部赋格显示的四种次序</a></li>
-              <li><a href="./books/counterpoint/counterpoint-16.html#path-episode">让主题暂时退开，然后完整回来</a></li>
-              <li><a href="./books/counterpoint/counterpoint-16.html#bwv847">巴赫 c 小调赋格 · BWV 847</a></li>
-              <li><a href="./books/counterpoint/counterpoint-16.html#fugue-episode">主题首部发展成间插段</a></li>
-              <li><a href="./books/counterpoint/counterpoint-16.html#fugue-development-forms">同一主题的中部变形</a></li>
-              <li><a href="./books/counterpoint/counterpoint-16.html#fugue-stretto">主题入口距离与重叠</a></li>
-              <li><a href="./books/counterpoint/counterpoint-16.html#fugue-pedal">属持续音与主持续音</a></li>
-              <li><a href="./books/counterpoint/counterpoint-17.html#path-modal-centers">用同一组音，写出两个不同的中心</a></li>
-              <li><a href="./books/counterpoint/counterpoint-17.html#modal-stretto">羽调式的重叠入口</a></li>
-              <li><a href="./books/counterpoint/counterpoint-17.html#compound-mode">十一声综合音列与赋格主题</a></li>
-              <li><a href="./books/counterpoint/counterpoint-17.html#mirror-fugue">两条声部的镜相逆行</a></li>
-              <li><a href="./books/counterpoint/counterpoint-17.html#fugue-canon-chain">卡农式赋格的原句接唱与倒影接唱</a></li>
-              <li><a href="./books/counterpoint/counterpoint-17.html#rhythm-fugue">单音主题与移位答题</a></li>
-            </ul>
-          </section>
-          <section class="course-group" aria-labelledby="score-heterophony-and-homophony">
-            <h3 id="score-heterophony-and-homophony">支声与主调织体</h3>
-            <ul>
-              <li><a href="./books/counterpoint/counterpoint-18.html#path-heterophony">同一拍会合，拍内各自加花</a></li>
-              <li><a href="./books/counterpoint/counterpoint-18.html#heterophony-harmonic">同一旋律的分岔、分层与长音</a></li>
-              <li><a href="./books/counterpoint/counterpoint-18.html#heterophony-density">骨干、加花及长音衬托</a></li>
-              <li><a href="./books/counterpoint/counterpoint-18.html#heterophony-intervals">共同支点之间的二度、三度与四度</a></li>
-              <li><a href="./books/counterpoint/counterpoint-18.html#heterophony-variations">同一骨干的四种起音密度</a></li>
-              <li><a href="./books/counterpoint/counterpoint-19.html#path-foreground">让伴奏从托住旋律，变成接过旋律</a></li>
-              <li><a href="./books/counterpoint/counterpoint-19.html#secondary-melody">同一主旋律的三种副旋律</a></li>
-              <li><a href="./books/counterpoint/counterpoint-19.html#contrapuntal-middle">和声内声部与对位化内声部</a></li>
-              <li><a href="./books/counterpoint/counterpoint-19.html#contrapuntal-bass">和声性低音与对位化低音</a></li>
-              <li><a href="./books/counterpoint/counterpoint-19.html#imitation-in-homophony">主调织体中的模仿安排</a></li>
-              <li><a href="./books/counterpoint/counterpoint-19.html#texture-exchange">主调与复调的两种转换次序</a></li>
-              <li><a href="./books/counterpoint/counterpoint-19.html#species-counterpoint">同一固定调的五类对位</a></li>
-              <li><a href="./books/counterpoint/counterpoint-19.html#pathetique-c-episode">《悲怆奏鸣曲》C 插部的对位转换</a></li>
-              <li><a href="./books/counterpoint/counterpoint-19.html#fugato-layout">赋格段在开头与中间的位置</a></li>
-            </ul>
-          </section>
-        </div>
-      </section>
-      <section class="score-book" aria-labelledby="orchestration-programmatic">
+      <section class="score-book" aria-labelledby="orchestration-programmatic" data-cover="orchestration">
         <h2 id="orchestration-programmatic" tabindex="-1"><a href="./books/orchestration/index.html">配器法基础教程</a></h2>
-        <div class="course-index single-book-index">
+        <a class="course-resource course-resource-featured" href="./books/orchestration/instrument-ranges.html">乐器音域总览 <span aria-hidden="true">→</span></a>
+        <div class="course-index">
           <section class="course-group" aria-labelledby="orchestration-sound-scores">
             <h3 id="orchestration-sound-scores">乐队音响</h3>
             <ul>
@@ -559,8 +586,307 @@
               <li><a href="./books/orchestration/orchestration-4.html#horn-textures">同一旋律的圆号配置</a></li>
             </ul>
           </section>
+          <section class="course-group" aria-labelledby="orchestration-mixed-scores">
+            <h3 id="orchestration-mixed-scores">跨组配器</h3>
+            <ul>
+              <li><a href="./books/orchestration/orchestration-5.html#mixed-unison">同度重叠的跨组音色</a></li>
+              <li><a href="./books/orchestration/orchestration-5.html#mixed-octaves">同一八度旋律的三种音色布局</a></li>
+              <li><a href="./books/orchestration/orchestration-5.html#mixed-melody-thickening">主线与依附线的三种音色配置</a></li>
+              <li><a href="./books/orchestration/orchestration-5.html#mixed-harmony-layers">弦乐四部的填充与重叠</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="orchestration-brass-scores">
+            <h3 id="orchestration-brass-scores">铜管乐器组</h3>
+            <ul>
+              <li><a href="./books/orchestration/orchestration-6.html#brass-chorale-voicing">同一四部和声的铜管配置</a></li>
+              <li><a href="./books/orchestration/orchestration-6.html#brass-melody-doubling">同一小号乐句的三种重叠</a></li>
+              <li><a href="./books/orchestration/orchestration-6.html#brass-chord-balance">固定外声的铜管和弦配置</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="orchestration-percussion-scores">
+            <h3 id="orchestration-percussion-scores">打击乐器组</h3>
+            <ul>
+              <li><a href="./books/orchestration/orchestration-7.html#timpani-tuning">两面定音鼓的定音与滚奏</a></li>
+              <li><a href="./books/orchestration/orchestration-7.html#mallet-motif">木琴、钟琴与排钟的起音和余音</a></li>
+              <li><a href="./books/orchestration/orchestration-7.html#percussion-accents">同一重拍的打击乐配置</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="orchestration-tutti-scores">
+            <h3 id="orchestration-tutti-scores">管弦乐全奏</h3>
+            <ul>
+              <li><a href="./books/orchestration/orchestration-8.html#tutti-octaves">固定两个八度层的三种音色分配</a></li>
+              <li><a href="./books/orchestration/orchestration-8.html#tutti-unison">同一旋律的跨组同度重叠</a></li>
+              <li><a href="./books/orchestration/orchestration-8.html#tutti-harmony-balance">从铜管原型到三组全奏</a></li>
+            </ul>
+          </section>
         </div>
       </section>
+      <section class="score-book" aria-labelledby="form-analysis-programmatic" data-cover="form-analysis">
+        <h2 id="form-analysis-programmatic" tabindex="-1"><a href="./books/form-analysis/index.html">曲式学基础教程</a></h2>
+        <div class="course-index">
+          <section class="course-group" aria-labelledby="form-analysis-intro-scores">
+            <h3 id="form-analysis-intro-scores">材料与段落</h3>
+            <ul>
+              <li><a href="./books/form-analysis/form-analysis-1.html#form-opening-return">开头材料的呈示、对比与回归</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="form-analysis-period-elements">
+            <h3 id="form-analysis-period-elements">乐段与内部单位</h3>
+            <ul>
+              <li><a href="./books/form-analysis/form-analysis-2.html#period-structure-demo">两句乐段的层级与终止</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="form-analysis-two-phrases">
+            <h3 id="form-analysis-two-phrases">两句乐段的材料、终止与长度</h3>
+            <ul>
+              <li><a href="./books/form-analysis/form-analysis-3.html#period-statement-types">同一上句的三种下句写法</a></li>
+              <li><a href="./books/form-analysis/form-analysis-3.html#period-ending-types">收拢、开放与转调乐段</a></li>
+              <li><a href="./books/form-analysis/form-analysis-3.html#period-expansion-analysis">下句扩充与补充终止</a></li>
+              <li><a href="./books/form-analysis/form-analysis-3.html#period-continuous-eighths">等时值旋律的 8＋12 小节</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="form-analysis-period-types">
+            <h3 id="form-analysis-period-types">多句乐段与复乐段</h3>
+            <ul>
+              <li><a href="./books/form-analysis/form-analysis-4.html#three-phrase-period-score">重复后延伸的三句乐段</a></li>
+              <li><a href="./books/form-analysis/form-analysis-4.html#four-phrase-period-score">起承转合的四句乐段</a></li>
+              <li><a href="./books/form-analysis/form-analysis-4.html#compound-period-score">前后乐段的重复与终止变化</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="form-analysis-simple-forms">
+            <h3 id="form-analysis-simple-forms">一段、二段、三段与多段结构</h3>
+            <ul>
+              <li><a href="./books/form-analysis/form-analysis-5.html#one-part-cadence-score">肖邦 e 小调前奏曲的句界与终止</a></li>
+              <li><a href="./books/form-analysis/form-analysis-6.html#binary-ode-to-joy">《欢乐颂》的二段结构与句尾再现</a></li>
+              <li><a href="./books/form-analysis/form-analysis-6.html#binary-return-variants">第二段有无再现的对照</a></li>
+              <li><a href="./books/form-analysis/form-analysis-6.html#binary-verse-refrain">分节歌与叠歌的演唱顺序</a></li>
+              <li><a href="./books/form-analysis/form-analysis-7.html#developing-middle-score">展开性中段与变化再现</a></li>
+              <li><a href="./books/form-analysis/form-analysis-7.html#contrasting-middle-score">对比性中段与准确再现</a></li>
+              <li><a href="./books/form-analysis/form-analysis-8.html#multi-section-tonic-return">主调回归与主题再现</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="form-analysis-compound-and-rondo">
+            <h3 id="form-analysis-compound-and-rondo">三部曲式与回旋曲式</h3>
+            <ul>
+              <li><a href="./books/form-analysis/form-analysis-9.html#compound-ternary-score">三部曲式的部与内部段</a></li>
+              <li><a href="./books/form-analysis/form-analysis-10.html#rondo-refrain-and-episodes">主部回返与不同插部</a></li>
+              <li><a href="./books/form-analysis/form-analysis-10.html#rondo-tambourin-excerpts">《铃鼓舞曲》的叠部与插部材料</a></li>
+              <li><a href="./books/form-analysis/form-analysis-10.html#rondo-expanded-refrain">回旋主部的变调与插部连缀</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="form-analysis-variation-scores">
+            <h3 id="form-analysis-variation-scores">变奏曲</h3>
+            <ul>
+              <li><a href="./books/form-analysis/form-analysis-11.html#ground-bass-variation-score">同一固定低音上的三次陈述</a></li>
+              <li><a href="./books/form-analysis/form-analysis-11.html#chaconne-harmony-score">同一和声骨架上的低音变形</a></li>
+              <li><a href="./books/form-analysis/form-analysis-12.html#ornamental-and-free-variation">同一主题的装饰变奏与自由变奏</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="form-analysis-sonata-scores">
+            <h3 id="form-analysis-sonata-scores">奏鸣曲式与奏鸣回旋曲式</h3>
+            <ul>
+              <li><a href="./books/form-analysis/form-analysis-13.html#sonata-exposition-score">呈示部的主部、连接部、副部与结束部</a></li>
+              <li><a href="./books/form-analysis/form-analysis-14.html#sonata-development-return">动机展开与属准备</a></li>
+              <li><a href="./books/form-analysis/form-analysis-14.html#sonata-recapitulation-tonal-return">呈示与再现的连接和副题</a></li>
+              <li><a href="./books/form-analysis/form-analysis-14.html#sonata-f-minor-secondary-comparison">贝多芬第一奏鸣曲的副题与小调回归</a></li>
+              <li><a href="./books/form-analysis/form-analysis-15.html#concerto-exposition-score">协奏曲的两次呈示与华彩</a></li>
+              <li><a href="./books/form-analysis/form-analysis-16.html#sonata-rondo-key-return">叠部反复与插部的调性回归</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="form-analysis-movement-scores">
+            <h3 id="form-analysis-movement-scores">器乐组曲与声乐套曲</h3>
+            <ul>
+              <li><a href="./books/form-analysis/form-analysis-17.html#suite-dance-meters">古组曲的舞曲节拍对照</a></li>
+              <li><a href="./books/form-analysis/form-analysis-18.html#symphony-cycle-motif">同一动机的声部与节拍变化</a></li>
+              <li><a href="./books/form-analysis/form-analysis-19.html#cantata-chorus-entries">同一题头的齐唱、对答与轮唱</a></li>
+            </ul>
+          </section>
+        </div>
+      </section>
+      <section class="score-book" aria-labelledby="songwriting-programmatic" data-cover="songwriting">
+        <h2 id="songwriting-programmatic" tabindex="-1"><a href="./books/songwriting/index.html">歌曲写作教程</a></h2>
+        <div class="course-index">
+          <section class="course-group" aria-labelledby="songwriting-1-scores">
+            <h3 id="songwriting-1-scores">歌曲写作的整体构思</h3>
+            <ul>
+              <li><a href="./books/songwriting/songwriting-1.html#song-opening-character">同一歌词的五种主题乐句</a></li>
+              <li><a href="./books/songwriting/songwriting-1.html#song-contrasting-form">三段体 · 河岸、远行与归来</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="songwriting-2-scores">
+            <h3 id="songwriting-2-scores">主题乐句的写作</h3>
+            <ul>
+              <li><a href="./books/songwriting/songwriting-2.html#song-word-rhythm">同一歌词的词位与节奏</a></li>
+              <li><a href="./books/songwriting/songwriting-2.html#song-word-sync">一字一音、拖腔与词位切分</a></li>
+              <li><a href="./books/songwriting/songwriting-2.html#song-mode-choice">固定节奏下的调式色彩</a></li>
+              <li><a href="./books/songwriting/songwriting-2.html#song-melodic-contour">同一词位下的旋律走向</a></li>
+              <li><a href="./books/songwriting/songwriting-2.html#song-phrase-shape">词曲句法与句长</a></li>
+              <li><a href="./books/songwriting/songwriting-2.html#song-model-writing">临摹主题句的三个步骤</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="songwriting-3-scores">
+            <h3 id="songwriting-3-scores">旋律发展手法</h3>
+            <ul>
+              <li><a href="./books/songwriting/songwriting-3.html#song-melody-continuations">同一主题句的五种续写</a></li>
+              <li><a href="./books/songwriting/songwriting-3.html#song-interval-span">固定基点的跳进幅度</a></li>
+              <li><a href="./books/songwriting/songwriting-3.html#song-tail-connection">首尾材料的承接</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="songwriting-4-scores">
+            <h3 id="songwriting-4-scores">乐段结构歌曲的写作（上）</h3>
+            <ul>
+              <li><a href="./books/songwriting/songwriting-4.html#song-phrase-expansion">终止前扩充与终止后补充</a></li>
+              <li><a href="./books/songwriting/songwriting-4.html#song-phrase-grouping">四句起承转合与两大句</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="songwriting-5-scores">
+            <h3 id="songwriting-5-scores">乐段结构歌曲的写作（中）</h3>
+            <ul>
+              <li><a href="./books/songwriting/songwriting-5.html#song-lyric-repetition">四句歌词的重复与衬词</a></li>
+              <li><a href="./books/songwriting/songwriting-5.html#song-text-density">词多曲少与词少曲多</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="songwriting-6-scores">
+            <h3 id="songwriting-6-scores">乐段结构歌曲的写作（下）</h3>
+            <ul>
+              <li><a href="./books/songwriting/songwriting-6.html#song-two-phrase">两句乐段的开放与收拢</a></li>
+              <li><a href="./books/songwriting/songwriting-6.html#song-repeated-phrase">同一两句乐段的重复与变化</a></li>
+              <li><a href="./books/songwriting/songwriting-6.html#song-phrase-count">五句与六句的展开</a></li>
+              <li><a href="./books/songwriting/songwriting-6.html#song-many-phrases">八句乐段的连续推进</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="songwriting-7-scores">
+            <h3 id="songwriting-7-scores">两段体歌曲写作</h3>
+            <ul>
+              <li><a href="./books/songwriting/songwriting-7.html#song-binary-return">同一 B 段的三种后半写法</a></li>
+              <li><a href="./books/songwriting/songwriting-7.html#song-binary-climax">同一 A 段之后的四种高潮位置</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="songwriting-8-scores">
+            <h3 id="songwriting-8-scores">三段体歌曲写作</h3>
+            <ul>
+              <li><a href="./books/songwriting/songwriting-8.html#song-ternary-middle">固定两端的四种中段写法</a></li>
+              <li><a href="./books/songwriting/songwriting-8.html#song-ternary-ending-options">同一 A、B 之后的第三段</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="songwriting-9-scores">
+            <h3 id="songwriting-9-scores">多段体歌曲写作和歌曲结构布局</h3>
+            <ul>
+              <li><a href="./books/songwriting/songwriting-9.html#song-variation-form">同一主题的三次变奏</a></li>
+              <li><a href="./books/songwriting/songwriting-9.html#song-multiple-forms">多段结构的材料次序</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="songwriting-10-scores">
+            <h3 id="songwriting-10-scores">固定音调、固定节奏的贯串和音调引用</h3>
+            <ul>
+              <li><a href="./books/songwriting/songwriting-10.html#song-rhythm-thread">固定节奏在两段中的贯串</a></li>
+              <li><a href="./books/songwriting/songwriting-10.html#song-motif-thread">固定音调的进入位置</a></li>
+              <li><a href="./books/songwriting/songwriting-10.html#song-theme-quotation">引用音调的接入与收束</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="songwriting-11-scores">
+            <h3 id="songwriting-11-scores">前奏（引子）、间奏、后奏（尾声）</h3>
+            <ul>
+              <li><a href="./books/songwriting/songwriting-11.html#song-prelude-design">同一句歌声的三种前奏</a></li>
+              <li><a href="./books/songwriting/songwriting-11.html#song-interlude-design">句间回声、转换与展开</a></li>
+              <li><a href="./books/songwriting/songwriting-11.html#song-postlude-design">同一末句的三种后奏</a></li>
+              <li><a href="./books/songwriting/songwriting-11.html#song-vocal-framing">人声引子、主体与尾声</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="songwriting-12-scores">
+            <h3 id="songwriting-12-scores">曲调与声调</h3>
+            <ul>
+              <li><a href="./books/songwriting/songwriting-12.html#song-tone-contours">「山头起雾」的三种音高安排</a></li>
+              <li><a href="./books/songwriting/songwriting-12.html#song-stanza-tone-revision">分节歌的同曲配词与局部改调</a></li>
+              <li><a href="./books/songwriting/songwriting-12.html#song-helper-words">「远山的灯」的语气重心</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="songwriting-13-scores">
+            <h3 id="songwriting-13-scores">装饰变音、色彩变音、离调、特性调式变音和转调</h3>
+            <ul>
+              <li><a href="./books/songwriting/songwriting-13.html#song-chromatic-purpose">变音在旋律、和声与转调中的作用</a></li>
+              <li><a href="./books/songwriting/songwriting-13.html#song-modulation-layout">从 A 段尾句到 B 段的新调</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="songwriting-14-scores">
+            <h3 id="songwriting-14-scores">拖腔、重复歌词、衬词</h3>
+            <ul>
+              <li><a href="./books/songwriting/songwriting-14.html#song-melisma-length">「风过石桥」的行腔与拖腔</a></li>
+              <li><a href="./books/songwriting/songwriting-14.html#song-word-repeat">「岸边灯亮了」的句尾重复</a></li>
+              <li><a href="./books/songwriting/songwriting-14.html#song-filler-structure">词组衬垫与独立衬词段</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="songwriting-15-scores">
+            <h3 id="songwriting-15-scores">歌曲的常见体裁</h3>
+            <ul>
+              <li><a href="./books/songwriting/songwriting-15.html#song-genre-character">七种体裁的节奏与句法示例</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="songwriting-16-scores">
+            <h3 id="songwriting-16-scores">艺术歌曲特征</h3>
+            <ul>
+              <li><a href="./books/songwriting/songwriting-16.html#song-art-forms">同组歌词的分节与通谱处理</a></li>
+              <li><a href="./books/songwriting/songwriting-16.html#song-art-accompaniment">同一旋律的三种钢琴织体</a></li>
+              <li><a href="./books/songwriting/songwriting-16.html#song-art-piano-arc">钢琴动机贯穿全曲</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="songwriting-17-scores">
+            <h3 id="songwriting-17-scores">通俗歌曲特征</h3>
+            <ul>
+              <li><a href="./books/songwriting/songwriting-17.html#song-pop-rhythm-placement">切分与停顿对同一句词的影响</a></li>
+              <li><a href="./books/songwriting/songwriting-17.html#song-pop-melodic-types">同一歌词的朗诵调、旋律型与说唱节奏</a></li>
+              <li><a href="./books/songwriting/songwriting-17.html#song-pop-returning-binary">A 段叙述、B 段主题与句尾再现</a></li>
+              <li><a href="./books/songwriting/songwriting-17.html#song-pop-artistic-development">同一旋律骨架的同主音调式色彩</a></li>
+            </ul>
+          </section>
+        </div>
+      </section>
+      <section class="score-book" aria-labelledby="arrangement-programmatic" data-cover="arrangement">
+        <h2 id="arrangement-programmatic" tabindex="-1"><a href="./books/arrangement/index.html">图解编曲入门</a></h2>
+        <div class="course-index">
+          <section class="course-group" aria-labelledby="arrangement-intro-scores">
+            <h3 id="arrangement-intro-scores">编曲的基本知识</h3>
+            <ul>
+              <li><a href="./books/arrangement/arrangement-intro.html#arrangement-operations">同一旋律的五个编配版本</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="arrangement-rhythm-scores">
+            <h3 id="arrangement-rhythm-scores">明快节拍</h3>
+            <ul>
+              <li><a href="./books/arrangement/arrangement-1.html#arrangement-groove-pattern">拍内细分与跨小节切分</a></li>
+              <li><a href="./books/arrangement/arrangement-1.html#arrangement-drum-pattern">同一鼓组骨架的段落变化</a></li>
+              <li><a href="./books/arrangement/arrangement-1.html#arrangement-bass-pattern">底鼓落点与贝斯持续时间</a></li>
+              <li><a href="./books/arrangement/arrangement-1.html#arrangement-bass-pitches">C 到 G/B 的贝斯音高选择</a></li>
+              <li><a href="./books/arrangement/arrangement-1.html#arrangement-guitar-pattern">基本律动与吉他扫弦方向</a></li>
+              <li><a href="./books/arrangement/arrangement-1.html#arrangement-piano-pattern">同一律动的钢琴两手分配</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="arrangement-phrase-scores">
+            <h3 id="arrangement-phrase-scores">可哼唱乐句</h3>
+            <ul>
+              <li><a href="./books/arrangement/arrangement-2.html#phrase-rhythm">同一伴奏上的三种起音</a></li>
+              <li><a href="./books/arrangement/arrangement-2.html#phrase-motion">相同节奏的三组线条对照</a></li>
+              <li><a href="./books/arrangement/arrangement-2.html#phrase-note-color">G7 上的三种用音</a></li>
+              <li><a href="./books/arrangement/arrangement-2.html#phrase-gap-comparison">相同主旋律的句间接续</a></li>
+              <li><a href="./books/arrangement/arrangement-2.html#phrase-piano-gap">同一钢琴间隙乐句的两种织体</a></li>
+              <li><a href="./books/arrangement/arrangement-2.html#phrase-background-arp">相同主旋律与三个贝斯版本</a></li>
+              <li><a href="./books/arrangement/arrangement-2.html#phrase-top-note">C → G/B 的最高音位置</a></li>
+              <li><a href="./books/arrangement/arrangement-2.html#phrase-fill-comparison">固定起音位置的三种过门</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="arrangement-ensemble-scores">
+            <h3 id="arrangement-ensemble-scores">流行乐团合奏</h3>
+            <ul>
+              <li><a href="./books/arrangement/arrangement-3.html#ensemble-motions">同一主线的齐奏与合音</a></li>
+              <li><a href="./books/arrangement/arrangement-3.html#ensemble-aligned-rhythm">钢琴、贝斯与鼓组的三个起音</a></li>
+              <li><a href="./books/arrangement/arrangement-3.html#ensemble-priority-mix">同一和声上的三种前景</a></li>
+              <li><a href="./books/arrangement/arrangement-3.html#ensemble-phrase-map">八小节合奏短曲</a></li>
+            </ul>
+          </section>
+        </div>
+      </section>
+      </div>
+      </div>
     </main>
   </body>
 </html>

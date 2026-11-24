@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第六章 铜管乐器与铜管乐器组｜配器法基础教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./orchestration.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./orchestration-6.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">配器法基础教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第六章 铜管乐器与铜管乐器组</h1>
+      <p class="intro">铜管可以把一段旋律吹得明亮、坚实，也能在弱奏时形成圆润的多声部。配器时先定好乐器实际发声的位置，再决定主导音色，以及哪些声部需要加强或填充。</p>
+
+      <section aria-labelledby="brass-instruments">
+        <h2 id="brass-instruments">第一节 铜管乐器概述</h2>
+        <h3>嘴唇、号管与泛音列</h3>
+        <p>小号、圆号、长号和大号都由嘴唇振动激发管内空气柱。嘴唇与气流选择某一管长上的分音，活塞或长号滑管负责改变整根管的有效长度。早期自然铜管主要依靠固定管长的泛音列；加上活塞、附加管或滑管后，能在更广的音域里接续半音。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">构造</th><th scope="col">影响</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">号嘴与喇叭口</th><td>号嘴承接嘴唇的振动。杯形、深浅、内壁轮廓和喇叭口的开张都会影响起音与音色。</td></tr>
+            <tr><th scope="row">圆柱段与圆锥段</th><td>小号、长号的圆柱段比例较大，常归为硬音质；圆号、大号的锥形扩张较明显，常归为软音质。管径、号嘴、音区和力度也会改变实际听感。</td></tr>
+            <tr><th scope="row">活塞与附加管</th><td>按键把气流导入附加管，泛音列随管长增加而降低。小号多用直升活塞，圆号常用回转阀。三个基本活塞及其七组管长见第四章的<a href="./orchestration-4.html#horn-production">活塞与泛音列</a>。</td></tr>
+            <tr><th scope="row">伸缩管</th><td>长号通过推拉 U 形滑管改变管长。降 B 管路通常分七个把位，每外移一把，泛音列大致降半音。高区常有替代把位，演奏者可选更近或更稳的把位。</td></tr>
+            <tr><th scope="row">调音管与放水键</th><td>调音管用于微调管长。放水键排出管内积水。</td></tr>
+          </tbody>
+        </table>
+
+        <h3 id="brass-ranges">实际音域与音区</h3>
+        <p>铜管组从大号或低音长号的底部延伸到小号的高区。常用范围以内也有强弱之别，不能只按能否吹到某个音来配器。以下用实际发声音高比较常用区和扩展边界，极限会因乐器型号及演奏者而变。</p>
+        <figure class="notation-sample staff-range-comparison" id="brass-vertical-ranges">
+          <figcaption>同一谱表上的铜管乐器实际音域</figcaption>
+          <p class="instrument-range-key range-keyboard-legend">
+            <span class="range-legend-common">实线连接参考音域两端</span>
+            <span class="range-legend-extension">虚线标延伸音</span>
+          </p>
+          <svg class="staff-range-plot" viewBox="0 0 471 298" role="img" aria-labelledby="brass-vertical-ranges-title brass-vertical-ranges-described">
+            <title id="brass-vertical-ranges-title">同一谱表上的铜管乐器实际音域</title>
+            <desc id="brass-vertical-ranges-described">小号（降 B 调） B♭3 至 B♭5，下延至 E3，上延至 D6；圆号（F 调） F2 至 C5，下延至 B1，上延至 F5；次中音长号（无附加阀） E2 至 B♭4，下延至 G1，上延至 D5；低音长号（双阀） F1 至 B♭3，下延至 B♭0，上延至 F5；大号（倍低音） F♯1 至 B♭3，下延至 D1，上延至 D4。无附加阀次中音长号在 B1 至 E♭2 之间留空。</desc>
+            <path class="staff-range-guide" d="M44 64H467 M44 148H467 M44 232H467 M44 274H467"/>
+            <path class="range-staff-lines" d="M44 88H467 M44 100H467 M44 112H467 M44 124H467 M44 136H467 M44 160H467 M44 172H467 M44 184H467 M44 196H467 M44 208H467"/>
+            <text class="range-staff-clef" x="48" y="124">&#xE050;</text>
+            <text class="range-staff-clef" x="48" y="172">&#xE062;</text>
+            <g class="staff-range-axis" text-anchor="end">
+              <text x="35" y="68">C6</text>
+              <text x="35" y="110">C5</text>
+              <text x="35" y="152">C4</text>
+              <text x="35" y="194">C3</text>
+              <text x="35" y="236">C2</text>
+              <text x="35" y="278">C1</text>
+            </g>
+            <g data-instrument-range="1">
+              <text class="staff-range-name" x="107" y="22">小号</text>
+              <text class="staff-range-tuning" x="107" y="40">降 B 调</text>
+              <path class="staff-range-span" d="M107 70V154"/>
+              <path class="staff-range-extension" d="M107 70V58h-17"/>
+              <g class="staff-range-pitch range-staff-limit" data-staff-endpoint="D6">
+                <path class="range-staff-ledger" d="M79 76h22 M79 64h22"/>
+                <text class="range-staff-symbol" x="84" y="58">&#xE0A3;</text>
+                <text class="staff-range-note-label" x="78" y="62" text-anchor="end">D6</text>
+              </g>
+              <path class="staff-range-extension" d="M107 154V178h-17"/>
+              <g class="staff-range-pitch range-staff-limit" data-staff-endpoint="E3">
+                <text class="range-staff-symbol" x="84" y="178">&#xE0A3;</text>
+                <text class="staff-range-note-label" x="120" y="182">E3</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="B♭5">
+                <path class="range-staff-ledger" d="M96 76h22"/>
+                <text class="range-staff-symbol range-staff-accidental" x="91" y="70">&#xE260;</text>
+                <text class="range-staff-symbol" x="101" y="70">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="120" y="74" text-anchor="start">B♭5</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="B♭3">
+                <text class="range-staff-symbol range-staff-accidental" x="91" y="154">&#xE260;</text>
+                <text class="range-staff-symbol" x="101" y="154">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="120" y="158" text-anchor="start">B♭3</text>
+              </g>
+            </g>
+            <g data-instrument-range="2">
+              <text class="staff-range-name" x="184" y="22">圆号</text>
+              <text class="staff-range-tuning" x="184" y="40">F 调</text>
+              <path class="staff-range-span" d="M184 106V214"/>
+              <path class="staff-range-extension" d="M184 106V88h-17"/>
+              <g class="staff-range-pitch range-staff-limit" data-staff-endpoint="F5">
+                <text class="range-staff-symbol" x="161" y="88">&#xE0A3;</text>
+                <text class="staff-range-note-label" x="155" y="92" text-anchor="end">F5</text>
+              </g>
+              <path class="staff-range-extension" d="M184 214V238h-17"/>
+              <g class="staff-range-pitch range-staff-limit" data-staff-endpoint="B1">
+                <path class="range-staff-ledger" d="M156 220h22 M156 232h22"/>
+                <text class="range-staff-symbol" x="161" y="238">&#xE0A3;</text>
+                <text class="staff-range-note-label" x="155" y="242" text-anchor="end">B1</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="C5">
+                <text class="range-staff-symbol" x="178" y="106">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="197" y="110" text-anchor="start">C5</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="F2">
+                <text class="range-staff-symbol" x="178" y="214">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="197" y="218" text-anchor="start">F2</text>
+              </g>
+            </g>
+            <g data-instrument-range="3">
+              <text class="staff-range-name" x="261" y="22">次中音长号</text>
+              <text class="staff-range-tuning" x="261" y="40">无附加阀</text>
+              <path class="staff-range-span" d="M261 112V220"/>
+              <path class="staff-range-extension" d="M261 112V100h-17"/>
+              <g class="staff-range-pitch range-staff-limit" data-staff-endpoint="D5">
+                <text class="range-staff-symbol" x="238" y="100">&#xE0A3;</text>
+                <path class="range-staff-ledger" d="M234 94l6 4"/>
+                <text class="staff-range-note-label" x="232" y="96" text-anchor="end">D5</text>
+              </g>
+              <g class="staff-range-pitch range-staff-limit" data-staff-endpoint="B♭1">
+                <path class="range-staff-ledger" d="M250 220h22 M250 232h22"/>
+                <text class="range-staff-symbol range-staff-accidental" x="245" y="238">&#xE260;</text>
+                <text class="range-staff-symbol" x="255" y="238">&#xE0A3;</text>
+                <text class="staff-range-note-label" x="274" y="242">B♭1</text>
+              </g>
+              <path class="staff-range-extension" d="M261 238V250h-17"/>
+              <g class="staff-range-pitch range-staff-limit" data-staff-endpoint="G1">
+                <path class="range-staff-ledger" d="M233 220h22 M233 232h22 M233 244h22"/>
+                <text class="range-staff-symbol" x="238" y="250">&#xE0A3;</text>
+                <text class="staff-range-note-label" x="232" y="254" text-anchor="end">G1</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="B♭4">
+                <text class="range-staff-symbol range-staff-accidental" x="245" y="112">&#xE260;</text>
+                <text class="range-staff-symbol" x="255" y="112">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="274" y="116" text-anchor="start">B♭4</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="E2">
+                <path class="range-staff-ledger" d="M250 220h22"/>
+                <text class="range-staff-symbol" x="255" y="220">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="274" y="224" text-anchor="start">E2</text>
+              </g>
+            </g>
+            <g data-instrument-range="4">
+              <text class="staff-range-name" x="338" y="22">低音长号</text>
+              <text class="staff-range-tuning" x="338" y="40">双阀</text>
+              <path class="staff-range-span" d="M338 154V256"/>
+              <path class="staff-range-extension" d="M338 154V88h-17"/>
+              <g class="staff-range-pitch range-staff-limit" data-staff-endpoint="F5">
+                <text class="range-staff-symbol" x="315" y="88">&#xE0A3;</text>
+                <text class="staff-range-note-label" x="309" y="92" text-anchor="end">F5</text>
+              </g>
+              <path class="staff-range-extension" d="M338 256V280h-17"/>
+              <g class="staff-range-pitch range-staff-limit" data-staff-endpoint="B♭0">
+                <path class="range-staff-ledger" d="M310 220h22 M310 232h22 M310 244h22 M310 256h22 M310 268h22 M310 280h22"/>
+                <text class="range-staff-symbol range-staff-accidental" x="305" y="280">&#xE260;</text>
+                <text class="range-staff-symbol" x="315" y="280">&#xE0A3;</text>
+                <text class="staff-range-note-label" x="301" y="284" text-anchor="end">B♭0</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="B♭3">
+                <text class="range-staff-symbol range-staff-accidental" x="322" y="154">&#xE260;</text>
+                <text class="range-staff-symbol" x="332" y="154">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="351" y="158" text-anchor="start">B♭3</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="F1">
+                <path class="range-staff-ledger" d="M327 220h22 M327 232h22 M327 244h22 M327 256h22"/>
+                <text class="range-staff-symbol" x="332" y="256">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="351" y="260" text-anchor="start">F1</text>
+              </g>
+            </g>
+            <g data-instrument-range="5">
+              <text class="staff-range-name" x="415" y="22">大号</text>
+              <text class="staff-range-tuning" x="415" y="40">倍低音</text>
+              <path class="staff-range-span" d="M415 154V256"/>
+              <path class="staff-range-extension" d="M415 154V142h-17"/>
+              <g class="staff-range-pitch range-staff-limit" data-staff-endpoint="D4">
+                <text class="range-staff-symbol" x="392" y="142">&#xE0A3;</text>
+                <text class="staff-range-note-label" x="386" y="146" text-anchor="end">D4</text>
+              </g>
+              <path class="staff-range-extension" d="M415 256V268h-17"/>
+              <g class="staff-range-pitch range-staff-limit" data-staff-endpoint="D1">
+                <path class="range-staff-ledger" d="M387 220h22 M387 232h22 M387 244h22 M387 256h22 M387 268h22"/>
+                <text class="range-staff-symbol" x="392" y="268">&#xE0A3;</text>
+                <text class="staff-range-note-label" x="386" y="272" text-anchor="end">D1</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="B♭3">
+                <text class="range-staff-symbol range-staff-accidental" x="399" y="154">&#xE260;</text>
+                <text class="range-staff-symbol" x="409" y="154">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="428" y="158" text-anchor="start">B♭3</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="F♯1">
+                <path class="range-staff-ledger" d="M404 220h22 M404 232h22 M404 244h22 M404 256h22"/>
+                <text class="range-staff-symbol range-staff-accidental" x="399" y="256">&#xE262;</text>
+                <text class="range-staff-symbol" x="409" y="256">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="428" y="260" text-anchor="start">F♯1</text>
+              </g>
+            </g>
+          </svg>
+          <p class="staff-range-summary">无附加阀次中音长号的踏板音标在下方。踏板区与常用区之间留空，对应 B1–E♭2 的断档。</p>
+        </figure>
+        <figure class="notation-sample" id="brass-range-keyboards" hidden></figure>
+        <table class="lesson-table" id="brass-range-table">
+          <caption>铜管音域边界（C4 为中央 C）</caption>
+          <thead><tr><th scope="col">乐器</th><th scope="col">常用参照</th><th scope="col">低端与高端</th></tr></thead>
+          <tbody>
+            <tr data-range-low="E3"><th scope="row">降 B 调小号</th><td data-range-main>B♭3–B♭5</td><td>E3 起为低区，C6–<span data-range-high>D6</span> 是较难的高端延伸。</td></tr>
+            <tr data-range-low="B1"><th scope="row">F 调圆号</th><td data-range-main>F2–C5</td><td>B1–<span data-range-high>F5</span>。详见第四章。</td></tr>
+            <tr data-range-low="G1" data-range-gap="B1–E♭2"><th scope="row">次中音长号（无附加阀）</th><td data-range-main>E2–B♭4</td><td>本例标出 G1–B♭1 的低踏板区、B1–E♭2 的断档，以及高端延伸至 <span data-range-high>D5</span>。</td></tr>
+            <tr data-range-low="B♭0"><th scope="row">双阀低音长号</th><td data-range-main>F1–B♭3</td><td>含踏板音的扩展可达 B♭0，高端可到 <span data-range-high>F5</span>，极端音区需按型号与乐手核对。</td></tr>
+            <tr data-range-low="D1"><th scope="row">倍低音大号</th><td data-range-main>F♯1–B♭3</td><td>此处以 D1–<span data-range-high>D4</span> 作编配参照，实际边界随型号而变。</td></tr>
+          </tbody>
+        </table>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">乐器</th><th scope="col">低音区</th><th scope="col">中音区</th><th scope="col">高音区</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">小号</th><td>有个性，弱奏更自然，强奏的分量相对有限。</td><td>起音最清楚，弱奏可唱旋律，强奏明亮有力。</td><td>更紧张、穿透；越接近上限，弱奏和精准起音越难。</td></tr>
+            <tr><th scope="row">长号</th><td>低处分量足，强奏可厚重。踏板音需专门安排，普通次中音长号有断档。</td><td>声音稳定，弱奏温厚，强奏坚实明亮。</td><td>穿透力强。极高区容易紧绷，远把位之间的快速移动也会增加难度。</td></tr>
+            <tr><th scope="row">大号</th><td>常用低区浑厚，极低音起音较慢。低端快音容易含混。</td><td>圆润扎实，既能作低音，也可呈示旋律。</td><td>较明亮，极高区较紧张。在很强的合奏中，低音可由第三长号或其他组的低音乐器协助。</td></tr>
+          </tbody>
+        </table>
+
+        <h3>长号低端的断档与附加阀</h3>
+        <p>普通降 B 次中音长号的第一把位踏板音是 B♭1，第七把位第 2 分音是 E2。两者之间的 B1、C2、D♭2、D2、E♭2 在无阀常规把位中没有对应的音。单 F 阀能下探到约 C2，B1 仍要看调管和型号；双阀低音长号可跨过这段断档。编写低于 E2 的半音进行时，应先确认用的是哪种长号。</p>
+        <p>大号常见有 C、B♭ 倍低音型，也有较小的低音大号。大号的前三个活塞负责基本变化音，附加阀可扩展低区并补偿组合指法的音准。第四阀常用于降纯四度；第五、第六阀的调音量和用法随型号而异。</p>
+
+        <h3>吐音、颤音、舌震音与滑奏</h3>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">奏法</th><th scope="col">配器上的处理</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">吐音</th><td>小号可以用单吐、双吐和三吐写清楚的反复或快音。长号的远把位会限制速度；大号的低区连续短音尤其需要留出反应时间。</td></tr>
+            <tr><th scope="row">颤音</th><td>小号通常用活塞在两个指法间快速交替，常见组合可从第 2、3、4、5、6、8 分音的指法中找。长号的唇颤音依赖同把位相邻分音，完整可用的音对较少。大号可作部分活塞颤音，也要核对音区和换指。</td></tr>
+            <tr><th scope="row">舌震音</th><td>写 <i lang="en">flutter tongue</i> 或明确标出舌震音。中区的小号和圆号较常用于这个效果。它能给持续音加上颗粒质地，适合选在有意突出的地方。</td></tr>
+            <tr><th scope="row">加弱音器</th><td>小号和长号常用，大号较少。普通弱音器可标 <i lang="it">con sord.</i>，指定直管、杯形、哇音等效果时写清型号，取下标 <i lang="it">senza sord.</i>。圆号的手阻塞另有记号。</td></tr>
+          </tbody>
+        </table>
+        <p>长号的连续滑奏在同一分音内移动滑管。标准降 B 管路从第一把位到第七把位，跨度最多六个半音。两音若必须换分音，即使音程更小，也会出现接点。下例一直保持第 2 分音，从 B♭2 向外伸长滑管即可下滑到 E2
+          <svg class="inline-staff inline-staff-wide" viewBox="0 0 88 43" role="img" aria-label="第 2 分音上，从第一把位降 B2 连续下滑到第七把位 E2。">
+            <path class="inline-staff-lines" d="M2 12H86 M2 17H86 M2 22H86 M2 27H86 M2 32H86 M66 37H80"/>
+            <text x="4" y="17">&#xE062;</text><text x="22" y="27">&#xE260;</text><text x="29" y="27">&#xE0A4;</text><text x="69" y="37">&#xE0A4;</text>
+            <path d="M34 27V13 M74 37V22 M37 27L66 36"/>
+            <text class="inline-staff-count" x="26" y="9">Ⅰ</text><text class="inline-staff-count" x="65" y="9">Ⅶ</text>
+          </svg>。
+        </p>
+        <p>同一支无附加阀的次中音长号从 B♭2 上行半音到 B2 时，B♭2 是第一把位的第 2 分音，B2 是第七把位的第 3 分音。移动滑管的同时必须换分音，两音之间会有接点，宜写成两次起音
+          <svg class="inline-staff inline-staff-wide" viewBox="0 0 88 43" role="img" aria-label="降 B2 和还原 B2。两音在同一谱线上，共用低音谱号，音符之间没有滑音线。">
+            <path class="inline-staff-lines" d="M2 12H86 M2 17H86 M2 22H86 M2 27H86 M2 32H86"/>
+            <text x="4" y="17">&#xE062;</text><text x="22" y="27">&#xE260;</text><text x="29" y="27">&#xE0A4;</text><text x="61" y="27">&#xE261;</text><text x="69" y="27">&#xE0A4;</text>
+            <path d="M34 27V13 M74 27V13"/>
+            <text class="inline-staff-count" x="26" y="9">Ⅰ</text><text class="inline-staff-count" x="65" y="9">Ⅶ</text>
+          </svg>。
+        </p>
+
+        <h3>铜管组的总谱与移调记谱</h3>
+        <p>总谱通常按圆号、小号、长号、大号排列，圆号虽常比小号低，却写在它上方。每一支乐器有自己的声部，常见编制可用四支圆号、两至三支小号、三支长号和一支大号。同类两件共用一个谱表时，可标 <i>a 2</i>、Ⅰ或Ⅱ，或分符干写出不同的声部。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">乐器</th><th scope="col">常用谱号与实际发声关系</th><th scope="col">要发实际 C4，写</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">小号</th><td>用高音谱号。降 B 小号低大二度，C 小号按谱发声，A 调小号低小三度。</td><td>降 B 调写 D4，C 调写 C4，A 调写 E♭4。</td></tr>
+            <tr><th scope="row">F 调圆号</th><td>现代高、低音谱号都低纯五度发声。旧版低音谱号另查版本。</td><td>G4</td></tr>
+            <tr><th scope="row">长号</th><td>管路可标降 B，管弦乐分谱通常按实音写。高处常用次中音谱号，低处用低音谱号。</td><td>C4</td></tr>
+            <tr><th scope="row">大号</th><td>管弦乐分谱使用低音谱号，按实际音高记写。</td><td>C4</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="brass-chorale">
+        <h2 id="brass-chorale">第二节 合唱型四部和声的铜管乐器组合</h2>
+        <p>合唱型四部由四条连续的线构成。配铜管时可以固定这四条线，只调整谁来吹。小号和长号的硬音质适合明亮、坚实的和声，圆号和大号的软音质适合圆润的声响。同一四部也可混用两种音质，保留主线的轮廓，同时柔化其他声部。</p>
+        <h3>同音质与不同音质的四部配置</h3>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">组合</th><th scope="col">从高到低的安排</th><th scope="col">音响效果</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">同音色</th><td>四支圆号可各奏一线。三声部还可分别由三支圆号、小号或长号承担。</td><td>各条线音色一致，靠音高和节奏辨认。</td></tr>
+            <tr><th scope="row">小号＋长号</th><td>两支小号、两支长号可顺置或交置；一支小号加三支长号时，通常由小号领高音。</td><td>硬音质统一，明亮、有力。三声部可沿用同一原则。</td></tr>
+            <tr><th scope="row">圆号＋大号</th><td>可让三支圆号在上、大号在下，按音区顺置。</td><td>软音质相近，弱奏较圆润。</td></tr>
+            <tr><th scope="row">小号＋圆号</th><td>常用顺置、交置，较少夹置。小号可担任主线，圆号补低处或穿插在内声。</td><td>圆号可缓和小号的硬度，小号可使整体更清楚。</td></tr>
+            <tr><th scope="row">圆号＋长号</th><td>顺置、交置、夹置都可用。外侧若是长号，整体容易保持长号的音质。</td><td>圆号使长号较柔，长号也给圆号补充音头和厚度。</td></tr>
+            <tr><th scope="row">长号＋大号</th><td>三支长号在上可排得较密，大号在下。大号既可在第三长号下一八度内，也可与它相隔超过一八度。</td><td>弱奏容易融合，强奏多由长号主导。较大的低端间距可按音响目的保留。</td></tr>
+            <tr><th scope="row">小号＋圆号＋长号</th><td>常顺置。例如小号、圆号、圆号、长号，或小号、小号、圆号、长号。</td><td>小号负责高声部的轮廓，圆号可填平小号与低铜管之间的过渡。</td></tr>
+          </tbody>
+        </table>
+        <p>顺置让上层颜色容易主导；交置让两种颜色穿插；夹置则通常由外侧音色决定总体轮廓。弱奏时不同铜管可先按一件对一件试配。强奏需要让圆号与小号或长号保持分量时，常从两支圆号对一支硬音质铜管试配；若特意让硬音质占主导，圆号可以少一些。</p>
+        <div class="music-demo" id="brass-chorale-voicing">
+          <div class="music-demo-toolbar">
+            <h4>同一四部和声的铜管配置</h4>
+            <label>配置 <select>
+              <option value="hard">小号＋长号</option>
+              <option value="soft">圆号＋大号</option>
+              <option value="mixed">小号＋圆号＋长号</option>
+              <option value="expanded">混合组＋大号低八度</option>
+            </select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="固定四个声部，比较硬音质、软音质、混合音质和低音扩展"></figure>
+        </div>
+        <p>本章程序谱按实际音高显示，试听采用铜管采样。乐器组合和音高关系可直接比较；合奏的响度还取决于实际人数、音区和演奏法。</p>
+
+        <h3>同度重复与向下八度扩展</h3>
+        <p>同度重复保留原线的音高位置。圆号与小号或长号同度，可以强化原声部并调整硬度。两件硬音质铜管逐线重复容易过于集中，三声部里较少这样全叠。可以只重复主线或低音，也可让几个原声部都加上同度乐器。</p>
+        <table class="lesson-table">
+          <caption>四部原型常见的低八度副本</caption>
+          <thead><tr><th scope="col">所复制的原声部</th><th scope="col">用途</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">低音向下</th><td>最常用。第三长号或两支圆号吹原低音，大号在下一八度复制，增强底部而不改变原先的低音走向。</td></tr>
+            <tr><th scope="row">高音、低音向下</th><td>一方面让低音更宽厚，另一方面让高声部的旋律在中间音区还有一条可辨的副本。</td></tr>
+            <tr><th scope="row">高音、中音、低音向下</th><td>进一步延伸音域。高、中声部的副本有时落在原型的空处，可承担一部分填充作用；需要新音时再另写填充声部。</td></tr>
+          </tbody>
+        </table>
+        <p>先检查每条副本的实际音高是否落在可用音区，再决定是否需要同度加人。低音扩展与高声部同度加强可以同时使用。</p>
+      </section>
+
+      <section aria-labelledby="brass-melody">
+        <h2 id="brass-melody">第三节 单声部旋律的配置及音色结合</h2>
+        <h3>同度重叠</h3>
+        <p>独奏保留乐器自己的起音和表情，同度重叠可让同一条线更集中，也可合成新的音色。安排混合重叠时，音高、吐音、断连、速度和分句要对齐。两三支同类乐器同度可标 <i>a 2</i>、<i>a 3</i>，增加分量而大体保留原色。小号加弱音器仍需要强奏时，也可通过同类叠加提高整体分量。</p>
+        <table class="lesson-table">
+          <caption>不同音色在同一实际音高上的结合</caption>
+          <thead><tr><th scope="col">搭配</th><th scope="col">效果与使用条件</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">小号＋长号</th><td>硬音质保留，声音集中而明亮。同度的适用区较窄，更常让长号在小号下方低八度。</td></tr>
+            <tr><th scope="row">圆号＋大号</th><td>合起来温和圆润，但好用的共同音区有限，同度较少使用。</td></tr>
+            <tr><th scope="row">小号＋圆号</th><td>常在中、高音区使用。圆号缓和小号的硬度；强奏若不加圆号人数，小号通常仍居主导。</td></tr>
+            <tr><th scope="row">长号＋圆号</th><td>声音丰满，长号的金属感可被软化。弱奏容易相融。</td></tr>
+            <tr><th scope="row">小号＋圆号＋长号</th><td>多种音质合成整体铜管色，主要增加力度和密度，独奏个性会减弱。四种同时同度更少用。</td></tr>
+          </tbody>
+        </table>
+
+        <h3>八度重叠与上下层音色</h3>
+        <p>八度重叠让同一旋律占据两个音高层。两支小号或两支长号可组成同音色八度；混合音色通常按各自音区顺置，最常用一层高、低八度。小号在长号上方适合需要亮度和分量的强奏。圆号可和小号或长号形成一明一厚的组合；长号在大号上方的八度常用来写低音旋律。</p>
+        <p>每层分别只用一种音色时，上下两种颜色仍可听辨。想让两层的音色与分量接近，可让每层都用同度混合。例如两个八度层分别由一支圆号与一支长号同奏。</p>
+        <div class="music-demo" id="brass-melody-doubling">
+          <div class="music-demo-toolbar">
+            <h4>同一小号乐句的三种重叠</h4>
+            <label>旋律配置 <select>
+              <option value="solo">小号独奏</option>
+              <option value="horn">加圆号同度</option>
+              <option value="trombone">加长号同度</option>
+              <option value="octave">加长号低八度</option>
+            </select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="比较小号旋律、圆号或长号同度，以及长号低八度"></figure>
+        </div>
+
+        <h3>加厚式旋律的三种配置</h3>
+        <p>加厚式旋律的依附线与主线同时活动，形成三度、六度或其他音程。主线必须可辨；依附线的力度、发音和分句应随主线。靠得较近的两条线先用同音色安排，例如两支小号分别吹主线和低三度。跨音质的声部若用不同的音头或响度，容易听成两条独立旋律。</p>
+        <ul>
+          <li><strong>同音色配置。</strong> 一对小号、圆号或长号各奏一条，尤其适合主线与依附线密集时。</li>
+          <li><strong>整组八度分层。</strong> 主线和依附线一起移八度，交给另一对乐器。例如两支小号在上，两支长号复制低八度，两个音层都保留原来的内部音程。</li>
+          <li><strong>同度并置。</strong> 圆号在原音高同度复制小号或长号上的线条，可以软化音质。按需要复制主线、依附线或整组。</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="brass-chords">
+        <h2 id="brass-chords">第四节 和弦的配置</h2>
+        <p>宽阔铜管和弦同时需要高处的清晰度、中间的连续感和低处的支撑。较高的管声容易越出和弦；中部留得过空，低音和高层则会各自成块。可以固定和弦和高、低外声，逐项调整中间音和乐器。</p>
+        <h3>高处密集与中音填充</h3>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">配置</th><th scope="col">音高与乐器如何分配</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">硬音质的高音密集</th><td>让小号和长号在较高处密集排列。长号位置及其上部的紧密程度尤其影响整体亮度。三支小号或长号各自组成完整和弦时，音响更完整。</td></tr>
+            <tr><th scope="row">高层和低层的接合</th><td>可在三支长号的高层之下，用较低的圆号和大号作八度低音；也可用小号、长号包住较软的圆号，保持外缘的硬音质。</td></tr>
+            <tr><th scope="row">中音区密集填充</th><td>若高处的小号与低铜管分开，先在中间添和弦音。如小号持有 C5–E5–G5、大号吹 C3，在中间用圆号添 G3。填充声部可按分量各用一支圆号。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="brass-chord-balance">
+          <div class="music-demo-toolbar">
+            <h4>固定外声的铜管和弦配置</h4>
+            <label>和弦配置 <select>
+              <option value="bright">高音密集</option>
+              <option value="filled">中音填充</option>
+              <option value="softened">加圆号同度软化</option>
+            </select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="比较铜管和弦的高音密集、中音填充和同度软化"></figure>
+        </div>
+
+        <h3>音质软化与完整和弦分层</h3>
+        <p>让圆号同度重叠部分或全部小号、长号的和弦音，可以缓和硬音质。若圆号位于外侧，包住一条较硬的管声，整体也可变柔。填充或软化时，圆号是在改和弦的整体音色，通常可以一音一支；需要圆号独立与强奏小号对抗时，再考虑加倍。</p>
+        <p>更宽的和弦可让小号、圆号、长号各自奏成完整的和弦层，再把各层合起来。比如 C 大三和弦的小号层写 C5–E5–G5，圆号层写 E4–G4–C5，长号层写 C3–E3–G3，大号再稳住底部。每层按自己的自然音区排列，少数共同音可以重叠。人数较少时，可通过调整各层力度取得平衡。</p>
+
+        <h3>顺置、交置、夹置与叠置</h3>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">排列</th><th scope="col">常见用途</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">顺置</th><td>高到低按乐器音区分层。小号担任旋律时清楚；若小号太高、中间又薄，须补内声。</td></tr>
+            <tr><th scope="row">交置</th><td>圆号和长号在中音区交错，帮助两种音质相互衔接。</td></tr>
+            <tr><th scope="row">夹置</th><td>用外层音质改变总体听感。圆号在外可软化，硬音质铜管在外可保留明亮的边缘。</td></tr>
+            <tr><th scope="row">叠置</th><td>在交界的同一和弦音上同时用两种音色，可减轻分层的割裂，所得色彩偏暗，在铜管和弦中较少用。</td></tr>
+          </tbody>
+        </table>
+        <aside class="lesson-callout"><p><strong>先听清外声，再补中层。</strong> 高音要突出时让小号或长号领出，出现中空时在实际音高上找可填入的位置。需要软化，可保留原音高并加入圆号同度。</p></aside>
+      </section>
+    </main>
+  </body>
+</html>

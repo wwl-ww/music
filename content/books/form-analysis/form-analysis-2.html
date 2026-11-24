@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第二章 乐段（一）｜曲式学基础教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./form-analysis-2.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">曲式学基础教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第二章 乐段（一）</h1>
+      <p class="intro">一段旋律可以在中途稍作停顿，也可以在某处真正收住。辨认乐段从结尾入手，再看前面的乐句、乐节和乐汇怎样把一个相对完整的乐思组织起来。</p>
+
+      <section aria-labelledby="period-concept">
+        <h2 id="period-concept">乐段的概念</h2>
+        <p><strong>乐段</strong>是最小的曲式结构。短小的作品可以用一个乐段完成，称为<strong>一段曲式</strong>。在二段曲式或三段曲式中，乐段可以成为组织各部分的基本单位。较大作品内部也常有乐段，例如一首长曲开头完整陈述的旋律。</p>
+        <ul>
+          <li><strong>明确的乐思。</strong> 旋律、节奏与调性可以共同建立一个可辨认的音乐形象。仅凭一个停顿，无法把连接或过渡材料确认为一个完整乐段。</li>
+          <li><strong>相对完整的结构。</strong> 篇幅可以很短，内部仍有提出、继续与收束的关系。例如上下句一呼一应，共同完成一个意思。</li>
+          <li><strong>明确的终止。</strong> 终止使前面的音乐形成一个相对完整的单位，常可由旋律落点与和声进行共同确认。本调完全终止是常见选择，乐段也可以在属调上终止，或采用与所在位置相称的其他终止。</li>
+        </ul>
+        <p><strong>乐段</strong>说明作品的一部分具有什么结构，<strong>主题</strong>说明一个乐思在作品中起什么作用。主题常在全曲或大段落开头建立音乐性格，可以采用乐段的结构。位于其他位置的乐段也可承担不同任务，例如独立陈述一个对比性的乐思。</p>
+      </section>
+
+      <section aria-labelledby="period-units">
+        <h2 id="period-units">乐段的细部结构</h2>
+        <p>最常见的乐段由<strong>上句</strong>和<strong>下句</strong>组成。一个乐句常能划成两个较小的<strong>乐节</strong>，也称短句。乐节还可能由几个<strong>乐汇</strong>组成。乐汇是旋律中可以辨认的最小结构单位，常由几个音和一个重心形成。</p>
+        <div class="music-demo" id="period-structure-demo">
+          <div class="music-demo-toolbar">
+            <h3>两句乐段的层级与终止</h3>
+            <button type="button" aria-pressed="true" data-analysis-whole>全段</button>
+          </div>
+          <div class="timeline-frame" data-analysis-timeline></div>
+          <dl class="analysis-description" aria-live="polite">
+            <dt data-analysis-section>全段</dt>
+            <dd data-analysis-description>上句半终止、下句完全终止</dd>
+          </dl>
+          <p class="music-demo-cue analysis-status" data-analysis-status role="status"></p>
+          <figure data-analysis-score aria-label="C 大调两句乐段，上下句各四小节，第四小节为半终止，第八小节为完全终止"></figure>
+        </div>
+        <table class="lesson-table">
+          <caption>示范谱中的结构层级</caption>
+          <thead><tr><th scope="col">层级</th><th scope="col">上句</th><th scope="col">下句</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">乐句</th><td>第 1–4 小节，停在属和弦</td><td>第 5–8 小节，属和弦解决到主和弦</td></tr>
+            <tr><th scope="row">乐节</th><td>1–2、3–4 小节</td><td>5–6、7–8 小节</td></tr>
+            <tr><th scope="row">乐汇</th><td colspan="2">第 1、5 小节的 G–A–C 各组成一个短、短、长的乐汇，随后接上较舒展的两个四分音符。</td></tr>
+          </tbody>
+        </table>
+        <p>这个乐段的第 1、5 小节相同，上下句因此有明显的关系。第 2、6 小节的节奏放宽，为每句中的第一个乐节收尾。第 4、8 小节的和声终止划出更高一层的乐句边界。乐段可以有三句、四句或更多句，也可以一气呵成而难以分句。乐句也可能没有明确的乐节，乐节内部有时只适合做到较粗的划分。</p>
+        <details class="lesson-aside">
+          <summary>跨过小节线的两个乐节</summary>
+          <div class="lesson-aside-content">
+            <p>舒伯特钢琴奏鸣曲 Op. 53 的开头先由伴奏引入，旋律在第 2 小节后半进入。上句的两个乐节都从小节后半起，在另一个小节的前半收住。</p>
+            <table class="lesson-table">
+              <thead><tr><th scope="col">上句内部</th><th scope="col">起点</th><th scope="col">收束位置</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">第一乐节</th><td>第 2 小节后半</td><td>第 4 小节前半</td></tr>
+                <tr><th scope="row">第二乐节</th><td>第 4 小节后半</td><td>第 6 小节前半</td></tr>
+              </tbody>
+            </table>
+            <p>第 4 小节的两半分属不同乐节，第 6 小节的两半分别属于上句与下句。伴奏的小节线贯穿全段，旋律的起点和收束另有自己的位置。</p>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="period-development">
+        <h2 id="period-development">重复、变奏、模进与再现</h2>
+        <p>这几种手法都能使前面出现的材料再次被认出来。分析时分别看它<strong>在什么时候回来</strong>，以及<strong>保留或改变了什么</strong>。同一次出现可以同时属于两个维度，例如开头的主题经过中段之后带着装饰回来，是带有变奏的再现。</p>
+        <table class="lesson-table">
+          <caption>由同一乐汇派生的四种写法</caption>
+          <thead><tr><th scope="col">手法</th><th scope="col">识别依据与作用</th><th scope="col">示意</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">重复</th><td>原型之后紧接着原样再奏。它能强化印象、平衡前后结构。连续重复还会积累期待，为后面引入新材料或主题回归作准备。</td><td>G–A–C → G–A–C</td></tr>
+            <tr><th scope="row">变奏</th><td>保留可辨认的骨架，改变旋律装饰、节奏、声部、和声、织体或音色。加入经过音或其他装饰音的<strong>加花</strong>，是中国民间器乐常见的变奏方式。</td><td>G–A–C → G–A–B–C</td></tr>
+            <tr><th scope="row">模进</th><td>把乐汇、乐节或乐句接连移到新的高度，保持大致的音程关系和节奏。可以连续多次，也可以伴随变奏。连续上行或下行常改变音势，具体还取决于速度、力度与织体。</td><td>G–A–C → A–B–D</td></tr>
+            <tr><th scope="row">再现</th><td>经过其他材料或一段发展，原来的主题或主要材料重新出现。它可以原样回来，也可保留骨架并改变细节。</td><td>原材料 → 中间发展 → 原材料</td></tr>
+          </tbody>
+        </table>
+        <p>模进的辨认依据是移高或移低后保留的轮廓和节奏，调内模进的个别音程可以随音阶改变。再现的辨认依据是前后出现相隔一段过程，它常在比眼前一两个乐汇更大的范围内起作用。</p>
+      </section>
+
+      <section aria-labelledby="period-cell">
+        <h2 id="period-cell">乐汇与动机</h2>
+        <p>把一组音作为<strong>乐汇</strong>，说的是它在旋律里自成一个小单位。把它作为<strong>动机</strong>，说的是它的节奏与音程特征能成为生长出更多音乐的材料。一个乐汇可以承担动机功能，也可以只在当下的乐句里出现。</p>
+        <p>示范谱中第 1 小节的 G–A–C 是一个乐汇。它的短短长节奏在第 3 小节结合不同的音程方向再次出现，第 5 小节又恢复原型。这组特点参与组织整个乐段，因此可以说明它的动机作用。</p>
+      </section>
+
+      <section aria-labelledby="period-cell-shape">
+        <h2 id="period-cell-shape">乐汇的构成与边界</h2>
+        <p>一个乐汇通常围绕一个强拍，大约占一小节，可以从强拍开始，也可以从上一小节的弱部引向强拍。快速的单拍子音乐中，一组音还可能统辖两个重音，占到两小节。小节线标记节拍循环，乐汇边界则来自听得到的分组，两者可以落在不同位置。</p>
+        <table class="lesson-table">
+          <caption>二拍子中同一音组的两种起点</caption>
+          <thead><tr><th scope="col">类型与谱例</th><th scope="col">节拍与听感</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">强拍起<br>
+              <svg class="inline-staff inline-staff-wide" viewBox="0 0 86 43" role="img" aria-label="G、A 为八分音符，从小节第一拍开始，接四分音符 C">
+                <path class="inline-staff-lines" d="M2 10h82M2 15h82M2 20h82M2 25h82M2 30h82"/>
+                <path d="M13 10v20M27.7 25V12M45.7 22.5V9.5M68.7 17.5V4.5"/><path d="M27.7 12L45.7 9.5" style="stroke-width:2.4"/>
+                <text x="22" y="25">&#xE0A4;</text><text x="40" y="22.5">&#xE0A4;</text><text x="63" y="17.5">&#xE0A4;</text>
+                <text class="inline-staff-count" x="23" y="41">强</text>
+              </svg>
+            </th><td>G–A 从强拍起，与后面的长音合成一组。</td></tr>
+            <tr><th scope="row">弱拍起<br>
+              <svg class="inline-staff inline-staff-wide" viewBox="0 0 86 43" role="img" aria-label="小节线前为弱拍上的八分音符 G、A，小节线后为强拍上的四分音符 C">
+                <path class="inline-staff-lines" d="M2 10h82M2 15h82M2 20h82M2 25h82M2 30h82"/>
+                <path d="M21.7 25V12M38.7 22.5V9.5M52 10v20M69.7 17.5V4.5"/><path d="M21.7 12L38.7 9.5" style="stroke-width:2.4"/>
+                <text x="16" y="25">&#xE0A4;</text><text x="33" y="22.5">&#xE0A4;</text><text x="64" y="17.5">&#xE0A4;</text>
+                <text class="inline-staff-count" x="16" y="41">弱</text><text class="inline-staff-count" x="63" y="41">强</text>
+              </svg>
+            </th><td>G–A 从上一小节的弱拍起，合成一组的重心落在小节线后的长音。</td></tr>
+          </tbody>
+        </table>
+        <p>时值拉长、休止或重音可以提示分组。时值都一样时，反复的音程轮廓也可以分组，例如连续两组各由三个等时值、向上跳进的音构成。若节奏和音高轮廓都没有清楚的局部分组，可以保留为连贯的乐句。弱拍起的音组到强拍时常伴随换和弦，弱拍收束的乐汇则常落到和弦音上。</p>
+        <details class="lesson-aside">
+          <summary>不完全乐汇、小乐汇与不等长乐汇</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li><strong>不完全乐汇。</strong> 开头一个强拍音先单独落下，后面出现反复的弱起音组。如果这个强拍音在节奏上与后面的音分开，而后续每组都由弱音引向同样的强拍落点，可以把开头理解为省去了弱起部分的乐汇。</li>
+              <li><strong>小乐汇。</strong> 有时一个普通乐汇分裂为两个更短的单位，各约原来的一半。慢板或复拍子中容易遇到，小乐汇可以落在没有强拍的位置。</li>
+              <li><strong>不等长乐汇。</strong> 一个乐句里可以交替出现一小节和两小节的乐汇。较短的一组若仍围绕自己的强拍完整展开，仍可作为普通乐汇。认定小乐汇要看它在相邻单位中的比例与作用。</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="period-motive">
+        <h2 id="period-motive">动机的运用</h2>
+        <p>动机通常出现在乐曲或大段落的开头，有容易辨认的节奏和音程特征，也提供重复、移高、改写或重新组合的余地。短材料在形成主题时常需要几次重复和变化，才会从旋律中凸显出来。它也可以在稍后才成为重点，例如开头不起眼的片段，在展开中被抽出并由不同声部反复接续。</p>
+        <p>贝多芬《第五交响曲》开头两次使用同样的短短短长节奏。第一次是三个 G 引向降 E，第二次是三个 F 引向 D。音高变了，节奏和下行三度的关系仍能相认。这种写法建立了开头主题的特征，后面的发展还能只保留它的节奏轮廓。
+          <svg class="inline-staff" style="--inline-notation-width: 10.5em" viewBox="0 -2 198 45" role="img" aria-label="八分休止后连续三个 G 八分音符，下行到带延长记号的降 E 二分音符。下一组休止后连续三个 F 八分音符，下行到跨小节延长的 D">
+            <path class="inline-staff-lines" d="M2 10h193M2 15h193M2 20h193M2 25h193M2 30h193"/>
+            <path d="M25.7 25V11M36.7 25V11M47.7 25V11M72.2 30V13M111.7 27.5V13.5M122.7 27.5V13.5M133.7 27.5V13.5M157.7 32.5V15.5M181.7 32.5V15.5"/>
+            <path d="M25.7 11h22M111.7 13.5h22" style="stroke-width:2.4"/>
+            <path d="M56 10v20M83 10v20M144 10v20M168 10v20M156 35Q166 42 177 35"/>
+            <text x="7" y="20">&#xE4E6;</text><text x="20" y="25">&#xE0A4;</text><text x="31" y="25">&#xE0A4;</text><text x="42" y="25">&#xE0A4;</text><text x="60" y="30">&#xE260;</text><text x="66.5" y="30">&#xE0A3;</text><text x="64" y="8">&#xE4C0;</text>
+            <text x="92" y="20">&#xE4E6;</text><text x="106" y="27.5">&#xE0A4;</text><text x="117" y="27.5">&#xE0A4;</text><text x="128" y="27.5">&#xE0A4;</text><text x="152" y="32.5">&#xE0A3;</text><text x="176" y="32.5">&#xE0A3;</text><text x="174" y="8">&#xE4C0;</text>
+          </svg>
+        </p>
+        <p>海顿《第 104 交响曲》第一乐章的主部有一组较平常的同音短拍，接两个较长音。它初次出现只是主题的一小部分，后来被抽出来反复发展，成为展开部的核心。这和开头就被突出强调的动机形成另一种用法。
+          <svg class="inline-staff" style="--inline-notation-width: 8em" viewBox="0 0 143 40" role="img" aria-label="海顿动机简示，四个 A 四分音符后，接 B、A 两个二分音符">
+            <path class="inline-staff-lines" d="M2 9H141 M2 14H141 M2 19H141 M2 24H141 M2 29H141"/>
+            <path d="M18 21.5V5.5 M35 21.5V5.5 M52 21.5V5.5 M69 21.5V5.5 M80 9V29 M103 19V35 M126 21.5V5.5"/>
+            <text x="12" y="21.5">&#xE0A4;</text><text x="29" y="21.5">&#xE0A4;</text><text x="46" y="21.5">&#xE0A4;</text><text x="63" y="21.5">&#xE0A4;</text>
+            <text x="103" y="19">&#xE0A3;</text><text x="120" y="21.5">&#xE0A3;</text>
+            <circle cx="14.7" cy="27" r="0.8"/><circle cx="31.7" cy="27" r="0.8"/><circle cx="48.7" cy="27" r="0.8"/><circle cx="65.7" cy="27" r="0.8"/>
+            <path d="M105 23Q113 31 123 25"/>
+          </svg>
+        </p>
+        <p>判断一段重复是否具有动机作用，要追踪它参与了哪些乐句的构成、是否承担发展中的变化。持续出现的伴奏型可以只起衬托作用。有些连贯的主题也没有容易分离的动机。</p>
+      </section>
+
+      <section aria-labelledby="period-phrase">
+        <h2 id="period-phrase">乐节、乐句与终止</h2>
+        <p><strong>乐节</strong>把乐句内部划成若干部分。它的边界常靠节奏伸缩、停顿或新一轮材料进入形成。<strong>乐句</strong>在更大的层次上收束，句末有与之相配合的终止，可以只是停在属和弦的半终止，也可以回到主和弦。完整的乐段表达一个相对完整的乐思，其中的上句往往保留继续展开的余地。</p>
+        <p>示范谱中第 2 小节的尾音和第 3 小节的新乐节构成节奏分界，第 4 小节却还有明确的属和弦半终止。第 8 小节的属和弦解决到原位主和弦，旋律同时落到主音，形成完全终止。这样，同样长的两个乐句便有了不同分量的结尾。</p>
+        <table class="lesson-table">
+          <caption>朱践耳《交响幻想曲》商调式主题的两处句尾</caption>
+          <thead><tr><th scope="col">位置</th><th scope="col">谱面依据</th><th scope="col">结构作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">上句</th><td>旋律停在羽音，形成明显的断句。下方的大七和弦仍有较强的不协和。</td><td>旋律已划出句界，和声保留继续进行的张力。</td></tr>
+            <tr><th scope="row">下句</th><td>和声由羽和弦解决到商和弦。在这个商调式主题里，羽和弦起属功能，商和弦起主功能。</td><td>属到主的解决收住了上下两句，完成全段终止。</td></tr>
+          </tbody>
+        </table>
+        <aside class="lesson-callout"><p><strong>先分清停顿的层级，再判断句长。</strong> 古典风格常见两个两小节乐节合成一个四小节乐句，两个四小节乐句合成一个乐段。改变句长或使用更复杂的和声，同样可以保留上句留下余地、下句完成收束的关系。</p></aside>
+        <details class="lesson-aside">
+          <summary>不同调性层的句末收束</summary>
+          <div class="lesson-aside-content">
+            <p>在<strong>多调进行</strong>中，不同声部可以同时突出不同的调中心。例如低音沿 C 大调进行，旋律和内声部则围绕降 D 大调。上句的低音和声停在升五音的属和弦，其中升 D 与降 D 大调的二级降 E 等音。下句的低音由 C 大调的属和弦解决到主和弦。在这一例中，两个乐句分别具有半终止与完全终止的作用。给结构画界时，可以分层核对各声部，再确定哪一层提供了两句的终止。</p>
+          </div>
+        </details>
+      </section>
+    </main>
+  </body>
+</html>

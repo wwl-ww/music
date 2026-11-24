@@ -9,11 +9,11 @@ const stringParts = [
 
 export function encodeScore(material, staves, tempo, timbre, splitVoices = false) {
   if (material.scoreTracks) {
-    const tracks = material.scoreTracks.map(({ name, program, phrase }) => String.raw`
-      \track "${name}"
-      \staff { score }
+    const tracks = material.scoreTracks.map(({ name, program, phrase, staffLines, notationOnly, tuning }) => String.raw`
+      \track "${name}" ${notationOnly ? '{ mute }' : ''}
+      \staff { score${staffLines ? ' (' + staffLines + ')' : ''} }
       \instrument ${program}
-      \tuning (none)
+      ${program === 'percussion' ? '' : '\\tuning (' + (tuning?.join(' ') ?? 'none') + ')'}
       ${phrase}
     `).join('');
     return String.raw`\tempo ${tempo}` + tracks;

@@ -57,7 +57,7 @@ mountVariants('woodwind-timbres', {
   },
   clarinet: {
     scoreTracks: [part('clarinet', sharedPhrase)],
-    description: '这段实际音高在单簧管的低区，声音偏圆而有簧片色彩。谱例按实际音高显示。'
+    description: '这段旋律跨过降 B 调单簧管的低区与喉音区。D4、E4 在低区，F4、G4 已进入喉音区。'
   },
   bassoon: {
     scoreTracks: [part('bassoon', sharedPhrase)],

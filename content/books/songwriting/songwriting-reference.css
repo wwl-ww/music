@@ -1,0 +1,46 @@
+.song-title-samples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: 1rem;
+  max-width: var(--reading-width);
+  margin-block-start: 1rem;
+}
+
+.song-title-sample { margin: 0; min-width: 0; }
+.song-title-sample figcaption { margin-block-end: 0.45rem; font-weight: 650; }
+
+.song-title-paper {
+  display: grid;
+  gap: 0.45rem;
+  padding: 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 0.35rem;
+  background: var(--sheet);
+}
+
+.song-title-paper :is(h3, p) { margin: 0; }
+.song-title-top {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: end;
+  column-gap: 0.25rem;
+}
+
+.song-title-heading { grid-column: 2; text-align: center; }
+.song-title-heading h3 { font: 700 1.4rem/1.4 var(--title-font); }
+.song-title-heading p, .song-title-byline { color: var(--muted); font-size: 0.85rem; }
+.song-title-byline { text-align: end; }
+
+.song-title-markings {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem 0.6rem;
+  min-height: 1.8rem;
+  font-size: 0.85rem;
+}
+
+.song-title-paper .song-title-notation { display: block; width: 100%; margin: 0; }
+.song-title-notation :is(.song-title-lyrics, .song-title-degrees) { text-anchor: middle; }
+.song-title-notation .song-title-lyrics { font: 14px system-ui, sans-serif; }
+.song-title-notation .song-title-degrees { font: 600 20px system-ui, sans-serif; }

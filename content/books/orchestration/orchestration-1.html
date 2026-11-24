@@ -222,6 +222,8 @@
           </tbody>
         </table>
 
+        <p>同度重叠可以把两种音色融成一条线，八度分层则常让高、低两层保有各自的质地。第八章的<a href="./orchestration-8.html#tutti-unison">跨组同度重叠</a>和<a href="./orchestration-8.html#tutti-octaves">两个八度层的音色分配</a>分别演示这两种做法。</p>
+
         <h3>音区</h3>
         <p><strong>音域</strong>是一件乐器能演奏的总范围，<strong>音区</strong>是音域中的一段。在配器中有三层用法：</p>
         <ul>
@@ -230,6 +232,85 @@
           <li><strong>一组乐器内部。</strong> 高、中、低音乐器分担不同范围。例如把低声部交给大提琴、中层交给中提琴，是在用组内不同的音区属性。</li>
         </ul>
 
+        <figure class="notation-sample staff-range-comparison" id="orchestra-vertical-ranges">
+          <figcaption>四个乐器组的代表乐器音域</figcaption>
+          <p class="instrument-range-key range-keyboard-legend">
+            <span class="range-legend-common">实线连接参考音域两端</span>
+          </p>
+          <svg class="staff-range-plot" viewBox="0 0 433 286" role="img" aria-labelledby="orchestra-vertical-ranges-title orchestra-vertical-ranges-described">
+            <title id="orchestra-vertical-ranges-title">四个乐器组的代表乐器音域</title>
+            <desc id="orchestra-vertical-ranges-described">长笛 C4 至 C7；圆号（F 调） F2 至 C5；大提琴 C2 至 E5；定音鼓（四面鼓组） D2 至 A♭3。</desc>
+            <path class="staff-range-guide" d="M44 58H429 M44 100H429 M44 184H429 M44 268H429"/>
+            <path class="staff-range-focus" d="M44 184H429"/>
+            <path class="range-staff-lines" d="M44 124H429 M44 136H429 M44 148H429 M44 160H429 M44 172H429 M44 196H429 M44 208H429 M44 220H429 M44 232H429 M44 244H429"/>
+            <text class="range-staff-clef" x="48" y="160">&#xE050;</text>
+            <text class="range-staff-clef" x="48" y="208">&#xE062;</text>
+            <g class="staff-range-axis" text-anchor="end">
+              <text x="35" y="62">C7</text>
+              <text x="35" y="104">C6</text>
+              <text x="35" y="146">C5</text>
+              <text x="35" y="188" class="staff-range-focus-label">C4</text>
+              <text x="35" y="230">C3</text>
+              <text x="35" y="272">C2</text>
+            </g>
+            <g data-instrument-range="1">
+              <text class="staff-range-name" x="107" y="22">长笛</text>
+              <path class="staff-range-span" d="M107 58V184"/>
+              <g class="staff-range-pitch" data-staff-endpoint="C7">
+                <path class="range-staff-ledger" d="M96 112h22 M96 100h22 M96 88h22 M96 76h22 M96 64h22"/>
+                <text class="range-staff-symbol" x="101" y="58">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="120" y="62" text-anchor="start">C7</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="C4">
+                <path class="range-staff-ledger" d="M96 184h22"/>
+                <text class="range-staff-symbol" x="101" y="184">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="120" y="188" text-anchor="start">C4</text>
+              </g>
+            </g>
+            <g data-instrument-range="2">
+              <text class="staff-range-name" x="197" y="22">圆号</text>
+              <text class="staff-range-tuning" x="197" y="40">F 调</text>
+              <path class="staff-range-span" d="M197 142V250"/>
+              <g class="staff-range-pitch" data-staff-endpoint="C5">
+                <text class="range-staff-symbol" x="191" y="142">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="210" y="146" text-anchor="start">C5</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="F2">
+                <text class="range-staff-symbol" x="191" y="250">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="210" y="254" text-anchor="start">F2</text>
+              </g>
+            </g>
+            <g data-instrument-range="3">
+              <text class="staff-range-name" x="287" y="22">大提琴</text>
+              <path class="staff-range-span" d="M287 130V268"/>
+              <g class="staff-range-pitch" data-staff-endpoint="E5">
+                <text class="range-staff-symbol" x="281" y="130">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="300" y="134" text-anchor="start">E5</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="C2">
+                <path class="range-staff-ledger" d="M276 256h22 M276 268h22"/>
+                <text class="range-staff-symbol" x="281" y="268">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="300" y="272" text-anchor="start">C2</text>
+              </g>
+            </g>
+            <g data-instrument-range="4">
+              <text class="staff-range-name" x="377" y="22">定音鼓</text>
+              <text class="staff-range-tuning" x="377" y="40">四面鼓组</text>
+              <path class="staff-range-span" d="M377 196V262"/>
+              <g class="staff-range-pitch" data-staff-endpoint="A♭3">
+                <text class="range-staff-symbol range-staff-accidental" x="361" y="196">&#xE260;</text>
+                <text class="range-staff-symbol" x="371" y="196">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="390" y="200" text-anchor="start">A♭3</text>
+              </g>
+              <g class="staff-range-pitch" data-staff-endpoint="D2">
+                <path class="range-staff-ledger" d="M366 256h22"/>
+                <text class="range-staff-symbol" x="371" y="262">&#xE0A4;</text>
+                <text class="staff-range-note-label" x="390" y="266" text-anchor="start">D2</text>
+              </g>
+            </g>
+          </svg>
+          <p class="staff-range-summary">同一谱表上的四列分别取自木管、铜管、弓弦和打击乐。C4 是长笛参考音域的下端，在大提琴与圆号的参考音域内，超出这组定音鼓的调音范围。</p>
+        </figure>
         <h3>密度与厚度</h3>
         <p><strong>密度</strong>指声音听起来有多紧实、有分量。它受乐器自身的声音质地、同度叠加人数以及声部间距影响。在常用音区和力度下，铜管通常更饱满有力，弓弦次之，木管整体较轻。同度重叠可以让声音更实；近距离的和弦排列，通常也比疏开更集中。</p>
         <p><strong>厚度</strong>指同一时刻从最低音到最高音的跨度。加高八度、加低八度或把已有声部向两端展开，都能增加厚度。如果只让更多乐器齐奏现有的音，声音会更实，最低音和最高音仍处于原处。</p>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第六章 乐段结构歌曲的写作（下）｜歌曲写作教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./songwriting-6.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">歌曲写作教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第六章 乐段结构歌曲的写作（下）</h1>
+      <p class="intro">一个乐段可以只有上下两句，也可以连续展开到八句。句数改变之后，最需要重新安排的是哪里暂歇、哪里达到高潮、哪里完成真正的终止。</p>
+
+      <section aria-labelledby="song-two-phrase-period">
+        <h2 id="song-two-phrase-period">两句乐段</h2>
+        <p>许多民歌、戏曲唱段由相互呼应的<strong>上句</strong>和<strong>下句</strong>构成。下句通常在上句的基础上重复变化。常见的是上句停在属音或其他不稳定音级，下句回到主音，构成收拢性乐段。若下句停在需要继续的音级上，则形成开放性乐段，适合续接新的材料。</p>
+        <p>上下句也可都落在主音。上句落在高八度，下句平稳降到低八度，仍可形成终止的强弱层次。判断时可一并比较落音的音区、后续有没有换气和伴奏是否完成主和弦。与词的配合也有不同可能，例如四句词各以两句合成一个乐句。下句还可从上句抽出附点或跳进动机，借模进和扩充造成高潮，写成 5＋8 一类不等长的结构。</p>
+        <div class="music-demo" id="song-two-phrase">
+          <div class="music-demo-toolbar">
+            <h3>两句乐段的开放与收拢</h3>
+            <label>上下句处理 <select>
+              <option value="closed">上句开放，下句收拢</option><option value="open">开放性乐段</option><option value="octave">上下句落在不同八度的主音</option><option value="expanded">下句扩充</option>
+            </select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="两句乐段的四种句尾和长度"></figure>
+        </div>
+        <p>两句乐段既可以是一首短歌，也可以是较大曲式的一部分。起始乐段过短时，可整体重复一遍，使主题先充分呈示，再接下一段。</p>
+      </section>
+
+      <section aria-labelledby="song-short-period-variations">
+        <h2 id="song-short-period-variations">两句或四句乐段的重复与变化</h2>
+        <p>短小的乐段可以反复出现，歌词可以变，主要音调和节奏型仍保持稳定。窄音域、舒展速度与少量变化适合延续倾诉性的语气。前几遍只调整句尾的节奏或落音，到末遍再提高音区、延长句子或用衬词形成高潮。还可在全段之后接较低音区的尾声，让情绪渐渐退下去。</p>
+        <div class="music-demo" id="song-repeated-phrase">
+          <div class="music-demo-toolbar"><h3>同一两句乐段的重复与变化</h3><button type="button" aria-pressed="true" data-analysis-whole>全曲</button></div>
+          <div class="timeline-frame" data-analysis-timeline></div>
+          <dl class="analysis-description" aria-live="polite"><dt data-analysis-section>全曲</dt><dd data-analysis-description>原型 → 两次重复变化 → 变化结束</dd></dl>
+          <p class="music-demo-cue analysis-status" data-analysis-status role="status"></p>
+          <figure data-analysis-score aria-label="两句乐段四次出现的歌词谱与时间轴"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="song-five-phrase-period">
+        <h2 id="song-five-phrase-period">五句乐段</h2>
+        <p>五句子歌可以从五句歌词出发。为创作歌曲谱曲时，也可以把四句词增加成五句，或把六句词中意义相连的两句并成一句。常见安排是前两句较平衡，第三句收紧、换音区或改变调式色彩，第四句逐步到达高潮，第五句收束。第五句还可回顾早先的句尾。同一调式体系的局部色彩变化可以参与分句，再由全段终止建立主要归属。</p>
+        <p>词有五句时，音乐仍须按实际停顿判断。两句词之间若紧接，歌词可以按五句读，曲调则可能按四句读。两种说法记录的是不同层次。</p>
+      </section>
+
+      <section aria-labelledby="song-six-phrase-period">
+        <h2 id="song-six-phrase-period">六句乐段</h2>
+        <table class="lesson-table">
+          <caption>六句乐段的两类展开</caption>
+          <thead><tr><th scope="col">写法</th><th scope="col">第四句的作用</th><th scope="col">最后两句</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">4＋2 型</th><td>前四句可成起承转合，也可组成两大句，第四句常出现较完整的收束。</td><td>第五句可从高八度或衬词开始，强调点题。第六句可回顾前段的句尾，再结束全段。</td></tr>
+            <tr><th scope="row">逐句展开型</th><td>第四句保持中间停顿，六句共同指向最后一个终止。也可按每两句安排一个发展阶段。</td><td>第五句可承接低区材料向上推到高潮，第六句回顾主题或点题收束。</td></tr>
+          </tbody>
+        </table>
+        <p>4＋2 型的前四句若能独立收住、后两句又具有较鲜明的对比，就兼有六句乐段和两段体的特征。后两句的规模和独立性会影响听法。长短不同的词句也可以放在相同长度的曲句里，做法包括压紧字多的部分、给字少的部分延音、把两句词合入一个气息等。</p>
+        <div class="music-demo" id="song-phrase-count">
+          <div class="music-demo-toolbar">
+            <h3>五句与六句的展开</h3>
+            <label>六句歌词的写法 <select>
+              <option value="unfolding">六句连成一段</option><option value="grouped">第四句收束，形成 4＋2</option><option value="five">合并中间两句，成为五句曲</option>
+            </select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="同一组六句歌词形成五句、4加2和连续六句的三种谱写方式"></figure>
+        </div>
+        <p>两个六句版本的第 1–3 句与第 5–6 句完全相同。第四句在主和弦上收住，再换气、起新句，前四句便有了独立段意。第四句悬在属和弦上时，后两句仍在完成前句开启的过程。要把 4＋2 进一步判断为两段体，还应考察后两句有没有独立的材料和完整的收束。</p>
+      </section>
+
+      <section aria-labelledby="song-extended-period">
+        <h2 id="song-extended-period">多句乐段</h2>
+        <p>七句、八句或更多乐句仍可构成一个连贯的乐段。写作这种段落时，常在第四句等容易听成结束的地方保留开放的落音和紧接的气息。自由诗的长短句可以通过一字一音、拖腔、词句重复和合并形成连续的音乐句法。</p>
+        <p>段落加长后，共同的短节奏、相近的弱起、旋律模进和局部重现都可以维持统一。音乐可以逐句积累，也可以在最后一句达到结束性高潮，再收回主音。反复出现的点题语言在更高的音区或更宽的节奏中重现时，听感可以比初次出现更突出。</p>
+        <div class="music-demo" id="song-many-phrases">
+          <div class="music-demo-toolbar"><h3>八句乐段的连续推进</h3><button type="button" aria-pressed="true" data-analysis-whole>全曲</button></div>
+          <div class="timeline-frame" data-analysis-timeline></div>
+          <dl class="analysis-description" aria-live="polite"><dt data-analysis-section>全曲</dt><dd data-analysis-description>呈示 → 推进 → 高潮 → 收束</dd></dl>
+          <p class="music-demo-cue analysis-status" data-analysis-status role="status"></p>
+          <figure data-analysis-score aria-label="保留统一弱起、延迟全段终止的八句歌词谱"></figure>
+        </div>
+        <aside class="lesson-callout"><p><strong>用中间的停顿与最终的终止划分层次。</strong> 乐句可以一再落定在局部音级。只有足够完整的收束，才会把这几个乐句合成独立的段落。</p></aside>
+      </section>
+    </main>
+  </body>
+</html>

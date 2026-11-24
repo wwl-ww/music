@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第十二章 曲调与声调｜歌曲写作教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./songwriting-12.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">歌曲写作教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第十二章 曲调与声调</h1>
+      <p class="intro">旋律改变了说话的长短和高低，听者仍应认得歌词。写歌时可借普通话的声调和语气找到旋律起伏，再把句子的重心安排在该听清的字上。</p>
+
+      <section aria-labelledby="song-word-tones">
+        <h2 id="song-word-tones">字正与倒字</h2>
+        <p>普通话的阴平、阳平、上声、去声，也就是一到四声，分别有平、升、低转、高降的基本走向。上声在连读中常只保留低部，两个上声相连时前一个通常读得近似阳平。谱曲取的是实际词组的语感，例如升降方向、前后字的相对高低，以及哪些字读得较轻。四种声调可以落在任何合适的音域。</p>
+        <table class="lesson-table">
+          <caption>「山头起雾」的声调与配曲</caption>
+          <thead><tr><th scope="col">字</th><th scope="col">连读时的线索</th><th scope="col">一种写法</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">山 · shān</th><td>阴平，音势平稳。</td><td>在同一个音高上略作停留。</td></tr>
+            <tr><th scope="row">头 · tóu</th><td>阳平，音势上扬。</td><td>一个字配两个向上的音。</td></tr>
+            <tr><th scope="row">起 · qǐ</th><td>上声处在去声前，低部尤其清楚。</td><td>配置在前后音之间相对较低的位置。</td></tr>
+            <tr><th scope="row">雾 · wù</th><td>去声，音势由高往低。</td><td>用下行的两音写出句尾。</td></tr>
+          </tbody>
+        </table>
+        <p>曲调和歌词的声调结合贴切，唱来字义清楚，称为<strong>字正</strong>。曲调走向和声调有出入，称为<strong>倒字</strong>。例如“头”的唱腔如果由高到低，容易失去阳平的上扬感。不过旋律还有音区、高潮、时值与发展方向，同一句里可能同时有字正和倒字。</p>
+
+        <div class="music-demo" id="song-tone-contours">
+          <div class="music-demo-toolbar">
+            <h3>「山头起雾」的三种音高安排</h3>
+            <label>旋律 <select><option value="natural">依照声调</option><option value="ambiguous">多处倒字</option><option value="emphasis">局部倒字突出动作</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="相同歌词与节奏下的三种旋律。声音用于示意旋律。"></figure>
+        </div>
+        <div class="music-demo" id="song-tone-voice">
+          <div class="music-demo-toolbar">
+            <h3>「山头起雾」的朗读与唱腔</h3>
+            <label>人声 <select disabled><option value="spoken">普通话朗读</option><option value="matched">演唱 · 依照声调</option><option value="reversed">演唱 · 两处倒字</option></select></label>
+            <button type="button" class="score-playback" aria-label="播放人声示范" hidden><span class="score-playback-icon" aria-hidden="true"></span></button>
+          </div>
+          <audio controls preload="none" aria-label="山头起雾的普通话朗读与合成唱腔" src="./audio/word-tones-spoken.mp3"></audio>
+          <p class="music-demo-cue" role="status">朗读与演唱均为合成人声。唱腔低于谱例八度，两个演唱版本的区别在于“头”和“雾”的音高走向。</p>
+        </div>
+        <p>若上下文正在强调“开始起雾”，可以抬高“起”，让它和“雾”处于同一高处，随后仍让“雾”的唱腔下落。上下文、语气重音和其他字的走向一起维持词义。多处倒字集中在一句里时，能帮助听者恢复词义的线索就少了。</p>
+      </section>
+
+      <section aria-labelledby="song-tone-phrasing">
+        <h2 id="song-tone-phrasing">词曲声韵的安排</h2>
+        <p>一般以字正为基础。音调与语音冲突可从两个方面判断。先看词义是否仍清楚，再看保留这个音有无明确的音乐作用，例如形成高潮、延续上行趋势、突出语气重心，或在一连串字正中留下局部变化。若改一两个音即可兼顾两方面，就有充足理由调整。</p>
+        <table class="lesson-table">
+          <caption>倒字对词义的影响</caption>
+          <thead><tr><th scope="col">判断维度</th><th scope="col">字正尤其重要</th><th scope="col">较有余地</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">曲式位置</th><td>主题句、高潮、句尾或全曲结尾的关键字容易成为听觉焦点。</td><td>经过性或连接性位置已有前后文帮助辨认。</td></tr>
+            <tr><th scope="row">音区与时值</th><td>高点、低点、强位和长音使一个字格外显眼。</td><td>中音区轻轻带过的短音较少承担词义重心。</td></tr>
+            <tr><th scope="row">音乐风格</th><td>说唱、戏曲、朗诵体、民歌歌谣体和古诗词谱曲通常更重声韵。</td><td>许多创作歌曲、通俗歌曲和借用欧美宣叙调手法的歌曲可按语气、节奏灵活安排。</td></tr>
+            <tr><th scope="row">歌词重复</th><td>关键词至少有一次清楚可辨的陈述。</td><td>词义确立后，后一次可通过音域、时值或声调变化继续发展。</td></tr>
+          </tbody>
+        </table>
+        <p>一个字跨多个音时，可在字头与后续行腔之间分配任务。<strong>先倒后正</strong>让字头暂时逆着声调，接下来的音恢复可辨的方向。例如阳平的“翔”配 A4–G4–C5，前两个音向下，随后明显上扬。<strong>先正后倒</strong>先用符合语音的音高交代字义，再把后半拖腔交给旋律发展。例如 G4–B4–G4 先上扬，后回落。这两种办法在戏曲、说唱的字腔处理中都常见。</p>
+        <p>分节歌通常以第一段词确定旋律。各段字数与重音能对齐时用同一谱。个别词与同一旋律冲突较大时，可以只改该处的起音、分字或行腔，保留原有句长和终止。谱上可用括号补写另段用到的音符，把词的段次标清。</p>
+
+        <div class="music-demo" id="song-stanza-tone-revision">
+          <div class="music-demo-toolbar">
+            <h3>分节歌的同曲配词与局部改调</h3>
+            <label>第二段词 <select><option value="unchanged">沿用原旋律</option><option value="revised">修正字头与句尾</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="第一段为河边灯火，第二段为晚风吹过。"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="song-diction">
+        <h2 id="song-diction">高音吐字与辅助词</h2>
+        <p>“日、驰、是、知”等字在高音上延长时，清楚的字头和能持续的韵母较难兼顾。若能调整音高或时值，可以把这样的字放到较短、较好发声的位置，把高音或长音留给相邻的实词。发音方便程度还取决于歌手音区、速度与实际语境。</p>
+        <p>“的、得、地”等辅助词多为轻读，负责连接，通常放在较轻、较短的音上。“远山的灯”把最高音和停留给“灯”，会比延长“的”更容易让人听出句子的中心。</p>
+        <div class="music-demo" id="song-helper-words">
+          <div class="music-demo-toolbar">
+            <h3>「远山的灯」的语气重心</h3>
+            <label>长音位置 <select><option value="particle">辅助词占高长音</option><option value="noun">实词承接高长音</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="同一句词的两种高音和长音分配。"></figure>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

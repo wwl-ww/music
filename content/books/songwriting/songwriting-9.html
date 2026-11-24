@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第九章 多段体歌曲写作和歌曲结构布局｜歌曲写作教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./songwriting-9.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">歌曲写作教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第九章 多段体歌曲写作和歌曲结构布局</h1>
+      <p class="intro">歌词需要的场景、叙事或情绪超过三个乐段时，可以让同一主题多次变奏，也可以组织多段不同的材料。段落多了，辨认回归的位置和判断哪些段落是一组，就比单纯给段落编号更重要。</p>
+
+      <section aria-labelledby="song-multipart-overview">
+        <h2 id="song-multipart-overview">多段体的结构关系</h2>
+        <p>多段体由四个或更多的乐段组成。字母表示可以听辨的音乐材料，括号表示它们在上一层怎样组成一组。序奏、间奏和尾声可以参与全曲布局。要把一个片段算成主要乐段，还需看它是否有自己的材料展开与收束。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">类型</th><th scope="col">示例</th><th scope="col">主要关系</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">变奏曲体</th><td>A、A₁、A₂、A₃</td><td>反复写同一主题，各次保留基本骨架并有新的变化。</td></tr>
+            <tr><th scope="row">复合两段体</th><td>〔A B〕〔C B〕或〔A B〕〔A C〕</td><td>两个两段体共享一个乐段。</td></tr>
+            <tr><th scope="row">回旋曲体</th><td>A B A C A</td><td>主部反复归来，不同插部交替出现。</td></tr>
+            <tr><th scope="row">带再现的多段体</th><td>A B C A 或 A B C D A</td><td>中间连续展开几段，开头的材料在最后再现。</td></tr>
+            <tr><th scope="row">并列多段体</th><td>A B C D……</td><td>各段接续展开新的材料，靠动机、调性或情绪进程维持整体。</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="song-variation">
+        <h2 id="song-variation">变奏曲体</h2>
+        <p>声乐变奏先让主题确立。后续各段可以保持乐句数、主要词位、主题音调或收束骨架，同时改变音区、调性、速度、力度、节奏和伴奏。人声要唱出不同的词，某些句子的节奏或音高可以整句保留，其他句子才发生变化。格局相似、每段都有点题句的歌词很适合这种处理。</p>
+        <div class="music-demo" id="song-variation-form">
+          <div class="music-demo-toolbar">
+            <h3>同一主题的三次变奏</h3>
+            <label>变奏次序 <select><option value="complete">A → A₁ → A₂ → A₃</option><option value="register">A 与 A₁ · 改变起始音区</option><option value="minor">A 与 A₂ · 同主音小调</option><option value="returnHigh">A 与 A₃ · 高区收束</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="同一主题的三次连续变奏，也可逐次与主题对照"></figure>
+        </div>
+        <p>单次变奏要能与主题对上，全套变奏还要有进程。谱例的 A₁ 抬高句头、保留句尾，A₂ 回到原音区并改用同主音小调，A₃ 恢复大调并把整句推向高区。同一位置的短句和落音仍让三次变化听得出同源。始终重复一句短小的点题曲调也可以加强统一。一句固定收尾若还没有展开为独立乐段，可以把它看作带有回旋意味的变奏。</p>
+      </section>
+
+      <section aria-labelledby="song-composite-binary">
+        <h2 id="song-composite-binary">复合两段体</h2>
+        <p>把两段体扩成两个主要组。〔A B〕接〔C B〕时，第二组更换起段、共用后段。四段可依次承担起、承、转、合。〔A B〕接〔A C〕时，两组从同一个 A 出发，后段不同。判定复合两段体，要看每一组是否有完整的起始和结束。</p>
+        <p>共同段可以更换歌词而保留曲调。为让新起段接到共同的 B，可以让 C 的后部逐渐靠近 A 通向 B 时的音区、节奏或收束方式。尾声可以再取共同段的动机来总结全曲。较大型的组织也可以用两个有共同中段的三段体，例如〔A B A〕和〔C B C〕。</p>
+      </section>
+
+      <section aria-labelledby="song-rondo">
+        <h2 id="song-rondo">回旋曲体</h2>
+        <p>反复出现且起主导作用的乐段是<strong>主部</strong>，穿插在两次主部之间的不同乐段是<strong>插部</strong>。最典型的是 A B A C A，也可扩成 A B A C A D A。主部常较方整、易于辨认，插部的长度可以不同，在速度、节拍、调性、音区和句式上也可以有明显对比。</p>
+        <p>A 可以持续回到主调。B 和 C 各自采取同主音大调、关系大调等不同调性，再把听觉带回原来的主部。歌词已经按回返的叙述方式写成时，主部和插部可以顺着这一顺序布置。必要时在插部末尾加一个短间奏，帮助速度和调性的复位。各插部还可以共用一个短尾音型，维持统一。</p>
+      </section>
+
+      <section aria-labelledby="song-reprise-multiple">
+        <h2 id="song-reprise-multiple">带再现的多段体</h2>
+        <p>在再现三段体的骨架中把中段扩成两个或更多独立段落，可以得到 A B C A 或 A B C D A。中间几段可从较慢的叙述逐步转为紧密的节奏，安排一次高潮，再放回开头的主题。再现可以保留原曲，也可以缩短拖腔、调整句法、发展末句或增写尾声，以完成全曲收束。</p>
+        <p>有些作品在材料上可以分为 A、B、C、A 四段。若 A 与 B 在速度和情绪上合成一个大组，而 C 与这一组形成强对比，全曲又能听出〔A B〕—C—A 的三部性轮廓。分段和高一层的组织可以同时讲清。</p>
+      </section>
+
+      <section aria-labelledby="song-parallel-multiple">
+        <h2 id="song-parallel-multiple">并列多段体</h2>
+        <p>A B C D 等多段依次展开。新段可以改变旋律、句长、节拍或调性。自由诗的场景转换和层层推进的情绪往往适合这种安排。每段都换曲调时，可以保留一个附点节奏、几个骨干音、原来句尾的落音，或用各段递升的高点统一全曲。逐段布置张力，最后一段才会听起来像前面几段的结果。</p>
+        <p>由分节民歌扩展成长篇叙事歌时，若各段出现新的曲调、数板和速度，仍可沿用原民歌的节奏框架或部分落音。一个作品可以在分段上是并列多段体，在材料上带有变奏性，并在较大的层次形成不再现三段体轮廓。判断时分别说明每一个层次的根据。</p>
+
+        <div class="music-demo" id="song-multiple-forms">
+          <div class="music-demo-toolbar">
+            <h3>多段结构的材料次序</h3>
+            <label>材料排列 <select><option value="pairedB">复合两段体 · 〔AB〕〔CB〕</option><option value="pairedA">复合两段体 · ABAC</option><option value="rondo">回旋曲体 · ABACA</option><option value="returning">带再现的多段体 · ABCA</option><option value="successive">并列多段体 · ABCD</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="有完整段落和终止的复合两段体，以及其他多段结构的材料次序"></figure>
+        </div>
+        <p>完整示例里的 A、C 各自展开，结尾都停在属和弦上，给接下来的 B 留出解决的空间。两个 B 用相同的曲调和终止各自收拢一组。辨认材料的回归之后，还要比较各个停顿的强弱，才能判断哪两个乐段属于同一组。其余选项以每段两小节显示材料次序。</p>
+      </section>
+
+      <section aria-labelledby="song-lyric-layout">
+        <h2 id="song-lyric-layout">歌词的结构布局</h2>
+        <p>歌词给出可能的分段位置，已经写成的旋律也会提出自己的发展要求。可以先找每一节的转折和反复出现的核心句，粗定段落，再根据曲调能走多远来移动边界。衬词、词组反复、末句重新出现，都可能扩大乐段或生成新段。</p>
+        <p>一首三节歌词可以用 A、A、A 反复同一旋律，可以让前两节唱 A、第三节改唱 B，也可以写成 ABA 或 ABC。还可把每节词写成一个两段体，例如先唱四句原词，再把末句和衬词写成 B，此后两节都用 AB。</p>
+        <table class="lesson-table">
+          <caption>两节各八句歌词的安排</caption>
+          <thead><tr><th scope="col">处理</th><th scope="col">示例</th><th scope="col">歌词怎么分给音乐</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">分节歌</th><td>A、AB、ABA 或 ABC</td><td>对每节词采用同一套曲调。一整节可写成一个多句乐段，也可在第 2 句或第 6 句后分为两段。把前两句与末两句交给同一材料，则可听出 ABA。</td></tr>
+            <tr><th scope="row">通谱安排</th><td>〔A B〕〔C B〕</td><td>两节词连起来构思，每节两段。首段各写各的，两节的后半复用 B。</td></tr>
+            <tr><th scope="row">通谱安排与阶段性回归</th><td>〔A B A〕〔C B C〕或〔A B A〕〔A C A〕</td><td>每一节内部都有回归，两节可共用中段或外段。中间分界由词意和音乐收束共同建立。</td></tr>
+          </tbody>
+        </table>
+        <aside class="lesson-callout"><p><strong>段落方案要随着曲调验证。</strong> 先保留歌词的重要转折，再比较曲调的停顿、高潮和回归是否落在合适的位置。这样可以判断原来的分段是否值得保留。</p></aside>
+      </section>
+    </main>
+  </body>
+</html>

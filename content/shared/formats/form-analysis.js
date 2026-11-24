@@ -1,5 +1,6 @@
 import { mountScore } from './score.js';
 import { mountTimeline } from './timeline.js';
+import { mountScoreReader } from './score-reader.js';
 
 export function mountFormAnalysis(container, { score, sections, barCount = sections.at(-1).last, wholeLabel = '全曲' }) {
   const scoreFigure = container.querySelector('[data-analysis-score]');
@@ -14,7 +15,7 @@ export function mountFormAnalysis(container, { score, sections, barCount = secti
   if (jump) {
     jump.add(new Option(wholeLabel, ''));
     for (const { id, label, first, last, rangeLabel } of sections) {
-      jump.add(new Option((rangeLabel ?? first + '–' + last + ' 小节') + ' · ' + label, id));
+      jump.add(new Option(label + ' · ' + (rangeLabel ?? first + '–' + last + ' 小节'), id));
     }
   }
   let described;
@@ -73,10 +74,18 @@ export function mountFormAnalysis(container, { score, sections, barCount = secti
       frame.scrollLeft = 0;
     }
     describe(selection);
-    player.selectBars(selection?.first, selection?.last, selection?.entry);
+    const playback = selection?.playback ?? selection;
+    player.selectBars(playback?.first, playback?.last, playback?.entry);
   }
 
   whole?.addEventListener('click', () => select(null));
   jump?.addEventListener('change', () => select(jump.value));
   select(null);
+
+  const title = container.querySelector('.music-demo-toolbar :is(h3, h4)');
+  mountScoreReader(title, scoreFigure, {
+    controls: [scoreFigure.querySelector('.score-controls'), jump?.closest('label') ?? whole].filter(Boolean),
+    navigation: jump ? null : frame,
+    preserveView: player.preserveSectionView
+  });
 }

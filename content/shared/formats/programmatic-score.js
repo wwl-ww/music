@@ -1,7 +1,7 @@
 import { pianoKeysMarkup } from './piano.js';
 import { mountScore } from './score.js';
 
-export function mountProgrammaticScore(container, { build, lowestPitch, octaves }) {
+export function mountProgrammaticScore(container, { build, lowestPitch, octaves, soundFontUrl }) {
   const scoreFigure = container.querySelector('[data-generated-score]');
   const piano = container.querySelector('[data-generated-piano]');
   const form = container.querySelector('form');
@@ -25,7 +25,7 @@ export function mountProgrammaticScore(container, { build, lowestPitch, octaves 
     if (score) {
       score.setNotes(notes);
     } else {
-      score = mountScore(scoreFigure, { notes, notation: 'staff', onPitchesChange: highlightPitches });
+      score = mountScore(scoreFigure, { notes, notation: 'staff', onPitchesChange: highlightPitches, soundFontUrl });
     }
   }
 

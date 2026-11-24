@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第三章 木管乐器与木管乐器组｜配器法基础教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./orchestration.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./orchestration-3.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">配器法基础教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第三章 木管乐器与木管乐器组</h1>
+      <p class="intro">同一条旋律交给长笛或双簧管，音高和节奏保持原样，起音和音色会改变。给木管配器，先确定乐器在哪个音区发声，再决定要保留独奏的个性、让两件乐器合成一种音色，还是让和弦里的各个音融成整体。</p>
+
+      <section aria-labelledby="woodwind-instruments">
+        <h2 id="woodwind-instruments">第一节 木管乐器概述</h2>
+        <h3>构造与发音</h3>
+        <p>木管乐器靠管内的空气柱振动发声。按下或松开音键，会改变音孔开闭，也就改变了参与振动的管长。长笛虽然常用金属制作，仍属于木管。区分这四类乐器时，先看气流怎样激发空气柱，再看管身形状。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">乐器</th><th scope="col">气流如何起振</th><th scope="col">管身与音质</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">长笛类</th><td>气流掠过吹口边缘，形成气簧。</td><td>主管近圆柱形。长笛与短笛的起音通常较柔。</td></tr>
+            <tr><th scope="row">双簧管类</th><td>气流使两片贴合的簧片振动。</td><td>圆锥形。双簧管、英国管带鲜明的簧片音色。</td></tr>
+            <tr><th scope="row">单簧管类</th><td>一片簧片与吹嘴的开口配合振动。</td><td>主管近圆柱形，通常与长笛一起归入软音质；各音区的差异很大。</td></tr>
+            <tr><th scope="row">大管类</th><td>双簧片经弯曲的吹管把振动传进管内。</td><td>圆锥形，管身折回以容纳较长的管道。大管与低音大管属于这一族。</td></tr>
+          </tbody>
+        </table>
+        <details class="lesson-aside">
+          <summary>管节、音孔与键孔</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>长笛由吹节、主节、尾节组成。双簧管分上节、下节和喇叭口。单簧管由吹嘴、小筒、上节、下节及喇叭口组成。大管由弯曲吹管、短节、底节、长节及喇叭口组成。</li>
+              <li>基本音孔供常用指法使用。键系还能控制手指够不到的音孔。常闭的键孔按键后开启，供一些变化音使用；常开的键孔可通过补充键关上，延长有效管长，取得最低的一些音。不同乐器的键系各有安排。</li>
+            </ul>
+          </div>
+        </details>
+
+        <h3 id="woodwind-ranges">音域、音区、力度与音色</h3>
+        <p>四种木管的音域互有重叠。同样是 D4，长笛在低区，双簧管接近低区，单簧管在低区，大管已进入较高的音区。力度记号必须和这种相对位置一起读。长笛低区的 <i>f</i> 很难盖过双簧管低区的 <i>f</i>；要让长笛的线条听清，往往先改音区或分工。</p>
+        <figure class="notation-sample">
+          <figcaption>四种木管乐器的实际音域</figcaption>
+          <p class="instrument-range-key"><span>实带为参考音域</span><span>虚线为延伸或极高音</span><span>单簧管以降 B 调为例</span></p>
+          <svg class="instrument-range" viewBox="0 0 592 178" role="img" aria-label="长笛 C4 至 C7，双簧管降 B3 至 F6，降 B 调单簧管 D3 至 F6，大管降 B1 至 D5。扩展音见下表。">
+            <path class="instrument-range-guide" d="M105 30V169 M177 30V169 M249 30V169 M321 30V169 M393 30V169 M465 30V169 M537 30V169"/>
+            <g class="instrument-range-axis" text-anchor="middle">
+              <text x="105" y="22">C1</text><text x="177" y="22">C2</text><text x="249" y="22">C3</text><text x="321" y="22">C4</text><text x="393" y="22">C5</text><text x="465" y="22">C6</text><text x="537" y="22">C7</text>
+            </g>
+            <g class="instrument-range-name">
+              <text x="94" y="58">长笛</text><text x="94" y="90">双簧管</text><text x="94" y="122">单簧管</text><text x="94" y="154">大管</text>
+            </g>
+            <rect class="instrument-range-band" x="321" y="46" width="216" height="15" rx="3"/>
+            <rect class="instrument-range-band" x="309" y="78" width="186" height="15" rx="3"/>
+            <rect class="instrument-range-band" x="261" y="110" width="234" height="15" rx="3"/>
+            <rect class="instrument-range-band" x="165" y="142" width="240" height="15" rx="3"/>
+            <path class="instrument-range-limit" d="M315 53.5H321 M537 53.5H561 M495 85.5H507 M495 117.5H513 M405 149.5H417"/>
+          </svg>
+        </figure>
+        <figure class="notation-sample" id="woodwind-range-keyboards" hidden></figure>
+        <table class="lesson-table" id="woodwind-range-table">
+          <caption>音域边界（实际音高，C4 为中央 C）</caption>
+          <thead><tr><th scope="col">乐器</th><th scope="col">参考音域</th><th scope="col">延伸与极高音</th></tr></thead>
+          <tbody>
+            <tr data-range-low="B3"><th scope="row">长笛</th><td data-range-main>C4–C7</td><td>带 B 尾管的长笛可下探至 B3。<span data-range-high>E7</span> 一带属于极高延伸音。</td></tr>
+            <tr><th scope="row">双簧管</th><td data-range-main>B♭3–F6</td><td><span data-range-high>G6</span> 属于高端延伸音。</td></tr>
+            <tr><th scope="row">降 B 调单簧管</th><td data-range-main>D3–F6</td><td>记谱 E3–G6。记谱 A6、B♭6 实际发 G6、<span data-range-high>A♭6</span>，都是极高音。</td></tr>
+            <tr><th scope="row">A 调单簧管</th><td>C♯3–E6</td><td>与降 B 调同一套记谱音域。对应的极高延伸为实际 F♯6、G6。</td></tr>
+            <tr><th scope="row">大管</th><td data-range-main>B♭1–D5</td><td><span data-range-high>E5</span> 为高端延伸。高音可用次中音谱号记写，音高不变。</td></tr>
+          </tbody>
+        </table>
+        <table class="lesson-table lesson-table-wide">
+          <caption>各音区的音色与力度倾向</caption>
+          <thead><tr><th scope="col">乐器</th><th scope="col">低区</th><th scope="col">中区</th><th scope="col">高区</th><th scope="col">极高区</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">长笛</th><td>柔暗，起音不易突出，耗气较多，适合弱奏。</td><td>甜美、透明，分量仍偏轻。</td><td>明亮、轻快，强弱比较灵活。</td><td>尖锐、穿透，气息负担大，适合需要突出音响的段落。</td></tr>
+            <tr><th scope="row">双簧管</th><td>粗涩、厚实，有分量，极弱起音较难。</td><td>圆润，善于歌唱性的旋律。</td><td>清脆、尖细，穿透力强。</td><td>紧张而尖锐，弱奏控制较困难。</td></tr>
+            <tr><th scope="row">单簧管</th><td>圆厚，簧片色彩明显，强弱余地大。</td><td>喉音区较淡，声音薄，和相邻音区衔接时容易听出差别。</td><td>清亮而圆润，强弱余地大。</td><td>尖锐，弱奏和音准的控制更难。</td></tr>
+            <tr><th scope="row">大管</th><td>厚实而略带粗涩，适合支撑低音。</td><td>偏暗，常显得沉静或迟缓。</td><td>声音较轻、较软，可承担旋律。</td><td>紧张，常用于有意突出音色的独奏。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="woodwind-timbres">
+          <div class="music-demo-toolbar">
+            <h4>同一乐句的四种木管音色</h4>
+            <label>乐器 <select><option value="flute">长笛</option><option value="oboe">双簧管</option><option value="clarinet">单簧管</option><option value="bassoon">大管</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="四种木管在相同实际音高上的音色比较"></figure>
+        </div>
+        <p>本章试听使用木管采样。实际合奏的力度平衡还取决于乐手与空间。</p>
+
+        <h3>吐音、泛音、颤音与震音</h3>
+        <p>吐音决定每个音怎样起声。连线内一般只在开头吐音，其余音靠持续气流和换指连接；多个同音要清楚分开，就需要再次起音。连续快音中，换指和舌头同时动作，速度还受音区、指法和发音清晰度限制。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">方法</th><th scope="col">动作</th><th scope="col">适用写法</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">单吐</th><td>每音用舌头重新起声，如 <i>tu</i>。</td><td>适合有清楚音头的句子，也是簧管乐器最常用的吐音。</td></tr>
+            <tr><th scope="row">双吐</th><td>交替用 <i>tu–ku</i> 等两种舌位。</td><td>有利于快速均匀的断奏或反复音，长笛较常用。</td></tr>
+            <tr><th scope="row">三吐</th><td>以 <i>tu–ku–tu</i> 等方式组织三个起音。</td><td>适合按三音一组的快速音型，如一组三连音。</td></tr>
+            <tr><th scope="row">弹吐</th><td>持续滚动舌尖形成花舌音。</td><td>可写 <i>flz.</i> 或 <i>flutter tongue</i>。耗气大，通常安排较短时段。</td></tr>
+          </tbody>
+        </table>
+        <p>长笛四种吐音都能用，但低区和极高区的快速断奏仍需留余地。簧管也可以使用部分复吐和花舌技巧，实际效果更依赖乐手、哨片和音区。快速同音反复和快速换音的难点不同，不能只凭谱面上音符的密度判断。</p>
+        <p><strong>泛音</strong>以超吹改变同一指法发出的振动分音，长笛最常用。<strong>颤音</strong>在主音和相邻音之间快速交替；<strong>震音</strong>可用两个相隔更远的音快速交替。长笛和单簧管常用，大管以中区较方便。双簧管和极端音区的具体音对要核对指法，特别是涉及小指换键、增音程或跨越换区的交替。</p>
+        <details class="lesson-aside">
+          <summary>长笛超吹与木管滑奏</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>低区实音指法可超吹取得高纯十二度的第三分音。低端纯五度内的指法还常用来取得高两个八度的第四分音。高八度虽是第二分音，写泛音效果时仍要比较普通指法与超吹所得的音色。</li>
+              <li>快速音阶与连续滑音是两种发声方法。单簧管可在特定音区借助半盖音孔、口型与气流做滑音；跨越各音区的同样效果需要按指法与乐手能力确认。</li>
+            </ul>
+          </div>
+        </details>
+
+        <h3>木管组编制与总谱记法</h3>
+        <p>木管组在总谱上通常按长笛、双簧管、单簧管、大管顺序排列，各族的变形乐器也在相应位置列出。双管编制内每支管是独立的乐器声部，常标Ⅰ、Ⅱ。两支管同处一个谱表，仍可演奏两条不同的线。</p>
+        <table class="lesson-table woodwind-shared-staff">
+          <caption>同一谱表上的两支木管</caption>
+          <thead><tr><th scope="col">演奏任务</th><th scope="col">记法与谱面</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">两管同奏</th><td>一条旋律上标 <i>a 2</i>。更大的编制可标 <i>a 3</i>、<i>a 4</i>。<svg class="inline-staff inline-staff-wide" viewBox="0 0 88 44" role="img" aria-label="同一条旋律上方标 a 2，两个音由两支管一起演奏。"><path class="inline-staff-lines" d="M2 17H86 M2 22H86 M2 27H86 M2 32H86 M2 37H86"/><text class="inline-staff-count" x="13" y="12">a 2</text><text x="24" y="32"></text><text x="51" y="29.5"></text><path d="M29 32V17 M56 29.5V14.5"/></svg></td></tr>
+            <tr><th scope="row">单管独奏</th><td>标Ⅰ或Ⅱ；第一支独奏也可标 <i>solo</i>。分声部写时Ⅰ符干通常朝上、Ⅱ朝下，另一支写休止。<svg class="inline-staff inline-staff-wide" viewBox="0 0 88 44" role="img" aria-label="旋律上方标Ⅰ，第一支管演奏。"><path class="inline-staff-lines" d="M2 17H86 M2 22H86 M2 27H86 M2 32H86 M2 37H86"/><text class="inline-staff-count" x="13" y="12">Ⅰ</text><text x="24" y="32"></text><text x="51" y="29.5"></text><path d="M29 32V17 M56 29.5V14.5"/></svg></td></tr>
+            <tr><th scope="row">两管分奏</th><td>节奏相同可共用符干；有不同节奏、休止或独立进行时，分别写符干。<svg class="inline-staff inline-staff-wide" viewBox="0 0 88 44" role="img" aria-label="两个同时发声的声部，第一管符干向上，第二管符干向下。"><path class="inline-staff-lines" d="M2 17H86 M2 22H86 M2 27H86 M2 32H86 M2 37H86"/><text x="24" y="22"></text><text x="24" y="32"></text><text x="51" y="24.5"></text><text x="51" y="37"></text><path d="M29 22V8 M24 32V43 M56 24.5V10 M51 37V43"/></svg></td></tr>
+          </tbody>
+        </table>
+        <p>换奏短笛、英国管、低音单簧管等乐器时，在声部标明乐器和换奏位置，并预留拿放乐器和准备吹奏的时间。移调总谱还要标清调种，并按该乐器的记谱关系写音与调号。实际音高总谱和分谱的写法须分别核对。</p>
+        <table class="lesson-table">
+          <caption>移调木管的记谱与发音</caption>
+          <thead><tr><th scope="col">乐器</th><th scope="col">谱上写 C5，实际发声</th><th scope="col">要得到实际 C5，应该写</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">降 B 调单簧管</th><td>B♭4，低大二度</td><td>D5</td></tr>
+            <tr><th scope="row">A 调单簧管</th><td>A4，低小三度</td><td>E♭5</td></tr>
+            <tr><th scope="row">F 调英国管</th><td>F4，低纯五度</td><td>G5</td></tr>
+            <tr><th scope="row">降 B 调低音单簧管（高音谱号）</th><td>B♭3，低大九度</td><td>D6</td></tr>
+            <tr><th scope="row">短笛</th><td>C6，高八度</td><td>C4</td></tr>
+            <tr><th scope="row">低音大管</th><td>C4，低八度</td><td>C6</td></tr>
+          </tbody>
+        </table>
+        <aside class="lesson-callout"><p><strong>先按实际音高配置，再换算记谱音高和调号。</strong> 例如实际 C 大调的 C–D–E，交给降 B 调单簧管时，分谱按 D 大调写 D–E–F♯；交给 A 调单簧管时，按 E♭ 大调写 E♭–F–G。</p></aside>
+        <figure class="notation-sample">
+          <figcaption>降 B 调单簧管的书写音与实际音</figcaption>
+          <p>写 C5
+            <svg class="inline-staff" viewBox="0 0 66 37" aria-hidden="true"><path class="inline-staff-lines" d="M2 7H64 M2 12H64 M2 17H64 M2 22H64 M2 27H64"/><text x="5" y="22">&#xE050;</text><text x="37" y="14.5">&#xE0A2;</text></svg>
+            实际发 B♭4
+            <svg class="inline-staff" viewBox="0 0 66 37" aria-hidden="true"><path class="inline-staff-lines" d="M2 7H64 M2 12H64 M2 17H64 M2 22H64 M2 27H64"/><text x="5" y="22">&#xE050;</text><text x="30" y="17">&#xE260;</text><text x="37" y="17">&#xE0A2;</text></svg>
+          </p>
+        </figure>
+      </section>
+
+      <section aria-labelledby="woodwind-chorale">
+        <h2 id="woodwind-chorale">第二节 合唱型四部和声的单管式与双管式组合</h2>
+        <p>合唱型四部和声有四条连续的线。S、A、T、B 依次指高音、中音、次中音、低音。比较木管配置时，可以先把这四条线固定，再决定哪两条线需要彼此融合、哪一条应从织体中突出。木管的每支管通常负责一个音，增加管数可以改变音色或加强某条线。</p>
+        <table class="lesson-table lesson-table-wide">
+          <caption>四条声部线的三种音色分配</caption>
+          <thead><tr><th scope="col">组合</th><th scope="col">S</th><th scope="col">A</th><th scope="col">T</th><th scope="col">B</th><th scope="col">听觉重点</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">单管式</th><td>长笛</td><td>双簧管</td><td>单簧管</td><td>大管</td><td>四条线的轮廓都比较鲜明，整体平衡更依赖各自的音区。</td></tr>
+            <tr><th scope="row">双管式</th><td>长笛Ⅰ</td><td>长笛Ⅱ</td><td>单簧管Ⅰ</td><td>单簧管Ⅱ</td><td>同色的两条线较易融合，形成上下两对。</td></tr>
+            <tr><th scope="row">单双管混合式</th><td>长笛</td><td>双簧管</td><td>单簧管Ⅰ</td><td>单簧管Ⅱ</td><td>两条下方线条同色，上方两条保留各自轮廓。</td></tr>
+          </tbody>
+        </table>
+        <p><strong>双管编制</strong>说的是乐队每类有几支管，<strong>双管式配置</strong>说的是这四条线怎么分配。在双管乐队里，完全可以只选长笛、双簧管、单簧管和大管各一支，做成单管式组合。</p>
+        <div class="music-demo" id="woodwind-chorale-voicing">
+          <div class="music-demo-toolbar">
+            <h4>同一四部和声的三种木管组合</h4>
+            <label>乐器配置 <select><option value="single">单管式</option><option value="paired">双管式</option><option value="mixed">单双管混合式</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="固定四条声部，比较三种木管配置"></figure>
+        </div>
+
+        <h3>单管式的音区平衡</h3>
+        <p>四种音色各自独立，适合需要各线清晰的段落。若四个声部都挤在中低区，长笛担任 S 时容易又轻又暗，双簧管担任 A 时反而容易冒出来。将原型整体抬高一个八度，是给乐器重新找音区；保留原型并加上八度副本，则是声部扩展。必须保留原音高时，可改分工或调整间距。单管式常从中高音域、开放排列和 <i>mf</i> 以下的力度着手。</p>
+
+        <h3>双管式的六种配对</h3>
+        <p>双管式常由上面两支同色管奏 S、A，下面两支同色管奏 T、B，先用顺置排列起稿，再检查两对声部之间的接合。即使落在范围内，组合也会因音区和强弱要求而改变。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">S、A</th><th scope="col">T、B</th><th scope="col">音色与适用条件</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">两支长笛</th><td>两支单簧管</td><td>软音质相配，较柔和。长笛的最低区仍须避免被下面声部盖住。</td></tr>
+            <tr><th scope="row">两支双簧管</th><td>两支大管</td><td>硬音质相配，起音鲜明而比较统一。</td></tr>
+            <tr><th scope="row">两支长笛</th><td>两支双簧管</td><td>多用于中高区，明亮而甜美。</td></tr>
+            <tr><th scope="row">两支单簧管</th><td>两支大管</td><td>适合中、低音域，强弱弹性较大。检查大管的上限和单簧管的下限。</td></tr>
+            <tr><th scope="row">两支长笛</th><td>两支大管</td><td>多用在较轻的段落，让大管上区与长笛下区接合，避免中间听起来断开。</td></tr>
+            <tr><th scope="row">两支双簧管</th><td>两支单簧管</td><td>音色融合较难，常用于有意保留上下两层区别的写法。</td></tr>
+          </tbody>
+        </table>
+
+        <h3>混合式、填充与声部扩展</h3>
+        <p>混合式可让 S、A 同色，也可让 A、T 或 T、B 同色；余下两条线分别用两个不同的音色。希望旋律和低音都突出时，先考虑让中间的 A、T 同色。四部写法中间有空隙，需要另写第五条填充线时，可以把它和相邻的 A 或 T 交给同类管。填充声部有自己的音，两个乐器同奏原声部则属于重叠。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">处理</th><th scope="col">增加的内容</th><th scope="col">常用位置</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">同度重叠</th><td>添一支管，同音同节奏地演奏原来的线，增强力度或把单色变成混合音色。</td><td>常用于 S，也可加强 A、T 或 B。叠加时总谱里的乐器位置可能与实际声部次序交错。</td></tr>
+            <tr><th scope="row">八度扩展</th><td>保留原型，在上方或下方添加原线的八度副本。</td><td>S 往上、B 往下、S/B 两端同时扩展，或 S/A/T 往上并让 B 往下。按需要选择双管式或混合式，也可借圆号补足。</td></tr>
+          </tbody>
+        </table>
+        <aside class="lesson-callout"><p><strong>和声骨架先成立，音色再加厚。</strong> 同度重叠加强原来的一条线；八度扩展改变它的外部音域；填充则在里面补上新的活动声部。</p></aside>
+      </section>
+
+      <section aria-labelledby="woodwind-color">
+        <h2 id="woodwind-color">第三节 木管乐器的音色结合</h2>
+        <h3>融合的条件</h3>
+        <p>把两支管写在同一条旋律线上，音高、节奏相同，听感仍可能完全由其中一支主导。先让两件乐器处在音量相称的音区，并使起音、断连、分句及力度变化一致。正常的音区顺序通常容易接合；强奏会扩大各音色的差异，弱奏比较容易融合。每支管约等量只是配器的起点，强区盖过弱区时应重新分配。</p>
+        <p>长笛和单簧管通常较柔，双簧管和大管的簧片色彩较硬。同类音质容易保持统一；异类相合时，软音质可以令硬音质圆润，硬音质可以令软音质更坚实。哪支管被听得更清楚，会随着旋律进入不同音区而变化。</p>
+
+        <h3>同音色与不同音色的同度重叠</h3>
+        <p>同度重叠让几支管演奏同一实际音高。两支长笛同度主要加密、加强，换成一支长笛加一支双簧管，还会改变音色。人越多，独奏时细微的音头和分句越难完整保留。</p>
+        <details class="lesson-aside">
+          <summary>两支同类木管在各音区的效果</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li><strong>长笛</strong>低区柔和朦胧，中区圆融，高区的响度提升最明显。</li>
+              <li><strong>双簧管</strong>中区比较融合，低区粗实有韧性，高区尤其响亮，簧片色彩更突出。</li>
+              <li><strong>单簧管</strong>低区厚实而偏冷，高区的同度强奏明亮有力，带近似小号的亮度。</li>
+              <li><strong>大管</strong>低区更浑厚，高区较轻而朦胧，与长笛低区的某些效果相近。</li>
+            </ul>
+          </div>
+        </details>
+        <table class="lesson-table">
+          <caption>两类木管的同度音色</caption>
+          <thead><tr><th scope="col">组合</th><th scope="col">容易形成的色彩</th><th scope="col">音区和主导音色</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">长笛＋单簧管</th><td>柔和、清秀、圆润。</td><td>中区弱奏较柔，长笛的轮廓可较明显；高处更明亮，单簧管的色彩可能稍占优势。</td></tr>
+            <tr><th scope="row">双簧管＋大管</th><td>浑厚、有力，仍保留双簧特性。</td><td>常用双簧管中低区与大管高区。双簧管通常略突出。</td></tr>
+            <tr><th scope="row">长笛＋双簧管</th><td>比长笛饱满，又可软化双簧管的硬度。</td><td>低区常取弱奏；高区声音厚实，双簧管的棱角较易听见。</td></tr>
+            <tr><th scope="row">双簧管＋单簧管</th><td>丰满、圆润，双簧音色有软化。</td><td>偏低时双簧管可较显眼，偏高时单簧管可较显眼。</td></tr>
+            <tr><th scope="row">单簧管＋大管</th><td>宽厚而略暗，兼有柔和及簧片质感。</td><td>常以单簧管中低区搭配大管中高区，主导色彩可随旋律位置改变。</td></tr>
+            <tr><th scope="row">长笛＋大管</th><td>柔暗而有层次。</td><td>共同好用的音区窄。长笛低区和大管高区的弱奏最有特色。</td></tr>
+          </tbody>
+        </table>
+        <details class="lesson-aside">
+          <summary>三种及以上木管的同度重叠</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>长笛与单簧管合奏时，加双簧管会增加清亮和穿透力，加大管则偏暗而柔和。</li>
+              <li>双簧管与大管合奏时，加单簧管仍可保留坚实的双簧音响；加长笛则让这一色彩多一层亮度。</li>
+              <li>继续增加同类管，主要增强密度和响度。四种音色全部同度较少用，通常适合强奏，单件乐器的音色容易被抹平。</li>
+            </ul>
+          </div>
+        </details>
+
+        <h3>八度重叠与音区层次</h3>
+        <p>同一旋律隔八度同时走，音高范围随之扩展。两支同类管仍以一种音色为基础：长笛和双簧管多取中高区，避免上下两层分量差太大；单簧管的可用区间较宽，强弱容易调节；大管多在中低区形成饱满的底色。</p>
+        <div class="music-demo" id="woodwind-octave-doubling">
+          <div class="music-demo-toolbar">
+            <h4>长笛与单簧管的同度和八度重叠</h4>
+            <label>重叠层次 <select><option value="solo">单簧管独奏</option><option value="unison">同度</option><option value="octave">长笛高八度</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="固定单簧管线条，比较长笛加入时的同度与八度重叠"></figure>
+        </div>
+        <table class="lesson-table">
+          <caption>不同音色的八度结构</caption>
+          <thead><tr><th scope="col">方法</th><th scope="col">高到低的示例</th><th scope="col">音响与使用条件</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">连续八度</th><td>一个八度可由长笛、双簧管承担，两个八度可用长笛、双簧管、大管，三个八度可用长笛、双簧管、单簧管、大管。</td><td>以乐器自然顺序安置比较常见。每层奏同一旋律，邻层各差八度。四个八度同时重叠很少用。</td></tr>
+            <tr><th scope="row">倒置的八度</th><td>单簧管在双簧管上方。</td><td>上层软、下层硬，可得到明亮而有支撑的复合音色。交换次序前先检查实际音区与控制力。</td></tr>
+            <tr><th scope="row">音组内加密</th><td>上层长笛Ⅰ＋单簧管Ⅰ同度；下层长笛Ⅱ＋单簧管Ⅱ同度，整体相差八度。</td><td>先确定各层的八度位置，再用同度增添人数。各层可以有相同的混合音色，也可以有不同的混合音色。</td></tr>
+            <tr><th scope="row">中空的隔八度</th><td>高层长笛，低两个八度的大管，中间没有同旋律的八度层。</td><td>跨度变大，声音往往分成两层。适合有意保留并行的两种色彩。</td></tr>
+            <tr><th scope="row">夹置的八度</th><td>长笛Ⅰ在最高层，双簧管居中，长笛Ⅱ在最低层，各相邻层差八度。</td><td>让同类管包住中间音色，中层较难单独被辨认。要把高低两端的音区分量一起核对。</td></tr>
+          </tbody>
+        </table>
+
+        <h3>加厚式旋律的音色分配</h3>
+        <p>加厚式旋律有一条主要旋律和跟着它走的依附线。比如主旋律 C5–D5–E5，下方配 A4–B4–C5，每次同时发音都构成三度。主线应更容易辨认，依附线的起音、奏法、句法和强弱走向都跟随主线。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">配置</th><th scope="col">两条线怎么写</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">同音色分配</th><td>两支单簧管分奏上方旋律和下方依附线。两条线彼此接近时，同类音色尤其自然。</td></tr>
+            <tr><th scope="row">同音质顺置</th><td>两条线距离较大，可让长笛在上、单簧管在下，或双簧管在上、大管在下。</td></tr>
+            <tr><th scope="row">同度并置</th><td>在旋律或依附线的原音高上，各加同度管增加密度，或用另一种管混合音色。需要补强某一条线时，可只给它加管。</td></tr>
+            <tr><th scope="row">八度分层</th><td>把旋律和依附线作为一组，整组再移高或移低八度。原层与副层都保留内部音程，多用邻近的木管按音区顺置。</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="woodwind-chords">
+        <h2 id="woodwind-chords">第四节 和弦的配置</h2>
+        <p>和弦型织体首先要让一组音同起、同收，形成完整的音响。常规木管组做很宽的和弦时，要留心大管上方与单簧管下方的衔接。两者的总音域虽然重合，在某种力度下可用的音区和厚度却可能对接不上。可以缩小跨度、调换音区，或在中间加入圆号。吐音、颤音或震音也能让同一个和弦产生不同的运动感。</p>
+
+        <h3>顺置、交置、夹置与叠置</h3>
+        <p>以下按<strong>实际和弦音由高到低</strong>读分配。A 和 B 各代表一种音色。顺置、交置和夹置可用于同样的四个音；叠置在接缝的同一个音上增加一种音色。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">排列</th><th scope="col">从高到低</th><th scope="col">听觉作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">顺置</th><td>A、A、B、B</td><td>分层清晰，与自然音区相合时声音自然。两层的分量过于悬殊就会断开。</td></tr>
+            <tr><th scope="row">交置</th><td>A、B、A、B</td><td>上、下两种颜色穿插，容易混合，尤其适合处理强奏时明显的音色差异。</td></tr>
+            <tr><th scope="row">夹置</th><td>A、B、B、A</td><td>同色外声部包住内层，让外围音色更容易听清。</td></tr>
+            <tr><th scope="row">叠置</th><td>A、A＋B、B</td><td>两种音色在一个音上接合，消除层间的突变。中间音人数较多时会压过别的音。</td></tr>
+          </tbody>
+        </table>
+        <p>倒置把通常在下方的乐器放到上层，利用它在较高音区的色彩；同度并置则可在某个声部上加同音同节奏的管。一个和弦可以混用几种排法，例如上方长笛顺置，中间让两支单簧管夹住一支大管。</p>
+        <div class="music-demo" id="woodwind-chord-spacing">
+          <div class="music-demo-toolbar">
+            <h4>固定和弦音的三种音色排列</h4>
+            <label>排列方式 <select><option value="stacked">顺置</option><option value="interlocked">交置</option><option value="enclosed">夹置</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="固定音高、力度和人数，比较顺置、交置、夹置"></figure>
+        </div>
+
+        <h3>力度、音色与声部间距</h3>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">核对项目</th><th scope="col">从哪一步判断</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">力度</th><td>每个和弦音先安排相近的人数和力度。避免把一支管的强区与另一支的弱区硬凑在一起，比如长笛低区与双簧管低区同时强奏。需要突出旋律时可以有意打破均衡。</td></tr>
+            <tr><th scope="row">音色</th><td>密集排列从顺置试起，低区尤其慎用四种管各一个音。开放排列可顺置或在接缝叠置，亦可尝试颜色较一致的单管式。开放间距过大时，交置和夹置容易让某支管落入不合适的音区；用两种单色乐器作外层，也可把同类双管留在内层。</td></tr>
+            <tr><th scope="row">间距</th><td>低部音程疏一点，高部可密一些，中间保留连续的听感。密集的摩擦音若难以平衡，可把这对音分给不同音色；同色双簧管上的纯四度在某些音区也容易显得硬，要结合音响目的判断。</td></tr>
+          </tbody>
+        </table>
+
+        <h3>声部进行与和弦音的重复</h3>
+        <p>给相邻和弦换乐器，先留下那些必须让人听得出走向的线。例如 G7 到 C 大三和弦，导音 B 到 C、七音 F 到 E，都适合由原来的同一支管完成。若另一条线保持 G，可以用另一种音色把它与移动的声部区分开。</p>
+        <table class="lesson-table">
+          <caption>属七和弦解决时各管的任务</caption>
+          <thead><tr><th scope="col">声部</th><th scope="col">实际音高</th><th scope="col">分配的作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">长笛</th><td>G5 → G5</td><td>公共音保持，形成与下方移动声部的斜向进行。</td></tr>
+            <tr><th scope="row">双簧管</th><td>F5 → E5</td><td>七音在同一件乐器上向下解决。</td></tr>
+            <tr><th scope="row">单簧管</th><td>B4 → C5</td><td>导音在同一件乐器上向上解决。</td></tr>
+            <tr><th scope="row">大管</th><td>G2 → C3</td><td>低音交代属到主的进行。</td></tr>
+          </tbody>
+        </table>
+        <ul>
+          <li>转位七和弦的低音通常不再在上面随意重复。底部作为整条低音线的八度扩展，是可以保留的配置。</li>
+          <li>声部自然进行时，偶尔碰出同度可以接受。要检查加重是否只出现在接合处，还是会把一条无意突出的线长期抬高。</li>
+          <li>可适度重复根音、旋律音，以及承担调式功能的主音、属音或下属音。强调什么音，由旋律和调性语境决定。</li>
+        </ul>
+        <aside class="lesson-callout"><p><strong>木管和弦的平衡来自三件事。</strong> 每个音的分量相称，同类与异类音色接合得当，原有声部能顺畅地走向下一个和弦。</p></aside>
+      </section>
+    </main>
+  </body>
+</html>

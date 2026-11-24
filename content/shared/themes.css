@@ -5,21 +5,23 @@
   --tint: color-mix(in srgb, var(--sheet) 94%, var(--accent));
   --control-line: color-mix(in srgb, var(--line) 40%, var(--muted));
   --score-paper: var(--sheet);
-  --score-cursor: color-mix(in srgb, var(--ink) 62%, var(--accent));
+  --score-cursor: #b6541d;
+  --score-selection: var(--accent);
+  --reading-rule: color-mix(in srgb, var(--line) 66%, var(--ink));
   --piano-white: #fdfdfb;
   --piano-stroke: #747d86;
   --pitch-start: #c1ddfe;
   --pitch-start-ink: #1d4c79;
-  --pitch-end: #ffcd92;
-  --pitch-end-ink: #784714;
+  --pitch-end: #e4d9f3;
+  --pitch-end-ink: #58417c;
 }
 :root, [data-theme="paper"] {
-  --paper: #f7f7f2;
-  --sheet: #fdfdf9;
-  --ink: #232824;
-  --muted: #56615b;
-  --accent: #305e50;
-  --line: #d5ddd4;
+  --paper: #f6f2e9;
+  --sheet: #fffcf6;
+  --ink: #192333;
+  --muted: #50596a;
+  --accent: #263e74;
+  --line: #d7cfc0;
 }
 [data-theme="ivory"] {
   --paper: #f6f1e7;
@@ -78,7 +80,7 @@
   --accent: #bbd1c5;
   --line: #4c505a;
   --score-paper: #f2f4f0;
-  --score-cursor: #426754;
+  --score-selection: #426754;
   --piano-white: #edf0eb;
 }
 [data-theme="midnight"] {
@@ -90,6 +92,6 @@
   --accent: #adc9ff;
   --line: #46597c;
   --score-paper: #edf2fa;
-  --score-cursor: #365a94;
+  --score-selection: #365a94;
   --piano-white: #eef2f8;
 }

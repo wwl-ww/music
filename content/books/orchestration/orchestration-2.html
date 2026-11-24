@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第二章 弓弦乐器与弓弦乐器组｜配器法基础教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./orchestration.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./orchestration-2.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">配器法基础教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第二章 弓弦乐器与弓弦乐器组</h1>
+      <p class="intro">把键盘谱交给弦乐组，先判断哪些音构成要听清的旋律，哪些是各自进行的声部，哪些要合成一个和弦。然后决定由谁演奏、在哪根弦和哪个音区演奏，以及怎样分配弓法、人数和音量。</p>
+
+      <section aria-labelledby="bowed-strings">
+        <h2 id="bowed-strings">第一节 弓弦乐器概述</h2>
+        <p>小提琴、中提琴、大提琴和低音提琴的发音方式相近，容易融合成同一组声音。它们的音区和琴弦各有特色，能在同一组内分担歌唱性的旋律、支撑性的低音和多层织体。</p>
+        <h3>构造与发音</h3>
+        <p>弓毛摩擦琴弦，或手指拨动琴弦，使琴弦振动。琴马把振动传给琴身及共鸣箱。左手改变弦的有效长度来改变音高，右手的弓速、接触位置和用力会改变起音、力度和音色。常规触弦位置在指板末端与琴马之间，偏向琴马或指板会得到不同质地。</p>
+        <details class="lesson-aside">
+          <summary>琴身、琴弓与琴弦的部件</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>琴身由琴头、弦轴、弦枕、琴颈、指板、共鸣箱、琴马和系弦板等构成。共鸣箱有面板、背板、侧板，内部有音柱和低音梁。</li>
+              <li>琴弓由弓杆、弓毛、马尾库和松紧螺丝组成。琴弦可用金属弦、羊肠弦或缠弦。</li>
+              <li>小提琴、中提琴有腮托，大提琴、低音提琴有支脚，演奏姿势也随之不同。</li>
+            </ul>
+          </div>
+        </details>
+
+        <h3 id="string-ranges">定弦、音域与音区</h3>
+        <p>弦号从高音弦向低音弦数。第一弦最高，第四弦是标准四弦琴的最低弦。小提琴、中提琴和大提琴相邻空弦相隔纯五度，低音提琴相隔纯四度。空弦决定下限，向高处移把则能延伸音域。</p>
+        <figure class="notation-sample">
+          <figcaption>四种弓弦乐器的实际音域与空弦</figcaption>
+          <p class="instrument-range-key"><span>实带为常用范围</span><span>虚线为扩展或极限</span><span>圆点为空弦</span></p>
+          <svg class="instrument-range" viewBox="0 0 592 239" role="img" aria-label="四种弓弦乐器的同轴音域。空弦、常用范围与极限的具体音高见下表。">
+            <path class="instrument-range-guide" d="M105 35V228"/><text class="instrument-range-axis" x="105" y="26" text-anchor="middle">C1</text>
+            <path class="instrument-range-guide" d="M177.6 35V228"/><text class="instrument-range-axis" x="177.6" y="26" text-anchor="middle">C2</text>
+            <path class="instrument-range-guide" d="M250.2 35V228"/><text class="instrument-range-axis" x="250.2" y="26" text-anchor="middle">C3</text>
+            <path class="instrument-range-guide" d="M322.8 35V228"/><text class="instrument-range-axis" x="322.8" y="26" text-anchor="middle">C4</text>
+            <path class="instrument-range-guide" d="M395.4 35V228"/><text class="instrument-range-axis" x="395.4" y="26" text-anchor="middle">C5</text>
+            <path class="instrument-range-guide" d="M468 35V228"/><text class="instrument-range-axis" x="468" y="26" text-anchor="middle">C6</text>
+            <path class="instrument-range-guide" d="M540.6 35V228"/><text class="instrument-range-axis" x="540.6" y="26" text-anchor="middle">C7</text>
+            <g><text class="instrument-range-name" x="88" y="66">小提琴</text><rect class="instrument-range-band" x="292.55" y="53" width="248.05" height="17" rx="3"/><path class="instrument-range-limit" d="M540.6 61.5H564.8"/>
+            <text class="instrument-range-register" x="328.85" y="84">低</text>
+            <path class="instrument-range-guide" d="M365.15 53v17"/>
+            <text class="instrument-range-register" x="401.45" y="84">中</text>
+            <path class="instrument-range-guide" d="M437.75 53v17"/>
+            <text class="instrument-range-register" x="474.05" y="84">高</text>
+            <path class="instrument-range-guide" d="M510.35 53v17"/>
+            <text class="instrument-range-register" x="537.575" y="84">极高</text>
+            <circle class="instrument-range-open" cx="292.55" cy="61.5" r="3.4"/><circle class="instrument-range-open" cx="334.9" cy="61.5" r="3.4"/><circle class="instrument-range-open" cx="377.25" cy="61.5" r="3.4"/><circle class="instrument-range-open" cx="419.6" cy="61.5" r="3.4"/>
+            </g>
+            <g><text class="instrument-range-name" x="88" y="113">中提琴</text><rect class="instrument-range-band" x="250.2" y="100" width="217.8" height="17" rx="3"/><path class="instrument-range-limit" d="M468 108.5H498.25"/>
+            <text class="instrument-range-register" x="286.5" y="131">低</text>
+            <path class="instrument-range-guide" d="M322.8 100v17"/>
+            <text class="instrument-range-register" x="359.1" y="131">中</text>
+            <path class="instrument-range-guide" d="M395.4 100v17"/>
+            <text class="instrument-range-register" x="431.7" y="131">高</text>
+            <path class="instrument-range-guide" d="M468 100v17"/>
+            <text class="instrument-range-register" x="483.125" y="131">极高</text>
+            <circle class="instrument-range-open" cx="250.2" cy="108.5" r="3.4"/><circle class="instrument-range-open" cx="292.55" cy="108.5" r="3.4"/><circle class="instrument-range-open" cx="334.9" cy="108.5" r="3.4"/><circle class="instrument-range-open" cx="377.25" cy="108.5" r="3.4"/>
+            </g>
+            <g><text class="instrument-range-name" x="88" y="160">大提琴</text><rect class="instrument-range-band" x="177.6" y="147" width="242" height="17" rx="3"/><path class="instrument-range-limit" d="M419.6 155.5H449.85"/>
+            <text class="instrument-range-register" x="213.89999999999998" y="178">低</text>
+            <path class="instrument-range-guide" d="M250.2 147v17"/>
+            <text class="instrument-range-register" x="286.5" y="178">中</text>
+            <path class="instrument-range-guide" d="M322.8 147v17"/>
+            <text class="instrument-range-register" x="359.1" y="178">高</text>
+            <path class="instrument-range-guide" d="M395.4 147v17"/>
+            <text class="instrument-range-register" x="422.625" y="178">极高</text>
+            <circle class="instrument-range-open" cx="177.6" cy="155.5" r="3.4"/><circle class="instrument-range-open" cx="219.95" cy="155.5" r="3.4"/><circle class="instrument-range-open" cx="262.3" cy="155.5" r="3.4"/><circle class="instrument-range-open" cx="304.65" cy="155.5" r="3.4"/>
+            </g>
+            <g><text class="instrument-range-name" x="88" y="207">低音提琴</text><rect class="instrument-range-band" x="129.2" y="194" width="175.45" height="17" rx="3"/><path class="instrument-range-limit" d="M304.65 202.5H334.9M105 202.5H129.2"/>
+            <text class="instrument-range-register" x="159.45" y="225">低</text>
+            <path class="instrument-range-guide" d="M189.7 194v17"/>
+            <text class="instrument-range-register" x="216.925" y="225">中</text>
+            <path class="instrument-range-guide" d="M244.15 194v17"/>
+            <text class="instrument-range-register" x="289.525" y="225">高</text>
+            <circle class="instrument-range-open" cx="129.2" cy="202.5" r="3.4"/><circle class="instrument-range-open" cx="159.45" cy="202.5" r="3.4"/><circle class="instrument-range-open" cx="189.7" cy="202.5" r="3.4"/><circle class="instrument-range-open" cx="219.95" cy="202.5" r="3.4"/>
+            </g>
+          </svg>
+        </figure>
+        <figure class="notation-sample" id="string-range-keyboards" hidden></figure>
+        <table class="lesson-table lesson-table-wide" id="string-range-table">
+          <caption>定弦与音域参考（实际音高）</caption>
+          <thead><tr><th scope="col">乐器</th><th scope="col">空弦由低到高</th><th scope="col">常用范围</th><th scope="col">高端极限</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">小提琴</th><td data-range-open>G3 · D4 · A4 · E5</td><td data-range-main>G3–C7</td><td data-range-high>E7</td></tr>
+            <tr><th scope="row">中提琴</th><td data-range-open>C3 · G3 · D4 · A4</td><td data-range-main>C3–C6</td><td data-range-high>F6</td></tr>
+            <tr><th scope="row">大提琴</th><td data-range-open>C2 · G2 · D3 · A3</td><td data-range-main>C2–E5</td><td data-range-high>A5</td></tr>
+            <tr data-range-low="C1"><th scope="row">低音提琴</th><td data-range-open>E1 · A1 · D2 · G2</td><td data-range-main>E1–A3</td><td data-range-high>D4</td></tr>
+          </tbody>
+        </table>
+        <p>C4 是中央 C。图上实带适合做编配初筛，靠近高端时仍须核对速度、力度、把位和乐手情况。某些低音提琴有低音扩展配置，示例下探到 C1。低音提琴的谱面比实际发音高八度。例如需要与大提琴同响 C3，低音提琴写 C4。</p>
+
+        <h3>各弦的音色</h3>
+        <p>同一个音有时可由不同琴弦奏出，声音却会改变。指定某根弦时可写 <i lang="it">sul</i> 加弦名。例如小提琴 D4 可以用 D 空弦，写 <i lang="it">sul G</i> 时则改在 G 弦上按出，获得更深、更集中的质地。</p>
+        <table class="lesson-table lesson-table-wide">
+          <thead><tr><th scope="col">乐器</th><th scope="col">常见音色与用途</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">小提琴</th><td>E 弦明亮开阔，适合高区旋律；A、D 内弦较柔和；G 弦深沉、饱满，适合有力量的低区旋律。</td></tr>
+            <tr><th scope="row">中提琴</th><td>A 弦有较明显的鼻音，力度较小提琴 A 弦弱；D 弦温润；G、C 弦厚实、深沉，适合抒情旋律。</td></tr>
+            <tr><th scope="row">大提琴</th><td>A 弦开阔而富表现力，D 弦较含蓄，G 弦饱满，C 弦粗厚、反应较慢，常承担和声低音。</td></tr>
+            <tr><th scope="row">低音提琴</th><td>G 弦相对清晰，高把位趋于尖紧；D、A 弦厚实，A 较柔；E 弦低沉柔软，强奏容易带粗哑感。</td></tr>
+          </tbody>
+        </table>
+        <p>同音高比较琴种的声音，可用第一章的<a href="./orchestration-1.html#string-timbres">三种弦乐音色试听</a>。</p>
+
+        <h3>指法与把位</h3>
+        <p>左手食指到小指依次为 1–4，空弦记 0；大提琴、低音提琴可用拇指按弦。<strong>把位</strong>是左手在指板上所处的位置，按弦位置整体移动叫换把。以小提琴 A 弦为例，第一把位食指在 B 附近，手移高后同一个音常可用另一根弦或另一指法取得。半把位比第一把位低半音。</p>
+        <p>小提琴乐队声部一般多用第七把位以内，A、D、G 弦通常在第五把位以内。中提琴的 A、D、G/C 弦常用把位上限逐渐降低。大提琴和低音提琴弦长，左手覆盖的音程较窄；高区常用拇指作活动弦枕。音能奏到时，还须核对是否能在所要求的速度里顺畅换弦和换把。</p>
+
+        <h3>弓法与发音</h3>
+        <p>弓根便于形成较有力的起音，弓尖适合轻弱，中弓较均衡。下弓从弓根向弓尖走，常用于重拍或重音；上弓方向相反，常从弱拍向强拍准备。特定触弓部位可写 <i lang="it">al tallone</i>（弓根）或 <i lang="it">a punta d’arco</i>（弓尖）。</p>
+        <table class="lesson-table lesson-table-wide">
+          <thead><tr><th scope="col">弓法</th><th scope="col">动作与声音</th><th scope="col">记谱片段</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">下弓／上弓</th><td>两个记号指定运弓方向。</td><td><svg class="inline-staff" viewBox="0 0 83 39" role="img" aria-label="下弓记号与一个音"><path class="inline-staff-lines" d="M1 13H82 M1 18H82 M1 23H82 M1 28H82 M1 33H82"/><text x="30" y="29">&#xE1D5;</text><path d="M29 8V2H36V8" fill="none" stroke-width="1.5"/></svg> <svg class="inline-staff" viewBox="0 0 83 39" role="img" aria-label="上弓记号与一个音"><path class="inline-staff-lines" d="M1 13H82 M1 18H82 M1 23H82 M1 28H82 M1 33H82"/><text x="30" y="29">&#xE1D5;</text><path d="M29 2L32.5 9L36 2" fill="none" stroke-width="1.5"/></svg></td></tr>
+            <tr><th scope="row">分弓</th><td>一音一弓，弓毛留在弦上；大分弓有力，中分弓均匀，小分弓轻细。</td><td><svg class="inline-staff" viewBox="0 0 83 39" role="img" aria-label="三个音各换一弓"><path class="inline-staff-lines" d="M1 13H82 M1 18H82 M1 23H82 M1 28H82 M1 33H82"/><text x="9" y="29">&#xE1D5;</text><text x="29" y="26">&#xE1D5;</text><text x="50" y="23">&#xE1D5;</text></svg></td></tr>
+            <tr><th scope="row">连弓</th><td>一弓容纳几个音，发音平滑；速度快、力度弱时往往可以容纳更多音。连弓线标出换弓位置。</td><td><svg class="inline-staff" viewBox="0 0 83 39" role="img" aria-label="一条连线连接三个音"><path class="inline-staff-lines" d="M1 13H82 M1 18H82 M1 23H82 M1 28H82 M1 33H82"/><text x="9" y="29">&#xE1D5;</text><text x="29" y="26">&#xE1D5;</text><text x="50" y="23">&#xE1D5;</text><path d="M11 12Q30 -1 53 7" fill="none"/></svg></td></tr>
+            <tr><th scope="row">半连弓</th><td>各音同在一弓，逐个略加重或隔开，常用连线加短横或圆点。</td><td><svg class="inline-staff" viewBox="0 0 83 39" role="img" aria-label="连线下的三个音各有短横线"><path class="inline-staff-lines" d="M1 13H82 M1 18H82 M1 23H82 M1 28H82 M1 33H82"/><text x="9" y="29">&#xE1D5;</text><text x="29" y="26">&#xE1D5;</text><text x="50" y="23">&#xE1D5;</text><path d="M11 10Q30 -2 53 5 M9 16h6 M29 13h6 M50 10h6" fill="none"/></svg></td></tr>
+            <tr><th scope="row">断弓</th><td>各音短而分开。同样一个断奏点，演奏者还要结合速度、力度和语境决定贴弦断奏或离弦跳奏。</td><td><svg class="inline-staff" viewBox="0 0 83 39" role="img" aria-label="三个音各有断奏点"><path class="inline-staff-lines" d="M1 13H82 M1 18H82 M1 23H82 M1 28H82 M1 33H82"/><text x="9" y="29">&#xE1D5;</text><text x="29" y="26">&#xE1D5;</text><text x="50" y="23">&#xE1D5;</text><circle cx="12" cy="19" r="1.2"/><circle cx="32" cy="16" r="1.2"/><circle cx="53" cy="13" r="1.2"/></svg></td></tr>
+          </tbody>
+        </table>
+        <details class="lesson-aside">
+          <summary>分断弓、连断弓与震音</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li><strong>分断弓。</strong> 断弓可贴弦分开。顿弓有明显而有力的起音，适合中慢速度；跳弓靠弓子的弹性发出短音，适合轻快；碎跳弓用于更快、更轻的音型；撞弓利用触弦后的反弹，常在稍慢、弱到中强的范围使用。</li>
+              <li><strong>连断弓。</strong> 同一弓内发出多个断音。抛弓靠一次投弓后的连续反弹，适合规则音型；飞奏跳弓在同一弓向主动带出一串短音，适合快速音阶、分解和弦。通常用连线包住各音的断奏点。</li>
+              <li><strong>弓子震音。</strong> 右手迅速换弓，重复单音或双音。弱奏多用弓尖，强奏可用中弓。高区弱奏可以朦胧，强奏明亮；中低区强奏容易带出紧张感。</li>
+              <li><strong>手指震音。</strong> 右手连弓，左手在同一弦上交替两个音，跨度受指距限制。小提琴一般不超过增四度，中提琴不超过纯四度，大提琴在第五把位以下且不用拇指时不超过小三度。相邻两弦间快速交替的摇弓震音在乐队中较少用。</li>
+            </ul>
+          </div>
+        </details>
+
+        <h3>双音与多音和弦</h3>
+        <p>双音须落实到<strong>两根相邻的弦</strong>。两个音都落在最低弦才能取得时无法同奏，因此上方音至少达到第三弦空弦。空弦能减少左手负担，并让某些很宽的音程或同度可奏。小提琴的 G3–D4 可以直接用两根空弦。</p>
+        <p>两个音都要按弦时，再检查左手。顺指法让低弦用较小的指号、高弦用较大的指号，六度、七度、八度常用此法。五度定弦的两根相邻弦上，纯五度可用同一指位；低音提琴相应是纯四度。较窄的四度、三度、二度常需逆指或伸展，在大提琴、低音提琴上尤须审慎。</p>
+        <p>三音、四音和弦分别占相邻三弦、四弦。因为弦跨在弧形琴马上，弓通常由低向高迅速扫过，能持续的是上方一两个音。开放排列、含空弦、低把位和顺指较便于演奏。紧密排列、高把位或复杂变化常使发音受限。小提琴、中提琴最常承担双音或多音，大提琴次之，低音提琴的乐队声部较少这样写。</p>
+
+        <h3>特殊奏法与泛音</h3>
+        <table class="lesson-table lesson-table-wide">
+          <thead><tr><th scope="col">奏法</th><th scope="col">声音与处置</th><th scope="col">进入／恢复记法</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">拨奏</th><td>短促、延续力小。低把位和空弦共鸣较好，适合低音、分解和弦、节奏支撑或突出的音头。快速密奏及高把位拨奏要节制，拨弓互换要留时间。</td><td><i lang="it">pizz.</i> ／ <i lang="it">arco</i></td></tr>
+            <tr><th scope="row">加弱音器</th><td>装在琴马上，使声音柔暗、有距离感。装卸都要留时间；低音提琴较少用，加弱音器后通常仍以弓奏为主。</td><td><i lang="it">con sord.</i> ／ <i lang="it">senza sord.</i></td></tr>
+            <tr><th scope="row">弓杆击弦</th><td>用弓杆敲弦，声音干短、较轻，带打击性。</td><td><i lang="it">col legno battuto</i> ／ <i lang="it">arco</i></td></tr>
+            <tr><th scope="row">靠琴马</th><td>高区偏明亮、金属感强，低区可有干涩紧张感，常与震音合用。</td><td><i lang="it">sul pont.</i> ／ <i lang="it">ord.</i></td></tr>
+            <tr><th scope="row">靠指板</th><td>音头柔软、颜色淡，适合弱奏。</td><td><i lang="it">sul tasto</i> ／ <i lang="it">ord.</i></td></tr>
+          </tbody>
+        </table>
+        <p>轻触弦上的振动节点，弦按几段振动，发出清亮、透明的<strong>泛音</strong>。自然泛音用空弦作基音，谱上常写实际音高加空心小圆圈。人工泛音先实按一音缩短琴弦，再由另一指轻触；谱上普通符头是实按音，菱形符头是轻触位置，实际音高可另标。</p>
+        <p>小提琴 G 弦的 G5 自然泛音写作 <svg class="inline-staff" viewBox="0 0 47 41" role="img" aria-label="实响 G5 上标有泛音圆圈"><path class="inline-staff-lines" d="M1 15H46 M1 20H46 M1 25H46 M1 30H46 M1 35H46"/><text x="18" y="12.5">&#xE0A2;</text><circle cx="22.5" cy="6" r="2" fill="none" stroke="currentColor"/></svg>。实按 C4、轻触 F4 的人工泛音写作 <svg class="inline-staff" viewBox="0 0 47 44" role="img" aria-label="普通符头 C4 与菱形符头 F4"><path class="inline-staff-lines" d="M1 13H46 M1 18H46 M1 23H46 M1 28H46 M1 33H46"/><path d="M15 38H29 M24 38V16 M21 27.4L24.5 30.5L21 33.6L17.5 30.5Z"/><text x="17" y="38">&#xE0A4;</text></svg>，实际响 C6。</p>
+        <table class="lesson-table lesson-table-wide">
+          <caption>轻触位置与发出的泛音</caption>
+          <thead><tr><th scope="col">轻触位置距基音</th><th scope="col">实际音高距基音</th><th scope="col">以 G3 为基音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">纯八度</th><td>高一个八度</td><td>触 G4，响 G4</td></tr>
+            <tr><th scope="row">纯五度</th><td>高纯十二度</td><td>触 D4，响 D5</td></tr>
+            <tr><th scope="row">纯四度</th><td>高两个八度</td><td>触 C4，响 G5</td></tr>
+            <tr><th scope="row">大三度</th><td>高两个八度又大三度</td><td>触 B3，约响 B5</td></tr>
+            <tr><th scope="row">小三度</th><td>高两个八度又纯五度</td><td>约触 B♭3，响 D6</td></tr>
+          </tbody>
+        </table>
+        <p>自然泛音常用纯八度、纯五度、纯四度触点，可作旋律点缀或背景持续音。人工泛音最常见纯四度触点，例如实按 C4、轻触 F4，响 C6；大、小三度次之，五度触点伸展大，较少用。人工泛音适合较简单、速度适中的旋律，也可和其他泛音组合成和弦。</p>
+
+        <h3>弓弦组的五个声部与记谱</h3>
+        <p>总谱自上而下是第一小提琴、第二小提琴、中提琴、大提琴、低音提琴，通常由高音、次高音、中音、上低音到低音分工。第一、第二小提琴用高音谱号；中提琴以中音谱号为主，高处可换高音谱号；大提琴主要用低音谱号，高处可换次中音或高音谱号；低音提琴通常用低音谱号并低八度发声。</p>
+        <p>弦乐五部用直括号成组，两部小提琴可另用一个直括号连接。在管弦乐总谱中，全队速度通常标在总谱最上方，也可在弦乐组上方重标；各谱表的奏法标在上方，力度与表情按各声部需要标在下方。</p>
+      </section>
+      <section aria-labelledby="melody-orchestration">
+        <h2 id="melody-orchestration">第二节 旋律的配置</h2>
+        <p>旋律的<strong>织体形态</strong>看同时进行的音高线条。独立的一条线可以承担旋律、分解和弦、音阶音流或持续音。换人同度齐奏、把整条线复制到别的八度，都保留它原来的轮廓。<strong>加厚式旋律</strong>则在主线旁同时写出其他音，例如每音下方添一个三度，形成有多个音高层次的旋律带。</p>
+        <p>在加厚式旋律的原型中，最上方通常是主线，附属声部一般在下方。各线同步发音，以平行、同向或斜向进行，原型的相邻声部通常在八度以内。附属线条随主线分句，整体轮廓仍由同一条旋律引领。</p>
+        <div class="music-demo" id="string-melody-layers">
+          <div class="music-demo-toolbar">
+            <h4>同一旋律的单线、八度重叠与三度加厚</h4>
+            <label>旋律写法 <select aria-label="旋律写法"><option value="single">单线</option><option value="octave">八度重叠</option><option value="thirds">三度加厚</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">单线呈现原旋律。三个版本使用同一小提琴音色和拍速。</p>
+          <figure aria-label="同一旋律的单线、八度重叠与三度加厚"></figure>
+        </div>
+
+        <h3>单部、同度重叠与八度重叠</h3>
+        <p><strong>单部配置</strong>由一个完整的弓弦声部拉一条线，例如整个第一小提琴声部。与独奏相比，它保持一种清楚的音色而声音更密实，华彩式细节和自由度则受全组一致性的限制。选哪一部，要同时看旋律需要的音色、实际音区和奏法。</p>
+        <p><strong>同度重叠</strong>让多个声部在同一实际高度奏完全相同的线条。它可以加密、增力、修饰某一声部的音色，或形成新的混合音色。组合前先找两件乐器舒适音域的交集，再比较谁在该音区更容易突出。三个或四个声部齐奏时，整体趋于密实、强劲，单个音色的个性较淡。</p>
+        <details class="lesson-aside">
+          <summary>两部弦乐同度重叠的常用组合</summary>
+          <div class="lesson-aside-content">
+            <table class="lesson-table">
+              <thead><tr><th scope="col">组合</th><th scope="col">主要效果与条件</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">第一、第二小提琴</th><td>保留小提琴音色，增加密度与力度，独立声部较细的表情变化会收敛。</td></tr>
+                <tr><th scope="row">小提琴＋中提琴</th><td>共有 G、D、A 三根空弦，易融合。较低处深厚；到中提琴 A 弦的较高位置，中提琴的鼻音和硬亮感会更突出。</td></tr>
+                <tr><th scope="row">中提琴＋大提琴</th><td>混合共鸣饱满；同响时大提琴常稍突出。</td></tr>
+                <tr><th scope="row">小提琴＋大提琴</th><td>有用的重叠区较窄，主要在大提琴中、高区，大提琴色彩常较明显。</td></tr>
+                <tr><th scope="row">大提琴＋低音提琴</th><td>适合较低的旋律或低音线。大提琴可缓和低音提琴的粗涩感；同度叠奏时低音提琴须写高八度。</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <p><strong>八度重叠</strong>把同一条线放在相邻的八度音组。两个音组相隔一个八度叫单八度重叠，三个音组跨两个八度叫双八度重叠。它扩大厚度，能融合或保留多层色彩。若希望某个音组更有分量，就在那个高度再加同度重叠；若所有层都要更密，可以逐层增加同度声部。</p>
+        <details class="lesson-aside">
+          <summary>八度音组的分配与加强</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li><strong>同音色。</strong> 两部小提琴各担一个八度，或把一部弦乐分奏成两层。双八度需要三个音组，两个小提琴声部可各分奏，按需要在其中一层合奏。</li>
+              <li><strong>不同音色。</strong> 通常由较高音区的乐器奏上层，较低音区的乐器奏下层，例如小提琴在上、中提琴在下，或大提琴在上、低音提琴在下。</li>
+              <li><strong>多层厚度。</strong> 三至四个八度常用于宽广、明亮的音响，极少用五个八度；五个八度要有六个音组，通常需要分奏。大跨度弱奏也能形成空旷感。</li>
+              <li><strong>局部或整体加密。</strong> 上、中、下任一音组都可以加同度重叠。若不同乐器的上下两层听起来分离，可以让一部音色用分奏同时覆盖两层，把两层接起来。</li>
+            </ul>
+          </div>
+        </details>
+
+        <h3>加厚式旋律的三层配置</h3>
+        <p><strong>原型配置</strong>先分配主旋律与附属线。三度、六度等附属线通常和主旋律用相同的弓法、发音、分句和表情；人数与力度应大致相当，附属线的音响不能盖住主线。同部可分奏，两部小提琴也可各担一条线；要保留不同音色，可用相邻声部顺置，或在音区适合时倒置。</p>
+        <table class="lesson-table lesson-table-wide">
+          <thead><tr><th scope="col">处理</th><th scope="col">实际分配</th><th scope="col">主要变化</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">原型配置</th><td>一部小提琴分奏旋律与下方三度，或由小提琴与中提琴分别承担。</td><td>得到主线和附属线。</td></tr>
+            <tr><th scope="row">同度并置重叠</th><td>分别在原型的同一条线上，加另一部奏相同实际音高。</td><td>同色增加密度；异色可融合并调整线条之间的平衡。</td></tr>
+            <tr><th scope="row">八度分层重叠</th><td>把整个原型或主要声部复制到另一相邻八度。</td><td>扩展厚度。若只复制主线，主线更突出。</td></tr>
+          </tbody>
+        </table>
+        <p>分层后的乐器分配可用同色的两部小提琴分奏，也可用相邻的异色声部。自上而下把同一乐器的声部连续放在一起是<strong>顺置</strong>，两色轮流落位是<strong>交置</strong>，一种音色在另一种的两侧是<strong>夹置</strong>。在同一组内，有时让惯常较低的乐器承担较高的线，形成<strong>倒置</strong>。排列方法决定音色是集中在某一层，还是分散到整个厚度中。</p>
+      </section>
+      <section aria-labelledby="chorale-orchestration">
+        <h2 id="chorale-orchestration">第三节 合唱型四部和声的基本写法</h2>
+        <p><strong>合唱型多声部</strong>以清楚、连贯的声部线条合成统一织体。四个原型声部由高到低为高音 S、中音 A、次中音 T、低音 B。高音通常承载旋律，低音关系到和声功能及转位，两者是主要声部。各声部可以完全同节奏，也可以稍有不同，整体表情一致。实际写作可缩为二、三部，也可按需要增加声部。</p>
+
+        <h3>原型结构的配置</h3>
+        <p>四声部尽量采用同音质或同音色的乐器来维持整体性。异色分担有利于分辨各条线，同色分奏会让线条融合。人数和力度相近时，最上面和最下面的线天然较清楚。需要更突出外声部时，再加强它们或收敛内声部。</p>
+        <table class="lesson-table lesson-table-wide">
+          <thead><tr><th scope="col">配置方法</th><th scope="col">弓弦组的做法</th><th scope="col">主要作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">原谱照移</th><td>S、A、T、B 原音区可奏时，依次交第一小提琴、第二小提琴、中提琴、大提琴。</td><td>同音质保持统一，四种声部位置和色彩分明。</td></tr>
+            <tr><th scope="row">分奏</th><td>同一部弦乐分四组，或两部小提琴各分两组；相邻的不同琴种也可各分两组。</td><td>人数分薄、线条轮廓较柔，同色分奏最易融合。</td></tr>
+            <tr><th scope="row">加强主要声部</th><td>两部小提琴同度加厚 S，或让 A、T 由一部弦乐分奏，把完整声部留给 S、B。</td><td>让旋律或低音更突出，音色布局仍统一。</td></tr>
+            <tr><th scope="row">混合音色与倒置</th><td>小提琴同中提琴或大提琴叠奏 S，A、T 用一部弦乐分奏。若需要较深的高音，也可由中提琴或大提琴单独承担 S。</td><td>改变谁占据较高音区，取得特定音色并保持内声部连贯。</td></tr>
+          </tbody>
+        </table>
+
+        <h3>填充声部与八度扩展</h3>
+        <p>先找失衡的位置：中间一段距离达到或超过八度而缺少支撑，上三声部在强奏时过于开放，或低音区过于拥挤。「上密、下疏、中不空」是通常的起点，特殊音响可以保留空档。中间有空隙时，<strong>填充声部</strong>可加入本和弦的音，也可在原型声部之间选择重复音。它应接得顺，却不要求像原型的四条线一样鲜明。低处已经拥挤时，应重新分配位置或拉开间距。</p>
+        <p>填充音通常与相邻内声部用同音色分奏；若由另一种乐器承担，可让同音色的邻部夹住它，使声音接合。需要这个声部也保持独立时，可使用完整的五部弦乐配置。<strong>扩展声部</strong>则有明确的原型对应，按整条线的八度复制来辨认。内声部扩展应保持在原来外声部以内，上下两端的扩展由外声部承担。</p>
+        <div class="music-demo" id="string-chorale-layout">
+          <div class="music-demo-toolbar">
+            <h4>四部原型、内声填充与低音扩展</h4>
+            <label>四部配置 <select aria-label="四部配置"><option value="original">四部原型</option><option value="filler">内声填充</option><option value="extension">低音下扩八度</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">四部原型保留四条线。试听使用同一钢琴音色，以比较声部的位置。</p>
+          <figure aria-label="四部原型、内声填充与低音扩展"></figure>
+        </div>
+        <table class="lesson-table lesson-table-wide">
+          <caption>常见的四种八度扩展</caption>
+          <thead><tr><th scope="col">扩展</th><th scope="col">声部变化与乐器配置</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">B 向下</th><td>最常用。低音提琴在大提琴下方重复 B，低处自然疏开，增加底部厚度。</td></tr>
+            <tr><th scope="row">S、B 都向下</th><td>S 的副本成为内声部，可用于填充或夹住原有内声部。S 的两个层次可由一部小提琴分奏、由两部小提琴分担，或用小提琴与中提琴、大提琴取得复合音色。</td></tr>
+            <tr><th scope="row">S 向上、B 向下</th><td>两极扩展。上方可由两部小提琴分层或一部分奏，下方由低音提琴补足，音响更宽阔、明亮。</td></tr>
+            <tr><th scope="row">S、A、T 向上，B 向下</th><td>四线全扩展。要保留每条线的辨识度，可让各部八度分奏；要突出外声部，可把内声部配成同色；要整体融合，可交置、夹置或用少量双音组合。</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section aria-labelledby="chord-orchestration">
+        <h2 id="chord-orchestration">第四节 和弦的配置</h2>
+        <p><strong>和弦型多声部</strong>重在每一次和弦的整体。几条线的数量和连接可随和弦改变，个别声部的旋律性较弱，常作伴奏，也可独立组成织体。同样出现四个音时，如果每一条线都需连续辨认，则按合唱型考虑；如果主要听到整块和弦的起落，则按和弦型配置。</p>
+        <h3>音区、力度与演奏法</h3>
+        <p>高区密集、撤去低部的和弦可得到清亮轻盈的颜色；中区密集强奏可接近铜管的饱满感；中低区较容易体现弦乐本身的温厚。密集、开放和宽阔排列会改变厚薄。弓奏能保持长音并渐强、渐弱，也能做强音头后立刻转弱；拨奏、加弱音器、泛音、震音或颤音可分别获得干短、柔暗、透明或流动的和弦音响。</p>
+
+        <h3>和弦的平衡</h3>
+        <ul>
+          <li><strong>力度。</strong> 各音先取大致相当的人数和力度，再听音区与乐器实际产生的分量。根音、旋律音或起调式支撑作用的音可以适当重复和强调。</li>
+          <li><strong>音色。</strong> 强奏会放大高低不同琴种的差异，适当交置可让不同颜色分布均匀。低音乐器的高区偏硬，通常把它们放回中、低区。弱奏的选择更自由。小二度等摩擦过强时，可以把两音分给不同的声部或音色，使它们较易分辨；需要突出的冲突则可以保留。</li>
+          <li><strong>排列。</strong> 一般上密、下疏、中不空。速度较快时，短时值、弱拍或弱奏的和弦可放宽中间的间距；长时值、重拍或强奏的和弦更需要检查空档和低部拥挤。</li>
+        </ul>
+
+        <h3>单音、双音和多音的分配</h3>
+        <table class="lesson-table lesson-table-wide">
+          <thead><tr><th scope="col">每位演奏者的任务</th><th scope="col">音响与适用场合</th><th scope="col">编配</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">单音</th><td>每根弓集中在一弦，声音扎实。强弱、长短都可，适于密集或开放排列。</td><td>整部同奏一个音时多用顺置；同部拆成若干单音线须标 <i lang="it">div.</i>，可用顺置、交置或夹置，也可按所需音色择取声部。</td></tr>
+            <tr><th scope="row">双音</th><td>一位演奏者同奏相邻两弦，音响较分散，连续大跳、很强的力度和复杂换把较难。</td><td>可顺置或交置。需稳定长奏、强奏或左右手动作过密时，把两个音分给两组人更可靠。</td></tr>
+            <tr><th scope="row">三音或四音</th><td>实音和弦式有短而重的起音，上方一两个音可延续；双弦跃奏把和弦音成对交替；分解琶音依次展开单音，后两者适合生成持续音型。</td><td>小提琴、中提琴用得最多，大提琴次之。多部同时奏多音时，每部常用开放或混合排列，合起来再按音区交置。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="string-chord-attacks">
+          <div class="music-demo-toolbar">
+            <h4>同一小提琴和弦的三种发声次序</h4>
+            <label>和弦奏法 <select aria-label="和弦奏法"><option value="pillar">柱式扫奏</option><option value="pairs">双弦跃奏</option><option value="arpeggio">分解琶音</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">这一版本用两个相接的起音示意一弓扫过四弦的顺序：低两弦迅速带过，上两弦保持。</p>
+          <figure aria-label="同一小提琴和弦的三种发声次序"></figure>
+        </div>
+        <aside class="lesson-callout"><p><strong>先判断织体，再分配每位演奏者的音。</strong> 旋律加厚须听得出主线，合唱型须能跟住各自的声部，和弦型须处理整体音响。最后逐部核对实际音高、弦与弦的可达性、弓法和换奏时间。</p></aside>
+      </section>
+    </main>
+  </body>
+</html>

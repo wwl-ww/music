@@ -6,6 +6,12 @@ export function mountScoreComparison(container, { versions, description }) {
   const choices = container.querySelector('[data-comparison-choices]');
   const playback = container.querySelector('[data-comparison-playback]');
   const cue = container.querySelector('[data-comparison-description]');
+  const positionLabel = document.createElement('output');
+  positionLabel.className = 'score-comparison-position';
+  playback.after(positionLabel);
+  playback.addEventListener('click', event => {
+    if (event.target.closest('.score-playback')) positionLabel.textContent = '';
+  });
   cue.textContent = description;
 
   const entries = versions.map((version, index) => {
@@ -17,6 +23,7 @@ export function mountScoreComparison(container, { versions, description }) {
     const player = mountScore(figure, {
       notation: 'staff',
       ...version.score,
+      preservePosition: true,
       noteHighlights: () => version.highlights ?? []
     });
     const controls = figure.querySelector('.score-controls');
@@ -27,8 +34,15 @@ export function mountScoreComparison(container, { versions, description }) {
   let active = null;
   mountScoreChoiceButtons(choices, versions, (_, index) => {
     if (active === index) return;
-    entries[active]?.player.stop();
+    const previous = entries[active]?.player;
+    const position = previous?.getPosition();
+    previous?.stop();
+    if (active !== null) panes[active].removeAttribute('data-current');
     active = index;
-    playback.replaceChildren(entries[index].controls);
+    const { player, controls } = entries[index];
+    panes[index].dataset.current = '';
+    const retained = player.setPosition(position);
+    playback.replaceChildren(controls);
+    positionLabel.textContent = retained ? `第 ${retained.bar + 1} 小节` : '';
   });
 }

@@ -1,0 +1,56 @@
+.orchestra-score,
+.harmonic-staff {
+  display: block;
+  width: min(100%, 33rem);
+  height: auto;
+  margin-block: 0.5rem;
+  color: var(--ink);
+}
+
+.orchestra-score { width: min(100%, 23rem); }
+
+:is(.orchestra-score, .harmonic-staff) :is(path, use) {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 0.65;
+}
+
+.orchestra-score .orchestra-bracket { stroke-width: 1.35; }
+
+:is(.orchestra-score, .harmonic-staff) text { fill: currentColor; }
+
+.orchestra-label {
+  font: 600 11px var(--text-font, system-ui);
+  text-anchor: end;
+}
+
+:is(.orchestra-clef, .orchestra-key, .orchestra-meter, .harmonic-head, .harmonic-sign) {
+  font-family: "Lesson Music Symbols";
+}
+
+.orchestra-clef,
+.harmonic-head,
+.harmonic-sign { font-size: 16px; }
+
+.orchestra-key { font-size: 11px; }
+.orchestra-meter {
+  font-size: 16px;
+  transform: translateY(-4px);
+}
+
+.harmonic-index {
+  font: 600 12px system-ui, sans-serif;
+  text-anchor: middle;
+}
+
+.score-comparison-pane h5 {
+  margin: 0.55rem 0.85rem 0;
+  font-size: 0.9rem;
+}
+
+.woodwind-shared-staff th[scope="row"] { white-space: nowrap; }
+
+.woodwind-shared-staff .inline-staff {
+  display: block;
+  margin: 0.3rem 0 0;
+}

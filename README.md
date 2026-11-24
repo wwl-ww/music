@@ -1,6 +1,6 @@
 # 乐理教程
 
-这个项目把《基本乐理教程》《和声学基础教程》和《复调音乐基础教程》改编成中文网页教程。正文负责讲清概念、规则和例外。简谱、五线谱和声音用于解释具体知识点。
+这个项目把《基本乐理教程》《和声学基础教程》《复调音乐基础教程》和《配器法基础教程》改编成中文网页教程。正文负责讲清概念、规则和例外。简谱、五线谱和声音用于解释具体知识点。
 
 ## 运行课程网页
 
@@ -22,6 +22,7 @@ npm run dev
 | `content/books/harmony-upper/` | 《和声学基础教程 · 上》章节、专用脚本与参考 PDF |
 | `content/books/harmony-lower/` | 《和声学基础教程 · 下》章节、四部和声谱例与参考 PDF |
 | `content/books/counterpoint/` | 《复调音乐基础教程》上下篇、全书目录与可调谱例 |
+| `content/books/orchestration/` | 《配器法基础教程》章节、总谱示意与音响对照 |
 | `content/shared/` | 共用的排版、主题、谱例组件与钢琴音源 |
 
 ## 课程
@@ -152,6 +153,21 @@ npm run dev
 - BWV 847 来自 Urs Metzger 为 Mutopia 排印的 Edition Peters 版。按声部重排并加上分析标记，转录沿用 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)。[BWV 847](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1941)
 - 贝多芬《悲怆奏鸣曲》第三乐章第 78–107 小节转录自 Chris Sawer 为 Mutopia 排印的公有领域版本（Berners 1908 年版）。[Op. 13 第三乐章](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=296)
 
+### 配器法基础教程
+
+| 章节 | 印刷页 | PDF 页 | 练习起点 |
+| --- | --- | --- | --- |
+| [第一章 管弦乐队概述](./content/books/orchestration/orchestration-1.html) | 1–11 | 11–21 | 印刷 11 / PDF 21，力度说明之后 |
+| [第二章 弓弦乐器与弓弦乐器组](./content/books/orchestration/orchestration-2.html) | 13–87 | 23–97 | 四节分别从印刷 34、57、76、87 页起，印刷 35、77、87 页按正文／习题分界处理 |
+| [第三章 木管乐器与木管乐器组](./content/books/orchestration/orchestration-3.html) | 90–146 | 100–156 | 习题从印刷 103、118、135、145 页起，104、135 页按正文／习题分界处理 |
+| [第四章 圆号](./content/books/orchestration/orchestration-4.html) | 147–158 | 157–168 | 印刷 157 / PDF 167，合唱型多声部范例之后 |
+
+第二章的[乐器音域图](./content/books/orchestration/orchestration-2.html#string-ranges)沿同一实际音高轴比较不同乐器。可复用 `.instrument-range` 的 SVG 结构，实线色带表示常用音域，虚线表示扩展或极限，圆点为空弦等明确的定弦音，轴上相邻的 C 标记相隔一个八度。移调乐器用实际音高绘图，另用表格标明记谱关系与精确边界。
+
+第三章的木管程序谱为每支管指定独立的谱表和音色。可复用 `mountScore` 的 `notes.scoreTracks`，每条包含谱表名 `name`、MIDI 音色编号 `program` 和 alphaTex 片段 `phrase`。木管试听用 alphaTab 附带的 SONiVOX 音库，随构建输出版权声明和 Apache 2.0 许可说明。
+
+第四章沿用音域键盘和 SONiVOX 音库。F 管活塞程序谱按分音频率比计算键位，并以十二平均律近似播放。现代双重圆号的管路和旧式低音谱号换算已另行核对。[雅马哈圆号构造](https://www.yamaha.com/en/musical_instrument_guide/horn/mechanism/mechanism003.html) · [瑞典音乐遗产圆号四重奏校勘说明](https://www.swedishmusicalheritage.com/downloadMedia.php?f=Crusell_Bernhard-Tre_kvartetter_for_fyra_horn-%28hn%29-%28SMH-ed%29-%28SMH-M1828%29.pdf&m=1828)
+
 ## 预制格式库
 
 课程中的可调谱例集中列在[程序谱目录](./content/programmatic-scores.html)，每项链接到原章的谱面。
@@ -237,6 +253,8 @@ mountScore(document.querySelector('#example'), {
 - 需要试听和同步高亮时，再使用 `mountScore`。已有 alphaTex 且只需要浏览器制谱时，也可用 `audio: false`，它仍会运行 alphaTab 排版。
 
 ### 钢琴键盘
+
+**音域键盘**用于在同一音高轴上比较不同乐器。[弓弦乐器](./content/books/orchestration/orchestration-2.html#string-ranges)和[木管乐器](./content/books/orchestration/orchestration-3.html#woodwind-ranges)共用 `mountRangeKeyboards(figure, table)`。在音域表里用 `data-range-main` 标记音域单元格（如 C4–C7），用 `data-range-high` 标记高端极限音。低音扩展写在该行的 `data-range-low`，空弦通过 `data-range-open` 标记（如 G3 · D4 · A4 · E5）。键盘使用实际发声音高。
 
 **谱键对照图**把五线谱与钢琴键盘画在同一个坐标系里，让符头中心纵向对齐对应琴键中心。第三章「全音列的谱键对照」是静态样板，大谱表和键盘在窄屏一起滚动。基础音列示例只画自然音。讲音阶、音程或和弦时，按需要标出对应的白键或黑键，琴键轮廓继续复用 `content/shared/formats/piano.svg`。
 

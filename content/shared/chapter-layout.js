@@ -4,9 +4,22 @@ const main = document.querySelector('main');
 prepareReadingContent(main);
 
 if (main.matches('.lesson-chapter')) {
+  formatChapterTitle();
   addCoursePath();
   addOutline();
   addChapterNavigation();
+}
+
+function formatChapterTitle() {
+  const heading = main.querySelector(':scope > h1');
+  const text = heading?.firstChild;
+  const chapter = text?.nodeValue?.match(/^(第[一二三四五六七八九十百零〇\d]+章)\s*/);
+  if (!chapter) return;
+  const number = document.createElement('span');
+  number.className = 'chapter-number';
+  number.textContent = chapter[1];
+  text.deleteData(0, chapter[0].length);
+  heading.prepend(number, ' ');
 }
 
 function addCoursePath() {
@@ -46,7 +59,7 @@ function addOutline() {
   const title = document.createElement('p');
   title.textContent = '本章目录';
   const list = document.createElement('ul');
-  const wideScreen = matchMedia('(min-width: 76rem)');
+  const wideScreen = matchMedia('(min-width: 82rem)');
   details.open = wideScreen.matches;
   wideScreen.addEventListener('change', ({ matches }) => { details.open = matches; });
 
@@ -100,13 +113,13 @@ function addOutline() {
 }
 
 async function addChapterNavigation() {
-  const chapter = location.pathname.match(/\/(chapter|harmony|counterpoint)-(\d+)\.html$/);
+  const chapter = location.pathname.match(/\/(chapter|harmony|counterpoint|orchestration)-(\d+)\.html$/);
   if (!chapter) return;
   const [, series, chapterNumber] = chapter;
   const number = Number(chapterNumber);
   const lowerVolume = location.pathname.includes('/harmony-lower/');
   const first = lowerVolume ? 24 : 1;
-  const last = lowerVolume ? 44 : { chapter: 16, harmony: 23, counterpoint: 19 }[series];
+  const last = lowerVolume ? 44 : ({ chapter: 16, harmony: 23, counterpoint: 19 }[series] ?? number);
   const book = './index.html';
   const titles = await chapterTitles(book);
   const previousPage = `./${series}-${number - 1}.html`;

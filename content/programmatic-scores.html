@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./shared/themes.css">
     <link rel="stylesheet" href="./shared/formats/formats.css">
     <script src="./shared/themes.js"></script>
+    <script type="module" src="./shared/score-catalogue.js"></script>
   </head>
   <body>
     <header class="masthead">
@@ -40,7 +41,13 @@
         <a href="#harmony-lower-programmatic">和声学下册</a>
         <a href="#counterpoint-programmatic">复调上篇</a>
         <a href="#counterpoint-forms-programmatic">复调下篇</a>
+        <a href="#orchestration-programmatic">配器法</a>
       </nav>
+      <form class="score-filters" role="search" aria-label="查找程序谱" hidden>
+        <label>教材 <select name="book"><option value="">全部教材</option></select></label>
+        <label>谱例名称 <input type="search" name="query" placeholder="例如：音阶、赋格"></label>
+      </form>
+      <p class="score-filter-empty" role="status" hidden>没有找到符合条件的谱例。</p>
       <section class="score-book" aria-labelledby="theory-programmatic">
       <h2 id="theory-programmatic" tabindex="-1"><a href="./books/music-theory/index.html">基本乐理教程</a></h2>
       <nav class="course-index" aria-label="基本乐理教程的程序谱">
@@ -514,6 +521,42 @@
               <li><a href="./books/counterpoint/counterpoint-19.html#species-counterpoint">同一固定调的五类对位</a></li>
               <li><a href="./books/counterpoint/counterpoint-19.html#pathetique-c-episode">《悲怆奏鸣曲》C 插部的对位转换</a></li>
               <li><a href="./books/counterpoint/counterpoint-19.html#fugato-layout">赋格段在开头与中间的位置</a></li>
+            </ul>
+          </section>
+        </div>
+      </section>
+      <section class="score-book" aria-labelledby="orchestration-programmatic">
+        <h2 id="orchestration-programmatic" tabindex="-1"><a href="./books/orchestration/index.html">配器法基础教程</a></h2>
+        <div class="course-index single-book-index">
+          <section class="course-group" aria-labelledby="orchestration-sound-scores">
+            <h3 id="orchestration-sound-scores">乐队音响</h3>
+            <ul>
+              <li><a href="./books/orchestration/orchestration-1.html#string-timbres">同一乐句的三种弦乐音色</a></li>
+              <li><a href="./books/orchestration/orchestration-1.html#spacing-comparison">同一和弦的两种声部排列</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="orchestration-string-scores">
+            <h3 id="orchestration-string-scores">弓弦乐器组</h3>
+            <ul>
+              <li><a href="./books/orchestration/orchestration-2.html#string-melody-layers">单线、八度重叠与三度加厚</a></li>
+              <li><a href="./books/orchestration/orchestration-2.html#string-chorale-layout">四部原型、内声填充与低音扩展</a></li>
+              <li><a href="./books/orchestration/orchestration-2.html#string-chord-attacks">同一小提琴和弦的三种发声次序</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="orchestration-woodwind-scores">
+            <h3 id="orchestration-woodwind-scores">木管乐器组</h3>
+            <ul>
+              <li><a href="./books/orchestration/orchestration-3.html#woodwind-timbres">同一乐句的四种木管音色</a></li>
+              <li><a href="./books/orchestration/orchestration-3.html#woodwind-chorale-voicing">同一四部和声的三种木管组合</a></li>
+              <li><a href="./books/orchestration/orchestration-3.html#woodwind-octave-doubling">长笛与单簧管的同度和八度重叠</a></li>
+              <li><a href="./books/orchestration/orchestration-3.html#woodwind-chord-spacing">固定和弦音的三种音色排列</a></li>
+            </ul>
+          </section>
+          <section class="course-group" aria-labelledby="orchestration-horn-scores">
+            <h3 id="orchestration-horn-scores">圆号</h3>
+            <ul>
+              <li><a href="./books/orchestration/orchestration-4.html#horn-harmonic-series">F 管的活塞与泛音列</a></li>
+              <li><a href="./books/orchestration/orchestration-4.html#horn-textures">同一旋律的圆号配置</a></li>
             </ul>
           </section>
         </div>

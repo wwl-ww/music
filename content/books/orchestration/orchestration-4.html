@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第四章 圆号｜配器法基础教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./orchestration.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./orchestration-4.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">配器法基础教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第四章 圆号</h1>
+      <p class="intro">圆号可以在中音区弱奏出圆润的长音，也能在同一音区强奏出鲜明的铜管音色。配器时先确定它要独奏、为同一条线加厚，还是填入中间声部，再按实际音高分配音区，最后写成 F 调圆号分谱。</p>
+
+      <section aria-labelledby="horn-production">
+        <h2 id="horn-production">一、乐器构造与发音原理</h2>
+        <p>圆号的声音从嘴唇开始。气流使嘴唇振动，号嘴把振动传给管内空气柱。给定一种管长，只改变嘴唇的张力和气流，能在同一组自然泛音之间选择。换一组管长，整列泛音便一起移动。一个音因此可能有多种指法，某些相邻泛音还会近到只差半音左右。</p>
+        <details class="lesson-aside">
+          <summary>从自然圆号到双重圆号</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>自然圆号由猎号发展而来。换接不同长度的管段可以换调，右手改变喇叭口的开合还能补取部分音。十九世纪初开始采用活塞后，演奏者可以在乐句中快速切换管长，半音写法更自由。</li>
+              <li>现代圆号由较深的漏斗形号嘴、盘绕的主管、附加管、回转阀、调音管、放水键和扩张的喇叭口组成。左手换管路，右手通常放在喇叭口内调节音准和音色。</li>
+              <li>常见的 F／B♭ 双重圆号用拇指阀选择两套管路。较短的 B♭ 管在中、高区较易选准泛音。部分型号另有用于闭塞补偿的附加阀，作用随型号而异。F／B♭ 是乐器的管路配置，分谱仍可按 F 调圆号记写。</li>
+            </ul>
+          </div>
+        </details>
+
+        <h3>三个活塞与七组泛音列</h3>
+        <p>第一、第二、第三活塞通常由左手食指、中指、无名指控制。按下活塞，气流多走一段附加管，整列泛音下降。第二活塞多接入最短的一段管，所以它降一半音，第一活塞降两半音，第三活塞降三半音。第一加第二与单按第三在教学上归为同组，实际可按音准与换指选择。</p>
+        <table class="lesson-table">
+          <caption>F 管的七组管长</caption>
+          <thead><tr><th scope="col">按下的活塞</th><th scope="col">相对空按降低</th><th scope="col">第 2 分音（实音）</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">全部松开</th><td>0 半音</td><td>F2</td></tr>
+            <tr><th scope="row">第二</th><td>1 半音</td><td>E2</td></tr>
+            <tr><th scope="row">第一</th><td>2 半音</td><td>E♭2</td></tr>
+            <tr><th scope="row">第三，或第一＋第二</th><td>3 半音</td><td>D2</td></tr>
+            <tr><th scope="row">第二＋第三</th><td>4 半音</td><td>D♭2</td></tr>
+            <tr><th scope="row">第一＋第三</th><td>5 半音</td><td>C2</td></tr>
+            <tr><th scope="row">第一＋第二＋第三</th><td>6 半音</td><td>B1</td></tr>
+          </tbody>
+        </table>
+        <p>分音从基频起算，第 2 分音比基频高八度。F 管的第 1 分音很少用，示范从第 2 分音开始。例如，空按的第 4 分音是 F3。按下第二活塞，仍吹第 4 分音，得到 E3；若想得到同一指法上的 E4，须跳到第 8 分音。中高区的相邻泛音较密，起奏和跨区跳进容易落在邻近的泛音上。</p>
+        <div id="horn-harmonic-series" class="programmatic-score" role="group" aria-labelledby="horn-harmonic-caption">
+          <h3 id="horn-harmonic-caption">F 管的活塞与泛音列</h3>
+          <form class="score-choices">
+            <label>活塞
+              <select name="valves">
+                <option value="0">全部松开</option>
+                <option value="1">第二</option>
+                <option value="2">第一</option>
+                <option value="3">第三／第一＋第二</option>
+                <option value="4">第二＋第三</option>
+                <option value="5">第一＋第三</option>
+                <option value="6">第一＋第二＋第三</option>
+              </select>
+            </label>
+          </form>
+          <p data-generated-description aria-live="polite"></p>
+          <figure data-generated-score></figure>
+          <figure class="keyboard-example">
+            <figcaption>实际音高的键位</figcaption>
+            <div data-generated-piano></div>
+          </figure>
+        </div>
+        <p>谱上标出第 2 至 16 分音。键位和试听采用最接近的十二平均律音。第 7、11、13 等分音与琴键有可闻的音高偏差。</p>
+        <aside class="lesson-callout"><p><strong>活塞选管长，嘴唇选这一管长的泛音。</strong> 写半音旋律时，演奏者会在不同泛音列之间换指；号声连续的高跳进，还要考虑能否迅速找到目标泛音。</p></aside>
+      </section>
+
+      <section aria-labelledby="horn-range">
+        <h2 id="horn-range">二、音域、音区、力度与音色</h2>
+        <p>F 调圆号的总音域约为实际 B1–F5，常用范围为 F2–C5。同一个力度落在不同音区，发音难度和听感会改变。写旋律或长音伴奏时，通常从中区选音，再根据需要往低处加厚，或往高处突出线条。</p>
+        <figure class="notation-sample" id="horn-range-keyboards" hidden></figure>
+        <table class="lesson-table" id="horn-range-table">
+          <caption>实际音高与现代 F 调记谱</caption>
+          <thead><tr><th scope="col">乐器</th><th scope="col">常用范围</th><th scope="col">总音域边界</th></tr></thead>
+          <tbody>
+            <tr data-range-low="B1"><th scope="row">F 调圆号</th><td><span data-range-main>F2–C5</span><br>写 C3–G5</td><td>B1–<span data-range-high>F5</span><br>写 F♯2–C6</td></tr>
+          </tbody>
+        </table>
+        <table class="lesson-table">
+          <caption>三个音区的发音与用途</caption>
+          <thead><tr><th scope="col">音区</th><th scope="col">音色与力度</th><th scope="col">常见的配器位置</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">低区</th><td>声音偏暗，起音较慢；强吹时可显粗涩，最低几音更耗气。</td><td>适于厚底和持续音。最低音附近的轻声起奏、连续短音要留余地。</td></tr>
+            <tr><th scope="row">中区</th><td>发音匀整，动态范围较大。弱奏柔和圆润，强奏可变明亮、饱满。</td><td>常用来唱旋律、填补内声部，也适合连接木管、大管一侧与中低弦的音响。</td></tr>
+            <tr><th scope="row">高区</th><td>明亮并逐渐紧张、尖锐。极高区较难稳住，轻起音和从远处跳入尤其不易。</td><td>用于需要穿透力的旋律、强调音和强奏；持续靠近上限也要考虑疲劳。</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="horn-techniques">
+        <h2 id="horn-techniques">三、演奏技巧</h2>
+        <h3>连奏、吐音与颤音</h3>
+        <p>圆号适合在中区唱较长的旋律，在中、低区保持持续音。连奏时句头一般吐音，其余音靠气流、嘴唇和换指连接。写长句要预留换气；多支圆号同奏持续音时，可以错开换气以保持声响。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">技巧</th><th scope="col">发音动作</th><th scope="col">配器上的用法</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">单吐、双吐、三吐</th><td>用舌头起音。双吐交替两种舌位，三吐把快速音按三个一组组织。</td><td>适合有清晰节奏轮廓的号角型。快速重复尽量落在常用区，过低会起音慢，过高容易错吹相邻泛音。</td></tr>
+            <tr><th scope="row">唇颤音</th><td>主要靠嘴唇和气流，在同一指法的相邻泛音间往返。</td><td>相邻泛音接近二度的音区更容易取得清楚的效果。</td></tr>
+            <tr><th scope="row">活塞颤音</th><td>通过交替指法取得主音与邻音。</td><td>效果受具体指法和音区限制。要先确认这一对音可以快速换指。</td></tr>
+            <tr><th scope="row">舌震音</th><td>滚动舌头形成连续的颗粒感，谱上可写 <i lang="en">flutter tongue</i>。</td><td>用于加强持续音的紧张感和质地，持续时间需要给气息留余量。</td></tr>
+          </tbody>
+        </table>
+
+        <h3>开放、阻塞、加弱音器与扬号口</h3>
+        <p>开放奏法中，右手仍可放在喇叭口里调音准。右手进一步收拢会改变声音；完全闭塞时，振动和音准也会改变，演奏者须选择补偿指法或合适的阀。写谱依然标出要发出的音，奏法另外标明。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">奏法</th><th scope="col">记号</th><th scope="col">声音与用法</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">手阻塞与闭塞</th><td>用 <strong>＋</strong> 指定阻塞，恢复开放标 <strong>○</strong>。要求特定半阻塞效果时可另加文字。</td><td>逐步收拢时声音变暗，弱奏可做出远处回声般的效果。完全闭塞可带金属质感，强奏时尤其尖锐。</td></tr>
+            <tr><th scope="row">加弱音器</th><td><i lang="it">con sord.</i>，取消写 <i lang="it">senza sord.</i></td><td>用器具改变喇叭口的共鸣，常得到收敛而遥远的音色。安装和取下均要留时间。</td></tr>
+            <tr><th scope="row">扬号口</th><td><i lang="fr">pavillons en l’air</i></td><td>把喇叭口扬起，声音更直接、有穿透力。可让四支号同度吹奏，作为强奏段落的突出效果。</td></tr>
+          </tbody>
+        </table>
+        <p>同音交替阻塞和开放时，目标音高保持不变，记号控制的是音色
+          <svg class="inline-staff inline-staff-wide" viewBox="0 0 88 42" role="img" aria-label="同一音上方交替标加号和空心圆，表示阻塞、开放、再次阻塞。">
+            <path class="inline-staff-lines" d="M2 19H86 M2 24H86 M2 29H86 M2 34H86 M2 39H86"/>
+            <path d="M15 9H21 M18 6V12 M65 9H71 M68 6V12"/>
+            <circle cx="43" cy="9" r="3" fill="none" stroke="currentColor"/>
+            <text x="15" y="29">&#xE0A4;</text><text x="40" y="29">&#xE0A4;</text><text x="65" y="29">&#xE0A4;</text>
+            <path d="M20 29V15 M45 29V15 M70 29V15"/>
+          </svg>。
+        </p>
+      </section>
+
+      <section aria-labelledby="horn-notation">
+        <h2 id="horn-notation">四、记谱</h2>
+        <p>现代 F 调圆号不论用高音还是低音谱号，实音都比书写音低纯五度。要取得实际 C4，现代分谱写 G4。换到低音谱号只改变这个音在谱上的位置。某些旧谱的低音谱号采用另一种习惯，写在实音下方纯四度，同一个实际 C4 写成 F3。</p>
+        <table class="lesson-table">
+          <caption>发出同一个 C4 的三种位置</caption>
+          <thead><tr><th scope="col">写法</th><th scope="col">谱面与书写音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">实际音高总谱</th><td>C4 <svg class="inline-staff" viewBox="0 0 66 38" aria-hidden="true"><path class="inline-staff-lines" d="M2 7H64 M2 12H64 M2 17H64 M2 22H64 M2 27H64 M35 32H47"/><text x="5" y="22">&#xE050;</text><text x="37" y="32">&#xE0A2;</text></svg></td></tr>
+            <tr><th scope="row">现代 F 调圆号</th><td>G4 <svg class="inline-staff" viewBox="0 0 66 38" aria-hidden="true"><path class="inline-staff-lines" d="M2 7H64 M2 12H64 M2 17H64 M2 22H64 M2 27H64"/><text x="5" y="22">&#xE050;</text><text x="37" y="22">&#xE0A2;</text></svg></td></tr>
+            <tr><th scope="row">旧式低音谱号</th><td>F3 <svg class="inline-staff" viewBox="0 0 66 38" aria-hidden="true"><path class="inline-staff-lines" d="M2 7H64 M2 12H64 M2 17H64 M2 22H64 M2 27H64"/><text x="5" y="12">&#xE062;</text><text x="37" y="12">&#xE0A2;</text></svg></td></tr>
+          </tbody>
+        </table>
+        <p>同一个低音谱号在新旧出版物里都能出现。读旧总谱时要结合版本说明，或把该声部的音与同时奏的低音、八度和和弦对照，确认旧式低音记谱是否适用。有些早期谱还有 A 调、E♭ 调等圆号，读写时先查声部前的调种。</p>
+        <p>传统圆号分谱常不写调号，所需升降记在音符前。比如演奏实际 F 大调的 F–G–A–B♭，F 调圆号写 C–D–E–F。演奏实际 G 大调的 G–A–B–C，写 D–E–F♯–G，升号直接写在 F 前。现代出版物也有写调号的版本。重升、重降使音名难读时，可以在保持音高与和声走向清楚的前提下换用等音拼写。</p>
+
+        <h3>总谱位置与四支圆号的分工</h3>
+        <p>圆号属于铜管组，总谱通常紧接木管，写在小号上方。四支圆号常分成Ⅰ–Ⅱ和Ⅲ–Ⅳ两对。Ⅰ、Ⅲ通常承担较高的线，Ⅱ、Ⅳ承担较低的线。总谱从上到下写Ⅰ、Ⅱ、Ⅲ、Ⅳ时，第二行与第三行的实际音高常会交错。</p>
+        <table class="lesson-table">
+          <caption>四支圆号交错分配的一个和弦</caption>
+          <thead><tr><th scope="col">谱表与号位</th><th scope="col">书写音</th><th scope="col">实际音高</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">第一对　Ⅰ／Ⅱ</th><td>C5／E4</td><td>F4／A3</td></tr>
+            <tr><th scope="row">第二对　Ⅲ／Ⅳ</th><td>G4／C4</td><td>C4／F3</td></tr>
+          </tbody>
+        </table>
+        <aside class="lesson-callout"><p><strong>按音高由高到低，这个和弦是Ⅰ、Ⅲ、Ⅱ、Ⅳ。</strong> 总谱的成对顺序便于演奏员分工，检查和弦间距时按实际音高重排。</p></aside>
+      </section>
+
+      <section aria-labelledby="horn-orchestration">
+        <h2 id="horn-orchestration">五、圆号在乐队中的运用</h2>
+        <p>圆号夹在木管与其他铜管之间的总谱位置，也反映了它常承担的声部工作。中区弱奏时可与大管、中低弦融合，填补旋律与低音之间的音区；同一音区加大力度又能显出铜管的明亮质地。给圆号安排声部时，先看这条线要露出来，还是要和别的声部合在一起。</p>
+        <table class="lesson-table">
+          <caption>圆号配置的四种基本用法</caption>
+          <thead><tr><th scope="col">用法</th><th scope="col">各支圆号做什么</th><th scope="col">适合的声音与结构</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">独奏</th><td>常由Ⅰ在常用音区演奏独立旋律或长音。</td><td>保留圆号自己的音头和分句，适合抒情旋律，也能以重音和断奏写出号角性音型。</td></tr>
+            <tr><th scope="row">同度与八度重叠</th><td>两支或更多同奏；同度共用实际音高，八度让同一条线在两个音层出现。</td><td>同度增强密度和分量，八度扩展实际音域。四支整齐同奏可标 <i>a 4</i>。</td></tr>
+            <tr><th scope="row">加厚式旋律</th><td>主线加一条同向的三度、六度等依附线，也可由三至四支组成随旋律平行移动的和弦。</td><td>依附线的节奏、奏法和分句跟着主线，听觉重心仍在旋律。</td></tr>
+            <tr><th scope="row">合唱型多声部</th><td>四支圆号分担四条连续的线，内声部可保持、斜向移动或反向进行。</td><td>能在中音区铺和声，也可由圆号组独立陈述主题。相同音色容易融合，声部的独立性靠音高走向和节奏保留。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="horn-textures">
+          <div class="music-demo-toolbar">
+            <h3>同一旋律的圆号配置</h3>
+            <label>配置 <select>
+              <option value="solo">独奏</option>
+              <option value="unison">同度重叠</option>
+              <option value="octave">低八度重叠</option>
+              <option value="thirds">三度加厚</option>
+              <option value="chorale">合唱型四部</option>
+            </select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite"></p>
+          <figure aria-label="以圆号音色比较独奏、同度、八度、加厚和合唱型四部"></figure>
+        </div>
+        <p>程序谱用实际音高显示，试听用圆号采样。同一乐句里，重叠只加原声部的副本，三度加厚给主线添依附音，合唱型则让其他声部有各自的进行。</p>
+      </section>
+    </main>
+  </body>
+</html>

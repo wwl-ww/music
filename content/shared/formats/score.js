@@ -17,7 +17,8 @@ let activePlayer;
 
 export function mountScore(figure, {
   notes, tempo = 90, notation = 'both', audio = true, onPitchesChange,
-  onScoreLoaded, sectionNavigation, noteHighlights, voiceAudition
+  onScoreLoaded, sectionNavigation, noteHighlights, voiceAudition,
+  soundFontUrl = soundFont, preservePosition = false
 }) {
   const staves = views[notation];
   const tracks = staves.map((_, index) => index);
@@ -27,6 +28,7 @@ export function mountScore(figure, {
   const splitVoices = Boolean(audio && voiceAudition?.length);
   let auditionVoices = null;
   let reading;
+  let requestedPosition;
 
   figure.classList.add('score-example');
   figure.innerHTML = `
@@ -60,10 +62,37 @@ export function mountScore(figure, {
     display: { padding: [5, 5, 7, 3], lastSystemPaddingBottom: 2, lastSystemFillThreshold: 0 },
     player: {
       enablePlayer: audio,
-      soundFont,
+      soundFont: soundFontUrl,
       scrollMode: 'off'
     }
   });
+  function getPosition() {
+    if (requestedPosition) return requestedPosition;
+    const tick = api.tickPosition;
+    const bar = api.tickCache?.masterBars.findLast(({ start, end }) => start <= tick && tick < end);
+    if (bar) return { bar: bar.masterBar.index, fraction: (tick - bar.start) / (bar.end - bar.start) };
+  }
+
+  function findRequestedBar() {
+    return api.tickCache?.masterBars.find(({ masterBar }) => masterBar.index === requestedPosition.bar);
+  }
+
+  function revealPosition() {
+    if (!requestedPosition || !score.clientWidth) return;
+    const bar = findRequestedBar();
+    const bounds = bar && api.boundsLookup?.findMasterBarByIndex(bar.masterBar.index)?.lineAlignedBounds;
+    if (!bounds) return;
+    if (score.scrollWidth > score.clientWidth) score.scrollLeft = Math.max(0, bounds.x - 12);
+    if (score.scrollHeight > score.clientHeight) score.scrollTop = Math.max(0, bounds.y - 12);
+  }
+
+  function setPosition(position) {
+    if (position && api.score && position.bar >= api.score.masterBars.length) position = undefined;
+    requestedPosition = position;
+    requestAnimationFrame(revealPosition);
+    return requestedPosition;
+  }
+
   function stopPlayback() {
     if (activePlayer === api) activePlayer = undefined;
     reading?.setPlaying(false);
@@ -111,6 +140,7 @@ export function mountScore(figure, {
     });
   });
   api.midiLoad.on(file => {
+    if (material.scoreTracks) return;
     // Keep the tempo and timeline, but leave note events only on audible tracks.
     const firstSilentTrack = playingTimbre === 'strings' || splitVoices ? 0 : 1;
     for (const track of file.tracks) {
@@ -132,7 +162,10 @@ export function mountScore(figure, {
       status.textContent = '';
     }
   });
-  api.postRenderFinished.on(() => reading?.renderMarker());
+  api.postRenderFinished.on(() => {
+    reading?.renderMarker();
+    if (preservePosition) revealPosition();
+  });
 
   if (audio) {
     api.soundFontLoaded.on(() => {
@@ -166,6 +199,7 @@ export function mountScore(figure, {
 
     button.addEventListener('click', () => {
       if (activePlayer === api) {
+        if (preservePosition) requestedPosition = getPosition();
         stopPlayback();
         return;
       }
@@ -176,8 +210,14 @@ export function mountScore(figure, {
         status.textContent = '该段落在当前演奏路线中未出现。';
         return;
       }
+      if (requestedPosition) {
+        const bar = findRequestedBar();
+        const offset = bar && Math.round((bar.end - bar.start) * requestedPosition.fraction);
+        api.tickPosition = bar ? Math.min(bar.end - 1, bar.start + offset) : 0;
+      }
       activePlayer = api;
       if (api.play()) {
+        requestedPosition = undefined;
         status.textContent = '';
       } else {
         activePlayer = undefined;
@@ -192,18 +232,20 @@ export function mountScore(figure, {
 
   function render() {
     const fourPart = material.type === fourPartHarmony;
+    const useTimbreControl = audio && fourPart && !material.scoreTracks;
     figure.dataset.scoreType = fourPart ? fourPartHarmony : 'standard';
-    timbreControl.hidden = !audio || !fourPart;
-    if (audio && fourPart && !reading) reading = mountScoreReading(figure, score, api, stopPlayback);
-    reading?.setMaterial(material, fourPart);
-    const includeNoteBounds = Boolean(noteHighlights) || (audio && fourPart);
+    timbreControl.hidden = !useTimbreControl;
+    if (useTimbreControl && !reading) reading = mountScoreReading(figure, score, api, stopPlayback);
+    reading?.setMaterial(material, useTimbreControl);
+    const includeNoteBounds = Boolean(noteHighlights) || useTimbreControl;
     if (api.settings.core.includeNoteBounds !== includeNoteBounds) {
       api.settings.core.includeNoteBounds = includeNoteBounds;
       api.updateSettings();
     }
-    playingTimbre = fourPart ? timbre : 'piano';
+    playingTimbre = fourPart && !material.scoreTracks ? timbre : 'piano';
     try {
-      api.tex(encodeScore(material, staves, tempo, playingTimbre, splitVoices), tracks);
+      const visibleTracks = material.scoreTracks?.map((_, index) => index) ?? tracks;
+      api.tex(encodeScore(material, staves, tempo, playingTimbre, splitVoices), visibleTracks);
     } catch (error) {
       showError(error);
     }
@@ -220,6 +262,7 @@ export function mountScore(figure, {
 
   return {
     ...(sections && { selectBars: sections.select }),
+    ...(preservePosition && { getPosition, setPosition }),
     stop() {
       if (activePlayer === api) stopPlayback();
     },

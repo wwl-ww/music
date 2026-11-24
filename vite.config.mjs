@@ -54,7 +54,8 @@ export default defineConfig(({ command, isPreview }) => {
           const files = [
             ['shared/themes.js', resolve(contentRoot, 'shared/themes.js')],
             ['licenses/alphaTab.txt', resolve(alphaTabPackage, 'LICENSE')],
-            ['licenses/Bravura.txt', resolve(alphaTabPackage, 'dist/font/Bravura-OFL.txt')]
+            ['licenses/Bravura.txt', resolve(alphaTabPackage, 'dist/font/Bravura-OFL.txt')],
+            ['licenses/SONiVOX.txt', resolve(alphaTabPackage, 'dist/soundfont/LICENSE')]
           ];
           for (const [fileName, path] of files) {
             this.emitFile({ type: 'asset', fileName, source: readFileSync(path) });

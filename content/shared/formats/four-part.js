@@ -8,6 +8,17 @@ const stringParts = [
 ];
 
 export function encodeScore(material, staves, tempo, timbre, splitVoices = false) {
+  if (material.scoreTracks) {
+    const tracks = material.scoreTracks.map(({ name, program, phrase }) => String.raw`
+      \track "${name}"
+      \staff { score }
+      \instrument ${program}
+      \tuning (none)
+      ${phrase}
+    `).join('');
+    return String.raw`\tempo ${tempo}` + tracks;
+  }
+
   const fourPart = material.type === fourPartHarmony;
   const useStrings = fourPart && timbre === 'strings';
   let phrase = material.scoreNotation ?? material;

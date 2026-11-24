@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第6章 母带后期制作｜POP金曲里技</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./pop-techniques-6.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">POP金曲里技</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">第6章</span> 母带后期制作</h1>
+      <p class="intro">母带以经确认的立体声混音为起点。推高平均响度可以带来更紧密的声音，也可能磨平副歌第一拍。处理和交付都要保住作品本来需要的强弱与轮廓。</p>
+
+      <section aria-labelledby="pop-master-source">
+        <h2 id="pop-master-source">立体声混音与母带的分工</h2>
+        <p>母带是在已经确认的立体声混音上做最终调整，使单曲或同一张作品里的多首歌有恰当的频率平衡、强弱、音量关系与起止，并生成适合交付的文件。混音器还能单独改一条吉他或一个底鼓，进入母带后，同一频段里的各声部已经叠在一起。对整首歌加均衡，影响的是该频段的所有声部。</p>
+        <ol>
+          <li>从混音会话导出一份无削波且保留动态的立体声文件，单独开母带会话，并用相近听感响度比较原混音与参考。</li>
+          <li>如果总线早已被推到持续限制或削波，回到混音，旁通单纯用来拉响的处理，在过载发生前减少电平，再输出一份保留峰值余量的版本。推子标注 0 dB 表示这一处不增减增益，与电平表的 0 dBFS 是两个概念。</li>
+          <li>若回到混音仍无法避免某几个声部抢同一段频率或拍点，检查编曲的音区、音色和时值。总线限制过深时，把成品文件调小只会降低整体电平，已经丢失的鼓点轮廓要回到上游恢复。</li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="pop-master-levels">
+        <h2 id="pop-master-levels">峰值、RMS 与节目响度</h2>
+        <p>制作里说的「音压大」常指平均声音很响。一个很短的鼓点能产生高峰值，持续的合成器即使峰值较低，也可能听起来更响。峰值余量也和段落动态不同。把文件整体调小会增加离满刻度的余量，强弱比例仍保持原样。</p>
+        <table class="lesson-table">
+          <caption>音频电平和响度的度量</caption>
+          <thead><tr><th scope="col">度量</th><th scope="col">回答的问题</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">采样峰值（dBFS）</th><td>最大的数字采样离满刻度多远。</td></tr>
+            <tr><th scope="row">真峰值（dBTP）</th><td>估计采样之间的波形峰值，帮助预留重建、转换或编码所需的余量。</td></tr>
+            <tr><th scope="row">RMS</th><td>一段时间里信号振幅的均方根，反映平均信号电平。读数取决于测量窗口，两段音色的 RMS 一样，听感可能不同。</td></tr>
+            <tr><th scope="row">LUFS</th><td>按节目响度算法计入频率加权和时长来估计听感。全曲综合响度与局部短时读数回答不同问题。</td></tr>
+          </tbody>
+        </table>
+        <p>峰均差可以用采样峰值与 RMS 之差表示，它说明尖峰和平均电平的距离。主歌与副歌的响度变化则要分段判断。响度读数服务于曲风和交付目标，柔和的钢琴或抒情曲可以保有较大的强弱范围，舞曲则可能需要更稳定的响度。CD 和流媒体的播放条件不同，部分播放服务会重新调整响度。母带的音量、真峰值和文件规格应以交付要求为准。</p>
+        <div id="pop-master-limits" class="music-demo" aria-labelledby="pop-master-limits-title">
+          <div class="music-demo-toolbar">
+            <h3 id="pop-master-limits-title">同均方根电平下的峰值限制</h3>
+            <label>处理版本<select data-production-choice>
+              <option value="mix">原混音</option>
+              <option value="mild">轻度峰值限制</option>
+              <option value="heavy">重度峰值限制</option>
+            </select></label>
+          </div>
+          <p class="music-demo-cue" data-production-description aria-live="polite">第 2 小节开头的底鼓和钹比前一小节更强，音头和随后的尾音清楚分开。</p>
+          <div class="score-example">
+            <button type="button" class="score-playback" aria-label="播放限制器对照" disabled><span class="score-playback-icon" aria-hidden="true"></span></button>
+            <p class="score-status" role="status"></p>
+          </div>
+          <p class="music-demo-cue" data-production-meters hidden aria-live="polite"></p>
+        </div>
+        <p>上述试听使用与<a href="./pop-techniques-5.html#pop-mix-ambience">混音对照</a>相同的两小节单声道素材。播放前将各版本的 RMS 对齐，以减少音量差。读数由试听信号的采样计算，可用来比较被压低的瞬态。</p>
+      </section>
+
+      <section aria-labelledby="pop-limiter-chain">
+        <h2 id="pop-limiter-chain">限制器的用量与分级处理</h2>
+        <p>限制器把较高的峰值压在设定上限内，最大化器通常还可提高输入电平，让平均响度上升。输入越推越高，就有更多声音受到衰减，副歌开头的第一击可能变平，恢复过慢时还可能带低后面的音。应在相近响度下比对旁通，检查峰值、增益衰减和音色，分别听最响和较轻的段落。</p>
+        <details class="lesson-aside">
+          <summary>宽频限制、饱和与多频段处理</summary>
+          <div class="lesson-aside-content">
+            <p>较难处理的信号可用几级轻度处理，逐级验证各自影响。宽频限制作用于完整信号。饱和可增加泛音，会改变音色。多频段压缩把声音按频段处理，适合某一段频率只在部分时刻过量的情况，但也可能改变原本的高低频平衡。选一项或多项取决于素材，最后再测输出。串联级数本身不能保证结果。</p>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="pop-master-transients">
+        <h2 id="pop-master-transients">遮蔽、起音与尾音</h2>
+        <p>副歌或前奏的强拍常把底鼓、贝斯、合成器、钹和效果声放在一起。底鼓、贝斯和叠加的超低音若同时占据低频，就可能只听出连续的低频，听不清谁起音。重度限制还可能削弱钹的瞬态或让底鼓只剩相对突出的敲击声。一个可定位的办法是切换总线处理的旁通，并单独检查问题频段，然后回到完整音场确认第一拍的冲击及尾音是否还能伸展。</p>
+        <p>若是限制器让第一拍失去冲击，减小它的处理量。若旁通后各乐器仍互相遮蔽，最好回混音检视各轨的音量、持续时间、均衡或音色。若只拿到立体声文件，可尝试少量调整失衡的频段，但要同时核对这个频段内其他声部，因为它们也会被改变。</p>
+      </section>
+
+      <section aria-labelledby="pop-master-stereo">
+        <h2 id="pop-master-stereo">立体声轮廓与中侧处理</h2>
+        <p>主唱在中间、吉他分置两侧，原本定位清楚。总线过重处理时，吉他的拨弦和重音有可能下沉，相对显出的延迟、合唱效果或混响尾音让两边听起来模糊。加宽声场会强化左右差异，也可能进一步削弱中心。副歌如果宽而发散，可先减少总线处理，或略收两侧，再用单声道确认主唱和重要伴奏还在。</p>
+        <p>中侧（M/S）是把立体声转成和与差的一种表示。常用约定取 Mid = (L + R) ÷ 2，Side = (L − R) ÷ 2。左右相同的成分只在 Mid 中，Side 表示左右差异。左右不完全相同的声部可能同时出现在两者中。中侧均衡能分别调整共通与差异成分，例如削去 Side 里影响轮廓的部分低频，但需要旁通和折回单声道复查。</p>
+      </section>
+
+      <section aria-labelledby="pop-master-delivery">
+        <h2 id="pop-master-delivery">曲间复核、交付与备份</h2>
+        <p>长时间反复听自己的作品，很容易把熟悉当作音量小，把别的作品的新鲜感当作音量大。休息后，在相近听感响度下对照同类段落，并结合全曲及短时响度、最高峰值和主次判断。如果多首歌要顺序播放，以相邻曲目交接处确认音量关系、声场与起止。钢琴独奏可以比下一首密集乐队曲柔和。</p>
+        <p>调整确定后，按用途输出母带，回听导出的文件，检查采样率、位深、起尾、声道、实际响度和真峰值。留存确认后的混音、母带工程及发布文件。制作中按里程碑另存，例如 <code>NightBus_Mix_v03</code>、<code>NightBus_Master_v02</code>。完工时将音频素材、分轨和必要的工程信息一起归档。工程版本号保留修改记录，定期在独立存储中保留副本并试开，才能在磁盘或工程损坏时继续工作。</p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -6,6 +6,8 @@ import { mountVoiceRelations } from './shared/formats/voice-relations.js';
 import { mountScoreComparison } from './shared/formats/score-comparison.js';
 import { mountScoreWritingSteps } from './shared/formats/score-writing-steps.js';
 import { mountArrangementGrid } from './shared/formats/arrangement-grid.js';
+import { mountGuitarChordDiagrams } from './shared/formats/guitar-chord-diagram.js';
+import { mountFretboard } from './shared/formats/fretboard.js';
 
 const preview = document.querySelector('#preview-width');
 const showcase = document.querySelector('.format-showcase');
@@ -21,6 +23,25 @@ mountArrangementGrid(document.querySelector('#arrangement-grid-sample'), {
   rows: [
     { label: '贝斯 C3', events: [{ step: 0, length: 2 }, { step: 4, length: 3 }] },
     { label: '底鼓', events: [{ step: 0 }, { step: 4 }] }
+  ]
+});
+
+mountGuitarChordDiagrams(document.querySelector('#guitar-chord-diagram-sample'), [
+  { label: 'C 开放和弦', positions: [null, 3, 2, 0, 1, 0], degrees: [null, 'R', '3', '5', 'R', '3'] },
+  { label: 'F 横按和弦', positions: [1, 3, 3, 2, 1, 1], degrees: ['R', '5', 'R', '3', '5', 'R'],
+    barre: { fret: 1, fromString: 6, toString: 1 } }
+]);
+
+mountFretboard(document.querySelector('#fretboard-sample'), {
+  startFret: 3,
+  endFret: 10,
+  markers: [
+    ...['C', 'D', 'E', 'F'].map((label, index) => ({
+      string: 5, fret: [3, 5, 7, 8][index], label, variant: index === 0 ? 'root' : 'accent'
+    })),
+    ...['G', 'A', 'B', 'C'].map((label, index) => ({
+      string: 4, fret: [5, 7, 9, 10][index], label, variant: index === 3 ? 'root' : 'secondary'
+    }))
   ]
 });
 

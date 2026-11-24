@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第5章 分轨文件与混音｜POP金曲里技</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./pop-techniques-5.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">POP金曲里技</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">第5章</span> 分轨文件与混音</h1>
+      <p class="intro">录完的各条轨道各自清楚，合起来仍可能拥挤。混音让领唱、节奏和伴奏有清楚的主次，分轨交接则让接手的人能重建并调整这份平衡。</p>
+
+      <section aria-labelledby="pop-dry-balance">
+        <h2 id="pop-dry-balance">从干混建立音量与声像</h2>
+        <p>干混是暂时旁通用来加空间或增加响度的处理，凭音量和左右位置先把歌搭起来。各轨相加如果让总线过载，应在过载之前统一降低输入电平并保留原先的相对平衡。监听小声时可调监听输出，工程里的电平和输出文件不会因此改变。</p>
+        <p>主唱先摆在容易听清的位置，底鼓和贝斯撑起节奏，再调高其他伴奏直到它们承担起应有的作用。合成器里的延迟若构成节奏音型，失真若构成吉他的基本音色，都可以保留。干混建立平衡后，才容易判断哪一轨需要均衡、压缩或空间效果。总线压缩可以选用，轻微处理后应在相近响度下与旁通比较。</p>
+        <div id="pop-mix-ambience" class="music-demo" aria-labelledby="pop-mix-ambience-title">
+          <div class="music-demo-toolbar">
+            <h3 id="pop-mix-ambience-title">干混与带延迟的初混</h3>
+            <label>初混版本<select data-production-choice>
+              <option value="dry">干混</option>
+              <option value="delay">主线加延迟</option>
+            </select></label>
+          </div>
+          <p class="music-demo-cue" data-production-description aria-live="polite">旋律、伴奏和节拍的默认平衡不含额外延迟，句间有明显空档。</p>
+          <div class="score-example">
+            <button type="button" class="score-playback" aria-label="播放初混对照" disabled><span class="score-playback-icon" aria-hidden="true"></span></button>
+            <p class="score-status" role="status"></p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="pop-mix-eq">
+        <h2 id="pop-mix-eq">均衡、滤波与频段遮蔽</h2>
+        <p>均衡器（EQ）用来改变不同频率附近的电平。例如吉他和合成器在同一片中频持续发声，主唱的咬字就可能难以辨认，这叫<strong>遮蔽</strong>。先独听找出音色轮廓、刺耳峰值或噪声所在区域，再回到合奏验证冲突。可临时扫动钟形滤波的中心频率来定位，找到问题后把增减量收回到能满足目的的程度。Q 较高通常改动较窄，Q 较低改动较宽。</p>
+        <p>增加主线的存在感，或衰减伴奏里和它相撞的一段频率，都可能得到清楚的主次。如果每一轨都提亮，领唱反而更难站出来，合计电平也更高。逐轨旁通并匹配听感响度，有助于发现过多的提升或削减。频谱能帮助观察集中位置，具体频率由实际音色、音高和编配决定。</p>
+        <table class="lesson-table">
+          <caption>滤波方向与听感线索</caption>
+          <thead><tr><th scope="col">滤波方式</th><th scope="col">常见用途与过量迹象</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">低通（高切）</th><td>让较低频率通过，衰减较高频率。可减轻粗糙的高频或让远处的伴奏更柔和。截止频率压得太低，拨弦起音、钹尾与空气感容易一起消失。</td></tr>
+            <tr><th scope="row">高通（低切）</th><td>让较高频率通过，衰减较低频率。可减少与音乐无关的隆隆声。若连基音或有意义的鼓身也被衰减，声音会薄。低频堆得多但轮廓仍不清时，还可回头检查底鼓、贝斯的音色和落点。</td></tr>
+          </tbody>
+        </table>
+        <div id="pop-mix-masking" class="music-demo" aria-labelledby="pop-mix-masking-title">
+          <div class="music-demo-toolbar">
+            <h3 id="pop-mix-masking-title">伴奏中频的均衡对照</h3>
+            <label>伴奏均衡<select data-production-choice>
+              <option value="bypass">旁通</option>
+              <option value="notch">衰减相撞频段</option>
+            </select></label>
+          </div>
+          <p class="music-demo-cue" data-production-description aria-live="polite">前景旋律的音量固定。较密的伴奏中频会盖住旋律较弱的起音。</p>
+          <div class="score-example">
+            <button type="button" class="score-playback" aria-label="播放均衡对照" disabled><span class="score-playback-icon" aria-hidden="true"></span></button>
+            <p class="score-status" role="status"></p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="pop-mix-compression">
+        <h2 id="pop-mix-compression">压缩器的增益变化</h2>
+        <p>压缩器按信号电平自动衰减，常用来控制太突出的峰值或缩小同一轨的强弱差。加了补偿增益后，处理版才可能听起来更响。要判断压缩是否让音头和尾音更合适，可以同时看增益衰减量，并把开关前后的整体响度调近再比较。</p>
+        <table class="lesson-table">
+          <caption>动态压缩的主要参数</caption>
+          <thead><tr><th scope="col">参数</th><th scope="col">调节作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">阈值</th><td>设定信号进入压缩区的位置。阈值越低，越多信号会触发压缩。</td></tr>
+            <tr><th scope="row">压缩比</th><td>决定超出阈值部分的变化幅度。以稳定信号和 4∶1 为例，输入超过阈值 8 dB 时，输出只比阈值高 2 dB。</td></tr>
+            <tr><th scope="row">启动时间</th><td>决定压缩量建立的快慢。太快可能压掉鼓或拨弦的音头，较慢能让瞬态先通过，也可能漏掉想控制的峰值。</td></tr>
+            <tr><th scope="row">释放时间</th><td>决定信号回落后增益恢复的快慢。太短可能产生可闻的音量起伏或低频失真，太长则可能让下一拍仍在衰减。</td></tr>
+            <tr><th scope="row">补偿增益</th><td>调整压缩后的输出电平。用它匹配旁通响度后，可辨别增益变化本身。</td></tr>
+          </tbody>
+        </table>
+        <details class="lesson-aside">
+          <summary>效果器的选择与试用</summary>
+          <div class="lesson-aside-content">
+            <p>图示均衡器提供一组固定频段，参量均衡器允许调中心频率、增益与 Q。压缩器可带少量预设控件，也可让启动、释放和检测方式分别设置。有些人声处理器还集成噪声门或扩展器。DAW 自带或免费效果器足以完成许多工作，是否好用取决于任务、可控程度和操作速度。选用前用自己的音源对比。</p>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="pop-mix-monitoring">
+        <h2 id="pop-mix-monitoring">参考曲、监听与听觉疲劳</h2>
+        <p>在同一套设备上把参考曲和初混调到相近听感响度，再比较同类段落的人声前后、低频清晰度和空间宽度。主力监听要熟悉，辅助监听可用耳机、手机小喇叭或其他熟悉设备来验证作品。房间可能使某些低频特别强或弱，先检查摆位、聆听位置以及音箱的房间补偿，并用耳机比照，避免在工程里抵消本来由房间造成的变化。</p>
+        <p>循环太久后判断容易偏移。暂停一段时间，回来用熟悉的参考曲重新确认。如果只有某一套设备出现问题，先区分监听环境的特性和混音问题。几个环境里都听不清同一段人声或低音，才更有理由调整工程。</p>
+        <aside class="lesson-callout">
+          <h3>混音先保留各轨轮廓和总线余量</h3>
+          <p>输出一份独立可回放的立体声混音，确认无削波、保留段落强弱与尾音，再交给母带。为试听临时推响的版本可另存。若总线处理本身就是混音音色的一部分，交付时可说明用途并按需要附未处理版。</p>
+        </aside>
+      </section>
+
+      <section aria-labelledby="pop-mix-handoff">
+        <h2 id="pop-mix-handoff">分轨导出、命名与混音交接</h2>
+        <p>逐轨导出能让接手的人独立调整主唱、乐器和环境麦克风。各文件从同一工程时间起点导出，前面留空的轨也照样对齐；结尾留够混响、延迟和实际演奏尾音。一般保留完成的剪辑，把临时 EQ、总线响度增强和过多混响旁通。若音箱模拟、特殊延迟或合成器内置效果本身就是声音设计，可同时交干声和带效果版并标为二选一。混音师还需要立体声初混和按小节、轨道列出重点的简短需求说明。</p>
+        <table class="lesson-table">
+          <caption>单声道与立体声输出的判断</caption>
+          <thead><tr><th scope="col">来源</th><th scope="col">分轨做法</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">主唱、直录贝斯、单支麦克风的吉他</th><td>单声道保留清楚的定位，左右位置可留给混音。两遍独立录制的吉他可以各交一个单声道文件。</td></tr>
+            <tr><th scope="row">双麦钢琴、鼓组顶置麦与房间麦</th><td>立体声保留原始宽度。底鼓和小鼓近麦可以单独输出；钢琴若来自左右手分开的音源且需要独立定位，也可各输出一轨。</td></tr>
+            <tr><th scope="row">合成器、电子鼓与效果声</th><td>有独立左右信息且宽度属于音色时保留立体声。需要稳定定位的单点来源可保留单声道。折回单声道还可检查是否因相位差异损失主体。</td></tr>
+          </tbody>
+        </table>
+        <ol>
+          <li>列出交付文件，约定编码、采样率和位深。用 <code>EG_Back_L.wav</code>、<code>Bass_DI.wav</code>、<code>Bass_AmpFX.wav</code>、<code>FX_01.wav</code> 之类的文件名标出角色、版本与顺序。若 <code>L30</code> 表示建议声像而非已写死的声像，要在说明中明确。</li>
+          <li>把导出的分轨一起导回空工程，从同一起点播放。检查数量、规格、对齐、尾音、意外合并的轨道和重复版本。独听发现断点或噪声后，再合听检查声像、主要声部与总输出是否过载。</li>
+          <li>将分轨、初混、需求说明一并交接。例如说明「副歌第 1 小节要让底鼓落点清楚」「独奏吉他需要一点空间」「两份贝斯择一」。初混保存创作意图，分轨给接手者保留调整空间。</li>
+        </ol>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>序章 基本技巧｜图解作曲配乐</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+    <script type="module" src="./composition-scoring-intro.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解作曲配乐</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">序章</span> 基本技巧</h1>
+      <p class="intro">同一个短动机，换了主音或句尾和声，听感会变。旋律和和声都保持不变，单独更改速度，也会改变动作的分量。作曲时可以把这些决定分开尝试，再把选中的方案合在一起。</p>
+
+      <section aria-labelledby="diatonic-chords">
+        <h2 id="diatonic-chords">自然音阶与调内和弦</h2>
+        <p>和弦进行是一串按时间连接的和弦。以某个自然音阶的每一级为根音，隔一级叠加一个音，就能得到七个调内三和弦。再各叠加一个三度，就得到相应的七和弦。罗马数字表示根音相对主音的级数，大小写分别表示大、小三和弦，减三和弦用 <span class="music-symbol">°</span> 标记，半减七和弦用 <span class="music-symbol">ø7</span> 标记。</p>
+        <p>在 C 大调中，从 C 隔级取 E、G、B，得到 Cmaj7。起点改成 D，仍只取音阶内的音，便得到 D、F、A、C，组成 Dm7。<svg class="inline-staff" viewBox="0 1 58 37" role="img" aria-label="左侧 Cmaj7 为 C、E、G、B，右侧 Dm7 为 D、F、A、C"><path class="inline-staff-lines" d="M1 7H57 M1 12H57 M1 17H57 M1 22H57 M1 27H57 M11 32H26"/><text x="15" y="32">&#xE0A2;</text><text x="15" y="27">&#xE0A2;</text><text x="15" y="22">&#xE0A2;</text><text x="15" y="17">&#xE0A2;</text><text x="39" y="29.5">&#xE0A2;</text><text x="39" y="24.5">&#xE0A2;</text><text x="39" y="19.5">&#xE0A2;</text><text x="39" y="14.5">&#xE0A2;</text></svg> 两组都以三度叠置，三度的实际大小有别，和弦性质随之改变。</p>
+        <table class="lesson-table">
+          <caption>C 大调与 A 自然小调的七和弦</caption>
+          <thead><tr><th scope="col">根音级数</th><th scope="col">C 大调</th><th scope="col">A 自然小调</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">第一级</th><td>Imaj7 · Cmaj7</td><td>i7 · Am7</td></tr>
+            <tr><th scope="row">第二级</th><td>ii7 · Dm7</td><td>iiø7 · Bm7(♭5)</td></tr>
+            <tr><th scope="row">第三级</th><td>iii7 · Em7</td><td>♭IIImaj7 · Cmaj7</td></tr>
+            <tr><th scope="row">第四级</th><td>IVmaj7 · Fmaj7</td><td>iv7 · Dm7</td></tr>
+            <tr><th scope="row">第五级</th><td>V7 · G7</td><td>v7 · Em7</td></tr>
+            <tr><th scope="row">第六级</th><td>vi7 · Am7</td><td>♭VImaj7 · Fmaj7</td></tr>
+            <tr><th scope="row">第七级</th><td>viiø7 · Bm7(♭5)</td><td>♭VII7 · G7</td></tr>
+          </tbody>
+        </table>
+        <p>这里的小调级数以同主音大调为参照，所以第三级、第六级和第七级带降号。C 大调与 A 自然小调是关系大小调，调号与音集合相同，主音不同。Cmaj7 在 C 大调是主和弦，在 A 小调是第三级和弦。</p>
+        <p>和弦符号里的 7、maj7、m7 对应不同构成。Cmaj7 是大三和弦 C–E–G 加大七度音 B，C7 把 B 降为 B♭，Cm7 则把三音也降为 E♭。在 C 大调里，C7 的 B♭ 是调外音。若接到 F 和弦，E 上行到 F、B♭ 下行到 A，C7 就暂时充当 F 的属七。和弦符号中的 7 说明构成，功能由进行决定。</p>
+        <p>把一个功能轮廓从 C 大调改写到 A 小调时，要按新的音阶逐级重选和弦。C 大调的第六、七级七和弦是 Am7、Bm7(♭5)。以 A 为主音后，对应级数的根音变成 F、G，七和弦分别是 Fmaj7、G7。旋律可沿用原节奏，再把承担起点和归宿的级数落实到 A。</p>
+        <details class="lesson-aside">
+          <summary>常用调的调内七和弦速查</summary>
+          <table class="lesson-table lesson-table-dense">
+            <caption>自然大调</caption>
+            <thead><tr><th scope="col">调</th><th scope="col">I</th><th scope="col">ii</th><th scope="col">iii</th><th scope="col">IV</th><th scope="col">V</th><th scope="col">vi</th><th scope="col">vii</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">C</th><td>Cmaj7</td><td>Dm7</td><td>Em7</td><td>Fmaj7</td><td>G7</td><td>Am7</td><td>Bm7(♭5)</td></tr>
+              <tr><th scope="row">D</th><td>Dmaj7</td><td>Em7</td><td>F♯m7</td><td>Gmaj7</td><td>A7</td><td>Bm7</td><td>C♯m7(♭5)</td></tr>
+              <tr><th scope="row">E</th><td>Emaj7</td><td>F♯m7</td><td>G♯m7</td><td>Amaj7</td><td>B7</td><td>C♯m7</td><td>D♯m7(♭5)</td></tr>
+              <tr><th scope="row">F</th><td>Fmaj7</td><td>Gm7</td><td>Am7</td><td>B♭maj7</td><td>C7</td><td>Dm7</td><td>Em7(♭5)</td></tr>
+              <tr><th scope="row">G</th><td>Gmaj7</td><td>Am7</td><td>Bm7</td><td>Cmaj7</td><td>D7</td><td>Em7</td><td>F♯m7(♭5)</td></tr>
+              <tr><th scope="row">A</th><td>Amaj7</td><td>Bm7</td><td>C♯m7</td><td>Dmaj7</td><td>E7</td><td>F♯m7</td><td>G♯m7(♭5)</td></tr>
+              <tr><th scope="row">B</th><td>Bmaj7</td><td>C♯m7</td><td>D♯m7</td><td>Emaj7</td><td>F♯7</td><td>G♯m7</td><td>A♯m7(♭5)</td></tr>
+            </tbody>
+          </table>
+          <table class="lesson-table lesson-table-dense">
+            <caption>自然小调</caption>
+            <thead><tr><th scope="col">调</th><th scope="col">i</th><th scope="col">ii</th><th scope="col">♭III</th><th scope="col">iv</th><th scope="col">v</th><th scope="col">♭VI</th><th scope="col">♭VII</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Am</th><td>Am7</td><td>Bm7(♭5)</td><td>Cmaj7</td><td>Dm7</td><td>Em7</td><td>Fmaj7</td><td>G7</td></tr>
+              <tr><th scope="row">Bm</th><td>Bm7</td><td>C♯m7(♭5)</td><td>Dmaj7</td><td>Em7</td><td>F♯m7</td><td>Gmaj7</td><td>A7</td></tr>
+              <tr><th scope="row">Cm</th><td>Cm7</td><td>Dm7(♭5)</td><td>E♭maj7</td><td>Fm7</td><td>Gm7</td><td>A♭maj7</td><td>B♭7</td></tr>
+              <tr><th scope="row">Dm</th><td>Dm7</td><td>Em7(♭5)</td><td>Fmaj7</td><td>Gm7</td><td>Am7</td><td>B♭maj7</td><td>C7</td></tr>
+              <tr><th scope="row">Em</th><td>Em7</td><td>F♯m7(♭5)</td><td>Gmaj7</td><td>Am7</td><td>Bm7</td><td>Cmaj7</td><td>D7</td></tr>
+              <tr><th scope="row">Fm</th><td>Fm7</td><td>Gm7(♭5)</td><td>A♭maj7</td><td>B♭m7</td><td>Cm7</td><td>D♭maj7</td><td>E♭7</td></tr>
+              <tr><th scope="row">Gm</th><td>Gm7</td><td>Am7(♭5)</td><td>B♭maj7</td><td>Cm7</td><td>Dm7</td><td>E♭maj7</td><td>F7</td></tr>
+            </tbody>
+          </table>
+        </details>
+      </section>
+
+      <section aria-labelledby="major-progressions">
+        <h2 id="major-progressions">大调和声的出发、推进与收束</h2>
+        <p>主和弦 I 确立调性中心，常出现在开头和结尾。下属和弦 IV 能把音乐从主和弦带开，也能直接回到主和弦。属和弦 V 把音乐引向主和弦，使用 V7 时，和弦的三音与七音构成三全音，相隔三个全音。以 G7–C 为例，B 上行半音到 C，F 下行半音到 E，两条声部同时解决。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">常见功能</th><th scope="col">大调中的代表与常用替代</th><th scope="col">C 大调举例</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">主功能</th><td>I；vi、iii 也可延续主功能。</td><td>C、Am、Em</td></tr>
+            <tr><th scope="row">下属或属前功能</th><td>IV、ii；常把音乐引向属和弦。</td><td>F、Dm</td></tr>
+            <tr><th scope="row">属功能</th><td>V、vii°；都含有趋向主音的导音。</td><td>G 或 G7、Bdim</td></tr>
+          </tbody>
+        </table>
+        <p>功能要结合前后和弦判断。C–Am–Dm–G7 可以反复返回 C。C–Em–Dm–G7 保留了属前到属的推进，第二个和弦换成 Em 后，根音和共同音的位置发生变化。若用 C–G–F–C，最后由 IV 直接回 I，少了属七回主的导音与三全音解决。它仍能结束一个乐句，只是收束方式不同。</p>
+        <div id="scoring-basic-major" class="music-demo">
+          <div class="music-demo-toolbar"><h3>同一旋律下的大调循环与句尾</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">C–Am–Dm–G7–C。从主和弦出发，经下属功能到属七和弦，再落回主和弦。</p>
+          <figure data-writing-score aria-label="四小节旋律及不同大调伴奏"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="minor-progressions">
+        <h2 id="minor-progressions">自然小调与属七和弦</h2>
+        <p>A 自然小调的主音是 A，第三音是 C，二者构成小三度。常用主功能和弦是 Am、C，下属或属前和弦包括 Bdim、Dm、F、G。自然小调的第五级 Em 是小三和弦。自然小调的 Em7 含 G，距主音 A 一个全音。把 G 升为 G♯，E–G♯–B–D 就成为 E7，三音 G♯ 也成了距主音 A 半音的导音。Em7 的 G 与 D 相隔纯五度。G 升半音以后，G♯ 与 D 形成减五度，分别以半音到 A、全音到 C，跟 C 大调属七归主时两条线都走半音的情形不同。这一个升号来自 A 和声小调，其他和弦仍可使用自然小调的音。</p>
+        <p>Am–F–Bm7(♭5)–E7–Am 与大调的五和弦循环具有相近的功能顺序。Am–C–Bm7(♭5)–E7–Am 可替换途中延续主功能的和弦；Am–E–Dm–Am 则由 Dm 归向主和弦。E7–Am–F–Dm–E7–Am 展示了从属和声起句，回主之后再走一遍完整的收束。</p>
+        <div id="scoring-basic-minor" class="music-demo">
+          <div class="music-demo-toolbar"><h3>A 小调句尾的 Em7 与 E7</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">Am–F–Bm7(♭5)–Em7–Am。Em7 的 G 到 A 相距全音。</p>
+          <figure data-writing-score aria-label="相同小调旋律及两种属和弦"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="tempo-setting">
+        <h2 id="tempo-setting">速度与旋律、伴奏的适配</h2>
+        <p>BPM 表示每分钟的拍数，写成 ♩ = 120 时，四分音符每分钟出现 120 拍，每拍半秒。120 可当作试写时的比较基准。相同的时值写法，速度变快后起音在实际时间上更密，适合表现急促、热闹或持续运动；速度变慢后留下更多衰减与呼吸的时间，可能显得柔和，也可能显得沉重。力度、音区、音色和音符密度也会影响结果。</p>
+        <p>已经写好的旋律和伴奏，可以用同一份谱试几个相邻速度。旋律的短音过快会失去咬字或轮廓，伴奏的长音过慢可能让拍点变模糊。同一个速度需要兼顾两层，必要时也可以保留速度、修改伴奏的细分方式。</p>
+        <div id="scoring-basic-tempo" class="music-demo">
+          <div class="music-demo-toolbar"><h3>同一乐句在三个速度下的长度</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">♩ = 72。四小节共 16 拍，按谱面速度约 13.3 秒。</p>
+          <figure data-writing-score aria-label="相同四小节旋律和伴奏的速度比较"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="meter-setting">
+        <h2 id="meter-setting">四拍、三拍与拍内分组</h2>
+        <p>速度决定一拍有多长，拍号决定每小节的计拍和重音分组。四拍子通常第 1 拍最重、第 3 拍次重。流行编配常把一拍分成两个八分音符或四个十六分音符，每小节分别得到 8 个或 16 个细分，拍号仍是四四拍。三四拍每小节三拍，圆舞曲常用第 1 拍的低音与随后两拍的和弦表现强弱弱。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">拍号</th><th scope="col">一小节的常用脉搏</th><th scope="col">编配示意</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><span class="time-signature" role="img" aria-label="4/4 拍"><span aria-hidden="true">4</span><span aria-hidden="true">4</span></span></th><td>四个四分音符拍</td><td>低音 · 和弦 · 低音 · 和弦</td></tr>
+            <tr><th scope="row"><span class="time-signature" role="img" aria-label="3/4 拍"><span aria-hidden="true">3</span><span aria-hidden="true">4</span></span></th><td>三个四分音符拍</td><td>低音 · 和弦 · 和弦</td></tr>
+            <tr><th scope="row"><span class="time-signature" role="img" aria-label="6/8 拍"><span aria-hidden="true">6</span><span aria-hidden="true">8</span></span></th><td>两个附点四分音符拍，各分成三个八分音符</td><td>强弱弱 · 次强弱弱</td></tr>
+            <tr><th scope="row"><span class="time-signature" role="img" aria-label="5/8 拍"><span aria-hidden="true">5</span><span aria-hidden="true">8</span></span>、<span class="time-signature" role="img" aria-label="7/8 拍"><span aria-hidden="true">7</span><span aria-hidden="true">8</span></span></th><td>可组合两个与三个八分音符一组的拍</td><td>例如 2＋3，或 2＋2＋3。重音随分组改变。</td></tr>
+          </tbody>
+        </table>
+        <p>三四拍和六八拍每小节都容得下六个八分音符。三四拍分作 2＋2＋2，六八拍常分作 3＋3。若为舞步配乐，可先摆定每次重心转移的位置，再按重心划分拍，而不是只计算每小节的八分音符总数。四拍改为三拍的示范保留每小节旋律的音高顺序和和弦根音，并将末音由两拍缩为一拍。四拍版第二、第四拍落和弦，三拍版的两个和弦紧接在每小节的低音之后。同一曲子也可以在段落边界换拍号，让动作的循环单位随情境变化。</p>
+        <p>三四拍与六八拍的对照保持八分音符的实际长度，旋律的三个音也等长。谱上的四分音符速度同为 108，六八拍的两个附点四分音符大拍则相当于每分钟 72 拍。三四拍的低音和两次和弦分别落在第 1、3、5 个八分位置。六八拍的低音和和弦落在第 1、4 个八分位置，旋律中间那个音跨越第 4 个位置，因此用延音线写清分组。</p>
+        <div id="scoring-basic-meter" class="music-demo">
+          <div class="music-demo-toolbar"><h3>同一动机的四四、三四与六八拍编配</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">四拍版在第 1、3 拍落低音，第 2、4 拍回应和弦。</p>
+          <figure data-writing-score aria-label="同一动机的四四拍、三四拍和六八拍版本"></figure>
+        </div>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./index.html"><span>返回</span><strong>本书目录</strong></a>
+        <a href="./composition-scoring-1.html" rel="next"><span>第一章</span><strong>依据恋爱的意象作曲</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第 2 章 调、调号与移调｜图解流行摇滚音乐理论</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./pop-rock-theory-2.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解流行摇滚音乐理论</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">第 2 章</span> 调、调号与移调</h1>
+      <p class="intro">同一首歌换一个高度仍然认得出来，因为音与音之间的关系保留了。同一组琴键也能写出两种不同的调，因为调还取决于音乐围绕哪个音开展、最后往哪里收束。本章从这两个例子区分调、调号、移调和转调。</p>
+
+      <section aria-labelledby="rock-key-center">
+        <h2 id="rock-key-center">主音与调名</h2>
+        <p>乐句反复停留、收束的中心叫<strong>主音</strong>。主音是 E，再加上大调的音阶与和声关系，就是 E 大调。E 大调从 E 出发，按全、全、半、全、全、全、半排出 E–F♯–G♯–A–B–C♯–D♯–E。一首曲子可以用到调外音，也不必从主音起奏。判断调时，要看主音能否在旋律和和声中确立。</p>
+        <p>伴奏整体调高两个半音，歌手的旋律也一起升高两个半音。卡拉 OK 的升降调、电子键盘的移调功能和吉他的移调夹，都可以做到这种整体移动。改变后的音区应同时照顾最高音与最低音，两端都能唱到才有用。</p>
+      </section>
+
+      <section aria-labelledby="rock-reading-signature">
+        <h2 id="rock-reading-signature">调号的记法与辨认</h2>
+        <p>把音阶中固定要升高或降低的音集中写在谱号之后、拍号之前，就得到<strong>调号</strong>。例如 F 大调把 B 降为 B♭，才有第 3 到第 4 级之间的半音 A–B♭。调号里的降号适用于不同八度的 B。某一小节需要例外时，在音符前另外写临时记号。</p>
+        <figure class="notation-sample">
+          <figcaption>F 大调的调号与谱内的 B♭</figcaption>
+          <svg class="inline-staff inline-staff-wide" viewBox="0 0 108 40" role="img" aria-label="高音谱号后在第三线写降号。第三线的 B 音按调号奏作降 B。">
+            <path class="inline-staff-lines" d="M1 10H107 M1 15H107 M1 20H107 M1 25H107 M1 30H107"/>
+            <text x="6" y="25">&#xE050;</text>
+            <text x="23" y="20">&#xE260;</text>
+            <text x="45" y="27.5">&#xE0A2;</text><text x="61" y="25">&#xE0A2;</text><text x="77" y="22.5">&#xE0A2;</text><text x="93" y="20">&#xE0A2;</text>
+          </svg>
+        </figure>
+        <p>调号提供一组候选调名。无升降号可以是 C 大调，也可以是 A 小调。若已根据主音和句尾确定是大调，可由记号的数量或位置找出调名。</p>
+        <table class="lesson-table">
+          <caption>升号、降号与关系大小调</caption>
+          <thead><tr><th scope="col">数量</th><th scope="col">升号调／新增升号</th><th scope="col">降号调／新增降号</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">0</th><td colspan="2">C 大调、A 小调</td></tr>
+            <tr><th scope="row">1</th><td>G 大调、E 小调／F♯</td><td>F 大调、D 小调／B♭</td></tr>
+            <tr><th scope="row">2</th><td>D 大调、B 小调／C♯</td><td>B♭ 大调、G 小调／E♭</td></tr>
+            <tr><th scope="row">3</th><td>A 大调、F♯ 小调／G♯</td><td>E♭ 大调、C 小调／A♭</td></tr>
+            <tr><th scope="row">4</th><td>E 大调、C♯ 小调／D♯</td><td>A♭ 大调、F 小调／D♭</td></tr>
+            <tr><th scope="row">5</th><td>B 大调、G♯ 小调／A♯</td><td>D♭ 大调、B♭ 小调／G♭</td></tr>
+            <tr><th scope="row">6</th><td>F♯ 大调、D♯ 小调／E♯</td><td>G♭ 大调、E♭ 小调／C♭</td></tr>
+            <tr><th scope="row">7</th><td>C♯ 大调、A♯ 小调／B♯</td><td>C♭ 大调、A♭ 小调／F♭</td></tr>
+          </tbody>
+        </table>
+        <aside class="lesson-callout" aria-labelledby="rock-signature-rules">
+          <h3 id="rock-signature-rules">每移动一个纯五度增添一个记号</h3>
+          <p>从 C 大调向上走纯五度，依次得到 G、D、A、E 等大调。已有的升号保留，最后一个升号是新调的第 7 级，往上半音就是主音。向下走纯五度，依次得到 F、B♭、E♭、A♭ 等大调。最后一个降号是第 4 级，两个降号起可用倒数第二个降号读出主音。只有一个降号时对应 F 大调。</p>
+        </aside>
+        <p>F♯ 大调与 G♭ 大调在十二平均律乐器上用相同的实际音高，但每一级的音名和谱首记号不同。选用升降号时，要看音在调中担任哪个音级。例如 E 大调第 3 级写 G♯，A♭ 大调第 1 级写 A♭。</p>
+        <div class="programmatic-score" id="rock-key-signatures" role="group" aria-labelledby="rock-key-signatures-title">
+          <div class="score-toolbar">
+            <h3 id="rock-key-signatures-title">各大调的调号与音阶</h3>
+            <form class="score-choices">
+              <fieldset><legend>调号所对应的大调</legend>
+                <div class="score-tonic">
+                  <select name="tonic" aria-label="选择大调">
+                    <option value="C">C 大调 · 无升降号</option>
+                    <optgroup label="升号调">
+                      <option value="G">G 大调 · 1 个升号</option>
+                      <option value="D">D 大调 · 2 个升号</option>
+                      <option value="A">A 大调 · 3 个升号</option>
+                      <option value="E">E 大调 · 4 个升号</option>
+                      <option value="B">B 大调 · 5 个升号</option>
+                      <option value="F#">F♯ 大调 · 6 个升号</option>
+                      <option value="C#">C♯ 大调 · 7 个升号</option>
+                    </optgroup>
+                    <optgroup label="降号调">
+                      <option value="F">F 大调 · 1 个降号</option>
+                      <option value="Bb">B♭ 大调 · 2 个降号</option>
+                      <option value="Eb">E♭ 大调 · 3 个降号</option>
+                      <option value="Ab">A♭ 大调 · 4 个降号</option>
+                      <option value="Db">D♭ 大调 · 5 个降号</option>
+                      <option value="Gb">G♭ 大调 · 6 个降号</option>
+                      <option value="Cb">C♭ 大调 · 7 个降号</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <p class="music-demo-cue" data-generated-description aria-live="polite"></p>
+          <figure data-generated-score></figure>
+          <figure class="keyboard-example"><figcaption>该调实际奏出的琴键</figcaption><div data-generated-piano></div></figure>
+        </div>
+        <p>每个音级都能成为一个和弦的根音。以 F 大调为例，第 4 级的根音是 B♭，相应的三和弦写作 B♭，第 2 级的 G 构成 Gm。下一章会说明这些和弦如何从音阶中产生。</p>
+      </section>
+
+      <section aria-labelledby="rock-key-changes">
+        <h2 id="rock-key-changes">移调与曲中的转调</h2>
+        <p><strong>移调</strong>是把选定的整段旋律和和声统一升高或降低。C–G7–C 整体升高全音成为 D–A7–D，两个版本的级数都是 I–V7–I。以吉他为例，第二品夹上移调夹以后，保留原 C、G7、C 的按法，乐队实际听到 D、A7、D。若同时改用 D、A7、D 的按法，实际再高一个全音，成了 E、B7、E。</p>
+        <table class="lesson-table">
+          <caption>第二品移调夹下的指型与实响</caption>
+          <thead><tr><th scope="col">沿用的指型</th><th scope="col">实响</th><th scope="col">乐队所用的调</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">C–G7–C</th><td>D–A7–D</td><td>D 大调</td></tr>
+            <tr><th scope="row">D–A7–D</th><td>E–B7–E</td><td>E 大调</td></tr>
+          </tbody>
+        </table>
+        <p><strong>转调</strong>发生在音乐进行中，后段建立新的主音。在同一次演奏里，前段 C–G7–C 收在 C，后段 D–A7–D 收在 D，两个句子的重心就发生了转换。第二次的 A7 包含 C♯，旋律的 C♯ 上行到 D，伴奏也在 D 停住。这两条线一起支持新主音。</p>
+        <div class="music-demo" id="rock-transpose-modulate">
+          <div class="music-demo-toolbar"><h3>同一乐句的移调与转调</h3><div class="score-choice-buttons" data-writing-choices aria-label="选择乐句的调性安排"></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">原调的两次陈述都在 C 大调结束。</p>
+          <figure data-writing-score aria-label="原调、整体移调和中途转调的对照"></figure>
+        </div>
+        <p>一首含有转调的音乐也能整体移调。原来 C→G→C 的调性路线，整体升高全音就变成 D→A→D，段落间的关系原样保留。相对音感关注音与参照音之间的距离，首调唱名也按这种关系工作。C 大调的 C 和 D 大调的 D 在各自的调里都唱作 Do。</p>
+      </section>
+
+      <section aria-labelledby="rock-related-modes">
+        <h2 id="rock-related-modes">关系大小调与同主音大小调</h2>
+        <p>C 大调和 A 自然小调共用一组白键。C 大调把 C 作为第 1 级，E 是它的大三度。A 自然小调把 A 作为第 1 级，C 是它的小三度。因此，C–D–E–F–G–A–B 与 A–B–C–D–E–F–G 同属一组音，组织出的主音和三音关系却不同。</p>
+        <table class="lesson-table">
+          <caption>从共同音列和共同主音辨认大小调</caption>
+          <thead><tr><th scope="col">关系</th><th scope="col">对照</th><th scope="col">判断依据</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">关系大小调</th><td>C 大调、A 小调</td><td>共用调号，自然音阶的音相同，主音不同。</td></tr>
+            <tr><th scope="row">同主音大小调</th><td>C 大调、C 小调</td><td>主音都是 C，自然小调的第 3、6、7 级比同主音大调低半音。</td></tr>
+          </tbody>
+        </table>
+        <p>自然小调的上行间距是<strong>全、半、全、全、半、全、全</strong>。若从高处主音下行，顺序反过来就是「全、全、半、全、全、半、全」。小调乐句也可升高第 7 级强化回到主音的感觉，例如 A 小调使用 G♯。这些变化通常写作临时升降号，A 小调的调号仍与 C 大调相同。</p>
+        <div class="music-demo" id="rock-relative-keys">
+          <div class="music-demo-toolbar"><h3>同一音集合的关系大小调</h3><div class="score-choice-buttons" data-writing-choices aria-label="选择主音中心"></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">C 大调的低音与旋律最后同时停在 C。</p>
+          <figure data-writing-score aria-label="C 大调和 A 自然小调的句尾对照"></figure>
+        </div>
+        <aside class="lesson-callout" aria-labelledby="rock-relative-finder">
+          <h3 id="rock-relative-finder">关系小调的主音在大调第 6 级</h3>
+          <p>从大调主音向下小三度，或从高八度的主音下行三个半音，就得到关系小调的主音。C→A、G→E、D→B、A→F♯ 都可用同一方法。在吉他或贝斯的同一根弦上，就是向低音方向退三品。若越过空弦，可以改用另一根能找到目标音的弦。</p>
+        </aside>
+        <div class="music-demo" id="rock-relative-fretboard">
+          <div class="music-demo-toolbar"><h3>第 5 弦上的关系大小调主音</h3><div class="score-choice-buttons" data-fretboard-choices aria-label="选择关系大小调"></div></div>
+          <figure data-fretboard-figure></figure>
+          <p class="music-demo-cue" data-fretboard-description aria-live="polite">第 5 弦第 3 品 C 的下方三个半音是空弦 A。</p>
+        </div>
+        <p>和弦符号也用三音区分大、小。C 三和弦的三音是 E，Cm 则用 E♭。这里的小写 m 指和弦三音的小三度。后面会遇到 maj7 里的 maj，它指的是根音到七音为大七度。</p>
+      </section>
+    </main>
+  </body>
+</html>

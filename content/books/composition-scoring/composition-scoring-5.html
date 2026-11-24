@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>依据季节的意象作曲｜图解作曲配乐</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./composition-scoring-5.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解作曲配乐</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">第五章</span> 依据季节的意象作曲</h1>
+      <p class="intro">不同季节可以共享相同的调性，区别往往落在更具体的地方。细雨有松开的起音，早春的低音往上攀，夏日海边的重音跳到弱位，深秋的低音逐级滑落，冬海留出长时间的静止。把这些变化分开，才能有意识地保留一个场景的主要特征。</p>
+
+      <section aria-labelledby="season-rain">
+        <h2 id="season-rain">梅雨 · 断奏、休止与九和弦</h2>
+        <p>细雨的动静交替可以写成短音和休止。让每串音从较高处往下走，保留少数不同长度的空隙。起音清楚的钢琴或木琴容易分出每一下落点，断奏缩短音符实际发声，谱面的占拍仍照原时值计算。写成八分音符加八分休止则明确分配半拍给声音、半拍给静默。两者搭配，多个下行音组可以持续出现，听起来仍有疏密。</p>
+        <p>在 C 大调里交替使用 Dm9 与 Cmaj9，雨点下方的和声保持相近的音区和音量。Dm9 的九音是 E，Cmaj9 的九音是 D。把 E 或 D 放到各自小节的旋律开头，比只放在和弦内部更容易听出延伸色彩。九音可以分别加在小七和弦与大七和弦之上，听感还取决于排列和力度。</p>
+        <p>雨点音型确定后，可以保留原来的起音和空隙，让伴奏转去 Fm9–A♭/B♭–E♭maj9。Fm9 与 E♭maj9 分别在小七、大七和弦上加九音。中间的 A♭/B♭ 用 B♭ 作属低音，上层保留 A♭、C、E♭，让原有短音织体进入另一片调性。</p>
+        <div class="music-demo" id="scoring-rain-pattern">
+          <div class="music-demo-toolbar"><h3>雨滴旋律的留白与九音</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">持续音填满前两组起音之间的空间，伴奏交替使用 Dm7 和 Cmaj7。</p>
+          <figure data-writing-score aria-label="同一雨滴旋律的持续音、断奏与九和弦对照"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="season-spring">
+        <h2 id="season-spring">初春 · 根音上行与三全音替代</h2>
+        <p>D–Em–F♯m 依次使用 D 大调的 I、ii、iii。根音 D–E–F♯ 每次上移一个全音，和声随之抬高。旋律无需和低音同方向或同节奏。初春的生长感可以留给低音，旋律停在较窄的音区仍能听到下面在移动。</p>
+        <p>如果还要在局部加入半音，先写清属七和弦和它的目标。B7 要去 Em 时，D♯、A 是原来的三全音。以与 B 相隔三全音的 F 为根音，F7 中的 E♭、A 与它等音，仍可解决到 Em。这样低音可以写成 F♯–F–E，从上行段末尾折回。A7 去 D 时也可用 E♭7 替代，旋律长音仍需与新和弦核对。</p>
+        <table class="lesson-table">
+          <caption>三全音替代所保留的两个引导音</caption>
+          <thead><tr><th scope="col">属七与目标</th><th scope="col">替代属七与目标</th><th scope="col">共同的三全音</th></tr></thead>
+          <tbody>
+            <tr><td>B7 → Em</td><td>F7 → Em</td><td>D♯（E♭）与 A</td></tr>
+            <tr><td>A7 → D</td><td>E♭7 → D</td><td>C♯（D♭）与 G</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="scoring-spring-substitution">
+          <div class="music-demo-toolbar"><h3>上行之后的两种属和弦</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">D、E、F♯ 依次上行，第二小节低音从 F♯ 转向 B，再到 E。</p>
+          <figure data-writing-score aria-label="B7 与 F7 分别解决到 E 小和弦的合奏谱"></figure>
+        </div>
+        <details class="lesson-aside"><summary>用马林巴填补留白</summary><div class="lesson-aside-content"><p>旋律有较多停顿时，马林巴可以在个别空隙里接一两个短音。若每处停顿都被填满，分句和留白的效果会减弱。</p></div></details>
+      </section>
+
+      <section aria-labelledby="season-summer">
+        <h2 id="season-summer">夏日海边 · 大七和弦与十六分切分</h2>
+        <p>以 Amaj7、Gmaj7 两个色彩相近的大七和弦交替，可以在不急于终止的情况下先建立明亮的底色。大七和弦保留大三和弦，再加根音上方的大七度。Amaj7 的七音是 G♯，Gmaj7 的七音是 F♯。转折可用 Em7–E♭7–Dmaj7 来接下一个片段。E♭7 可理解为 A7 的三全音替代，于是低音 E–E♭–D 连续下降两个半音。再由 Bm7–D/E–Amaj7 回到 A 时，E 低音先给出属位，上方 D 大三和弦保持悬挂色彩。在 A 大调开头借用 Gmaj7，也可先让同一织体和旋律把两个和弦连起来。</p>
+        <p>海边人流的活跃感落在节奏上。把一拍分为四个十六分位置，弱位可以在一拍的第二或第四格起音，随后延续到较强的位置。下面对照将首拍第一个音缩短一格，把第二个音提前到首拍最后一格，延续到下一拍。和声、速度和主要音高相同，跳跃感来自新的重音位置。在改变曲调音程时仍可使用相同的节奏型，使听者记得这个动势。</p>
+        <div class="music-demo" id="scoring-summer-syncopation">
+          <div class="music-demo-toolbar"><h3>海边动机的整拍与十六分切分</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">两个短句都按整拍起音，和声依次为 Amaj7、Gmaj7。</p>
+          <figure data-writing-score aria-label="两小节海边动机的整拍与十六分切分对照"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="season-autumn">
+        <h2 id="season-autumn">深秋 · 半音下行低音与装饰音</h2>
+        <p><strong>和弦线条（line cliché）</strong>在和声织体里保留部分音，让某一声部按规律移动。深秋的写法把这条线放在低处。由 F 小调主和弦起步，低音依次为 F–E–E♭–D–D♭–C。前五个和弦可在上方反复保留 F、A♭、C，最低音另走 F–E–E♭–D–D♭。这条线逐步改变同一组上方音的和弦身份。最后换到 Cm7 时，低音落 C，上方声部也开始重排。</p>
+        <table class="lesson-table">
+          <caption>F 小调下行线的和弦落点</caption>
+          <thead><tr><th scope="col">低音</th><th scope="col">和弦标记</th><th scope="col">连接</th></tr></thead>
+          <tbody>
+            <tr><td>F → E → E♭</td><td>Fm → Fm(maj7)/E → Fm7/E♭</td><td>上方可保留 A♭、C，斜线后写实际低音。</td></tr>
+            <tr><td>D → D♭ → C</td><td>Dm7♭5 → D♭maj7 → Cm7</td><td>低音继续按半音落下，C 与 Fm 仍有回接空间。</td></tr>
+          </tbody>
+        </table>
+        <p>主旋律可以以四分音符和长音为骨架，在少数句内添加很轻的装饰音。下方继续稳定移动，上方只在个别位置稍微增加密度，像落叶短暂飘动。手风琴的延展感适合维持主音和长音，也能让装饰音从连续的声响中浮现。</p>
+        <p>下行到 C 后，可回到 F 低音，以 Fsus4–Fm 结束。若旋律长音停在 C，C 能贯穿两个和弦，四度音 B♭ 在内声落到小三度音 A♭。前面由低音承担变化，句尾改由内声完成解决。</p>
+        <div class="music-demo" id="scoring-autumn-line">
+          <div class="music-demo-toolbar"><h3>半音低音线上旋律的装饰</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">每小节保留三个四分拍，主旋律长短轮替。低音连续下降六个落点。</p>
+          <figure data-writing-score aria-label="六步半音低音线与主旋律装饰音对照"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="season-winter">
+        <h2 id="season-winter">冬日海岸 · 小调里的大和弦与四度动机</h2>
+        <p>A 自然小调本身就包含 Fmaj7。它的音是 F–A–C–E，根音处在自然小调的第六级。以 Fmaj7 开头，可以先呈现过去夏日的明亮印象，随后经过 F6、G/A 落到 Am，才听清整段的小调中心。再展开时，可把 F♯m7(♭5)–B7 当成指向 Em 的局部 iiø7–V7。后面若改用 D/E–E7–Am，低音转向 E，E7 的 G♯ 再上行到 A，整段便回到原来的小调中心。Fmaj7 改为 F6 时可以保留 F–A–C，把 E 换成 D。G/A 到 Am 又可让 A 低音保留，B 向 C 移动。这样开头和结尾都可以保持若干共同音，主音 A 仍要等最后的低音和句尾一起确立。</p>
+        <p>在旋律中反复使用同一个四度轮廓，比如 E–A–E，再移作 D–G–D，足以让两个稀疏乐句属于同一种声音。四度前后的长音与留白使音程轮廓更清楚。排箫的气声和木质音色可以加强清冷的联想，同一旋律交给木吉他时，主要差别来自弹拨的音头和随后的衰减。先保持旋律和伴奏的音高、起音位置不变，就能判断音色转换是否已经足够。</p>
+        <div class="music-demo" id="scoring-winter-motif">
+          <div class="music-demo-toolbar"><h3>同一冬海和声的级进与四度动机</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">两个稀疏音组使用邻近音，结尾落到 A。</p>
+          <figure data-writing-score aria-label="同一 A 小调和声下级进和四度跳进的排箫旋律"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="season-timbre">
+        <h2 id="season-timbre">从主奏音色出发构思配乐</h2>
+        <p>作曲也可以从音色开始。确定最能代表场景的声音，将它用于主要旋律，并按它的起音、持续方式与常用音区写句子。木吉他容易呈现拨弦后的自然衰减，排箫的气声适合拉长，铃声可在稀疏高音里留下闪光似的余韵。</p>
+        <p>接着为主线选择衬托音色，比如排箫配轻弹的木吉他。两者的起音与持续方式不同，旋律容易浮出伴奏。之后若有需要更冷、更远的段落，可把部分曲调交给钢琴并拉开音区、减轻伴奏。主奏音色负责建立形象，换色所承担的任务是让形象在曲子中继续发展。</p>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻篇章">
+        <a href="./composition-scoring-4.html" rel="prev"><span>上一章</span><strong>依据电玩或动漫世界的意象作曲</strong></a>
+        <a href="./composition-scoring-techniques.html" rel="next"><span>终章</span><strong>延伸技巧</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

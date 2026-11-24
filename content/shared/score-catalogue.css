@@ -41,6 +41,21 @@
   --book-color: #54822f;
 }
 
+.score-directory [data-cover="pro-composition"] {
+  --book-cover: url("./assets/covers/pro-composition.jpg");
+  --book-color: #574088;
+}
+
+.score-directory [data-cover="composition-scoring"] {
+  --book-cover: url("./assets/covers/composition-scoring.jpg");
+  --book-color: #a74373;
+}
+
+.score-directory [data-cover="pop-techniques"] {
+  --book-cover: url("./assets/covers/pop-techniques.jpg");
+  --book-color: #b62c34;
+}
+
 .score-banner {
   position: relative;
   display: grid;

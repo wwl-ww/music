@@ -41,7 +41,7 @@
       <section aria-labelledby="arrangement-groove">
         <h2 id="arrangement-groove">基本律动、细分与切分</h2>
         <p><strong>基本律动</strong>是一段音乐反复出现的节奏骨架，由拍点、重音和拍间起音共同形成。先确定这个骨架，各件乐器才知道哪些位置要合在一起、哪些位置可以错开。以一拍为四分音符时，八分音符把一拍分为两格，十六分音符把它分为四格。某一层级的起音越经常出现，听者就越容易感到这个层级。</p>
-        <p>本篇的明快八拍律动以四分音符拍点为支撑，用八分音符补出拍间动作。密集的十六分音符可用来做局部变化。整小节持续强调十六分音符，会让伴奏变得更细密，留给其他声部的节奏空间也会减少。</p>
+        <p>本篇的八拍律动每小节仍有四拍，每拍分成两个八分位置，合计八个位置。四分音符拍点提供支撑，八分音符补出拍间动作。十六分音符可用来做局部变化，整小节铺满时会让合奏更细密。</p>
         <div class="music-demo" id="arrangement-groove-pattern">
           <div class="music-demo-toolbar">
             <h3>拍内细分与跨小节切分</h3>
@@ -49,7 +49,8 @@
               <option value="quarter">四分音符</option>
               <option value="eighth">八分音符</option>
               <option value="sixteenth">十六分音符</option>
-              <option value="sync">小节内切分</option>
+              <option value="sync">小节内 · 八分切分</option>
+              <option value="sync-sixteenth">小节内 · 十六分切分</option>
               <option value="across">跨小节切分</option>
             </select></label>
           </div>
@@ -57,7 +58,7 @@
           <figure data-arrangement-playback aria-label="不同节奏细分与切分的试听"></figure>
           <div data-arrangement-grid></div>
         </div>
-        <p><strong>反拍</strong>指相对于拍点的位置。本例的八分反拍在前半拍与后半拍之间的分界，也就是每拍后半的起点。<strong>切分</strong>指重心被移到通常较弱的位置，例如拍后半的音跨过下一拍拍头，或第 4 拍后半发音并延续到下一小节。十六分音符也能构成切分，本篇以八分切分配合整体的细分层级。踩镲可以连续演奏正拍与反拍，反拍上有起音本身并不一定形成切分。</p>
+        <p><strong>反拍</strong>指相对于拍点的位置。八分反拍在每拍后半的起点。弱处起音并持续越过相邻强处时，重心会移到起音的位置，形成<strong>切分</strong>。上方两种小节内切分长度相同、其他音的落点相同。八分切分比第 3 拍拍头早半拍，十六分切分则等到第 3 拍前的最后一格。踩镲可以连续演奏正拍与反拍，反拍上的普通敲击也能只是细分。</p>
         <p>稳定的拍点允许局部声音提前。跨小节切分尤其适合段落衔接，前一小节已经出现下一句的冲力。整段都采用同样的跨线处理，原本用于标出变化的效果就会减弱。合奏仍要保留足够清楚的拍点。</p>
       </section>
 
@@ -78,18 +79,27 @@
           <div class="music-demo-toolbar">
             <h3>同一鼓组骨架的段落变化</h3>
             <label>写法 <select>
-              <option value="verse">主歌 · 闭镲</option>
-              <option value="contrast">主歌变化 · 叮叮镲与小鼓追加</option>
-              <option value="chorus">副歌 · 开镲与底鼓追加</option>
-              <option value="join">段落衔接 · 底鼓和钹提前</option>
+              <optgroup label="段落里的鼓组编排">
+                <option value="verse">主歌 · 闭镲</option>
+                <option value="contrast">主歌变化 · 叮叮镲与小鼓追加</option>
+                <option value="chorus">副歌 · 开镲与底鼓追加</option>
+                <option value="join">段落衔接 · 底鼓和钹提前</option>
+                <option value="phrase-stop">主旋律切分与合奏留白</option>
+              </optgroup>
+              <optgroup label="同一鼓点更换镲">
+                <option value="hat-closed">闭镲</option>
+                <option value="hat-ride">叮叮镲</option>
+                <option value="hat-open">开放踩镲</option>
+              </optgroup>
             </select></label>
           </div>
           <p class="music-demo-cue" aria-live="polite"></p>
           <figure data-arrangement-playback aria-label="鼓组段落变化的试听"></figure>
           <div data-arrangement-grid></div>
         </div>
-        <p>主歌可留出空间，个别底鼓拍点甚至可以空掉。主歌的下一段可保留节拍骨架，只换高音区音色或在小鼓后加一次轻击。进入副歌时，开镲延长高频，底鼓在拍后半增添低处起音。段落衔接可让底鼓与钹一起提前，第 4 拍后半已敲出下一小节的重音，余响越过小节线。这个位置可以省去下一小节第 1 拍的重复敲击。</p>
-        <p>鼓组还可以与主旋律在重要起音或句尾相呼应。有时几下连续切分伴随旋律推进，有时全组停顿让下一段落更突出。常规伴奏型和过门是两项安排。伴奏型维持律动，过门主要用于提示句尾或段落边界。同一个主歌律动再现时，高音区还可以延续上一段较开放的音色，避免整段音响突然缩回去。</p>
+        <p>主歌可省去第 3 拍拍头的底鼓，保留向拍后半移动的重心。两小节反复成一组时，可以让第一、第二小节各有自己的底鼓落点，组内的跨小节切分也随它一起反复。另一段主歌可在第 2 拍小鼓之后多击一次，并把持续的八分音符交给叮叮镲。副歌则可用开镲展开高频，让底鼓在第 2 拍后半提供推动。</p>
+        <p>强音钹可以留给段落重音。示例在小节末让底鼓和钹一起提前半拍，并省去下一小节第 1 拍的重复底鼓。</p>
+        <p>主唱句尾的停顿有两种用法。段落继续时，鼓和贝斯可以保持拍点，如本篇末的八小节示范。停顿用来划分段落时，可让鼓和贝斯同主旋律短收，留出半拍，再在下一小节首拍重入。常规伴奏型维持律动，过门提示句尾或段落边界。主歌律动再现时，也可以延续上一段的开镲，维持已经展开的音响。</p>
         <details class="lesson-aside">
           <summary>鼓谱位置与打击力度</summary>
           <div class="lesson-aside-content">
@@ -97,6 +107,7 @@
               <li>鼓谱用线、间和音头形状区分乐件。底鼓通常在较低位置，小鼓在中间，踩镲和钹使用较高位置及叉形音头。不同鼓谱可能采用不同约定，随谱图例优先。</li>
               <li>同一个鼓件的主重拍、普通敲击和轻击应有力度差别。闭镲、开镲、踏板踩镲与叮叮镲的采样可分别指定。</li>
               <li>同一个踩镲架上，脚合镲会截断先前的开镲余响。编排相邻的开放、闭合声时，要让起音和余响都符合想要的节奏。</li>
+              <li>普通架子鼓用双手击鼓和镲，脚踩底鼓与踩镲踏板。小鼓和强音钹同击时，两手已分配。原本该拍的手击踩镲可以停一下，或用脚踏镲保留脉冲。鼓谱也区分上方的手击镲与五线谱下方的踏板镲。</li>
             </ul>
           </div>
         </details>
@@ -104,16 +115,21 @@
 
       <section aria-labelledby="arrangement-bass">
         <h2 id="arrangement-bass">明快的贝斯编曲</h2>
-        <p>鼓点主要给出起音，贝斯还决定低音持续多久。最简的贝斯线可沿和弦根音铺开，让底鼓的主要击点落在低音正在发声的时间里。同拍重击时，贝斯可与底鼓同时起音。底鼓没有敲击时，贝斯仍可独自起音、延续或停顿。</p>
-        <p>一段伴奏已经建立清楚的低音支撑后，可以留底鼓独响用于短暂的对比。本篇的明快写法优先避免在一连串主底鼓上都断开贝斯，否则底部会变薄。短休止若与主唱换气或重音形成呼应，也能清楚划分乐句。</p>
+        <p>同一个底鼓击点有三种低音写法。<strong>同起音</strong>把贝斯的音头与底鼓的冲击集中在同一刻。<strong>延音覆盖</strong>让底鼓敲在已经发声的贝斯长音中，低音仍在，击点主要由底鼓强调。<strong>贝斯休止</strong>则让底鼓暂时独响。底鼓空下来的位置，贝斯仍可继续弹根音或补一个自己的起音。</p>
+        <p>本篇的明快写法常让重要底鼓和贝斯一起起音。节奏已经稳定后，句尾可以换一个优先对象。主唱切分时，贝斯可跟随那条节奏，底鼓仍维持拍点。主唱停住时，贝斯可一起断开。副歌也可以让贝斯持续弹均匀的八分音符，给旋律下面的节拍增加更紧密的音头。</p>
         <div class="music-demo" id="arrangement-bass-pattern">
           <div class="music-demo-toolbar">
             <h3>底鼓落点与贝斯持续时间</h3>
             <label>写法 <select>
-              <option value="support">贝斯贯穿底鼓重音</option>
-              <option value="gaps">主要底鼓下方留空</option>
-              <option value="kick-sync">底鼓切分，贝斯守拍</option>
-              <option value="bass-sync">贝斯独自跨拍切分</option>
+              <optgroup label="固定底鼓，改变第 3 拍的贝斯">
+                <option value="support">第 3 拍 · 同时起音</option>
+                <option value="held">第 3 拍 · 贝斯正在延音</option>
+                <option value="gaps">第 3 拍 · 贝斯休止</option>
+              </optgroup>
+              <optgroup label="底鼓与贝斯各自切分">
+                <option value="kick-sync">底鼓切分，贝斯守拍</option>
+                <option value="bass-sync">贝斯独自跨拍切分</option>
+              </optgroup>
             </select></label>
           </div>
           <p class="music-demo-cue" aria-live="polite"></p>
@@ -123,8 +139,8 @@
         <p>低音声部的<strong>切分优先级</strong>取决于鼓给出的支点。底鼓已用切分推向下一拍时，贝斯可以一起切分，也可以用长音或正拍保持底部稳定。底鼓一直守正拍而贝斯屡次独自提前，两条线会给出不同的重心。这个效果能用于转折，本篇的稳定律动以同推或一动一稳为起点。</p>
 
         <h3>根音、五度音与转位低音</h3>
-        <p>C 和弦在低处持续弹 C，和声很清楚，但低音线几乎没有高低起伏。把 G 放在局部轻拍，尤其放在 C 下方纯四度处，可以在下一次根音重击前压低低音线。这个 G 在和弦里仍是 C 的五度音，声部实际下行的是纯四度，两者说明的关系不同。根音和弦确定时，五度音也可以放在根音上方纯五度处，形成上抬的感觉。</p>
-        <p>斜线和弦左边是和弦，右边说明指定低音。例如 <strong>G/B</strong> 的和弦音是 G、B、D，B 在底部。B 的下方纯四度是 F♯，会在这个三和弦里加入新音。需要保持原有和声时，可以改用邻近和弦音 G，再回到 B。F♯ 若写成经过音，或属于明确指定的 Gmaj7/B，便要按那种写法判断。</p>
+        <p>底鼓和小鼓交替时，低处与中处的音头形成起伏。贝斯也能用音高来形成类似的起伏。C 大三和弦的根音与五度音是 C、G，加入 G 时，上方的 E 仍保留大三和弦的色彩。单独看低音线，C3 可以向上跳到 G3，也可以先下行纯四度到 G2。示例把较轻的 G2 放在第 3 拍后半，下一拍回到 C3 时，根音的重音更突出。</p>
+        <p>斜线和弦左边是和弦，右边说明指定低音。例如 <strong>G/B</strong> 的和弦音是 G、B、D，B 在底部。若沿用下行纯四度的写法，B2 会跳到 F♯2，给 G 三和弦加入新的音。需要保持原有和声时，可改用靠近 F♯ 的和弦音 G，再回到 B。和声明确为 Gmaj7 时，F♯ 就是它的大七音。</p>
         <div class="music-demo" id="arrangement-bass-pitches">
           <div class="music-demo-toolbar">
             <h3>C 到 G/B 的贝斯音高选择</h3>
@@ -146,35 +162,39 @@
         <p><strong>扫弦</strong>让几根弦在很短的时间内依次发声，把和弦变成清楚的节奏。下扫通常先触低音弦，上扫先触高音弦。一次上扫也可只扫几根高音弦，作为主要下扫之间较轻的拍间起音。主唱和声部骨架稳定时，节奏吉他常沿基本律动扫弦。</p>
         <div class="music-demo" id="arrangement-guitar-pattern">
           <div class="music-demo-toolbar">
-            <h3>基本律动与吉他扫弦方向</h3>
-            <label>扫弦 <select>
-              <option value="basic">强拍下扫与拍间上扫</option>
-              <option value="continuous">连续八分音符</option>
+            <h3>吉他的扫弦节奏与和弦声位</h3>
+            <label>对照 <select>
+              <optgroup label="固定开放 C 和弦，改变扫弦落点">
+                <option value="basic">强拍下扫与拍间上扫</option>
+                <option value="continuous">连续八分音符</option>
+              </optgroup>
+              <optgroup label="固定扫弦，同根音的两种声位">
+                <option value="power">F5 · 强力和弦</option>
+                <option value="barre">F · 完整横按</option>
+              </optgroup>
+              <optgroup label="固定根音与五度，改变三音或七音">
+                <option value="major-seventh">Gmaj7 · 大三音、大七音</option>
+                <option value="dominant-seventh">G7 · 大三音、小七音</option>
+                <option value="minor-seventh">Gm7 · 小三音、小七音</option>
+              </optgroup>
             </select></label>
           </div>
           <p class="music-demo-cue" aria-live="polite"></p>
-          <figure data-arrangement-playback aria-label="两种吉他扫弦节奏试听"></figure>
+          <figure data-arrangement-playback aria-label="吉他扫弦节奏与和弦声位试听"></figure>
           <div data-arrangement-grid></div>
         </div>
-        <p>同一个和弦在六根弦上可以有多种排列。扫弦时，由最低一根实际发声的弦决定吉他自己的低音，由最高弦决定它在合奏顶端有多显眼。电贝斯已负责低声部时，吉他可以只用中间和高处的弦。</p>
-        <table class="lesson-table">
-          <caption>标准定弦吉他的和弦指法示例</caption>
-          <thead><tr><th scope="col">写法</th><th scope="col">指法（六弦至一弦）</th><th scope="col">音响与用法</th></tr></thead>
-          <tbody>
-            <tr><th scope="row">开放和弦 C</th><td>× · 3 · 2 · 0 · 1 · 0</td><td>空弦增添响度和共鸣，轻重扫弦都容易得到清楚的和弦。</td></tr>
-            <tr><th scope="row">开放和弦 G</th><td>3 · 2 · 0 · 0 · 0 · 3</td><td>与 C 共用开放三弦 G。改变指法会改变最上方和中间各音的配置。</td></tr>
-            <tr><th scope="row">六弦根音的封闭和弦 F</th><td>1 · 3 · 3 · 2 · 1 · 1</td><td>食指在一品横按，由 E 大三和弦指型整体上移而来。</td></tr>
-            <tr><th scope="row">五弦根音的封闭和弦 Bm</th><td>× · 2 · 4 · 4 · 3 · 2</td><td>从 A 小三和弦指型整体上移。扫弦从五弦开始。</td></tr>
-            <tr><th scope="row">F5 强力和弦</th><td>1 · 3 · 3 · × · × · ×</td><td>由根音、纯五度和八度根音组成。可强调节奏和音头，因省略三音而没有大、小三和弦的区别。</td></tr>
-            <tr><th scope="row">带张力音的 Cmaj9</th><td>× · 3 · 2 · 4 · 3 · ×</td><td>保留根音、三音、大七度与九度，省略五度，为乐句保留高音位置。</td></tr>
-          </tbody>
-        </table>
-        <p>数字是每根弦的品位，0 表示空弦，× 表示不弹。<strong>开放和弦</strong>用到空弦，常见的还有 Dm、Em、Am。加移调夹后可以保留熟悉的指型，实际音高随移调夹一起升高。<strong>封闭和弦</strong>用横按形成可整体移动的指型。<strong>爵士和弦排列</strong>常保留三音、七音和选定的张力音，并省去不必要的重叠或五度。这些说法描述不同属性，一个带九度的指法也可以采用横按。</p>
+        <p>同一个和弦在六根弦上可以有多种排列。扫弦时，最低的发声音决定吉他声部的低音，最高的发声音决定它在合奏顶端的位置。主歌可以用 F5 的三根低弦保持集中的音头，副歌用同一节奏扫完整横按 F，加入高弦和大三音 A，扩大音区并明确 F 大三和弦。电贝斯已负责低声部时，吉他也可以只扫中间和高处的弦。</p>
+        <h3>和弦声位与吉他指板</h3>
+        <p>指板按第六弦到第一弦从左到右排列。圆点是按弦的位置，上方空圈表示空弦，× 表示不弹，横条表示一根手指横按数根弦。R 表示根音，其余数字表示和弦音的身份。四张指板与上方试听用同一组指法。</p>
+        <div id="arrangement-guitar-diagrams" aria-label="开放 C、F5、横按 F 和 Gmaj7 指板"></div>
+        <p><strong>开放和弦</strong>使用空弦，容易获得共鸣。加移调夹可以保留指型并升高实响。<strong>强力和弦</strong>保留根音和五度，可再重叠八度根音。<strong>封闭和弦</strong>可由开放指型移来。F 用六弦作根音，在第一品横按出移高半音的 E 型；用五弦作根音的 Bm，则可把 Am 型移到第二品横按。</p>
+        <p>吉他弦数有限。排七和弦、九和弦时，可把位置留给三音、七音和需要突出的一种张力音。比如 Cmaj9 可用五弦的 C、四弦的 E、三弦的 B 和二弦的 D，省去五度 G 与重叠音。</p>
+        <p>当根音 G 和五度 D 保持时，Gmaj7 把七音写成 F♯，G7 改用 F。Gm7 保留 F，把三音 B 降成 B♭。这两个内声给出了三个七和弦的区别，高音 D 和扫弦节奏都可以保留。</p>
       </section>
 
       <section aria-labelledby="arrangement-piano">
         <h2 id="arrangement-piano">明快的钢琴编曲</h2>
-        <p>钢琴的音域最宽，容易和贝斯、吉他叠在同一个位置。编制已有两件乐器时，先确定它们的实响音区，再决定钢琴两手放在哪里。可以让吉他留在中间，钢琴左手活动于较低处，右手从吉他上方进入。局部重合时，两件乐器可以共用重音。长时间按同样的节奏占用同一音区，则难以分辨各自的作用。</p>
+        <p>贝斯和吉他的声位确定后，再为钢琴两手分配音区。让吉他居中，钢琴两手分列它的上下，是一种常用起点。局部重合可以合成一个重音，持续奏相同节奏时则更需要把声部分开。</p>
         <figure id="arrangement-piano-keyboards" hidden></figure>
         <table class="lesson-table" id="arrangement-piano-ranges">
           <caption>小型乐队的示例音区</caption>
@@ -186,11 +206,12 @@
             <tr><th scope="row">钢琴右手</th><td data-range-main>C4–E5</td><td>在吉他上方点出和弦顶音和主要重音。</td></tr>
           </tbody>
         </table>
-        <p>这些是一次编排的实际音高范围。标准四弦贝斯最低空弦为 E1，标准定弦六弦吉他最低空弦为 E2。四件声部如何分开取决于当时的指法、和弦排列与力度。</p>
+        <p>图中的吉他与钢琴左手在 G2–C3 有部分重叠，右手起点 C4 与吉他顶端相接。实际音区随指法改变，例如前面的开放 C 从 C3 响到 E4。钢琴可在段落重音与吉他同奏 E4，其余时候把右手的 E4 提到 E5。音仍是和弦的三音，钢琴的高声部却更容易听清。</p>
+        <p>标准四弦贝斯最低空弦为 E1，标准定弦六弦吉他最低空弦为 E2。这里标的是编排中实际使用的音区。</p>
 
         <h3>左手的基本律动与重音层次</h3>
-        <p>左手可用低根音配底鼓、用高八度配第 2、4 拍小鼓。需要加强正拍时可同时弹两个八度；配合底鼓的拍间起音时可只弹低音；小鼓的中音区重拍则由较高的单音回应。把五度放在两个根音之间，可以填补上下跳跃，形成更平滑的移动。</p>
-        <p>五度轻音或幽灵音可加在拍间过渡。主重音若仍保有清楚的音头和层次，补音不会改变听者感到的基本律动。延音踏板可将一段和声连在一起，换和弦、全组停顿或需要重现切分轮廓时，应松开或重踩，让前一串余音及时停止。</p>
+        <p>左手可用低根音配底鼓，用高八度的根音配第 2、4 拍小鼓。需要加强正拍上的底鼓时，可同时弹相隔八度的两个根音。底鼓在拍间提前时，左手可只弹低根音。把较轻的五度音放进高低根音之间，可以缓和上下跳跃。</p>
+        <p>拍间的五度可弹成<strong>幽灵音</strong>，力度明显低于主要音头，负责过渡。延音踏板可把同一和声连起来。换和弦或需要听清休止、切分时，松开或重踩踏板可让前一串余音及时停止。</p>
 
         <h3>右手顶音、两手对齐与错开</h3>
         <p>右手可以先用和弦顶音或八度标出主要律动，再补入内声。钢琴右手的重音在某处提前，左手可以一起提前来强化切分，也可以留在原来的拍点，让底部保持稳定。两手同时改动的地方，音响会比只动一手更强。</p>
@@ -199,18 +220,25 @@
             <h3>同一律动的钢琴两手分配</h3>
             <label>写法 <select>
               <option value="left">左手高低根音</option>
-              <option value="octave">加八度重音与五度过渡</option>
+              <option value="octave">正拍加八度重音</option>
+              <option value="fifth">拍间加五度轻音</option>
               <option value="right">右手加入和弦顶音</option>
               <option value="anticipate">右手提前，左手留空</option>
-              <option value="together">两手一起提前</option>
+              <option value="together">反拍两手同击</option>
               <option value="quarter">主歌变化 · 左手四分音符</option>
+              <option value="closing">正拍收句与右手休止</option>
             </select></label>
           </div>
           <p class="music-demo-cue" aria-live="polite"></p>
           <figure data-arrangement-playback aria-label="钢琴左手与右手重音配合的谱例"></figure>
         </div>
-        <p>上方短谱保留同一和声。副歌前的第 4 拍可提前半拍，一手提前、两手齐进各有不同重量。若右手已负责提前发声，左手在该处留空可以保持上方的清楚起音。段落之间还可将左手收为平稳的四分音符，随后再恢复切分，两段的差别就会更显著。</p>
+        <p>第 4 拍提前半拍，可以为段落增加推动。一手提前与两手齐进的区别在于当下要多重的音头。若下一小节要留出空位，右手可以在前一小节第 4 拍按正拍落下四分和弦，随后休止一拍。左手仍可给出一个短低音。右手重新进入时连续弹几个四分和弦，先把拍点立稳，再恢复切分。</p>
         <p>两手也可以对等地分担节奏。例如左手给出第 1 拍的低音，右手在第 2 拍回答，左手再从第 2 拍后半接上。此时完整的节奏由两手合成。遇到需要全组合奏的重音，两手可共用节奏，把音头合成一次清楚的推动。</p>
+      </section>
+      <section aria-labelledby="foundation-in-context">
+        <h2 id="foundation-in-context">八小节的节拍骨架</h2>
+        <p>第 2 小节句尾，主旋律停两拍，鼓和贝斯仍保留整段的拍点。吉他的短和弦落在第 1、3 拍，钢琴回应第 2、4 拍。这样的骨架能让下一篇的吉他答句接进来。</p>
+        <p><a href="./arrangement-case.html?stage=foundation&amp;passage=verse#case-score">八小节编曲案例 · 第 1–2 小节的节拍骨架</a></p>
       </section>
       <nav class="chapter-pagination" aria-label="相邻篇章">
         <a href="./arrangement-intro.html" rel="prev"><span>上一节</span><strong>流行乐队编曲的基本知识</strong></a>

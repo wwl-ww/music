@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>延伸技巧｜图解作曲配乐</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./composition-scoring-techniques.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解作曲配乐</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">终章</span> 延伸技巧</h1>
+      <p class="intro">一段旋律已经能成立，下一步是安排它的张力、前后段落和声部。先用四组和弦手法改变局部的期待，再为一支短曲加前奏、发展部和尾奏，最后处理词句与人声和音。每种技法都要经过后一个落点检验，单个和弦、音符或词语的效果来自它所处的位置。</p>
+
+      <section aria-labelledby="technique-sus4">
+        <h2 id="technique-sus4">挂留四和弦</h2>
+        <p>Csus4 由 C、F、G 构成，四度音 F 占据原来三音 E 的位置，因此和弦自身没有大三度或小三度。F 下行半音到 E 时，根音和五音都可保留，变化集中在一条线上。若 F 原来就是前一和弦的构成音，就可用同一条声部把它保留到 C 低音上，再下行解决。流行和弦符号 sus4 描述这一刻的构成音，谱面也可直接起奏它。若用在属七上，G7sus4 由 G、C、D、F 构成，C 落到 B 得到 G7，再接 C。</p>
+        <table class="lesson-table">
+          <caption>主和弦与属七和弦的四度挂留</caption>
+          <thead><tr><th scope="col">挂留与解决</th><th scope="col">音高走向</th><th scope="col">短谱</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Csus4 → C</th><td>F → E</td><td><svg class="inline-staff inline-staff-wide" viewBox="0 0 85 38" role="img" aria-label="挂留四和弦 C、F、G 解决到 C、E、G"><path class="inline-staff-lines" d="M1 7H84 M1 12H84 M1 17H84 M1 22H84 M1 27H84 M16 32H33 M53 32H70"/><text x="19" y="32">&#xE0A2;</text><text x="19" y="24.5">&#xE0A2;</text><text x="27" y="22">&#xE0A2;</text><text x="56" y="32">&#xE0A2;</text><text x="56" y="27">&#xE0A2;</text><text x="56" y="22">&#xE0A2;</text></svg></td></tr>
+            <tr><th scope="row">G7sus4 → G7 → C</th><td>C → B，随后 B → C</td><td><svg class="inline-staff inline-staff-wide" viewBox="0 0 90 38" role="img" aria-label="G、C、D、F 到 G、B、D、F，挂留音 C 向下解决到 B"><path class="inline-staff-lines" d="M1 7H89 M1 12H89 M1 17H89 M1 22H89 M1 27H89"/><text x="16" y="22">&#xE0A2;</text><text x="16" y="14.5">&#xE0A2;</text><text x="24" y="12">&#xE0A2;</text><text x="16" y="7">&#xE0A2;</text><text x="55" y="22">&#xE0A2;</text><text x="55" y="17">&#xE0A2;</text><text x="55" y="12">&#xE0A2;</text><text x="55" y="7">&#xE0A2;</text></svg></td></tr>
+          </tbody>
+        </table>
+        <p>如果主旋律在属和弦的位置停在 G，伴奏可以从 C 转到 G7，也可以暂时用 Csus4 并保持 C 低音。后者把张力交给 F 回到 E。终止前还有一种用法，把直接的 G7–C 拉成 G7–Csus4–C，使低音先落到主音，上方随后解决。</p>
+        <div class="music-demo" id="scoring-tech-sus">
+          <div class="music-demo-toolbar"><h3>直接解决与挂留四度</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">共同的主音段之后，G7 直接解决到 C。</p>
+          <figure data-writing-score aria-label="同一句曲调的直接解决、主和弦挂留和属和弦挂留"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="technique-augmented">
+        <h2 id="technique-augmented">增三和弦与半音推进</h2>
+        <p>在 C 大三和弦 C–E–G 里把五音升高半音，得到 Caug 的 C–E–G♯。把它闭合到高八度，三段都相当于四个半音。在十二平均律中，将组成音重新拼写为 E–G♯–B♯ 或 G♯–B♯–D𝄪，可得到音高类相同的 Eaug 或 G♯aug。根音的写法由声部进行与目标和弦决定。</p>
+        <p>C–Caug–F 以 E 或 C 继续支持主旋律，使另一声部走出 G–G♯–A。句末还可以在 G7 和 C 之间插入 Gaug/C，让低音先到 C，高声部用 D–D♯–E 抵达结尾。响声的变化虽明显，半音线仍给出连贯的方向。</p>
+        <div class="music-demo" id="scoring-tech-aug">
+          <div class="music-demo-toolbar"><h3>增和弦作半音桥梁</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">C 的五音 G 保持不变，随后上移全音到 F 和弦的 A。</p>
+          <figure data-writing-score aria-label="C 到 F 以及 G7 到 C 的直接连接与增和弦连接"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="technique-diminished">
+        <h2 id="technique-diminished">减七和弦的替代与经过用法</h2>
+        <p>减三和弦 Cdim 的组成音为 C–E♭–G♭。在其上继续叠小三度得到减七和弦 C°7，第四音应写作 B𝄫，在十二平均律中与 A 同音。若第四音改为 B♭，根音到七音是小七度，就得到半减七和弦 Cø7，也写作 Cm7(♭5)。四个音构成等距循环，可以重拼为别的减七和弦，但拼写会告诉读者哪一个音是根音、哪个音在向目标移动。</p>
+        <p>C–G7–C 的中间和弦可以换成 D°7/C。G7(♭9) 的音是 G–B–D–F–A♭。去掉 G，将 B 重拼为 C♭，其余四音就能写成 D°7。D°7/C 在这四音下另配 C，保留原来构成三全音的两个音，同时让低音 C 贯穿整段。</p>
+        <p>减七和弦也可用于经过连接。Em7 与 Dm7 的根音相距全音，在中间放 E♭°7，就有 E–E♭–D 的半音低音。三个和弦的三音又可排成 G–G♭–F，两条线同时下行。</p>
+        <div class="music-demo" id="scoring-tech-dim">
+          <div class="music-demo-toolbar"><h3>减七和弦连接两个落点</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">两个小节用于比较 C 到属七再回 C，以及 Em7 直接到 Dm7。</p>
+          <figure data-writing-score aria-label="属七代替与半音经过的减七和弦写法"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="technique-secondary">
+        <h2 id="technique-secondary">副属和弦与循环和声</h2>
+        <p>副属和弦把主和弦以外的某个和弦暂时当成解决目标。C 大调的 G7–C 是主调属七至主和弦，B 上行到 C、F 下行到 E。若把 G 当局部目标，就可按同样关系写 D7–G，F♯ 上行到 G，C 下行到 B。这个局部强调仍可以继续回到 C 大调。</p>
+        <table class="lesson-table">
+          <caption>C 大调的常用副属七和弦</caption>
+          <thead><tr><th scope="col">目标</th><th scope="col">副属七和弦</th><th scope="col">引向目标根音的音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">ii · Dm</th><td>A7</td><td>C♯ → D</td></tr>
+            <tr><th scope="row">iii · Em</th><td>B7</td><td>D♯ → E</td></tr>
+            <tr><th scope="row">IV · F</th><td>C7</td><td>E → F</td></tr>
+            <tr><th scope="row">V · G</th><td>D7</td><td>F♯ → G</td></tr>
+            <tr><th scope="row">vi · Am</th><td>E7</td><td>G♯ → A</td></tr>
+          </tbody>
+        </table>
+        <p>C–Am–Dm–G7 是 I–vi–ii–V7 循环。把 Dm 改为 D7，属功能落到 G；把 Am 改为 A7，则朝 Dm 解决。两处同时改写便得到 A7–D7–G7–C 的连续属七，根音按五度关系连接。不妨保留原旋律中各版本都能容纳的音，再检查外来变音与旋律是否发生非预期的半音冲突。</p>
+        <div class="music-demo" id="scoring-tech-secondary">
+          <div class="music-demo-toolbar"><h3>同一循环中的副属和弦</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">原循环用 C、Am、Dm、G7，末小节返回 C。</p>
+          <figure data-writing-score aria-label="C 大调循环的自然和弦、单一副属和弦和连续副属和弦"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="technique-countermelody">
+        <h2 id="technique-countermelody">副旋律的起音密度与音区</h2>
+        <p>副旋律是一条能接续主旋律，也能同时出现的独立线。留在句间时，它能接过短暂的前景。与主旋律同时出现时，密集的主线适合配长音或慢速变化的副线，主线延长或留空时，副线才可增加起音。反向进行容易使轮廓分开，保持或斜向进行也能给乐句留空间。</p>
+        <p>Fmaj7–Em7–Dm7–F/G–Cmaj7 里，可以从各和弦选 A–G–F–F–E，前半形成连续下行，后半同音连接再落到 E。选择贴近的三音能形成副线，也让它和低音根音分工。若这条线与主旋律共享同一音区，先移动副线的八度或更换个别长音。弦乐、人声合唱类音色适合保持背景长音，仍须在转段时核对前后主次。</p>
+        <p>同一音高轮廓还要检查声部身份。例如 F–E–D–C 也能连成下行，但若它已是低音骨架，再重复在副旋律里主要会加强低音。想保留独立线条，可留用 A–G–F–E 的轮廓，再在主旋律变疏的后半段加入短经过音。</p>
+        <div class="music-demo" id="scoring-tech-countermelody">
+          <div class="music-demo-toolbar"><h3>主旋律的空隙与副旋律</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">上声部前半较密，后半改用长音。下方只给出和声。</p>
+          <figure data-writing-score aria-label="同一主旋律没有副线及有疏密互补副线的两种合奏"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="technique-intro">
+        <h2 id="technique-intro">前奏的材料来源与首句衔接</h2>
+        <p>前奏可引用主歌 A、主歌 B 或副歌的旋律和和声，也可用主体没有的专用材料。引用副歌和弦能提前建立熟悉的音响。独立前奏可在不透露主题时先建立音区和节拍，给主体的出场留位置。长度和最后的和弦都要与主体第一句连在一起判断。</p>
+        <p>以 B♭ 大调为例，低音持续 B♭，上方依次配 B♭maj7、E♭/B♭、F/B♭、E♭m/B♭。持续主音维持调性位置，上方经过大小下属的对比，让 E♭m 的 G♭ 向 F 落下，回接主歌的 B♭。简化版可只留 B♭maj7–E♭/F 两个和弦，持续主音的写法和末端低音转到属音的写法都可以接回主体。</p>
+      </section>
+
+      <section aria-labelledby="technique-development">
+        <h2 id="technique-development">发展部的循环换入口与暂时转调</h2>
+        <p>发展部承接主歌或副歌已经确立的意象，再让材料向新处走。B♭maj7–Gm7–Cm7–F7 这一循环可以从 Cm7 起步，写成 Cm7–F7–B♭maj7–Gm7。和弦次序沿循环保持，入点移到原来的第三个和弦，听感由「已经落到 I」变成「正在朝 I 走」。器乐小曲可以保留主题的拍子与动机，让和声承担主要变化。</p>
+        <p>发展部的后半可通过 Em7♭5–A7–Dm 短暂建立 D 小调。Em7♭5 是 D 小调的 iiø7，A7 的 C♯ 向 D 解决。返回时再排布能指回 B♭ 的连接，如 C7–E♭/F–F7(♭9)–B♭。有了去程和回程，插入的新调不会把后段主题的到达感冲散。</p>
+      </section>
+
+      <section aria-labelledby="technique-ending">
+        <h2 id="technique-ending">尾奏的主题回声、重配和声与减速</h2>
+        <p>尾奏可重唱副歌，也可只留下最容易辨认的一个动机，让它多出现一次并换和声。重配和弦时，根据旋律的长音、重拍与落点寻找可容纳的和弦。相同曲调放在不同低音上，仍能被认出，方向和结束的时机却可以变化。</p>
+        <p>延长记号可以在中间的 Gm7 处暂时拉开时间，再原速继续。结尾反复 B♭–E♭m/B♭，保留低音 B♭，把声音的改变集中在上方，最后渐慢回到 B♭。延长记号影响一个点，渐慢影响一段速度的变化。两者可以接续使用，位置要服从尾奏的层次。</p>
+        <table class="lesson-table">
+          <caption>同一个主题从进场到收束</caption>
+          <thead><tr><th scope="col">位置</th><th scope="col">材料怎样连接</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">前奏与主题</th><td>两小节前奏保持 B♭ 低音。末端的小下属回到 B♭ 大调，主题从第 3 小节进入。</td></tr>
+            <tr><th scope="row">发展与主题回归</th><td>第 5 小节改从 ii–V 起步，随后短暂转向 D 小调。第 10 小节回到原主题，调性和音型同时回来。</td></tr>
+            <tr><th scope="row">尾奏</th><td>第 12 小节起保留开头动机，重新配和声。最后让低音 B♭ 留在原位，上方先换色、再渐慢归主。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="scoring-tech-form">
+          <div class="music-demo-toolbar"><h3>同一主题的前奏、发展部与尾奏</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">两小节主题先以小跳上行，再逐步下行并落回 B♭。</p>
+          <figure data-writing-score aria-label="同一主题的分段对照与完整小曲"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="technique-text-setting">
+        <h2 id="technique-text-setting">词组划分、句位与同动机配词</h2>
+        <p>给已有歌词谱曲，先把句子依语义分成词组，再找出前后半句中彼此对应的词组。可先用一字一音找出便于唱和辨认的起点，再按语气分配长音、休止和弱起。字数相同的对应词组可以共享动机。相差一个字时，可以在较短的一组前留出空位，或删掉动机内部的一次起音，保住句尾的落点。</p>
+        <p>如果较长词组只多一个轻读字，也可以让这个字在小节前的弱位进入，两个词组仍对齐同一个重拍。譬如「又起了风」比「起了风」多一个「又」，可把「又」放在前一小节末，两个版本的「起」与「风」分别落在相同位置。</p>
+        <table class="lesson-table">
+          <caption>原创四行词的对应关系</caption>
+          <thead><tr><th scope="col">阶段</th><th scope="col">词句</th><th scope="col">音乐位置</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">前半句</th><td>微风吹来／檐下灯亮<br>水边白鹭／还未归</td><td>重复的题头进入两行，前半部末字停在 E，保留向后发展的空间。</td></tr>
+            <tr><th scope="row">后半句</th><td>钟声传来／慢慢亮<br>我把归途／唱成歌</td><td>「慢慢亮」以休止补足少一个字的位置，最后「歌」落回 C。</td></tr>
+          </tbody>
+        </table>
+        <p>前半部可让末音停在未完成的位置，譬如 F 大调停在 A，后半句再让最后一句落在 F。决定是否开放，要同时看末音和它下方的和弦。尾句如果包含短语与完整句，还可以让短语占据前一小节末端，完整句自己得到终止位置。</p>
+        <div class="music-demo" id="scoring-tech-lyric-fit">
+          <div class="music-demo-toolbar"><h3>四行词的题头、字数差与结尾</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">前半部以 E 收住，保留一个可继续唱下去的落点。</p>
+          <figure data-writing-score aria-label="原创歌词逐字对齐谱，比较前半、后半和全段"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="technique-chorus">
+        <h2 id="technique-chorus">主歌向副歌的推进与关键词高潮</h2>
+        <p>歌词和音符逐字对好以后，还要安排语气。主歌 B 可重复同一题头，配合弱起、休止、连音或长音改变后半句。让进入副歌前的重要词停久一点，可以把这一段变成有方向的准备。休止宜放在词组边界，延音宜落在能延展的字上。</p>
+        <p>副歌的关键词多次出现时，可以保留熟悉的节奏，第一次让旋律往下走，后一次把词组末端推高，听者会同时辨认出同一个短语和新的高潮。「软」「轻」等描述词也可用短暂的空隙或稍迟的起音留出质感。若每句都在相同高点上唱，副歌的重点会被平均分掉。</p>
+        <p>进入副歌时的调性变化与关键词的高潮可以分开安排。例如 F 大调主歌以 Em7–A 收尾，已有指向 D 的属和声。D 大调副歌先从 Em7 起句再落到 Dmaj7，由和声明确新主音。同一句关键词仍可第一次下行、第二次上行，让最高音晚于副歌的入口出现。下方谱例保持在同一个调，单独比较第二次出现时的轮廓变化。</p>
+        <div class="music-demo" id="scoring-tech-chorus-peak">
+          <div class="music-demo-toolbar"><h3>「远处灯火」的主歌准备与副歌高潮</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">主歌末尾延长「亮」，两次「远处灯火」使用相同的下行轮廓。</p>
+          <figure data-writing-score aria-label="原创副歌曲调中关键词的重复、上移和延长"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="technique-vocal-harmony">
+        <h2 id="technique-vocal-harmony">低三度、高三度与三声部和音</h2>
+        <p>主旋律下方加低三度，原旋律容易保留在上方，音响更融合。上方加高三度则能扩大明亮、开阔的感觉，适合最后一次副歌或尾奏，但高音也可能更醒目。写作时可先按调内音补一遍三度，再检查重拍、长音和句尾。在 Gm7 上，旋律的 G 如果整小节配低三度 E，E 会带来十三度色彩；换成低五度 C，就能把另一条线接到 C7 的根音。两个版本的主旋律、节奏和伴奏一致。</p>
+        <table class="lesson-table">
+          <caption>伴奏变化时的配音调整</caption>
+          <thead><tr><th scope="col">旋律音与和声</th><th scope="col">机械叠三度</th><th scope="col">调整后</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">G，Gm7 → C7</th><td>低三度 E 会改变 Gm7 的小七色彩。</td><td>改用低五度 C，它可在 Gm7 上作为十一音，随后落到 C7 的根音。</td></tr>
+            <tr><th scope="row">D，Em</th><td>高三度 F 与和声的 E 距半音，若长时间突出会改变色彩。</td><td>改用高四度 G，给 Em 的小三音让出清楚的位置。</td></tr>
+            <tr><th scope="row">G，Gm7 → C7</th><td>高三度 B 与 Gm7 的 B♭ 冲突，也和 C7 的 B♭ 构成小二度。</td><td>改用高四度 C，兼顾前后两个和弦。</td></tr>
+            <tr><th scope="row">C，C 大三和弦终止</th><td>低三度 A 形成加六色彩。</td><td>若要稳妥收束，可改为低四度 G，保留主和弦音。</td></tr>
+          </tbody>
+        </table>
+        <p>三声部写作可从主旋律外再挑两个和弦音，给它们分别安排接近的前后音，避免每个纵向和弦都跳到新位置。长音下面可以换和弦。经过音不必一律以同一个三和弦包住，短处可让一个声部保持，或以临时的经过和弦细化连接。最后把合唱与伴奏叠起来检查，确保相邻声部与伴奏没有无意的紧张音程。</p>
+        <div class="music-demo" id="scoring-tech-harmonize">
+          <div class="music-demo-toolbar"><h3>同一曲调的低音、高音与三声部和音</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">主线持续在上，Gm7–C7 处的配音调整为低五度，终止处调整为低四度。</p>
+          <figure data-writing-score aria-label="同一旋律的平行低三度、经调整的三度与三声部和音对照"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="technique-learning">
+        <h2 id="technique-learning">从模仿、修改到个人风格</h2>
+        <p>借用熟悉作品的写法时，一次只提取一个明确的特征，比如「逐渐拉起又落下」的轮廓，或「突然撞上」的重音。把它转译成自己的节奏、速度和声部安排，再用实际演奏、录音与修改检验结果。模仿可以练习听辨和转译，比较不同作品的取舍也能帮助辨认自己反复偏好的声音。</p>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻篇章">
+        <a href="./composition-scoring-5.html" rel="prev"><span>上一章</span><strong>依据季节的意象作曲</strong></a>
+        <a href="./index.html"><span>返回</span><strong>本书目录</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

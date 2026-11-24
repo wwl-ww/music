@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第二章 依据节庆活动的情景作曲｜图解作曲配乐</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./composition-scoring-2.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解作曲配乐</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">第二章</span> 依据节庆活动的情景作曲</h1>
+      <p class="intro">节庆场面往往同时包含几种感觉：运动会的队伍走得整齐，比赛却有突然的冲刺。把两种感觉交给不同声部，就能让它们共存。本章从音阶、奏法和伴奏入手，再用调性和和声组织场面转换。</p>
+
+      <section aria-labelledby="scoring-new-year">
+        <h2 id="scoring-new-year">大调五声音阶与简洁和声 · 正月</h2>
+        <p>从 C 大调的 C–D–E–F–G–A–B 中去掉第四级 F 与第七级 B，得到 C–D–E–G–A。E–G 和 A–高音 C 之间分别留下一个小三度，这两个空隙改变了旋律的走向。去掉音阶的两级，指的是控制旋律选音。伴奏仍可使用含 F 的 F 和弦与含 B 的 G 和弦。</p>
+        <div class="music-demo" id="scoring-new-year-pentatonic">
+          <div class="music-demo-toolbar">
+            <h3>删除第四、第七级后的旋律用音</h3>
+            <label>音列
+              <select>
+              <option value="five">大调五声音列</option>
+              <option value="seven">C 大调音列</option>
+              </select>
+            </label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">E 后跳到 G，A 后跳到高音 C，省去 F 和 B。</p>
+          <figure data-scoring-score aria-label="删除第四、第七级后的旋律用音"></figure>
+        </div>
+        <p>主和弦可在乐句前后多次出现，以 C–Am–C–G 开头，再由 C–F–C/G–F/G–C 回到主和弦。后两种斜线和弦共享低音 G，改变的是上方和弦。也可以简化为 C–F–C–G7–C。尺八、日本筝等配器可以强化具体风格，丰富度还可来自奏法、节奏和音区。</p>
+      </section>
+
+      <section aria-labelledby="scoring-summer-festival">
+        <h2 id="scoring-summer-festival">小调五声音阶与奏法对比 · 夏日祭典</h2>
+        <p>A 自然小调去掉第二级 B 与第六级 F，留下 A–C–D–E–G，是 A 小调五声音阶。音名集合与上一节 C 大调五声相同，只是主音换成 A。A 在句首、句尾和低音支撑中更突出，听觉中心才跟着改变。</p>
+        <p>盆舞题材可保留同一个音型，用连奏组织较圆润的一组，用断奏给短音留下空隙。谱面的时值仍决定下一次起音的位置，断奏缩短发声，不会让下一音提早进来。句尾可以呼应开头的奏法，也可用收紧的短音给动作一个停顿。</p>
+        <div class="music-demo" id="scoring-festival-articulation">
+          <div class="music-demo-toolbar">
+            <h3>同一小调五声音型的连奏与断奏</h3>
+            <label>奏法
+              <select>
+              <option value="detach">断奏</option>
+              <option value="legato">连奏</option>
+              </select>
+            </label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">A–C–D–E 的音高和起音位置不变，短奏缩短实际发声。</p>
+          <figure data-scoring-score aria-label="同一小调五声音型的连奏与断奏"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="scoring-snow">
+        <h2 id="scoring-snow">高音区琶音与小三度转调 · 白色圣诞</h2>
+        <p>把下降的八分音符琶音放在高处反复进行，低处旋律留出较长音值，飘雪和温暖的室内氛围便能分层出现。伴奏可交替 E♭maj7 与 A♭/E♭，让 E♭ 低音保留，上方分解音型随着和弦改变。暖色的无品贝斯或近似的柔和低音乐器可进一步拉开层次。</p>
+        <p>第二场景由 E♭ 大调整体移高小三度到 F♯ 大调。E♭ 与 F♯ 两个主音相隔三个半音。按调名拼写，E♭ 到 F♯ 是增二度，换作等音的 G♭ 后才写成小三度；G♭ 大调也是 E♭ 自然小调的关系大调。两个片段之间有明显的明暗变化，仍能通过原主音的同主音小调联系起来。譬如 E♭maj7–A♭/E♭ 的上移版本是 F♯maj7–B/F♯，旋律与琶音都可沿用原节奏。</p>
+        <div class="music-demo" id="scoring-snow-modulation">
+          <div class="music-demo-toolbar">
+            <h3>飘雪音型的上移小三度</h3>
+            <label>第二场景
+              <select>
+              <option value="upward">上移到 F♯ 大调</option>
+              <option value="repeat">留在 E♭ 大调</option>
+              </select>
+            </label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">后两小节的旋律和伴奏整体上移小三度，琶音继续使用下行八分音符。</p>
+          <figure data-scoring-score aria-label="飘雪音型的上移小三度"></figure>
+        </div>
+        <p>从 F♯ 大调回到 E♭ 大调时，可把 F♯ 大调中 E♯ 减三和弦的 E♯、G♯ 分别重拼为 F、A♭，将第三个音 B 换成 C，得到 E♭ 大调的 ii 和弦 Fm。重拼的两个音可在同一声部继续，实际变化集中在 B 上行到 C。随后以 Fm7–A♭/B♭–E♭maj7 确认原调。</p>
+      </section>
+
+      <section aria-labelledby="scoring-graduation">
+        <h2 id="scoring-graduation">大调中的调内小和弦 · 毕业典礼</h2>
+        <p>E♭ 大调的 Gm、Cm、Fm 分别是 iii、vi、ii。它们都是小三和弦，音仍来自 E♭ 大调。把这三个和弦放在中间，前后用 E♭、A♭、B♭ 定出大调背景，短暂的暗色就能与大调框架并存。若想宣告转入小调，需要让某个小和弦获得新的主音地位并得到终止支持。</p>
+        <div class="music-demo" id="scoring-graduation-harmony">
+          <div class="music-demo-toolbar">
+            <h3>同一主题下的大调主和弦与调内小和弦</h3>
+            <label>中段和声
+              <select>
+              <option value="minor">调内小和弦</option>
+              <option value="major">主和弦与下属和弦</option>
+              </select>
+            </label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">旋律保持原样，中间换成 Gm–Cm–Fm，最后回到 E♭。</p>
+          <figure data-scoring-score aria-label="同一主题下的大调主和弦与调内小和弦"></figure>
+        </div>
+        <p>下一句可以完整复用开头两小节旋律，只改后半的低音、转位或终止。例如第一句从 B♭ 开放结束，第二句改为 B♭–E♭sus4–E♭ 收拢。固定的开头帮助辨识主题，后部变化则说明两句承担的段落任务不同。</p>
+      </section>
+
+      <section aria-labelledby="scoring-sports-day">
+        <h2 id="scoring-sports-day">进行曲织体与十六分冲刺 · 运动会</h2>
+        <p>以四分音符为一拍，把根音与五音交替放在整拍拍头，和弦放到每拍后半，得到「低–高、低–高」的进行曲伴奏。旋律在这个骨架上可以展开：在两三处插入十六分音符组，随后回到八分或四分音符，就会形成短时加速和恢复步幅的反差，拍点本身保持原速。</p>
+        <div class="music-demo" id="scoring-march-texture">
+          <div class="music-demo-toolbar">
+            <h3>进行曲的正拍低音与反拍和弦</h3>
+            <label>旋律分配
+              <select>
+              <option value="sprint">局部十六分音符</option>
+              <option value="even">较匀的八分和四分音符</option>
+              </select>
+            </label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">低音守拍，和弦落在后半拍。第 1 拍的四个十六分音符给旋律一个短冲刺。</p>
+          <figure data-scoring-score aria-label="进行曲的正拍低音与反拍和弦"></figure>
+        </div>
+        <p>F–Gm–C7–F（I–ii–V⁷–I）能维持明确方向。低音先稳定后半拍之前的拍头，旋律才有空间在八分、四分、八分的组合里让中间一音跨过下一拍的拍头。若要写比赛中途的转折，可先用 Cm7–F7 短暂指向 B♭，再接回 F 大调。需要直接而有冲击力时，先保留清晰的和弦音和拍点，复杂引申音可以等层次确定后再加。</p>
+        <p>回程可以用 B♭–Bdim–F/C。前两个和弦共用 D、F，只把低音 B♭ 抬到 B，再上行半音到 C。F/C 到来时上方已是 F 大三和弦，低音仍在属音，保留后续的 D7–G7–C7–F 时，低音继续绕行，到结尾才回到主音 F。</p>
+      </section>
+
+      <section aria-labelledby="scoring-valentine">
+        <h2 id="scoring-valentine">跳跃音型与反复和声的移调 · 情人节</h2>
+        <p>两个短促的同音加一个跳进可以立刻形成跳跃音型。比如 G–G–C 先重复再向上四度，随后把一个重要起音挪到反拍，重心便有忽然向前的效果。旋律的距离、断奏和切分是三个可分别改变的量。</p>
+        <p>Fmaj7 与 B♭/C 往复时，C 虽然只在第二个和弦中担任低音，却会与上方 B♭、D、F 形成需要去向的复合音响。如果后段整体从 F 移低小三度到 D，对应的两个和弦是 Dmaj7 与 G/A。保留问答的节奏和跳进关系，再以密集的上行音型延伸，能让原来的焦虑继续发展。</p>
+        <div class="music-demo" id="scoring-valentine-transpose">
+          <div class="music-demo-toolbar">
+            <h3>同一反复型的移调再现</h3>
+            <label>续句调性
+              <select>
+              <option value="transpose">续句移至 D 大调</option>
+              <option value="repeat">续句留在 F 大调</option>
+              </select>
+            </label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">第二句整体移低小三度，反复和弦以及短促的起音一同保留。</p>
+          <figure data-scoring-score aria-label="同一反复型的移调再现"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="scoring-halloween">
+        <h2 id="scoring-halloween">陌生和声与变音的时值 · 万圣节</h2>
+        <p>常见的 D 大三和弦与 D♭/A 交替时，D♭ 和弦的 D♭、F、A♭ 被放在 A 低音上。常见和弦建立参照，另一个和弦才显得出其不意。上方可反复使用相同节奏，让陌生感集中在音高。</p>
+        <table class="lesson-table">
+          <caption>D 大调音列与带三个调外音的旋律材料</caption>
+          <thead><tr><th scope="col">用途</th><th scope="col">选用音高</th><th scope="col">音阶外的音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">D 大调</th><td>D E F♯ G A B C♯</td><td>—</td></tr>
+            <tr><th scope="row">画面配乐</th><td>D F F♯ G♯ A B C C♯</td><td>F、G♯、C</td></tr>
+          </tbody>
+        </table>
+        <p>D 和弦的三音 F♯ 与旋律的 F 只隔半音。换到 D♭/A 时，低音是 A，仍需核对 D♭ 大三和弦的构成音。此时旋律的 C 和上方的 D♭ 相隔半音。变音放在短时值上并立即接入邻近的和弦音，会像一闪而过的轮廓。把它延长到重拍，半音摩擦就成为场景的主体。</p>
+        <div class="music-demo" id="scoring-halloween-accidentals">
+          <div class="music-demo-toolbar">
+            <h3>半音色彩和非和弦音的落点</h3>
+            <label>变音位置
+              <select>
+              <option value="passing">变音短暂经过</option>
+              <option value="clash">延长变音</option>
+              </select>
+            </label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">F 与 C 放在半拍内，很快分别接到 F♯ 与 D♭。</p>
+          <figure data-scoring-score aria-label="半音色彩和非和弦音的落点"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="scoring-wedding">
+        <h2 id="scoring-wedding">大调和声、多利亚音列与共同音 · 婚礼</h2>
+        <p>Dmaj7 可以先建立 D 大调的主和声，再用 Gm7–C7 引入另一种色彩。G 多利亚音阶的 G–A–B♭–C–D–E–F 保留小三度 B♭ 与小七度 F，并以 E 代替 G 自然小调的 E♭。于是 Gm7 和 C7 的构成音可以同处这个音列。短暂借入这组材料后回到 Dmaj7，原来的大调中心仍清楚。</p>
+        <p>转折处可以用共同音延续主线，也可以在交界处跳进以强调分句。保留共同音时，音高属于前后两个和弦，在同一个音区内原位衔接最容易辨认。找不到共同音时，可在新和弦的构成音中选择近邻。</p>
+        <table class="lesson-table">
+          <caption>两个换和弦处的旋律接法</caption>
+          <thead><tr><th scope="col">和弦交界</th><th scope="col">保留共同音</th><th scope="col">另取和弦音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Dmaj7 → Gm7</th><td>D5 保留，从根音变为五音。</td><td>D5 跳到 G5，强调新和弦的根音。</td></tr>
+            <tr><th scope="row">Gm7 → C7</th><td>B♭4 保留，从三音变为七音。</td><td>B♭4 跳到 E5，强调新和弦的三音。</td></tr>
+          </tbody>
+        </table>
+        <p>低音可以照常换根音。旋律的顺滑与低音的移动距离是两个独立的决定。</p>
+        <div class="music-demo" id="scoring-wedding-common-tones">
+          <div class="music-demo-toolbar">
+            <h3>同一和声下的两种旋律衔接</h3>
+            <label>衔接方式
+              <select>
+              <option value="neighbor">共同音与近距离</option>
+              <option value="leap">句界跳进</option>
+              </select>
+            </label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">Dmaj7 到 Gm7 时保留 D，Gm7 到 C7 时保留 B♭，两次换和弦的连接都可被听见。</p>
+          <figure data-scoring-score aria-label="同一和声下的两种旋律衔接"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="scoring-barbecue">
+        <h2 id="scoring-barbecue">起伏旋律与循环和声 · 户外聚会</h2>
+        <p>先写一个短小的上行与一次方向相反的回答，使用密集起音刻画交谈的热闹，再用重复使两组音型可辨认。循环和声可以固定在 A♭–B♭m7–E♭7–A♭。其中 ii 通向 V，V 又把下一轮 I 接了出来，轮次之间有自然的回接。</p>
+        <table class="lesson-table">
+          <caption>同一个循环上的场面组织示例</caption>
+          <thead><tr><th scope="col">和声</th><th scope="col">旋律动作</th><th scope="col">段落作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">A♭</th><td>C–E♭–F 上行</td><td>提出短句</td></tr>
+            <tr><th scope="row">B♭m7–E♭7</th><td>从 A♭ 折向 G、F</td><td>回答并把方向交给属和弦</td></tr>
+            <tr><th scope="row">回到 A♭</th><td>落在 E♭ 或 C</td><td>收束，同时给下一轮起点留位置</td></tr>
+          </tbody>
+        </table>
+        <p>如果画面由喧闹转为较安静的交谈，可以先保留前几次循环，再从一个调外和弦进入短暂的转换段，末尾由 B♭m–D♭/E♭–A♭ 找回原来的中心。变化只出现一次时，原循环和新段落的关系会格外明显。</p>
+      </section>
+
+      <section aria-labelledby="scoring-moon">
+        <h2 id="scoring-moon">两组五声音阶与下属起始 · 中秋夜</h2>
+        <p>D 大调五声与 A 大调五声都可放到 D 大调背景里。它们共有 A、B、E、F♯，只差一个特征音：D 调五声有 D，A 调五声有 C♯。两个乐句保留共同音作连接，在各自的句子里依次强调 D 或 C♯，便能让句子之间发生颜色变化。</p>
+        <figure class="lesson-image">
+          <svg class="inline-staff scale-overlap" viewBox="0 0 440 119" role="img" aria-label="D 大调音列。上方括线标记 D、E、升 F、A、B，下方括线标记 E、升 F、A、B、升 C。G 不在两组括线内。">
+            <path class="inline-staff-lines" d="M10 38H430 M10 46H430 M10 54H430 M10 62H430 M10 70H430"/>
+            <text class="scale-overlap-clef" x="17" y="62">&#xE050;</text>
+            <g class="scale-overlap-notes" text-anchor="middle">
+              <text x="41" y="38">&#xE262;</text><text x="54" y="50">&#xE262;</text>
+              <text x="92" y="74">&#xE0A2;</text><text x="142" y="70">&#xE0A2;</text>
+              <text x="192" y="66">&#xE0A2;</text><text x="242" y="62">&#xE0A2;</text>
+              <text x="292" y="58">&#xE0A2;</text><text x="342" y="54">&#xE0A2;</text>
+              <text x="392" y="50">&#xE0A2;</text>
+            </g>
+            <path d="M92 67V25H342V47 M142 25V63 M192 25V59 M292 25V51 M142 77V96H392V57 M192 96V73 M292 96V65 M342 96V61"/>
+            <text class="scale-overlap-label" x="217" y="17" text-anchor="middle">D 大调五声</text>
+            <text class="scale-overlap-label" x="267" y="114" text-anchor="middle">A 大调五声</text>
+          </svg>
+          <figcaption>两组五声音阶在 D 大调音列中的重合</figcaption>
+        </figure>
+        <p>伴奏可从 D 大调的 IV 级 Gmaj7 出发，再接 F♯m7。第二次经过 Gmaj7 后，可用 A/B–Am7–D7 接回 Gmaj7。这个回路给 G 一个局部的落点，旋律仍能在两组五声音型间往来。调性感来自这些落点的轻重和持续时间，一个小七和弦的出现不足以确立小调。</p>
+      </section>
+
+      <section aria-labelledby="scoring-imagination">
+        <h2 id="scoring-imagination">从具体意象提取可比较的音乐变量</h2>
+        <p>同一个物件可以取不同特点来写。把苹果的「熟悉感」当作起点，可以选听众熟悉的四拍子、C 大调和中速。如果想写的是圆润的形状，可以用弧形、有回落的旋律。如果关注烤苹果的暖意，则可以只换成较轻的三拍伴奏或把织体放低。这里的对应是创作方案，后续仍需听辨它在具体材料中的效果。</p>
+        <aside class="lesson-callout"><p><strong>先确定希望听到的变化，再选择音乐变量。</strong> 让同一个短句支撑几次对照，调性、音阶、奏法、织体或速度各自解决什么问题就更容易判断。</p></aside>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./composition-scoring-1.html" rel="prev"><span>上一章</span><strong>依据恋爱的意象作曲</strong></a>
+        <a href="./composition-scoring-3.html" rel="next"><span>下一章</span><strong>依据日常生活的情景作曲</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

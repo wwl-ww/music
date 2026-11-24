@@ -114,19 +114,30 @@ function addOutline() {
 }
 
 async function addChapterNavigation() {
-  const chapter = location.pathname.match(/\/(chapter|harmony|counterpoint|orchestration|form-analysis|songwriting)-(\d+)\.html$/);
+  const chapter = location.pathname.match(/\/(chapter|harmony|counterpoint|orchestration|form-analysis|songwriting|pro-composition|pop-techniques|pop-rock-theory)-(\d+)\.html$/);
   const songwritingAppendix = location.pathname.endsWith('/songwriting/songwriting-reference.html');
-  if (!chapter && !songwritingAppendix) return;
+  const proIntro = location.pathname.endsWith('/pro-composition/pro-composition-intro.html');
+  const proReference = location.pathname.endsWith('/pro-composition/pro-composition-techniques.html');
+  const rockIntro = location.pathname.endsWith('/pop-rock-theory/pop-rock-theory-intro.html');
+  const rockReference = location.pathname.endsWith('/pop-rock-theory/pop-rock-theory-reference.html');
+  if (!chapter && !songwritingAppendix && !proIntro && !proReference && !rockIntro && !rockReference) return;
   const songwritingChapterCount = 17;
-  const [, series = 'songwriting', chapterNumber] = chapter ?? [];
-  const number = songwritingAppendix ? songwritingChapterCount + 1 : Number(chapterNumber);
+  const proChapterCount = 5;
+  const rockChapterCount = 7;
+  const [, series = rockIntro || rockReference ? 'pop-rock-theory' : proIntro || proReference ? 'pro-composition' : 'songwriting', chapterNumber] = chapter ?? [];
+  const number = proIntro || rockIntro ? 0 : proReference ? proChapterCount + 1 : rockReference ? rockChapterCount + 1 : songwritingAppendix ? songwritingChapterCount + 1 : Number(chapterNumber);
+  const proBook = series === 'pro-composition';
+  const rockBook = series === 'pop-rock-theory';
   const lowerVolume = location.pathname.includes('/harmony-lower/');
   const first = lowerVolume ? 24 : 1;
   const last = lowerVolume ? 44 : ({
     chapter: 16,
     harmony: 23,
     counterpoint: 19,
-    songwriting: songwritingChapterCount
+    songwriting: songwritingChapterCount,
+    'pop-techniques': 8,
+    'pro-composition': proChapterCount,
+    'pop-rock-theory': rockChapterCount
   }[series] ?? number);
   const book = './index.html';
   const titles = await chapterTitles(book);
@@ -150,22 +161,32 @@ async function addChapterNavigation() {
 
   function appendChapter(url, label, chapter, relation) {
     const title = titles?.get(url);
-    const numberLabel = `第 ${chapter} 章`;
+    const numberLabel = `第 ${chapter} ${proBook ? '篇' : '章'}`;
     appendLink(url, title ? `${label} · ${numberLabel}` : label, title || numberLabel, relation);
   }
 
   if (titles ? titles.has(previousPage) : number > first) {
-    appendChapter(previousPage, '上一章', number - 1, 'prev');
+    appendChapter(previousPage, proBook ? '上一篇' : '上一章', number - 1, 'prev');
+  } else if (proBook && number === first) {
+    const intro = './pro-composition-intro.html';
+    appendLink(intro, '导论', titles?.get(intro) ?? '从构思到成曲', 'prev');
+  } else if (rockBook && number === first) {
+    const intro = './pop-rock-theory-intro.html';
+    appendLink(intro, '导论', titles?.get(intro) ?? '从乐声到乐理', 'prev');
   } else if (lowerVolume && number === first) {
     appendLink('../harmony-upper/harmony-23.html', '上册 · 第 23 章', '调式交替与调式复合', 'prev');
   } else appendLink(book, '返回', '本书目录');
   if (titles ? titles.has(nextPage) : number < last) {
-    appendChapter(nextPage, '下一章', number + 1, 'next');
+    appendChapter(nextPage, proBook ? '下一篇' : '下一章', number + 1, 'next');
   } else if (!lowerVolume && series === 'harmony') {
     appendLink('../harmony-lower/harmony-24.html', '下册 · 第 24 章', '重属和弦', 'next');
   } else if (series === 'songwriting' && number === last) {
     const appendix = './songwriting-reference.html';
     appendLink(appendix, '接着读 · 附录', titles?.get(appendix) ?? '演唱、定调与歌曲题头', 'next');
+  } else if (proBook && number === last) {
+    appendLink('./pro-composition-techniques.html', '附录', '音乐技巧索引', 'next');
+  } else if (rockBook && number === last) {
+    appendLink('./pop-rock-theory-reference.html', '附录', '钢琴与吉他的音高位置', 'next');
   } else if (!nav.querySelector(`[href="${book}"]`)) appendLink(book, '返回', '本书目录');
   main.append(nav);
 }

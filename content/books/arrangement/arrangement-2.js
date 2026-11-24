@@ -1,5 +1,6 @@
 import bandSoundFont from '@coderline/alphatab/soundfont/sonivox.sf3?url';
 import { mountArrangementGrid } from '../../shared/formats/arrangement-grid.js';
+import { mountGuitarChordDiagrams } from '../../shared/formats/guitar-chord-diagram.js';
 import { renderRangeKeyboards } from '../../shared/formats/range-keyboards.js';
 import { mountScore } from '../../shared/formats/score.js';
 
@@ -89,38 +90,66 @@ feature.addEventListener('change', () => {
 version.addEventListener('change', () => motionPlayer.setNotes(motionNotes()));
 
 const dominant = track('G7', 0, '(G2 B2 D3 F3).1 { dy p }', 'F4');
+const dominantTail = 'B4.4 G4.4';
 mountVariants('phrase-note-color', {
   chord: {
-    notes: score(piano('G4.4 B4.8 F4.8 D4.4 G4.4'), dominant),
+    notes: score(piano(`G4.4 F4.8 G4.8 ${dominantTail}`), dominant),
     summary: '乐句完全由 G7 的基本构成音写成，各音都能直接融入和弦。'
   },
   approach: {
-    notes: score(piano('G4.4 B4.8 C#4.8 D4.4 G4.4'), dominant),
-    summary: '弱位置的 C♯ 很快向上半音接到第三拍的 D，D 仍然是落点。'
+    notes: score(piano(`G4.4 F4.8 A4.8 ${dominantTail}`), dominant),
+    summary: 'A4 只占第二拍后半的一个八分音符，上行全音接到第三拍的和弦音 B4。'
   },
   tension: {
-    notes: score(piano('A4.2 F4.4 D4.4'), dominant),
-    summary: 'A 在第一拍起音并持续两拍，作为九音成为乐句本身的色彩。'
+    notes: score(piano(`A4.2 ${dominantTail}`), dominant),
+    summary: '同一个 A4 从第一拍持续两拍，G7 上的九音获得了独立分量，随后仍落到同一个 B4。'
   }
 });
 
-const gapLead = lead('B4.4 A4.4 G4.2 | r.2 r.4 D5.4');
+const roleLead = lead('E5.4 D5.4 r.2 | E5.4 D5.4 C5.2');
+const rolePulseBar = '(C3 E3 G3).4 { dy p } (C3 E3 G3).4 (C3 E3 G3).4 (C3 E3 G3).4';
+const rolePulse = track('C 和弦律动', 0, `${rolePulseBar} | ${rolePulseBar}`, 'F4');
+const brightMotif = 'r.2 r.8 G4.8 { dy mp } F5.8 C5.8';
+mountVariants('phrase-role-comparison', {
+  gap: {
+    notes: score(roleLead, guitar(`${brightMotif} | r.1`), rolePulse),
+    summary: '第一小节后半主旋律休止，吉他在第 3 拍后半起音，从 G4 跳到 F5，再落到 C5。'
+  },
+  overlap: {
+    notes: score(roleLead, guitar(`r.1 | ${brightMotif}`), rolePulse),
+    summary: '同一句移到第二小节，突出的高音 F5 和末音 C5 叠在主旋律的 C5 长音上，容易抢走焦点。'
+  },
+  background: {
+    notes: score(roleLead, guitar('r.1 | r.2 G3.4 { dy mp } C4.8 G3.8'), rolePulse),
+    summary: '保留上行转下行的轮廓，移入较低音区，用 G–C–G 呼应 C 和弦。动机随第 3 拍起音，主旋律更清楚。'
+  }
+}, { soundFontUrl: bandSoundFont });
+
+const gapLead = lead('C5.4 A4.4 G4.2 | r.2 r.4 C5.4');
+const gapHarmony = track('和声', 0,
+  '(C3 E3 G3).1 { dy p } | (G2 B2 D3 F3).2 { dy p } (G2 B2 D3 F3).4 (C3 E3 G3).4', 'F4');
+const gapEnding = 'G4.8 A4.8 B4.4 r.4';
+const gapGuitar = (notes, ...support) => score(gapLead, guitar(notes), gapHarmony, ...support);
 const gapFills = {
   plain: {
-    notes: score(gapLead, guitar('r.1 | r.1')),
-    summary: '第一小节后两拍是 G 的长音，第二小节第 1–3 拍留空。'
+    notes: gapGuitar('r.1 | r.1'),
+    summary: '第一小节是 C，主旋律止于 G 长音。第二小节前 3 拍转入 G7，主旋律在第 4 拍随 C 和弦重新进入。'
   },
   short: {
-    notes: score(gapLead, guitar('r.1 | r.4 E4.8 G4.8 B4.4 r.4')),
-    summary: '吉他等长音结束才进入，把短句收在主旋律下次起音之前。'
+    notes: gapGuitar(`r.1 | r.4 ${gapEnding}`),
+    summary: '吉他等长音结束才进入，在 G7 上落到 B。和弦回到 C 时，吉他让出起音，主旋律高半音接回 C5。'
+  },
+  support: {
+    notes: gapGuitar(`r.1 | r.4 ${gapEnding}`, bass('r.1 | r.2 B2.4 { dy mp } r.4')),
+    summary: '原来的吉他填句保留。贝斯只在它的末音 B4 下方低两个八度叠奏 B2，随后给主旋律的 C5 留出起音。'
   },
   third: {
-    notes: score(gapLead, guitar('r.2 E4.2 | E4.8 G4.8 B4.4 D5.4 r.4')),
-    summary: '长音 G 与吉他 E 在同一处延续，三度重叠容易被听成附加和声。'
+    notes: gapGuitar(`r.2 E4.2 | D4.8 G4.8 ${gapEnding}`),
+    summary: '同属 C 和弦的 E4 与 G4 在句尾同时延续，形成小三度，容易被听成临时加上的主旋律和声。'
   },
   fifth: {
-    notes: score(gapLead, guitar('r.2 C4.2 | E4.8 G4.8 B4.4 D5.4 r.4')),
-    summary: '重叠音换成 C，C–G 构成五度。后续吉他线和主旋律保持不变。'
+    notes: gapGuitar(`r.2 C4.2 | D4.8 G4.8 ${gapEnding}`),
+    summary: '重叠音换成 C 和弦的根音 C4，形成纯五度。随后吉他在 G7 上继续展开，仍让主旋律在第四拍接回 C5。'
   }
 };
 mountVariants('phrase-gap-comparison', gapFills, { soundFontUrl: bandSoundFont });
@@ -138,24 +167,34 @@ mountVariants('phrase-piano-gap', {
 
 renderRangeKeyboards(document.getElementById('phrase-background-ranges'), [
   { name: '贝斯', main: 'A1–G2', open: [] },
-  { name: '吉他', main: 'G2–E4', open: [] },
-  { name: '钢琴右手', main: 'C4–G4', open: [] },
-  { name: '主旋律', main: 'E4–D5', open: [] }
-], { firstOctave: 1, octaves: 5, rangeLabel: '本例', caption: '乐队声部的示例音区' });
+  { name: '吉他', main: 'G2–D4', open: [] },
+  { name: '钢琴右手', main: 'E4–B4', open: [] },
+  { name: '主旋律', main: 'G4–D5', open: [] }
+], { firstOctave: 1, octaves: 5, rangeLabel: '示意', caption: '四个声部的音区分配' });
 
 const backgroundLead = lead('E5.2 D5.4 C5.4');
+const backgroundHarmony = track('Am7', 0, '(A2 C3 E3 G3).1 { dy p }', 'F4');
+const backgroundScore = (notes) => score(backgroundLead, bass(notes), backgroundHarmony);
 mountVariants('phrase-background-arp', {
   straight: {
-    notes: score(backgroundLead, bass('A1.4 C2.4 E2.4 G2.4')),
+    notes: backgroundScore('A1.4 C2.4 E2.4 G2.4'),
     summary: '贝斯用 Am7 的四个构成音连成单向上行，主旋律在更高处下行。'
   },
   turn: {
-    notes: score(backgroundLead, bass('A1.4 E2.4 C2.4 G2.4')),
+    notes: backgroundScore('A1.4 E2.4 C2.4 G2.4'),
     summary: '音集合与节奏都相同，贝斯向下转了一次，增加线条感。'
   },
   approach: {
-    notes: score(backgroundLead, bass('A1.4 C2.8 D#2.8 E2.4 G2.4')),
+    notes: backgroundScore('A1.4 C2.8 D#2.8 E2.4 G2.4'),
     summary: 'D♯ 在第二拍后半短暂经过，随即接到 Am7 的 E。'
+  },
+  change: {
+    notes: score(
+      backgroundLead,
+      bass('A1.8 C2.8 E2.8 G2.8 D2.8 F2.8 A2.8 C3.8'),
+      track('Am7 → Dm7', 0, '(A2 C3 E3 G3).2 { dy p } (D3 F3 A3 C4).2', 'F4')
+    ),
+    summary: '前两拍分解 Am7。第三拍改用 D2 建立 Dm7，随后的 F、A、C 延续原来的八分音符。'
   }
 }, { soundFontUrl: bandSoundFont });
 
@@ -167,7 +206,7 @@ mountVariants('phrase-top-note', {
   },
   step: {
     notes: score(piano('(E4 G4 C5).2 (D4 G4 B4).2'), changingBass),
-    summary: '最高音 C5 下行半音到 B4，保持和弦变化的连续性。'
+    summary: '顶音 C5–B4 距低音 C3–B2 两个八度，两条线一起下行半音。'
   },
   leap: {
     notes: score(piano('(E4 G4 C5).2 (G5 B5 D6).2'), changingBass),
@@ -175,45 +214,86 @@ mountVariants('phrase-top-note', {
   }
 });
 
+mountGuitarChordDiagrams(document.getElementById('phrase-guitar-shapes'), [
+  {
+    label: 'G3 在底部',
+    positions: [null, null, 5, 4, 3, null],
+    degrees: [null, null, 'R', '3', '5', null],
+    firstFret: 3
+  },
+  {
+    label: 'B3 在底部',
+    positions: [null, null, 9, 7, 8, null],
+    degrees: [null, null, '3', '5', 'R', null],
+    firstFret: 7
+  },
+  {
+    label: 'D4 在底部',
+    positions: [null, null, 12, 12, 12, null],
+    degrees: [null, null, '5', 'R', '3', null],
+    firstFret: 10
+  }
+]);
+
 const drumParts = [
   { key: 'crash', label: '镲', midi: 49 },
+  { key: 'hat', label: '闭合踩镲', midi: 42 },
   { key: 'snare', label: '小鼓', midi: 38 },
   { key: 'highTom', label: '高音桶鼓', midi: 50 },
   { key: 'lowTom', label: '低音桶鼓', midi: 45 },
   { key: 'floorTom', label: '落地桶鼓', midi: 41 },
   { key: 'kick', label: '底鼓', midi: 36 }
 ];
+const kicks = [0, 10, 16, 26];
+const snares = [4, 12, 20, 28];
+const groove = Array.from({ length: 16 }, (_, index) => {
+  const step = index * 2;
+  const kick = kicks.includes(step);
+  const snare = snares.includes(step);
+  const instruments = ['hat'];
+  if (kick) instruments.push('kick');
+  if (snare) instruments.push('snare');
+  return { step, instruments, accent: kick || snare };
+});
+const skeletonSteps = [8, 10, 12, 14];
+const fillSteps = [8, 10, 12, 13, 14, 15];
 const fillParts = {
   low: [['snare'], ['snare'], ['snare'], ['floorTom'], ['snare'], ['floorTom']],
-  middle: [['crash', 'snare'], ['snare'], ['snare'], ['floorTom'], ['snare'], ['floorTom']],
-  high: [['crash', 'snare'], ['lowTom'], ['snare'], ['highTom'], ['floorTom'], ['lowTom']]
+  middle: [['snare'], ['crash', 'snare'], ['snare'], ['floorTom'], ['snare'], ['floorTom']],
+  high: [['snare'], ['crash', 'snare'], ['lowTom'], ['highTom'], ['floorTom'], ['lowTom']]
 };
-const fillSteps = [8, 10, 12, 13, 14, 15];
 const drumArticulations = drumParts.map(({ key, midi }) => String.raw`\articulation (${key} ${midi})`).join(' ');
 
-function fillHits(parts) {
+function fillHits(steps, parts) {
+  const arrival = groove.find(({ step }) => step === 16);
+  const originalAccents = new Set(groove.filter(({ accent }) => accent).map(({ step }) => step));
   return [
-    { step: 0, instruments: ['kick'] },
-    { step: 4, instruments: ['snare'] },
-    ...fillSteps.map((step, index) => ({ step, instruments: parts[index], accent: index === 0 || index === 2 })),
-    { step: 16, instruments: ['crash', 'kick'], accent: true }
+    ...groove.filter(({ step }) => step < 8),
+    ...steps.map((step, index) => ({ step, instruments: parts[index], accent: originalAccents.has(step) })),
+    { ...arrival, instruments: ['crash', ...arrival.instruments] },
+    ...groove.filter(({ step }) => step > 16)
   ];
 }
 
 function gridRows(hits) {
-  return drumParts.map(({ key, label }) => ({
-    label,
-    events: hits.filter(({ instruments }) => instruments.includes(key))
-  }));
+  return [
+    { label: '原律动', events: groove },
+    ...drumParts.map(({ key, label }) => ({
+      label,
+      events: hits.filter(({ instruments }) => instruments.includes(key))
+    }))
+  ];
 }
 
 function drumScore(hits) {
-  const durations = [4, 4, 8, 8, 16, 16, 16, 16, 4];
-  const notes = hits.map(({ instruments, accent }, index) => {
-    const voices = instruments.length === 1 ? instruments[0] : '(' + instruments.join(' ') + ')';
-    const hit = `${voices}.${durations[index]} { dy ${accent ? 'f' : 'mp'} }`;
-    return index === 8 ? '| ' + hit + ' r.4 r.2' : hit;
-  }).join(' ');
+  const byStep = new Map(hits.map(hit => [hit.step, hit]));
+  const notes = [0, 16].map(start => Array.from({ length: 16 }, (_, offset) => {
+    const hit = byStep.get(start + offset);
+    if (!hit) return 'r.16';
+    const { instruments, accent } = hit;
+    const names = instruments.length === 1 ? instruments[0] : '(' + instruments.join(' ') + ')';
+    return `${names}.16 { dy ${accent ? 'f' : 'p'} }`;
+  }).join(' ')).join(' | ');
   return score({
     name: '鼓组',
     program: 'percussion',
@@ -221,24 +301,36 @@ function drumScore(hits) {
   });
 }
 
-const drumHits = Object.fromEntries(Object.entries(fillParts).map(([version, parts]) => [version, fillHits(parts)]));
+const drumHits = {
+  groove,
+  skeleton: fillHits(skeletonSteps, skeletonSteps.map(() => ['snare'])),
+  ...Object.fromEntries(Object.entries(fillParts).map(([version, parts]) => [version, fillHits(fillSteps, parts)]))
+};
 const fillGrid = mountArrangementGrid(document.getElementById('phrase-fill-grid'), {
   beats: 8,
-  rows: gridRows(drumHits.low),
-  label: '鼓组过门的起音与重音'
+  rows: gridRows(drumHits.groove),
+  label: '原律动和鼓组过门的起音与重音'
 });
 mountVariants('phrase-fill-comparison', {
+  groove: {
+    notes: drumScore(drumHits.groove),
+    summary: '首行是参照。第 3 拍后半的底鼓与第 4 拍的小鼓都是原律动的重音。'
+  },
+  skeleton: {
+    notes: drumScore(drumHits.skeleton),
+    summary: '第 3 拍起转入小鼓。较重的两击对齐原律动，拍内其余位置留空。第二小节重拍后恢复踩镲和底鼓、小鼓。'
+  },
   low: {
     notes: drumScore(drumHits.low),
-    summary: '过门多留在小鼓，同落地桶鼓交替，音色移动较少。'
+    summary: '第 4 拍内多两次较轻的击打，原来的两个重音保持。小鼓和落地桶鼓交替。'
   },
   middle: {
     notes: drumScore(drumHits.middle),
-    summary: '过门起点加上镲与小鼓同击，起点比前一版更突出，后续鼓件不变。'
+    summary: '给第 3 拍后半的重音加上镲，与小鼓一起发声，其他击点沿用前一版。'
   },
   high: {
     notes: drumScore(drumHits.high),
-    summary: '保持重音和击点，在两种桶鼓之间折返，最后仍用镲与底鼓接入下一小节。'
+    summary: '保持重音和击点，改用高低桶鼓折返。镲和底鼓落在下一小节开头，随后接回原律动。'
   }
 }, {
   tempo: 92,

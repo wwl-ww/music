@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>附录 钢琴与吉他的音高位置｜图解流行摇滚音乐理论</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <script src="../../shared/themes.js"></script>
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script type="module" src="./pop-rock-theory-reference.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解流行摇滚音乐理论</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">附录</span> 钢琴与吉他的音高位置</h1>
+      <p class="intro">键盘和指板用不同的形状排出同样的半音。从中央 C 和吉他空弦出发，可以把音名、实际音高、唱名和音级对应起来。</p>
+      <section aria-labelledby="rock-keyboard-reference">
+        <h2 id="rock-keyboard-reference">钢琴键盘与 C 大调</h2>
+        <p>中央 C 是 C4，右边相邻的白键是 D4。E 与 F、B 与下一组 C 之间没有黑键。其余相邻白键隔一个黑键，同一个黑键可以有两种常见的音名拼写。</p>
+        <figure class="keyboard-example">
+          <figcaption>从中央 C 起的两个键盘八度</figcaption>
+          <div id="rock-keyboard-map" role="img" aria-label="从中央 C4 向右的两个八度，标出各组首键 C4 和 C5"></div>
+        </figure>
+        <table class="lesson-table">
+          <caption>C 大调在中央 C 附近的位置</caption>
+          <thead><tr><th scope="col">音高</th><th scope="col">唱名</th><th scope="col">音级</th><th scope="col">向上的相邻黑键</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">C4</th><td>Do</td><td>1</td><td>C♯4 或 D♭4</td></tr>
+            <tr><th scope="row">D4</th><td>Re</td><td>2</td><td>D♯4 或 E♭4</td></tr>
+            <tr><th scope="row">E4</th><td>Mi</td><td>3</td><td>—</td></tr>
+            <tr><th scope="row">F4</th><td>Fa</td><td>4</td><td>F♯4 或 G♭4</td></tr>
+            <tr><th scope="row">G4</th><td>Sol</td><td>5</td><td>G♯4 或 A♭4</td></tr>
+            <tr><th scope="row">A4</th><td>La</td><td>6</td><td>A♯4 或 B♭4</td></tr>
+            <tr><th scope="row">B4</th><td>Si</td><td>7</td><td>—</td></tr>
+            <tr><th scope="row">C5</th><td>Do</td><td>1</td><td>C♯5 或 D♭5</td></tr>
+          </tbody>
+        </table>
+        <p>中央 C 在高音谱表的下加一线，也是低音谱表的上加一线。完整的键盘和大谱表位置可参看<a href="../music-theory/chapter-3.html#pitch-groups">全音列的谱键对照</a>。</p>
+      </section>
+      <section aria-labelledby="rock-guitar-reference">
+        <h2 id="rock-guitar-reference">吉他标准调弦与第 0–12 品</h2>
+        <p>第 1 弦是高音 E4。从第 1 弦到第 6 弦，六根空弦依次为 E4、B3、G3、D3、A2、E2。每升一品，高一个半音。第 12 品的音名与本弦空弦相同，音高高一个八度。</p>
+        <p>例如中央 C4 可以在第 2 弦第 1 品、第 3 弦第 5 品或第 4 弦第 10 品找到。三处音高相同，振动的弦长、弦径和音色不同。</p>
+        <div class="score-toolbar">
+          <label for="rock-fretboard-labels">标记
+            <select id="rock-fretboard-labels">
+              <option value="pitch">音高</option>
+              <option value="degree">C 大调音级</option>
+              <option value="solfege">唱名</option>
+            </select>
+          </label>
+        </div>
+        <figure data-reference-fretboard="0"><figcaption>空弦至第 6 品</figcaption></figure>
+        <figure data-reference-fretboard="7"><figcaption>第 7–12 品</figcaption></figure>
+        <p>图中方框表示 C。C 大调七个自然音有标记，空置的品位为其余五个音级，例如第 2 弦第 2 品是 C♯4，也可在适合的语境记作 D♭4。</p>
+      </section>
+    </main>
+  </body>
+</html>

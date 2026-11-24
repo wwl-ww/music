@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第4章 Demo 录音与编辑｜POP金曲里技</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./pop-techniques-4.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">POP金曲里技</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">第4章</span> Demo 录音与编辑</h1>
+      <p class="intro">一份可交给混音的 Demo 需要合适的表演、干净的源录音和听不出接缝的编辑。找歌手或乐手时就可以从本项目要呈现的声音出发。</p>
+
+      <section aria-labelledby="pop-vocal-selection">
+        <h2 id="pop-vocal-selection">配唱人选与合作范围</h2>
+        <p>Demo 人声承担两个任务。它要准确交代旋律，也要把歌的口气唱出来。轻声主歌与有冲击力的副歌，即使音准和节拍都对，也需要不同的咬字、力度和收尾。准备给他人试听的 Demo，通常需要录下足以说明作品特色的真实演唱或演奏。例如，一段依赖闷音和扫弦切换的吉他伴奏，用弹奏来交代往往更清楚。</p>
+        <p>候选人的现成录音适合初筛。快摇滚看重音、速度和力度，流行歌看完整乐句与咬字，抒情或 R&amp;B 唱段可看弱声、长音和情感控制。接下来用本项目同一段主歌与副歌试唱，保持伴奏、调和速度一致，才能比较声线、适唱音区、音准、节奏与表现。正式合作还涉及交稿效率、沟通、档期、录音环境和远程录制质量。即使已习惯与一位歌手合作，新的曲风也可能需要另一种声线。按声部和曲风留有备选人，档期冲突时也容易安排。</p>
+        <p>费用与工作范围放在一个约定里。试唱一段和录完整首歌的工作量不同，主唱、和声、叠唱、交付轨道、录制时限、可修改次数和补录安排也会改变总量。和朋友合作同样要说清交付和重录范围。一次试唱所需的时间与费用取决于歌曲复杂度、录音条件和合作约定。</p>
+      </section>
+
+      <section aria-labelledby="pop-session-plan">
+        <h2 id="pop-session-plan">录音准备、指导与回听</h2>
+        <table class="lesson-table">
+          <caption>配唱和乐手的三段录音流程</caption>
+          <thead><tr><th scope="col">阶段</th><th scope="col">工作与验收</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">录前</th><td>发送伴奏、导唱或导奏、歌词与分段标记，约定调、速度、拍号、起点、档案规格及需要的主唱、和声或乐器轨。参考音频最好标出对应片段和想借鉴的声音特征。</td></tr>
+            <tr><th scope="row">录中</th><td>先录一遍完整乐句，听清表演的走向，再针对具体乐句给出要求。比如主歌开头像轻声说话，进副歌前逐步加力，副歌末尾长音和导奏同收。吉他可以指定主歌闷音、副歌开放扫弦。音色、发音方式和力度的要求可以一起沟通。</td></tr>
+            <tr><th scope="row">录后</th><td>按段回听、记下满意版本和需补录的位置。先用一份初混确认表演方向，再收约定规格的分轨。发现剪不齐的环境变化、明显破音或整体唱法不合适时，趁条件仍一致安排补录。</td></tr>
+          </tbody>
+        </table>
+        <p>一次录音版本称为 <em>take</em>。同一乐句的备选 take 可用于挑选最佳表演。<strong>叠唱</strong>则把另外录的一遍与主唱同时播放，两遍之间细小的音色和起音差异会加厚声音。直接复制一份原录音得到的是相同波形叠加。录和声时也要分清是另一个音高的声部，还是同一和声声部的再次录制。</p>
+        <details class="lesson-aside">
+          <summary>远程录音交接示例</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>送出 <code>Backing</code>、<code>Guide</code> 和歌词，注明带预备拍的文件从哪里对齐。比如项目约定各轨从第 1 小节开始，统一导出 24-bit / 48 kHz WAV。</li>
+              <li>主歌交主唱与备选版本，副歌第一句和末句另录叠唱。两个和声声部单独交轨，标出哪条是主版本、哪条是备选。</li>
+              <li>先收整首试听混音确认演唱方向，通过后收未合并的分轨。此例的格式与轨数按实际工程和后续接收方约定。</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="pop-recording-signal">
+        <h2 id="pop-recording-signal">录音电平与噪声排查</h2>
+        <p>录音前用全曲最响的唱段或演奏设输入增益，回放这段短录音。表头如果到达削波指示，先降低发生过载位置之前的增益。把监听音量或回放轨推子拉低，只会让已经录进来的破音变小。还应确认声卡前级或乐器输出是否在更早的位置过载。</p>
+        <p>断续爆声先检查接头、线材、输入类型与供电干扰。稳定的嗡声可逐段排查信号路径，找出随连接变化的来源。麦克风录到的空调、风扇、窗外声和房间回声，通常要从麦克风位置、房间及录制时段解决。保留领唱最轻的一句做对照，环境声很容易在弱句里显露。后期降噪也可能带走人声齿音、气声和乐器尾音。</p>
+      </section>
+
+      <section aria-labelledby="pop-audio-editing">
+        <h2 id="pop-audio-editing">选段、修正与剪辑接缝</h2>
+        <p>先从完整录音里确定一条连贯的表演，再用其他 take 替换有问题的句子。换段时检查共鸣、气口、麦距与底噪是否接得上。可以局部修音准或时间，同时保留有意的滑音、颤音、抢拍、拖拍和句尾。弱字被前后音盖住时，可以用片段增益或音量自动化抬起这个字，让乐句仍保有强弱。</p>
+        <p>剪掉空档的响声时，要分辨它和呼吸、余音的边界。片段首尾可做短淡入、淡出，两个有效片段相接则常用<strong>交叉淡化</strong>。淡化区让前一段逐渐降低、后一段逐渐接入，避免波形突然跳到另一个振幅。持续音可有稍宽的重叠，清晰的辅音或拨弦音头要避开重叠区，避免听见双起音。</p>
+        <div id="pop-edit-crossfade" class="music-demo" aria-labelledby="pop-edit-crossfade-title">
+          <div class="music-demo-toolbar">
+            <h3 id="pop-edit-crossfade-title">硬切与短交叉淡化</h3>
+            <label>剪辑方式<select data-production-choice>
+              <option value="cut">硬切</option>
+              <option value="crossfade">16 毫秒交叉淡化</option>
+            </select></label>
+          </div>
+          <p class="music-demo-cue" data-production-description aria-live="polite">两个持续音片段在振幅相差较大的位置硬切，接缝会出现短促的杂声。</p>
+          <div class="score-example">
+            <button type="button" class="score-playback" aria-label="播放剪辑对照" disabled><span class="score-playback-icon" aria-hidden="true"></span></button>
+            <p class="score-status" role="status"></p>
+          </div>
+        </div>
+        <p>独听可找出底噪、数字破音和细小剪辑声。放回伴奏才能判断歌词、节拍和音量变化是否合适。在适中的不同监听响度、音箱和耳机上交替确认，将选定且修好的轨道交给<a href="./pop-techniques-5.html#pop-mix-handoff">混音与分轨交接</a>。</p>
+      </section>
+    </main>
+  </body>
+</html>

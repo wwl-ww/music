@@ -73,6 +73,52 @@
   transform: translateY(-50%);
 }
 .arrangement-grid-event[data-duration][data-accent] { box-shadow: inset 0 0 0 1px var(--ink); }
+.guitar-chord-diagrams {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 7.5rem), 1fr));
+  gap: 0.75rem;
+  margin-block: 0.85rem;
+}
+.guitar-chord-diagrams figure { display: grid; justify-items: center; align-content: start; }
+.guitar-chord-diagrams figcaption { font-size: 0.86rem; font-weight: 650; text-align: center; }
+.guitar-chord-diagram { display: block; width: min(100%, 10rem); }
+.guitar-chord-diagram text {
+  fill: var(--ink);
+  text-anchor: middle;
+  dominant-baseline: central;
+  font: 700 9px system-ui, sans-serif;
+}
+.guitar-chord-diagram .guitar-diagram-position { text-anchor: end; font-size: 10px; }
+.guitar-chord-diagram .guitar-diagram-muted { font-size: 14px; }
+.guitar-diagram-nut { stroke: var(--ink); stroke-width: 3; }
+.guitar-diagram-string { stroke: var(--muted); }
+.guitar-diagram-fret { stroke: var(--control-line); }
+.guitar-diagram-barre { fill: var(--control-selected); stroke: var(--accent); }
+.guitar-diagram-open { fill: var(--sheet); stroke: var(--accent); }
+.guitar-diagram-stop { fill: var(--ink); }
+.guitar-diagram-root { fill: var(--accent); }
+.guitar-chord-diagram .guitar-diagram-degree { fill: var(--sheet); }
+.fretboard { margin-block: 0.8rem 1.25rem; }
+.fretboard figcaption { color: var(--ink); font-size: 0.9rem; font-weight: 650; }
+.fretboard-svg { display: block; width: var(--fretboard-width); max-width: none; height: auto; }
+.fretboard-svg text {
+  fill: var(--ink);
+  text-anchor: middle;
+  dominant-baseline: central;
+  font: 650 12px system-ui, sans-serif;
+}
+.fretboard-svg .fretboard-tuning { text-anchor: end; font-size: 11px; }
+.fretboard-svg .fretboard-position { fill: var(--muted); font-size: 11px; }
+.fretboard-string { stroke: var(--muted); }
+.fretboard-fret { stroke: var(--control-line); }
+.fretboard-nut { stroke: var(--ink); stroke-width: 2.5; }
+.fretboard-marker rect { fill: var(--sheet); stroke: var(--control-line); }
+.fretboard-marker[data-variant="root"] rect { fill: var(--accent); stroke: var(--accent); }
+.fretboard-marker[data-variant="root"] text { fill: var(--sheet); }
+.fretboard-marker[data-variant="accent"] rect { fill: var(--control-selected); stroke: var(--accent); }
+.fretboard-marker[data-variant="secondary"] rect { fill: var(--pitch-end); stroke: var(--pitch-end-ink); stroke-dasharray: 2 1.5; }
+.fretboard-marker[data-variant="secondary"] text { fill: var(--pitch-end-ink); }
+.fretboard-arrow { fill: none; stroke: var(--accent); stroke-width: 1.35; stroke-linecap: round; stroke-linejoin: round; }
 .music-demo > .scroll-frame-hint { padding-inline: 0.85rem; }
 .staff-scroll > svg { min-width: var(--staff-min-width, 0); }
 .instrument-range { display: block; width: min(100%, 38rem); height: auto; }
@@ -251,6 +297,28 @@
 .lesson-table tbody th { font-weight: 500; }
 .lesson-table tbody th:first-child { min-width: 3.65em; }
 .lesson-table .numeric { width: 38%; font-variant-numeric: tabular-nums; }
+
+.chord-revision-table :is(th, td) { vertical-align: top; }
+.chord-revision-table tr > :first-child {
+  position: sticky;
+  inset-inline-start: 0;
+  z-index: 1;
+  white-space: nowrap;
+}
+.chord-revision-table td > span {
+  display: flex;
+  align-items: baseline;
+  gap: 0.28rem;
+  white-space: nowrap;
+}
+.chord-revision-table td small { color: var(--muted); }
+.chord-revision-table mark {
+  padding-inline: 0.15em;
+  border-radius: 0.2em;
+  background: var(--control-hover);
+  color: var(--accent);
+  font-weight: 650;
+}
 
 .fraction, .time-signature {
   display: inline-grid;

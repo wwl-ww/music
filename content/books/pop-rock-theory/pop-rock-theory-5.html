@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>五声、蓝调与其他音阶｜图解流行摇滚音乐理论</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./pop-rock-theory-5.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解流行摇滚音乐理论</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第五章 五声、蓝调与其他音阶</h1>
+      <p class="intro">即兴旋律需要在几个容易辨认的音上落稳，同时给经过、转折和重复留下余地。五声音阶提供一个小音集。用同一组音换主音、换伴奏，再补入蓝调音，就能分辨音集、调性中心和当下和弦分别带来的听感。</p>
+
+      <section aria-labelledby="rock-pentatonic-build">
+        <h2 id="rock-pentatonic-build">大调与小调五声音阶</h2>
+        <p>C 大三和弦给出最稳的三个音 C、E、G。加上二级 D 与六级 A，得到常用于流行、摇滚和民谣的<strong>大调五声音阶</strong>。它也可以由自然大调略去四级 F 和七级 B 得到。恢复 F、B 后，E–F 与 B–C 两个半音又出现，可以分别向邻音或和弦目标运动。</p>
+        <p>同一组音围绕 A 组织，得到关系小调的<strong>小调五声音阶</strong>。A 小调的根音、三音、五音是 A、C、E，常用的补充音是 D、G。它们分别是 A 的四级和降七级。记号 ♭3、♭7 表示比<strong>同主音大调</strong>的三级和七级低半音。同是 C 起头时，C 小调五声音阶改用 C、E♭、F、G、B♭，和 C 大调五声音阶并非同一音集。</p>
+        <table class="lesson-table">
+          <caption>主音、音级与和弦骨架</caption>
+          <thead><tr><th scope="col">音阶</th><th scope="col">相对主音的音级</th><th scope="col">实际音高</th><th scope="col">三和弦骨架</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">C 大调五声</th><td>1、2、3、5、6</td><td>C、D、E、G、A</td><td>C、E、G</td></tr>
+            <tr><th scope="row">A 小调五声</th><td>1、♭3、4、5、♭7</td><td>A、C、D、E、G</td><td>A、C、E</td></tr>
+            <tr><th scope="row">D 大调五声</th><td>1、2、3、5、6</td><td>D、E、F♯、A、B</td><td>D、F♯、A</td></tr>
+            <tr><th scope="row">B 小调五声</th><td>1、♭3、4、5、♭7</td><td>B、D、E、F♯、A</td><td>B、D、F♯</td></tr>
+          </tbody>
+        </table>
+        <aside class="lesson-callout"><p><strong>音集相同，主音可以不同。</strong> C 大调五声和 A 小调五声包含同样的五个音。低音、乐句的长音与收束位置决定这些音围绕哪个中心组织。</p></aside>
+        <div class="music-demo" id="rock-pentatonic-centers">
+          <div class="music-demo-toolbar"><h3>同一音集的 C 与 A 两种归宿</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">两版共用第一小节的题头。C 版的低音落到 C，末音也在 C 上延长。</p>
+          <figure data-writing-score aria-label="C 大调与 A 小调五声音阶中心对照"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="rock-pentatonic-guitar">
+        <h2 id="rock-pentatonic-guitar">五声音阶盒型与找调</h2>
+        <p>标准定弦吉他的同一根弦每升一品就是升半音。在第五到第八品用按弦音构成的盒型，既可围绕 C 弹大调五声音阶，也可围绕 A 弹小调五声音阶。所有点沿同一组弦向高音平移两品，音级结构保留，主音分别移到 D 和 B。有空弦的指型要先把空弦换成可以随手型一起移动的位置，或用变调夹整体改变空弦音高。</p>
+        <figure id="rock-pentatonic-box-c">
+          <figcaption>C 大调／A 小调五声盒型。第 6 到第 1 弦依次用 5–8、5–7、5–7、5–7、5–8、5–8 品。</figcaption>
+        </figure>
+        <figure id="rock-pentatonic-box-d">
+          <figcaption>D 大调／B 小调五声盒型。第 6 到第 1 弦依次用 7–10、7–9、7–9、7–9、7–10、7–10 品。</figcaption>
+        </figure>
+        <h3>高音两弦的音集线索</h3>
+        <p>听音记谱时，可以先在第 1、2 弦找到一组相隔三品的两对音。两弦的第 7、10 品给出 B–D 和 F♯–A。这四个音同时出现在 G、D、A 三个自然大调中。再确认两个半音邻点，就能缩小候选范围，最后由句尾长音或终止和弦判断主音。</p>
+        <figure id="rock-pentatonic-key-frets">
+          <figcaption>第 1 弦 7、10 品是 B、D，第 2 弦 7、10 品是 F♯、A。两弦的第 8、9 品提供 C／C♯、G／G♯ 两对线索。</figcaption>
+        </figure>
+        <table class="lesson-table">
+          <caption>同一组四音支持的三个自然大调</caption>
+          <thead><tr><th scope="col">候选</th><th scope="col">第 1 弦的邻点</th><th scope="col">第 2 弦的邻点</th><th scope="col">能确立大调主音的典型终止</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">G 大调</th><td>第 8 品 C</td><td>第 8 品 G</td><td>D7 → G</td></tr>
+            <tr><th scope="row">D 大调</th><td>第 9 品 C♯</td><td>第 8 品 G</td><td>A7 → D</td></tr>
+            <tr><th scope="row">A 大调</th><td>第 9 品 C♯</td><td>第 9 品 G♯</td><td>E7 → A</td></tr>
+          </tbody>
+        </table>
+        <p>如果两个邻点在旋律里都听不清，可从两弦共同出现的半音位置入手，再核对候选的终止。表中的音集还分别对应 E、B、F♯ 自然小调。歌曲可能只用五声材料，也可能带有临时变化音、借用和弦或转调，单靠几个听起来合拍的音只能得到候选。</p>
+      </section>
+
+      <section aria-labelledby="rock-pentatonic-harmony">
+        <h2 id="rock-pentatonic-harmony">伴奏和弦与五声旋律的落点</h2>
+        <p>长音、强拍音和句尾音较容易被听成和弦的骨架。短音可以连接骨架，也可以在和弦上停留，形成可辨认的色彩。对 C 大调五声音阶而言，C、E、G 在 C 和弦上都能站稳。换到 Am，A、C、E 成为直接的落点，原有的 G 可以作为小七度色彩。</p>
+        <table class="lesson-table">
+          <caption>从和弦音选择旋律的长音与经过音</caption>
+          <thead><tr><th scope="col">伴奏</th><th scope="col">辨认依据</th><th scope="col">本例处理</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">C</th><td>C、E、G 是三和弦音。</td><td>D、A 负责移动，句尾回 C。</td></tr>
+            <tr><th scope="row">C7</th><td>E 和 B♭ 是大三度和小七度。</td><td>乐句补入 B♭，把属七色彩唱出来。</td></tr>
+            <tr><th scope="row">Am</th><td>A、C、E 提供小调骨架。</td><td>沿用 C 大调五声的音，句尾落 A。</td></tr>
+            <tr><th scope="row">A7 → D</th><td>A7 的 C♯ 和 G 指向 D 和 F♯。</td><td>C♯ 放在解决前，F♯ 提前带出目标 D 大调的色彩。</td></tr>
+            <tr><th scope="row">Cm</th><td>E♭ 是小三度，也是区分 C 与 Cm 的关键。</td><td>换成 C 小调五声，以 E♭ 和 B♭ 形成小调材料。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="rock-pentatonic-chords">
+          <div class="music-demo-toolbar"><h3>五种和弦语境中的旋律用音</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">C 和弦上的 D 与 A 都用来连向和弦音，旋律最终落到 C。</p>
+          <figure data-writing-score aria-label="C、C7、Am、A7 到 D 与 Cm 的五声旋律对照"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="rock-blues">
+        <h2 id="rock-blues">蓝调音与经过性的降五级</h2>
+        <p>在 A7 的伴奏上，旋律既可以顺着和弦的大三音 C♯，也可以使用 A 小调五声里的 C。旋律的 ♭3 和伴奏的 3 在这个语境里形成有意保留的张力。G 是主音 A 上方的 ♭7，与 A7 的七音相同。再在 D 与 E 之间加入 E♭（♭5），得到常用的小调蓝调音阶。这个音常以较短时值连接四级和五级，拉长它则会突出半音张力。</p>
+        <p>蓝调的音高表现还包括吉他推弦、滑音和人声微调。固定音高的键盘或五线谱可以先标出 ♭3、♭5、♭7 的位置。演唱与拨弦时，三度可以在 C 与 C♯ 之间形成更细的变化。</p>
+        <table class="lesson-table">
+          <caption>A 小调五声加入降五级</caption>
+          <thead><tr><th scope="col">材料</th><th scope="col">音级</th><th scope="col">音高</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">A 小调五声</th><td>1、♭3、4、5、♭7</td><td>A、C、D、E、G</td></tr>
+            <tr><th scope="row">A 小调蓝调</th><td>1、♭3、4、<strong>♭5</strong>、5、♭7</td><td>A、C、D、<strong>E♭</strong>、E、G</td></tr>
+          </tbody>
+        </table>
+        <p>降五级插入 D–E 之间，记为
+          <svg class="inline-staff inline-staff-wide" viewBox="0 0 77 38" role="img" aria-label="D、降 E、还原 E">
+            <path class="inline-staff-lines" d="M2 9H75 M2 14H75 M2 19H75 M2 24H75 M2 29H75"/>
+            <text x="11" y="14">&#xE0A2;</text><text x="28" y="11.5">&#xE260;</text><text x="37" y="11.5">&#xE0A2;</text>
+            <text x="51" y="11.5">&#xE261;</text><text x="60" y="11.5">&#xE0A2;</text>
+          </svg>。三个音在同一小节时，最后的 E 要写还原号。</p>
+        <div class="music-demo" id="rock-blue-note">
+          <div class="music-demo-toolbar"><h3>同一 A7 伴奏上的三度与降五级</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">旋律用 C♯ 与 A7 的三音重合。这个音把旋律同伴奏的大三度连在一起。</p>
+          <figure data-writing-score aria-label="A7 上的大三音、小三音和降五级经过音"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="rock-symmetric-colors">
+        <h2 id="rock-symmetric-colors">减七与增三和弦的等距结构</h2>
+        <p>和弦结构可为即兴提供临时的落音。减七和弦把十二个半音分成四份，增三和弦分成三份。以 D♯dim7 为例，D♯–F♯–A–C 每隔三个半音。换其中一个音作为最低音，听到的音高类保持相同，音区、拼写和解决方向仍可不同。增三和弦 Caug 的 C–E–G♯ 每隔四个半音，同理。</p>
+        <table class="lesson-table">
+          <caption>减三、减七、半减七与增三的音程</caption>
+          <thead><tr><th scope="col">标记</th><th scope="col">从根音到各音</th><th scope="col">以 C 为根音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">dim 或 m(♭5)</th><td>小三度、减五度</td><td>C、E♭、G♭</td></tr>
+            <tr><th scope="row">dim7</th><td>小三度、减五度、减七度</td><td>C、E♭、G♭、B𝄫</td></tr>
+            <tr><th scope="row">m7(♭5) 或 ø7</th><td>小三度、减五度、小七度</td><td>C、E♭、G♭、B♭</td></tr>
+            <tr><th scope="row">aug 或 +</th><td>大三度、增五度</td><td>C、E、G♯</td></tr>
+          </tbody>
+        </table>
+        <p>D–D♯dim7–Em 的低音 D–D♯–E 是连续的半音。D♯ 同时是 E 的导音，D♯dim7 也恰好是 B7(♭9) 去根音后的四个音。另一种写法在 C–Caug–C6 中保持低音 C 和内声 E，用上声部 G–G♯–A 表示变化。两种写法都能用指定声部的半音运动把和弦接起来。</p>
+        <div class="music-demo" id="rock-symmetric-chords">
+          <div class="music-demo-toolbar"><h3>低音中的减七与上声部的增三</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">D 与 Em 直接相接，低音跨一个全音。</p>
+          <figure data-writing-score aria-label="减七和弦连接 D 与 Em，以及增三和弦连接 C 与 C6"></figure>
+        </div>
+        <details class="lesson-aside">
+          <summary>等音音集与和弦谱简写</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>十二平均律下，减七只有三种不同的音高类集合，可用 Cdim7、C♯dim7、Ddim7 分别代表。每种集合中有四个等距的音，对应四个可能的根音。增三有四种集合，可用 Caug、C♯aug、Daug、D♯aug 代表。</li>
+              <li>同一减七或增三按弦指型整体平移三个或四个品位，分别得到同一类音集的另一种排列。实际伴奏仍要保留指定低音，以及负责解决的声部。</li>
+              <li>有些流行谱把减七缩写成 dim。单独看到 dim 时，默认先读作减三和弦，再结合录音、谱例或段落功能判断有没有减七度音。</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="rock-other-scales">
+        <h2 id="rock-other-scales">调式、小调变体与外音</h2>
+        <p>同样的七个音在不同主音上排列，半音落点随之改变。C 大调的白键音如果持续围绕 D，在 D 根音与 Dm 和弦上把 B 放到显眼的位置，会形成 D 多利亚调式的色彩。以 D 自然小调的 B♭ 对照，区别集中在六级。调式听感取决于伴奏和旋律共同建立的中心，仅从 D 开始经过一次白键音仍可能听成 C 大调。</p>
+        <div class="music-demo" id="rock-mode-colors">
+          <div class="music-demo-toolbar"><h3>同一 D 小和弦上的自然小调与多利亚</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">伴奏持续用 Dm。旋律在 B♭–A 的半音上形成自然小调的六级色彩。</p>
+          <figure data-writing-score aria-label="D 小调和 D 多利亚六级对照"></figure>
+        </div>
+        <details class="lesson-aside">
+          <summary>三种小音阶、调外演奏与自由爵士</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>A 自然小调是 A、B、C、D、E、F、G；A 和声小调把 G 升为 G♯，可形成 E7 的大三音并解决到 A。A 旋律小调上行常把 F、G 同时升为 F♯、G♯，减小六级到导音的跨度。传统下行通常还原，爵士中上下行常保留升六级与升七级。</li>
+              <li>调外演奏（playing outside）可以把熟悉的五声音型短暂整体移高半音，再把末尾移回原调的和弦音。伴奏继续维持原中心，听感来自音型暂时离开与回到这个中心之间的距离。</li>
+              <li>自由爵士的一些演奏可以不按预先定好的和弦序列或固定拍节发展，在互动中依靠动机、音色、力度和彼此的呼应组织音乐。</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+    </main>
+  </body>
+</html>

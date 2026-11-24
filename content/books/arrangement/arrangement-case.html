@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>八小节编曲案例｜图解编曲入门</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+    <script type="module" src="./arrangement-case.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解编曲入门</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>八小节编曲案例</h1>
+      <p class="intro">一段固定的主旋律，从主歌句尾进入副歌，再回到开头的旋律材料。四版的主旋律、速度和段落长度相同。逐版增加伴奏、安排答句与过门，再调整乐队的重音与前景。</p>
+
+      <section aria-labelledby="case-versions">
+        <h2 id="case-versions">原旋律、节拍、乐句与合奏</h2>
+        <div class="music-demo" id="case-score">
+          <div class="music-demo-toolbar">
+            <h3>八小节编配总谱</h3>
+            <label>版本 <select data-analysis-version>
+              <option value="melody">原旋律</option>
+              <option value="foundation">节拍骨架</option>
+              <option value="phrases">乐句布置</option>
+              <option value="ensemble">乐队合奏</option>
+            </select></label>
+            <label>片段 <select data-analysis-jump></select></label>
+          </div>
+          <div class="timeline-frame" data-analysis-timeline></div>
+          <p class="music-demo-cue" role="status"><strong data-analysis-section>整段</strong> · <span data-analysis-description>长笛示范主旋律。</span></p>
+          <div class="timeline-frame" data-case-opening-grid hidden>
+            <p>第 1–2 小节的底鼓与贝斯。圆点表示击打，横条表示贝斯持续的时间。</p>
+            <div data-case-grid></div>
+          </div>
+          <p class="score-status" data-analysis-status role="status"></p>
+          <figure data-analysis-score aria-label="八小节主旋律和乐队总谱"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="case-decisions">
+        <h2 id="case-decisions">各段的编曲决定</h2>
+        <p>伴奏各版共用 C–Am、F–G、C–F、G–C 四组和弦。最后一组从 G 回到 C，给回转句一个明确的落点。</p>
+        <table class="lesson-table">
+          <thead><tr><th scope="col">段落</th><th scope="col">音乐需要</th><th scope="col">编配选择</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">第 1–2 小节<br>主歌回句</th><td>主旋律停两拍，但拍感继续。</td><td>先让鼓、贝斯维持拍点。乐句版在同一个空隙用吉他回答，保留开头旋律的上行轮廓。</td></tr>
+            <tr><th scope="row">第 3–5 小节<br>副歌入口</th><td>在转段前形成短促的推动，并把重音落到副歌首拍。</td><td>第 4 小节后半先加入吉他与鼓的过门。合奏版把钢琴和吉他对齐，贝斯反向上行，鼓击跟着同一组起音。第 3 拍后半一起空出半拍，随后的重音更清楚。</td></tr>
+            <tr><th scope="row">第 5–6 小节<br>副歌句中</th><td>贝斯可继续流动，第 6 小节末仍需听清钢琴接句。</td><td>合奏版只把密集的吉他单线改成两个短和弦。钢琴填句与低音保持原样，焦点更容易从主旋律转到钢琴。</td></tr>
+            <tr><th scope="row">第 7–8 小节<br>回转与落点</th><td>第 7 小节集中一次重音，第 8 小节把焦点交回主旋律。</td><td>吉他、钢琴、贝斯把 D–C–B 分三个八度奏出。落到第 8 小节时恢复基础伴奏，开头的旋律轮廓重新出现。</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="课程返回">
+        <a href="./index.html"><span>返回</span><strong>本书目录</strong></a>
+        <a href="./arrangement-3-appendix.html" rel="next"><span>附录</span><strong>编曲构思与制作流程</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

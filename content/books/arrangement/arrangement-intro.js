@@ -1,6 +1,23 @@
 import soundFontUrl from '@coderline/alphatab/soundfont/sonivox.sf3?url';
 import { mountArrangementGrid } from '../../shared/formats/arrangement-grid.js';
 import { mountScoreWritingSteps } from '../../shared/formats/score-writing-steps.js';
+import { arrangementCaseScore, caseOpeningRows, caseTempo, ticksPerBeat } from './arrangement-case-music.js';
+
+const opening = document.getElementById('case-opening');
+const openingGrid = mountArrangementGrid(opening.querySelector('[data-case-grid]'), {
+  beats: 8, subdivisions: 1, rows: [], label: '第 1–2 小节的主旋律、底鼓和贝斯'
+});
+mountScoreWritingSteps(opening, {
+  steps: [
+    { label: '原旋律', notes: arrangementCaseScore('melody', 2), description: '主旋律在第 2 小节第 3、4 拍留白，这时没有伴奏。' },
+    { label: '节拍骨架', notes: arrangementCaseScore('foundation', 2), description: '底鼓和贝斯在第 1、3 拍同时起音。主旋律停下时，伴奏仍维持拍感。' }
+  ],
+  score: {
+    tempo: caseTempo, soundFontUrl, notationVisible: false,
+    onScoreLoaded(score) { openingGrid.update(caseOpeningRows(score, { includeMelody: true })); },
+    onPlaybackPosition(tick) { openingGrid.markStep(tick === null || tick >= 8 * ticksPerBeat ? null : Math.floor(tick / ticksPerBeat)); }
+  }
+});
 
 mountArrangementGrid(document.getElementById('drum-chart'), {
   label: '一小节鼓组对照表，四拍，每拍两格',
@@ -50,7 +67,8 @@ const keys = piano('mf');
 const quietKeys = piano('p');
 const versions = [
   { label: '原旋律', description: '主旋律两小节。第二小节后两拍留空。', tracks: [melody] },
-  { label: '加法', description: '鼓、贝斯与钢琴给出节拍和和声。吉他在主旋律进行时也反复奏答句，两条线同时争夺注意力。', tracks: [melody, busyGuitar, keys, bass, drums] },
+  { label: '加法 · 伴奏骨架', description: '鼓给出稳定的拍点，贝斯明确低音，钢琴补出和弦。第二小节的留白仍然存在。', tracks: [melody, keys, bass, drums] },
+  { label: '加法 · 再添答句', description: '伴奏骨架不变。吉他填入留白，也在主旋律进行时反复奏同一动机，两条线开始争夺注意力。', tracks: [melody, busyGuitar, keys, bass, drums] },
   { label: '减法', description: '删去主旋律进行时的吉他乐句。第二小节后两拍保留答句，鼓和贝斯照常维持节拍。', tracks: [melody, spacedGuitar, keys, bass, drums] },
   { label: '乘法', description: '贝斯每小节的第二次起音提前到第 3 拍，与底鼓对齐。贝斯的音高与底鼓的冲击声集中到同一个瞬间。', tracks: [melody, spacedGuitar, keys, alignedBass, drums] },
   { label: '除法', description: '主旋律进行时收轻钢琴和弦，到吉他答句出现时恢复原力度。起音位置和音高沿用上一版，两条乐句的主次更清楚。', tracks: [melody, spacedGuitar, quietKeys, alignedBass, drums] }

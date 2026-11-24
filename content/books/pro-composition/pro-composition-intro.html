@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>导论 从构思到成曲｜图解 PRO 作曲法</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./pro-composition-intro.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解 PRO 作曲法</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">导论</span> 从构思到成曲</h1>
+      <p class="intro">有了一句能哼出来的旋律，接下来要决定它在整首歌里做什么。本书的五个案例都从一个情境出发，给各段安排任务，再写旋律与和声、配歌词、补前奏和段间连接，最后修订和声并把各段连起来。</p>
+
+      <section aria-labelledby="pro-workflow">
+        <h2 id="pro-workflow">情境与段落分工</h2>
+        <p>同一个短句放在开头，可以交代人物和处境。放在副歌，可以变成听者反复记住的一句话。段落功能明确以后，才能判断哪里值得重复、哪里需要改变。以一首写「夜里迷路，最后看见灯」的歌为例，A 段交代困境，B 段增加寻找的动作，C 段让灯出现。A 可以用窄音域和短节奏，B 改变句尾或和弦去向，C 再把音区和时值拉开。速度、音区与节奏疏密分别影响听感，同一种情绪也可以有多种速度。</p>
+        <table class="lesson-table">
+          <caption>流行歌曲的三种结构</caption>
+          <thead><tr><th scope="col">顺序</th><th scope="col">重复与对比</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">A–B–C–A–B–C–D–C</th><td>A、B 两次把故事送到 C。D 加入新材料，最后回归副歌。</td></tr>
+            <tr><th scope="row">A–B–A–B–C–A–B–A</th><td>C 只有一次，主要印象由反复的 A、B 建立。</td></tr>
+            <tr><th scope="row">C–A–B–C–A–B–C–C</th><td>开头即呈示副歌，末尾可重复加强同一核心句。</td></tr>
+          </tbody>
+        </table>
+        <p>字母代表可辨认的一组主题材料。A₂ 若保留 A₁ 的主要旋律而换歌词，仍是 A。D 可以用新的旋律与和声形成对比。这个编号说明材料的关系，主歌、副歌、过门则说明它在歌曲里承担的任务。</p>
+      </section>
+
+      <section aria-labelledby="pro-themes">
+        <h2 id="pro-themes">主题旋律与和声草稿</h2>
+        <p>可以同时写旋律与和弦，也可以先定和弦骨架，再给各段写旋律。后者适合处理只有一个动机的草稿。先决定句尾落在哪个和弦，接着在句头、重拍或长音处挑选和弦音，短音再负责连接。</p>
+        <h3 id="pro-chord-functions">调内和弦与功能</h3>
+        <p>以音阶每一级为根音，按三度叠到五音就是三和弦，继续叠到七音就是七和弦。级数表示根音与主音的关系，和弦符号表示音程结构。例如 Dm7 是 C 大调的 ii7，音为 D、F、A、C。在 A 自然小调里，同一个 Dm7 起于第四级。判断主、下属、属功能时，还要结合前后走向。</p>
+        <div class="music-demo" id="pro-diatonic">
+          <div class="music-demo-toolbar"><h4>大调和三种小调的调内七和弦</h4><div data-writing-choices aria-label="选择音阶"></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite"></p>
+          <figure data-writing-score aria-label="各级调内七和弦"></figure>
+        </div>
+        <p>大调写作常以 I、IV、V 为支点。I 确立调性，IV 提供离开主位后的展开，V7 中三音与七音之间的三全音形成回主倾向。同一调里每个和弦有自己的根音，但都以同一主音为参照。例如在 C 大调中，Dm7 的根音是 D，整段的主音仍是 C。</p>
+        <table class="lesson-table">
+          <caption>大调与自然小调的常用功能位置</caption>
+          <thead><tr><th scope="col">功能</th><th scope="col">C 大调示例</th><th scope="col">A 自然小调示例</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">主功能</th><td>C 是归宿，Am、Em 可延续或改写主功能。</td><td>Am 是归宿，C 可延续相近的音响，也能引向关系大调。</td></tr>
+            <tr><th scope="row">下属与属前</th><td>F 或 Dm 都可为 G7 作准备。</td><td>Dm 或 Bm7(♭5) 都可接属和弦。F–Dm、G–Am 也可拓展自然小调的句子。</td></tr>
+            <tr><th scope="row">属功能</th><td>G7 的 B–F 指向 C–E，Bdim 也含 B–F。</td><td>Em7 可以回到 Am。若需更明确的导向，用 E7 让 G♯ 上行到 A、D 下行到 C。</td></tr>
+          </tbody>
+        </table>
+        <p>功能表示和弦在句子中做的事。C 与 Am 共享 C、E，所以有时能互换。若把明确的 G7–C 改成 G7–Am，句尾会变成阻碍进行。共同音可以维持旋律，低音和落点仍会改变句法。</p>
+        <details class="lesson-aside" id="pro-chord-symbols">
+          <summary>和弦符号的读法</summary>
+          <div class="lesson-aside-content"><ul>
+            <li><strong>Cmaj7 与 C7</strong>的下方都是 C、E、G。Cmaj7 的七音是 B，C7 的七音是 B♭。单写 7 时指小七度，maj7 才是大七度。</li>
+            <li><strong>Amadd9 与 Am9</strong>都加入 B。Amadd9 只把 B 加在 A、C、E 上。Am9 还包含小七音 G。</li>
+            <li><strong>Csus4 与 C/E</strong>改变的位置不同。Csus4 在 C、G 之间用 F 替换 E。C/E 仍有 C、E、G，只指定 E 做最低音。</li>
+            <li><strong>Bm7(♭5) 与 Bdim7</strong>都含 B、D、F。前者的七音是 A，后者是 A♭。和弦级数里的 iiø7 也是半减七和弦。</li>
+          </ul></div>
+        </details>
+        <details class="lesson-aside">
+          <summary>大调与小调的常用和弦进行</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>C 大调循环可从 C–Am–Dm–G 或 C–Am–F–G 起步。也可从 Dm–G–C–Am 开始，或采用 F–G–Em–Am 形成小调落点。</li>
+              <li>F–Em–Dm–C 的根音级进下行。C–F–G–C 的功能路径清晰，C–G–C–G 反复强调主属。C–G–Am–Em–F–C–F–G 是常用的卡农型进行。Dm–G–C–F 延续根音上行四度的推动。</li>
+              <li>A 自然小调的 Am–G–F–Em 下行，Am–C–Dm–F 则往上展开。Am–C–D–G 中 D 大三和弦的 F♯ 改变了自然小调的色彩。</li>
+              <li>Am–F–Dm–E7、Am–C–F–E7 都以 E7 预备下一轮 Am。Dm–Bm7(♭5)–E7–Am 的最后三项构成小调的 iiø7–V7–i。</li>
+            </ul>
+          </div>
+        </details>
+        <h3 id="pro-melody-harmony">和弦音、扩展音与经过音</h3>
+        <p>扩展音是可作为和弦色彩保留的九音、十一音、十三音等。相同的调内音换到另一和弦上，其角色也会变。F 在 Dm 里是三音，在含 E 的 C 或 Am 和弦上长停，则容易与 E 形成半音或小九度摩擦。<strong>规避音</strong>指特定配和弦中通常避免作稳定长音的音。若需要这股张力，可以给它解决方向。这里的 F 可在弱位经过，也可先停留再下行到 E。调外音同样能连接稳定音。先现音则提前奏出下个和弦的音。</p>
+        <div class="music-demo" id="pro-melodic-notes">
+          <div class="music-demo-toolbar"><h4>和弦音骨架与装饰后的旋律</h4><div data-writing-choices aria-label="选择旋律版本"></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite"></p>
+          <figure data-writing-score aria-label="和弦音、经过音及先现音的旋律对照"></figure>
+        </div>
+        <p>当同一套调内和弦不足以表现段落变化时，可以换调。关系大小调（如 C 大调与 A 小调）有共同音列，同主音大小调（如 C 大调与 C 小调）保留主音但改变多个音级。小三度换调和更远的换调可以借共同旋律音或新调的属和弦衔接。一个借用和弦可以保留原主音，形成新主音感才构成转调。</p>
+      </section>
+
+      <section aria-labelledby="pro-lyric-fit">
+        <h2 id="pro-lyric-fit">歌词字数与起音</h2>
+        <p>同一旋律反复时，两段歌词未必字数相等。可以把一个长音拆成两个短起音，或将两音合成一个较长的起音。改写尽量留在弱位，把关键信息与句末所在的拍点保住。一个字唱几个音时，可以用连线标示同一音节的延展。</p>
+        <div class="music-demo" id="pro-lyric-division">
+          <div class="music-demo-toolbar"><h3>同一拍长下的五字与六字</h3><div data-writing-choices aria-label="选择配词方式"></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite"></p>
+          <figure data-writing-score aria-label="拆分节奏前后的配词"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="pro-instrumental-links">
+        <h2 id="pro-instrumental-links">前奏、间奏与尾奏</h2>
+        <p>前奏给听者一个可辨认的声音预告。用副歌和弦写前奏时，可以保留次序，改变换和弦的速度，或抽取前四个和弦，让副歌首次进入时还有新内容。另写材料也可以，交接处要留出下一段能接住的音或节拍。</p>
+        <p>间奏连接两段，末尾的和弦可以服从下一段的入口。若下一段从 Am 起，间奏尾用 E7，G♯ 到 A 和 D 到 C 都能把听者带过去。尾奏负责决定音乐怎么停，既可以借回前奏形成首尾照应，也可以延长最后一个主和弦。前奏的最后一个和弦若原本用来向前推，原样拿来收尾就可能仍有悬念。</p>
+        <p>例如一段要回主歌的过门和一段要结束全曲的尾奏，都可以从 Dm 开始。前者接 E7 后把 Am 留给主歌开头。后者接 G7–C，并把主和弦留在尾奏里。同一开头之所以能服务两处，是因为结尾的目标不同。</p>
+      </section>
+
+      <section aria-labelledby="pro-reharm">
+        <h2 id="pro-reharm">和声修订与成曲</h2>
+        <p>骨架能撑住旋律后，和声修订才有比较的基准。改变低音时，观察它能否连成一条线。加扩展音时，观察最上方的音能否与旋律和前后和弦相接。替换和弦时，确认旋律的长音与新和声仍能共存。</p>
+        <div class="music-demo" id="pro-harmonic-revisions">
+          <div class="music-demo-toolbar"><h3>和声骨架及常用修订</h3><div data-writing-choices aria-label="选择和声修订方式"></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite"></p>
+          <figure data-writing-score aria-label="持续低音、三全音替代与借用和弦等"></figure>
+        </div>
+        <details class="lesson-aside">
+          <summary>扩展音、斜线低音与临时属功能</summary>
+          <div class="lesson-aside-content"><ul>
+            <li>九音、十一音和十三音从根音向上计算。G7 上的变化扩展音可以有 ♭9、♯9、♯11、♭13，具体取舍取决于其解决方向与旋律音。Fmaj7 上的 B 是 ♯11，来自 C 大调本身，也能成为平滑的上声部。</li>
+            <li>以 C 大调的调内九音为例，Cmaj7 加 D，Dm7 加 E，G7 加 A，Am7 加 B。比较十一音时，Fmaj7 上可用 B，Dm7 上可用 G。不同结构的和弦适合保留的扩展音并不完全相同。</li>
+            <li>斜线后写实际低音，F/C 的 C 是和弦音，C/D 的 D 在上方三和弦之外。持续低音指在连续几个和弦下保持同一低音，一枚斜线和弦自身无法形成持续过程。</li>
+            <li>C 大调的 Dm、Em、F、G、Am 可分别由 A7、B7、C7、D7、E7 临时导入。若目标是 G，Am7–D7–G 又构成以 G 为局部主音的二–五–一。</li>
+            <li>C♯dim7–Dm7 中，导向 D 的半音低音提供连接。全减七还可以重新拼写来指向别的目标。区分三全音替代时，两和弦都应有可互换的属功能。</li>
+          </ul></div>
+        </details>
+        <aside class="lesson-callout"><p><strong>每次修订要能说明改变了哪一层。</strong> 把旋律和段落先保留，比较低音、换和弦的拍位或上方音，才能判断变化是否帮到了作品。</p></aside>
+      </section>
+    </main>
+  </body>
+</html>

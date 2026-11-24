@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第四章 和弦进行与低音线条｜图解流行摇滚音乐理论</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./pop-rock-theory-4.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解流行摇滚音乐理论</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第四章 和弦进行与低音线条</h1>
+      <p class="intro">吉他手按 G，贝斯手弹 B，合起来仍有 G 和弦的构成，但低音已经变了。认识了和弦的拼法以后，本章把三个问题分开。和弦在乐句里做什么，根音如何连接，真正听到的最低音又如何走向下一拍。</p>
+
+      <section aria-labelledby="rock-4-functions">
+        <h2 id="rock-4-functions">主、下属与属功能</h2>
+        <p>C–G7–C 已经有出发和归来的轮廓。C 确立主音，G7 的 B 上行半音到 C，F 下行半音到 E，形成清楚的回归。加入 F 就有了 C–F–G7–C。F 先把乐句带离主和弦，并准备随后的属和弦。在 C 大调中，I、IV、V 是代表这三种功能的主要三和弦。</p>
+        <table class="lesson-table">
+          <caption>C 大调的常见功能与共享音</caption>
+          <thead><tr><th scope="col">功能</th><th scope="col">常见和弦</th><th scope="col">可比较的共同音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">主 T · 延续或确认调性中心</th><td>I、vi、iii<br>C、Am、Em</td><td>Am7 含 C–E–G，Em 含 Cmaj7 的 E–G–B。</td></tr>
+            <tr><th scope="row">下属 S · 离开主和弦或准备属和弦</th><td>IV、ii<br>F、Dm</td><td>Dm7 含 F–A–C，整个 F 三和弦都在其中。</td></tr>
+            <tr><th scope="row">属 D · 指向主和弦</th><td>V、vii°<br>G、Bdim</td><td>Bdim 的 B–D–F 都在 G7 中，B 与 F 可以沿同样的方向解决。</td></tr>
+          </tbody>
+        </table>
+        <p>功能取决于上下文。Am 若接在 C 后、继续走向 Dm–G7–C，可延续主功能。Am 若紧跟 G7 出现在预期回 C 的句尾，则是另一种走向。Em 与 C 共享音，但低音 E 和它在句中的位置会影响听感。类似地，保留和弦里的共同音有助于衔接，旋律的长音仍需要与替换后的和弦核对。</p>
+        <p>把 F 换成 Dm7，可以保留 F、A、C，低音由 F 改为 D。于是 F–G7 的根音上行二度改成 Dm7–G7 的下行五度或上行四度。属前与属的功能顺序相同，后一种形成常见的 ii–V，接 C 即 ii–V–I。</p>
+        <div class="music-demo" id="rock-functional-paths">
+          <div class="music-demo-toolbar"><h3>同一句尾的功能骨架与替代</h3><div data-writing-choices role="group" aria-label="选择功能和弦进行"></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">C–F–G7–C。属七中的 B–F 分别去往 C–E。</p>
+          <figure data-writing-score aria-label="主、下属与属功能的和弦替代对照"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="rock-4-fifths">
+        <h2 id="rock-4-fifths">五度链与副属和弦</h2>
+        <p>在 C–Dm–G7–C 之间加入 Am，A–D–G–C 连续三次出现根音下行五度关系。再把 Em 接在 Am 前面，得到 E–A–D–G–C。这样的链条可以包含调内小和弦。五度关系说明两个根音的距离，属七功能还要看三音、七音与目标和弦的关系。</p>
+        <p>例如把 Em7 的 G 升为 G♯，得到 E7。G♯ 到 Am 的根音 A 只差半音，D 同时可下行到 C。若乐句依然以 C 为中心，E7 就是指向 vi 的副属和弦。连续使用 B7、E7、A7、D7 能分别强调 Em、Am、Dm、G。只强调其中一两个目标，可以保留更多自然音阶内的连续性。</p>
+        <table class="lesson-table">
+          <caption>C 大调中四种常见的副属目标</caption>
+          <thead><tr><th scope="col">副属 → 目标</th><th scope="col">功能</th><th scope="col">新导音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">B7 → Em</th><td>V7/iii</td><td>D♯ → E</td></tr>
+            <tr><th scope="row">E7 → Am</th><td>V7/vi</td><td>G♯ → A</td></tr>
+            <tr><th scope="row">A7 → Dm</th><td>V7/ii</td><td>C♯ → D</td></tr>
+            <tr><th scope="row">D7 → G</th><td>V7/V</td><td>F♯ → G</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="rock-dominant-chain">
+          <div class="music-demo-toolbar"><h3>连续五度与副属和弦</h3><div data-writing-choices role="group" aria-label="选择副属和弦使用方式"></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">Bm7(♭5)–Em7–Am7–Dm7–G7–C。根音沿下行五度关系推进，全句使用 C 大调的音。</p>
+          <figure data-writing-score aria-label="调内五度链、局部副属和连续属七的五线谱对照"></figure>
+        </div>
+        <aside class="lesson-callout"><h3>局部强调与转调的判断</h3><p>一个副属到达目标和弦，可以短暂把它当作归宿来听。若后面仍回到原调的属与主，原调通常继续成立。转调须有足够的乐句或终止来建立新中心，不能只靠一个调外音判断。</p></aside>
+      </section>
+
+      <section aria-labelledby="rock-4-inversions">
+        <h2 id="rock-4-inversions">转位、斜线和弦与低音连线</h2>
+        <p>同为 C 和弦，若最低的是 C，为原位。低音换成 E 或 G，分别是第一转位 C/E 和第二转位 C/G。
+          <svg class="inline-staff inline-staff-wide" viewBox="0 2 91 35" role="img" aria-label="高音谱表上的三个 C 和弦配置，依次为 C、E、G；E、G、C；G、C、E">
+            <path class="inline-staff-lines" d="M1 7H90 M1 12H90 M1 17H90 M1 22H90 M1 27H90 M10 32H26"/>
+            <text x="14" y="32">&#xE0A2;</text><text x="14" y="27">&#xE0A2;</text><text x="14" y="22">&#xE0A2;</text>
+            <text x="40" y="27">&#xE0A2;</text><text x="40" y="22">&#xE0A2;</text><text x="40" y="14.5">&#xE0A2;</text>
+            <text x="67" y="22">&#xE0A2;</text><text x="67" y="14.5">&#xE0A2;</text><text x="67" y="9.5">&#xE0A2;</text>
+          </svg>
+          只调整上方声部的先后与八度，整组声音的最低音仍是 C，属于给原位和弦换一种声部配置。合奏时，应以整个乐队的实际最低音判断转位。
+        </p>
+        <p>斜线左边写和弦，右边写指定的低音，G/B 也可写 G on B。右侧若是和弦音，可以构成转位；若是和弦外低音，写法仍然成立，例如 C/D 是 C 三和弦放在 D 低音上。</p>
+        <p>标准调弦吉他的高音三弦上，下面三种手型都包含 C、E、G。若贝斯手另弹更低的 C，则乐队实际仍在 C 和弦原位。</p>
+        <div id="rock-c-inversion-fingerings"></div>
+        <p>C–G–Am–G–F 原本让几个低音随根音跳进。第二个和弦取 G/B 后，贝斯得到 C–B–A。到第四个位置，可保留贝斯的 G，把上方 G 和弦换成 Am，形成 Am/G。若伴奏还含 G，可标成 Am7/G。两者合奏都包含 A–C–E–G，各声部的音区和重叠则由编配决定。</p>
+        <table class="lesson-table">
+          <caption>和弦根音与实际低音的对照</caption>
+          <thead><tr><th scope="col">处理</th><th scope="col">写下的和弦</th><th scope="col">实际低音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">根音低音</th><td>C–G–Am–G–F</td><td>C–G–A–G–F</td></tr>
+            <tr><th scope="row">第二处用转位</th><td>C–G/B–Am–G–F</td><td>C–B–A–G–F</td></tr>
+            <tr><th scope="row">低音不动，调整第四处上方和声</th><td>C–G/B–Am–Am/G–F</td><td>C–B–A–G–F</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="rock-slash-bass">
+          <div class="music-demo-toolbar"><h3>同一上方和弦与不同低音</h3><div data-writing-choices role="group" aria-label="选择斜线和弦版本"></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">低声部与和弦根音一致。第二个低音是 G。</p>
+          <figure data-writing-score aria-label="同一进行下根音、转位与级进低音的五线谱"></figure>
+        </div>
+        <p>和弦符号通常标出要在合奏中维持的低音。贝斯在和弦拍内短暂经过某个音时，可以把音写在贝斯声部，不必给每个经过音另标一个和弦。</p>
+      </section>
+
+      <section aria-labelledby="rock-4-diminished">
+        <h2 id="rock-4-diminished">经过减七和弦</h2>
+        <p>从 F 走到 G7 时，低音可以插入 F♯。若上方同时奏出 F7 的 A、C、E♭，四个合奏音为 F♯–A–C–E♭，正是 F♯dim7。少了 E♭，只剩 F♯–A–C，则是 F♯dim。这个写法让低音 F–F♯–G 连续以半音上行，上方音也有清楚的去向，例如 E♭ 可下行到 G7 的五音 D。</p>
+        <div class="music-demo" id="rock-passing-diminished">
+          <div class="music-demo-toolbar"><h3>升 F 低音与经过减七</h3><div data-writing-choices role="group" aria-label="选择经过和弦版本"></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">F 直接走到 G7。F 的低音维持到小节末。</p>
+          <figure data-writing-score aria-label="F 到 G7 有无升 F 经过减七的五线谱"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="rock-4-tritone">
+        <h2 id="rock-4-tritone">三全音替代与半音下行</h2>
+        <p>G7 的三音 B 与七音 F 相距三个全音。D♭7 的三音 F 与七音 C♭ 共享这对音高，B 与 C♭ 在十二平均律中等音。两和弦的根音也相距三全音，可以用 D♭7 替代 G7，让 Dm7–G7–C 的五度链变为 Dm7–D♭7–C，取得 D–D♭–C 的半音低音，同时保留两条内声部的解决。</p>
+        <p>这条规则也可用于副属。A7 指向 Dm，它的替代是 E♭7。两处都替换后，Em–E♭7–Dm7–D♭7–C 的低音依次为 E–E♭–D–D♭–C。若旋律原本停在被换掉的音上，还要检查新和弦中这个音的身份。</p>
+        <div class="music-demo" id="rock-tritone-substitution">
+          <div class="music-demo-toolbar"><h3>属七与三全音替代</h3><div data-writing-choices role="group" aria-label="选择三全音替代版本"></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">Dm7–G7–C，低音按五度关系前进，B 和 F 分别解决到 C 和 E。</p>
+          <figure data-writing-score aria-label="G7 和降 D 属七的三全音替代及半音低音"></figure>
+        </div>
+        <details class="lesson-aside">
+          <summary>吉他低音弦上的三全音位置</summary>
+          <div class="lesson-aside-content"><p>标准调弦第六、第五弦空弦相差纯四度（五个半音）。从第六弦切到第五弦再上移一品，共升六个半音。例子是第六弦第 3 品 G 与第五弦第 4 品 D♭。反向移动是同一组音，或者可在一根弦上移动六品。</p></div>
+        </details>
+      </section>
+
+      <section aria-labelledby="rock-4-borrowing">
+        <h2 id="rock-4-borrowing">同主音小调借用与句尾</h2>
+        <p>C 大调常以 F–G7–C 收句。若把 G7 改成同主音 C 小调的 Fm，就得到 F–Fm–C。F 的三音 A 降成 Fm 的 A♭，再到 C 和弦的 G，形成 A–A♭–G 的半音线。Fm 是借来的小下属和弦，这段的终点仍是 C 大和弦。</p>
+        <p>换成 A♭ 大三和弦，也能保留 A–A♭–G。Fm 含 F–A♭–C，A♭ 含 A♭–C–E♭，替换让第二个和弦低音从 F 移到 A♭。C 小调中的 Ddim（D–F–A♭）也可借用，若叠加 C，则写 Dm7(♭5)。这些写法都能在 C 小调音阶里找到，和临时用 E7 引向 Am 的副属做法有不同的声部走向。</p>
+        <div class="music-demo" id="rock-borrowed-cadence">
+          <div class="music-demo-toolbar"><h3>同一句尾的属七与借用和弦</h3><div data-writing-choices role="group" aria-label="选择句尾和声"></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">F–G7–C，最后由属七回主。最高音走 A–G–G。</p>
+          <figure data-writing-score aria-label="属七、借用小下属及降六级的句尾和声对照"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="rock-4-rewrite">
+        <h2 id="rock-4-rewrite">为同一条旋律重配和声</h2>
+        <p>重配和声是保留可以辨认的曲调，改变其伴奏和弦或和声落点。先确认长音怎样落在和弦上，再区分句尾归宿与途中可换的部分，最后让贝斯在关键点落到明确的音。弱位置可以用级进低音连接，只有当每拍都形成有规律的行进时，才接近常说的行进低音（walking bass）织体。</p>
+        <p>示范中第二小节原来用 F 伴奏，旋律的 A 和 F 都能保留在 Am–F 的新配法里。第三小节的 F 换成 Dm7 后，F 仍是和弦音，但多了 D–G–C 的五度链。两版都回到 C，改动可以从旋律、和弦与低音三层同时核对。</p>
+        <div class="music-demo" id="rock-reharmonization">
+          <div class="music-demo-toolbar"><h3>同一旋律的两种和声组织</h3><div data-writing-choices role="group" aria-label="选择基础伴奏或重配和声"></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">基础配法只用 C、F、G7。第一和第三小节分别从 C 和 F 开始。</p>
+          <figure data-writing-score aria-label="相同曲调上和弦骨架与低音路线的重配和声对照"></figure>
+        </div>
+        <aside class="lesson-callout"><h3>按层整理听到的进行</h3><p>先写谱上能确定的低音，再由伴奏与旋律推断根音和和弦性质。最后把和弦放回全句，确认中途的局部趋向和真正的归宿。写作时也可以沿这个顺序从骨架推到具体音符。</p></aside>
+      </section>
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./pop-rock-theory-3.html" rel="prev"><span>上一章</span><strong>和弦的构成与调内和弦</strong></a>
+        <a href="./pop-rock-theory-5.html" rel="next"><span>下一章</span><strong>五声音阶与即兴</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

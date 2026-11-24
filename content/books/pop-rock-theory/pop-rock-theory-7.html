@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第七章 合奏、节奏与和声术语｜图解流行摇滚音乐理论</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <script src="../../shared/themes.js"></script>
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script type="module" src="./pop-rock-theory-7.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解流行摇滚音乐理论</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第七章 合奏、节奏与和声术语</h1>
+      <p class="intro">排练时的「从弱起进」「后半拍切进来」和「末两小节回头」分别在说入口、重音与段落去向。把术语放回节拍、声部和句尾，才能知道各自对应哪处变化。</p>
+      <section aria-labelledby="rock-glossary-time">
+        <h2 id="rock-glossary-time">预备拍、弱起、律动与切分</h2>
+        <table class="lesson-table">
+          <caption>拍点与演奏时间</caption>
+          <thead><tr><th scope="col">术语</th><th scope="col">位置与作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">预备拍 <span lang="en">count-in</span></th><td>正式乐音开始前给出速度和拍点。两小节预备拍可在第一小节只标第 1、3 拍，第二小节给全四拍。</td></tr>
+            <tr><th scope="row">弱起 <span lang="en">pickup</span></th><td>旋律在第一个完整小节的第一拍之前已起音。弱起可以包含几个音。预备拍属于提示，弱起属于乐句。</td></tr>
+            <tr><th scope="row">切分 <span lang="en">syncopation</span></th><td>让意外的拍位得到重音，常见做法是从弱拍或拍的后半起音并延续经过原本较强的拍位。</td></tr>
+            <tr><th scope="row">律动 <span lang="en">groove</span></th><td>反复出现的起音、重音、时值和声部配合共同形成的节奏感。例如底鼓稳住第 1、3 拍，小鼓突出第 2、4 拍。</td></tr>
+            <tr><th scope="row">抢拍、拖拍</th><td>起音持续偏离约定拍点或速度失控。刻意渐快、渐慢改变的是整体速度。乐手也可只把个别声部略放在拍前或拍后，同时维持共同速度。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="rock-glossary-syncopation">
+          <div class="music-demo-toolbar">
+            <h3>切分中的提前起音与跨拍延续</h3>
+            <div class="score-choice-buttons" data-writing-choices role="group" aria-label="动机的起音位置"></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite"></p>
+          <figure data-writing-score aria-label="同一动机在第三拍起音或提前半拍并跨过第三拍"></figure>
+        </div>
+        <p>前一例的切分借用相同的四拍脉搏。复节奏用的是同一时间跨度的两种等分，例如两个等距起音叠上三个等距起音。它们可以每六个细分点对齐一次。若两组乐手共享相同的拍长，却分别每三拍、每四拍回到重拍，则是在叠置不同拍号，十二拍后两组小节线重新重合。</p>
+        <figure class="arrangement-example" aria-labelledby="rock-three-against-two-label">
+          <figcaption id="rock-three-against-two-label">三对二的共同细分</figcaption>
+          <div id="rock-three-against-two"></div>
+          <p>六个等分格内，三等分在第 1、3、5 格起音，二等分在第 1、4 格起音。</p>
+        </figure>
+      </section>
+      <section aria-labelledby="rock-glossary-ensemble">
+        <h2 id="rock-glossary-ensemble">合奏、即兴与主旋律的留白</h2>
+        <table class="lesson-table">
+          <caption>乐队中各声部的分工</caption>
+          <thead><tr><th scope="col">术语</th><th scope="col">乐句或伴奏的作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">合奏 <span lang="en">ensemble</span></th><td>多位乐手共同演奏。平衡涉及音量、音域、音色和发音，也包括谁在此处承担主要信息。</td></tr>
+            <tr><th scope="row">即兴 <span lang="en">improvisation</span></th><td>在演奏中构成音乐。即兴常有约定的长度、速度、和声或轮奏次序，例如在八小节伴奏内写出独奏。</td></tr>
+            <tr><th scope="row">循环伴奏 <span lang="en">vamp</span></th><td>可反复维持的伴奏型，常给独奏或入唱留出空间。例如 Am7–D7 可一直反复，直到领奏发出进入下一段的信号。</td></tr>
+            <tr><th scope="row">副旋律</th><td>与主旋律具有独立轮廓的第二条旋律。它可在人声唱着时继续，也可在句间出现。</td></tr>
+            <tr><th scope="row">助奏 <span lang="en">obbligato</span></th><td>具有辨识度的伴随声部。流行编配常在主唱换气时用短句应答。传统用法也可指贯穿乐段、不可省略的伴随声部。</td></tr>
+            <tr><th scope="row">对位 <span lang="en">counterpoint</span></th><td>组织同时进行的独立线条。主旋律和副旋律相遇时，既要各自能唱，也要安排它们同时发声的音程与重音。</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section aria-labelledby="rock-glossary-voicing">
+        <h2 id="rock-glossary-voicing">和弦音、声部配置与旋律用音</h2>
+        <table class="lesson-table">
+          <caption>和弦符号在谱面上表示的内容</caption>
+          <thead><tr><th scope="col">术语</th><th scope="col">判断依据与例子</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">三和弦</th><td>由根音、三音、五音构成。C 大、C 小、C 减、C 增分别使用 C–E–G、C–E♭–G、C–E♭–G♭、C–E–G♯。</td></tr>
+            <tr><th scope="row">声部配置 <span lang="en">voicing</span></th><td>安排哪些音放在哪些八度、哪个声部重复或省略。C3–E4–G4 与 C3–G3–E4 都以 C 为低音，均为原位，配置各异。</td></tr>
+            <tr><th scope="row">分解和弦、琶音</th><td>把和弦各音错开起奏就是分解。按某一方向展开的分解进行常称琶音，典型上行是 C–E–G–C。</td></tr>
+            <tr><th scope="row">延伸音与变化延伸音</th><td>在和弦七度结构之外继续用 9、11、13，加升降号可写成 ♭9、♯9、♯11、♭13 等。C7(♯9) 中的 D♯ 和三音 E 可以同时存在。</td></tr>
+            <tr><th scope="row">避用音 <span lang="en">avoid note</span></th><td>某音在特定和弦上长时间停留时容易产生不需要的冲突。Cmaj7 的 E 上方长按 F 会形成小二度或小九度，F 仍可作 E–F–G 的经过音。</td></tr>
+            <tr><th scope="row">三全音 <span lang="en">tritone</span></th><td>跨六个半音，可写成增四度或减五度。G7 的 B 与 F 形成减五度，接 C 时通常由 B 上行至 C、F 下行至 E。</td></tr>
+            <tr><th scope="row">半音线条 <span lang="en">line cliché</span></th><td>和声保留几颗共同音，同时一个声部逐半音移动。Am–Am(maj7)–Am7–Am6 中，A–C–E 可持续，上方形成 A–G♯–G–F♯。</td></tr>
+            <tr><th scope="row">调式互换</th><td>向同主音的其他调式借和弦。例如 C 大调的 Fm 借自 C 小调。即兴时选择和弦上方所用的音阶，则是在决定旋律用音。</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section aria-labelledby="rock-glossary-structure">
+        <h2 id="rock-glossary-structure">终止、折返与歌曲分析</h2>
+        <p><strong>终止式</strong>是乐句到达边界处形成的收束。<strong>折返进行</strong>（<span lang="en">turnaround</span>）发生在一轮末尾，目的是接到下一轮开头。例如 C 调十二小节蓝调可在第 11 小节回到 C7，第 12 小节用 G7 牵向下一轮的 C7。最后一轮在主和弦上停止，尾部的任务就从折返变成收束。</p>
+        <div class="music-demo" id="rock-glossary-turnaround">
+          <div class="music-demo-toolbar">
+            <h3>蓝调末尾的折返与收束</h3>
+            <div class="score-choice-buttons" data-writing-choices role="group" aria-label="蓝调结尾的走向"></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite"></p>
+          <figure data-writing-score aria-label="十二小节蓝调最后两小节与下一轮开头的对照"></figure>
+        </div>
+        <table class="lesson-table">
+          <caption>读谱、分析与和声的常用术语</caption>
+          <thead><tr><th scope="col">术语</th><th scope="col">关注的对象</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">首调唱名</th><td>大调的 Do 随主音移动。D 大调的 D 唱 Do，F♯ 唱 Mi。固定唱名把音名与唱名固定对应。</td></tr>
+            <tr><th scope="row">半音阶</th><td>逐半音进行。例如 C–C♯–D–D♯–E 形成半音阶片段。相同琴键的等音写法取决于上下文。</td></tr>
+            <tr><th scope="row">乐典</th><td>拍号、音值、休止和调号等记谱规则。它让乐手能从同一种书写读出相同的基本信息。</td></tr>
+            <tr><th scope="row">和声</th><td>研究同时发声的音以及它们在时间里的连接。不同风格对和弦色彩、解决和重复的用法各有习惯。</td></tr>
+            <tr><th scope="row">分析</th><td>用能听到或看到的证据解释音乐的结构。唱出低音、找到旋律的句尾，再用和弦与调性判断为什么这里回到开头或暂时停住。</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>

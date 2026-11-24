@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第一章 依据恋爱的意象作曲｜图解作曲配乐</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./composition-scoring-1.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解作曲配乐</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">第一章</span> 依据恋爱的意象作曲</h1>
+      <p class="intro">一句旋律沿用原来的音高，只给它换一个开头和弦，听感就会从已经落地变成还在寻找方向。这里把十种情境拆成可控制的写作决定：和声从哪里出发，低音是否移动，旋律多密、跳多远，重音什么时候到。场景只是选择材料的线索，和声与节奏的写法同样适用于其他主题。</p>
+
+      <section aria-labelledby="scoring-unrequited">
+        <h2 id="scoring-unrequited">下属和弦起始与三拍子 · 单恋</h2>
+        <p>在 C 大调里，主和弦 C 建立稳定的出发点。从 IV 级 Fmaj7 出发，则能先给出 C 大调中的色彩，暂时把主功能留到后面。Fmaj7–Em7–Dm7 的根音 F–E–D 逐级下行，再由 G7 回到 Cmaj7，开头的悬浮与结尾的安定就能同时存在。Fmaj7 的 E 也是 Cmaj7 的组成音，因此一个旋律音可以放在两种开头上。</p>
+        <div class="music-demo" id="scoring-subdominant-start">
+          <div class="music-demo-toolbar">
+            <h3>同一旋律的主和弦与下属和弦起始</h3>
+            <label>起始和弦
+              <select>
+              <option value="iv">Fmaj7 起始</option>
+              <option value="i">Cmaj7 起始</option>
+              </select>
+            </label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">Fmaj7 起始，旋律沿原来的音高前进，主和弦到末尾才出现。</p>
+          <figure data-scoring-score aria-label="同一旋律的主和弦与下属和弦起始"></figure>
+        </div>
+        <p>三拍子的第一拍提供支点，后两拍较轻。中速三拍中，乐句既可以顺着三拍起伏，也可以在弱拍轻轻接出下一次音型。前四小节可用两个节奏相似的两小节句，保留辨识度，再在后半句补出终止。钟琴一类明亮音色适合点亮个别句尾。若要续写并保留余意，可在类似的下行之后转向 Am，推迟回到 C。</p>
+      </section>
+
+      <section aria-labelledby="scoring-furnace">
+        <h2 id="scoring-furnace">持续低音与局部加密 · 炉火</h2>
+        <p>持续低音是在一段和声变化之下维持同一个低音，可以持续发声，也可以反复弹奏。例如 Am7–D/A–Am7–G/A 中，底部始终是 A，和弦根音却依次为 A、D、A、G。斜线后面表示实际低音。G/A 的 G、B、D 相对 A 分别提供小七度、大九度和纯十一度，上方活动依旧明显。</p>
+        <div class="music-demo" id="scoring-pedal-view">
+          <div class="music-demo-toolbar">
+            <h3>下方固定与随和弦变化的低音</h3>
+            <label>低音写法
+              <select>
+              <option value="pedal">固定 A</option>
+              <option value="roots">随和弦换根音</option>
+              </select>
+            </label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">四小节低音均为 A，上方 Am7、D、Am7、G 照常变化。</p>
+          <figure data-scoring-score aria-label="下方固定与随和弦变化的低音"></figure>
+        </div>
+        <p>节奏的激烈感可交给一条线承担。四分音符约每分钟 130 拍时，可让旋律保持较大的时值，在少数拍把持续音拆成十六分音符，或令低音在固定音上短促重击。局部密度与周围形成反差，听者才容易辨认情绪从哪里开始加剧。</p>
+      </section>
+
+      <section aria-labelledby="scoring-farewell">
+        <h2 id="scoring-farewell">旋律的大跳与半音下行 · 离别</h2>
+        <p>同样是情绪转折，相邻两音只走一步，句子的音区可以保持平稳。谱例的上声部在关键拍从 E4 跳到 C5，打开小六度的跨度。把大跳留在一句的转折点，周围用较慢速度和较长音值，冲击及随后的沉重就都听得见。三拍子与更慢的速度也可作为另一个处理方向。</p>
+        <p>在线条的另一层，可把 A 小调中的低音 A–A♭–G–F♯–F–E 连成半音下行，上方的 C、E 多次保留。这种围绕一条半音线安排和弦的写法常称半音线条进行。例如 Am–A♭aug–Am/G–F♯m7(♭5)–Fmaj7–Em7 中，前五个和弦都能保留 C、E。下行到 E 只是抵达属音所在的位置。后面可短暂用大和弦提亮，末尾回到 Am，让原来的小调中心重新出现。</p>
+        <div class="music-demo" id="scoring-chromatic-descent">
+          <div class="music-demo-toolbar">
+            <h3>同一旋律下的半音低音</h3>
+            <label>低音线
+              <select>
+              <option value="descent">逐半音下降</option>
+              <option value="held">固定 A</option>
+              </select>
+            </label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">低音逐半音从 A 下降到 E，上层声部缓慢改变。</p>
+          <figure data-scoring-score aria-label="同一旋律下的半音低音"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="scoring-first-date">
+        <h2 id="scoring-first-date">反复和弦、速度与起音密度 · 初次约会</h2>
+        <p>两拍一个和弦，让 C 与 B♭ 交替形成 I–♭VII–I–♭VII。两个和弦都是大三和弦，相邻根音以大二度来回移动。C 调里的 B♭ 带来一次明确的色彩变化，重回 C 又能恢复方向。往复两三次便建立预期，尾部才改换进行，使期待有一个落点。</p>
+        <p>四分音符每分钟 150 拍已经很快。保持速度，删去一些拍间起音或让一句以长音结束，听者仍感到前进，同时有时间辨认乐句。每拍都填满会更紧张。若要用钟琴或铃类加亮，可以只标出个别音头，以免旋律和伴奏的密度同时失去层次。</p>
+        <div class="music-demo" id="scoring-first-date-density">
+          <div class="music-demo-toolbar">
+            <h3>相同速度下的旋律密度</h3>
+            <label>旋律起音
+              <select>
+              <option value="spaced">保留长音和空隙</option>
+              <option value="filled">连续八分起音</option>
+              </select>
+            </label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">♩＝150，和弦仍每两拍往返，旋律给若干拍留出空间。</p>
+          <figure data-scoring-score aria-label="相同速度下的旋律密度"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="scoring-first-love">
+        <h2 id="scoring-first-love">连续四度与带挂留的下属终止 · 初恋</h2>
+        <p>F 大调从 B♭maj7 起始，会让下属区域先于主和弦被听见。中段可用 E7–Am–Dm–Gm–C7 逐步把根音向上四度推进。E7 中的 G♯ 暂时引向 Am，其后的 Dm、Gm、C7 又把方向接回 F 大调。各和弦里朝目标音运动的方向都很清楚，连续起来却让稳定的主和弦迟迟未到。</p>
+        <p>句尾将 B♭ 接到 F 时得到 IV–I 的下属终止，也称变格终止。B♭ 和弦中的 B♭ 可以在 F 的低音上短暂保留，形成 Fsus4，随后下行到 A。这是进入主和弦时的局部挂留。若前面只写了 C7–Fsus4–F，主体是属到主的终止，不能因为出现 Fsus4 就判为变格终止。</p>
+        <div class="music-demo" id="scoring-fsus-ending">
+          <div class="music-demo-toolbar">
+            <h3>下属终止中的挂留音</h3>
+            <label>终止写法
+              <select>
+              <option value="held">IV–Isus4–I</option>
+              <option value="plain">IV–I</option>
+              </select>
+            </label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">B♭ 和弦的 B♭ 在 F 低音上多留两拍，随后落到 A。</p>
+          <figure data-scoring-score aria-label="下属终止中的挂留音"></figure>
+        </div>
+        <p>若想把这个题材写得更俏皮，可把钟铃音色留给句中较轻的起音。续段也可以短暂移到附近的小调和声区域，再听终止是否仍把整段带回预期的主音。</p>
+      </section>
+
+      <section aria-labelledby="scoring-shared-time">
+        <h2 id="scoring-shared-time">大七和弦与节奏型重复 · 共度时光</h2>
+        <p>B♭ 大调可先用 B♭maj7 确认主和声，再接 E♭maj7。两个和弦都以大三和弦为底，额外增加一个大七度音，因此保留大调框架的明亮，长音同时添了一层柔和的摩擦。这里若也改为下属和弦开头，便会失去「共同经历已安稳存在」的一层支点。</p>
+        <table class="lesson-table">
+          <caption>两句旋律共用的起音型（每句两拍）</caption>
+          <thead><tr><th scope="col">声部材料</th><th scope="col">第 1 拍</th><th scope="col">第 2 拍</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">B♭maj7 上</th><td>D–F，两个八分音符</td><td>A，四分音符</td></tr>
+            <tr><th scope="row">E♭maj7 上</th><td>B♭–G，两个八分音符</td><td>D，四分音符</td></tr>
+          </tbody>
+        </table>
+        <p>两个音型的音程和方向不同，起音仍在每句同一处。以 ♩＝100 左右的中速重复时，短短长本身就可以成为辨识线索。这样能在换和弦、拉开音区时保存一个共同的节奏轮廓。</p>
+      </section>
+
+      <section aria-labelledby="scoring-coast">
+        <h2 id="scoring-coast">低音细分与和弦逐级上行 · 海滨公路</h2>
+        <p>奔跑感可放在低处。让低音用八分音符和少量十六分音符连续运动，旋律用四分、二分音符跨过这些起音，则前进感和开阔感能同时存在。在 G 大调中，开头用 Gmaj7–Am7–Bm7，让根音 G–A–B 逐级上行。由 I 级出发给出支点，后两步把期待向上带。拉丁打击乐音色可继续补充细分。</p>
+        <div class="music-demo" id="scoring-driving-bass">
+          <div class="music-demo-toolbar">
+            <h3>同一旋律下疏密两种低音</h3>
+            <label>低音密度
+              <select>
+              <option value="moving">密集运动</option>
+              <option value="open">长音支撑</option>
+              </select>
+            </label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">低音反复起音并穿过拍间，主旋律和 G–A–B 的根音方向保持。</p>
+          <figure data-scoring-score aria-label="同一旋律下疏密两种低音"></figure>
+        </div>
+        <p>推进方向取决于和弦根音与低音的实际走向，速度只改变它们经过的快慢。要保留宽阔感，可以把持续较久的高声部留给关键音，避免伴奏的细分快速传遍各个声部。</p>
+        <p>根音上行完成后，可以让和声转弯。Bm7–E7(♭9)–Am7 中，E7 的 G♯ 进入 A，降九音 F 可回到 E。若再走 Cm7–F9–Gmaj7，低音由 F 上行到 G，内声 E♭、C 分别下行到 D、B。相同的快速织体能贯穿这两次转弯，结尾再落回开头的 G 大调。</p>
+      </section>
+
+      <section aria-labelledby="scoring-quarrel">
+        <h2 id="scoring-quarrel">减和弦交替与最高声部半音连接 · 争执</h2>
+        <p>以 A 为根音，Am 的 A–C–E 含纯五度，Adim 的 A–C–E♭ 含减五度。每两拍在这两个和弦之间切换，低音和三音可以保持，最高一音 E–E♭ 的细小变化反而格外清晰。在更长的句子里，可加 G♯dim–E7，再从 E7 换到含降九、降十三的属和弦。最后如何释放这些张力，取决于上声部如何接入下一和弦。</p>
+        <div class="music-demo" id="scoring-diminished-tension">
+          <div class="music-demo-toolbar">
+            <h3>减和弦与最高声部的半音进行</h3>
+            <label>和弦写法
+              <select>
+              <option value="diminished">Am 与 Adim 交替</option>
+              <option value="constant">保留 Am</option>
+              </select>
+            </label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">Am 到 Adim 时只降五音，上声部围绕 E 产生半音摆动。</p>
+          <figure data-scoring-score aria-label="减和弦与最高声部的半音进行"></figure>
+        </div>
+        <p>如果末尾继续保持 A 低音，上层还可沿 C–B–B♭–A 逐步收拢。固定底部与持续下沉的顶音形成两个方向不同的层次。在这个写法中，顶音的连续性把一串色彩和弦连成一句话。</p>
+      </section>
+
+      <section aria-labelledby="scoring-love-at-first">
+        <h2 id="scoring-love-at-first">分解和弦的跳跃与持续的色彩 · 一见钟情</h2>
+        <p>可从九和弦中选三、七、九音，按「跳高、折返」组织成一组八分或十六分音型。例如 Em9 取 G–D–F♯，Cmaj9 取 E–B–D，Am9 取 C–G–B，九音每次都位于较高的位置。和弦变了，节奏和跳跃的形状仍可重复，音响重心随着 E–C–A 逐步下降。</p>
+        <div class="music-demo" id="scoring-arpeggio-leap">
+          <div class="music-demo-toolbar">
+            <h3>分解和弦的跳跃与大七和弦</h3>
+            <label>写法
+              <select>
+              <option value="leaps">跳跃式分解</option>
+              <option value="held">更早铺开大七和弦</option>
+              </select>
+            </label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">每小节将和弦里的音拉开、折返，随后进入持续的大七和弦。</p>
+          <figure data-scoring-score aria-label="分解和弦的跳跃与大七和弦"></figure>
+        </div>
+        <p>前半的连续分解和弦制造明显的推动，后半可以改成长时值的大七和弦，让画面停下来。若想给后续保留空间，可以用 Emaj7–Dmaj7–D♭maj7 收尾，根音先下行全音，再下行半音。三个和弦的三音分别是 G♯、F♯、F，也能在同一声部顺着根音的幅度一起下移。节奏已经停住，和声仍落在原中心之外。</p>
+        <p>组与组之间的落差也可以通过排列控制。谱例里，Em9 的音型先向上到 F♯5，再折回 D5，换 Cmaj9 时从 E4 重新起步。D5 到 E4 相隔小七度。若把后一组整体升高八度，首音变成 E5，接缝改为上行大二度，和弦用音也仍属于 Cmaj9。</p>
+      </section>
+
+      <section aria-labelledby="scoring-park">
+        <h2 id="scoring-park">和弦顶音动机与切分 · 公园散步</h2>
+        <p>伴奏和弦的最高音称为顶音。它可以串成一条线，即使上方还有独立主旋律，伴奏内部仍能保有这个动机。以 E♭–D–C–D 为目标，B♭sus4、B♭、F/B♭、B♭ 可以依次各给出一个顶音。下一次把低音改成 G，原来的 B♭ 与 D 可成为 Gm 的三音和五音。E♭、C 分别在这个低音上形成小六度和纯四度，可用来装饰两个较稳定的落点。两次的顶音都走 E♭–D–C–D，低层已经换了色彩。编配顺序可以倒过来：先找顶音，再补内声部与低音。</p>
+        <p>以八分音符细分一拍时，后半拍的起点常称反拍。运用切分时，可把重音移到弱位，也可把弱位开始的音延长进后面的强位。进行曲的伴奏和弦也常落在反拍，但可以只占半拍，让每个正拍上的低音继续承担重心。在下面的对照中，低音支撑仍落在清楚的正拍，和弦顶音因提前与延长显得更活跃。正拍保持可辨时，这种变化和稳定的步行脉搏能同时听见。</p>
+        <div class="music-demo" id="scoring-park-syncopation">
+          <div class="music-demo-toolbar">
+            <h3>步行脉搏上的正拍与切分</h3>
+            <label>伴奏重心
+              <select>
+              <option value="sync">反拍切分</option>
+              <option value="straight">正拍起音</option>
+              </select>
+            </label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">和弦从第 1 拍后半发音，延续越过第 2 拍的拍头，低音保持正拍。</p>
+          <figure data-scoring-score aria-label="步行脉搏上的正拍与切分"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="scoring-breakbeats">
+        <h2 id="scoring-breakbeats">碎拍循环与配器层次</h2>
+        <p>碎拍（breakbeat）可以作为创作起点。鼓组循环先建立可辨认的切分、音头和重音，再决定贝斯在哪里合击、在哪里留空。鼓的种类也会改变场景：例如把稳定的四拍底层保留，在其空隙加入塔布拉鼓或金贝鼓的有辨识度的击奏型。音色的文化联想来自具体的演奏和语境。</p>
+        <p>例如循环 A 让底鼓落在第 1 拍和第 3 拍后半，小鼓仍在第 2、4 拍。循环 B 只在第 2、4 拍的后半加两下较轻的手鼓。叠加时，两组的主要起音互相留出空间。贝斯与第 1 拍的底鼓一起发声，并持续经过第 3 拍后半。第二下底鼓响起时，原来的贝斯音仍在延续。</p>
+        <figure class="arrangement-example">
+          <figcaption><strong>同一小节内的鼓组起音与贝斯延续</strong></figcaption>
+          <div id="scoring-breakbeat-grid"></div>
+        </figure>
+        <table class="lesson-table">
+          <caption>循环的两种组织方式</caption>
+          <thead><tr><th scope="col">安排</th><th scope="col">四小节中的分工</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">段落替换</th><td>前四小节反复循环 A，到下一组换为 B，便于划分段落。</td></tr>
+            <tr><th scope="row">局部叠加</th><td>四小节都保留基本 A，后两节另叠 B，两个循环的重音分开。</td></tr>
+          </tbody>
+        </table>
+        <aside class="lesson-callout"><p><strong>同一情境可以从不同声部进入。</strong> 固定低音时，让和声或旋律承担变化。加快细分时，保留一条清楚的拍点。其余层保持稳定，改动本身就更容易被听见。</p></aside>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./composition-scoring-intro.html" rel="prev"><span>序章</span><strong>基本技巧</strong></a>
+        <a href="./composition-scoring-2.html" rel="next"><span>下一章</span><strong>依据节庆活动的情景作曲</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

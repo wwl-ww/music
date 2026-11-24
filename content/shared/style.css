@@ -246,7 +246,9 @@ h1 {
   display: block;
   width: 100%;
   height: auto;
-  background: var(--accent);
+  aspect-ratio: 480 / 558;
+  object-fit: contain;
+  background: var(--tint);
 }
 @media (min-width: 39rem) {
   .book-index { grid-template-columns: repeat(3, minmax(0, 1fr)); }

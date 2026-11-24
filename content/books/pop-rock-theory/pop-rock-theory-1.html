@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第 1 章 音阶的排列与音的走向｜图解流行摇滚音乐理论</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./pop-rock-theory-1.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解流行摇滚音乐理论</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">第 1 章</span> 音阶的排列与音的走向</h1>
+      <p class="intro">C 大调在钢琴上可以只用白键，在吉他上却要跨品、换弦。同一条音阶到了 D 大调还会出现两个升号。把位置换成音与音之间的距离，就能用同一套办法找音、移指型，再把零散的音接成一条低音线。</p>
+
+      <section aria-labelledby="rock-whole-semitone">
+        <h2 id="rock-whole-semitone">半音、全音与两组四音</h2>
+        <p>钢琴上，两黑键组左边的白键是 C。由 C 开始顺弹白键，得到 C、D、E、F、G、A、B，再到高一个八度的 C。八度内有七种白键音和五种黑键音，高处的 C 重复了起点的音名。固定唱名里的 Do、Re、Mi、Fa、Sol、La、Si 分别对应 C、D、E、F、G、A、B。</p>
+        <p>两个紧邻的琴键相隔<strong>半音</strong>，计入黑键。C 和 D 之间隔着一个黑键，所以是两个半音，也就是<strong>全音</strong>。E–F 和 B–C 中间没有黑键，相隔半音。把音阶分成 C–D–E–F 与 G–A–B–C，就能看到两组的内部距离相同。</p>
+        <table class="lesson-table">
+          <caption>大调音阶的两组四音</caption>
+          <thead><tr><th scope="col">音阶</th><th scope="col">第 1–4 级</th><th scope="col">两组之间</th><th scope="col">第 5–8 级</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">C 大调</th><td>C–D–E–F</td><td>F–G</td><td>G–A–B–C</td></tr>
+            <tr><th scope="row">D 大调</th><td>D–E–F♯–G</td><td>G–A</td><td>A–B–C♯–D</td></tr>
+            <tr><th scope="row">相邻音距</th><td>全、全、半</td><td>全</td><td>全、全、半</td></tr>
+          </tbody>
+        </table>
+        <p>从 D 排白键时，D–E 是全音，但 E–F 只有半音。把 F 提高为 F♯，E–F♯ 和 F♯–G 就分别成为全音、半音。上方四音同理，把 C 升为 C♯。两条大调音阶的键位和音高不同，相邻音距相同。</p>
+        <div class="programmatic-score" id="rock-major-pattern" role="group" aria-labelledby="rock-major-pattern-title">
+          <div class="score-toolbar">
+            <h3 id="rock-major-pattern-title">同一大调结构在 C 与 D 上展开</h3>
+            <form class="score-choices">
+              <fieldset><legend>主音</legend>
+                <div class="score-segments">
+                  <label><input type="radio" name="tonic" value="C" checked><span>C</span></label>
+                  <label><input type="radio" name="tonic" value="D"><span>D</span></label>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <p class="music-demo-cue" data-generated-description aria-live="polite"></p>
+          <figure data-generated-score></figure>
+          <figure class="keyboard-example"><figcaption>音阶键位</figcaption><div data-generated-piano></div></figure>
+        </div>
+
+        <h3 id="rock-fret-basics">一品一个半音</h3>
+        <p>吉他、贝斯和尤克里里沿同一条弦向高品移动一格，音高上升半音。空弦记为第 0 品。两种大调四音组都从组首数第 0、2、4、5 个半音，因此能用相同的品距来弹。换弦时起点由空弦音决定。标准吉他和四弦贝斯有若干相同的<strong>音名</strong>位置，实际音高通常相差八度。</p>
+        <div class="music-demo" id="rock-four-note-fretboard">
+          <div class="music-demo-toolbar"><h4>同一四音结构在三种指板上的位置</h4><div class="score-choice-buttons" data-fretboard-choices aria-label="选择乐器"></div></div>
+          <figure data-fretboard-figure></figure>
+          <p class="music-demo-cue" data-fretboard-description aria-live="polite">吉他在第 5 弦第 3 品和第 4 弦第 5 品分别起奏 C 和 G。</p>
+        </div>
+        <p>同一个实际音高也可在一件乐器上有多个位置。标准吉他的第 5 弦第 5 品和第 4 弦空弦都是 D3，二者之间是<strong>同度</strong>。第 5 弦第 3 品 C3 到第 2 弦第 1 品 C4 则隔了<strong>八度</strong>。</p>
+
+        <h3 id="rock-accidental-names">升降号与等音</h3>
+        <p>升号 ♯ 使音高升半音，降号 ♭ 使音高降半音。在十二平均律的钢琴和吉他上，F♯ 与 G♭ 是同一键或同一弦上的同一品位。F♯ 以 F 为基准，G♭ 以 G 为基准，写法反映音在音阶或和弦中的身份。白键也能用升降号来写，例如 E♯ 与 F 等音。</p>
+        <figure class="notation-sample">
+          <figcaption>同一音高的 F♯ 与 G♭</figcaption>
+          <svg class="inline-staff inline-staff-wide" viewBox="0 0 83 45" role="img" aria-label="高音谱表上，F 升半音和 G 降半音落在不同的谱位。">
+            <path class="inline-staff-lines" d="M1 8H82 M1 13H82 M1 18H82 M1 23H82 M1 28H82"/>
+            <text x="5" y="23">&#xE050;</text>
+            <text x="26" y="25.5">&#xE262;</text><text x="36" y="25.5">&#xE0A2;</text>
+            <text x="58" y="23">&#xE260;</text><text x="68" y="23">&#xE0A2;</text>
+          </svg>
+        </figure>
+        <table class="lesson-table">
+          <caption>相邻半音和等音的记法</caption>
+          <thead><tr><th scope="col">起点与变化</th><th scope="col">记法</th><th scope="col">指板位置示例</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">F 上升半音</th><td>F♯</td><td>吉他第 6 弦第 1 品 → 第 2 品</td></tr>
+            <tr><th scope="row">G 下降半音</th><td>G♭</td><td>吉他第 6 弦第 3 品 → 第 2 品</td></tr>
+            <tr><th scope="row">B 下降半音</th><td>B♭</td><td>吉他第 5 弦第 2 品 → 第 1 品</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="rock-degrees">
+        <h2 id="rock-degrees">音级与指型的平移</h2>
+        <p>音名说明具体是哪一个音，<strong>音级</strong>说明它在调里的位置。D 在 C 大调是第 2 级，到了 D 大调就是第 1 级。第 3 级从主音数到第三个字母，C 大调是 E，D 大调是 F♯。两者距各自的主音都是四个半音。</p>
+        <p>把吉他上一套没有空弦的指型整体右移两品，每一个音同时升高全音。C 大调第 1 级在第 5 弦第 3 品，D 大调第 1 级在同弦第 5 品。键盘上的 C 与 D 大调虽然保持相同音距，黑白键的分布让手的形状随之改变。</p>
+        <div class="music-demo" id="rock-fret-shift">
+          <div class="music-demo-toolbar"><h3>同一指型横移两品</h3><div class="score-choice-buttons" data-fretboard-choices aria-label="选择大调指型"></div></div>
+          <figure data-fretboard-figure></figure>
+          <p class="music-demo-cue" data-fretboard-description aria-live="polite">从 C 大调换到 D 大调，每个音保留弦号并提高两品。</p>
+        </div>
+        <p>和弦符号里的数字从<strong>和弦根音</strong>计算。D6 的 6 是 D 上方的大六度 B，即使 D6 出现在别的调，B 仍是它的六音。通常的 D6 包含 D、F♯、A、B。B 上方的五音是 F♯，<strong>♭5</strong> 把它降低为 F。<strong>sus4</strong> 中的 4 则指四音代替三音。转位时最低音可以改变，根音仍是计算这些数字的起点。</p>
+        <details class="lesson-aside">
+          <summary>音级与数字和弦谱</summary>
+          <div class="lesson-aside-content"><ul>
+            <li>罗马数字通常用来标记和弦根音在调内的级数。C 大调的 Dm 在第 2 级，可写作 ii。</li>
+            <li>纳什维尔数字系统用阿拉伯数字写和弦的调内位置。在 C 大调把 C–F–G 写成 1–4–5，移到 D 大调就对应 D–G–A。记录小和弦等性质时须另加符号。</li>
+          </ul></div>
+        </details>
+      </section>
+
+      <section aria-labelledby="rock-melodic-motion">
+        <h2 id="rock-melodic-motion">级进、半音与四五度运动</h2>
+        <p>旋律沿音阶的相邻音走叫<strong>级进</strong>。C 大调中从 C 到 G 可以用 C–D–E–F–G，几个中间音让两个端点听起来连成一条线。半音也能填进相邻的调内音之间，例如 D♭ 夹在 D 与 C 之间，低音便能从 D–C 的全音下行变成两个半音。跳进拉开两个起音之间的距离，适合明确地交代和弦根音或刻画旋律轮廓。</p>
+        <p>按纯五度上行会得到 C–G–D–A–E–B–F♯。C 上方的 G 相距七个半音，C 下方的 G 相距五个半音。两个 G 相差八度，因此在低音线里可以选较顺手的高度，同时保留根音之间的关系。在 C 大调，G 到 C 有属回主的方向，G7 的 B 和 F 分别趋向 C 和 E。反过来 C 到 G 往往是从主位向外展开。同样的四、五度距离，方向和调内位置会改变它的作用。</p>
+        <figure id="rock-fret-fifths">
+          <figcaption>吉他上同一个 C 的两种 G 去向</figcaption>
+          <p>C3 在第 5 弦第 3 品，低处的 G2 在第 6 弦第 3 品，高处的 G3 在第 4 弦第 5 品。</p>
+        </figure>
+        <p>标准吉他或贝斯的相邻低音弦相隔纯四度。在这个范围里，同品转到低一根弦，就向下走五个半音。转向高一根弦再加两品，就向上走七个半音。吉他的第 3 弦和第 2 弦相差大三度，跨过这两弦要按调弦重新计算。高 G 调弦的尤克里里从第 3 弦空弦 C4 转到第 4 弦空弦 G4，实际是上行纯五度。</p>
+
+        <div class="music-demo" id="rock-bass-motion">
+          <div class="music-demo-toolbar"><h3>同一和弦下的跳进、级进与半音低音</h3><div class="score-choice-buttons" data-writing-choices aria-label="选择低音走向"></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">上声部固定为 C、G 两个和弦，低音由 C 落向 G。</p>
+          <figure data-writing-score aria-label="固定和弦下的三种低音线"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="rock-basic-vocabulary">
+        <h2 id="rock-basic-vocabulary">音高、音名、音程与音域</h2>
+        <table class="lesson-table">
+          <caption>定位单音与音的关系</caption>
+          <thead><tr><th scope="col">术语</th><th scope="col">含义</th><th scope="col">例子</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">音高</th><td>声音的高低。调音使同一音高的声音对齐。</td><td>C4 比 C3 高一个八度。</td></tr>
+            <tr><th scope="row">音名</th><td>用字母与升降号标记音。</td><td>C3 和 C4 都叫 C，数字区分所在八度。</td></tr>
+            <tr><th scope="row">音程</th><td>两个音之间的距离，由字母级数与半音数共同决定。</td><td>C–E 跨三个字母且相差四个半音，是大三度。C–E♭ 相差三个半音，是小三度。</td></tr>
+            <tr><th scope="row">音阶</th><td>选定的音按高低次序排成的音列。</td><td>自然大调有七个不同音，五声音阶有五个。</td></tr>
+            <tr><th scope="row">调</th><td>音乐围绕某个主音组织起来的关系，调名还要说明调式。</td><td>C 大调的主音是 C，A 小调的主音是 A。</td></tr>
+            <tr><th scope="row">音域</th><td>声部、乐器或乐句的最低音到最高音。</td><td>一段旋律最低 D4，最高 B4，音域就是 D4–B4。</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>

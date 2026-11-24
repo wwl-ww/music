@@ -2,10 +2,14 @@ import { mountScore } from './score.js';
 import { mountTimeline } from './timeline.js';
 import { mountScoreReader } from './score-reader.js';
 
-export function mountFormAnalysis(container, { score, sections, barCount = sections.at(-1).last, wholeLabel = '全曲' }) {
+export function mountFormAnalysis(container, {
+  score, sections, barCount = sections.at(-1).last, wholeLabel = '全曲',
+  initialSection = null, describeSection, onSelectionChange
+}) {
   const scoreFigure = container.querySelector('[data-analysis-score]');
   const whole = container.querySelector('[data-analysis-whole]');
   const jump = container.querySelector('[data-analysis-jump]');
+  const version = container.querySelector('[data-analysis-version]');
   const heading = container.querySelector('[data-analysis-section]');
   const summary = container.querySelector('[data-analysis-description]');
   const status = container.querySelector('[data-analysis-status]');
@@ -32,12 +36,13 @@ export function mountFormAnalysis(container, { score, sections, barCount = secti
     onSelect: select
   });
 
-  function describe(section) {
-    if (described === section) return;
+  function describe(section, refresh = false) {
+    if (!refresh && described === section) return;
     described = section;
     heading.textContent = section?.label ?? wholeLabel;
     const parts = [section?.material, section?.voice, section?.key, section?.role].filter(Boolean);
-    summary.textContent = section ? parts.join('。') : sections.map(({ label }) => label).join(' → ');
+    summary.textContent = describeSection?.(section)
+      ?? (section ? parts.join('。') : sections.map(({ label }) => label).join(' → '));
   }
 
   const player = mountScore(scoreFigure, {
@@ -76,16 +81,27 @@ export function mountFormAnalysis(container, { score, sections, barCount = secti
     describe(selection);
     const playback = selection?.playback ?? selection;
     player.selectBars(playback?.first, playback?.last, playback?.entry);
+    onSelectionChange?.(selection);
   }
 
   whole?.addEventListener('click', () => select(null));
   jump?.addEventListener('change', () => select(jump.value));
-  select(null);
+  select(initialSection);
 
   const title = container.querySelector('.music-demo-toolbar :is(h3, h4)');
   mountScoreReader(title, scoreFigure, {
-    controls: [scoreFigure.querySelector('.score-controls'), jump?.closest('label') ?? whole].filter(Boolean),
+    controls: [
+      scoreFigure.querySelector('.score-controls'),
+      version?.closest('label'),
+      jump?.closest('label') ?? whole
+    ].filter(Boolean),
     navigation: jump ? null : frame,
     preserveView: player.preserveSectionView
   });
+  return {
+    setNotes(notes) {
+      player.setNotes(notes);
+      describe(selection, true);
+    }
+  };
 }

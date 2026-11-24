@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>导论 从乐声到乐理｜图解流行摇滚音乐理论</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <script src="../../shared/themes.js"></script>
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script type="module" src="./pop-rock-theory-intro.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解流行摇滚音乐理论</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">导论</span> 从乐声到乐理</h1>
+      <p class="intro">一段旋律停在哪个音、低音往哪里去，会让乐句听上去像是结束了，或者还等着下一句。本课程从这些能在乐器上弹出、在耳朵里分辨的现象出发，再给它们命名。</p>
+      <section aria-labelledby="rock-intro-cadence">
+        <h2 id="rock-intro-cadence">同一句旋律的两个结尾</h2>
+        <p>这四小节的旋律最后都停在 C。第一版的低音从 G 走到 C，结束的和弦也是 C，旋律与低音回到同一个中心。第二版让低音从 G 去 A，最后的 C 变成 Am 的三音，旋律虽然一字未改，句尾却有了不同的去处。</p>
+        <div class="music-demo" id="rock-intro-ending">
+          <div class="music-demo-toolbar">
+            <h3>同一旋律的 C 与 Am 结尾</h3>
+            <div class="score-choice-buttons" data-writing-choices role="group" aria-label="句尾的和弦"></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite"></p>
+          <figure data-writing-score aria-label="同一四小节旋律在 C 和弦或 Am 和弦结尾"></figure>
+        </div>
+        <p>谱面上的和弦名能标出这处变化。用耳朵听记时，最低声部的 G→C 或 G→A 也能提供线索。第 3 章会解释 G7 里的 B 和 F 怎样牵动句尾，第 4 章继续分辨和弦名称与实际低音。</p>
+      </section>
+      <section aria-labelledby="rock-intro-string">
+        <h2 id="rock-intro-string">弦长、八度和纯五度</h2>
+        <p>设琴弦张力和单位长度的质量保持相同，频率与有效振动的弦长成反比。同一根弦取一半长，频率变成两倍，即高一个八度。取三分之二长，频率变为原先的三比二，即高一个纯五度。以 C 为起点，这两种缩短分别得到高音 C 和 G。</p>
+        <table class="lesson-table">
+          <caption>同一琴弦的有效长度与音高</caption>
+          <thead><tr><th scope="col">弦长比例</th><th scope="col">频率比例</th><th scope="col">从 C 得到的音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">原长</th><td>1</td><td>C</td></tr>
+            <tr><th scope="row"><span class="fraction" aria-label="二分之一"><span>1</span><span>2</span></span></th><td>2</td><td>高八度 C</td></tr>
+            <tr><th scope="row"><span class="fraction" aria-label="三分之二"><span>2</span><span>3</span></span></th><td><span class="fraction" aria-label="二分之三"><span>3</span><span>2</span></span></td><td>高五度 G</td></tr>
+          </tbody>
+        </table>
+        <p>沿五度反复寻找音名，就会经过 C、G、D、A 等音。十二个纯五度比七个纯八度略宽。现代键盘和标准品位吉他通常按十二平均律安排，十二个平均律五度才恰好等于七个八度，因此能在不同调上复用相同的半音结构。</p>
+      </section>
+      <section aria-labelledby="rock-intro-route">
+        <h2 id="rock-intro-route">课程路径</h2>
+        <ol>
+          <li><a href="./pop-rock-theory-1.html">音阶的排列与音的走向</a>。从琴键和品位找到半音、全音、大调模板与常见低音走向。</li>
+          <li><a href="./pop-rock-theory-2.html">调、调号与移调</a>。区分主音、调号和一段音乐整体移到新高度。</li>
+          <li><a href="./pop-rock-theory-3.html">和弦的构成与调内和弦</a>与<a href="./pop-rock-theory-4.html">和弦进行与低音线条</a>。从和弦符号推导用音，听低音、内声和句尾如何连接。</li>
+          <li><a href="./pop-rock-theory-5.html">五声、蓝调与其他音阶</a>与<a href="./pop-rock-theory-6.html">作曲中的旋律与和声</a>。把同一组音放进不同伴奏，再把短旋律发展成段落。</li>
+        </ol>
+      </section>
+    </main>
+  </body>
+</html>

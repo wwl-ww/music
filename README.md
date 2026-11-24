@@ -1,6 +1,6 @@
 # 乐理教程
 
-这个项目把《基本乐理教程》《和声学基础教程》《复调音乐基础教程》《配器法基础教程》《曲式学基础教程》《歌曲写作教程》和《图解编曲入门》改编成中文网页教程。正文负责讲清概念、规则和例外。谱面、图表和声音用于解释具体知识点。
+这个项目把基本乐理、和声、复调、配器、曲式、歌曲写作、作曲与编曲教材改编成中文网页教程。正文负责讲清概念、规则和例外。谱面、图表和声音用于解释具体知识点。
 
 ## 运行课程网页
 
@@ -26,6 +26,9 @@ npm run dev
 | `content/books/songwriting/` | 《歌曲写作教程》章节、词曲逐字对齐谱与歌曲结构分析 |
 | `content/books/form-analysis/` | 《曲式学基础教程》章节与曲式分析谱 |
 | `content/books/arrangement/` | 《图解编曲入门》导论、三篇正文与制作流程 |
+| `content/books/composition-scoring/` | 《图解作曲配乐》基本技巧、40 个情境与 10 项延伸技巧 |
+| `content/books/pro-composition/` | 《图解 PRO 作曲法》导论、五首成曲案例与技巧索引 |
+| `content/books/pop-techniques/` | 《POP金曲里技》八章、程序谱与制作试听 |
 | `content/shared/` | 共用的排版、主题、谱例组件与钢琴音源 |
 
 ## 课程
@@ -247,13 +250,60 @@ npm run dev
 | [第三篇 流行乐团合奏](./content/books/arrangement/arrangement-3.html) | 131–173 | 132–174 |
 | [附录 编曲构思与制作流程](./content/books/arrangement/arrangement-3-appendix.html) | 174–177 | 175–178 |
 
+### 图解作曲配乐
+
+| 章节 | 纸页 | PDF 页 |
+| --- | ---: | ---: |
+| [序章 基本技巧](./content/books/composition-scoring/composition-scoring-intro.html) | 11–20 | 12–21 |
+| [第一章 依据恋爱的意象作曲](./content/books/composition-scoring/composition-scoring-1.html) | 21–42 | 22–43 |
+| [第二章 依据节庆活动的情景作曲](./content/books/composition-scoring/composition-scoring-2.html) | 43–64 | 44–65 |
+| [第三章 依据日常生活的情景作曲](./content/books/composition-scoring/composition-scoring-3.html) | 65–86 | 66–87 |
+| [第四章 依据电玩或动漫世界的意象作曲](./content/books/composition-scoring/composition-scoring-4.html) | 87–98 | 88–99 |
+| [第五章 依据季节的意象作曲](./content/books/composition-scoring/composition-scoring-5.html) | 99–110 | 100–111 |
+| [终章 延伸技巧](./content/books/composition-scoring/composition-scoring-techniques.html) | 111–141 | 112–142 |
+
+情境按作曲决定组织。调式、速度、织体或和声替换用原创短谱对照，其余记法按需要用文本内五线谱、编曲网格和表格说明。
+
 课程用短句示范鼓、贝斯、吉他与钢琴的编写，以及主副旋律和合奏重心的变化。原书教材曲的分析保留编配手法和听辨目标，网页另配便于比较的短谱。
+
+[八小节编曲案例](./content/books/arrangement/arrangement-case.html)贯穿导论、三篇正文和制作流程。四个版本共用主旋律与小节结构，可按片段比较节拍骨架、答句与过门、共同重音和背景让位。
+
+### 图解 PRO 作曲法
+
+| 课程 | 印刷页 | PDF 页 |
+| --- | ---: | ---: |
+| [导论 从构思到成曲](./content/books/pro-composition/pro-composition-intro.html) | 6–15 | 7–16 |
+| [第一篇 抒情 Ballade](./content/books/pro-composition/pro-composition-1.html) | 16–43 | 17–44 |
+| [第二篇 甜美的 Bossa Nova](./content/books/pro-composition/pro-composition-2.html) | 44–77 | 45–78 |
+| [第三篇 色彩鲜明的 POP](./content/books/pro-composition/pro-composition-3.html) | 78–105 | 79–106 |
+| [第四篇 未来感电音 POP](./content/books/pro-composition/pro-composition-4.html) | 106–139 | 107–140 |
+| [第五篇 轻快而感伤的 POP](./content/books/pro-composition/pro-composition-5.html) | 140–171 | 141–172 |
+| [附录 音乐技巧索引](./content/books/pro-composition/pro-composition-techniques.html) | 172–173 | 173–174 |
+
+每篇用一首原创歌曲贯穿曲式、旋律、配词、器乐连接与和声修订。成曲沿用段落分析谱，支持全曲与分段试听。
+
+### POP金曲里技
+
+| 课程 | 印刷页 | PDF 页 |
+| --- | ---: | ---: |
+| [第1章 作曲](./content/books/pop-techniques/pop-techniques-1.html) | 9–40 | 11–42 |
+| [第2章 编曲](./content/books/pop-techniques/pop-techniques-2.html) | 41–84 | 43–86 |
+| [第3章 作词与 Demo 歌词](./content/books/pop-techniques/pop-techniques-3.html) | 85–108 | 87–110 |
+| [第4章 Demo 录音与编辑](./content/books/pop-techniques/pop-techniques-4.html) | 109–122 | 111–124 |
+| [第5章 分轨文件与混音](./content/books/pop-techniques/pop-techniques-5.html) | 123–146 | 125–148 |
+| [第6章 母带后期制作](./content/books/pop-techniques/pop-techniques-6.html) | 147–166 | 149–168 |
+| [第7章 比稿](./content/books/pop-techniques/pop-techniques-7.html) | 167–190 | 169–192 |
+| [第8章 行动与心态](./content/books/pop-techniques/pop-techniques-8.html) | 191–209 | 193–211 |
+
+将原书的问题按草稿、编配、演唱录音、混音、母带和交付的顺序组织。谱例、歌词和音频均为教学示范素材，制作参数和交付流程注明各自的适用条件。
 
 ## 预制格式库
 
 课程中的可调谱例集中列在[程序谱目录](./content/programmatic-scores.html)，每项链接到原章的谱面。
 
 章节页面引入 `content/shared/formats/formats.css`，在 `style.css` 里统一管理颜色和字体。各章填写谱例数据、时间轴事件或表格内容。[格式样板页](./content/format-library.html)演示这些共用组件。
+
+[逐小节和声修订](./content/books/pro-composition/pro-composition-4.html#pro-chord-revision-table)在 `lesson-table` 上加 `chord-revision-table`。两行放草稿和修订，列对齐小节，单元格标出换和弦的拍位和跨小节延续，修订行高亮实际改动。段落切换会同步更新表格和同一个播放器。
 
 ### 阅读尺寸与验收
 
@@ -299,6 +349,16 @@ mountScore(document.querySelector('#example'), {
 传入 `beats`（总拍数）、`beatsPerBar`（每小节拍数）、`subdivisions`（每拍格数）、`label` 和 `rows`。每行用 `label` 标明鼓件或音高，`events` 里的 `step` 从 0 开始计，`length` 按格计，`accent` 标出重音。切换版本时调用 `update(rows)`。
 
 需要试听时可复用 `mountScore`，以 `notationVisible: false` 仅显示播放键。用 `onPlaybackPosition(tick)` 把 MIDI 时钟换算成格号，再调用网格的 `markStep(step)`。停止时回调提供 `null`，清除播放位置。
+
+### 弦乐器指板图
+
+[弦乐器指板图样板](./content/format-library.html#fretboard-samples)用于音阶指型、移调和弦上音高定位。图示沿用站点主题和可用键盘滚动的 `scroll-frame`。同一弦可以标多个品位，适合呈现先后演奏的音。一次同时按奏的和弦声位使用吉他和弦指板。
+
+`mountFretboard(figure, options)` 的 `tuning` 按第 1 弦起排列，默认使用吉他标准调弦。用 `startFret`、`endFret` 指定显示区间，`0` 表示空弦。每个 `markers` 条目含数值 `string`、`fret` 与 `label`，可设 `variant` 为 `root`（方框主音）、`accent` 或 `secondary`。可用 `connections` 的 `{ from: { string, fret }, to: { string, fret } }` 标移动方向。传入新数据可更新同一张图。
+
+### 吉他和弦指板
+
+[吉他和弦指板样板](./content/format-library.html#guitar-chord-samples)复用站点主题，用于并排比较把位或和弦声位。`mountGuitarChordDiagrams` 接收图名 `label`、由第 6 弦至第 1 弦排列的 `positions` 与可选的 `degrees`。品位填数字，`0` 为空弦，`null` 为不弹。较高把位用 `firstFret` 指定第一行的品号。横按用 `barre` 标数值 `fret`、`fromString` 与 `toString`。读屏描述由同一组弦位数据生成。
 
 ### 曲式分析谱与声部关系图
 

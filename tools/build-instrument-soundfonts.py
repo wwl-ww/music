@@ -1,8 +1,9 @@
 """Pack sampled guitars and bowed strings into the project's two SF3 banks.
 
-The input directory contains the extracted Meta guitar releases under steel/ and
-nylon/, the small FreePats clean electric release under clean/, and the VSCO
-WAV folders under strings/. Only preset 0 is read from piano-and-strings.sf3.
+The input directory contains the extracted Meta releases under steel/ and nylon/,
+the FreePats bridge-pickup samples under electric/{clean,jazz,dist1,dist2}/,
+and the VSCO WAV folders under strings/. Only preset 0 is read from
+piano-and-strings.sf3.
 The score player can use the output directly with alphaTab's SoundFont loader.
 """
 
@@ -110,14 +111,8 @@ def encode_sample(samples):
     return destination.getvalue()
 
 
-def guitar_sample(path, level, amp=None):
+def guitar_sample(path, level):
     samples = snip_attack(unpack_samples(path), 0.002)[:round(2.65 * SAMPLE_RATE)]
-    if amp:
-        highpass = signal.butter(2, 100, 'highpass', fs=SAMPLE_RATE, output='sos')
-        samples = signal.sosfilt(highpass, samples)
-        samples = np.tanh(samples * (3.5 if amp == 'overdrive' else 9))
-        speaker = signal.butter(2, 3600 if amp == 'overdrive' else 2950, fs=SAMPLE_RATE, output='sos')
-        samples = signal.sosfilt(speaker, samples)
     samples *= level / max(0.015, np.max(np.abs(samples)))
     samples[:32] *= np.linspace(0, 1, 32)
     tail = min(len(samples) // 4, round(0.18 * SAMPLE_RATE))
@@ -177,6 +172,19 @@ def bow_sources(folder, solo=False):
     return notes
 
 
+def electric_sources(folder):
+    notes = defaultdict(dict)
+    for path in sorted(folder.glob('*.flac')):
+        match = re.fullmatch(r'([A-G])(#?)(\d+)_s[1-6](_soft)?_\d+\.flac', path.name)
+        if match:
+            name, accidental, octave, soft = match.groups()
+            key = key_number(name, accidental, octave)
+            notes[key].setdefault(1 if soft else 2, path)
+    if len(notes) < 12:
+        raise ValueError(f'Expected multisampled FreePats bridge recordings in {folder}')
+    return notes
+
+
 class Instruments:
     def __init__(self, samples, tables):
         self.samples = bytearray(samples)
@@ -190,8 +198,8 @@ class Instruments:
         if style == 'bow':
             data, start_loop, end_loop, correction = bow_sample(path, key, 0.105 if layer == 1 else 0.145)
         else:
-            level = (0.39, 0.52, 0.64)[layer - 1]
-            data = guitar_sample(path, level, amp=style)
+            levels = (0.31, 0.48) if style == 'electric' else (0.39, 0.52, 0.64)
+            data = guitar_sample(path, levels[layer - 1])
             start_loop = end_loop = correction = 0
         start = len(self.samples)
         self.samples.extend(data)
@@ -201,7 +209,7 @@ class Instruments:
         self.sources[identifier] = index
         return index
 
-    def add(self, program, name, notes, style=None, slow=False, cutoff=None):
+    def add(self, program, name, notes, style=None, slow=False):
         if not notes:
             raise ValueError(f'No samples found for {name}')
         t = self.tables
@@ -212,6 +220,8 @@ class Instruments:
         t[b'inst'].append((label, len(t[b'ibag'])))
         is_bow = style == 'bow'
         bounds = {1: (0, 60 if is_bow else 48), 2: (61, 127) if is_bow else (49, 96), 3: (97, 127)}
+        if style == 'electric':
+            bounds = {1: (0, 92), 2: (93, 127)}
         for key, low, high in pitch_zones(sorted(notes)):
             layers = notes[key]
             for layer, path in sorted(layers.items()):
@@ -224,8 +234,6 @@ class Instruments:
                 ]
                 if is_bow:
                     effects.append((54, 1))
-                if cutoff is not None:
-                    effects.append((8, cutoff))
                 effects.append((53, sample))
                 t[b'ibag'].append((len(t[b'igen']), 0))
                 t[b'igen'].extend(effects)
@@ -288,6 +296,7 @@ def take_piano(samples, tables):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('sources', type=Path)
+    parser.add_argument('--ensemble-only', action='store_true', help='Rebuild only the ensemble SoundFont')
     args = parser.parse_args()
     sources = args.sources
     repo = Path(__file__).resolve().parents[1]
@@ -314,7 +323,8 @@ def main():
         (42, 'Bowed Cello', cello), (43, 'Bowed Contrabass', bass),
     ]:
         bank.add(program, name, notes, style='bow')
-    bank.write(piano_path, 'Kawai and VSCO Bowed Strings', piano_info)
+    if not args.ensemble_only:
+        bank.write(piano_path, 'Kawai and VSCO Bowed Strings', piano_info)
 
     section = {key: notes for key, notes in cello.items() if key < 55}
     section.update({key: notes for key, notes in viola.items() if 55 <= key < 67})
@@ -325,14 +335,13 @@ def main():
     for program, name, folder in [(24, 'Nylon Acoustic', 'nylon'), (25, 'Steel Acoustic', 'steel')]:
         notes = {key: layers for key, layers in meta_sources(sources / folder).items() if key in GUITAR_ROOTS}
         bank.add(program, name, notes)
-    electric = {}
-    for path in sorted((sources / 'clean').rglob('*.flac')):
-        match = re.match(r'([A-G])(#?)(\d+)_', path.name)
-        electric[key_number(*match.groups())] = {2: path}
-    bank.add(26, 'Jazz Electric Guitar', electric, cutoff=10250)
-    bank.add(27, 'Clean Electric Guitar', electric)
-    bank.add(29, 'Overdriven Guitar', electric, style='overdrive')
-    bank.add(30, 'Distorted Guitar', electric, style='distortion')
+    for program, name, folder in [
+        (26, 'Jazz Electric Guitar', 'jazz'),
+        (27, 'Clean Electric Guitar', 'clean'),
+        (29, 'Driven Guitar', 'dist2'),
+        (30, 'Distorted Guitar', 'dist1'),
+    ]:
+        bank.add(program, name, electric_sources(sources / 'electric' / folder), style='electric')
     bank.add_band(band_samples, band)
     bank.write(assets / 'ensemble-with-kawai.sf3', 'Kawai, sampled guitars and strings', band_info)
 

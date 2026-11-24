@@ -10,6 +10,7 @@ export function mountEnsembleStudy(id, variants, tempo = 88) {
   const select = demo.querySelector('select');
   const cue = demo.querySelector('.music-demo-cue');
   const figure = demo.querySelector('figure');
+  cue.setAttribute('aria-live', 'polite');
 
   function score() {
     const { detail, tracks } = variants[select.value];

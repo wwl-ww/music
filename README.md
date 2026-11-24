@@ -24,6 +24,7 @@ npm run dev
 | `content/books/harmony-lower/` | 《和声学基础教程 · 下》章节、四部和声谱例与参考 PDF |
 | `content/books/counterpoint/` | 《复调音乐基础教程》上下篇、全书目录与可调谱例 |
 | `content/books/orchestration/` | 《配器法基础教程》章节、总谱示意与音响对照 |
+| `content/books/chinese-orchestration/` | 《中国民族器乐配器教程》绪论、乐器法与配器法八章 |
 | `content/books/songwriting/` | 《歌曲写作教程》章节、词曲逐字对齐谱与歌曲结构分析 |
 | `content/books/form-analysis/` | 《曲式学基础教程》章节与曲式分析谱 |
 | `content/books/arrangement/` | 《图解编曲入门》导论、三篇正文与制作流程 |
@@ -188,6 +189,22 @@ npm run dev
 第七章按现代定音鼓实音写法和排钟的击音记法说明，调音范围选用一组踏板鼓实例。无固定音高试听沿用标准 MIDI 打击映射，`scoreTracks` 支持 `program: 'percussion'` 和指定谱线数 `staffLines`。[雅马哈定音鼓调音表](https://data.yamaha.com/files/download/other_assets/1/332701/Timpani_E_om_web.pdf) · [定音鼓记谱](https://www.vsl.co.at/academy/percussion/timpani) · [排钟记谱](https://www.vsl.co.at/academy/percussion/tubular-bells) · [木琴记谱](https://www.vsl.co.at/academy/percussion/xylophone)
 
 第八章用 `scoreTracks` 保留各乐器的独立音色，`notationOnly` 标记可见且静音的缩编谱，`playbackOnly` 标记只用于试听的乐器轨。
+
+### 中国民族器乐配器教程
+
+[全书课程目录](./content/books/chinese-orchestration/index.html)采用傅利民《中国民族器乐配器教程》的绪论与上下篇结构。下列页码对应本地扫描的印刷页与 PDF 文件页。曲例的编配机制使用原创短谱呈现。试听所用通用音色在各章内标为近似。
+
+| 章节 | 印刷页 | PDF 页 |
+| --- | --- | --- |
+| 绪论 | 1–9 | 12–20 |
+| 第一章 吹管乐器 | 13–34 | 24–45 |
+| 第二章 拉弦乐类 | 35–46 | 46–57 |
+| 第三章 弹拨乐类 | 47–78 | 58–89 |
+| 第四章 弦索乐类配器 | 81–91 | 92–102 |
+| 第五章 丝竹乐类配器 | 92–105 | 103–116 |
+| 第六章 吹打乐类配器 | 106–131 | 117–142 |
+| 第七章 锣鼓乐类配器 | 132–140 | 143–151 |
+| 第八章 现代民族管弦乐配器 | 141–162 | 152–173 |
 
 ### 曲式学基础教程
 
@@ -373,9 +390,9 @@ npm run dev
 
 可播放谱例使用本地音库 `content/shared/assets/piano-and-strings.sf3`。钢琴采用 Gonzalo 与 Roberto 录制的 FreePats Kawai 立式钢琴，使用单声道采样、轻奏与强奏两层力度以及原循环。弦乐使用 Versilian Studios 的 VSCO 2 Community Edition 单独小提琴、低音提琴，以及中提琴和大提琴组。每个声部按音域映射两层弓奏采样，并调整音头、循环、音准和释放。音源均为 CC0 1.0。[FreePats 钢琴](https://freepats.zenvoid.org/Piano/acoustic-grand-piano.html) · [VSCO 2 Community Edition](https://versilian-studios.com/vsco-community/)
 
-使用 SONiVOX 的合奏谱由共享播放器加载 `content/shared/assets/ensemble-with-kawai.sf3`。它包含相同的 Kawai 钢琴和小提琴、中提琴、大提琴、低音提琴，另有按音区映射的弦乐组和慢弦乐组。木吉他采用 Meta Open Sound 的钢弦与尼龙弦多力度采样。电吉他基于 CC0 的 FreePats FSBS 清音样本，过载与失真版本使用同一录音离线处理。其余音色来自 Sonic Network 的 SONiVOX，构建产物附有 `licenses/SONiVOX.txt`。[Meta Open Sound](https://github.com/facebookincubator/Meta-open-sound) · [FreePats 电吉他](https://freepats.zenvoid.org/ElectricGuitar/clean-electric-guitar.html)
+使用 SONiVOX 的合奏谱由共享播放器加载 `content/shared/assets/ensemble-with-kawai.sf3`。它包含相同的 Kawai 钢琴和小提琴、中提琴、大提琴、低音提琴，另有按音区映射的弦乐组和慢弦乐组。木吉他采用 Meta Open Sound 的钢弦与尼龙弦多力度采样。电吉他使用 FreePats FSBS 的爵士清音、清音和两套经音箱与效果链处理的录音，有轻拨与重拨录音的音区按力度映射。其余音色来自 Sonic Network 的 SONiVOX，构建产物附有 `licenses/SONiVOX.txt`。[Meta Open Sound](https://github.com/facebookincubator/Meta-open-sound) · [FreePats 清音](https://freepats.zenvoid.org/ElectricGuitar/clean-electric-guitar.html) · [FreePats 失真](https://freepats.zenvoid.org/ElectricGuitar/distorted-electric-guitar.html)
 
-生成音库使用 `tools/build-instrument-soundfonts.py`，需要 NumPy、SciPy 和 SoundFile，入参为已下载采样的目录。Meta 钢弦和尼龙弦的 OGG 发布包分别解到 `steel/`、`nylon/`。FSBS 小型桥拾音器版解到 `clean/`。VSCO 持续音 WAV 按小提琴独奏、各弦乐组和低音提琴分别放入脚本指定的 `strings/` 子目录。
+生成音库使用 `tools/build-instrument-soundfonts.py`，需要 NumPy、SciPy 和 SoundFile，入参为已下载采样的目录。Meta 钢弦和尼龙弦的 OGG 发布包分别解到 `steel/`、`nylon/`。FSBS 的桥拾音器 FLAC 分别放入 `electric/clean/`、`electric/jazz/`、`electric/dist1/`、`electric/dist2/`。VSCO 持续音 WAV 按小提琴独奏、各弦乐组和低音提琴分别放入脚本指定的 `strings/` 子目录。仅生成合奏音库可加 `--ensemble-only`。
 
 四部谱通过 `fourPartScore` 或 `labelledChordScore` 创建，固定三部伴奏加单旋律的谱例可用 `scoreWithAccompaniment`。播放器会设置 `data-score-type="four-part-harmony"`，默认用弦乐四重奏，读者可在谱面右上角切换为钢琴。弦乐模式将高音、次高音、次中音、低音分别分送到第一小提琴、第二小提琴、中提琴、大提琴。两种音色共用原谱的声部数据。
 
@@ -406,6 +423,8 @@ mountScore(document.querySelector('#example'), {
 ### 编曲网格
 
 [编曲网格样板](./content/format-library.html#arrangement-grid-samples)展示底鼓和贝斯的落点。横轴标拍点与细分，纵轴可标鼓件、音高或乐器。圆点表示起音，大点表示重音，色块的长度表示持续时间。独立示例使用 `mountPlayableArrangementGrid`，从网格事件生成音符，或传入原有的演奏谱。一页已有与网格对应的试听时，使用 `mountArrangementGrid`，把现有播放器的位置回调接到 `grid.markTick`。
+
+「锣鼓经对照谱」继承可播放编曲网格。口诀与分乐器的动作共用拍格。口诀行用 `notationOnly: true` 跳过自动播放轨生成，拍格的 `text` 显示口诀字或击法，`label` 写全称供读屏与悬停查看。分乐器行可使用同源事件生成的演奏谱。 [打溜子示例](./content/books/chinese-orchestration/chinese-orchestration-7.html#gong-syllable-score)
 
 传入 `beats`（总拍数）、`beatsPerBar`（每小节拍数）、`subdivisions`（每拍格数）、`label` 和 `rows`。每行用 `label` 标明鼓件或音高，`events` 里的 `step` 从 0 开始计，`length` 按格计，`accent` 标出重音。切换版本时调用 `update(rows)`。
 

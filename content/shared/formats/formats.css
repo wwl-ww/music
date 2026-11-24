@@ -74,7 +74,7 @@
 }
 .arrangement-grid-event[data-duration][data-accent] { box-shadow: inset 0 0 0 1px var(--ink); }
 .arrangement-grid[data-text-events] { min-width: calc(4.75rem + var(--arrangement-steps) * 1.25rem); }
-.arrangement-grid [data-notation-only] :is(th, td:not([data-current])) { background: var(--surface-soft, var(--sheet)); }
+.arrangement-grid [data-notation-only] :is(th, td:not([data-current])) { background: var(--tint); }
 .arrangement-grid-event[data-text] {
   display: grid;
   place-items: center;

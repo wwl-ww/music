@@ -71,6 +71,15 @@ export function mountArrangementGrid(frame, {
       if (step !== null) row.cells[step + 1]?.setAttribute('data-current', '');
     }
     markedStep = step;
+    if (step === null || !table.hasAttribute('data-text-events') || frame.scrollWidth <= frame.clientWidth) return;
+    const row = body.rows[0];
+    const current = row?.cells[step + 1];
+    if (!current) return;
+    const cell = current.getBoundingClientRect();
+    const firstBeatEdge = row.cells[0].getBoundingClientRect().right;
+    const frameEdge = frame.getBoundingClientRect().right;
+    if (cell.left < firstBeatEdge) frame.scrollLeft -= firstBeatEdge - cell.left;
+    else if (cell.right > frameEdge) frame.scrollLeft += cell.right - frameEdge;
   }
 
   function markTick(tick) {

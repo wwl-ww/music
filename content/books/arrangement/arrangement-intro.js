@@ -1,7 +1,8 @@
 import soundFontUrl from '@coderline/alphatab/soundfont/sonivox.sf3?url';
 import { mountArrangementGrid } from '../../shared/formats/arrangement-grid.js';
+import { mountPlayableArrangementGrid } from '../../shared/formats/arrangement-grid-playback.js';
 import { mountScoreWritingSteps } from '../../shared/formats/score-writing-steps.js';
-import { arrangementCaseScore, caseOpeningRows, caseTempo, ticksPerBeat } from './arrangement-case-music.js';
+import { arrangementCaseScore, caseOpeningRows, caseTempo } from './arrangement-case-music.js';
 
 const opening = document.getElementById('case-opening');
 const openingGrid = mountArrangementGrid(opening.querySelector('[data-case-grid]'), {
@@ -15,32 +16,32 @@ mountScoreWritingSteps(opening, {
   score: {
     tempo: caseTempo, soundFontUrl, notationVisible: false,
     onScoreLoaded(score) { openingGrid.update(caseOpeningRows(score, { includeMelody: true })); },
-    onPlaybackPosition(tick) { openingGrid.markStep(tick === null || tick >= 8 * ticksPerBeat ? null : Math.floor(tick / ticksPerBeat)); }
+    onPlaybackPosition: openingGrid.markTick
   }
 });
 
-mountArrangementGrid(document.getElementById('drum-chart'), {
+mountPlayableArrangementGrid(document.getElementById('drum-chart'), {
   label: '一小节鼓组对照表，四拍，每拍两格',
   subdivisions: 2,
   rows: [
-    { label: '踩镲', events: Array.from({ length: 8 }, (_, step) => ({ step })) },
-    { label: '小鼓', events: [{ step: 2, accent: true }, { step: 6, accent: true }] },
-    { label: '底鼓', events: [{ step: 0 }, { step: 4 }] }
+    { label: '踩镲', drum: 42, events: Array.from({ length: 8 }, (_, step) => ({ step, dynamic: 'p' })) },
+    { label: '小鼓', drum: 38, events: [{ step: 2, accent: true }, { step: 6, accent: true }] },
+    { label: '底鼓', drum: 36, events: [{ step: 0 }, { step: 4 }] }
   ]
 });
 
-mountArrangementGrid(document.getElementById('piano-roll'), {
+mountPlayableArrangementGrid(document.getElementById('piano-roll'), {
   label: '一小节钢琴卷帘图，四拍，每拍两格',
   subdivisions: 2,
   rows: [
-    { label: 'G4', events: [{ step: 4, length: 4 }] },
+    { label: 'G4', pitch: 'G4', events: [{ step: 4, length: 4 }] },
     { label: 'F♯4', events: [] },
     { label: 'F4', events: [] },
-    { label: 'E4', events: [{ step: 1, length: 2 }] },
+    { label: 'E4', pitch: 'E4', events: [{ step: 1, length: 2 }] },
     { label: 'D♯4', events: [] },
     { label: 'D4', events: [] },
     { label: 'C♯4', events: [] },
-    { label: 'C4', events: [{ step: 0, length: 1 }] }
+    { label: 'C4', pitch: 'C4', events: [{ step: 0, length: 1 }] }
   ]
 });
 

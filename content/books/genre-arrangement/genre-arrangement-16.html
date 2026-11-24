@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>巴西浩室｜图解乐风编曲入门</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./genre-arrangement-16.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解乐风编曲入门</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">乐风 10</span> 巴西浩室</h1>
+      <p class="intro">一层底鼓每拍固定落下，另一层原声鼓和打击乐做拍内交错。钢琴承担和声与切分，合成贝斯在复杂和弦中仍保留清楚的低音线。</p>
+
+      <section aria-labelledby="brazil-pulse">
+        <h2 id="brazil-pulse">四拍底鼓与巴西节奏层</h2>
+        <p>这一版以 120 BPM 为例，把稳定的浩室舞曲脉搏叠在有桑巴语汇的鼓组上。合成底鼓每拍敲一次，负责舞步的重心。原声低音鼓可用巴萨诺瓦鼓型的两倍速度，边击再做少量改变。吊镲持续打十六分，力度有轻重。每个部分占用不同的起音位置或音色，原声节奏即使很密，也仍能听见四拍底鼓。</p>
+        <figure class="arrangement-grid-frame">
+          <figcaption>四拍脉搏、原声鼓与跨拍的低音</figcaption>
+          <div data-brazil-grid></div>
+        </figure>
+        <div class="music-demo programmatic-score" id="genre-brazil-rhythm">
+          <div class="music-demo-toolbar"><h3>巴西节奏层与浩室脉搏</h3><label>节奏层 <select><option value="acoustic">原声鼓</option><option value="pulse">原声鼓＋四拍底鼓</option><option value="full">加入贝斯与钢琴</option></select></label></div>
+          <p class="music-demo-cue" aria-live="polite">原声底鼓与边击交替，吊镲提供十六分细分。</p>
+          <figure aria-label="巴西浩室三种节奏层的五线谱与试听"></figure>
+        </div>
+        <p>康加鼓、沙锤和三角铁提供短音色和细分。使用录好的两小节循环时，先找循环首拍并与底鼓对齐，再听接缝有无双重起音、消失的尾音或多出半拍。三条循环的重音可以互补，叠加后若重量总落在同一格，可先留下一条主循环。</p>
+      </section>
+      <section aria-labelledby="brazil-chromatic">
+        <h2 id="brazil-chromatic">共同音与半音下行低音</h2>
+        <p>D♭m7♭5 的 F♭、A𝄫、C♭ 与 E、G、B 等音。前三个上方音可以一起延到 Cmaj7；到 G/B 时只需把其中的 E 降到 D。</p>
+        <div id="brazil-chromatic-voice-staves" class="voice-leading-staves voice-leading-phrases" role="group" aria-label="共同音留住，上下半音分层">
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>共同音留住，上下半音分层</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 198 129" style="--voice-leading-width: 198px" role="img" aria-label="D♭m7♭5、Cmaj7、G/B。顶音 B4、B4、B4；内声 E4、E4、D4；低音 D♭3、C3、B2。G 也可一直留住，低音连降两个半音。">
+              <text class="voice-leading-chord-name" x="38" y="12">D♭m7♭5</text><text class="voice-leading-chord-name" x="100" y="12">Cmaj7</text><text class="voice-leading-chord-name" x="162" y="12">G/B</text>
+              <path class="inline-staff-lines" d="M5 25H193 M5 30H193 M5 35H193 M5 40H193 M5 45H193"/>
+              <text x="8" y="40">&#xE050;</text>
+              <path class="voice-leading-connector" d="M41 39Q70.5 47 96 39 M103 39Q132.5 47 158 39 M41 49Q70.5 57 96 49 M107 45L155 47.5 M151 45.1L155 47.5 151 49.9"/>
+              <text x="34" y="35">&#xE0A2;</text><text x="96" y="35">&#xE0A2;</text><text x="158" y="35">&#xE0A2;</text><text x="34" y="45">&#xE0A2;</text><text x="96" y="45">&#xE0A2;</text><text x="158" y="47.5">&#xE0A2;</text>
+              <text class="voice-leading-note-name" x="38" y="65.5">B·E</text><text class="voice-leading-note-name" x="100" y="65.5">B·E</text><text class="voice-leading-note-name" x="162" y="65.5">B·D</text>
+              <path class="inline-staff-lines" d="M5 83.5H193 M5 88.5H193 M5 93.5H193 M5 98.5H193 M5 103.5H193"/>
+              <text x="8" y="88.5">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M45 93.5L93 96 M89 93.6L93 96 89 98.4 M107 96L155 98.5 M151 96.1L155 98.5 151 100.9"/>
+              <text x="24" y="93.5">&#xE260;</text>
+              <text x="34" y="93.5">&#xE0A2;</text><text x="96" y="96">&#xE0A2;</text><text x="158" y="98.5">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="38" y="121.5">D♭</text><text class="voice-leading-note-name is-bass" x="100" y="121.5">C</text><text class="voice-leading-note-name is-bass" x="162" y="121.5">B</text>
+            </svg>
+            <p class="voice-leading-distance is-chromatic">G 也可一直留住，低音连降两个半音</p>
+          </figure>
+        </div>
+        <table class="lesson-table">
+          <caption>三种半音连接</caption>
+          <thead><tr><th scope="col">和弦</th><th scope="col">实际低音</th><th scope="col">连接依据</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">D♭m7♭5 → Cmaj7 → G/B</th><td>D♭–C–B</td><td>前两者可保持 E、G、B。最后一个和弦以三音 B 作低音。</td></tr>
+            <tr><th scope="row">Am7 → A♭aug → Gm9</th><td>A–A♭–G</td><td>前两者都含 C、E。A♭aug 的排列可把 E 移往 F，接 Gm9 的七音。</td></tr>
+            <tr><th scope="row">F♯m7♭5 → Fmaj7</th><td>F♯–F</td><td>上声部 A–C–E 可全部保留，C 分别是降五音与五音。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo programmatic-score" id="genre-brazil-shared-tones">
+          <div class="music-demo-toolbar"><h3>共同音与半音低音的两种连接</h3><label>和弦路线 <select><option value="tonic">D♭m7♭5 → Cmaj7</option><option value="subdominant">F♯m7♭5 → Fmaj7</option></select></label></div>
+          <p class="music-demo-cue" aria-live="polite">前两小节的上方共有音持续，低音下行半音，和弦性质随之改变。</p>
+          <figure aria-label="保持共同音的两种半音低音连接五线谱与试听"></figure>
+        </div>
+        <p>有旋律的段落先核对长音，确认它能保留为和弦音或预期的延伸音。前奏和间奏没有旋律需要照顾时，可把半音低音从 F♯连续拉到 D，再为每个落点选上部和弦。同一条下降线若每次都把上声部平移半音，移动会特别明显。保留共同音或让一个上声部反向走，会让声部连接更自然。</p>
+        <div class="music-demo programmatic-score" id="genre-brazil-arrangement">
+          <div class="music-demo-toolbar"><h3>同一旋律的巴西浩室编配</h3><label>编配 <select><option value="arranged">原声鼓与四拍底鼓</option><option value="base">基础稿</option><option value="melody">旋律</option></select></label></div>
+          <p class="music-demo-cue" aria-live="polite">开头的降 D 低音下行到 C，拍内的切分钢琴和长短低音在四拍底鼓上交错。</p>
+          <figure aria-label="巴西浩室编配五线谱与试听"></figure>
+        </div>
+      </section>
+      <section aria-labelledby="brazil-bass-piano">
+        <h2 id="brazil-bass-piano">长短低音与蒙图诺式钢琴</h2>
+        <p>贝斯主要用根音和五音。两拍组成一组，首音占附点八分，第二音从第一拍的最后一个十六分格提前进入，并连过第二拍的拍头。第二拍后半再次起音。在底鼓继续敲正拍的情况下，贝斯在第二、四拍的拍头持续，让切分能被听清楚。若遇到半减和弦，五音用该和弦的降五音，也可以先把低音固定在根音上。</p>
+        <p>钢琴音源需要有清楚的起音。谱例用后半拍的短音和下一正拍的上方排列组为反复音型，这是蒙图诺式的切分用法。重心在拍间交替，低声部仍可有规则地按拍出现。蒙图诺常见于古巴及受其影响的拉丁音乐，可以借用到这套混合编配中。使用时把不同和弦按同一节奏型重配，保留能连续的顶音。</p>
+      </section>
+      <section aria-labelledby="brazil-mix">
+        <h2 id="brazil-mix">原声质感、合成低音与混音</h2>
+        <p>原声低音提琴会强化拨弦和爵士感，电贝斯的起音更明确，合成贝斯更容易提供连续厚实的低频。此例使用合成贝斯作为舞曲底部，原声鼓与打击乐负责触感。单独判断合成底鼓和贝斯的音高区间、音尾长度，再在合奏里对齐。底鼓一落下就听不清贝斯时，可先缩短其中一层的尾部或调低重叠的低频。</p>
+        <p>四拍底鼓在中间保持稳定，原声鼓和打击乐要能分别辨认。钢琴保住切分起音，旋律留在节奏上方。检查两小节循环的接缝和相同低音在不同播放设备上的清晰度，可判断层叠是否仍有余量。</p>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a rel="prev" href="./genre-arrangement-15.html"><span>上一节</span><strong>节奏布鲁斯</strong></a>
+        <a rel="next" href="./genre-arrangement-summary.html"><span>下一节</span><strong>同一旋律的十种编配</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

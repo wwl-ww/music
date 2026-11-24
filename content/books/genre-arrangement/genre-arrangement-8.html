@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>电子流行｜图解乐风编曲入门</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./genre-arrangement-8.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解乐风编曲入门</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">乐风 02</span> 电子流行</h1>
+      <p class="intro">电子鼓、合成贝斯与弱拍上的和弦构成轻快的推进。持续声部和短音声部各有音区与时值，让密集的配器仍能留出清楚的旋律。</p>
+
+      <section aria-labelledby="genre-electro-harmony">
+        <h2 id="genre-electro-harmony">提前半拍换和弦与上行低音</h2>
+        <p>电子流行常用程序化电子节奏托住易辨认的旋律。本例采用大调和调内七和弦，Fmaj7 可以托住旋律 G。接 F/G 时，上层仍可以保留 F–A–C，只有低音升到 G。直接接 G 大三和弦则会引入属三音 B。</p>
+        <div id="genre-electro-harmony-voice-staves" class="voice-leading-staves voice-leading-phrases" role="group" aria-label="下属到挂留属音、下属到大三和弦">
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>下属到挂留属音</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 119 129" style="--voice-leading-width: 119px" role="img" aria-label="Fmaj7、F/G。顶音 C5、C5；低音 F2、G2。上方的 C 留在 G 低音上，成为四音。">
+              <text class="voice-leading-chord-name" x="38" y="12">Fmaj7</text><text class="voice-leading-chord-name" x="83" y="12">F/G</text>
+              <path class="inline-staff-lines" d="M5 25H114 M5 30H114 M5 35H114 M5 40H114 M5 45H114"/>
+              <text x="8" y="40">&#xE050;</text>
+              <path class="voice-leading-connector" d="M45 32.5L76 32.5 M72 30.1L76 32.5 72 34.9"/>
+              <text x="34" y="32.5">&#xE0A2;</text><text x="79" y="32.5">&#xE0A2;</text>
+              <text class="voice-leading-note-name" x="38" y="63">C</text><text class="voice-leading-note-name" x="83" y="63">C</text>
+              <path class="inline-staff-lines" d="M5 81H114 M5 86H114 M5 91H114 M5 96H114 M5 101H114"/>
+              <text x="8" y="86">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M45 103.5L76 101 M72 98.6L76 101 72 103.4"/>
+              <text x="34" y="103.5">&#xE0A2;</text><text x="79" y="101">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="38" y="121.5">F</text><text class="voice-leading-note-name is-bass" x="83" y="121.5">G</text>
+            </svg>
+            <p class="voice-leading-distance">上方的 C 留在 G 低音上，成为四音</p>
+          </figure>
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>下属到大三和弦</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 119 129" style="--voice-leading-width: 119px" role="img" aria-label="Fmaj7、G。顶音 C5、B4；低音 F2、G2。B 给出明确的属三音。">
+              <text class="voice-leading-chord-name" x="38" y="12">Fmaj7</text><text class="voice-leading-chord-name" x="83" y="12">G</text>
+              <path class="inline-staff-lines" d="M5 25H114 M5 30H114 M5 35H114 M5 40H114 M5 45H114"/>
+              <text x="8" y="40">&#xE050;</text>
+              <path class="voice-leading-connector" d="M45 32.5L76 35 M72 32.6L76 35 72 37.4"/>
+              <text x="34" y="32.5">&#xE0A2;</text><text x="79" y="35">&#xE0A2;</text>
+              <text class="voice-leading-note-name" x="38" y="63">C</text><text class="voice-leading-note-name" x="83" y="63">B</text>
+              <path class="inline-staff-lines" d="M5 81H114 M5 86H114 M5 91H114 M5 96H114 M5 101H114"/>
+              <text x="8" y="86">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M45 103.5L76 101 M72 98.6L76 101 72 103.4"/>
+              <text x="34" y="103.5">&#xE0A2;</text><text x="79" y="101">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="38" y="121.5">F</text><text class="voice-leading-note-name is-bass" x="83" y="121.5">G</text>
+            </svg>
+            <p class="voice-leading-distance">B 给出明确的属三音</p>
+          </figure>
+        </div>
+        <p>F/G 只有 G–F–A–C。给上方再加 D，便是 Dm7/G 的音集合。两者都用四音 C 保持挂留感。编配密集时可省掉五音 D，为节奏性的短和弦留出较疏的配置。</p>
+        <p>和弦常从第 3 拍提前到第 2 拍后半，这个提前的八分音符把原本平直的拍头连接变成切分。底鼓仍连续标四拍，贝斯与主要和声层一起换。进入器乐段时也可只换实际最低音，例如 C 转 C/E，右手的 C–E–G 原样保留。E 再上行半音到 F 低音，形成连续的上升方向。</p>
+        <div class="music-demo programmatic-score" id="genre-electro-arrangement">
+          <div class="music-demo-toolbar">
+            <h3>同一旋律的电子流行编配</h3>
+            <label>编配 <select><option value="arranged">四踩底鼓、合成贝斯与弱拍合成器</option><option value="base">基础稿</option><option value="melody">旋律</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">四分底鼓保持在拍头，首小节的和声与合成贝斯提前半拍切换。弱拍短和弦与持续衬底承担不同密度。</p>
+          <figure aria-label="同一旋律的电子流行编配"></figure>
+        </div>
+        <div class="music-demo programmatic-score" id="genre-electro-anticipation">
+          <div class="music-demo-toolbar">
+            <h3>正常拍头与提前半拍换和弦</h3>
+            <label>Fmaj7 切到 F/G <select><option value="early">第 2 拍后半换</option><option value="square">第 3 拍拍头换</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">比较同一旋律、同一组和弦中，低音 G 在第 2 拍后半还是第 3 拍出现。底鼓拍头始终相同。</p>
+          <figure aria-label="正常拍头与提前半拍换和弦"></figure>
+          <div data-arrangement-grid></div>
+        </div>
+      </section>
+
+      <section aria-labelledby="genre-electro-layers">
+        <h2 id="genre-electro-layers">四踩底鼓、合成贝斯与短长声部</h2>
+        <p>以每分钟 134 拍写两小节鼓循环。底鼓用清楚的攻击标出每拍，小鼓保持第 2、4 拍，可用早期鼓机式音色。八分弱拍由一组踩镲标记，另一组音色较低、较短的踩镲在少数十六分位置加重。铃鼓选与踩镲互补的位置，音树、冲击音或节奏循环补到段落边界以及需要加强的空隙。</p>
+        <table class="lesson-table">
+          <caption>电子流行的声部分层</caption>
+          <thead><tr><th scope="col">材料</th><th scope="col">起音与音区</th><th scope="col">编配作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">合成贝斯</th><td>较突出的锯齿波类音色，用根音与高八度形成节奏变化。</td><td>和声提前时与和弦同步换音，底鼓的四分脉搏保持稳定。</td></tr>
+            <tr><th scope="row">弱拍合成器</th><td>在八分弱拍发短和弦，低音交给贝斯，上方可省根音。</td><td>左右两轨可轻微区别滤波或均衡，增加宽度，为主唱留中央空间。</td></tr>
+            <tr><th scope="row">衬底合成器</th><td>采用持续音，常置于弱拍短和弦之下。滤波扫动明确时也可进入较高音区。</td><td>填补短音之间的空隙，提供比八分脉搏慢的音色变化。</td></tr>
+            <tr><th scope="row">琶音合成器</th><td>由一个和弦触发重复的分解样式，可组合两种琶音或扩展到三个八度。</td><td>把持续和声变成可辨的重复动机。低音已有贝斯支撑时，琶音可缺省低音。</td></tr>
+            <tr><th scope="row">电钢琴</th><td>保留中低音区的 Wurlitzer 类音色。较早处用长音或节奏型托住变和弦，后段可逐渐分解。</td><td>为电子层增加不同的起音质感。左手根音与合成贝斯重叠时，可以减轻低电平或改换音区。</td></tr>
+            <tr><th scope="row">弦乐</th><td>以较高音区的短奏、跑动线条或局部断奏为主。</td><td>可先设计短奏的位置，再调整强拍和长音上的冲突。快速经过音保留推动，重要音须与主旋律、和声相容。</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="genre-electro-mix">
+        <h2 id="genre-electro-mix">低频清晰度与左右声像</h2>
+        <p>底鼓要清楚又轻盈，低频留出合成贝斯的可辨区间。弱拍合成器独奏时可略显薄，合奏中适当地削去低频后，贝斯与衬底就能各自清楚。把短促的弱拍合成器分放两侧，再分别处理中央的主唱、衬底和上方的弦乐，比让每一轨独自铺满频段更容易保留细节。</p>
+        <p>在人声轨加入板式混响或节拍同步的短延迟，能让声线进入同一个电子空间。人声加倍或和声效果可以产生较宽的轮廓，使用时仍保留中央声像和歌词的清晰度。章节试听采用合成音色示意起音与声部分工，混音做法按实际工程中的编制与音源调整。</p>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./genre-arrangement-7.html" rel="prev"><span>上一节</span><strong>民谣流行</strong></a>
+        <a href="./genre-arrangement-9.html" rel="next"><span>下一节</span><strong>朋克摇滚</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

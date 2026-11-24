@@ -1,7 +1,9 @@
 import bandSoundFont from '@coderline/alphatab/soundfont/sonivox.sf3?url';
 import { mountScoreWritingSteps } from '../../shared/formats/score-writing-steps.js';
+import { popChorusHook } from './pop-techniques-material.js';
 
 const meter = String.raw`\ts (4 4)`;
+const ticksPerBeat = 960;
 const keyboard = (bars) => track('键盘', 4, bars, 'F4');
 const bass = (bars) => track('贝斯', 33, bars, 'F4');
 const melody = (bars) => track('主旋律', 73, bars);
@@ -37,27 +39,37 @@ const formLead = melody([
   'E4.4 G4.4 C5.4 r.4',
   'E4.4 G4.4 A4.4 r.4',
   'D4.4 G4.4 B4.4 r.4',
-  'E5.4 D5.4 C5.2'
+  popChorusHook
 ]);
 
 const layerTable = document.querySelector('#pop-arranging-build tbody');
-function showLayerDurations({ tracks }) {
-  tracks.slice(1).forEach((part, row) => {
-    part.staves[0].bars.forEach((bar, column) => {
-      const [voice] = bar.voices;
-      const played = voice.beats.findIndex(beat => beat.isRest);
-      const ticks = voice.beats.slice(0, played === -1 ? voice.beats.length : played)
-        .reduce((duration, beat) => duration + beat.playbackDuration, 0);
-      layerTable.rows[row].cells[column + 1].textContent =
-        ticks === 0 ? '休止' : ticks === 3840 ? '全小节' : `前 ${ticks / 960} 拍`;
-    });
+
+function openingDuration(part, index) {
+  const { beats } = part.staves[0].bars[index].voices[0];
+  let duration = 0;
+  for (const beat of beats) {
+    if (beat.isRest) break;
+    duration += beat.playbackDuration;
+  }
+  const quarters = duration / ticksPerBeat;
+  if (!quarters) return '休止';
+  return quarters === 4 ? '全小节' : `前 ${quarters} 拍`;
+}
+
+function showLayerDurations({ tracks: [, keys, low, kit] }) {
+  Array.from(layerTable.rows).forEach((row, index) => {
+    const bassDuration = openingDuration(low, index);
+    const drumDuration = openingDuration(kit, index);
+    row.cells[1].textContent = openingDuration(keys, index);
+    row.cells[2].textContent = bassDuration === drumDuration
+      ? bassDuration : `贝斯${bassDuration}，鼓组${drumDuration}`;
   });
 }
 
 mount('pop-arranging-build', [
   {
-    label: '全段力度相近',
-    description: '键盘、贝斯与鼓组从第 1 小节起沿用同一密度，一直进入副歌。',
+    label: '伴奏密度一致',
+    description: '伴奏从前奏到副歌沿用同一密度。「留一盏灯」第一次出现时，伴奏也保留了上一小节的律动。',
     notes: {
       scoreTracks: [
         formLead,
@@ -69,7 +81,7 @@ mount('pop-arranging-build', [
   },
   {
     label: '先收再放',
-    description: '第 2 小节缩减配器，第 3 小节后两拍减为主旋律和它的句尾休止，第 4 小节副歌恢复乐队合奏。',
+    description: '主歌 A 只留键盘。主歌 B 的伴奏在前两拍后收住，等副歌唱到「留」字，键盘、贝斯和鼓组一起回来。',
     notes: {
       scoreTracks: [
         formLead,
@@ -93,8 +105,8 @@ mount('pop-arranging-voicing', [
   },
   {
     label: '开放排列',
-    description: '和弦成员相同。下方的 C 降至 C3，E 升到 E5，中间的空隙拉开。',
-    notes: voicing('(C3 G4 B4 E5)')
+    description: '贝斯与最高音 B4 保持，键盘的 C、G 各降一个八度，拉开上下声部的距离。',
+    notes: voicing('(C3 G3 E4 B4)')
   },
   {
     label: '省略五音',
@@ -104,31 +116,27 @@ mount('pop-arranging-voicing', [
 ], { tempo: 76 });
 
 const ending = '(C3 E3 G3).4 { dy mp } r.4 (C3 E3 G3).4 r.4';
-const entry = 'E5.4 D5.4 C5.2';
+
+function entrancePreview(keyboardBar, bassBar, drumBar) {
+  return {
+    scoreTracks: [
+      melody(['A4.4 B4.4 r.2', popChorusHook]),
+      keyboard([keyboardBar, ending]),
+      { ...bass([bassBar, 'C2.2 C3.4 C2.4']), playbackOnly: true },
+      { ...drums([drumBar, pulse]), playbackOnly: true }
+    ]
+  };
+}
 
 mount('pop-arranging-stop', [
   {
     label: '连续伴奏',
-    description: '第一小节主旋律在第 3 拍休止，键盘、贝斯与鼓组继续演奏。',
-    notes: {
-      scoreTracks: [
-        melody(['A4.4 B4.4 r.2', entry]),
-        keyboard(['(G2 F3 B3).2 { dy mp } (G2 F3 B3).2', ending]),
-        bass(['G2.4 D3.4 G2.4 D3.4', 'C2.2 C3.4 C2.4']),
-        drums([pulse, pulse])
-      ]
-    }
+    description: '主旋律在第一小节后两拍休止，伴奏照常演奏，第二小节的「留一盏灯」接在原有节拍上。',
+    notes: entrancePreview('(G2 F3 B3).2 { dy mp } (G2 F3 B3).2', 'G2.4 D3.4 G2.4 D3.4', pulse)
   },
   {
     label: '整组停拍',
-    description: '第一小节后两拍各声部同时休止，第二小节第 1 拍共同进入。',
-    notes: {
-      scoreTracks: [
-        melody(['A4.4 B4.4 r.2', entry]),
-        keyboard(['(G2 F3 B3).2 { dy mp } r.2', ending]),
-        bass(['G2.4 D3.4 r.2', 'C2.2 C3.4 C2.4']),
-        drums([transition, pulse])
-      ]
-    }
+    description: '第一小节后两拍各声部同时休止。第二小节的「留」字与伴奏一起进入。',
+    notes: entrancePreview('(G2 F3 B3).2 { dy mp } r.2', 'G2.4 D3.4 r.2', transition)
   }
 ]);

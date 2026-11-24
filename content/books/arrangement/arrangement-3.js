@@ -23,7 +23,7 @@ function drumPart(notes) {
   };
 }
 
-function mountVariants(id, layouts, tempo, onChange) {
+function mountVariants(id, layouts, tempo, { onChange, onPlaybackPosition } = {}) {
   const demo = document.getElementById(id);
   const select = demo.querySelector('select');
   const cue = demo.querySelector('.music-demo-cue');
@@ -37,7 +37,7 @@ function mountVariants(id, layouts, tempo, onChange) {
   }
 
   const player = mountScore(figure, {
-    notes: showVersion(), tempo, notation: 'staff', soundFontUrl: ensembleSoundFont
+    notes: showVersion(), tempo, notation: 'staff', soundFontUrl: ensembleSoundFont, onPlaybackPosition
   });
   select.addEventListener('change', () => player.setNotes(showVersion()));
 }
@@ -124,9 +124,12 @@ mountVariants('ensemble-aligned-rhythm', {
     '吉他与贝斯反向运动。小鼓、落地鼓与各声部在三处对齐，过门短促有力。'),
   offset: rhythmLayout(commonAttacks.map(step => step + 1),
     '每组鼓点整体推迟一个十六分音符。吉他、贝斯和钢琴保持原样，鼓的声音从共同音头里分离出来。')
-}, 94, rows => {
-  if (rhythmGrid) rhythmGrid.update(rows);
-  else rhythmGrid = mountArrangementGrid(gridHost, { beats: 4, subdivisions: 4, rows, label: '反向过门的共同起音' });
+}, 94, {
+  onChange(rows) {
+    if (rhythmGrid) rhythmGrid.update(rows);
+    else rhythmGrid = mountArrangementGrid(gridHost, { rows, label: '反向过门的共同起音' });
+  },
+  onPlaybackPosition(tick) { rhythmGrid.markTick(tick); }
 });
 
 const simpleDrums = '(Kick Hat).8 Hat.8 (Snare Hat).8 Hat.8 (Kick Hat).8 Hat.8 (Snare Hat).8 Hat.8';
@@ -184,9 +187,12 @@ mountVariants('ensemble-priority-mix', {
     '合成人声在第一小节第 3 拍仍持续发声。钢琴在这时进入，穿过换气处。吉他的连续起音碰上钢琴的 G、E 和 A。'),
   open: priorityLayout(heldGuitarBars,
     '吉他只在第一小节第 3 拍到第二小节第 2 拍改成长和弦。人声、钢琴、贝斯和鼓保持原样，换气处能听到完整的钢琴填句。')
-}, 94, rows => {
-  if (focusGrid) focusGrid.update(rows);
-  else focusGrid = mountArrangementGrid(focusGridHost, { beats: 8, subdivisions: 2, rows, label: '主旋律、钢琴填句与吉他背景的起音时间' });
+}, 94, {
+  onChange(rows) {
+    if (focusGrid) focusGrid.update(rows);
+    else focusGrid = mountArrangementGrid(focusGridHost, { beats: 8, subdivisions: 2, rows, label: '主旋律、钢琴填句与吉他背景的起音时间' });
+  },
+  onPlaybackPosition(tick) { focusGrid.markTick(tick); }
 });
 
 const firstChorusPiano = String.raw`\section ("首次副歌") (B3 G4).4 { dy mf } D5.4 B4.4 G4.4 | (C4 E4).2 r.2`;

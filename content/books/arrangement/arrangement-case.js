@@ -1,7 +1,7 @@
 import soundFontUrl from '@coderline/alphatab/soundfont/sonivox.sf3?url';
 import { mountFormAnalysis } from '../../shared/formats/form-analysis.js';
 import { mountArrangementGrid } from '../../shared/formats/arrangement-grid.js';
-import { arrangementCaseScore, caseOpeningRows, caseTempo, ticksPerBeat } from './arrangement-case-music.js';
+import { arrangementCaseScore, caseOpeningRows, caseTempo } from './arrangement-case-music.js';
 
 const cues = {
   melody: {
@@ -65,7 +65,7 @@ const player = mountFormAnalysis(demo, {
   score: {
     notes: arrangementCaseScore(version.value), tempo: caseTempo, soundFontUrl,
     onScoreLoaded(score) { grid.update(caseOpeningRows(score)); },
-    onPlaybackPosition(tick) { grid.markStep(tick === null || tick >= 8 * ticksPerBeat ? null : Math.floor(tick / ticksPerBeat)); }
+    onPlaybackPosition: grid.markTick
   },
   sections,
   wholeLabel: '整段',

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>为旋律配和弦｜图解乐风编曲入门</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./genre-arrangement-2.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解乐风编曲入门</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">第一篇 · 第 2 节</span> 为旋律配和弦</h1>
+      <p class="intro">同一句旋律可以与几条不同的低音线并行。先从长音、重拍和句尾音筛出可以托住旋律的和弦，再连成一句。适配一个音与适配整句，是两个连续的判断。</p>
+
+      <section aria-labelledby="genre-harmony-local">
+        <h2 id="genre-harmony-local">从每小节的支点筛选三和弦</h2>
+        <p>这段 C 大调旋律有四小节，每小节配一个和弦。候选是 C、Dm、Em、F、G、Am、Bdim。重拍上的音、长音和句尾音容易成为旋律的支点，可优先选包含这些音的和弦。</p>
+        <figure class="notation-sample">
+          <figcaption>C 大调四小节旋律</figcaption>
+          <svg class="inline-staff" style="--inline-notation-width: min(100%, 28rem); display: block; margin: 0" viewBox="0 -3 294 58" role="img" aria-label="四四拍。第 1 小节 G、A 各一拍，G 两拍。第 2 小节 G、E 各一拍，G 两拍。第 3 小节高音 C、D、E、C 各一拍。第 4 小节高音 D 持续四拍。">
+            <path class="inline-staff-lines" d="M2 18H292 M2 23H292 M2 28H292 M2 33H292 M2 38H292"/>
+            <path class="inline-staff-lines" d="M2 18V38 M97 18V38 M161 18V38 M239 18V38 M289 18V38 M292 18V38"/>
+            <text x="6" y="33">&#xE050;</text>
+            <text x="23" y="23">&#xE084;</text>
+            <text x="23" y="33">&#xE084;</text>
+            <g>
+              <text x="40" y="33">&#xE0A4;</text>
+              <text x="57" y="30.5">&#xE0A4;</text>
+              <text x="74" y="33">&#xE0A3;</text>
+              <text x="105" y="33">&#xE0A4;</text>
+              <text x="122" y="38">&#xE0A4;</text>
+              <text x="139" y="33">&#xE0A3;</text>
+              <text x="169" y="25.5">&#xE0A4;</text>
+              <text x="186" y="23">&#xE0A4;</text>
+              <text x="203" y="20.5">&#xE0A4;</text>
+              <text x="220" y="25.5">&#xE0A4;</text>
+              <text x="257" y="23">&#xE0A2;</text>
+            </g>
+            <path d="M45.5 33V15.5 M62.5 30.5V13 M79.5 33V15.5 M110.5 33V15.5 M127.5 38V20.5 M144.5 33V15.5 M169.5 25.5V43 M186.5 23V40.5 M203.5 20.5V38 M220.5 25.5V43"/>
+            <g text-anchor="middle" aria-hidden="true">
+              <text class="inline-staff-count" x="43 60 77" y="8">GAG</text>
+              <text class="inline-staff-count" x="108 125 142" y="8">GEG</text>
+              <text class="inline-staff-count" x="172 189 206 223" y="8">CDEC</text>
+              <text class="inline-staff-count" x="262" y="8">D</text>
+            </g>
+            <g text-anchor="middle" aria-hidden="true">
+              <text class="inline-staff-count" x="68" y="52">1</text>
+              <text class="inline-staff-count" x="129" y="52">2</text>
+              <text class="inline-staff-count" x="200" y="52">3</text>
+              <text class="inline-staff-count" x="265" y="52">4</text>
+            </g>
+          </svg>
+        </figure>
+        <table class="lesson-table">
+          <caption>四小节旋律与三和弦候选</caption>
+          <thead><tr><th scope="col">小节</th><th scope="col">旋律支点</th><th scope="col">候选与取舍</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">1</th><td>G 落在第一、三拍，第二拍的 A 随即回到 G。</td><td>C、Em、G 都含 G。用 C 确立主调，短暂的 A 是上邻音。</td></tr>
+            <tr><th scope="row">2</th><td>G 仍落在第一、三拍，第二拍是 E。</td><td>C、Em 都含 G 和 E。C 保持低音，Em 则让低音从 C 换成 E。</td></tr>
+            <tr><th scope="row">3</th><td>C 和 E 落在第一、三拍，D 在两者之间经过。</td><td>C、Am 都含 C 和 E。选 Am 时，C 在旋律里保留，低音换到 A。</td></tr>
+            <tr><th scope="row">4</th><td>D 持续整小节，是句尾的支点。</td><td>Dm、G、Bdim 都含 D。用 Dm 可把属和弦留到下一句，用 G 则直接停在属和弦上。Bdim 的 B 与 F 形成三全音，导向 C 的倾向更强。</td></tr>
+          </tbody>
+        </table>
+        <p>第 3 小节和第 4 小节都出现 D，第 3 小节的 D 只连接 C 和 E，C 或 Am 可以跨过它继续响。到第 4 小节，D 占满四拍，示范就改用含 D 的和弦。</p>
+      </section>
+
+      <section aria-labelledby="genre-harmony-direction">
+        <h2 id="genre-harmony-direction">连续和弦与句尾走向</h2>
+        <p>把前两次可选位置组合起来，得到 C–C–C、C–C–Am、C–Em–C、C–Em–Am 四个三小节骨架。接 G 都能得到向主和弦继续的句尾。第三小节用了 C 时，也可接 Dm，把属和弦留给下一句。于是对照示范有六种走向。其余搭配仍可出现在不同语境，例如 Am–Dm–G–C 本身就是可行的连接，这里只控制末端形成的停顿位置。</p>
+        <div class="music-demo programmatic-score" id="genre-triad-paths">
+          <div class="music-demo-toolbar"><h3>同一旋律的六条三和弦路线</h3><label>和弦进行 <select>
+            <option value="0">C–C–C–G</option><option value="1">C–C–Am–G</option><option value="2">C–Em–C–G</option><option value="3">C–Em–Am–G</option><option value="4">C–C–C–Dm</option><option value="5">C–Em–C–Dm</option>
+          </select></label></div>
+          <p class="music-demo-cue" aria-live="polite">前三小节维持 C，最后低音到 G 才形成属和声的停顿。</p>
+          <figure aria-label="四小节旋律搭配六条调内三和弦进行"></figure>
+        </div>
+        <p>连续用 C 时，旋律自身形成变化，和声直到第四小节才移动。换成 C–Em–Am–G，第二小节虽然仍用共同音 E、G，第三小节的 A 低音已切换到小和声音响。两条路径的区别来自变化的时机和低音轨迹。</p>
+      </section>
+
+      <section aria-labelledby="genre-harmony-extension">
+        <h2 id="genre-harmony-extension">旋律作为七音或延伸音</h2>
+        <p>如果三和弦已经能托住旋律，可以从另一个根音重新看同一个长音。C 大调中的 G 放在 C 上是纯五度，放在 Em 上是小三度，放在 Am7 上是小七度，放在 Fmaj9 上是九音，放在 Dm11 上是十一音。根音不同，旋律在和弦中的职责也会改变。</p>
+        <table class="lesson-table lesson-table-dense">
+          <caption>按低音 F–E–D–C 重配的四小节</caption>
+          <thead><tr><th scope="col">和弦</th><th scope="col">旋律支点相对根音的位置</th><th scope="col">连接</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Fmaj9</th><td>G 为九音，A 为大三音。</td><td>F 低音带来下属色彩，伴奏中加入 E 和 G。</td></tr>
+            <tr><th scope="row">Em7</th><td>G 为小三音，E 为根音。</td><td>低音 F→E 走半音，G 可以跨两个和弦持有。</td></tr>
+            <tr><th scope="row">Dm9</th><td>C 为小七音，E 为九音。</td><td>保留 C、E 两个旋律支点，低音继续下行到 D。</td></tr>
+            <tr><th scope="row">Cmaj9</th><td>D 为九音。</td><td>用主和弦收住低音，旋律仍保留延伸音的悬浮感。</td></tr>
+          </tbody>
+        </table>
+        <p>在第二小节，Cmaj7、Em7、G7、Am7 都含 G。比较这四个候选时还要看旋律的 E。Cmaj7、Em7 和 Am7 都已含 E。若选 G7，则可让 E 单独在旋律里形成十三音。若想让 G 成为延伸音，可选 Fmaj9 或 Dm11。Dm 的九音是 E，十一音才是 G。示范选 Em7，既让 G 与 E 都有明确位置，又使四个根音排成 F–E–D–C 的连续下行。</p>
+        <div class="music-demo programmatic-score" id="genre-extension-path">
+          <div class="music-demo-toolbar"><h3>同一旋律的三和弦与下行七、九和弦</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">C–C–C–G 将低音的明显变化放到句尾，最后的 D 是 G 和弦的五音。</p>
+          <figure data-writing-score aria-label="同一旋律的三和弦与下行七、九和弦"></figure>
+        </div>
+        <aside class="lesson-callout"><p><strong>先筛旋律支点，再选低音走向。</strong>和弦符号同样适配一个音时，决定它们取舍的是前后连接、句尾去向和这个音在和弦中的分量。</p></aside>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./genre-arrangement-1.html" rel="prev"><span>第一篇 · 第 1 节</span><strong>编曲的基本思考</strong></a>
+        <a href="./genre-arrangement-3.html" rel="next"><span>第一篇 · 第 3 节</span><strong>常用乐器与音源写法</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

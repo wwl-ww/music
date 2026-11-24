@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DAW 编曲流程与动态处理｜图解乐风编曲入门</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./genre-arrangement-4.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解乐风编曲入门</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">第一篇 · 第 4 节</span> DAW 编曲流程与动态处理</h1>
+      <p class="intro">数字音频工作站（DAW）能把旋律、MIDI 音符、音频循环和混音分开放到不同音轨。编曲可以从律动出发，也可以从旋律出发。两条路线都会走到同一个检查点：主歌、过渡段和副歌之间是否有清楚的变化。</p>
+
+      <section aria-labelledby="genre-daw-input">
+        <h2 id="genre-daw-input">MIDI 输入与两种编曲起点</h2>
+        <p>在钢琴卷帘中输入 MIDI，每个音符有音高、起音位置、时值和力度。由音源决定这些数据怎样发声。画底鼓与闭镲可以用相同的格点，但它们对应不同的鼓件。音频轨上则是已经发声的录音，可剪切、移动或变速，无法像 MIDI 一样直接指定录音中的每一个音高或力度。</p>
+        <p>鼓和贝斯之间的偏移、吉他提前一点的起音、电钢琴保留多久，都可以通过短循环核对。网格适合定位重复结构。小幅移动音符或改变力度时，应保留目标重音和其他声部的对合。</p>
+        <table class="lesson-table">
+          <caption>节奏先行与旋律先行的工作步骤</caption>
+          <thead><tr><th scope="col">阶段</th><th scope="col">音轨先行</th><th scope="col">旋律先行</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">确定材料</th><td>先选速度、重心和音色方向，循环两小节，用底鼓、小鼓、踩镲搭出拍子。</td><td>先输入主歌、过渡段和副歌的旋律，给旋律一个容易听清的音色。用电钢琴长音暂时标出和弦。</td></tr>
+            <tr><th scope="row">建立支撑</th><td>底鼓太薄时先换采样或尝试叠加、均衡。再按需要加入打击乐和循环。用长时值电钢琴确立和弦，按和弦写贝斯并核对它与底鼓的关系。</td><td>先完成承担高潮的副歌。鼓组给重音，贝斯按和弦走，之后选钢琴或吉他的中区节奏。还有空位时加入弦乐、风琴或合成器。</td></tr>
+            <tr><th scope="row">组织段落</th><td>用两至四小节的鼓、贝斯和和弦素材组织主歌与副歌。过渡段如换和弦，同时改写贝斯与键盘。副歌可加 Pad、弦乐或琶音。</td><td>由副歌回到主歌，可以沿用同一套鼓和贝斯音色。减少起音、降低力度，按主歌和弦重写低音，再根据旋律活动决定吉他或键盘何时进入。</td></tr>
+            <tr><th scope="row">核对连接</th><td>从主歌播到副歌，核对鼓和贝斯节奏有没有同时断开，副歌的新增层是否提供清楚的变化。</td><td>主歌与副歌连起来后做过渡段。如果副歌进场缺少重心，可安排短过门、留白或单次打击乐点亮边界。</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="genre-daw-layering">
+        <h2 id="genre-daw-layering">短循环的搭建与段落密度</h2>
+        <p>以下四种状态保持相同的两小节与相同速度。鼓型先确立拍点。加入电钢琴和贝斯后，低音的主要起音跟住底鼓，短节奏已有明确的和声。副歌加一层高音持续和弦及规则的分解音，既增加了起音数量，也填上中高区。把其中的长声部撤掉，并缩减底鼓与分解音，就能让主歌与副歌共享同一和声骨架。</p>
+        <div class="music-demo programmatic-score" id="genre-daw-workflow">
+          <div class="music-demo-toolbar"><h3>从节奏循环到主歌和副歌</h3><label>配置 <select><option value="drums">两小节鼓型</option><option value="foundation">鼓、贝斯与电钢琴</option><option value="verse">主歌减法</option><option value="chorus">副歌加层</option></select></label></div>
+          <p class="music-demo-cue" aria-live="polite">底鼓和小鼓建立拍点，闭镲补出两拍之间的细分。</p>
+          <figure data-genre-playback aria-label="循环素材的加入和段落密度对照"></figure>
+          <div data-genre-grid></div>
+        </div>
+        <p>密度是由各声部的起音、持续和音区共同决定的。将相同素材贴到不同段落时，保持核心音色与主要律动，逐段改变其中一两项。过渡段如果更换和弦，就要同时检查低音与键盘，避免指向新和弦的低音仍沿用旧的根音。</p>
+      </section>
+
+      <section aria-labelledby="genre-daw-template">
+        <h2 id="genre-daw-template">工程模板与电平余量</h2>
+        <p>工程模板可准备常用的鼓、贝斯、钢琴、合成器和人声音轨，保留名称、装载的音色、总线去向和少量常用节奏。节拍素材可作为起点，各段仍须按需要增减。留好输出余量，可以让新加入的音轨和副歌齐奏有空间。</p>
+        <p>数轨叠加后，主输出的峰值可以超过单轨的最高峰值。把单轨推子从默认值略降，例如约 −7 dB，只是预留余量的一种起始做法。实际数值取决于输入增益、音源和音轨数量，要以最响段落的主输出峰值为准。若某个音源在进入推子前就已经削波，降推子只会使失真的声音变小，需要回到输入或插件电平解决。</p>
+      </section>
+
+      <section aria-labelledby="genre-daw-dynamics">
+        <h2 id="genre-daw-dynamics">压缩器、限幅器与最大化器</h2>
+        <p><strong>动态</strong>指强弱之间的差异。压缩器把高于阈值的部分按比率衰减，例如阈值 −18 dB、比率 3∶1 时，输入峰值若高出阈值 9 dB，压缩后的理想稳态只高出 3 dB，约为 −15 dB。实际结果还会受到起动、释放和补偿增益影响。</p>
+        <table class="lesson-table">
+          <caption>动态处理的三种常见用途</caption>
+          <thead><tr><th scope="col">处理</th><th scope="col">机制</th><th scope="col">适用位置</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">压缩器</th><td>超过阈值后将变化缩小，可以补回部分电平。</td><td>用于人声、钢琴、吉他或贝斯，让较轻的音保持可辨认，控制过强的音头。</td></tr>
+            <tr><th scope="row">限幅器</th><td>用很高的比率或预测处理限制峰值，通常可设输出上限。</td><td>用于输出或特定声部的峰值控制。把阈值压得过低会持续削弱鼓等声音的瞬态。</td></tr>
+            <tr><th scope="row">最大化器</th><td>常把电平提升和峰值限制放在同一处理里。</td><td>用于末端提升响度。推动过多会伴随动态缩小，局部可能失真。</td></tr>
+          </tbody>
+        </table>
+        <p>单轨压缩与主输出处理的听觉目的不同。人声的较轻尾音听不清，可以先调整单句电平，再用少量压缩稳定乐句。主输出的强弱差承担段落对比。如果主歌和副歌越做越接近，先比较旁通前后的响度与音头，确认是否是总线长期压低了强拍。</p>
+        <p>以小鼓为例，起动很快时，压缩连最前面的击打声也一起压低。稍放慢起动，较多的鼓头保留下来，再压住后面的响声。释放时间若长到下一拍，下一次击打到来时电平还没恢复。用同一段循环对比鼓头、尾音和下一拍的强弱，再决定是否补偿总音量。</p>
+        <aside class="lesson-callout"><p><strong>先留出电平余量，再决定要控制哪一部分动态。</strong>当全曲最响处仍能保持重音、呼吸和清楚的主线时，混音才保留了编曲安排的对比。</p></aside>
+        <details class="lesson-aside"><summary>波形与听感核对</summary><p>波形持续挤在同一峰值附近，且明显重音消失，可能是动态处理过强，也可能是源音本来密度高。对比时先匹配响度，再辨认鼓头、句尾细节和主副歌起伏，不只凭波形宽窄判断。</p></details>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./genre-arrangement-3.html" rel="prev"><span>第一篇 · 第 3 节</span><strong>常用乐器与音源写法</strong></a>
+        <a href="./genre-arrangement-5.html" rel="next"><span>第二篇 · 第 1 节</span><strong>流行歌曲的段落构成</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

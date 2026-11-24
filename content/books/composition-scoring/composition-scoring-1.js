@@ -1,15 +1,34 @@
 import { mountScoringChoices, part } from './composition-scoring-1-2-demos.js';
-import { mountArrangementGrid } from '../../shared/formats/arrangement-grid.js';
+import { mountPlayableArrangementGrid } from '../../shared/formats/arrangement-grid-playback.js';
 
-mountArrangementGrid(document.getElementById('scoring-breakbeat-grid'), {
+mountPlayableArrangementGrid(document.getElementById('scoring-breakbeat-grid'), {
   beats: 4,
   subdivisions: 2,
   label: '鼓组起音与贝斯延续，每拍分两格',
   rows: [
-    { label: 'A · 底鼓', events: [{ step: 0, accent: true }, { step: 5 }] },
-    { label: 'A · 小鼓', events: [{ step: 2 }, { step: 6 }] },
-    { label: 'B · 手鼓', events: [{ step: 3 }, { step: 7 }] },
-    { label: '贝斯', events: [{ step: 0, length: 6 }] }
+    { label: 'A · 底鼓', drum: 36, events: [{ step: 0, accent: true }, { step: 5 }] },
+    { label: 'A · 小鼓', drum: 38, events: [{ step: 2 }, { step: 6 }] },
+    { label: 'B · 手鼓', drum: 64, events: [{ step: 3, dynamic: 'p' }, { step: 7, dynamic: 'p' }] },
+    { label: '贝斯', program: 33, pitch: 'C3', events: [{ step: 0, length: 6 }] }
+  ]
+});
+
+mountPlayableArrangementGrid(document.getElementById('scoring-shared-rhythm-grid'), {
+  beatsPerBar: 2,
+  subdivisions: 2,
+  tempo: 100,
+  label: 'B♭maj7 和 E♭maj7 上的两句旋律采用相同的节奏',
+  rows: [
+    { label: 'B♭maj7 上', events: [
+      { step: 0, pitch: 'D4' }, { step: 1, pitch: 'F4' }, { step: 2, pitch: 'A4', length: 2 }
+    ] },
+    { label: 'E♭maj7 上', events: [
+      { step: 4, pitch: 'Bb4' }, { step: 5, pitch: 'G4' }, { step: 6, pitch: 'D4', length: 2 }
+    ] },
+    { label: '和声', events: [
+      { step: 0, pitch: ['Bb2', 'D3', 'F3', 'A3'], length: 4, dynamic: 'p' },
+      { step: 4, pitch: ['Eb3', 'G3', 'Bb3', 'D4'], length: 4, dynamic: 'p' }
+    ] }
   ]
 });
 

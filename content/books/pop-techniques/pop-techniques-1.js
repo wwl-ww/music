@@ -1,8 +1,8 @@
 import soundFontUrl from '@coderline/alphatab/soundfont/sonivox.sf3?url';
 import { renderRangeKeyboards } from '../../shared/formats/range-keyboards.js';
 import { mountScoreWritingSteps } from '../../shared/formats/score-writing-steps.js';
+import { popChorusHook as hook } from './pop-techniques-material.js';
 
-const hook = 'G4.8 A4.8 G4.4 E4.4 r.4';
 const refrainEnd = 'E4.4 G4.4 D4.4 C4.4';
 const leadIn = 'D4.4 E4.4 F4.4 r.4';
 const meter = String.raw`\ts (4 4) `;

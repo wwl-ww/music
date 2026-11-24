@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>节奏布鲁斯｜图解乐风编曲入门</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./genre-arrangement-15.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解乐风编曲入门</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">乐风 09</span> 节奏布鲁斯</h1>
+      <p class="intro">稀疏的节奏布鲁斯编配靠鼓点的质感、留出空隙的低音和中声区的电钢琴维持力度。和声可以有丰富的延伸音，节奏依旧清楚。</p>
+
+      <section aria-labelledby="rnb-pocket">
+        <h2 id="rnb-pocket">鼓点、低音与电钢琴的时间分工</h2>
+        <p>这里采用接近嘻哈制作的稀疏 R&amp;B 编配。76 BPM 的速度给了每个起音更大的空间。第一拍的主底鼓可以叠一枚较深的低频层，其他起音继续用较短的主底鼓。第 2、4 拍的小鼓和弹指合起来给反拍，踩镲用近似等力度的八分音符维持细分。第一小节的第 3 拍后半前还有一枚短底鼓，形成十六分摇摆。偶数小节末可短暂插入响棒或刮唱片效果，标出循环接缝。</p>
+        <p>低音几乎只用和弦根音。两次起音分别落在第一拍和第三拍后半，音尾收在下一次小鼓前。第二次起音如果移回第三拍，脉搏仍然成立，但推动感会更直。电钢琴保持二分或全音符，中段和弦的延音填在鼓点之间，旋律的空隙仍然保留。</p>
+        <figure class="arrangement-grid-frame">
+          <figcaption>四拍内的起音与持续</figcaption>
+          <div data-rnb-grid></div>
+        </figure>
+        <div class="music-demo programmatic-score" id="genre-rnb-arrangement">
+          <div class="music-demo-toolbar"><h3>同一旋律的节奏布鲁斯编配</h3><label>编配 <select><option value="arranged">稀疏 R&amp;B</option><option value="base">基础稿</option><option value="melody">旋律</option></select></label></div>
+          <p class="music-demo-cue" aria-live="polite">电钢琴铺在中声区，贝斯停在反拍之前，让鼓组承担大部分起音。</p>
+          <figure aria-label="节奏布鲁斯编配五线谱与试听"></figure>
+        </div>
+      </section>
+      <section aria-labelledby="rnb-harmony">
+        <h2 id="rnb-harmony">旋律音、挂留低音与和弦色彩</h2>
+        <p>同一个旋律 G 在 C 上是五音，在 Fmaj9 上是九音。把开头从 C 换成 Fmaj9，旋律没有移动，低音从主音变为下属，E–G 也带来大七音和九音的颜色。下一小节可把 Dm7 放在 G 低音上。上方 D–F–A–C 相对 G 分别是五音、小七音、九音、四音，合起来是 G9sus4 的音集合。由于没有三音 B，低音已经在属位置，上方还保留挂留感。下一个 G13 再用 B 交代属三音。</p>
+        <table class="lesson-table">
+          <caption>从旋律音反推配和声的选项</caption>
+          <thead><tr><th scope="col">旋律音</th><th scope="col">候选和弦</th><th scope="col">旋律在和弦中的角色</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">G</th><td>Fmaj9 或 F♯7</td><td>在 Fmaj9 上是九音。在 F♯7 上是降九音，可作为刻意保留的属张力。</td></tr>
+            <tr><th scope="row">E</th><td>F♯7(♭13)</td><td>是小七音。降十三音 D 可以由内声部给出。</td></tr>
+            <tr><th scope="row">D</th><td>B♭maj7</td><td>是三音。调外和弦仍能紧贴句中的长音。</td></tr>
+            <tr><th scope="row">C</th><td>A♭maj7</td><td>是三音。把低音放到降六级，主音旋律仍然稳定。</td></tr>
+            <tr><th scope="row">D 或 A</th><td>D/C</td><td>以 C 为基准，D 大三和弦给出九音 D、升十一音 F♯与十三音 A，可用于尾部色彩。</td></tr>
+          </tbody>
+        </table>
+        <p>旋律如果给出了延伸音，伴奏无需再将它叠在同一音区。Dm9/G 比 Dm7/G 多出 E，E 是相对 G 的十三音。此时 C 仍然挂留，上方保留没有属三音的间隔关系。把 C 下移到 B 才引入属三音，和弦由挂留转为明确的属和弦。</p>
+        <div class="music-demo programmatic-score" id="genre-rnb-suspension">
+          <div class="music-demo-toolbar"><h3>固定 G 低音的挂留、延伸与解决</h3><label>上方和弦 <select><option value="sus">Dm7/G</option><option value="extended">Dm9/G</option><option value="resolved">G13</option></select></label></div>
+          <p class="music-demo-cue" aria-live="polite">低音始终是 G。先加 E，再把 C 下移到 B。</p>
+          <figure aria-label="G 低音上三种属音响的五线谱与试听"></figure>
+        </div>
+      </section>
+      <section aria-labelledby="rnb-shuffle">
+        <h2 id="rnb-shuffle">十六分摇摆与二小节鼓组变化</h2>
+        <p>十六分摇摆按每半拍的一对十六分音符改变起音距离。后一格推迟，下一组仍回到原来的八分网格。整轨一律推迟会移动所有落点，听到的是偏后的演奏位置。两种处理作用不同，也可分别用于不同鼓轨。</p>
+        <div class="music-demo programmatic-score" id="genre-rnb-shuffle">
+          <div class="music-demo-toolbar"><h3>平均细分、十六分摇摆与低音留白</h3><label>节奏写法 <select><option value="straight">平均十六分</option><option value="shuffle">十六分摇摆</option><option value="reduced">鼓与低音骨架</option></select></label></div>
+          <p class="music-demo-cue" aria-live="polite">平均和摇摆的鼓点位置以同一份记谱表示，摇摆只改变拍内细分的播放时距。</p>
+          <figure aria-label="平均和摇摆鼓点的五线谱与试听"></figure>
+        </div>
+        <p>鼓组可以用带颗粒感的底鼓、小鼓和踩镲。第一小节可单独留一个带混响的弹指，中间仍用干声保持轮廓。第二小节末的响棒、反向渐强或刮唱片效果适合承担过门，重复的鼓型因而有两个尺度的重心。反转短鼓样本可以得到先渐起、后迅速截止的效果，剪到接缝前即可。</p>
+      </section>
+      <section aria-labelledby="rnb-mix">
+        <h2 id="rnb-mix">电钢琴音区、取样与混音留白</h2>
+        <p>正弦波类合成贝斯泛音较少，用较圆滑的低频托住鼓。Rhodes 类电钢琴以较厚的中段承担宽度，高音可以留给人声和偶尔出现的填句。周期性的音量变化是颤音效果，立体声电钢琴也可用左右交替的自动声像形成摆动。让它们的反馈发生在延音里，保住鼓和歌唱的起音。</p>
+        <p>短笛句、唱片纹理或采样过门只在主旋律留白时出现。导入可用素材后先对齐速度和首个落点，再检查与同拍低音及和弦是否一致。延迟尾音可以接到后续空隙。混音以鼓组的起落为轴，贝斯给底部支撑，电钢琴给宽度，填句留到需要标记的地方。</p>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a rel="prev" href="./genre-arrangement-14.html"><span>上一节</span><strong>爵士</strong></a>
+        <a rel="next" href="./genre-arrangement-16.html"><span>下一节</span><strong>巴西浩室</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

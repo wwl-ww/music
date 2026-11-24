@@ -4,6 +4,7 @@ import { mountScoreWritingSteps } from '../../shared/formats/score-writing-steps
 
 const harmony = {
   C: ['E4 G4 C5', 'C3'],
+  Cmaj7: ['G4 B4 E5', 'C3'],
   'C arriving': ['G4 C5 E5', 'C3', 'C'],
   F: ['F4 A4 C5', 'F2'],
   'F ending': ['F4 C5 A5', 'F2', 'F'],
@@ -19,6 +20,7 @@ const harmony = {
   Am: ['E4 A4 C5', 'A2'],
   'Am/G': ['E4 A4 C5', 'G2'],
   Am7: ['E4 G4 A4 C5', 'A2'],
+  'Am7 substitute': ['E4 G4 C5', 'A2', 'Am7'],
   Dm7: ['F4 A4 C5', 'D3'],
   'Dm7 arriving': ['F4 A4 C5 D5', 'D3', 'Dm7'],
   Em: ['G4 B4 E5', 'E3'],
@@ -79,14 +81,29 @@ mount('rock-functional-paths', [
     notes: progression('C', 'F', 'G7', 'C')
   },
   {
+    label: 'vi7–IV–V7–I',
+    description: '把起点 C 换成 Am7。上方的三个声部原样保留，低音从 A 出发，乐句最后仍回到 C。',
+    notes: progression('Am7 substitute', 'F', 'G7', 'C')
+  },
+  {
+    label: 'Imaj7–IV–V7–I',
+    description: '用 Cmaj7 作起点，低音是 C。上方三个声部的 E、G、B 也都是 Em 的和弦音。',
+    notes: progression('Cmaj7', 'F', 'G7', 'C')
+  },
+  {
+    label: 'iii–IV–V7–I',
+    description: '把起点 Cmaj7 换成 Em。上声部完全相同，低音由 C 改为 E。',
+    notes: progression('Em', 'F', 'G7', 'C')
+  },
+  {
     label: 'I–ii7–V7–I',
     description: '第二个和弦的上方 F、A、C 原样保留，贝斯改弹 D。Dm7 和 G7 的根音构成五度关系。',
     notes: progression('C', 'Dm7', 'G7', 'C')
   },
   {
-    label: 'I–ii7–vii°–I',
-    description: '把 G7 的根音 G 换成 B。上方的 D、F、B 仍相同，带着导音去往 C。',
-    notes: progression('C', 'Dm7', 'Bdim', 'C')
+    label: 'I–IV–vii°–I',
+    description: '把句尾的 G7 换成 Bdim。上方的 D、F、B 保持原样，低音由 B 半音上行到 C。',
+    notes: progression('C', 'F', 'Bdim', 'C')
   }
 ]);
 

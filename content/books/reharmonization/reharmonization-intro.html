@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>导论 和弦进行基础｜图解重配和声入门</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+    <script type="module" src="./reharmonization-intro.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解重配和声入门</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">导论</span> 和弦进行基础</h1>
+      <p class="intro">同一段旋律可以得到不同的和声走向。先学会从和弦代号找构成音，再用调内级数理解和弦的职责。认清原来的落点以后，才有依据加入颜色或改变方向。</p>
+
+      <section aria-labelledby="reharm-foundation-1">
+        <h2 id="reharm-foundation-1">重配和声的对象</h2>
+        <p>为旋律配置和弦叫作配和声。已有和弦进行后，保留旋律并改变其下的和声，就进入重配。可以只改一个和弦，也可以改变换和弦的拍位、低音线和乐句落点。和声的改变会影响听者对段落的预期，重复段落尤其适合拿同一条旋律来比较。</p>
+        <p>这个短句的两版都回到 C。重配把句中 C 的位置换成 Am7，随后把原来的 G 一分为二，先放 Dm7 再到 G7。旋律仍在同样的拍位出现，第二版的终止准备更长。</p>
+        <div id="reharm-intro-comparison" class="reharm-example"></div>
+      </section>
+
+      <section aria-labelledby="reharm-foundation-2">
+        <h2 id="reharm-foundation-2">音程序数与半音数</h2>
+        <p>和弦的三音、七音与延伸音都从根音量起。先把两端都计入，数经过几个音名字母。再数实际相隔的半音，确定音程性质。C–E 和 C♯–E 都是三度，前者四个半音，后者三个半音。</p>
+        <table class="lesson-table">
+          <caption>八度内常用音程</caption>
+          <thead><tr><th scope="col">度数</th><th scope="col">纯音程或大音程</th><th scope="col">小音程</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">一度</th><td>纯一度 0</td><td>—</td></tr>
+            <tr><th scope="row">二度</th><td>大二度 2</td><td>小二度 1</td></tr>
+            <tr><th scope="row">三度</th><td>大三度 4</td><td>小三度 3</td></tr>
+            <tr><th scope="row">四度</th><td>纯四度 5</td><td>—</td></tr>
+            <tr><th scope="row">五度</th><td>纯五度 7</td><td>—</td></tr>
+            <tr><th scope="row">六度</th><td>大六度 9</td><td>小六度 8</td></tr>
+            <tr><th scope="row">七度</th><td>大七度 11</td><td>小七度 10</td></tr>
+            <tr><th scope="row">八度</th><td>纯八度 12</td><td>—</td></tr>
+          </tbody>
+        </table>
+        <p>纯音程或大音程扩一个半音成为增音程。纯音程或小音程缩一个半音成为减音程，纯一度已是零半音。增四度 C–F♯ 与减五度 C–G♭ 都是六个半音，字母数和和声记法不同。C–G♯ 则是八个半音的增五度。</p>
+      </section>
+
+      <section aria-labelledby="reharm-foundation-3">
+        <h2 id="reharm-foundation-3">和弦代号与构成音</h2>
+        <p>开头的大写字母及其升降记号表示根音。代号 C 默认是大三和弦，Cm 的 m 表示三音变成小三度。7 单独出现表示小七度，maj7 表示大七度。因此 C7 和 Cm7 的七音都是 B♭，Cmaj7 和 Cm(maj7) 的七音都是 B。</p>
+        <details class="lesson-aside"><summary>和弦代号的常见简写</summary><div class="lesson-aside-content"><p>小三和弦也可写作 C−。C△7、CM7 与 Cmaj7 同义。增和弦 Caug 有时写作 C+；上下文不明时，完整写法更清楚。以根音表示 1，裸写 3、6 为大三度、大六度，m3 为小三度，4、5 为纯四度、纯五度，♭5、♯5 为减五度、增五度，7、maj7、𝄫7 分别为小七度、大七度和减七度。</p></div></details>
+      </section>
+
+      <section aria-labelledby="reharm-foundation-4">
+        <h2 id="reharm-foundation-4">三音和弦与挂留四度</h2>
+        <p>三和弦先比较三音，再比较五音。sus4 的四度取代三度，独立构成一类三音和弦。Csus4 接 C 时，F→E 的半音移动使悬着的四度落地。Caug 接 F 时，增五音 G♯ 可上行到 A。</p>
+        <table class="lesson-table chord-formula-table">
+          <caption>以 C 为根音的三音和弦</caption>
+          <thead><tr><th scope="col">代号</th><th scope="col">构成</th><th scope="col">谱例</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">C</th><td>大三和弦 · C–E–G</td><td><svg class="inline-staff" viewBox="0 4 44 34" role="img" aria-label="C4、E4、G4"><path class="inline-staff-lines" d="M1 8H43 M1 13H43 M1 18H43 M1 23H43 M1 28H43"/><path d="M24 33H36"/><text x="27" y="33">&#xE0A2;</text><text x="27" y="28">&#xE0A2;</text><text x="27" y="23">&#xE0A2;</text></svg></td></tr>
+            <tr><th scope="row">Cm</th><td>小三和弦 · C–E♭–G</td><td><svg class="inline-staff" viewBox="0 4 44 34" role="img" aria-label="C4、E♭4、G4"><path class="inline-staff-lines" d="M1 8H43 M1 13H43 M1 18H43 M1 23H43 M1 28H43"/><path d="M24 33H36"/><text x="18" y="28">&#xE260;</text><text x="27" y="33">&#xE0A2;</text><text x="27" y="28">&#xE0A2;</text><text x="27" y="23">&#xE0A2;</text></svg></td></tr>
+            <tr><th scope="row">Cdim</th><td>减三和弦 · C–E♭–G♭，也可写 Cm(♭5)</td><td><svg class="inline-staff" viewBox="0 4 44 34" role="img" aria-label="C4、E♭4、G♭4"><path class="inline-staff-lines" d="M1 8H43 M1 13H43 M1 18H43 M1 23H43 M1 28H43"/><path d="M24 33H36"/><text x="18" y="23">&#xE260;</text><text x="11" y="28">&#xE260;</text><text x="27" y="33">&#xE0A2;</text><text x="27" y="28">&#xE0A2;</text><text x="27" y="23">&#xE0A2;</text></svg></td></tr>
+            <tr><th scope="row">Caug</th><td>增三和弦 · C–E–G♯</td><td><svg class="inline-staff" viewBox="0 4 44 34" role="img" aria-label="C4、E4、G♯4"><path class="inline-staff-lines" d="M1 8H43 M1 13H43 M1 18H43 M1 23H43 M1 28H43"/><path d="M24 33H36"/><text x="18" y="23">&#xE262;</text><text x="27" y="33">&#xE0A2;</text><text x="27" y="28">&#xE0A2;</text><text x="27" y="23">&#xE0A2;</text></svg></td></tr>
+            <tr><th scope="row">Csus4</th><td>挂留四度和弦 · C–F–G</td><td><svg class="inline-staff" viewBox="0 4 44 34" role="img" aria-label="C4、F4、G4"><path class="inline-staff-lines" d="M1 8H43 M1 13H43 M1 18H43 M1 23H43 M1 28H43"/><path d="M24 33H36"/><text x="27" y="33">&#xE0A2;</text><text x="27" y="25.5">&#xE0A2;</text><text x="33" y="23">&#xE0A2;</text></svg></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="reharm-foundation-5">
+        <h2 id="reharm-foundation-5">七和弦、六和弦与属七挂留</h2>
+        <p>加上第四个构成音时，区分七度、六度与原有三音。C7 的大小七和声音响可以在 C–F 间制造指向。Cmaj7 保留主和弦轮廓，Cm(maj7) 可让小调结尾同时保留小三度和大七度的张力。流行和弦的 C6 是添加大六度的和弦，和古典和声里以「六和弦」称呼三和弦第一转位的用法不同。</p>
+        <table class="lesson-table chord-formula-table">
+          <caption>以 C 为根音的四音和弦</caption>
+          <thead><tr><th scope="col">代号</th><th scope="col">构成</th><th scope="col">谱例</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">C7</th><td>大小七和弦 · C–E–G–B♭</td><td><svg class="inline-staff" viewBox="0 4 44 34" role="img" aria-label="C4、E4、G4、B♭4"><path class="inline-staff-lines" d="M1 8H43 M1 13H43 M1 18H43 M1 23H43 M1 28H43"/><path d="M24 33H36"/><text x="18" y="18">&#xE260;</text><text x="27" y="33">&#xE0A2;</text><text x="27" y="28">&#xE0A2;</text><text x="27" y="23">&#xE0A2;</text><text x="27" y="18">&#xE0A2;</text></svg></td></tr>
+            <tr><th scope="row">Cmaj7</th><td>大七和弦 · C–E–G–B</td><td><svg class="inline-staff" viewBox="0 4 44 34" role="img" aria-label="C4、E4、G4、B4"><path class="inline-staff-lines" d="M1 8H43 M1 13H43 M1 18H43 M1 23H43 M1 28H43"/><path d="M24 33H36"/><text x="27" y="33">&#xE0A2;</text><text x="27" y="28">&#xE0A2;</text><text x="27" y="23">&#xE0A2;</text><text x="27" y="18">&#xE0A2;</text></svg></td></tr>
+            <tr><th scope="row">Cm7</th><td>小七和弦 · C–E♭–G–B♭</td><td><svg class="inline-staff" viewBox="0 4 44 34" role="img" aria-label="C4、E♭4、G4、B♭4"><path class="inline-staff-lines" d="M1 8H43 M1 13H43 M1 18H43 M1 23H43 M1 28H43"/><path d="M24 33H36"/><text x="18" y="18">&#xE260;</text><text x="18" y="28">&#xE260;</text><text x="27" y="33">&#xE0A2;</text><text x="27" y="28">&#xE0A2;</text><text x="27" y="23">&#xE0A2;</text><text x="27" y="18">&#xE0A2;</text></svg></td></tr>
+            <tr><th scope="row">Cm(maj7)</th><td>小大七和弦 · C–E♭–G–B</td><td><svg class="inline-staff" viewBox="0 4 44 34" role="img" aria-label="C4、E♭4、G4、B4"><path class="inline-staff-lines" d="M1 8H43 M1 13H43 M1 18H43 M1 23H43 M1 28H43"/><path d="M24 33H36"/><text x="18" y="28">&#xE260;</text><text x="27" y="33">&#xE0A2;</text><text x="27" y="28">&#xE0A2;</text><text x="27" y="23">&#xE0A2;</text><text x="27" y="18">&#xE0A2;</text></svg></td></tr>
+            <tr><th scope="row">Cm7(♭5)</th><td>半减七和弦 · C–E♭–G♭–B♭</td><td><svg class="inline-staff" viewBox="0 4 44 34" role="img" aria-label="C4、E♭4、G♭4、B♭4"><path class="inline-staff-lines" d="M1 8H43 M1 13H43 M1 18H43 M1 23H43 M1 28H43"/><path d="M24 33H36"/><text x="18" y="18">&#xE260;</text><text x="11" y="23">&#xE260;</text><text x="18" y="28">&#xE260;</text><text x="27" y="33">&#xE0A2;</text><text x="27" y="28">&#xE0A2;</text><text x="27" y="23">&#xE0A2;</text><text x="27" y="18">&#xE0A2;</text></svg></td></tr>
+            <tr><th scope="row">C6</th><td>加六和弦 · C–E–G–A</td><td><svg class="inline-staff" viewBox="0 4 44 34" role="img" aria-label="C4、E4、G4、A4"><path class="inline-staff-lines" d="M1 8H43 M1 13H43 M1 18H43 M1 23H43 M1 28H43"/><path d="M24 33H36"/><text x="27" y="33">&#xE0A2;</text><text x="27" y="28">&#xE0A2;</text><text x="27" y="23">&#xE0A2;</text><text x="33" y="20.5">&#xE0A2;</text></svg></td></tr>
+            <tr><th scope="row">Cm6</th><td>小六和弦 · C–E♭–G–A</td><td><svg class="inline-staff" viewBox="0 4 44 34" role="img" aria-label="C4、E♭4、G4、A4"><path class="inline-staff-lines" d="M1 8H43 M1 13H43 M1 18H43 M1 23H43 M1 28H43"/><path d="M24 33H36"/><text x="18" y="28">&#xE260;</text><text x="27" y="33">&#xE0A2;</text><text x="27" y="28">&#xE0A2;</text><text x="27" y="23">&#xE0A2;</text><text x="33" y="20.5">&#xE0A2;</text></svg></td></tr>
+            <tr><th scope="row">Cdim7</th><td>全减七和弦 · C–E♭–G♭–B𝄫</td><td><svg class="inline-staff" viewBox="0 4 44 34" role="img" aria-label="C4、E♭4、G♭4、B𝄫4"><path class="inline-staff-lines" d="M1 8H43 M1 13H43 M1 18H43 M1 23H43 M1 28H43"/><path d="M24 33H36"/><text x="18" y="18">&#xE264;</text><text x="11" y="23">&#xE260;</text><text x="18" y="28">&#xE260;</text><text x="27" y="33">&#xE0A2;</text><text x="27" y="28">&#xE0A2;</text><text x="27" y="23">&#xE0A2;</text><text x="27" y="18">&#xE0A2;</text></svg></td></tr>
+            <tr><th scope="row">C7sus4</th><td>七挂留四度和弦 · C–F–G–B♭</td><td><svg class="inline-staff" viewBox="0 4 44 34" role="img" aria-label="C4、F4、G4、B♭4"><path class="inline-staff-lines" d="M1 8H43 M1 13H43 M1 18H43 M1 23H43 M1 28H43"/><path d="M24 33H36"/><text x="18" y="18">&#xE260;</text><text x="27" y="33">&#xE0A2;</text><text x="27" y="25.5">&#xE0A2;</text><text x="33" y="23">&#xE0A2;</text><text x="27" y="18">&#xE0A2;</text></svg></td></tr>
+          </tbody>
+        </table>
+        <p>Dm 加 C 变成 Dm7，可使它更顺畅地接 G7。Dm7 把 A 降到 A♭ 会变成半减七，使和声带一点同主音小调的颜色。F–Fm6–C 则能同时让 A→A♭→G、F→E。属七在解决之前也可先用 7sus4，保留低音与七音，让四度再落回三度。</p>
+      </section>
+
+      <section aria-labelledby="reharm-foundation-6">
+        <h2 id="reharm-foundation-6">九度、十一度与十三度延伸音</h2>
+        <p>延伸音按根音之上的复音程命名，9、11、13 分别和 2、4、6 属同一音级。命名表达在和弦中的角色，实际配音可以变换八度。C7(9) 包含 C–E–G–B♭ 与 D，Cadd9 给 C 三和弦加 D，代号本身无需七音。</p>
+        <table class="lesson-table">
+          <caption>常用延伸音</caption>
+          <thead><tr><th scope="col">和弦骨架</th><th scope="col">可选延伸音</th><th scope="col">例子</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">大七和弦</th><td>9、♯11、13</td><td>Cmaj7(♯11) 的 F♯</td></tr>
+            <tr><th scope="row">小七和弦</th><td>9、11、13</td><td>Dm7(11) 的 G</td></tr>
+            <tr><th scope="row">大小七和弦</th><td>9、♭9、♯9、♯11、13、♭13</td><td>G7(♭9) 的 A♭</td></tr>
+          </tbody>
+        </table>
+        <p>同一处可只选一个延伸音来连接前后声部。和弦三音决定基本性质，例如在 G7 上保留 B 时，C 与 B 的邻音冲突需要安排声位；若让 C 取代 B，效果就偏向挂留。</p>
+      </section>
+
+      <section aria-labelledby="reharm-foundation-7">
+        <h2 id="reharm-foundation-7">从音阶叠出调内和弦</h2>
+        <p>从某个音阶音出发，隔一个音取一个音，直到取到三音、五音和七音。在 C 大调，以 D 为根音取 D–F–A–C，得到 Dm7。以 G 为根音取 G–B–D–F，得到 G7。判断调内与否，要先说清使用的音列。</p>
+        <p>C 大调与 a 自然小调共享调号，但相同的音叠成和弦后会按不同主音编号。a 和声小调升高 G，得到含 G♯ 的 E7。a 旋律小调上行再升高 F，四级从 Dm7 变为 D7。流行及爵士和声分析采用旋律小调和弦时，通常以它的上行音列为构成依据。</p>
+      </section>
+
+      <section aria-labelledby="reharm-foundation-8">
+        <h2 id="reharm-foundation-8">调号、级数与和弦移调</h2>
+        <p>罗马数字表示根音在调中的位置。大写、小写分别提示大、小三度，° 表示减和弦。小调中的 ♭III、♭VI、♭VII 以同主音大调为参照。C 大调的 Dm7–G7–C 改到 G 大调时成为 Am7–D7–G，两者都按 ii7–V7–I 组织。</p>
+        <div class="music-demo" id="diatonic-by-key">
+          <div class="music-demo-toolbar"><h3>各调的调内四音和弦</h3><label>音阶 <select data-scale><option value="major">自然大调</option><option value="minor">自然小调</option><option value="harmonic">和声小调</option><option value="melodic">旋律小调（上行）</option></select></label><label>主音 <select data-tonic aria-label="调内和弦主音"></select></label></div>
+          <table class="lesson-table"><thead><tr><th scope="col">级数</th><th scope="col">和弦</th><th scope="col">构成音</th></tr></thead><tbody></tbody></table>
+        </div>
+      </section>
+
+      <section aria-labelledby="reharm-foundation-9">
+        <h2 id="reharm-foundation-9">主功能、下属功能与属功能</h2>
+        <p>功能说明和弦在这段进行里承担什么作用。I 提供主音稳定感，IV 或 ii 常把音乐带离主区并准备属区，V 尤其 V7 则形成回主音的预期。I–IV–V–I 是三类功能连用的一种走法，I–V–I 可以直接形成属到主的回归。</p>
+        <p>G7 的 B 与 F 相隔六个半音。接到 C 时，B→C、F→E 各走一个半音，这个倾向进入稳定和弦的过程称为解决。小调采用含升高七级的 V7 时，也会出现同样明确的导音解决。</p>
+        <details class="lesson-aside"><summary>四类音阶的常见功能分组</summary>
+          <div class="lesson-aside-content">
+          <table class="lesson-table">
+            <thead><tr><th scope="col">音阶</th><th scope="col">主区</th><th scope="col">下属区</th><th scope="col">属区</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">C 大调</th><td>Cmaj7、Em7、Am7</td><td>Dm7、Fmaj7</td><td>G7、Bm7(♭5)</td></tr>
+              <tr><th scope="row">a 自然小调</th><td>Am7、Cmaj7、Fmaj7</td><td>Bm7(♭5)、Dm7、Fmaj7、G7</td><td>Em7</td></tr>
+              <tr><th scope="row">a 和声小调</th><td>Am(maj7)、Cmaj7(♯5)、Fmaj7</td><td>Bm7(♭5)、Dm7、Fmaj7</td><td>E7、G♯dim7</td></tr>
+              <tr><th scope="row">a 旋律小调</th><td>Am(maj7)、Cmaj7(♯5)、F♯m7(♭5)</td><td>Bm7、D7、F♯m7(♭5)</td><td>E7、G♯m7(♭5)</td></tr>
+            </tbody>
+          </table>
+          <p>表中是常见用法。Fmaj7 可延续 a 小调的主区，也可作为属前和声。a 自然小调的 Em7 缺少导音 G♯，所以它的属倾向比 E7 弱。</p>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="reharm-foundation-10">
+        <h2 id="reharm-foundation-10">代理和弦与共同音</h2>
+        <p>代理和弦保留原位置的大致功能，同时改变根音、排列或色彩。C 大调中 C 可换 Em 或 Am，F 可换 Dm，G7 有时可换含 B、D、F 的 Bm7(♭5)。a 自然小调中 Am 可换 C 或 F，Dm 可借助 Bdim、F 或 G 承接。Em 的属区位置若要保留，换成 E7 属于引入小调导音的改写。</p>
+        <p>功能相近只给出候选。旋律如果在 C 处停在 C，换 Em 时这个音会变成 E 之上的降六度。要继续看旋律时值、音区和随后的和弦，再决定用 Em、改用 Am，还是保留 C。</p>
+      </section>
+
+      <section aria-labelledby="reharm-foundation-11">
+        <h2 id="reharm-foundation-11">二–五与二–五–一进行</h2>
+        <p>面向 C 大调的 ii–V 是 Dm7–G7，根音 D→G 为上行四度，也可放成下行五度。再接主和弦成为 ii–V–I。前面可接 C–Am，也可接 F–Em。以 a 小调为终点时，常用 Bm7(♭5)–E7–Am，E7 的 G♯ 负责把线条引到 A。</p>
+        <div id="reharm-intro-cadence" class="reharm-example"></div>
+      </section>
+
+      <section aria-labelledby="reharm-foundation-12">
+        <h2 id="reharm-foundation-12">副属和弦与局部目标</h2>
+        <p>副属和弦把某个非主和弦暂时当成局部目标。以目标根音为基准，向上找纯五度，再在那个音上写大小七和弦。C 大调指向 Dm7 用 A7，记作 V7/ii，A7 的三音 C♯ 上行到 D。若停留时间很短，后面仍回 C，局部主音化就不会取代全段的主调。</p>
+        <p>C7–Fmaj7、D7–G7、E7–Am7、A7–Dm7、B7–Em7 是 C 大调常用的五个目标关系。a 自然小调同样可以给 Dm7、Em7、Fmaj7、G7、Cmaj7 增加各自的局部属和弦。减三和弦或半减七缺少稳定的局部主和弦音响，通常不照这套方式主音化。</p>
+        <details class="lesson-aside"><summary>各调的副属和弦</summary>
+          <div class="lesson-aside-content">
+          <div class="music-demo" id="secondary-by-key">
+            <div class="music-demo-toolbar"><h3>目标与副属</h3><label>音阶 <select data-scale><option value="major">自然大调</option><option value="minor">自然小调</option></select></label><label>主音 <select data-tonic aria-label="副属和弦所在调的主音"></select></label></div>
+            <table class="lesson-table"><thead><tr><th scope="col">目标级数</th><th scope="col">副属和弦与目标</th></tr></thead><tbody></tbody></table>
+          </div>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="reharm-foundation-13">
+        <h2 id="reharm-foundation-13">斜线和弦与低音</h2>
+        <p>斜线左边写上层和弦，右边写实际最低音。C/E 的 E 是 C 的三音，因此是第一转位。C/D 的 D 在 C 三和弦之外，先弹 D 低音，上方的 C–E–G 相对 D 分别是小七度、九度与挂留四度。它近似省去五音的 D7sus4(9)，可放在通往 G 的属区。</p>
+        <div id="reharm-intro-slash" class="reharm-example"></div>
+      </section>
+
+      <section aria-labelledby="reharm-foundation-14">
+        <h2 id="reharm-foundation-14">三全音替代与五度圈</h2>
+        <p>G7 的三音 B、七音 F 与 D♭7 的七音 C♭、三音 F 是同一对三全音的等音拼写。换成 D♭7 后，这对音仍可以向 C、E 解决，低音由原来的 G→C 改成 D♭→C 下行半音。应用这类替代时，还要检查旋律和 D♭7 新带来的 D♭、A♭。</p>
+        <figure class="fifths-wheel" style="max-width: 17rem"><figcaption>五度圈上相对的 G 与 D♭</figcaption><svg viewBox="0 0 260 260" role="img" aria-label="五度圈上 G 与 D♭ 位于同一直径的两端"><circle class="fifths-ring" cx="130" cy="130" r="123"/><path d="M171.6 57.9L88.4 202.1" fill="none" stroke="var(--accent)" stroke-width="1.5"/><text x="130.0" y="31.0">C</text><text x="182.0" y="44.9" class="fifths-center">G</text><text x="220.1" y="83.0">D</text><text x="234.0" y="135.0">A</text><text x="220.1" y="187.0">E</text><text x="182.0" y="225.1">B</text><text x="130.0" y="239.0">F♯</text><text x="78.0" y="225.1" class="fifths-center">D♭</text><text x="39.9" y="187.0">A♭</text><text x="26.0" y="135.0">E♭</text><text x="39.9" y="83.0">B♭</text><text x="78.0" y="44.9">F</text></svg></figure>
+        <p>五度圈沿顺时针以纯五度排列。跨过六格到正对面，根音相差三全音。正对的两个大小七和弦因而能共享这一对关键音，名称和作用仍要结合实际解决方向来理解。</p>
+        <div id="reharm-intro-tritone" class="reharm-example"></div>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节"><a href="./index.html"><span>返回</span><strong>本书目录</strong></a><a href="./reharmonization-1.html" rel="next"><span>下一章</span><strong>基础重配手法</strong></a></nav>
+    </main>
+  </body>
+</html>

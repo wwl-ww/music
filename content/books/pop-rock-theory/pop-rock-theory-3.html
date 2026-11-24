@@ -50,7 +50,10 @@
         <p>叠三度是常见的构造办法。相邻的两个音也能同时出现，例如加九和弦里的 C 和 D。它们靠得很近、又处于低音区时，轮廓往往较模糊，分到不同音区后，两音更容易分开辨认。</p>
         <details class="lesson-aside">
           <summary>定弦频率与十二平均律</summary>
-          <div class="lesson-aside-content"><p>频率是每秒振动的次数，单位是赫兹。乐队常以 A4 = 440 Hz 为基准调音。十二平均律把八度等分为十二个半音，相邻半音的频率比固定。连续叠纯五度所得的音高与十二平均律中的相应音略有差别，因此键盘上等音同键的情况取决于采用的律制。</p></div>
+          <div class="lesson-aside-content"><ul>
+            <li>频率是每秒振动的次数，单位是赫兹。乐队常用 A4 = 440 Hz 作调音起点。</li>
+            <li>五度相生律按纯五度推算其余音。纯律也用简单的频率比，例如纯律大三度的频率比是 5∶4。十二平均律让相邻半音的频率比保持固定，换调后仍能复用相同的音程。</li>
+          </ul></div>
         </details>
       </section>
 
@@ -69,12 +72,13 @@
             <tr><th scope="row">Cm(maj7)</th><td>C–E♭–G–B</td><td>小三度、纯五度、大七度</td></tr>
           </tbody>
         </table>
-        <p>♭5、♯5 改的是和弦的五音。C7(♭5) 将 G 改为 G♭，C7(♯5) 改为 G♯。Cm(♭5) 也写作 Cdim，构成音是 C–E♭–G♭。Caug 为 C–E–G♯。减、增三和弦都保留从根音数三音和五音的结构。</p>
+        <p>♭5、♯5 改的是和弦的五音。C7(♭5) 将 G 改为 G♭，C7(♯5) 改为 G♯。从 B 算时，纯五音是 F♯，降五音则是 F。Cm(♭5) 也写作 Cdim，构成音是 C–E♭–G♭。Caug 为 C–E–G♯。减、增三和弦都保留从根音数三音和五音的结构。</p>
         <div class="music-demo" id="rock-chord-seventh">
-          <div class="music-demo-toolbar"><h3>C、Cmaj7、C7 与 Cm7 的构成</h3><div data-writing-choices role="group" aria-label="选择和弦"></div></div>
+          <div class="music-demo-toolbar"><h3>同根音上的三音与七音变化</h3><div data-writing-choices role="group" aria-label="选择和弦"></div></div>
           <p class="music-demo-cue" data-writing-description aria-live="polite">基准为 C 大三和弦，三个音是 C、E、G。</p>
           <figure data-writing-score aria-label="同一根音上不同三音与七音的五线谱"></figure>
         </div>
+        <p>C7 与 Cm7 的七音同为 B♭，两者的差别在 E 与 E♭。Cm7 与 Cm(maj7) 则同用 E♭，区别在 B♭ 与 B。两个方向各只换一颗音，对应符号里的 m 和 maj7 各管什么。</p>
       </section>
 
       <section aria-labelledby="rock-3-extensions">
@@ -97,7 +101,26 @@
           <p class="music-demo-cue" data-writing-description aria-live="polite">Cadd9 保留三和弦，顶音 D 是附加的九音。</p>
           <figure data-writing-score aria-label="Cadd9、C9 和变化九音的比较"></figure>
         </div>
-        <p>挂留常用来接住前一个和弦里的音。G7–Csus4–C 中，F 在和弦根音由 G 变为 C 时可以继续响，随后下行半音到 E。C–Csus4–C 则让原来的 E 暂时上行到 F 再返回。在 G7–G7sus4–G7 中，变化的是 B–C–B，七音 F 仍然存在。</p>
+        <p>挂留可以接住前一个和弦里的音，让它在换低音后再解决。C–Csus4–C 中是 E 暂升到 F 再返回；G7–G7sus4–G7 中是 B 暂升到 C，七音 F 可以保留。</p>
+        <div id="rock-3-extensions-voice-staves" class="voice-leading-staves voice-leading-phrases" role="group" aria-label="F 延到 C 低音上再解决">
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>F 延到 C 低音上再解决</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 164 127" style="--voice-leading-width: 164px" role="img" aria-label="G7、Csus4、C。顶音 F4、F4、E4；低音 G2、C3、C3。低音先换到 C，F 稍后降半音到 E。">
+              <text class="voice-leading-chord-name" x="38" y="12">G7</text><text class="voice-leading-chord-name" x="83" y="12">Csus4</text><text class="voice-leading-chord-name" x="128" y="12">C</text>
+              <path class="inline-staff-lines" d="M5 25H159 M5 30H159 M5 35H159 M5 40H159 M5 45H159"/>
+              <text x="8" y="40">&#xE050;</text>
+              <path class="voice-leading-connector" d="M41 46.5Q62 54.5 79 46.5 M90 42.5L121 45 M117 42.6L121 45 117 47.4"/>
+              <text x="34" y="42.5">&#xE0A2;</text><text x="79" y="42.5">&#xE0A2;</text><text x="124" y="45">&#xE0A2;</text>
+              <text class="voice-leading-note-name" x="38" y="63">F</text><text class="voice-leading-note-name" x="83" y="63">F</text><text class="voice-leading-note-name" x="128" y="63">E</text>
+              <path class="inline-staff-lines" d="M5 81H159 M5 86H159 M5 91H159 M5 96H159 M5 101H159"/>
+              <text x="8" y="86">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M45 101L76 93.5 M72 91.1L76 93.5 72 95.9 M90 93.5L121 93.5 M117 91.1L121 93.5 117 95.9"/>
+              <text x="34" y="101">&#xE0A2;</text><text x="79" y="93.5">&#xE0A2;</text><text x="124" y="93.5">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="38" y="119">G</text><text class="voice-leading-note-name is-bass" x="83" y="119">C</text><text class="voice-leading-note-name is-bass" x="128" y="119">C</text>
+            </svg>
+            <p class="voice-leading-distance is-chromatic">低音先换到 C，F 稍后降半音到 E</p>
+          </figure>
+        </div>
         <div class="music-demo" id="rock-chord-suspension">
           <div class="music-demo-toolbar"><h3>四度挂留的准备与解决</h3><div data-writing-choices role="group" aria-label="选择挂留进行"></div></div>
           <p class="music-demo-cue" data-writing-description aria-live="polite">F 从 G7 持续到 Csus4，换到 C 后下降到 E。</p>
@@ -123,14 +146,14 @@
             <tr><th scope="row">vii°／viiø7</th><td>Bdim → Bm7(♭5)</td><td>B–D–F–A</td><td>F♯dim → F♯m7(♭5)</td></tr>
           </tbody>
         </table>
-        <p>在大调中，I、IV、V 是大三和弦，ii、iii、vi 是小三和弦，vii° 是减三和弦。叠加七音后，I 和 IV 是大七和弦，V 是大小七和弦，第七级成为半减七和弦。以 G 大调为例，F♯ 属于调内，D7 与 F♯m7(♭5) 都要用到它。</p>
+        <p>在大调中，I、IV、V 是大三和弦，ii、iii、vi 是小三和弦，vii° 是减三和弦。叠加七音后，I 和 IV 是大七和弦，ii、iii、vi 是小七和弦，V 是大小七和弦，vii 是半减七和弦。以 G 大调为例，F♯ 属于调内，D7 与 F♯m7(♭5) 都要用到它。</p>
         <p>把高八度主和弦写在第八处，I 至 IV 的性质是「大、小、小、大」，V 至高八度 I 则是「大、小、减、大」。前后两组很接近，第七级的减五度是辨认第二组的线索。</p>
         <aside class="lesson-callout"><h3>调号管整个音阶</h3><p>升号按 F、C、G、D、A、E、B 累加，降号按 B、E、A、D、G、C、F 累加。升号顺序每次上行纯五度或下行纯四度，降号方向相反。一个音写进调号后，任何级上的和弦用到这个字母都按调号取音。</p></aside>
       </section>
 
       <section aria-labelledby="rock-3-minor">
         <h2 id="rock-3-minor">小调属七与局部主音</h2>
-        <p>C 大调与 A 自然小调使用同一组音，和弦从哪个音起算会随主音改变。以 A 为第一级，自然小调的三和弦依次是 Am、Bdim、C、Dm、Em、F、G。它们在 C 大调里可以记成 vi、vii°、I、ii、iii、IV、V。分析小调乐句时，标 i、ii°、♭III、iv、v、♭VI、♭VII 可以直接读出相对小调主音的功能和位置。这里的降号参照同主音大调的音级。</p>
+        <p>C 大调与 A 自然小调使用同一组音，和弦的调内级数随主音改变。以 A 为第一级，自然小调的三和弦依次是 Am、Bdim、C、Dm、Em、F、G。它们在 C 大调里可以记成 vi、vii°、I、ii、iii、IV、V。在 A 小调里则标作 i、ii°、♭III、iv、v、♭VI、♭VII。这里的降号参照同主音大调的音级，和弦的功能还要结合乐句判断。</p>
         <p>在 A 小调，Em7 的 G 距 A 一个全音。把 G 升为 G♯，E7 的三音到 A 只需上行一个半音，七音 D 则可到 Am 的三音 C。这个做法取自和声小调，可与同一乐句中其余自然小调和弦共用。</p>
         <p>在 C 大调中，也能临时用 E7 引出 Am。若乐句随后经 Dm–G7 回 C，E7 的作用是短暂强调第六级，记为 <strong>V7/vi</strong>。同理，D7–G、A7–Dm 分别强调五级和二级。根音下行纯五度（等价于上行纯四度）给出可能的去向，再由三音、七音的解决和段落落点来核实。</p>
         <div class="music-demo" id="rock-chord-minor-dominant">
@@ -140,10 +163,6 @@
         </div>
         <p>记谱时，先用低音猜根音，再用三音或七音检验和弦名称，最后由句尾判断它指向哪个主音。相同的属七构成可以出现在不同位置，这三步能把听觉上的猜测变成可以在谱面核对的分析。</p>
       </section>
-      <nav class="chapter-pagination" aria-label="相邻章节">
-        <a href="./pop-rock-theory-2.html" rel="prev"><span>上一章</span><strong>调与调号</strong></a>
-        <a href="./pop-rock-theory-4.html" rel="next"><span>下一章</span><strong>和弦进行与低音线条</strong></a>
-      </nav>
     </main>
   </body>
 </html>

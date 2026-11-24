@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>电音浩室｜图解乐风编曲入门</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./genre-arrangement-11.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解乐风编曲入门</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">乐风 05</span> 电音浩室</h1>
+      <p class="intro">这段电音浩室示范在 120 BPM 下始终保持 A 的低音中心。底鼓给出四个拍头，贝斯与领奏各自使用短循环，层次由它们何时起音、何时留空以及音色差异来建立。</p>
+
+      <section aria-labelledby="genre-electro-center">
+        <h2 id="genre-electro-center">固定 A 低音与单音领奏</h2>
+        <p>A–C–E 可以组成 Am。整段即使没有声部同时按下这三个音，反复出现的 A 低音、落在 C 和 E 的旋律，以及合成领奏用到的 A 小调音阶，依然能建立小调中心。这里的 Am 是对调性和音响的说明，也给编曲者一个固定低音的起点。</p>
+        <table class="lesson-table lesson-table-dense">
+          <caption>固定 A 时旋律音的不同作用</caption>
+          <thead><tr><th scope="col">音</th><th scope="col">相对 A 的位置</th><th scope="col">编配处理</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">C、E</th><td>小三度、纯五度</td><td>可作为清楚的句中支点。</td></tr>
+            <tr><th scope="row">G、D</th><td>小七度、纯四度（可视为十一音）</td><td>作为旋律颜色出现，无须增加持续的 Am7 或 Am11 和弦。</td></tr>
+            <tr><th scope="row">F、B</th><td>小六度、大二度</td><td>留给旋律本身。领奏在 F 附近收短 E，可避免两条线长期贴成半音。</td></tr>
+          </tbody>
+        </table>
+        <p>单和弦是一种示范选择。换弦减少后，音乐必须靠鼓组的拍头、贝斯的错位、领奏的音色与分句推进。将贝斯每小节重复、领奏每两小节重复，可以让听众分辨哪一层负责律动、哪一层负责乐句。保持第二次出现的大部分材料，句尾再留空或变动一个起音，就可以做出段落差别。</p>
+      </section>
+
+      <section aria-labelledby="genre-electro-rhythm">
+        <h2 id="genre-electro-rhythm">四拍底鼓与交错的贝斯</h2>
+        <p>底鼓每拍一次。第一层选择起音轮廓清楚、衰减带一点音高的声音，另一层负责加厚第 1、3 拍。两层同时响时，音量较大并非唯一判断标准。较长的尾音若干扰 A 贝斯，可以缩短或降低第二层，重新对齐两个起音。</p>
+        <p>小鼓给第 2、4 拍明显反拍，闭镲保持八分脉冲，在第 2、4 拍各填一个更轻的十六分音符。沙铃落在每拍的八分反拍。可让部分短镲稍晚于完全均分的位置，形成轻微摇摆。保留四拍底鼓的拍头作为基准，避免让所有声部一起偏移。下方格线定位的是均分拍格，标出的轻重仍可作曲内分层。</p>
+        <div id="genre-electro-groove" class="music-demo">
+          <div class="music-demo-toolbar"><h3>底鼓拍头与合成贝斯的起音</h3>
+            <label>层次 <select><option value="foundation">底鼓＋贝斯</option><option value="drums">完整鼓组 · 均分</option><option value="swing">完整鼓组 · 十六分摇摆</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">底鼓稳在四个拍头。贝斯从第 1 拍开始，也会在拍内和反拍起音，并在部分拍头让出空隙。</p>
+          <div data-arrangement-grid class="arrangement-grid-frame"></div>
+          <figure aria-label="底鼓与贝斯节奏循环试听"></figure>
+        </div>
+        <p>贝斯音高可以整小节只用 A。这里要控制的是音符长度，给一部分底鼓留出起音空间。网格里，第 2 拍的底鼓敲在一个持续的贝斯音中，第 3 拍的拍头暂时只给底鼓，贝斯到后半拍才补上。两种错开方式都保留四拍骨架，也使同一个 A 在一小节里有不同的轻重。</p>
+      </section>
+
+      <section aria-labelledby="genre-electro-sound">
+        <h2 id="genre-electro-sound">少量音轨的音色与混音</h2>
+        <table class="lesson-table lesson-table-dense">
+          <caption>电音浩室示范的三组音源</caption>
+          <thead><tr><th scope="col">音轨</th><th scope="col">音色目标</th><th scope="col">合奏检查</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">合成鼓组</th><td>两层底鼓各给轮廓或厚度，小鼓的起音扎实，闭镲和沙铃较轻。</td><td>独奏可以确认起音，叠听才能判断是否清楚。可以把效果合适的打击音整理成自用鼓组。</td></tr>
+            <tr><th scope="row">合成贝斯</th><td>低频清楚、收尾鲜明，也可从通用合成器音色改造。</td><td>用同一短句循环更换音色，检查音尾会不会遮住下一次底鼓。</td></tr>
+            <tr><th scope="row">合成领奏</th><td>醒目的单音领奏，可有少量饱和或失真成分。</td><td>线条要和主要旋律分开。主旋律持续时，领奏留空或缩小活动音区。</td></tr>
+          </tbody>
+        </table>
+        <p>编制越少，每个音色的瑕疵越容易听见。先调整鼓相对音量与尾音，再决定是否为小鼓或底鼓加压缩。预制电子鼓样本往往已做动态处理，可直接判断合奏中的起音与厚度。若要让人声融入律动，轻微的节奏延迟能延伸声音，原声仍需保有核心轮廓。</p>
+      <div id="genre-electro-house-arrangement" class="music-demo programmatic-score">
+        <div class="music-demo-toolbar"><h3>同一旋律的电音浩室编配</h3>
+          <label>版本 <select><option value="arranged">电音浩室版</option><option value="base">基础和声</option><option value="melody">纯旋律</option></select></label>
+        </div>
+        <p class="music-demo-cue" aria-live="polite">合成贝斯只用 A。四拍底鼓和偏移的贝斯起音交错，短合成领奏用两小节为一组。</p>
+        <figure aria-label="同一旋律的电音浩室、基础和声与纯旋律五线谱"></figure>
+      </div>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./genre-arrangement-10.html" rel="prev"><span>乐风 04</span><strong>巴萨诺瓦</strong></a>
+        <a href="./genre-arrangement-12.html" rel="next"><span>乐风 06</span><strong>抒情</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

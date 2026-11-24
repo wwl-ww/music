@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第一章 基础重配手法｜图解重配和声入门</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+    <script type="module" src="./reharmonization-1.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解重配和声入门</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">第一章</span> 基础重配手法</h1>
+      <p class="intro">重配从决定哪些位置需要变化开始。和声路线已经合适时，可以只添一个音。遇到句尾缺少方向，才考虑替换和弦或在属和弦前增加准备。十个例子以 C 大调和 A 小调的简单进行为底，每组对照保留同一条旋律，让和声变动的作用听得清楚。</p>
+      <p>C 大调常用 C–Am–Dm–G，末尾的 G 可以接回开头的 C。A 小调的例子用 Am–Dm–E–A7–Dm–E–Am。中途的 A7 仍以 A 为根音，却用 C♯ 把音乐导向后面的 Dm。一次循环可以暂时强调一个和弦，再回到原调。</p>
+
+      <section aria-labelledby="reharm-01">
+        <h2 id="reharm-01">01 从三和弦到七和弦</h2>
+        <p>和声走向合适、只是音响太素时，可以保留根音、三音与五音，只加一个七音。C 加 B 得 Cmaj7。Am 加 G 得 Am7，Dm 加 C 得 Dm7。这三个新音都属于 C 大调，小调三和弦加上小七度后，原先比较直接的音响会柔和一些。</p>
+        <p>示例保留循环末端的 G 三和弦，让增加七音的色彩集中在前三个和弦。三和弦适合直接、简明的段落。需要较开阔的音响时，可以从落点附近的大七和弦试起，核对新增的七音会怎样衬托旋律。</p>
+        <div id="technique-01" class="reharm-example"></div>
+        <details class="lesson-aside">
+          <summary>循环进行的其他骨架</summary>
+          <div class="lesson-aside-content">
+            <p>循环进行的末尾容易接回同一组和弦的开头。除了 I–vi–ii–V，还可以用 I–IV–ii–V、I–vi–IV–V 或 ii–V–I–vi。级数说明根音位置，大小性质由调式与写法决定。重配一轮循环时，首尾接缝也要一起核对。</p>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="reharm-02">
+        <h2 id="reharm-02">02 形成 ii–V–I 进行</h2>
+        <p>句尾已经有 E–Am 时，可以在 E 前准备一个二级和弦。A 小调里的 Dm 和 Bm7(♭5) 共用 D、F、A，都可以承担属前功能。把 E 前的 Dm 换成 Bm7(♭5)，根音 B–E–A 便构成二–五–一。E 的 G♯ 向上解决到 A，终点很明确。</p>
+        <p>示例第一处把 Dm 整段换成 Bm7(♭5)，经 E 暂时落在 A7，再去 Dm。第二处保留 Dm 的前两拍，仅把后两拍换成 Bm7(♭5)，最终经 E 回到 Am。二–五–一用根音的级数表示。取新调的二级和五级来准备它的主和弦，也可以用来衔接转调。</p>
+        <div id="technique-02" class="reharm-example"></div>
+        <details class="lesson-aside">
+          <summary>大调、小调与局部目标</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>C 大调的常见写法是 Dm7–G7–C，即 ii7–V7–I。</li>
+              <li>A 小调常用 Bm7(♭5)–E7–Am。E 用属三和弦或属七和弦都可以，七音 D 加入后会加强解决的方向。</li>
+              <li>A7 和 Am 共用根音 A，但 A7 的 C♯ 继续指向 D。暂时在 A7 上转向 Dm，和最后在 Am 上结束，承担的是两种任务。</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="reharm-03">
+        <h2 id="reharm-03">03 用调内代理和弦替换</h2>
+        <p>一小节和声停留太久时，可以在相近功能范围内安排一次换位。示例把 Am 分成 Em–Am。Em 和 Am 都与 C 有共同音，可在这段音乐的主功能区域内使用。局部也能听成 A 小调的 v–i，但短短半小节的 Em 并未改变全段的 C 大调中心。</p>
+        <p>接下来的 Dm 换成 F。它们同属属前区域，三和弦共用 F 和 A，仍然可以接 G。安排调内代理时，可从 I、iii、vi 或 IV、ii 这两组出发，再检查哪个根音和声位最适合原旋律。句尾需要明确主音时，I 往往比 iii 或 vi 更能收住。</p>
+        <div id="technique-03" class="reharm-example"></div>
+      </section>
+
+      <section aria-labelledby="reharm-04">
+        <h2 id="reharm-04">04 用副属和弦强调下一站</h2>
+        <p>要让某个调内和弦的出现更有分量，可以先把它视为局部目标，在根音上方纯五度建立属七和弦。A 上方的纯五度是 E，因此 E7 指向 Am，G♯ 是引到 A 的导音。D 上方的纯五度是 A，因此 A7 指向 Dm，C♯ 引到 D。这两个和弦各自带入一个 C 大调以外的音。</p>
+        <p>示例把 E7 放在 C 的后两拍，把 A7 放在 Am 的后两拍，两个目标和弦仍落在下一小节的第一拍。张力在半小节内升高，再随目标和弦的进入缓解。复核旋律时，优先看新增导音附近的长音，例如 E7 中的 G♯ 是否会和旋律中的 G 长时间挨在一起。</p>
+        <div id="technique-04" class="reharm-example"></div>
+      </section>
+
+      <section aria-labelledby="reharm-05">
+        <h2 id="reharm-05">05 在七和弦上增加延伸音</h2>
+        <p>和弦骨架与低音都能保留时，可以在七和弦上加入九音或十三音。九音相当于根音上方跨八度的二度，十三音相当于跨八度的六度。标号表示和弦音的关系，实际可以换到合适的八度，给旋律腾出空间。</p>
+        <table class="lesson-table lesson-table-dense">
+          <caption>循环进行中的延伸音</caption>
+          <thead><tr><th scope="col">和弦</th><th scope="col">写法</th><th scope="col">加上的音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Cmaj7</th><td>Cmaj9</td><td>D（九音）</td></tr>
+            <tr><th scope="row">Am7</th><td>Am9</td><td>B（九音）</td></tr>
+            <tr><th scope="row">Dm7</th><td>Dm9</td><td>E（九音）</td></tr>
+            <tr><th scope="row">G7</th><td>G7(9,13)</td><td>A（九音）、E（十三音）</td></tr>
+          </tbody>
+        </table>
+        <p>九音能增加一层色彩，同时保留和弦的基本类型。G7(9,13) 则保留 B 和 F 这两个决定属功能的音，同时把 A 和 E 留在上方。可以省略五音 D，让四个关键音的层次更清楚。</p>
+        <div id="technique-05" class="reharm-example"></div>
+      </section>
+
+      <section aria-labelledby="reharm-06">
+        <h2 id="reharm-06">06 用三全音替代改写属低音</h2>
+        <p>属七和弦的三音和七音相距三全音。根音相距三全音的另一枚属七和弦，也含有这一对等音，例如 G7 的 B、F 等同于 D♭7 的 C♭、F。保留这对有解决倾向的音，属低音就能从 G 换成 D♭，以半音下行到 C。五度圈上两个根音互在对侧，也可以用来查找对应关系。</p>
+        <p>原型的 Am 先变成指向 Dm 的 A7，再以 E♭7 替代；通往 C 的 G7 同样可以换成 D♭7。上方在几个和弦分别取九音，可配出另一条接近的线。</p>
+        <div id="reharm-06-voice-staves" class="voice-leading-staves voice-leading-phrases voice-leading-extended" role="group" aria-label="用副属和属七、两处都改成替代属和弦">
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>用副属和属七</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 209 127" style="--voice-leading-width: 209px" role="img" aria-label="A7、Dm7、G7、C。顶音 G4、F4、F4、E4；低音 A2、D3、G2、C3。先确定两个实际落点 Dm7、C。">
+              <text class="voice-leading-chord-name" x="38" y="12">A7</text><text class="voice-leading-chord-name" x="83" y="12">Dm7</text><text class="voice-leading-chord-name" x="128" y="12">G7</text><text class="voice-leading-chord-name" x="173" y="12">C</text>
+              <path class="inline-staff-lines" d="M5 25H204 M5 30H204 M5 35H204 M5 40H204 M5 45H204"/>
+              <text x="8" y="40">&#xE050;</text>
+              <path class="voice-leading-connector" d="M45 40L76 42.5 M72 40.1L76 42.5 72 44.9 M90 42.5L121 42.5 M117 40.1L121 42.5 117 44.9 M135 42.5L166 45 M162 42.6L166 45 162 47.4"/>
+              <text x="34" y="40">&#xE0A2;</text><text x="79" y="42.5">&#xE0A2;</text><text x="124" y="42.5">&#xE0A2;</text><text x="169" y="45">&#xE0A2;</text>
+              <text class="voice-leading-note-name" x="38" y="63">G</text><text class="voice-leading-note-name" x="83" y="63">F</text><text class="voice-leading-note-name" x="128" y="63">F</text><text class="voice-leading-note-name" x="173" y="63">E</text>
+              <path class="inline-staff-lines" d="M5 81H204 M5 86H204 M5 91H204 M5 96H204 M5 101H204"/>
+              <text x="8" y="86">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M45 98.5L76 91 M72 88.6L76 91 72 93.4 M90 91L121 101 M117 98.6L121 101 117 103.4 M135 101L166 93.5 M162 91.1L166 93.5 162 95.9"/>
+              <text x="34" y="98.5">&#xE0A2;</text><text x="79" y="91">&#xE0A2;</text><text x="124" y="101">&#xE0A2;</text><text x="169" y="93.5">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="38" y="119">A</text><text class="voice-leading-note-name is-bass" x="83" y="119">D</text><text class="voice-leading-note-name is-bass" x="128" y="119">G</text><text class="voice-leading-note-name is-bass" x="173" y="119">C</text>
+            </svg>
+            <p class="voice-leading-distance">先确定两个实际落点 Dm7、C</p>
+          </figure>
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>两处都改成替代属和弦</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 209 127" style="--voice-leading-width: 209px" role="img" aria-label="E♭9、Dm9、D♭9、C。顶音 F4、E4、E♭4、E4；低音 E♭3、D3、D♭3、C3。低音连续三次下行半音。">
+              <text class="voice-leading-chord-name" x="38" y="12">E♭9</text><text class="voice-leading-chord-name" x="83" y="12">Dm9</text><text class="voice-leading-chord-name" x="128" y="12">D♭9</text><text class="voice-leading-chord-name" x="173" y="12">C</text>
+              <path class="inline-staff-lines" d="M5 25H204 M5 30H204 M5 35H204 M5 40H204 M5 45H204"/>
+              <text x="8" y="40">&#xE050;</text>
+              <path class="voice-leading-connector" d="M45 42.5L76 45 M72 42.6L76 45 72 47.4 M90 45L111 45 M107 42.6L111 45 107 47.4 M135 45L156 45 M152 42.6L156 45 152 47.4"/>
+              <text x="114" y="45">&#xE260;</text><text x="159" y="45">&#xE261;</text>
+              <text x="34" y="42.5">&#xE0A2;</text><text x="79" y="45">&#xE0A2;</text><text x="124" y="45">&#xE0A2;</text><text x="169" y="45">&#xE0A2;</text>
+              <text class="voice-leading-note-name" x="38" y="63">F</text><text class="voice-leading-note-name" x="83" y="63">E</text><text class="voice-leading-note-name" x="128" y="63">E♭</text><text class="voice-leading-note-name" x="173" y="63">E</text>
+              <path class="inline-staff-lines" d="M5 81H204 M5 86H204 M5 91H204 M5 96H204 M5 101H204"/>
+              <text x="8" y="86">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M45 88.5L76 91 M72 88.6L76 91 72 93.4 M90 91L111 91 M107 88.6L111 91 107 93.4 M135 91L166 93.5 M162 91.1L166 93.5 162 95.9"/>
+              <text x="24" y="88.5">&#xE260;</text><text x="114" y="91">&#xE260;</text>
+              <text x="34" y="88.5">&#xE0A2;</text><text x="79" y="91">&#xE0A2;</text><text x="124" y="91">&#xE0A2;</text><text x="169" y="93.5">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="38" y="119">E♭</text><text class="voice-leading-note-name is-bass" x="83" y="119">D</text><text class="voice-leading-note-name is-bass" x="128" y="119">D♭</text><text class="voice-leading-note-name is-bass" x="173" y="119">C</text>
+            </svg>
+            <p class="voice-leading-distance is-chromatic">低音连续三次下行半音</p>
+          </figure>
+        </div>
+        <table class="lesson-table lesson-table-dense">
+          <caption>三条同时下行半音的声部</caption>
+          <thead><tr><th scope="col">声部</th><th scope="col">E♭9</th><th scope="col">Dm9</th><th scope="col">D♭9</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">根音</th><td>E♭</td><td>D</td><td>D♭</td></tr>
+            <tr><th scope="row">七音</th><td>D♭</td><td>C</td><td>C♭（等音 B）</td></tr>
+            <tr><th scope="row">九音</th><td>F</td><td>E</td><td>E♭</td></tr>
+          </tbody>
+        </table>
+        <div id="technique-06" class="reharm-example"></div>
+      </section>
+
+      <section aria-labelledby="reharm-07">
+        <h2 id="reharm-07">07 用减七和弦连接相邻低音</h2>
+        <p>Am 的 A、C 能保留在 E♭dim7 之中。后者的四个音是 E♭、G♭、B♭♭、D♭♭，B♭♭ 与 D♭♭ 分别和 A、C 等音。两个共同音给替换留下连接点，另外两个音则带来新的紧张感。共同音多只是一个选取线索，仍要核对旋律和下一和弦。</p>
+        <p>把 E 放在 Cmaj9/E 的最低处，再由 E♭dim7 接入 Dm9。夹在两处之间、负责低音衔接的减和弦称为经过减和弦。三个和弦都能托住实际音高 C，减七和弦里的这个音按构成可拼成 D♭♭。</p>
+        <div id="reharm-07-voice-staves" class="voice-leading-staves voice-leading-phrases" role="group" aria-label="经过减七下方的短半音线">
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>经过减七下方的短半音线</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 164 132" style="--voice-leading-width: 164px" role="img" aria-label="Cmaj9/E、E♭dim7、Dm9。伴随声部 C4、C4、C4；低音 E3、E♭3、D3。保留上方 C，低音下降两次半音。">
+              <text class="voice-leading-chord-name" x="38" y="12">Cmaj9/E</text><text class="voice-leading-chord-name" x="83" y="12">E♭dim7</text><text class="voice-leading-chord-name" x="128" y="12">Dm9</text>
+              <path class="inline-staff-lines" d="M5 25H159 M5 30H159 M5 35H159 M5 40H159 M5 45H159"/>
+              <text x="8" y="40">&#xE050;</text>
+              <path d="M30 50H46 M75 50H91 M120 50H136"/>
+              <path class="voice-leading-connector" d="M41 54Q62 62 79 54 M86 54Q107 62 124 54"/>
+              <text x="34" y="50">&#xE0A2;</text><text x="79" y="50">&#xE0A2;</text><text x="124" y="50">&#xE0A2;</text>
+              <text class="voice-leading-note-name" x="38" y="68">C</text><text class="voice-leading-note-name" x="83" y="68">C</text><text class="voice-leading-note-name" x="128" y="68">C</text>
+              <path class="inline-staff-lines" d="M5 86H159 M5 91H159 M5 96H159 M5 101H159 M5 106H159"/>
+              <text x="8" y="91">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M45 93.5L66 93.5 M62 91.1L66 93.5 62 95.9 M90 93.5L121 96 M117 93.6L121 96 117 98.4"/>
+              <text x="69" y="93.5">&#xE260;</text>
+              <text x="34" y="93.5">&#xE0A2;</text><text x="79" y="93.5">&#xE0A2;</text><text x="124" y="96">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="38" y="124">E</text><text class="voice-leading-note-name is-bass" x="83" y="124">E♭</text><text class="voice-leading-note-name is-bass" x="128" y="124">D</text>
+            </svg>
+            <p class="voice-leading-distance is-chromatic">保留上方 C，低音下降两次半音</p>
+          </figure>
+        </div>
+        <div id="technique-07" class="reharm-example"></div>
+        <details class="lesson-aside">
+          <summary>从共同音写伴随旋律</summary>
+          <div class="lesson-aside-content">
+            <p>Cmaj9/E、E♭dim7 和 Dm9 都有 C 这个实际音高。可以让一个伴随声部持住 C，同时让低音下行。到 Dm9 的后半再让伴随声部按 C–D–E 接到 G7 的延伸音，给旋律留出一条节奏更慢的对位线。</p>
+            <svg class="inline-staff sized-staff" style="--staff-units: 184" viewBox="0 -2 184 47" role="img" aria-label="伴随声部的三个 C4 用延音线相连，第三小节后两拍依次奏 D4、E4">
+              <path class="inline-staff-lines" d="M1 6H183 M1 11H183 M1 16H183 M1 21H183 M1 26H183"/>
+              <path d="M46 6V26 M92 6V26 M182 6V26 M10 31H24 M56 31H70 M105 31H119 M117 31V16 M143 28.5V13.5 M169 26V11 M23 34Q42 41 58 34 M69 34Q90 41 107 34"/>
+              <text x="13" y="31">&#xE0A2;</text><text x="59" y="31">&#xE0A2;</text><text x="108" y="31">&#xE0A3;</text>
+              <text x="134" y="28.5">&#xE0A4;</text><text x="160" y="26">&#xE0A4;</text>
+            </svg>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="reharm-08">
+        <h2 id="reharm-08">08 用增三和弦连接上行声部</h2>
+        <p>Am 和 Caug 共用 C、E。把 Am 换成 Caug 后，可以保留这两个音，并在伴奏声部中用 G♯ 接 A。Caug 的增五音 G♯ 是这处变化的核心，它在下一枚 Dm 中向上半音进入 A，形成期待与到达。</p>
+        <p>示例让伴奏最高声部在 C、Caug、Dm、G 上分别奏 G、G♯、A、B。前两步是半音，最后一步是全音。只有在选定声位后，这条线才真正出现在谱面和声音里。</p>
+        <div id="reharm-augmented-staves" class="voice-leading-staves voice-leading-phrases voice-leading-extended" role="group" aria-label="增三和弦插入前后的伴奏顶音和低音">
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>原版用 Am</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 220 132" style="--voice-leading-width: 220px" role="img" aria-label="伴奏顶音 G4 到 A4 到 A4 到 B4，低音 C3 到 A2 到 D3 到 G2">
+              <text class="voice-leading-chord-name" x="39" y="12">C</text><text class="voice-leading-chord-name" x="86" y="12">Am</text><text class="voice-leading-chord-name" x="133" y="12">Dm</text><text class="voice-leading-chord-name" x="180" y="12">G</text>
+              <path class="inline-staff-lines" d="M6 22H214 M6 27H214 M6 32H214 M6 37H214 M6 42H214"/>
+              <text x="9" y="37">&#xE050;</text>
+              <path class="voice-leading-connector" d="M46 37L79 34.5 M75 32L79 34.5 75 37"/>
+              <path class="voice-leading-connector" d="M93 34.5L126 34.5 M122 32L126 34.5 122 37"/>
+              <path class="voice-leading-connector" d="M140 34.5L173 32 M169 29.5L173 32 169 34.5"/>
+              <text x="35" y="37">&#xE0A2;</text>
+              <text x="82" y="34.5">&#xE0A2;</text>
+              <text x="129" y="34.5">&#xE0A2;</text>
+              <text x="176" y="32">&#xE0A2;</text>
+              <text class="voice-leading-note-name" x="39" y="64">G</text><text class="voice-leading-note-name" x="86" y="64">A</text><text class="voice-leading-note-name" x="133" y="64">A</text><text class="voice-leading-note-name" x="180" y="64">B</text>
+              <path class="inline-staff-lines" d="M6 84H214 M6 89H214 M6 94H214 M6 99H214 M6 104H214"/>
+              <text x="9" y="89">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M46 96.5L79 101.5 M75 99L79 101.5 75 104"/>
+              <path class="voice-leading-connector is-bass" d="M93 101.5L126 94 M122 91.5L126 94 122 96.5"/>
+              <path class="voice-leading-connector is-bass" d="M140 94L173 104 M169 101.5L173 104 169 106.5"/>
+              <text x="35" y="96.5">&#xE0A2;</text>
+              <text x="82" y="101.5">&#xE0A2;</text>
+              <text x="129" y="94">&#xE0A2;</text>
+              <text x="176" y="104">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="39" y="126">C</text><text class="voice-leading-note-name is-bass" x="86" y="126">A</text><text class="voice-leading-note-name is-bass" x="133" y="126">D</text><text class="voice-leading-note-name is-bass" x="180" y="126">G</text>
+            </svg>
+          </figure>
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>重配用 Caug</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 220 132" style="--voice-leading-width: 220px" role="img" aria-label="伴奏顶音 G4 到 G♯4 到 A4 到 B4，低音 C3 到 C3 到 D3 到 G2">
+              <text class="voice-leading-chord-name" x="39" y="12">C</text><text class="voice-leading-chord-name" x="86" y="12">Caug</text><text class="voice-leading-chord-name" x="133" y="12">Dm</text><text class="voice-leading-chord-name" x="180" y="12">G</text>
+              <path class="inline-staff-lines" d="M6 22H214 M6 27H214 M6 32H214 M6 37H214 M6 42H214"/>
+              <text x="9" y="37">&#xE050;</text>
+              <path class="voice-leading-connector" d="M46 37L72 37 M68 34.5L72 37 68 39.5"/>
+              <path class="voice-leading-connector" d="M93 37L126 34.5 M122 32L126 34.5 122 37"/>
+              <path class="voice-leading-connector" d="M140 34.5L173 32 M169 29.5L173 32 169 34.5"/>
+              <text x="35" y="37">&#xE0A2;</text>
+              <text x="73" y="37">&#xE262;</text><text x="82" y="37">&#xE0A2;</text>
+              <text x="129" y="34.5">&#xE0A2;</text>
+              <text x="176" y="32">&#xE0A2;</text>
+              <text class="voice-leading-note-name" x="39" y="64">G</text><text class="voice-leading-note-name" x="86" y="64">G♯</text><text class="voice-leading-note-name" x="133" y="64">A</text><text class="voice-leading-note-name" x="180" y="64">B</text>
+              <path class="inline-staff-lines" d="M6 84H214 M6 89H214 M6 94H214 M6 99H214 M6 104H214"/>
+              <text x="9" y="89">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M46 96.5L79 96.5 M75 94L79 96.5 75 99"/>
+              <path class="voice-leading-connector is-bass" d="M93 96.5L126 94 M122 91.5L126 94 122 96.5"/>
+              <path class="voice-leading-connector is-bass" d="M140 94L173 104 M169 101.5L173 104 169 106.5"/>
+              <text x="35" y="96.5">&#xE0A2;</text>
+              <text x="82" y="96.5">&#xE0A2;</text>
+              <text x="129" y="94">&#xE0A2;</text>
+              <text x="176" y="104">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="39" y="126">C</text><text class="voice-leading-note-name is-bass" x="86" y="126">C</text><text class="voice-leading-note-name is-bass" x="133" y="126">D</text><text class="voice-leading-note-name is-bass" x="180" y="126">G</text>
+            </svg>
+          </figure>
+        </div>
+        <div id="technique-08" class="reharm-example"></div>
+      </section>
+
+      <section aria-labelledby="reharm-09">
+        <h2 id="reharm-09">09 用 sus4 延后属和弦的解决</h2>
+        <p>sus4 用四音暂代三音。Esus4 向 E7 解决时，先让三音晚一点出现，再由 E7 接到 A7；下一处 A7 仍可继续指向 Dm。</p>
+        <div id="reharm-09-voice-staves" class="voice-leading-staves voice-leading-phrases" role="group" aria-label="属挂留的两次去向">
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>属挂留的两次去向</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 164 127" style="--voice-leading-width: 164px" role="img" aria-label="Esus4、E7、A7。顶音 A4、G♯4、A4；低音 E3、E3、A2。先在 E 低音上解除挂留，再去 A。">
+              <text class="voice-leading-chord-name" x="38" y="12">Esus4</text><text class="voice-leading-chord-name" x="83" y="12">E7</text><text class="voice-leading-chord-name" x="128" y="12">A7</text>
+              <path class="inline-staff-lines" d="M5 25H159 M5 30H159 M5 35H159 M5 40H159 M5 45H159"/>
+              <text x="8" y="40">&#xE050;</text>
+              <path class="voice-leading-connector" d="M45 37.5L66 40 M62 37.6L66 40 62 42.4 M90 40L121 37.5 M117 35.1L121 37.5 117 39.9"/>
+              <text x="69" y="40">&#xE262;</text>
+              <text x="34" y="37.5">&#xE0A2;</text><text x="79" y="40">&#xE0A2;</text><text x="124" y="37.5">&#xE0A2;</text>
+              <text class="voice-leading-note-name" x="38" y="63">A</text><text class="voice-leading-note-name" x="83" y="63">G♯</text><text class="voice-leading-note-name" x="128" y="63">A</text>
+              <path class="inline-staff-lines" d="M5 81H159 M5 86H159 M5 91H159 M5 96H159 M5 101H159"/>
+              <text x="8" y="86">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M45 88.5L76 88.5 M72 86.1L76 88.5 72 90.9 M90 88.5L121 98.5 M117 96.1L121 98.5 117 100.9"/>
+              <text x="34" y="88.5">&#xE0A2;</text><text x="79" y="88.5">&#xE0A2;</text><text x="124" y="98.5">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="38" y="119">E</text><text class="voice-leading-note-name is-bass" x="83" y="119">E</text><text class="voice-leading-note-name is-bass" x="128" y="119">A</text>
+            </svg>
+            <p class="voice-leading-distance">先在 E 低音上解除挂留，再去 A</p>
+          </figure>
+        </div>
+        <p>后半句可以先在 Dm 和 E 之间增加 B7，得到 B7–E–Am。B7 是指向 E 的副属。再把 B7 原来的时值分给 B7sus4 和 B7。这样先是 E 音回落到 D♯，随后 D♯ 又升回 E。两次挂留都位于属和弦本来的时值内，下一站的进入拍位因此保持清楚。</p>
+        <div id="technique-09" class="reharm-example"></div>
+      </section>
+
+      <section aria-labelledby="reharm-10">
+        <h2 id="reharm-10">10 借用小下属和弦</h2>
+        <p>C 大调中的 Dm 和 F 可以承担属前功能。想在这个位置引入明显的色彩变化，可以从 F 的 F、A、C 出发，把 A 降为 A♭，得到 Fm。C 大调与 C 小调共享主音 C，Fm 来自 C 小调，因此称为同主音小调借用。偶尔出现一次 Fm，前后仍可维持 C 大调。</p>
+        <p>示例旋律中的 F 是 Dm 与 Fm 的共同音。C 在 Dm 上构成自然的小七度，在 Fm 上成为五音。「调内 F」保留和弦的 A，「重配」把它降成 A♭。Fm 的 A♭ 随后下行到 G，低音由 F 上行到 G，两个方向共同推向句尾。也可以根据旋律选 Fm6 或 Fm7，前者加 D，后者加 E♭。</p>
+        <div id="technique-10" class="reharm-example"></div>
+      </section>
+
+      <aside class="lesson-callout">
+        <p><strong>从需要改变的位置选手法。</strong> 只添色彩，可以从七音和九音开始。需要更明确的归宿，可以调整属前或副属。希望两枚和弦衔接得更紧，可以先写出低音和内声部的半音线，再据此挑选和弦。</p>
+      </aside>
+      <nav class="chapter-pagination" aria-label="相邻章节"><a href="./reharmonization-intro.html" rel="prev"><span>导论</span><strong>和弦进行基础</strong></a><a href="./reharmonization-2.html" rel="next"><span>下一章</span><strong>副歌前的 B 段重配</strong></a></nav>
+    </main>
+  </body>
+</html>

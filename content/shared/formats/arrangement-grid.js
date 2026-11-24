@@ -26,8 +26,10 @@ export function mountArrangementGrid(frame, {
 
   function update(nextRows) {
     body.replaceChildren();
-    for (const { label: name, events } of nextRows) {
+    table.toggleAttribute('data-text-events', nextRows.some(row => row.events.some(event => event.text)));
+    for (const { label: name, events, notationOnly } of nextRows) {
       const row = body.insertRow();
+      row.toggleAttribute('data-notation-only', Boolean(notationOnly));
       const title = document.createElement('th');
       title.scope = 'row';
       title.textContent = name;
@@ -43,10 +45,16 @@ export function mountArrangementGrid(frame, {
         const symbol = document.createElement('span');
         const emphasis = event.accent ? '重音' : '起音';
         const duration = event.length ? `，持续 ${event.length} 格` : '';
-        cell.setAttribute('aria-label', `第 ${step % subdivisions + 1} 格，${emphasis}${duration}`);
+        const action = event.label ?? event.text ?? emphasis;
+        cell.setAttribute('aria-label', `第 ${step % subdivisions + 1} 格，${action}${duration}`);
         symbol.className = 'arrangement-grid-event';
         symbol.setAttribute('aria-hidden', 'true');
         symbol.toggleAttribute('data-accent', Boolean(event.accent));
+        if (event.text) {
+          symbol.dataset.text = '';
+          symbol.textContent = event.text;
+          cell.title = action;
+        }
         if (event.length) {
           symbol.dataset.duration = '';
           symbol.style.setProperty('--arrangement-duration', event.length);
@@ -65,8 +73,13 @@ export function mountArrangementGrid(frame, {
     markedStep = step;
   }
 
+  function markTick(tick) {
+    const step = Math.floor(tick * subdivisions / 960);
+    markStep(tick === null || step >= steps ? null : step);
+  }
+
   update(rows);
   frame.replaceChildren(table);
   enableScrollFrame(frame, label);
-  return { update, markStep };
+  return { update, markStep, markTick };
 }

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>流行歌曲的段落构成｜图解乐风编曲入门</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./genre-arrangement-5.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解乐风编曲入门</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">第二篇 · 第 1 节</span> 流行歌曲的段落构成</h1>
+      <p class="intro">主歌建立情景，预副歌改变期待，副歌给出歌曲的主要旋律与音响。段落的连接依赖配器、起音密度和停顿。</p>
+
+      <section aria-labelledby="genre-first-cycle">
+        <h2 id="genre-first-cycle">主歌、预副歌与副歌</h2>
+        <p>一个常见的流行歌曲大段由主歌、预副歌和副歌组成，常缩写为 A、B、Chorus。这三个名称描述各段在全曲里的作用。主歌交代歌词中的人物和情景，伴奏要留下足够空间。预副歌承接主歌并改变期待，副歌则把最重要的旋律、歌词和音响集中在一起。省略预副歌的歌曲也能成立，例如说唱式主歌直接切入副歌，靠切入瞬间的反差建立段落边界。</p>
+        <p>编配可以从副歌倒推。先确定副歌需要哪些音色、哪种节奏密度和哪个音域，再把其中一部分留到副歌才出现。主歌保留核心乐器即可，原本每拍或每半拍起音的声部也可以拉成二分音符或全音符。预副歌开头进一步减薄，后半用上行低音、加密起音或提高力度重新聚集能量。逐步加轨和突然切入可以在同一处衔接。</p>
+        <table class="lesson-table">
+          <caption>副歌前的三种张力布局</caption>
+          <thead><tr><th scope="col">段落</th><th scope="col">声部与密度</th><th scope="col">和声选择</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">主歌 A</th><td>键盘或吉他交代拍点与和声，主旋律处于清楚的位置。</td><td>C 大调里常从 C 或 F 开始。与副歌共享和弦也能建立联系。</td></tr>
+            <tr><th scope="row">预副歌 B</th><td>起始处撤掉若干声部，末尾让节奏组、上层音区或和声逐步活动起来。</td><td>Am 能保持 C 大调并转向小三和弦色彩。F 可沿调内继续推进，B♭/C 则在 C 低音上放入 B♭–D–F，改变上层色彩。</td></tr>
+            <tr><th scope="row">副歌</th><td>节奏声部合入，低音得到支撑，上层可添和声、弦乐或新音色。</td><td>回到 C 或重现主歌和声时，配器和音符密度仍可将副歌凸显出来。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo programmatic-score" id="genre-form-contrast">
+          <div class="music-demo-toolbar">
+            <h3>同一旋律的主歌、预副歌与副歌</h3>
+            <label>配器层次 <select><option value="contour">预副歌先收后放</option><option value="flat">全段维持副歌织体</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">六小节素材、和声与速度相同。层次版在第 3 小节撤掉节奏组，第 4 小节重建律动，第 5 小节进入完整配器。</p>
+          <figure aria-label="同一旋律的主歌、预副歌与副歌"></figure>
+        </div>
+        <aside class="lesson-callout"><h3>副歌强度由前段共同决定</h3><p>副歌若靠增加音量才能显出差别，可以回到前段检查音色、音区、起音密度和声部数量。</p></aside>
+      </section>
+
+      <section aria-labelledby="genre-intro-transition">
+        <h2 id="genre-intro-transition">前奏、间奏与第二轮</h2>
+        <p>前奏把听众带入作品。它可以给出动机、音色或节奏，也可以把副歌改成钢琴与人声的简约版本。副歌直接开场时，进入主歌前仍可安插一处器乐过渡或尾音，让已经建立的高能量有明确落点。</p>
+        <p>第一轮副歌与第二轮主歌之间可以加短间奏，也可以延长副歌尾音而直接过渡。短间奏沿用前奏的动机时，听众可辨认段落已经回到起点。第二轮主歌保持旋律身份，同时换一种鼓型、加入贝斯或和声，或者让第一小节只留主唱，再让乐队从第二小节进入。第二轮预副歌可在此基础上提高密度或叠加人声。第二轮副歌的主要辨认点宜保持一致，需要变化时，可以把变化集中在接入口或末尾的合击上。</p>
+      </section>
+
+      <section aria-labelledby="genre-last-cycle">
+        <h2 id="genre-last-cycle">桥段、末次副歌与尾奏</h2>
+        <p>当相同副歌已经出现两次，新的桥段或器乐间奏能改变编曲方向。桥段常标为 D 段，它可以换和声、音区或前景音色，再把全曲引到末次副歌。桥段达到局部高潮后，末次副歌前半可以只留少数声部，后半再同时开启鼓、贝斯和上层声部。尾奏回收前奏的动机或触键，可以将首尾联系起来。如果前奏素材已经多次用过，第二轮副歌后的间奏更适合贡献一段新材料。</p>
+        <table class="lesson-table">
+          <caption>流行歌曲的段落顺序与常见长度</caption>
+          <thead><tr><th scope="col">段落位置</th><th scope="col">示例长度</th><th scope="col">伸缩依据</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">前奏</th><td>4–8 小节</td><td>较长前奏要有足够的材料发展或音色变化。</td></tr>
+            <tr><th scope="row">第一轮 A → B → 副歌</th><td>A 与副歌各常为 8 或 16 小节。</td><td>16 小节主歌常为 8＋8 的 A–A′。B 可以与 A 等长，也可以减半，例如 8→4，或 16→8。</td></tr>
+            <tr><th scope="row">短间奏</th><td>0–4 小节</td><td>维持情绪连续且已有尾音时可以省略。</td></tr>
+            <tr><th scope="row">第二轮 A → B → 副歌</th><td>主歌多为 8，其余常沿第一轮</td><td>第一轮主歌有 16 小节时常缩为 8。第二轮副歌也可以延长，边界材料随之调整。</td></tr>
+            <tr><th scope="row">D 段或新间奏</th><td>约 8 小节</td><td>新材料足以建立区别，再顺势接回熟悉的副歌。</td></tr>
+            <tr><th scope="row">末次副歌 → 尾奏</th><td>副歌原长或两倍</td><td>加倍时可把前后半做成稀疏与饱满两层。尾奏依歌词落点与余响收束。</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./genre-arrangement-4.html" rel="prev"><span>上一节</span><strong>DAW 编曲流程与动态处理</strong></a>
+        <a href="./genre-arrangement-6.html" rel="next"><span>下一节</span><strong>抒情歌曲的结构与编配</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

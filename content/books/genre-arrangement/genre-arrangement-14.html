@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>爵士｜图解乐风编曲入门</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./genre-arrangement-14.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解乐风编曲入门</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">乐风 08</span> 爵士</h1>
+      <p class="intro">在钢琴三重奏中，低音提琴每拍给出一个落点，吊镲组织摇摆拍感，钢琴用短和弦回应旋律。和弦即使加到九音或十三音，也可以分开交给不同乐器。</p>
+
+      <section aria-labelledby="jazz-ensemble">
+        <h2 id="jazz-ensemble">钢琴三重奏与四拍摇摆</h2>
+        <p>这套三重奏由钢琴、低音提琴和原声鼓组组成。低音提琴用拨奏提供连贯的四分音符。鼓手把脉搏放在吊镲和踩镲上，小鼓和底鼓只补重音。钢琴在旋律之间给出紧凑的和弦。三件乐器各自都可以很清楚，同时给旋律留出空间。</p>
+        <p>以 128 BPM 为例，吊镲保持四拍，在第 2、4 拍后各补一个短音。两枚八分音符以近似三连音前两份、后一份的时值形成摇摆，实际演奏的比例随速度与合奏而变。脚踩镲常落在第 2、4 拍，它的短音和吊镲的长尾共同标出拍子。刷鼓可用柔软起音与扫刷声减轻反拍的撞击感。</p>
+        <table class="lesson-table">
+          <caption>四拍三重奏的分工</caption>
+          <thead><tr><th scope="col">乐器</th><th scope="col">持续提供的线索</th><th scope="col">可变化的部分</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">鼓组</th><td>吊镲维持脉搏，脚踩镲在第 2、4 拍收音。</td><td>轻小鼓、底鼓或刷奏填空，力度低于主要镲点。</td></tr>
+            <tr><th scope="row">低音提琴</th><td>持续走四分音符，新和弦处交代根音或指定低音。</td><td>在和弦音之间走经过音，或从半音上方、下方接下一音。</td></tr>
+            <tr><th scope="row">钢琴</th><td>保留决定和弦性质的三音、七音，以及需要的色彩音。</td><td>和弦可以落正拍、摇摆后半拍，也可以整拍留空。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo programmatic-score" id="genre-jazz-arrangement">
+          <div class="music-demo-toolbar"><h3>同一旋律的爵士编配</h3><label>编配 <select><option value="arranged">摇摆三重奏</option><option value="base">基础稿</option><option value="melody">旋律</option></select></label></div>
+          <p class="music-demo-cue" aria-live="polite">四分低音维持脉搏，钢琴在正拍和摇摆后半拍交错给出短和弦。</p>
+          <figure aria-label="爵士三重奏编配五线谱与试听"></figure>
+        </div>
+        <p>基础稿把每个和弦连奏一整小节。三重奏版把同样的四拍分给低音和吊镲，钢琴短促起音后可以空一拍以上。谱例用通用镲和低音音色呈现拍点与分工。</p>
+      </section>
+      <section aria-labelledby="jazz-extension">
+        <h2 id="jazz-extension">延伸和弦的分配</h2>
+        <p>从三和弦或七和弦识别骨架，再按和弦标记补六音、九音或变化延伸音。例如 C6/9 在 C–E–G 上加入 A、D，没有七音。这时低音提琴给出 C，钢琴弹 E–A–D，旋律也可以提供 G。钢琴的三音 E 让大调性质清楚，A 与 D 形成色彩，省去重复低音可以保持透明。</p>
+        <table class="lesson-table">
+          <caption>四种延伸和弦与上方可用排列</caption>
+          <thead><tr><th scope="col">和弦</th><th scope="col">骨架与延伸</th><th scope="col">低音给根音时的钢琴示例</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">C6/9</th><td>C–E–G 加 A、D。</td><td>E–A–D，留下三音、六音和九音。</td></tr>
+            <tr><th scope="row">Am9</th><td>A–C–E–G 加 B。</td><td>C–G–B，小三音与小七音保留。</td></tr>
+            <tr><th scope="row">Dm9</th><td>D–F–A–C 加 E。</td><td>F–C–E，旋律 E 可作九音。</td></tr>
+            <tr><th scope="row">G7(9, ♭13)</th><td>G–B–D–F 加 A、E♭。</td><td>B 与 F 保留属功能，A 与 E♭作色彩。若旋律持续 E，优先按旋律改用自然十三音。</td></tr>
+          </tbody>
+        </table>
+        <p>钢琴独奏时需要自己交代低音或和声根基。三重奏里，根音与五音分给低音以后，钢琴省音才会成为合奏层面的完整配置。切分的上层和弦也能避免和低音的四个起音同时成块。</p>
+      </section>
+      <section aria-labelledby="jazz-walk">
+        <h2 id="jazz-walk">行走低音与半音连接</h2>
+        <p>写行走低音时，先固定下一和弦的首拍目标，再倒推前一小节。谱例第二小节以 D 开始，用 F、A 交代 Dm 的和弦骨架，最后用 A♭走到 G。A♭只在末拍承担接近音，稳定的听觉落点依然在下小节首拍。连续的音高移动比每拍机械重复根音更能带动和弦交替。需要增添弹性时，可偶尔在四分拍后加轻的短音，保留基本的走拍。</p>
+        <p>G7(9,♭13)/D♭ 用斜线指定一个和弦外的最低音。上方仍可按 G 属和弦来看，低音从 D♭ 半音进入 C。</p>
+        <div id="jazz-walk-voice-staves" class="voice-leading-staves voice-leading-phrases voice-leading-extended" role="group" aria-label="同一属解决的两种低音、斜线低音的半音解决">
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>同一属解决的两种低音</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 136 134" style="--voice-leading-width: 136px" role="img" aria-label="G7、C。顶音 F4、E4；内声 B3、C4；低音 G2、C3。低音 G 上行纯四度。">
+              <text class="voice-leading-chord-name" x="38" y="12">G7</text><text class="voice-leading-chord-name" x="100" y="12">C</text>
+              <path class="inline-staff-lines" d="M5 25H131 M5 30H131 M5 35H131 M5 40H131 M5 45H131"/>
+              <text x="8" y="40">&#xE050;</text>
+              <path d="M30 50H46 M92 50H108"/>
+              <path class="voice-leading-connector" d="M45 42.5L93 45 M89 42.6L93 45 89 47.4 M45 52.5L93 50 M89 47.6L93 50 89 52.4"/>
+              <text x="34" y="42.5">&#xE0A2;</text><text x="96" y="45">&#xE0A2;</text><text x="34" y="52.5">&#xE0A2;</text><text x="96" y="50">&#xE0A2;</text>
+              <text class="voice-leading-note-name" x="38" y="70.5">F·B</text><text class="voice-leading-note-name" x="100" y="70.5">E·C</text>
+              <path class="inline-staff-lines" d="M5 88.5H131 M5 93.5H131 M5 98.5H131 M5 103.5H131 M5 108.5H131"/>
+              <text x="8" y="93.5">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M45 108.5L93 101 M89 98.6L93 101 89 103.4"/>
+              <text x="34" y="108.5">&#xE0A2;</text><text x="96" y="101">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="38" y="126.5">G</text><text class="voice-leading-note-name is-bass" x="100" y="126.5">C</text>
+            </svg>
+            <p class="voice-leading-distance">低音 G 上行纯四度</p>
+          </figure>
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>斜线低音的半音解决</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 137 134" style="--voice-leading-width: 137px" role="img" aria-label="G7(9,♭13)/D♭、C。顶音 F4、E4；内声 B3、C4；低音 D♭3、C3。低音下行半音，两条内声原样解决。">
+              <text class="voice-leading-chord-name" x="38" y="12">G7(9,♭13)/D♭</text><text class="voice-leading-chord-name" x="101" y="12">C</text>
+              <path class="inline-staff-lines" d="M5 25H132 M5 30H132 M5 35H132 M5 40H132 M5 45H132"/>
+              <text x="8" y="40">&#xE050;</text>
+              <path d="M30 50H46 M93 50H109"/>
+              <path class="voice-leading-connector" d="M45 42.5L94 45 M90 42.6L94 45 90 47.4 M45 52.5L94 50 M90 47.6L94 50 90 52.4"/>
+              <text x="34" y="42.5">&#xE0A2;</text><text x="97" y="45">&#xE0A2;</text><text x="34" y="52.5">&#xE0A2;</text><text x="97" y="50">&#xE0A2;</text>
+              <text class="voice-leading-note-name" x="38" y="70.5">F·B</text><text class="voice-leading-note-name" x="101" y="70.5">E·C</text>
+              <path class="inline-staff-lines" d="M5 88.5H132 M5 93.5H132 M5 98.5H132 M5 103.5H132 M5 108.5H132"/>
+              <text x="8" y="93.5">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M45 98.5L94 101 M90 98.6L94 101 90 103.4"/>
+              <text x="24" y="98.5">&#xE260;</text>
+              <text x="34" y="98.5">&#xE0A2;</text><text x="97" y="101">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="38" y="126.5">D♭</text><text class="voice-leading-note-name is-bass" x="101" y="126.5">C</text>
+            </svg>
+            <p class="voice-leading-distance is-chromatic">低音下行半音，两条内声原样解决</p>
+          </figure>
+        </div>
+        <div class="music-demo programmatic-score" id="genre-jazz-slash">
+          <div class="music-demo-toolbar"><h3>同一属音响的 G 与 D♭低音</h3><label>属和弦低音 <select><option value="root">G → C</option><option value="altered">D♭ → C</option></select></label></div>
+          <p class="music-demo-cue" aria-live="polite">钢琴保持同一组导向音和延伸音，低音可用纯四度或半音进入 C。</p>
+          <figure aria-label="爵士属和弦与两条终止低音的五线谱"></figure>
+        </div>
+      </section>
+      <section aria-labelledby="jazz-mix">
+        <h2 id="jazz-mix">三重奏的音量与空间</h2>
+        <p>把人声或主旋律放在清晰的位置，钢琴退到不挡住旋律的音量。低音提琴的拨弦应能辨出音高，镲点应能辨出摇摆。小鼓与底鼓保留轻重差别，避免压过镲尾。各轨可以少量送入同一个房间混响，保留像在同一空间演奏的感觉。若混响遮住短和弦的起音，先减发送量或缩短尾音。</p>
+        <details class="lesson-aside"><summary>鼓刷与低音提琴音源</summary><div class="lesson-aside-content"><ul>
+          <li>鼓刷常有单击与扫刷两种声音。音源的键位随鼓组而变，需直接看音源的映射。</li>
+          <li>低音提琴可选原声拨奏音色。标为 Jazz Bass 的预设也可能指电贝斯型号，可用起音与延音判别。</li>
+        </ul></div></details>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a rel="prev" href="./genre-arrangement-13.html"><span>上一节</span><strong>电子舞曲</strong></a>
+        <a rel="next" href="./genre-arrangement-15.html"><span>下一节</span><strong>节奏布鲁斯</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

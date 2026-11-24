@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>巴萨诺瓦｜图解乐风编曲入门</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./genre-arrangement-10.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解乐风编曲入门</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">乐风 04</span> 巴萨诺瓦</h1>
+      <p class="intro">巴萨诺瓦把巴西桑巴的节奏语言和细腻的和声放在较轻的编制里。稳定的低音拍点托住短促的吉他和弦，吉他偶尔早半拍换和弦，产生向前的牵引。</p>
+
+      <section aria-labelledby="genre-bossa-harmony">
+        <h2 id="genre-bossa-harmony">七和弦、延伸音与半音收束</h2>
+        <p>旋律已经落在 C 和弦的五音 G 上时，低音仍可保持 C，把上方的和弦从 C–E–G 改成 Cmaj9。B 是大七音，D 是九音。它们可放在旋律下方，和弦的宽度与色彩变了，旋律的支点仍在 G。电钢琴可以补这些较长的和声音，吉他继续弹短音。</p>
+        <table class="lesson-table lesson-table-dense">
+          <caption>C 大调中的和声变化</caption>
+          <thead><tr><th scope="col">写法</th><th scope="col">保留和改变的材料</th><th scope="col">听感来源</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">C → Cmaj9</th><td>低音 C 和旋律 G 保留，内声增加 B 与 D。</td><td>两条延伸声部填在低音和旋律之间。</td></tr>
+            <tr><th scope="row">C → C/E</th><td>C–E–G 仍是同一组音，最低音换成 E。</td><td>低音脱离主音 C，适合在句中延续而保持流动。</td></tr>
+            <tr><th scope="row">Dm7/G → G7</th><td>保持 G 低音，把上方 D–F–A–C 改成 B–D–F。</td><td>上方的 C 先留作四音，之后半音下行到 G7 的三音 B。低音不动，属功能逐渐变清楚。</td></tr>
+            <tr><th scope="row">D♭maj9 → Cmaj9</th><td>旋律 C 保留，低音 D♭–C 下行半音。</td><td>C 从 D♭ 和弦的大七音变成主和弦的根音。F–E 和 A♭–G 也可以各走半音。</td></tr>
+          </tbody>
+        </table>
+        <p>长音 C 与 D♭ 在不同音区相隔大七度或更宽，能保有张力。把相邻半音放进同一低音区，张力容易变成混浊。若保持旋律 C、改用 G7 收尾，这个 C 在 G 上是四音，可把属和弦的三音 B 错开一个音区，让 C 成为预先到来的主音。</p>
+        <div id="genre-bossa-ending" class="music-demo">
+          <div class="music-demo-toolbar"><h3>固定旋律 C 的两种收束</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">旋律 C 在两小节内保持，低音从 D♭ 半音下行到 C。</p>
+          <figure data-writing-score aria-label="降二级大九与属和弦两种收束的五线谱"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="genre-bossa-groove">
+        <h2 id="genre-bossa-groove">贝斯拍头与和弦提前</h2>
+        <p>同一和弦贯穿一小节时，贝斯常在第 1 拍给根音、第 3 拍给五音。第 2、4 拍后半的轻底鼓还可各带一个短低音。以 Cmaj9 为例，第 2 拍后的短音可以重复 C，等第 3 拍才到 G，也可以提前一次弹 G，让它在第 3 拍重新落稳。吉他提前换弦时，贝斯仍可把下一个根音留给拍头。</p>
+        <p>示范里吉他在第 1 小节第 4 拍后半已换 Fmaj9，贝斯要到第 2 小节第 1 拍才换成 F。第 2 小节结束到第 3 小节，和弦与贝斯同时在拍头换音。把两种交界交替使用，提前的起音才会产生清楚的对照。也可把提前的换弦放在进入奇数小节时。</p>
+        <figure class="music-demo">
+          <div class="music-demo-toolbar"><h3>和弦提前与低音到拍</h3></div>
+          <p class="music-demo-cue">每小格是一个八分音符。第 1 小节末，Fmaj9 已响起，下方贝斯仍在 C 和弦上。</p>
+          <div id="genre-bossa-grid" class="arrangement-grid-frame"></div>
+        </figure>
+        <p>尼龙弦吉他的拇指负责根音或五音，食指、中指和无名指拨上方的和弦音。把低音脉冲与上方拨弦写成两层，单把吉他也能支持人声。乐队里有独立贝斯时，可把较低的音交给贝斯，让吉他集中在中音区。短的和弦收音使不同起点容易分辨，避免以一整串长和弦压住节奏。</p>
+      </section>
+
+      <section aria-labelledby="genre-bossa-instruments">
+        <h2 id="genre-bossa-instruments">鼓组动作和配器分工</h2>
+        <p>示范速度为 120 BPM。底鼓主击落在第 1、3 拍，第 2、4 拍后的轻击补纹理。小鼓可用闭式鼓边击，把鼓棒的一端贴在鼓面，以鼓棒敲鼓边，声音短而集中。它与脚踏镲分层，脚踏镲的八分反拍力度可略低。镲和鼓边击重合时局部加重即可。MIDI 力度可从反拍减约 20、叠合处加约 10 试起，实际差别随音源改变。</p>
+        <table class="lesson-table lesson-table-dense">
+          <caption>各声部在同一编制中的位置</caption>
+          <thead><tr><th scope="col">声部</th><th scope="col">主要工作</th><th scope="col">音色与布置</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">鼓组与打击乐</th><td>主拍和轻击维持前进，沙铃填较细的等分。</td><td>干净的原声鼓组。沙铃可用演奏循环。三角铁、坦布林鼓与潘德罗手鼓也能补节奏层。</td></tr>
+            <tr><th scope="row">贝斯</th><td>根音、五音和短引入音。</td><td>优先原声低音提琴，电贝斯会给同一节奏较明确的拨弦轮廓。</td></tr>
+            <tr><th scope="row">古典吉他</th><td>短和弦、提前换弦，必要时兼顾低音。</td><td>尼龙弦较柔和。它是主要节奏性和弦声部，可略靠前。</td></tr>
+            <tr><th scope="row">钢琴或电钢琴</th><td>二分或全音符和弦。在主唱留白处可补短小填句。</td><td>可选 Rhodes 类电钢琴。音量颤动、合唱或移相可拉开与吉他的质地，整体保持靠后。</td></tr>
+          </tbody>
+        </table>
+        <p>混音先让鼓组的瞬态、贝斯低音和拨弦分别清楚，再调整高频。例如让人声与低音集中在中间、吉他略偏左、后层电钢琴略偏右。补一点人声高频可让轻声唱的字头浮出，吉他和镲仍应留出空间。保留自然的力度起伏、控制主唱的混响长度，有助于保持近距离的听感。</p>
+        <details class="lesson-aside">
+          <summary>电钢琴的音色与调制效果</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>Rhodes 类电钢琴有清楚的起音和圆润的延音，适合放在尼龙弦吉他的短和弦之后。</li>
+              <li>音量颤动让音量周期性起伏，立体声版本也可左右交替。合唱将原声与轻微变动的延迟信号叠加，使音色变厚。</li>
+              <li>移相会让不同频段周期性相消，产生扫动感。三种处理都可少量使用，给鼓边和吉他的节拍留出空间。</li>
+            </ul>
+          </div>
+        </details>
+      <div id="genre-bossa-arrangement" class="music-demo programmatic-score">
+        <div class="music-demo-toolbar"><h3>同一旋律的巴萨诺瓦编配</h3>
+          <label>版本 <select><option value="arranged">巴萨诺瓦版</option><option value="base">基础和声</option><option value="melody">纯旋律</option></select></label>
+        </div>
+        <p class="music-demo-cue" aria-live="polite">原声贝斯稳住第 1、3 拍。尼龙弦吉他在第 1、3 小节末提前半拍换和弦，第 2、4 小节的低音仍在拍头换音。</p>
+        <figure aria-label="同一旋律的巴萨诺瓦、基础和声与纯旋律五线谱"></figure>
+      </div>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./genre-arrangement-9.html" rel="prev"><span>乐风 03</span><strong>朋克摇滚</strong></a>
+        <a href="./genre-arrangement-11.html" rel="next"><span>乐风 05</span><strong>电音浩室</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

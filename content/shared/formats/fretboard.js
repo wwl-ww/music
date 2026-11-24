@@ -31,7 +31,7 @@ export function mountFretboard(figure, {
   const routes = connections.filter(({ from, to }) => inView(from) && inView(to));
   const accessibleName = [
     caption || '弦乐器指板',
-    `第 ${startFret} 至 ${endFret} 品，空弦由高到低 ${tuning.join('、')}`,
+    `第 ${startFret} 至 ${endFret} 品，从第 1 弦起的空弦音为 ${tuning.join('、')}`,
     ...visibleMarkers.map(marker => `${describePosition(marker)}${marker.label ? ` ${marker.label}` : ''}${marker.variant === 'root' ? '（主音）' : ''}`),
     ...routes.map(({ from, to }) => `${describePosition(from)}移至${describePosition(to)}`)
   ].join('。');
@@ -71,11 +71,12 @@ export function mountFretboard(figure, {
     if (length === 0) continue;
     const dx = (x2 - x1) / length;
     const dy = (y2 - y1) / length;
-    const tipX = x2 - 13 * dx;
-    const tipY = y2 - 13 * dy;
+    const markerEdge = Math.min(13 / Math.abs(dx), 11 / Math.abs(dy));
+    const tipX = x2 - markerEdge * dx;
+    const tipY = y2 - markerEdge * dy;
     svg.append(draw('path', {
       class: 'fretboard-arrow',
-      d: `M${x1 + 13 * dx} ${y1 + 13 * dy} L${tipX} ${tipY}
+      d: `M${x1 + markerEdge * dx} ${y1 + markerEdge * dy} L${tipX} ${tipY}
           l${-5 * dx - 2.8 * dy} ${-5 * dy + 2.8 * dx}
           M${tipX} ${tipY} l${-5 * dx + 2.8 * dy} ${-5 * dy - 2.8 * dx}`
     }));

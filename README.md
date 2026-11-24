@@ -18,6 +18,7 @@ npm run dev
 | 目录 | 内容 |
 | --- | --- |
 | `content/` | 教材首页、程序谱目录、格式样板 |
+| `content/reading.html` | 休闲阅读的独立入口，同组读物也列在教材首页 |
 | `content/books/music-theory/` | 《基本乐理教程》章节、专用资产与参考 PDF |
 | `content/books/harmony-upper/` | 《和声学基础教程 · 上》章节、专用脚本与参考 PDF |
 | `content/books/harmony-lower/` | 《和声学基础教程 · 下》章节、四部和声谱例与参考 PDF |
@@ -28,6 +29,10 @@ npm run dev
 | `content/books/arrangement/` | 《图解编曲入门》导论、三篇正文与制作流程 |
 | `content/books/composition-scoring/` | 《图解作曲配乐》基本技巧、40 个情境与 10 项延伸技巧 |
 | `content/books/pro-composition/` | 《图解 PRO 作曲法》导论、五首成曲案例与技巧索引 |
+| `content/books/reharmonization/` | 《图解重配和声入门》导论与五章，覆盖 50 种重配技法 |
+| `content/books/style-reharm/` | 《图解重配和声乐风编曲法》导论、八篇风格重配与结语 |
+| `content/books/pop-rock-theory/` | 《图解流行摇滚音乐理论》导论、七章、乐器指板与音高附录 |
+| `content/books/genre-arrangement/` | 《图解乐风编曲入门》编曲基础、歌曲构成与十种乐风 |
 | `content/books/pop-techniques/` | 《POP金曲里技》八章、程序谱与制作试听 |
 | `content/shared/` | 共用的排版、主题、谱例组件与钢琴音源 |
 
@@ -282,6 +287,23 @@ npm run dev
 
 每篇用一首原创歌曲贯穿曲式、旋律、配词、器乐连接与和声修订。成曲沿用段落分析谱，支持全曲与分段试听。
 
+### 图解重配和声乐风编曲法
+
+| 课程 | 印刷页 | PDF 页 |
+| --- | ---: | ---: |
+| [导论 重配和声的基础](./content/books/style-reharm/style-reharm-intro.html) | 9–20 | 10–21 |
+| [第一篇 爵士](./content/books/style-reharm/style-reharm-1.html) | 21–58 | 22–59 |
+| [第二篇 巴萨诺瓦](./content/books/style-reharm/style-reharm-2.html) | 59–78 | 60–79 |
+| [第三篇 摇滚](./content/books/style-reharm/style-reharm-3.html) | 79–94 | 80–95 |
+| [第四篇 节奏布鲁斯](./content/books/style-reharm/style-reharm-4.html) | 95–114 | 96–115 |
+| [第五篇 放克](./content/books/style-reharm/style-reharm-5.html) | 115–130 | 116–131 |
+| [第六篇 民谣](./content/books/style-reharm/style-reharm-6.html) | 131–148 | 132–149 |
+| [第七篇 J-POP ① 抒情编配](./content/books/style-reharm/style-reharm-7.html) | 149–170 | 150–171 |
+| [第八篇 J-POP ② 舞曲编配](./content/books/style-reharm/style-reharm-8.html) | 171–187 | 172–188 |
+| [结语 和声、声部与编配的复核](./content/books/style-reharm/style-reharm-summary.html) | 188–189 | 189–190 |
+
+课程用一段十六小节的原创旋律贯穿各篇。和声步骤沿用程序谱和逐小节修订表，完整编配展示各风格中的节奏、低音和音色。
+
 ### POP金曲里技
 
 | 课程 | 印刷页 | PDF 页 |
@@ -295,7 +317,32 @@ npm run dev
 | [第7章 比稿](./content/books/pop-techniques/pop-techniques-7.html) | 167–190 | 169–192 |
 | [第8章 行动与心态](./content/books/pop-techniques/pop-techniques-8.html) | 191–209 | 193–211 |
 
-将原书的问题按草稿、编配、演唱录音、混音、母带和交付的顺序组织。谱例、歌词和音频均为教学示范素材，制作参数和交付流程注明各自的适用条件。
+将原书的问题按草稿、编配、演唱录音、混音、母带和交付的顺序组织。原创案例《留一盏灯》的四音动机用于作曲、编配、配词及比稿后修订。制作试听另用简化的合成音频隔离剪辑和混音变量，制作参数和交付流程注明各自的适用条件。
+
+### 图解乐风编曲入门
+
+| 课程 | PDF 页 |
+| --- | ---: |
+| [导论 音阶、音程与和弦](./content/books/genre-arrangement/genre-arrangement-intro.html) | 2–7 |
+| [编曲的基本思考](./content/books/genre-arrangement/genre-arrangement-1.html) | 8–20 |
+| [为旋律配和弦](./content/books/genre-arrangement/genre-arrangement-2.html) | 21–27 |
+| [常用乐器与音源写法](./content/books/genre-arrangement/genre-arrangement-3.html) | 28–42 |
+| [DAW 编曲流程与动态处理](./content/books/genre-arrangement/genre-arrangement-4.html) | 43–52 |
+| [流行歌曲的段落构成](./content/books/genre-arrangement/genre-arrangement-5.html) | 53–61 |
+| [抒情歌曲的结构与编配](./content/books/genre-arrangement/genre-arrangement-6.html) | 62–69 |
+| [民谣流行](./content/books/genre-arrangement/genre-arrangement-7.html) | 70–81 |
+| [电子流行](./content/books/genre-arrangement/genre-arrangement-8.html) | 82–91 |
+| [朋克摇滚](./content/books/genre-arrangement/genre-arrangement-9.html) | 92–100 |
+| [巴萨诺瓦](./content/books/genre-arrangement/genre-arrangement-10.html) | 101–111 |
+| [电音浩室](./content/books/genre-arrangement/genre-arrangement-11.html) | 112–119 |
+| [抒情](./content/books/genre-arrangement/genre-arrangement-12.html) | 120–132 |
+| [电子舞曲](./content/books/genre-arrangement/genre-arrangement-13.html) | 133–142 |
+| [爵士](./content/books/genre-arrangement/genre-arrangement-14.html) | 143–151 |
+| [节奏布鲁斯](./content/books/genre-arrangement/genre-arrangement-15.html) | 152–162 |
+| [巴西浩室](./content/books/genre-arrangement/genre-arrangement-16.html) | 163–173 |
+| [结语 同一旋律的十种编配](./content/books/genre-arrangement/genre-arrangement-summary.html) | 174–179 |
+
+十种乐风共用一段四小节原创旋律，每章用同速基础稿示范节奏、和声、音色与织体的变化。结语沿用原书示范速度，并汇总十种编配的入口。
 
 ## 预制格式库
 
@@ -304,6 +351,16 @@ npm run dev
 章节页面引入 `content/shared/formats/formats.css`，在 `style.css` 里统一管理颜色和字体。各章填写谱例数据、时间轴事件或表格内容。[格式样板页](./content/format-library.html)演示这些共用组件。
 
 [逐小节和声修订](./content/books/pro-composition/pro-composition-4.html#pro-chord-revision-table)在 `lesson-table` 上加 `chord-revision-table`。两行放草稿和修订，列对齐小节，单元格标出换和弦的拍位和跨小节延续，修订行高亮实际改动。段落切换会同步更新表格和同一个播放器。
+
+[重配和声对照谱](./content/books/reharmonization/reharmonization-5.html#technique-50)将逐小节和声修订与通用谱例播放器组合为 `mountChordRevision`。用 `versions` 提供原版与各修订版。每一版有 `label`、按小节排列的 `bars`，以及可交给 `mountScore` 的 `score`。和弦条目包含代号 `symbol`、以拍为单位的 `start` 与 `end`、配音标识 `voicing`。保留同一旋律时，一张对照表和一个播放键可以比较换和弦、拆分拍位和改变配音。
+
+[声部走向谱](./content/books/style-reharm/style-reharm-1.html#style-jazz-tritone)复用文本内五线谱。把两张 `voice-leading-panel` 放入 `voice-leading-staves`，每张按实际音高绘制五线谱和同声部箭头。实线连接上声部，虚线连接低音。图中标音名，SVG 的 `aria-label` 补充音区和移动方向。谱面无需脚本。需要比较音响时，可以在 `music-demo voice-leading-demo` 中按谱图顺序接入 `mountScoreWritingSteps`，共用一个播放键，选中版本的边框随之更新。
+
+展现多个和弦时，可用 `voice-leading-phrases` 容纳一张走向谱或一组对照。每个和弦代号放在对应音位上方。四个或更多音位的对照可加 `voice-leading-extended`，窄屏上下排列，保留音名和临时变音记号的阅读空间。[持续低音上的两种顶音线](./content/books/reharmonization/reharmonization-4.html#reharm-prelude-staves)
+
+走向谱可接入重配和声对照谱。在对照谱容器内放置 `data-revision-diagrams`，各图用 `data-revision-version` 对应版本名称。版本按钮同步切换走向图的选中状态、和弦表的当前行和试听谱。图有独立的 `id` 时，从该锚点进入会选中相应版本。[第 42、43 法的联动对照](./content/books/reharmonization/reharmonization-4.html#reharm-prelude-comparison)
+
+[和声落点推导图](./content/books/style-reharm/style-reharm-1.html#style-jazz-tensions)用 `mountDominantTensionMap` 同步目标调、七个音级、属七延伸音及和弦顺序。每个示例填写 `tonic`、可选的 `minor` 和 `score(included)`。图中连接的是同一个音的两种名称。勾选二级和弦时，播放器更新属七前的铺垫，属七与落点保留。
 
 ### 阅读尺寸与验收
 
@@ -314,7 +371,11 @@ npm run dev
 
 ### 谱例
 
-可播放谱例使用本地音库 `content/shared/assets/piano-and-strings.sf3`。钢琴采用 FreePats 的 Kawai 立式钢琴录音，由 Gonzalo 与 Roberto 录制。项目将左右声道混合为单声道采样，保留轻奏、强奏两个力度层及原循环设置。弦乐采用 Versilian Studios 的 VSCO 2 Community Edition 弦乐组持续音，经裁剪、循环及电平校准后与钢琴一起封装。两套音源均为 [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)。[FreePats 钢琴](https://freepats.zenvoid.org/Piano/acoustic-grand-piano.html) · [VSCO 2 Community Edition](https://versilian-studios.com/vsco-community/)
+可播放谱例使用本地音库 `content/shared/assets/piano-and-strings.sf3`。钢琴采用 Gonzalo 与 Roberto 录制的 FreePats Kawai 立式钢琴，使用单声道采样、轻奏与强奏两层力度以及原循环。弦乐使用 Versilian Studios 的 VSCO 2 Community Edition 单独小提琴、低音提琴，以及中提琴和大提琴组。每个声部按音域映射两层弓奏采样，并调整音头、循环、音准和释放。音源均为 CC0 1.0。[FreePats 钢琴](https://freepats.zenvoid.org/Piano/acoustic-grand-piano.html) · [VSCO 2 Community Edition](https://versilian-studios.com/vsco-community/)
+
+使用 SONiVOX 的合奏谱由共享播放器加载 `content/shared/assets/ensemble-with-kawai.sf3`。它包含相同的 Kawai 钢琴和小提琴、中提琴、大提琴、低音提琴，另有按音区映射的弦乐组和慢弦乐组。木吉他采用 Meta Open Sound 的钢弦与尼龙弦多力度采样。电吉他基于 CC0 的 FreePats FSBS 清音样本，过载与失真版本使用同一录音离线处理。其余音色来自 Sonic Network 的 SONiVOX，构建产物附有 `licenses/SONiVOX.txt`。[Meta Open Sound](https://github.com/facebookincubator/Meta-open-sound) · [FreePats 电吉他](https://freepats.zenvoid.org/ElectricGuitar/clean-electric-guitar.html)
+
+生成音库使用 `tools/build-instrument-soundfonts.py`，需要 NumPy、SciPy 和 SoundFile，入参为已下载采样的目录。Meta 钢弦和尼龙弦的 OGG 发布包分别解到 `steel/`、`nylon/`。FSBS 小型桥拾音器版解到 `clean/`。VSCO 持续音 WAV 按小提琴独奏、各弦乐组和低音提琴分别放入脚本指定的 `strings/` 子目录。
 
 四部谱通过 `fourPartScore` 或 `labelledChordScore` 创建，固定三部伴奏加单旋律的谱例可用 `scoreWithAccompaniment`。播放器会设置 `data-score-type="four-part-harmony"`，默认用弦乐四重奏，读者可在谱面右上角切换为钢琴。弦乐模式将高音、次高音、次中音、低音分别分送到第一小提琴、第二小提琴、中提琴、大提琴。两种音色共用原谱的声部数据。
 
@@ -344,7 +405,7 @@ mountScore(document.querySelector('#example'), {
 
 ### 编曲网格
 
-[编曲网格样板](./content/format-library.html#arrangement-grid-samples)展示底鼓和贝斯的落点。`mountArrangementGrid` 复用主题和横向滚动框，横轴标拍点与细分，纵轴可标鼓件、音高或乐器。圆点表示击打，色块的长度表示持续时间。
+[编曲网格样板](./content/format-library.html#arrangement-grid-samples)展示底鼓和贝斯的落点。横轴标拍点与细分，纵轴可标鼓件、音高或乐器。圆点表示起音，大点表示重音，色块的长度表示持续时间。独立示例使用 `mountPlayableArrangementGrid`，从网格事件生成音符，或传入原有的演奏谱。一页已有与网格对应的试听时，使用 `mountArrangementGrid`，把现有播放器的位置回调接到 `grid.markTick`。
 
 传入 `beats`（总拍数）、`beatsPerBar`（每小节拍数）、`subdivisions`（每拍格数）、`label` 和 `rows`。每行用 `label` 标明鼓件或音高，`events` 里的 `step` 从 0 开始计，`length` 按格计，`accent` 标出重音。切换版本时调用 `update(rows)`。
 

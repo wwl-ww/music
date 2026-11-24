@@ -28,6 +28,10 @@
   --book-cover: url("./assets/covers/orchestration.png");
   --book-color: #3e8276;
 }
+.score-directory [data-cover="chinese-orchestration"] {
+  --book-cover: url("./assets/covers/chinese-orchestration-cover.jpg");
+  --book-color: #8d4b56;
+}
 .score-directory [data-cover="form-analysis"] {
   --book-cover: url("./assets/covers/form-analysis-cover.png");
   --book-color: #748052;
@@ -37,23 +41,42 @@
   --book-color: #9a5845;
 }
 .score-directory [data-cover="arrangement"] {
-  --book-cover: url("./assets/covers/arrangement.jpg");
-  --book-color: #54822f;
+  --book-cover: url("./assets/covers/arrangement-series.jpg");
+  --book-color: #256571;
+}
+
+.score-directory [data-cover="genre-arrangement"] {
+  --book-cover: url("./assets/covers/genre-arrangement-series.jpg");
+  --book-color: #396e58;
 }
 
 .score-directory [data-cover="pro-composition"] {
-  --book-cover: url("./assets/covers/pro-composition.jpg");
-  --book-color: #574088;
+  --book-cover: url("./assets/covers/pro-composition-series.jpg");
+  --book-color: #75528a;
 }
 
 .score-directory [data-cover="composition-scoring"] {
-  --book-cover: url("./assets/covers/composition-scoring.jpg");
-  --book-color: #a74373;
+  --book-cover: url("./assets/covers/composition-scoring-series.jpg");
+  --book-color: #4d628b;
+}
+
+.score-directory [data-cover="style-reharm"] {
+  --book-cover: url("./assets/covers/style-reharm-series.jpg");
+  --book-color: #a95443;
+}
+.score-directory [data-cover="reharmonization"] {
+  --book-cover: url("./assets/covers/reharmonization-series.jpg");
+  --book-color: #758044;
 }
 
 .score-directory [data-cover="pop-techniques"] {
-  --book-cover: url("./assets/covers/pop-techniques.jpg");
-  --book-color: #b62c34;
+  --book-cover: url("./assets/covers/pop-techniques-series.jpg");
+  --book-color: #a84458;
+}
+
+.score-directory [data-cover="pop-rock-theory"] {
+  --book-cover: url("./assets/covers/pop-rock-theory-series.jpg");
+  --book-color: #5d7440;
 }
 
 .score-banner {
@@ -128,6 +151,21 @@
   font: 650 0.8125rem/1.4 system-ui, sans-serif;
 }
 .score-book-jumps { display: flex; flex-wrap: wrap; gap: 0.28rem; }
+.score-book-group {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  gap: 0.28rem;
+  min-width: 0;
+  padding-block-start: 0.5rem;
+  border-block-start: 1px solid var(--line);
+}
+.score-book-group > h3 {
+  flex-basis: 100%;
+  margin: 0 0.6rem 0.12rem;
+  color: var(--muted);
+  font: 650 0.8125rem/1.4 system-ui, sans-serif;
+}
 .score-book-jumps a {
   position: relative;
   display: flex;
@@ -259,8 +297,15 @@
 }
 @media (min-width: 50rem) {
   .score-index-layout { grid-template-columns: clamp(10rem, 17.5vw, 13rem) minmax(0, 1fr); align-items: start; }
-  .score-sidebar { position: sticky; top: 1rem; }
-  .score-book-jumps { display: grid; }
+  .score-sidebar {
+    position: sticky;
+    top: 1rem;
+    max-block-size: calc(100dvh - 2rem);
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+  .score-book-jumps,
+  .score-book-group { display: grid; }
   .score-filters:not([hidden]) { grid-template-columns: minmax(0, 1fr) auto; }
   .score-filters .score-book-select { display: none; }
   .score-filter-count {

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>音阶、音程与和弦｜图解乐风编曲入门</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./genre-arrangement-intro.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解乐风编曲入门</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">导论</span> 音阶、音程与和弦</h1>
+      <p class="intro">一段旋律在 C 大调里用了哪些音，哪些音可以支撑它，又有哪些和弦能让同一句换一种重心？音阶给出材料，音程描述相对位置，和弦为旋律提供背景。这三个概念贯穿后面的编曲示范。</p>
+
+      <section aria-labelledby="genre-intro-scale">
+        <h2 id="genre-intro-scale">C 大调音阶与音程</h2>
+        <p>从 C 起依次弹白键 C、D、E、F、G、A、B，回到高八度的 C，就得到 C 大调音阶。C 是主音，其余各音依次是第 2 至第 7 级。级数可以跨调复用，例如 C 大调的第 3 级是 E，D 大调的第 3 级是 F♯。</p>
+        <figure class="score-example">
+          <figcaption>C 大调音阶</figcaption>
+          <svg class="inline-staff inline-staff-wide" viewBox="0 2 186 37" role="img" aria-label="C4 至 C5 的八个音，依次为 C、D、E、F、G、A、B、C">
+            <path class="inline-staff-lines" d="M1 7H185 M1 12H185 M1 17H185 M1 22H185 M1 27H185 M12 32H30"/>
+            <text x="17" y="32">&#xE0A2;</text><text x="39" y="29.5">&#xE0A2;</text><text x="61" y="27">&#xE0A2;</text><text x="83" y="24.5">&#xE0A2;</text><text x="105" y="22">&#xE0A2;</text><text x="127" y="19.5">&#xE0A2;</text><text x="149" y="17">&#xE0A2;</text><text x="171" y="14.5">&#xE0A2;</text>
+          </svg>
+        </figure>
+        <p><strong>音程度数</strong>把起点和终点都算进去。从 C 到 E 经过 C、D、E，是三度，从 E 到 G 也是三度。但琴键上 C–E 相隔四个半音，E–G 只隔三个半音，所以前者是大三度，后者是小三度。音程的度数和性质合起来才能确定距离。同一个 C 到同一个 C 是纯一度，升到下一个 C 是纯八度。</p>
+        <p>和弦结构常将根音记为 1，写作 1–3–5 表示根音、大三度、纯五度，写成 1–♭3–5 时，三音低了半音。这个 ♭ 是相对根音的间距标记。例如在 E 小三和弦中，♭3 是 G，实际谱面上的 G 可以没有降号。</p>
+      </section>
+
+      <section aria-labelledby="genre-intro-chords">
+        <h2 id="genre-intro-chords">三和弦、七和弦与延伸音</h2>
+        <p><strong>根音</strong>是辨认和弦构成的起点。C–E–G 以 C 为根音，改成 E–G–C 仍是同一组和弦音，但最低音成了 E，写作 C/E。辨认根音之后，才有「三音」或「七音」这些称呼。</p>
+        <table class="lesson-table lesson-table-dense">
+          <caption>以 C 为根音的和弦</caption>
+          <thead><tr><th scope="col">类别</th><th scope="col">符号与组成</th><th scope="col">变化</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">三和弦</th><td>C · C–E–G<br>Cm · C–E♭–G</td><td>改变三音，保留根音和纯五音。</td></tr>
+            <tr><th scope="row">减、增三和弦</th><td>Cdim · C–E♭–G♭<br>Caug · C–E–G♯</td><td>减三和弦同时降低三、五音，增三和弦升高五音。</td></tr>
+            <tr><th scope="row">挂留和弦</th><td>Csus4 · C–F–G</td><td>四音代替三音，大调或小调的三音暂不出现。</td></tr>
+            <tr><th scope="row">七和弦</th><td>Cmaj7 · C–E–G–B<br>C7 · C–E–G–B♭<br>Cm7 · C–E♭–G–B♭</td><td>从根音向上辨认三度和七度。Cmaj7 的七音是 B，另外两个的七音是 B♭。</td></tr>
+            <tr><th scope="row">延伸音</th><td>Cmaj9 · C–E–G–B–D<br>Cadd9 · C–E–G–D</td><td>都加九音 D。写作 Cmaj9 时七音仍在，add9 则没有约定的七音。</td></tr>
+          </tbody>
+        </table>
+        <p>将二、四、六度分别往上移过一个八度，得到九、十一、十三度。相对 C 来说分别是 D、F、A。符号的升降只改变所标的延伸音，例如 C7(♭9) 有 D♭。三和弦的三音能交代大小性质，七和弦的七音进一步交代类别。挂留和弦则靠四音及其后续走向形成听感。已经由旋律或其他乐器发出的音，可以在伴奏里省去。</p>
+        <div class="music-demo programmatic-score" id="genre-chord-forms">
+          <div class="music-demo-toolbar"><h3>同根音的三音、七音与九音</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">大三音 E 决定 C 大三和弦的性质，G 是它的五音。</p>
+          <figure data-writing-score aria-label="同根音的三音、七音与九音"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="genre-intro-map">
+        <h2 id="genre-intro-map">调内和弦与编曲入口</h2>
+        <p>C 大调的七个音都是白键。以每一级为根音，隔一个音取一个音，就能组成三和弦，再叠一个三度便得到七和弦。和弦里每个音都来自当前音阶时，它属于<strong>调内和弦</strong>。若伴奏用了 E7，它的 G♯ 就超出 C 大调音集，不过可以在下一拍走向 Am 的 A。</p>
+        <table class="lesson-table lesson-table-dense">
+          <caption>C 大调的调内和弦</caption>
+          <thead><tr><th scope="col">级数</th><th scope="col">三和弦</th><th scope="col">七和弦</th></tr></thead>
+          <tbody><tr><th scope="row">I</th><td>C · C–E–G</td><td>Cmaj7 · 加 B</td></tr>
+          <tr><th scope="row">ii</th><td>Dm · D–F–A</td><td>Dm7 · 加 C</td></tr>
+          <tr><th scope="row">iii</th><td>Em · E–G–B</td><td>Em7 · 加 D</td></tr>
+          <tr><th scope="row">IV</th><td>F · F–A–C</td><td>Fmaj7 · 加 E</td></tr>
+          <tr><th scope="row">V</th><td>G · G–B–D</td><td>G7 · 加 F</td></tr>
+          <tr><th scope="row">vi</th><td>Am · A–C–E</td><td>Am7 · 加 G</td></tr>
+          <tr><th scope="row">vii°</th><td>Bdim · B–D–F</td><td>Bm7(♭5) · 加 A</td></tr></tbody>
+        </table>
+        <p>为旋律选和弦时，先按调内的常见和弦搭骨架，再根据旋律支点、低音方向和段落所需的色彩决定是否换和弦或增加延伸音。确定了相同的和弦，还可以改变乐器、拍点及音区。这些是同一旋律编出不同风格的几条独立路径。</p>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./index.html"><span>返回</span><strong>本书目录</strong></a>
+        <a href="./genre-arrangement-1.html" rel="next"><span>第一篇 · 第 1 节</span><strong>编曲的基本思考</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

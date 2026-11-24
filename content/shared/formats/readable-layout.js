@@ -45,6 +45,7 @@ function frameContent(content, label, kind) {
 
 export function prepareReadingContent(main) {
   for (const table of main.querySelectorAll('.lesson-table')) {
+    if (table.closest('.table-scroll')) continue;
     const columns = [...table.rows[0]?.cells ?? []].reduce((count, cell) => count + cell.colSpan, 0);
     if (columns >= 4) table.style.setProperty('--table-min-width', `${columns * 4.75}rem`);
     if (columns >= 5) table.classList.add('lesson-table-dense');

@@ -1,5 +1,6 @@
-import { AlphaTabApi, FontFileFormat, NotationElement, Settings, midi, model, synth } from '@coderline/alphatab';
+import { AlphaTabApi, FontFileFormat, LayoutMode, NotationElement, Settings, midi, model, synth } from '@coderline/alphatab';
 import bravura from '@coderline/alphatab/font/Bravura.woff2?url';
+import sonivoxSoundFont from '@coderline/alphatab/soundfont/sonivox.sf3?url';
 import { enableScrollFrame } from './readable-layout.js';
 import { encodeScore, fourPartHarmony } from './four-part.js';
 import { mountScoreReading } from './score-reading.js';
@@ -7,6 +8,8 @@ import { mountScoreSections } from './score-sections.js';
 import { mountScoreNoteHighlights } from './score-note-highlights.js';
 
 const soundFont = new URL('../assets/piano-and-strings.sf3', import.meta.url).href;
+const ensembleSoundFont = new URL('../assets/ensemble-with-kawai.sf3', import.meta.url).href;
+const soundFontDownloads = new Map();
 const views = {
   staff: ['score'],
   numbered: ['numbered'],
@@ -14,6 +17,20 @@ const views = {
 };
 
 let activePlayer;
+
+function downloadSoundFont(url) {
+  if (!soundFontDownloads.has(url)) {
+    const request = fetch(url).then(response => {
+      if (!response.ok) throw new Error(`SoundFont download failed (${response.status})`);
+      return response.arrayBuffer();
+    }).catch(error => {
+      soundFontDownloads.delete(url);
+      throw error;
+    });
+    soundFontDownloads.set(url, request);
+  }
+  return soundFontDownloads.get(url);
+}
 
 export function startExclusivePlayback(player) {
   const previous = activePlayer;
@@ -28,7 +45,8 @@ export function endExclusivePlayback(player) {
 export function mountScore(figure, {
   notes, tempo = 90, notation = 'both', audio = true, onPitchesChange,
   onScoreLoaded, sectionNavigation, noteHighlights, voiceAudition,
-  soundFontUrl = soundFont, preservePosition = false, notationVisible = true, onPlaybackPosition
+  soundFontUrl = soundFont, preservePosition = false, notationVisible = true, onPlaybackPosition,
+  horizontal = false, showDynamics = true
 }) {
   const staves = views[notation];
   const tracks = staves.map((_, index) => index);
@@ -75,14 +93,21 @@ export function mountScore(figure, {
     display: { padding: [5, 5, 7, 3], lastSystemPaddingBottom: 2, lastSystemFillThreshold: 0 },
     player: {
       enablePlayer: audio,
-      soundFont: soundFontUrl,
       scrollMode: 'off'
     }
   });
+  const viewportLayout = typeof horizontal === 'boolean' ? null : horizontal;
+  if (viewportLayout?.matches ?? horizontal) settings.display.layoutMode = LayoutMode.Horizontal;
+  if (!showDynamics) settings.notation.elements.set(NotationElement.EffectDynamics, false);
   settings.display.resources.elementFonts.set(
     NotationElement.EffectLyrics, model.Font.withFamilyList(['Noto Sans SC', 'Microsoft YaHei', 'sans-serif'], 14)
   );
   const api = new AlphaTabApi(score, settings);
+  viewportLayout?.addEventListener('change', ({ matches }) => {
+    api.settings.display.layoutMode = matches ? LayoutMode.Horizontal : LayoutMode.Page;
+    api.updateSettings();
+    api.render();
+  });
   function getPosition() {
     if (requestedPosition) return requestedPosition;
     const tick = api.tickPosition;
@@ -277,6 +302,16 @@ export function mountScore(figure, {
     }
   }
   render();
+  if (audio && soundFontUrl && api.player) {
+    const bank = soundFontUrl === sonivoxSoundFont ? ensembleSoundFont : soundFontUrl;
+    const loadSoundFont = () => {
+      downloadSoundFont(bank).then(data => {
+        if (!api.loadSoundFont(data)) throw new Error('Could not load SoundFont data');
+      }).catch(showError);
+    };
+    if (api.player.isReady) loadSoundFont();
+    else api.player.ready.on(loadSoundFont);
+  }
 
   function update(message) {
     if (activePlayer === api) stopPlayback();

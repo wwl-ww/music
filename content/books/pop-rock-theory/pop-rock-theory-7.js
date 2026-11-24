@@ -1,5 +1,5 @@
 import soundFontUrl from '@coderline/alphatab/soundfont/sonivox.sf3?url';
-import { mountArrangementGrid } from '../../shared/formats/arrangement-grid.js';
+import { mountPlayableArrangementGrid } from '../../shared/formats/arrangement-grid-playback.js';
 import { mountScoreWritingSteps } from '../../shared/formats/score-writing-steps.js';
 
 function ensemble({ melody, chords, bass }) {
@@ -33,13 +33,14 @@ mountScoreWritingSteps(document.querySelector('#rock-glossary-syncopation'), {
   ]
 });
 
-mountArrangementGrid(document.querySelector('#rock-three-against-two'), {
+mountPlayableArrangementGrid(document.querySelector('#rock-three-against-two'), {
+  tempo: 60,
   beats: 1,
   subdivisions: 6,
   label: '复节奏三对二的六格对照',
   rows: [
-    { label: '三等分', events: [0, 2, 4].map(step => ({ step })) },
-    { label: '二等分', events: [0, 3].map(step => ({ step })) }
+    { label: '三等分', drum: 37, events: [0, 2, 4].map(step => ({ step })) },
+    { label: '二等分', drum: 36, events: [0, 3].map(step => ({ step })) }
   ]
 });
 

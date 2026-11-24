@@ -335,6 +335,6 @@ mountVariants('phrase-fill-comparison', {
 }, {
   tempo: 92,
   soundFontUrl: bandSoundFont,
-  onPlaybackPosition(tick) { fillGrid.markStep(tick === null ? null : Math.floor(tick / 240)); },
+  onPlaybackPosition: fillGrid.markTick,
   onChange(version) { fillGrid.update(gridRows(drumHits[version])); }
 });

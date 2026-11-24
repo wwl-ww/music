@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>民谣流行｜图解乐风编曲入门</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./genre-arrangement-7.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解乐风编曲入门</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">乐风 01</span> 民谣流行</h1>
+      <p class="intro">民谣流行用清楚的旋律和自然的乐器触感维持亲近感。典型编配让钢弦吉他负责脉搏，用细致的低音动线和留白承托歌唱。</p>
+
+      <section aria-labelledby="genre-folk-harmony">
+        <h2 id="genre-folk-harmony">下行低音与简洁和声</h2>
+        <p>民谣流行常保留自弹自唱的亲近感。编配先让歌唱和原声吉他形成完整的句子，其他乐器再承担脉搏、低音或句缝中的应答。和声主体采用三和弦，七和弦、转位与挂留和弦在要延长动线的位置出现。</p>
+        <p>民谣里可用转位把卡农式和声的低音连成下行线。图中 G/B 和 C/G 的根音分别是 G、C，斜线后的 B、G 才是贝斯要走到的音。整句可写 C–G/B–Am–C/G–F–C/E–Dm–G–C，旋律可用和弦音与短经过音连接。低音暂时停住时，Gsus4→G 的 C→B 或 Csus4→C 的 F→E 仍可给上方声部一个方向。</p>
+        <div id="genre-folk-harmony-descending-voice-staves" class="voice-leading-staves voice-leading-phrases" role="group" aria-label="卡农式连接的前五个低音">
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>卡农式连接的前五个低音</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 254 87" style="--voice-leading-width: 254px" role="img" aria-label="C、G/B、Am、C/G、F。低音 C3、B2、A2、G2、F2。转位填出连续下行，后续可接 E、D。">
+              <text class="voice-leading-chord-name" x="38" y="12">C</text><text class="voice-leading-chord-name" x="83" y="12">G/B</text><text class="voice-leading-chord-name" x="128" y="12">Am</text><text class="voice-leading-chord-name" x="173" y="12">C/G</text><text class="voice-leading-chord-name" x="218" y="12">F</text>
+              <path class="inline-staff-lines" d="M5 39H249 M5 44H249 M5 49H249 M5 54H249 M5 59H249"/>
+              <text x="8" y="44">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M45 51.5L76 54 M72 51.6L76 54 72 56.4 M90 54L121 56.5 M117 54.1L121 56.5 117 58.9 M135 56.5L166 59 M162 56.6L166 59 162 61.4 M180 59L211 61.5 M207 59.1L211 61.5 207 63.9"/>
+              <text x="34" y="51.5">&#xE0A2;</text><text x="79" y="54">&#xE0A2;</text><text x="124" y="56.5">&#xE0A2;</text><text x="169" y="59">&#xE0A2;</text><text x="214" y="61.5">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="38" y="79.5">C</text><text class="voice-leading-note-name is-bass" x="83" y="79.5">B</text><text class="voice-leading-note-name is-bass" x="128" y="79.5">A</text><text class="voice-leading-note-name is-bass" x="173" y="79.5">G</text><text class="voice-leading-note-name is-bass" x="218" y="79.5">F</text>
+            </svg>
+            <p class="voice-leading-distance">转位填出连续下行，后续可接 E、D</p>
+          </figure>
+        </div>
+        <div class="music-demo programmatic-score" id="genre-folk-arrangement">
+          <div class="music-demo-toolbar">
+            <h3>同一旋律的民谣流行编配</h3>
+            <label>编配 <select><option value="arranged">原声吉他与电钢琴</option><option value="base">基础稿</option><option value="melody">旋律</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">C–B–A–G–F–E–D–C 的低音贯穿四小节。钢弦吉他扫弦，电吉他分解和弦，电钢琴从长音留出主旋律的活动空间。</p>
+          <figure aria-label="同一旋律的民谣流行编配"></figure>
+        </div>
+        <p>本例从卡农式低音取骨架，再按旋律改配。同样是 A 低音，旋律在小节首是 F，伴奏改用 F/A；F 低音配 Dm/F，能支撑同处的 D 和 F。旋律第四小节跨在低音 D 与 C 上，先作 Dm7 的七音，再听到主和弦。</p>
+        <div class="music-demo programmatic-score" id="genre-folk-suspension">
+          <div class="music-demo-toolbar">
+            <h3>G 与 C 上的直接进入和挂留解决</h3>
+            <label>句尾 <select><option value="suspended">Gsus4–G、Csus4–C</option><option value="direct">G、C 直接进入</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">同一条 G–C 低音上，伴奏分别从 C 解到 B、从 F 解到 E。比较直接给出三音时两个小节的重心。</p>
+          <figure aria-label="G 与 C 上的直接进入和挂留解决"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="genre-folk-groove">
+        <h2 id="genre-folk-groove">八分脉搏与底鼓、贝斯的配合</h2>
+        <p>在每分钟 100 拍的示范里，小鼓击第 2、4 拍，底鼓在第 1 拍、第 2 拍后半和第 3 拍起音，踩镲按八分音符持续。把第 2 拍后半的底鼓稍放轻，同时让每拍后半的踩镲比前半弱。MIDI 力度可用底鼓减约 10、踩镲减约 15–25 作试配起点。不同采样的力度曲线不一，需再按实际合奏平衡。</p>
+        <p>贝斯从底鼓出发。换和弦的落点优先明确低音支点，其他起音可用五音或三音连向下一处。需要转位时，换和弦的低音落在斜线右侧所指定的音。譬如 G/B 的 B 才是这一处低音支点。</p>
+        <figure class="notation-sample"><figcaption>民谣流行首小节的起音位置</figcaption><div id="genre-folk-grid" data-arrangement-grid></div></figure>
+        <p>首小节前三次贝斯起音与三次底鼓对齐。其中第 2 拍后半的 G 是 C 和弦内的五音，只轻轻带到第 3 拍的 B。随后底鼓让开，贝斯可以补短音。这样换和弦的落点有重量，低音线仍能在余下的拍位自己行进。</p>
+      </section>
+
+      <section aria-labelledby="genre-folk-tracks">
+        <h2 id="genre-folk-tracks">刷弦、分解和弦与持续层</h2>
+        <table class="lesson-table">
+          <caption>五件伴奏声部的音色与任务</caption>
+          <thead><tr><th scope="col">声部</th><th scope="col">音色与演奏</th><th scope="col">避免重叠的调整</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">鼓组</th><td>录音室或复古原声鼓组。踩镲用轻重维持八分脉搏。</td><td>先平衡踩镲与人声齿音。强攻击和大余响留给需要抬升的段落。</td></tr>
+            <tr><th scope="row">电贝斯</th><td>清楚、少失真的电贝斯，和底鼓共享重拍。</td><td>在和声变换处交代低音走向，强拍之间引入少量和弦音。</td></tr>
+            <tr><th scope="row">钢弦原声吉他</th><td>有拨片攻击的扫弦，基于八分脉搏组织下刷和弱拍。</td><td>软件刷弦可识别和弦并模拟弦序。手工输入时按实际把位错开各弦起音。</td></tr>
+            <tr><th scope="row">电吉他</th><td>轻过载音色，用分解和弦对照扫弦。可由较干净的音色接入音箱模拟。</td><td>按实际把位打开音距。C 可拨 C–G–E，Am 可用 A–E–高音 C–E，让上层单音穿过刷弦的间隙。</td></tr>
+            <tr><th scope="row">电钢琴</th><td>采用 Wurlitzer 一类较圆润的电钢琴，主要给二分音符或全音符。</td><td>鼓、贝斯与两把吉他已经交代起音，电钢琴用持续和弦铺底。歌唱停顿时再以短助奏回应。</td></tr>
+          </tbody>
+        </table>
+        <p>混音时主唱处在前景，底鼓和贝斯在中间建立低音，两把吉他可向左右分开，电钢琴占用较柔和的中音区。保持可辨的拨弦和音尾，整体偏温暖简洁。主唱推得过响会与伴奏脱节，可以先收薄与它同频、同时起音的伴奏，再微调电平和空间效果。</p>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./genre-arrangement-6.html" rel="prev"><span>上一节</span><strong>抒情歌曲的结构与编配</strong></a>
+        <a href="./genre-arrangement-8.html" rel="next"><span>下一节</span><strong>电子流行</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

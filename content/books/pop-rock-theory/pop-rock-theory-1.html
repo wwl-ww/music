@@ -70,7 +70,7 @@
         </div>
 
         <h3 id="rock-fret-basics">一品一个半音</h3>
-        <p>吉他、贝斯和尤克里里沿同一条弦向高品移动一格，音高上升半音。空弦记为第 0 品。两种大调四音组都从组首数第 0、2、4、5 个半音，因此能用相同的品距来弹。换弦时起点由空弦音决定。标准吉他和四弦贝斯有若干相同的<strong>音名</strong>位置，实际音高通常相差八度。</p>
+        <p>吉他、贝斯和尤克里里沿同一条弦向高品移动一格，音高上升半音。空弦记为第 0 品，第 1 品是靠近弦枕的第一格。两组大调四音都从组首数第 0、2、4、5 个半音，因此能用相同的品距来弹。换弦时起点由空弦音决定。标准四弦贝斯的 E、A、D、G 四根弦与标准吉他的四根低音弦一一对应，同品位的音名相同，贝斯实际低一个八度。</p>
         <div class="music-demo" id="rock-four-note-fretboard">
           <div class="music-demo-toolbar"><h4>同一四音结构在三种指板上的位置</h4><div class="score-choice-buttons" data-fretboard-choices aria-label="选择乐器"></div></div>
           <figure data-fretboard-figure></figure>
@@ -109,7 +109,7 @@
           <figure data-fretboard-figure></figure>
           <p class="music-demo-cue" data-fretboard-description aria-live="polite">从 C 大调换到 D 大调，每个音保留弦号并提高两品。</p>
         </div>
-        <p>和弦符号里的数字从<strong>和弦根音</strong>计算。D6 的 6 是 D 上方的大六度 B，即使 D6 出现在别的调，B 仍是它的六音。通常的 D6 包含 D、F♯、A、B。B 上方的五音是 F♯，<strong>♭5</strong> 把它降低为 F。<strong>sus4</strong> 中的 4 则指四音代替三音。转位时最低音可以改变，根音仍是计算这些数字的起点。</p>
+        <p>和弦符号里的数字从<strong>和弦根音</strong>计算。以 C 大调中的 Dm 为例，F 是全调的第 4 级，却是 Dm 的三音，因为从 D 数到 F 要经过 D、E、F。看到 D6 时，计算的起点仍是 D，六音是 B，即使这个和弦出现在别的调。常见符号的具体拼法在<a href="./pop-rock-theory-3.html#rock-3-symbols">第 3 章</a>展开。</p>
         <details class="lesson-aside">
           <summary>音级与数字和弦谱</summary>
           <div class="lesson-aside-content"><ul>
@@ -121,8 +121,37 @@
 
       <section aria-labelledby="rock-melodic-motion">
         <h2 id="rock-melodic-motion">级进、半音与四五度运动</h2>
-        <p>旋律沿音阶的相邻音走叫<strong>级进</strong>。C 大调中从 C 到 G 可以用 C–D–E–F–G，几个中间音让两个端点听起来连成一条线。半音也能填进相邻的调内音之间，例如 D♭ 夹在 D 与 C 之间，低音便能从 D–C 的全音下行变成两个半音。跳进拉开两个起音之间的距离，适合明确地交代和弦根音或刻画旋律轮廓。</p>
-        <p>按纯五度上行会得到 C–G–D–A–E–B–F♯。C 上方的 G 相距七个半音，C 下方的 G 相距五个半音。两个 G 相差八度，因此在低音线里可以选较顺手的高度，同时保留根音之间的关系。在 C 大调，G 到 C 有属回主的方向，G7 的 B 和 F 分别趋向 C 和 E。反过来 C 到 G 往往是从主位向外展开。同样的四、五度距离，方向和调内位置会改变它的作用。</p>
+        <p>旋律沿音阶相邻音走叫<strong>级进</strong>。C 到 G 可用 C–D–E–F–G 连起来；相邻调内音之间也可以再插入半音。跳进则拉开两个起音之间的距离，可交代根音或突出轮廓。</p>
+        <div id="rock-melodic-motion-voice-staves" class="voice-leading-staves voice-leading-phrases" role="group" aria-label="直接下行全音、插入降 D">
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>直接下行全音</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 164 76" style="--voice-leading-width: 164px" role="img" aria-label="起音、、落音。旋律 D4、D4、C4。直接从 D 落到 C。">
+              <text class="voice-leading-chord-name" x="38" y="12">起音</text><text class="voice-leading-chord-name" x="83" y="12"></text><text class="voice-leading-chord-name" x="128" y="12">落音</text>
+              <path class="inline-staff-lines" d="M5 25H159 M5 30H159 M5 35H159 M5 40H159 M5 45H159"/>
+              <text x="8" y="40">&#xE050;</text>
+              <path d="M120 50H136"/>
+              <path class="voice-leading-connector" d="M41 51.5Q62 59.5 79 51.5 M90 47.5L121 50 M117 47.6L121 50 117 52.4"/>
+              <text x="34" y="47.5">&#xE0A2;</text><text x="79" y="47.5">&#xE0A2;</text><text x="124" y="50">&#xE0A2;</text>
+              <text class="voice-leading-note-name" x="38" y="68">D</text><text class="voice-leading-note-name" x="83" y="68">D</text><text class="voice-leading-note-name" x="128" y="68">C</text>
+            </svg>
+            <p class="voice-leading-distance">直接从 D 落到 C</p>
+          </figure>
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>插入降 D</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 164 76" style="--voice-leading-width: 164px" role="img" aria-label="起音、经过音、落音。旋律 D4、D♭4、C4。同一距离拆成两次半音。">
+              <text class="voice-leading-chord-name" x="38" y="12">起音</text><text class="voice-leading-chord-name" x="83" y="12">经过音</text><text class="voice-leading-chord-name" x="128" y="12">落音</text>
+              <path class="inline-staff-lines" d="M5 25H159 M5 30H159 M5 35H159 M5 40H159 M5 45H159"/>
+              <text x="8" y="40">&#xE050;</text>
+              <path d="M120 50H136"/>
+              <path class="voice-leading-connector" d="M45 47.5L66 47.5 M62 45.1L66 47.5 62 49.9 M90 47.5L121 50 M117 47.6L121 50 117 52.4"/>
+              <text x="69" y="47.5">&#xE260;</text>
+              <text x="34" y="47.5">&#xE0A2;</text><text x="79" y="47.5">&#xE0A2;</text><text x="124" y="50">&#xE0A2;</text>
+              <text class="voice-leading-note-name" x="38" y="68">D</text><text class="voice-leading-note-name" x="83" y="68">D♭</text><text class="voice-leading-note-name" x="128" y="68">C</text>
+            </svg>
+            <p class="voice-leading-distance is-chromatic">同一距离拆成两次半音</p>
+          </figure>
+        </div>
+        <p>按纯五度上行会得到 C–G–D–A–E–B–F♯。从 C 向上数七个半音是 G，向下数五个半音也到 G。前者是上行纯五度，后者是下行纯四度，两个 G 相差八度，可以按音域和指法选用。反向回到 C 则可下行纯五度或上行纯四度。在 C 大调中，G7 的 B 和 F 分别趋向 C 和 E，这时根音 G→C 带有属回主的作用。</p>
         <figure id="rock-fret-fifths">
           <figcaption>吉他上同一个 C 的两种 G 去向</figcaption>
           <p>C3 在第 5 弦第 3 品，低处的 G2 在第 6 弦第 3 品，高处的 G3 在第 4 弦第 5 品。</p>

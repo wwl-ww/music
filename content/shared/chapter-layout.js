@@ -30,9 +30,10 @@ function addCoursePath() {
   path.className = 'chapter-path';
   path.setAttribute('aria-label', '课程路径');
   const libraryLink = document.createElement('a');
-  libraryLink.href = '../../';
-  libraryLink.textContent = '教材';
-  libraryLink.setAttribute('aria-label', '全部教材');
+  const readingLibrary = bookLink.dataset.libraryHref;
+  libraryLink.href = readingLibrary ?? '../../';
+  libraryLink.textContent = readingLibrary ? '休闲阅读' : '教材';
+  libraryLink.setAttribute('aria-label', readingLibrary ? '休闲阅读' : '全部教材');
   const separator = document.createElement('span');
   separator.textContent = '›';
   separator.setAttribute('aria-hidden', 'true');

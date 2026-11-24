@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>休闲阅读</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="./shared/style.css">
+    <link rel="stylesheet" href="./shared/themes.css">
+    <script src="./shared/themes.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="library-home" href="./">全部教材</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width course-home">
+      <div class="library-heading"><h1>休闲阅读</h1></div>
+      <nav class="course-index single-book-index" aria-label="休闲读物">
+        <section class="course-group" aria-label="书目">
+          <ol>
+            <li><a href="./books/work-boundaries/index.html"><span>职场</span>打工而已，别太上头</a></li>
+            <li><a href="./books/pig-husbandry/index.html"><span>养殖</span>快速养猪</a></li>
+            <li><a href="./books/humor-collection/index.html"><span>幽默</span>搞笑精品笑话</a></li>
+          </ol>
+        </section>
+      </nav>
+    </main>
+  </body>
+</html>

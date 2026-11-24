@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>和声、声部与编配的复核｜图解重配和声乐风编曲法</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+    <script type="module" src="./style-reharm-summary.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解重配和声乐风编曲法</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">结语</span> 和声、声部与编配的复核</h1>
+      <p class="intro">一处重配是否适合整首歌，可以从三个位置判断。旋律的长音有没有落稳，低音和内声部有没有接上，乐句有没有在需要的位置才结束。</p>
+
+      <section aria-labelledby="reharm-check-part">
+        <h2 id="reharm-check-part">一个音改变和弦功能</h2>
+        <p>基谱第 13 小节以 A 起句，尾音是 C。Dm7 和 D7 都容纳 A、C，低音也同为 D。伴奏的 F 改成 F♯ 后，出现了通向 G 的导音。接在后面的 G7 仍有 F 自然音，F♯ 在较高的声部上行到 G，低音上方的 F 属于新和弦。旋律、节奏和低音一致时，副属和弦的作用集中在这次半音解决。</p>
+        <div class="music-demo programmatic-score" id="reharm-one-note">
+          <div class="music-demo-toolbar"><h3>F 与 F♯ 对和弦功能的影响</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">第 13 小节伴奏上声部是 F。Dm7 是 C 大调调内属前和弦，旋律的 A 与 C 都是它的和弦音。</p>
+          <figure data-writing-score aria-label="只改动一个伴奏音的两种和声进行"></figure>
+        </div>
+        <p>单独看第 13 小节，两种和弦都有旋律依据。结合第 14 小节，Dm7 提供调内推进，D7 则更清楚地把 G 设为短暂目标。若旋律持有 F，自然音 F 与伴奏的 F♯ 会在同一拍共存，需要更改换和弦的时点、选另一种和弦，或给这个张力安排清楚的解决。</p>
+      </section>
+
+      <section aria-labelledby="reharm-transfer">
+        <h2 id="reharm-transfer">移调后的和弦配置</h2>
+        <p>和弦级数可以整体移到别的调。C 大调的 Dm7–G7–C，在 F 大调写作 Gm7–C7–F。若第一个和弦用副属 D7(♭9)，移调时还需要带上 F♯ 和 E♭。它们分别是三音与降九音。在 F 大调中，这两个位置对应 B 与 A♭，仍分别以半音走到下一和弦的 C 与 G。</p>
+        <table class="lesson-table lesson-table-dense">
+          <caption>二五一与副属解决的移调</caption>
+          <thead><tr><th scope="col">主调</th><th scope="col">ii7–V7–I</th><th scope="col">V7/V–V7</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">C</th><td>Dm7–G7–C</td><td>D7–G7</td></tr>
+            <tr><th scope="row">F</th><td>Gm7–C7–F</td><td>G7–C7</td></tr>
+            <tr><th scope="row">B♭</th><td>Cm7–F7–B♭</td><td>C7–F7</td></tr>
+            <tr><th scope="row">G</th><td>Am7–D7–G</td><td>A7–D7</td></tr>
+            <tr><th scope="row">D</th><td>Em7–A7–D</td><td>E7–A7</td></tr>
+          </tbody>
+        </table>
+        <p>移调保持音程，乐器可用的音区、把位与空弦会改变。直接把钢琴两层一起移高，低音也跟着升高。若希望重配后的低音仍在较低音区，可以重排伴奏，优先留下决定性质的三音、七音，以及正在解决的变化延伸音。F 大调的例子把 G 放低八度，从 G7(♭9) 省去五音 D，留下 B、F 与 A♭ 的三条半音线。</p>
+        <div class="music-demo" id="reharm-transposed-voicings">
+          <div class="music-demo-toolbar"><h3>副属和弦的移调与配置调整</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">D7(♭9)–G7–C。F♯ 上行到 G，E♭ 下行到 D，分别说明副属导音和变化九音的去向。</p>
+          <figure data-writing-score aria-label="同一副属解决移到 F 大调，并比较两种伴奏配置"></figure>
+        </div>
+        <p>在吉他上，开放弦无法随整个手型一起移动。此时可先确定移调后的低音、三音、七音和需要保留的色彩音，再在新的把位寻找它们。若贝斯已明确奏出根音，吉他可以把有限的弦留给上方声部。</p>
+      </section>
+
+      <section aria-labelledby="reharm-arrangement">
+        <h2 id="reharm-arrangement">和弦骨架与节奏织体的组合</h2>
+        <p>先写和弦也能得到旋律的骨架。例如 Dm7–G7–C 上可以先定三个长音 F–F–E。F 从 Dm7 的三音变成 G7 的七音，到 C 时下行半音。可以在两个 F 之间加入 G 作为上邻音，或让第二个 F 延迟进入，改变句子的节奏，同时保留 F→E 的收束。</p>
+        <p>和声版本之间也可以交换伴奏设计。把巴萨诺瓦篇的四度上层交给电钢琴，低音和鼓采用节奏布鲁斯的拍位。先保持各和弦的更换位置与上层音高，再调整起音时值。低音保持正拍、和弦改在反拍时，旋律的长音仍能原样保留。若两层都在短音处密集起音，可缩短一次电钢琴应答，给主旋律留出空间。</p>
+        <table class="lesson-table">
+          <caption>重配后的三个检查位置</caption>
+          <thead><tr><th scope="col">位置</th><th scope="col">判断依据</th><th scope="col">可调的部分</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">旋律重音</th><td>长音、强拍和高潮音与和弦的关系</td><td>和弦构成、音区、换和弦的拍位</td></tr>
+            <tr><th scope="row">小节接缝</th><td>共同音是否留住，半音是否接到预期位置</td><td>低音、伴奏顶音、转位与内声部</td></tr>
+            <tr><th scope="row">段落边界</th><td>属到主是否把结束感留在预定位置</td><td>持续音、属和弦、终止的长度</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./style-reharm-8.html" rel="prev"><span>第八篇</span><strong>J-POP ② · 舞曲编配</strong></a>
+        <a href="./index.html"><span>返回</span><strong>本书目录</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

@@ -1,5 +1,7 @@
 import soundFontUrl from '@coderline/alphatab/soundfont/sonivox.sf3?url';
 import { mountFretboard } from '../../shared/formats/fretboard.js';
+import { pianoKeysMarkup } from '../../shared/formats/piano.js';
+import { mountScoreChoiceButtons } from '../../shared/formats/score-choice-buttons.js';
 import { mountScoreWritingSteps } from '../../shared/formats/score-writing-steps.js';
 
 function chord(pitches, symbol, duration = 1) {
@@ -61,21 +63,37 @@ mountFretboard(document.getElementById('rock-pentatonic-box-d'), {
   caption: '整体升两品后得到 D 大调／B 小调五声盒型。D 和 B 分别标出两种主音。',
   markers: boxMarkers(2)
 });
-mountFretboard(document.getElementById('rock-pentatonic-key-frets'), {
-  tuning: ['E4', 'B3'],
-  startFret: 7,
-  endFret: 10,
-  caption: '第 1、2 弦在第 7、10 品的四个实点限定候选。第 8、9 品的邻点可以缩小范围。',
-  markers: [
-    { string: 1, fret: 7, label: 'B', variant: 'accent' },
-    { string: 1, fret: 8, label: 'C' },
-    { string: 1, fret: 9, label: 'C♯' },
-    { string: 1, fret: 10, label: 'D', variant: 'accent' },
-    { string: 2, fret: 7, label: 'F♯', variant: 'accent' },
-    { string: 2, fret: 8, label: 'G' },
-    { string: 2, fret: 9, label: 'G♯' },
-    { string: 2, fret: 10, label: 'A', variant: 'accent' }
-  ]
+const keyComparison = document.getElementById('rock-pentatonic-key-comparison');
+const keyFigure = document.getElementById('rock-pentatonic-key-frets');
+const keyDescription = keyComparison.querySelector('[data-fretboard-description]');
+const keyMarkers = [
+  { string: 1, fret: 7, label: 'B', variant: 'accent' },
+  { string: 1, fret: 8, label: 'C' },
+  { string: 1, fret: 9, label: 'C♯' },
+  { string: 1, fret: 10, label: 'D', variant: 'accent' },
+  { string: 2, fret: 7, label: 'F♯', variant: 'accent' },
+  { string: 2, fret: 8, label: 'G' },
+  { string: 2, fret: 9, label: 'G♯' },
+  { string: 2, fret: 10, label: 'A', variant: 'accent' }
+];
+const keyChoices = [
+  { label: '共有四音', neighbors: [], cue: 'G、D、A 大调音集都包含 B、D、F♯、A。' },
+  { label: 'C 与 G', neighbors: [8, 8], cue: '同在第 8 品。C 对应 G 大调音集，另一弦的 G 也在其中。' },
+  { label: 'C♯ 与 G', neighbors: [9, 8], cue: '第 1 弦用第 9 品，第 2 弦用第 8 品。这一组对应 D 大调音集。' },
+  { label: 'C♯ 与 G♯', neighbors: [9, 9], cue: '同在第 9 品。这一组对应 A 大调音集。' },
+  { label: 'C 与 G♯', neighbors: [8, 9], cue: '三个候选的自然音阶中都没有这组组合。' }
+];
+mountScoreChoiceButtons(keyComparison.querySelector('[data-fretboard-choices]'), keyChoices, ({ neighbors, cue }) => {
+  mountFretboard(keyFigure, {
+    tuning: ['E4', 'B3'],
+    startFret: 7,
+    endFret: 10,
+    caption: '着色实框标出共有四音，虚线框标出补入的邻音。',
+    markers: keyMarkers.map(marker => marker.fret === neighbors[marker.string - 1]
+      ? { ...marker, variant: 'secondary' }
+      : marker)
+  });
+  keyDescription.textContent = cue;
 });
 
 const c7 = chord('C3 G3 Bb3 E4', 'C7');
@@ -105,6 +123,11 @@ mount('rock-blue-note', 88, [
   ['加入降五级 E♭', '保留降三级 C。D 与 E 之间加一个短 E♭，形成两次接续的半音上行。',
     'A4.4 C5.4 D5.8 Eb5.8 E5.4' + bluesEnd, bluesHarmony]
 ]);
+
+document.getElementById('rock-diminished-keyboard').innerHTML =
+  pianoKeysMarkup([0, 3, 6, 9].map(pitch => [pitch, 'keyboard-highlight']), 1);
+document.getElementById('rock-augmented-keyboard').innerHTML =
+  pianoKeysMarkup([0, 4, 8].map(pitch => [pitch, 'keyboard-highlight']), 1);
 
 const dHalf = chord('D3 A3 D4', 'D', 2);
 const eMinor = chord('E3 B3 E4', 'Em');

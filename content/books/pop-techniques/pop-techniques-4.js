@@ -13,7 +13,7 @@ export function mountProductionAudio(id, variants) {
   const choice = example.querySelector('[data-production-choice]');
   const description = example.querySelector('[data-production-description]');
   const button = example.querySelector('.score-playback');
-  const status = example.querySelector('.score-status');
+  const status = example.querySelector('[data-production-status]');
   const meters = example.querySelector('[data-production-meters]');
   const playLabel = button.getAttribute('aria-label');
   const cache = new Map();
@@ -25,6 +25,11 @@ export function mountProductionAudio(id, variants) {
       meters.textContent = values;
       meters.hidden = !values;
     }
+  }
+
+  function showStatus(message = '') {
+    status.hidden = !message;
+    status.textContent = message;
   }
 
   function stop(playback) {
@@ -41,7 +46,7 @@ export function mountProductionAudio(id, variants) {
 
   choice.addEventListener('change', () => {
     if (activePlayback?.button === button) activePlayback.cancel();
-    status.textContent = '';
+    showStatus();
     update();
   });
 
@@ -54,7 +59,7 @@ export function mountProductionAudio(id, variants) {
     activePlayback = playback;
     button.dataset.playing = '';
     button.setAttribute('aria-label', '停止播放');
-    status.textContent = '';
+    showStatus();
 
     try {
       audioContext ??= new AudioContext();
@@ -78,7 +83,7 @@ export function mountProductionAudio(id, variants) {
     } catch {
       if (activePlayback !== playback) return;
       playback.cancel();
-      status.textContent = '音频未能启动。';
+      showStatus('音频未能启动，可再次按播放重试。');
     }
   });
 
@@ -108,11 +113,11 @@ function spliceExample(crossfade) {
 if (typeof document !== 'undefined') {
   mountProductionAudio('pop-edit-crossfade', {
     cut: {
-      description: '两个持续音片段在振幅相差较大的位置硬切，接缝会出现短促的杂声。同一接缝重复两次。',
+      description: '两段合成持续音在振幅相差较大的位置硬切，容易听见短促的接缝声。同一接缝重复两次。',
       render: () => spliceExample(false)
     },
     crossfade: {
-      description: '相同接缝改为 16 毫秒交叉淡化。前段渐弱、后段渐强，换音仍然清楚，突兀的接缝声减轻。',
+      description: '两段合成持续音改用 16 毫秒交叉淡化。前段渐弱、后段渐强，换音仍然清楚，突兀的接缝声减轻。同一接缝重复两次。',
       render: () => spliceExample(true)
     }
   });

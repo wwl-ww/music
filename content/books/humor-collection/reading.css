@@ -1,0 +1,152 @@
+.humor-reading {
+  width: min(45rem, calc(100% - clamp(2rem, 8vw, 5rem)));
+}
+
+.humor-reading section {
+  margin-block-start: clamp(2.25rem, 5vw, 3.25rem);
+}
+
+.humor-reading h2 {
+  font: 700 1.45rem/1.5 var(--title-font);
+}
+
+.humor-reading h3 {
+  margin: 0;
+  font: 700 1.12rem/1.55 var(--title-font);
+}
+
+.humor-reading :is(h2, article, li)[id] {
+  scroll-margin-block-start: 1rem;
+}
+
+.humor-reading :is(article, li):target {
+  background: var(--control-selected);
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.humor-volumes {
+  margin-block-start: 0.8rem;
+}
+
+.humor-volumes small,
+.humor-index-list small,
+.humor-index-count {
+  color: var(--muted);
+}
+
+.humor-volume-nav,
+.humor-skip-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+}
+
+.humor-volume-nav {
+  margin-block-end: 1rem;
+}
+
+.humor-volume-nav a,
+.humor-skip-links a,
+.humor-next a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 44px;
+}
+
+.humor-volume-nav [aria-current="page"] {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.humor-skip-links {
+  margin-block-start: 0.5rem;
+}
+
+.humor-selection {
+  margin-block-start: 0.5rem;
+}
+
+.humor-selection article {
+  padding-block: 1.1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.humor-selection article p {
+  max-width: 40rem;
+  margin-block-start: 0.45rem;
+}
+
+.humor-selection h3 a {
+  color: var(--muted);
+  font-family: inherit;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.875rem;
+  margin-inline-end: 0.4em;
+}
+
+.humor-index-tools {
+  margin-block: 1rem 0.5rem;
+}
+
+.humor-index-tools label {
+  display: block;
+  font-weight: 600;
+}
+
+.humor-index-tools input {
+  width: min(100%, 23rem);
+  min-height: 44px;
+  padding: 0.45rem 0.7rem;
+  margin-block: 0.25rem;
+  font: inherit;
+  color: var(--ink);
+  background: var(--sheet);
+  border: 1px solid var(--control-stroke);
+  border-radius: var(--control-radius);
+}
+
+.humor-index-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.65rem 0 0;
+  border-block-start: 1px solid var(--line);
+}
+
+.humor-index-list li {
+  display: grid;
+  grid-template-columns: 2.45rem minmax(0, 1fr) auto;
+  gap: 0.3rem;
+  align-items: start;
+  border-bottom: 1px solid var(--line);
+  overflow-wrap: anywhere;
+}
+
+.humor-index-list li[hidden] {
+  display: none;
+}
+
+.humor-index-list li > :is(span, small),
+.humor-index-list a {
+  padding-block: 0.45rem;
+}
+
+.humor-index-list .humor-index-number {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  text-decoration: none;
+}
+
+.humor-index-number:hover,
+.humor-index-number:focus-visible {
+  text-decoration: underline;
+}
+
+.humor-next {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1.2rem;
+  margin-block-start: 2rem;
+}

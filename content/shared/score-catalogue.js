@@ -9,11 +9,18 @@ const empty = layout.querySelector('.score-filter-empty');
 
 const normalize = text => text.normalize('NFKC').toLowerCase();
 
-const books = [...rail.querySelectorAll('a')].map(link => {
+const books = [...rail.querySelectorAll('.score-book-group')].flatMap(group => {
+  const options = document.createElement('optgroup');
+  options.label = group.querySelector('h3').textContent.trim();
+  bookSelect.append(options);
+  return [...group.querySelectorAll('a')].map(link => readBook(link, options));
+});
+
+function readBook(link, options) {
   const id = link.hash.slice(1);
   const section = document.getElementById(id).closest('.score-book');
   const parts = [...section.querySelectorAll('.score-book-part')];
-  bookSelect.add(new Option(link.textContent.trim(), id));
+  options.append(new Option(link.textContent.trim(), id));
   link.dataset.scoreBook = id;
   const groups = [...section.querySelectorAll('.course-group')].map(group => {
     const heading = document.getElementById(group.getAttribute('aria-labelledby')).textContent;
@@ -31,7 +38,7 @@ const books = [...rail.querySelectorAll('a')].map(link => {
     return { group, items };
   });
   return { id, link, section, groups, parts };
-});
+}
 
 const all = document.createElement('a');
 all.textContent = '全部教材';

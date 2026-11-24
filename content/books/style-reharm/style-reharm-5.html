@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第五篇 放克｜图解重配和声乐风编曲法</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./style-reharm-5.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解重配和声乐风编曲法</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">第五篇</span> 放克</h1>
+      <p class="intro">从蓝调的主七和弦与吉他的切奏出发，用同一条旋律建立放克节奏。三全音替代负责半音低音，九音和四度声位负责连接，反复段负责延长律动。</p>
+
+
+      <section aria-labelledby="reharm-funk-result">
+        <h2 id="reharm-funk-result">七和弦进行与吉他切奏</h2>
+        <p>这里采用电吉他承担节奏骨架的编配。上方和弦短促落在反拍，低音明确交代根音和换和弦位置。短音后的空白留出了节奏层次，延音较多时则容易把每次起音连成一片。成品把每拍两个八分位置读成近似三连音的第一、第三位置，后半音比均分八分音符来得晚。基础谱和逐步修订保留持续和弦，便于比较和弦构成。吉他和贝斯在第一、三拍一起起音，第二拍后半仍能重合，第四拍则错开。</p>
+        <div id="reharm-funk-shuffle"></div>
+        <div class="programmatic-score" id="reharm-funk-comparison">
+          <div class="score-toolbar">
+            <h3>共同旋律的放克改配</h3>
+            <form aria-label="共同旋律的放克改配的切换选项">
+              <label>版本 <select name="arrangement"><option value="base">C 大调原型</option><option value="seventh">蓝调七和弦骨架</option><option value="chromatic">三全音替代</option><option value="voicing">加入九音与十一音</option><option value="final">吉他切奏成品</option></select></label>
+            </form>
+          </div>
+          <p class="music-demo-cue" data-generated-description aria-live="polite">主旋律逐版保持相同；成品在短音与休止中呈现七和弦，并附四小节尾声。</p>
+          <figure data-generated-score aria-label="共同旋律的放克改配的五线谱与试听"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="reharm-funk-sevenths">
+        <h2 id="reharm-funk-sevenths">蓝调语境的主七与下属七</h2>
+        <p>C 大调按自然音叠出 Cmaj7、Fmaj7 和 G7。蓝调可让 C7（C–E–G–B♭）承担主功能，让 F7（F–A–C–E♭）承担下属功能。C7 在别处也可能是 F 的副属七，这里多次回到 C7 并以它收句，所以 C7 能成为归宿。D7 可承担下属区域的准备，接到 G7 时也可理解为 V7/V。按后续落点判断各自的功能。蓝调中的 I7 和 IV7 都是大三和弦加小七音。小调蓝调的主位通常用 i7，三音保留小三度，即使途中也有 D7 这样的属七型和弦。</p>
+        <p>在此编配里，先把第 8 小节的属功能改为 D7，准备第 9 小节的 G7；第 13 小节换为主功能代理 Am7，第 14–15 小节再用 D7–G7。D7 从 Dm7 只改三音，F 升成 F♯。它在下属区域能接住 Am7 的 A、C，走向 G7 时又有副属的作用。这些位置给后面的三全音替代预留了低音落点。</p>
+        <table class="lesson-table">
+          <caption>属七型伴奏与旋律相隔半音时的取舍</caption>
+          <thead><tr><th scope="col">旋律与和弦</th><th scope="col">冲突及功能</th><th scope="col">处理依据</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">F7 上的 D</th><td>D 是十三音，与 F7 的 E♭构成半音类张力。</td><td>把 E♭放低一个八度，保留十三音与蓝调七音。</td></tr>
+            <tr><th scope="row">D7 上的 F</th><td>F 听成升九音（等音 E♯），靠近三音 F♯。</td><td>保留三音并分开音区，可把小三度与大三度的并置当作色彩。</td></tr>
+            <tr><th scope="row">F7 上的 E</th><td>E 是大七度，与七音 E♭ 属不同版本的七音，长音上尤其明显。</td><td>可降低 E♭、试 Fmaj7，或在替代链中另配置声位。Fmaj7 会移去蓝调小七音。</td></tr>
+            <tr><th scope="row">D7 上的 G</th><td>G 是十一音，与三音 F♯ 相邻。</td><td>可短奏错开，也可用 Dm7 或挂四声响软化。保留 D7 时，以九音 E 补足通往 Am7 的共同音。</td></tr>
+            <tr><th scope="row">A7 上的 C</th><td>C 与三音 C♯相邻。句尾 C 是主功能代理 Am7 的小三音。</td><td>保留 Am7，使旋律长音成为构成音，并少一次指向 D 的属牵引。</td></tr>
+          </tbody>
+        </table>
+        <div class="programmatic-score" id="reharm-funk-clash">
+          <div class="score-toolbar">
+            <h3>F7 上旋律 E 的四种处理</h3>
+            <form aria-label="F7 上旋律 E 的四种处理的切换选项">
+              <label>版本 <select name="arrangement"><option value="close">F7 · E♭ 靠近旋律</option><option value="wide">F7 · E♭ 降八度</option><option value="major">Fmaj7 · E 同音</option><option value="tritone">B7 · 换低音与声位</option></select></label>
+            </form>
+          </div>
+          <p class="music-demo-cue" data-generated-description aria-live="polite">四版保留同一条旋律。第一小节的和声变化，第二小节都落到 B♭7。</p>
+          <figure data-generated-score aria-label="F7 上旋律 E 的四种处理的五线谱与试听"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="reharm-funk-chromatic">
+        <h2 id="reharm-funk-chromatic">三全音替代形成的半音下行</h2>
+        <p>Em7 先变成指向 A 的 E7，再用 B♭7 保留 D 与 G♯（等音 A♭）的属七三全音。这样 F7 也有了目标 B♭7，便能继续用 B7 替换 F7，两次替代都把低音放到了目标的上方半音。</p>
+        <div id="reharm-funk-chromatic-voice-staves" class="voice-leading-staves voice-leading-phrases voice-leading-extended" role="group" aria-label="七和弦草稿、完成两次替代">
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>七和弦草稿</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 209 87" style="--voice-leading-width: 209px" role="img" aria-label="C7、F7、Em7、Am7。低音 C3、F2、E3、A2。四个低音按原和弦根音走。">
+              <text class="voice-leading-chord-name" x="38" y="12">C7</text><text class="voice-leading-chord-name" x="83" y="12">F7</text><text class="voice-leading-chord-name" x="128" y="12">Em7</text><text class="voice-leading-chord-name" x="173" y="12">Am7</text>
+              <path class="inline-staff-lines" d="M5 39H204 M5 44H204 M5 49H204 M5 54H204 M5 59H204"/>
+              <text x="8" y="44">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M45 51.5L76 61.5 M72 59.1L76 61.5 72 63.9 M90 61.5L121 46.5 M117 44.1L121 46.5 117 48.9 M135 46.5L166 56.5 M162 54.1L166 56.5 162 58.9"/>
+              <text x="34" y="51.5">&#xE0A2;</text><text x="79" y="61.5">&#xE0A2;</text><text x="124" y="46.5">&#xE0A2;</text><text x="169" y="56.5">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="38" y="79.5">C</text><text class="voice-leading-note-name is-bass" x="83" y="79.5">F</text><text class="voice-leading-note-name is-bass" x="128" y="79.5">E</text><text class="voice-leading-note-name is-bass" x="173" y="79.5">A</text>
+            </svg>
+            <p class="voice-leading-distance">四个低音按原和弦根音走</p>
+          </figure>
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>完成两次替代</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 209 85" style="--voice-leading-width: 209px" role="img" aria-label="C7、B7、B♭7、Am7。低音 C3、B2、B♭2、A2。低音 C–B–B♭–A 逐半音下降。">
+              <text class="voice-leading-chord-name" x="38" y="12">C7</text><text class="voice-leading-chord-name" x="83" y="12">B7</text><text class="voice-leading-chord-name" x="128" y="12">B♭7</text><text class="voice-leading-chord-name" x="173" y="12">Am7</text>
+              <path class="inline-staff-lines" d="M5 39H204 M5 44H204 M5 49H204 M5 54H204 M5 59H204"/>
+              <text x="8" y="44">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M45 51.5L76 54 M72 51.6L76 54 72 56.4 M90 54L111 54 M107 51.6L111 54 107 56.4 M135 54L166 56.5 M162 54.1L166 56.5 162 58.9"/>
+              <text x="114" y="54">&#xE260;</text>
+              <text x="34" y="51.5">&#xE0A2;</text><text x="79" y="54">&#xE0A2;</text><text x="124" y="54">&#xE0A2;</text><text x="169" y="56.5">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="38" y="77">C</text><text class="voice-leading-note-name is-bass" x="83" y="77">B</text><text class="voice-leading-note-name is-bass" x="128" y="77">B♭</text><text class="voice-leading-note-name is-bass" x="173" y="77">A</text>
+            </svg>
+            <p class="voice-leading-distance is-chromatic">低音 C–B–B♭–A 逐半音下降</p>
+          </figure>
+        </div>
+        <table class="lesson-table chord-revision-table">
+          <caption>第十至十三小节的和弦修订</caption>
+          <thead><tr><th scope="col">处理</th><th scope="col">第十小节</th><th scope="col">第十一小节</th><th scope="col">第十二小节</th><th scope="col">第十三小节</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">七和弦骨架</th><td>C7</td><td>F7</td><td>Em7</td><td>Am7</td></tr>
+            <tr><th scope="row">确立副属</th><td>C7</td><td>F7</td><td><mark>E7</mark></td><td>Am7</td></tr>
+            <tr><th scope="row">先换 E7</th><td>C7</td><td>F7</td><td><mark>B♭7</mark></td><td>Am7</td></tr>
+            <tr><th scope="row">再换 F7</th><td>C7</td><td><mark>B7</mark></td><td>B♭7</td><td>Am7</td></tr>
+          </tbody>
+        </table>
+        <div class="programmatic-score" id="reharm-funk-descent">
+          <div class="score-toolbar">
+            <h3>连续属七和弦与半音低音</h3>
+            <form aria-label="连续属七和弦与半音低音的切换选项">
+              <label>版本 <select name="arrangement"><option value="draft">C7–F7–Em7–Am7</option><option value="dominant">C7–F7–E7–Am7</option><option value="substitute">C7–F7–B♭7–Am7</option><option value="descent">C7–B7–B♭7–Am7</option></select></label>
+            </form>
+          </div>
+          <p class="music-demo-cue" data-generated-description aria-live="polite">共同旋律第十至十三小节。选择一个步骤可辨认同一旋律下逐渐形成的低音线。</p>
+          <figure data-generated-score aria-label="连续属七和弦与半音低音的五线谱与试听"></figure>
+        </div>
+        <p>末端保留 Am7，旋律 C 落在小三音上。若把它继续改成 A7，伴奏的 C♯就会与旋律的长 C 构成半音摩擦，且会把和声牵向 D。保持 Am7 后再向下一句的 D7 前进，可以保留这一处短暂的休止感。</p>
+      </section>
+
+      <section aria-labelledby="reharm-funk-neighbors">
+        <h2 id="reharm-funk-neighbors">降六级属七的两种联系</h2>
+        <p>D7 去 G7 时可以用 A♭7 代 D7。D7 的 F♯、C 等音对应 A♭7 的 G♭、C，低音从 A♭下降半音到 G。A♭7 还和 C 大调借入的 Fm7 共享 A♭、C、E♭三个音，因而可以在下属小和弦的区域使用。前一种解释着眼于目标 G，后一种着眼于共同音和所在的句法位置。两条联系可以同时存在。</p>
+        <p>上方旋律若出现 D，与 A♭ 构成升十一度，可与蓝调常用的三全音色彩结合。若旋律与 A♭7 的三音 C 形成紧邻的半音，可调整和弦音区，或缩短冲突位置的伴奏。共同基谱在这一小节从 D 走到 B，B 与和弦的 C 形成短暂的小二度类张力。成品用短促起音留出空白。</p>
+      </section>
+
+      <section aria-labelledby="reharm-funk-voicings">
+        <h2 id="reharm-funk-voicings">九音、挂四音响与吉他声位</h2>
+        <p>D9 在 D7 上加 E，除去 F♯就留下 D 低音与 Am7 的 A、C、E 等上部音，接近 Am7/D 的挂留属音色。B♭9 的上部也可与 Fm 的 F、A♭、C 相连，弱化功能时可试 Fm7/B♭。保留属七的三、七音时，九音增添色彩并可延续共同音；拿掉三音后，挂留感才明显。G7、G9、Dm7/G、F/G 的对应谱例保留 G 低音，逐步降低 B 对 C 的半音指向。</p>
+        <div class="programmatic-score" id="reharm-funk-suspension">
+          <div class="score-toolbar">
+            <h3>同一 G 低音下的属音响</h3>
+            <form aria-label="同一 G 低音下的属音响的切换选项">
+              <label>版本 <select name="arrangement"><option value="plain">G7–C7</option><option value="ninth">G9–C7</option><option value="dm">Dm7/G–C7</option><option value="f">F/G–C7</option></select></label>
+            </form>
+          </div>
+          <p class="music-demo-cue" data-generated-description aria-live="polite">G 低音保持。第一个和弦的上方音逐渐从 G7 的导向音换为挂留音。</p>
+          <figure data-generated-score aria-label="同一 G 低音下的属音响的五线谱与试听"></figure>
+        </div>
+        <p>C9 和 F9 分别加入 D 与 G。这些九音可用于开头建立一致音色。后来 C9–B7(♯9) 中的 D 可继续保留，D 对 B 的音响相当于升九音（理论拼写为 C𝄪），对被替换的 F7 则是十三音。另一处 B♭9 加 C，在下一和弦里可以把 C 留作 Am 的小三音。九音在开头反复出现时，第 10 小节仍用 C9 就能延续同一音色。若前半选择朴素的 C7、F7，后续也可以相应减少九音，只有传递共同音的位置保留扩展。</p>
+        <p>Am7(11) 可用 A 低音，上部用 G–C–D–G，省五音 E。G–C 与 D–G 两处都是四度，吉他的横按和空弦可协助保持这组上部。G9 则可在低音组已弹 G 时省根音，把 B、F 与九音 A 放在同一手型。吉他用短音交代第三、七音时，键盘可用长音保留共同音或填空拍。若两件乐器在同一音区、同一拍位重复完整和弦，短音的轮廓会被持续音盖住。</p>
+        <div id="reharm-funk-guitar"></div>
+      </section>
+
+      <section aria-labelledby="reharm-funk-coda">
+        <h2 id="reharm-funk-coda">C9 与 F9 的循环尾声</h2>
+        <p>主旋律末句回到 C9 后，F9–C9 重现两次，保留相同的低音落点与切奏节奏。这样尾声有足够时间确立律动，最后一个 C9 保持主七和弦的蓝调音色。这一对和弦也可反复作为即兴的背景，或先在前奏出现，直到主题进入。</p>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./style-reharm-4.html" rel="prev"><span>第四篇</span><strong>节奏布鲁斯</strong></a>
+        <a href="./style-reharm-6.html" rel="next"><span>第六篇</span><strong>民谣</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

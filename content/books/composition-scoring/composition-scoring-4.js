@@ -71,25 +71,3 @@ mountScoringContrast('fantasy-jungle-dorian', {
     summary: '第六级升高半音至 C♯，第三小节的两个 C 改变色彩；长音布局保持原样。'
   }
 }, { tempo: 94, key: 'Eminor' });
-
-const adventureCall = contrastTrack('小号主题', 'D5{ac}.4 { dy mf } F#5{st}.8 A5{st}.8 A5.2 | B5{ac}.4 A5{st}.8 G5{st}.8 D5.2 | G5{ac}.4 D5{st}.8 G5{st}.8 A5.2 | F#5{st}.8 E5{st}.8 D5{ac}.2 { d }', { program: 56 });
-const adventureChords = '(F#3 A3 D4).1 { ch "D" dy mp } | (G3 B3 D4).1 { ch "G/D" } | ';
-const adventureBass = pedalBass('D3.1 { dy mf } | D3{t}.1 | D3{t}.1 | D3{t}.1');
-mountScoringContrast('fantasy-adventure-cadence', {
-  major: {
-    tracks: [
-      adventureCall,
-      chordLayer(adventureChords + '(G3 B3 D4).1 { ch "G/D" } | (F#3 A3 D4).1 { ch "D" }'),
-      adventureBass
-    ],
-    summary: '大下属持续到第三小节，内声 B 最后直接下行全音到 A。'
-  },
-  borrowed: {
-    tracks: [
-      adventureCall,
-      chordLayer(adventureChords + '(G3 Bb3 D4 E4).1 { ch "Gm6/D" } | (F#3 A3 D4).1 { ch "D" }'),
-      adventureBass
-    ],
-    summary: '第三小节改为小下属，B–B♭–A 构成连续半音。低音 D 留在同一位置。'
-  }
-}, { tempo: 118, key: 'D' });

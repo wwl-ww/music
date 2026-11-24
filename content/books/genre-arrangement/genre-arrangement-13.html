@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>电子舞曲｜图解乐风编曲入门</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./genre-arrangement-13.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解乐风编曲入门</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">乐风 07</span> 电子舞曲</h1>
+      <p class="intro">这一种 EDM 编配用稳定的四拍底鼓提供身体感。和弦可以很简单，段落的推进交给滤波、延迟、鼓密度、侧链避让和高潮前的留白。</p>
+
+      <section aria-labelledby="genre-edm-progression">
+        <h2 id="genre-edm-progression">简单循环与提前换和弦</h2>
+        <p>EDM 是电子舞曲的总称。本节展示一种重视蓄势与释放的编配路线。以 Am–F–G–C 为四小节循环时，Am 是小三和弦，F、G、C 给出清楚的低音轮廓。旋律 G 即使是 A 上的小七度，伴奏也可以保留 Am 三和弦，让这个颜色只出现在旋律里。</p>
+        <p>前奏的和弦早半拍切换，会让下小节像提前开始，底鼓还在原本的四个拍头。比如最后一个八分位置已经听见 F，紧接着才到下一小节的大鼓。若旋律长音仍依赖旧和弦，可把和弦提前只用于前奏，或者在新和弦里省掉与旋律相撞的音。用同一个循环伴奏试旋律时，强拍的长音是否清楚，比每一个短经过音都纳入和弦更值得检查。</p>
+      <div id="genre-edm-arrangement" class="music-demo programmatic-score">
+        <div class="music-demo-toolbar"><h3>同一旋律的电子舞曲编配</h3>
+          <label>版本 <select><option value="arranged">电子舞曲版</option><option value="base">基础和声</option><option value="melody">纯旋律</option></select></label>
+        </div>
+        <p class="music-demo-cue" aria-live="polite">示范采用 128 BPM、三和弦循环与八度合成贝斯。上方的反复合成器短句跟随换弦，部分和弦提前半拍进入。</p>
+        <figure aria-label="同一旋律的电子舞曲、基础和声与纯旋律五线谱"></figure>
+      </div>
+      </section>
+
+      <section aria-labelledby="genre-edm-kick">
+        <h2 id="genre-edm-kick">底鼓分层、反拍镲与合成器循环</h2>
+        <p>两层底鼓可在同一拍起音。短而清楚的一层给出轮廓，承担低频的另一层给出重量。两层相加后若低频反而消失，可检查起音偏移和波形是否互相抵消，以及尾音是否拖到了下一个拍点。小鼓也可分层，已经有清楚起音的 808 系电子小鼓可直接使用。</p>
+        <table class="lesson-table lesson-table-dense">
+          <caption>分开控制的四种编配材料</caption>
+          <thead><tr><th scope="col">材料</th><th scope="col">安排</th><th scope="col">作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">节拍</th><td>四拍底鼓、八分反拍镲，局部细十六分。小鼓可在 2、4 拍，也可仅在蓄势段出现。副歌可叠沙铃循环。</td><td>主拍与反拍相互补充。细分比拍头轻，保持四拍轮廓。</td></tr>
+            <tr><th scope="row">合成贝斯</th><td>根音和上方八度。轻至中度数码削波或位深缩减可以给中频增加纹理。</td><td>延续低音轨道，同时在平板或小音箱上留有可辨认的泛音。是否够用要放回合奏判断。</td></tr>
+            <tr><th scope="row">合成器短句</th><td>前奏可用八分重复并淡入另一层。领奏可重复一小节的单音动机，末尾因和声或段落做少量变动。</td><td>同一个音型可连续延伸到八小节，听感由起音、和弦与音色共同改变。</td></tr>
+            <tr><th scope="row">主奏与效果音</th><td>SuperSaw 可由数个略微失谐的锯齿声部叠出。气流、上升警笛、撞击或爆炸声分布在转段附近。</td><td>宽阔的主奏声和持续上升的效果音承担不同任务。把撞击留给段落落点。</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="genre-edm-sidechain">
+        <h2 id="genre-edm-sidechain">侧链压缩与每拍的音量避让</h2>
+        <p>把压缩器放在贝斯或合成衬底的轨道上，再把底鼓送到压缩器的外部检测端。音量被改动的是贝斯或衬底，触发改动的是底鼓。每次底鼓来时压小一段，等底鼓尾音让出空间后再恢复。释放时间越长，恢复越晚，起伏也越明显。</p>
+        <figure class="score-example" aria-describedby="genre-edm-envelope-note">
+          <figcaption>四个底鼓触发点与衬底音量</figcaption>
+          <svg width="560" height="142" viewBox="0 0 560 142" style="display:block;max-width:100%;height:auto" role="img" aria-label="衬底音量曲线。四个拍头各快速下降一次，随后逐渐恢复。">
+            <g stroke="currentColor" fill="none" stroke-width="1" opacity=".35">
+              <path d="M40 34V119H540"/><path d="M60 39V119M180 39V119M300 39V119M420 39V119" stroke-dasharray="3 4"/>
+            </g>
+            <g font-size="14" fill="currentColor" text-anchor="middle">
+              <text x="60" y="24">第 1 拍</text><text x="180" y="24">第 2 拍</text><text x="300" y="24">第 3 拍</text><text x="420" y="24">第 4 拍</text>
+            </g>
+            <path d="M40 55H60V103C80 103 94 55 136 55H180V103C200 103 214 55 256 55H300V103C320 103 334 55 376 55H420V103C440 103 454 55 496 55H540" stroke="var(--accent)" stroke-width="3" fill="none" stroke-linejoin="round"/>
+          </svg>
+        </figure>
+        <p id="genre-edm-envelope-note">曲线从上往下表示衰减。即使把底鼓从监听里静音，只要触发它的信号仍在送，贝斯或衬底起伏仍提示四个拍头。</p>
+        <div id="genre-edm-ducking" class="music-demo">
+          <div class="music-demo-toolbar"><h3>固定音高的四拍音量起伏</h3>
+            <label>音色与处理 <select disabled>
+              <option value="bass-dry">贝斯 · 平直音量</option><option value="bass-duck">贝斯 · 每拍避让</option>
+              <option value="pad-dry">衬底 · 平直音量</option><option value="pad-duck">衬底 · 每拍避让</option>
+            </select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">贝斯持续同一音高，四个拍头不改变音量。</p>
+          <div class="score-example" data-audio-only>
+            <div class="score-controls"><button class="score-playback" type="button" aria-label="播放侧链试听" disabled><span class="score-playback-icon" aria-hidden="true"></span></button></div>
+            <p class="score-status" role="status"></p>
+          </div>
+        </div>
+        <p>试听把一小节的四次避让重复两遍。音量变化按预先写定的曲线呈现，省去底鼓声音，让持续音的变化更容易辨认。实际压缩器的阈值决定底鼓多响才触发处理，压缩比影响触发后的衰减量，起动和释放分别影响下降与恢复速度。最后把底鼓和贝斯放回合奏，确认低频互相让得开。</p>
+        <p>在 128 BPM 下，相邻底鼓之间约有 469 毫秒。若贝斯到下个拍头仍没有恢复，下一拍会继续压低已经偏轻的低音。要听到清楚的避让和回升，可以缩短释放，让每拍后半重新听得到低音。需要更明显起伏的衬底可以另设释放时间。</p>
+      </section>
+
+      <section aria-labelledby="genre-edm-build">
+        <h2 id="genre-edm-build">蓄势、停顿与高潮落点</h2>
+        <p>推进的素材可以来自几条不同的自动化。提高低通滤波器的截止频率会放行更多高频，音量自动化会让声音更突出。把一轨由暗变亮，另一轨使用同音色、明亮的设定并逐渐淡入，可独立控制亮度与叠加量。</p>
+        <table class="lesson-table lesson-table-dense">
+          <caption>八小节蓄势中的鼓密度和合成器变化</caption>
+          <thead><tr><th scope="col">位置</th><th scope="col">小鼓密度</th><th scope="col">叠加与释放</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">第 1–4 小节</th><td>四分音符，每拍 1 次。</td><td>开始打开滤波器，前奏短句仍清楚。</td></tr>
+            <tr><th scope="row">第 5–6 小节</th><td>八分音符，每拍 2 次。</td><td>明亮的副轨淡入，延迟回授开始增加。</td></tr>
+            <tr><th scope="row">第 7 小节</th><td>十六分音符，每拍 4 次。</td><td>小鼓采样音高逐渐抬升，加入气流上升声。</td></tr>
+            <tr><th scope="row">第 8 小节</th><td>三十二分音符，每拍 8 次。</td><td>短暂停断蓄势声，突出下一个拍头。</td></tr>
+            <tr><th scope="row">高潮入拍</th><td>回到清楚的四拍脉冲。</td><td>主奏、贝斯和撞击在落点处出现，回授和噪声退后。</td></tr>
+          </tbody>
+        </table>
+        <p>延迟时间决定回声相隔多久，回授决定每个回声又返回多少。回授升高会增加重复与拥挤感。蓄势最后可自动压低回授或切掉效果输出，免得残尾填满停顿。磁带延迟类效果可为回声加上色彩变化。若四拍脉冲已通过侧链起伏清楚，底鼓就不必用过大的音量来补救。</p>
+        <div id="genre-edm-roll" class="music-demo">
+          <div class="music-demo-toolbar"><h3>小鼓加密、短暂停顿与落拍</h3></div>
+          <p class="music-demo-cue">小鼓从每拍 1 次逐级加密到每拍 8 次，最后半拍留空。随后合成贝斯、底鼓与撞击镲在同一拍落下。</p>
+          <figure aria-label="八小节小鼓加密与高潮入拍试听"></figure>
+        </div>
+        <p>人声可以作为合成器群中有字头与句读的一层。前奏或尾声的四分延迟容易被单独听见，曲中则可降低效果声。想要亮而短的反射可试板式混响，再与前面的蓄势音色区分。</p>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./genre-arrangement-12.html" rel="prev"><span>乐风 06</span><strong>抒情</strong></a>
+        <a href="./genre-arrangement-14.html" rel="next"><span>乐风 08</span><strong>爵士</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

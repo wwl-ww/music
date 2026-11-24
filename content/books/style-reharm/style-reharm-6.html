@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第六篇 民谣｜图解重配和声乐风编曲法</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./style-reharm-6.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解重配和声乐风编曲法</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">第六篇</span> 民谣</h1>
+      <p class="intro">原声吉他的分解和弦可以承担一整句。前段用三和弦交代去向，后段才在乐句交界处加入副属与借用和弦。</p>
+
+      <section aria-labelledby="folk-voicing">
+        <h2 id="folk-voicing">吉他排列与三和弦骨架</h2>
+        <p>重配时先用三和弦确定旋律的落点，把新增音留给确实需要强调的位置。三和弦听起来也有层次。拨弦顺序、最低音、开放弦和同音在不同弦上的音色，都会改变音响。钢琴上顺手的密集排列到了吉他上可能跨把位或要求同一根弦同时发两个音，需按实际琴弦重新选音区。</p>
+        <p>第 2–4 小节的 C–F–C 已能表达主、下属、主。把 F 的五音 C 写在低处，得到 F/C，上方仍是 F 大三和弦。第 6 小节再用 Am 代 C，让低音在相似的和声功能中发生变化。两处都能说明和弦排列和功能可以分别调整。</p>
+        <p>先预留一个真正收束的位置。基谱第 14–16 小节的 G–F–C 先离开属区，靠下属接回主和弦。交换前两个功能后是 F–G–C，属功能正好出现在 I 前。第 14、15 小节再用 Dm7、G7 表示下属与属，写成 ii–V–I。前九小节先按三和弦配，只有 F/C 这类转位或手型变化也足以维持乐句运动。第十小节开始才把四音和弦当作接续副属的草稿。</p>
+        <table class="lesson-table">
+          <caption>前段和弦与实际低音</caption>
+          <thead><tr><th scope="col">小节</th><th scope="col">基础和声</th><th scope="col">民谣编配</th><th scope="col">听觉重心</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">2–4</th><td>C–F–C</td><td>C–F/C–C</td><td>低音保持 C，上层从 G–C–E 转到 A–C–F，再回原位。</td></tr>
+            <tr><th scope="row">5–7</th><td>C–C–F</td><td>Cadd9–Am–F</td><td>Cadd9 仅在第 5 小节添加九音 D。Am 与 C 共有 C、E，换低音就能让同一功能下的句子有轻微变化。</td></tr>
+            <tr><th scope="row">8–9</th><td>G–G</td><td>B♭–G/B–G–Gsus4</td><td>F→B♭ 的根音上行纯四度。旋律来到 B 时，回到含 B 的 G/B。下一小节进入 Gsus4 的时机避开旋律 B。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo programmatic-score" id="reharm-folk-arrangement">
+          <div class="music-demo-toolbar">
+            <h3>民谣成品与基础稿</h3>
+            <label>编配 <select><option value="final">原声吉他民谣</option><option value="base">基础和声</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">分解和弦贯穿全曲。色彩变化集中在借用和弦、小调二五和两小节尾声。</p>
+          <figure aria-label="民谣成品与基础稿的五线谱与试听"></figure>
+        </div>
+        <p>成品第 5 小节只在 C 上添加一次九音 D。在标准调弦下，常用 C 把位的第二弦一品发 C。改为三品即可发 D，第三弦的 G 和第一弦的 E 仍可用空弦。第五弦的低音 C 保留，和弦为 Cadd9。Cadd9 不含七音，Cmaj9 则包含大七音 B。</p>
+        <details class="lesson-aside">
+          <summary>吉他分解和弦的谱面缩写</summary>
+          <div class="lesson-aside-content">
+            <ul>
+              <li>和弦谱有时用竖直堆叠的全音符速记整小节的排列。实际分解的拨弦先后取决于右手音型。</li>
+              <li>课程谱例把吉他的每次起音写出。较密集的四和音用在后段，也可以省去由旋律给出的音。</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="folk-applied">
+        <h2 id="folk-applied">副属和弦的布局与 D 小调二五一</h2>
+        <p>副属先从下一和弦倒推。目标 Dm7 的根音是 D，从 D 往上五度得到 A。在 A7 上，三音 C♯ 上行到 D，七音 G 可以下行到 F。把副属放在目标之前那个小节的后半拍组，原来的和弦仍能交代该小节的开头。</p>
+        <table class="lesson-table">
+          <caption>后半段的五个副属候选</caption>
+          <thead><tr><th scope="col">插入点</th><th scope="col">候选与目标</th><th scope="col">筛选依据</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">10 后半</th><td>A7 → Dm7</td><td>保留。旋律 G、E 分别可作七音和五音，下一小节的 F 得到 Dm7 的支撑。</td></tr>
+            <tr><th scope="row">11 后半</th><td>E7 或 E → Am</td><td>保留属方向。成品只在伴奏放 E 大三和弦，G♯ 已提供导音。</td></tr>
+            <tr><th scope="row">12 后半</th><td>C7 → F</td><td>可以显示朝 F 的局部推动。成品把这两拍留给 Am/G，使 A–G–F 的低音连续。</td></tr>
+            <tr><th scope="row">13 后半</th><td>A7 → Dm7</td><td>旋律 C 与 C♯ 形成半音关系，C 也可等音听作升九音。本例的集中张力已经出现在第 10 小节。</td></tr>
+            <tr><th scope="row">14 后半</th><td>D7 → G</td><td>此处演到 D，原本也能配 D7。若旋律改成持续 G，可用 D7sus4 避开 G 与 F♯ 的半音。本次把推进留给后面的 Gsus4。</td></tr>
+          </tbody>
+        </table>
+        <p>下一步在已经选好的 A7 前配关系 ii。先把 Cmaj7 的前半小节换成 Em7。两者共有 E、G、B，在 C 大调里容易衔接，在 A7 前也能整理出 E–A–D 的根音线。再用 D 自然小调的二级和弦 Em7♭5，使前半小节的 B 变为 B♭。属和弦依然用 A7，来自 D 和声小调的 C♯ 提供导音。D 自然小调的 Am7 含 C 自然音，三全音 C♯–G 也随之消失。</p>
+        <p>第 11 小节的 E7 可以简写成 E。旋律若正在唱 D，整个合奏已经给出 E 的小七音，吉他可以省去重叠的音；本谱将末半小节调整成 E，单靠伴奏 G♯ 和下一小节的 Am 也有足够方向。这两种省略都需要看同拍位的旋律。</p>
+        <div class="music-demo programmatic-score" id="reharm-folk-secondary">
+          <div class="music-demo-toolbar">
+            <h3>C 大调中短暂确立 D 小调</h3>
+            <label>第 10 至 12 小节 <select><option value="sparse">Cmaj7 → Dm7</option><option value="insert">Cmaj7–A7 → Dm7</option><option value="applied">Em7–A7 → Dm7</option><option value="minor">Em7♭5–A7–Dm7</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">同一旋律与吉他织体下，B♭ 和 C♯ 分别给出小调下属骨架和导音。</p>
+          <figure aria-label="C 大调中短暂确立 D 小调的五线谱与试听"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="folk-borrowed">
+        <h2 id="folk-borrowed">同主音小调借用与低音全音上行</h2>
+        <p>C 自然小调的三和弦依次为 Cm、Ddim、E♭、Fm、Gm、A♭、B♭，根音和大小性质来自同一音列。这里取 ♭VII 和 ♭VI。挑选位置时先匹配持续音与强拍，再检查小调中的降音有没有与前后旋律碰撞。</p>
+        <table class="lesson-table">
+          <caption>借用和弦的旋律筛选</caption>
+          <thead><tr><th scope="col">候选</th><th scope="col">能支撑的持续音</th><th scope="col">本例的落位</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">♭VII · B♭</th><td>B♭、D、F。D 与 C 大调共有。</td><td>第 8 小节前两拍留 D，F→B♭ 既有纯四度根音移动，也能保留 F。后两拍旋律是 B，自然音与 B♭ 相差半音，改用 G/B。</td></tr>
+            <tr><th scope="row">♭VI · A♭</th><td>A♭、C、E♭。C 与 C 大调共有。</td><td>第 16 小节前半的 G、E 分别紧邻 A♭、E♭。等旋律在第 3 拍到 C，再把低音移到 A♭。</td></tr>
+            <tr><th scope="row">提前使用 ♭VI</th><td>若前段也是 C 长音，音高可以适配。</td><td>位置仍取决于全曲。离第 8 小节过近会连续两次引入降音，削弱第一次借用与末尾延迟回主的对照。</td></tr>
+          </tbody>
+        </table>
+        <p>第 16 小节落到 C 音时，和弦既可以是 C，也可以是 A♭。选 A♭ 时，C 成为和弦的三音，末音已经到达，和声仍没结束。吉他续弹 B♭–C，低音 A♭–B♭–C 每次上行全音。若下一处旋律有持久的 E 或 G，需重新检查该处 A♭ 中的 E♭ 或 A♭ 与旋律形成的半音紧张。</p>
+        <aside class="lesson-callout"><h3>副属与借用的区别</h3><p>副属改变的是临时目标。借用和弦把同主音小调的音带进当前大调，前后的主音仍可保持 C。</p></aside>
+      </section>
+
+      <section aria-labelledby="folk-close">
+        <h2 id="folk-close">A–G–F–E–D 低音与挂留四度</h2>
+        <p>先定 Am7、Fmaj7、Dm7 三个支点，在它们之间各插入半小节低音。G 低音上还能保留 A 小三和弦。接下来的 E 既可托 Am/E，也可托 C/E；这里取 C/E，把大、小两种上部音响接起来。</p>
+        <div id="folk-close-voice-staves" class="voice-leading-staves voice-leading-phrases" role="group" aria-label="支点之间插入低音">
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>支点之间插入低音</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 254 127" style="--voice-leading-width: 254px" role="img" aria-label="Am7、Am/G、Fmaj7、C/E、Dm7。共同音 C5、C5、C5、C5、C5；低音 A3、G3、F3、E3、D3。A–G–F–E–D 继续下行，上方可保留 C。">
+              <text class="voice-leading-chord-name" x="38" y="12">Am7</text><text class="voice-leading-chord-name" x="83" y="12">Am/G</text><text class="voice-leading-chord-name" x="128" y="12">Fmaj7</text><text class="voice-leading-chord-name" x="173" y="12">C/E</text><text class="voice-leading-chord-name" x="218" y="12">Dm7</text>
+              <path class="inline-staff-lines" d="M5 25H249 M5 30H249 M5 35H249 M5 40H249 M5 45H249"/>
+              <text x="8" y="40">&#xE050;</text>
+              <path class="voice-leading-connector" d="M45 32.5L76 32.5 M72 30.1L76 32.5 72 34.9 M90 32.5L121 32.5 M117 30.1L121 32.5 117 34.9 M135 32.5L166 32.5 M162 30.1L166 32.5 162 34.9 M180 32.5L211 32.5 M207 30.1L211 32.5 207 34.9"/>
+              <text x="34" y="32.5">&#xE0A2;</text><text x="79" y="32.5">&#xE0A2;</text><text x="124" y="32.5">&#xE0A2;</text><text x="169" y="32.5">&#xE0A2;</text><text x="214" y="32.5">&#xE0A2;</text>
+              <text class="voice-leading-note-name" x="38" y="63">C</text><text class="voice-leading-note-name" x="83" y="63">C</text><text class="voice-leading-note-name" x="128" y="63">C</text><text class="voice-leading-note-name" x="173" y="63">C</text><text class="voice-leading-note-name" x="218" y="63">C</text>
+              <path class="inline-staff-lines" d="M5 81H249 M5 86H249 M5 91H249 M5 96H249 M5 101H249"/>
+              <text x="8" y="86">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M45 81L76 83.5 M72 81.1L76 83.5 72 85.9 M90 83.5L121 86 M117 83.6L121 86 117 88.4 M135 86L166 88.5 M162 86.1L166 88.5 162 90.9 M180 88.5L211 91 M207 88.6L211 91 207 93.4"/>
+              <text x="34" y="81">&#xE0A2;</text><text x="79" y="83.5">&#xE0A2;</text><text x="124" y="86">&#xE0A2;</text><text x="169" y="88.5">&#xE0A2;</text><text x="214" y="91">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="38" y="119">A</text><text class="voice-leading-note-name is-bass" x="83" y="119">G</text><text class="voice-leading-note-name is-bass" x="128" y="119">F</text><text class="voice-leading-note-name is-bass" x="173" y="119">E</text><text class="voice-leading-note-name is-bass" x="218" y="119">D</text>
+            </svg>
+            <p class="voice-leading-distance">A–G–F–E–D 继续下行，上方可保留 C</p>
+          </figure>
+        </div>
+        <p>和弦内动音通常指同一和弦中一条线持续移动。本例先保留第 12 小节的上方形状，随后换和弦来照应旋律。谱面里的五个低音均在同一八度。标准调弦第四弦上的 7、5、3、2、0 品即可依次发 A3、G3、F3、E3、D3。</p>
+        <table class="lesson-table">
+          <caption>第 12–14 小节的下行低音</caption>
+          <thead><tr><th scope="col">小节与拍位</th><th scope="col">和弦</th><th scope="col">实际低音</th><th scope="col">声部处理</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">12，第 1–2 拍</th><td>Am</td><td>A</td><td>旋律中的 C 与伴奏的 C 建立小三度性质。</td></tr>
+            <tr><th scope="row">12，第 3–4 拍</th><td>Am/G</td><td>G</td><td>A–C–E 保持，低音换成 G，构成 Am7 的第三转位。</td></tr>
+            <tr><th scope="row">13，第 1–2 拍</th><td>F</td><td>F</td><td>承接 A、C，F 继续低音下行。</td></tr>
+            <tr><th scope="row">13，第 3–4 拍</th><td>C/E</td><td>E</td><td>将原可写成 Am/E 的上层 A 换为 G，主三和弦的轮廓更清楚。</td></tr>
+            <tr><th scope="row">14，全小节</th><td>Dm7</td><td>D</td><td>根音 D 完成下行线，旋律的 G 可视为十一音。</td></tr>
+          </tbody>
+        </table>
+        <h3>属七、挂留与吉他把位</h3>
+        <p>G7 原有 B 和 F。旋律停在 C 时，可以把第二弦的 B 空弦移到一品 C，保留第一弦的 F，得到 G7sus4。若希望音响更加空旷，再略去第一弦。第四、三、二弦依次发 D3、G3、C4，正好是两层纯四度。第 9 小节用这层四度排列承接 B♭ 的借用色彩，但先让旋律的 B 在 G 上发完，再换 Gsus4。第 15 小节的 C 一开始就和挂留音一致。</p>
+        <table class="lesson-table">
+          <caption>同一把位的三种属区排列</caption>
+          <thead><tr><th scope="col">和弦</th><th scope="col">第 6 至第 1 弦的品位</th><th scope="col">实际发声</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">G7</th><td>3 · × · 0 · 0 · 0 · 1</td><td>G2–D3–G3–B3–F4</td></tr>
+            <tr><th scope="row">G7sus4</th><td>3 · × · 0 · 0 · 1 · 1</td><td>G2–D3–G3–C4–F4</td></tr>
+            <tr><th scope="row">Gsus4</th><td>3 · × · 0 · 0 · 1 · ×</td><td>G2–D3–G3–C4</td></tr>
+          </tbody>
+        </table>
+        <p>× 表示该弦不发声。七音 F 若出现在旋律中，尽管吉他采用 Gsus4 把位，瞬时合奏仍有属七色彩。</p>
+        <div class="music-demo programmatic-score" id="reharm-folk-guitar-fourth">
+          <div class="music-demo-toolbar">
+            <h3>吉他把位中的 G7、G7sus4 与 Gsus4</h3>
+            <label>属区排列 <select><option value="dominant">G7 原位</option><option value="seventh">G7sus4 保留 F</option><option value="suspended">Gsus4 省去 F</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">同一低音 G 与持续旋律 C 上，第二弦的 B 改按 C，第一弦的 F 可以保留或省去。</p>
+          <figure aria-label="吉他把位中的 G7、G7sus4 与 Gsus4的五线谱与试听"></figure>
+        </div>
+        <div class="music-demo programmatic-score" id="reharm-folk-ending">
+          <div class="music-demo-toolbar">
+            <h3>属至主与借用和弦尾声</h3>
+            <label>第 14 小节至结尾 <select><option value="tonic">G7–C 直接结束</option><option value="borrowed">Gsus4 后接 A♭–B♭–C</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">第 16 小节的 C 既可落在主和弦，也可成为 A♭ 的三音，由吉他续写句尾。</p>
+          <figure aria-label="属至主与借用和弦尾声的五线谱与试听"></figure>
+        </div>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./style-reharm-5.html" rel="prev"><span>第五篇</span><strong>放克</strong></a>
+        <a href="./style-reharm-7.html" rel="next"><span>第七篇</span><strong>J-POP ① · 抒情编配</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

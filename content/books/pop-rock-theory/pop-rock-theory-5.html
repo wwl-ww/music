@@ -54,36 +54,40 @@
         </table>
         <aside class="lesson-callout"><p><strong>音集相同，主音可以不同。</strong> C 大调五声和 A 小调五声包含同样的五个音。低音、乐句的长音与收束位置决定这些音围绕哪个中心组织。</p></aside>
         <div class="music-demo" id="rock-pentatonic-centers">
-          <div class="music-demo-toolbar"><h3>同一音集的 C 与 A 两种归宿</h3><div data-writing-choices></div></div>
+          <div class="music-demo-toolbar"><h3>同一音集的 C 与 A 两种归宿</h3><div data-writing-choices role="group" aria-label="五声音阶的主音"></div></div>
           <p class="music-demo-cue" data-writing-description aria-live="polite">两版共用第一小节的题头。C 版的低音落到 C，末音也在 C 上延长。</p>
           <figure data-writing-score aria-label="C 大调与 A 小调五声音阶中心对照"></figure>
         </div>
       </section>
 
       <section aria-labelledby="rock-pentatonic-guitar">
-        <h2 id="rock-pentatonic-guitar">五声音阶盒型与找调</h2>
-        <p>标准定弦吉他的同一根弦每升一品就是升半音。在第五到第八品用按弦音构成的盒型，既可围绕 C 弹大调五声音阶，也可围绕 A 弹小调五声音阶。所有点沿同一组弦向高音平移两品，音级结构保留，主音分别移到 D 和 B。有空弦的指型要先把空弦换成可以随手型一起移动的位置，或用变调夹整体改变空弦音高。</p>
+        <h2 id="rock-pentatonic-guitar">吉他的五声音阶盒型</h2>
+        <p>标准调弦的吉他，同一根弦每升一品就是升半音。在第五到第八品用按弦音构成的盒型，既可围绕 C 弹大调五声音阶，也可围绕 A 弹小调五声音阶。所有点沿同一组弦向高音平移两品，音级结构保留，主音分别移到 D 和 B。有空弦的指型要先把空弦换成可以随手型一起移动的位置，或用移调夹整体改变空弦音高。</p>
         <figure id="rock-pentatonic-box-c">
           <figcaption>C 大调／A 小调五声盒型。第 6 到第 1 弦依次用 5–8、5–7、5–7、5–7、5–8、5–8 品。</figcaption>
         </figure>
         <figure id="rock-pentatonic-box-d">
           <figcaption>D 大调／B 小调五声盒型。第 6 到第 1 弦依次用 7–10、7–9、7–9、7–9、7–10、7–10 品。</figcaption>
         </figure>
-        <h3>高音两弦的音集线索</h3>
-        <p>听音记谱时，可以先在第 1、2 弦找到一组相隔三品的两对音。两弦的第 7、10 品给出 B–D 和 F♯–A。这四个音同时出现在 G、D、A 三个自然大调中。再确认两个半音邻点，就能缩小候选范围，最后由句尾长音或终止和弦判断主音。</p>
-        <figure id="rock-pentatonic-key-frets">
-          <figcaption>第 1 弦 7、10 品是 B、D，第 2 弦 7、10 品是 F♯、A。两弦的第 8、9 品提供 C／C♯、G／G♯ 两对线索。</figcaption>
-        </figure>
-        <table class="lesson-table">
-          <caption>同一组四音支持的三个自然大调</caption>
-          <thead><tr><th scope="col">候选</th><th scope="col">第 1 弦的邻点</th><th scope="col">第 2 弦的邻点</th><th scope="col">能确立大调主音的典型终止</th></tr></thead>
-          <tbody>
-            <tr><th scope="row">G 大调</th><td>第 8 品 C</td><td>第 8 品 G</td><td>D7 → G</td></tr>
-            <tr><th scope="row">D 大调</th><td>第 9 品 C♯</td><td>第 8 品 G</td><td>A7 → D</td></tr>
-            <tr><th scope="row">A 大调</th><td>第 9 品 C♯</td><td>第 9 品 G♯</td><td>E7 → A</td></tr>
-          </tbody>
-        </table>
-        <p>如果两个邻点在旋律里都听不清，可从两弦共同出现的半音位置入手，再核对候选的终止。表中的音集还分别对应 E、B、F♯ 自然小调。歌曲可能只用五声材料，也可能带有临时变化音、借用和弦或转调，单靠几个听起来合拍的音只能得到候选。</p>
+        <details class="lesson-aside" id="rock-pentatonic-key-search">
+          <summary>选学 · 用吉他高音两弦缩小调性范围</summary>
+          <div class="lesson-aside-content">
+            <p>五声盒型在第 1、2 弦上各有一对相隔三品的音。整个四点形状可以沿指板平移。以两弦的第 7、10 品为例，第 1 弦是 B、D，第 2 弦是 F♯、A。假设这四个音都属于同一段的自然音阶，它们同时落在 G、D、A 三个大调的音集中。两对音之间各有两个品位，正好可以补找决定音集的半音位置。</p>
+            <ol>
+              <li>第 1 弦第 8 品是 C，第 9 品是 C♯。若段落里用的是 C，三个候选中只剩 G 大调音集。若用 C♯，则保留 D、A 两个候选。</li>
+              <li>在 C♯ 已经确定的情况下，第 2 弦第 8 品的 G 对应 D 大调音集，第 9 品的 G♯ 对应 A 大调音集。如果同时出现 C 和 G♯，这组音超出了三个候选的自然音阶范围，需要回到旋律与伴奏核对临时变化音。</li>
+              <li>音集缩到一组以后，再从句尾和弦判断主音。以 C♯、G 那组为例，A7→D 支持 D 大调，F♯7→Bm 则支持其关系小调 B 小调。</li>
+            </ol>
+            <div id="rock-pentatonic-key-comparison">
+              <div class="score-choice-buttons" data-fretboard-choices role="group" aria-label="两弦第 8、9 品的邻音组合"></div>
+              <figure id="rock-pentatonic-key-frets">
+                <figcaption>第 1、2 弦在第 7、10 品的四个音同时属于 G、D、A 大调音集。</figcaption>
+              </figure>
+              <p data-fretboard-description aria-live="polite"></p>
+            </div>
+            <p>五声旋律有时始终避开中间的品位所对应的音，四个起始音便只能提供候选。遇到借用和弦或转调，也要按具体段落判断这些音的作用。</p>
+          </div>
+        </details>
       </section>
 
       <section aria-labelledby="rock-pentatonic-harmony">
@@ -101,7 +105,7 @@
           </tbody>
         </table>
         <div class="music-demo" id="rock-pentatonic-chords">
-          <div class="music-demo-toolbar"><h3>五种和弦语境中的旋律用音</h3><div data-writing-choices></div></div>
+          <div class="music-demo-toolbar"><h3>五种和弦语境中的旋律用音</h3><div data-writing-choices role="group" aria-label="五声旋律的伴奏和弦"></div></div>
           <p class="music-demo-cue" data-writing-description aria-live="polite">C 和弦上的 D 与 A 都用来连向和弦音，旋律最终落到 C。</p>
           <figure data-writing-score aria-label="C、C7、Am、A7 到 D 与 Cm 的五声旋律对照"></figure>
         </div>
@@ -126,7 +130,7 @@
             <text x="51" y="11.5">&#xE261;</text><text x="60" y="11.5">&#xE0A2;</text>
           </svg>。三个音在同一小节时，最后的 E 要写还原号。</p>
         <div class="music-demo" id="rock-blue-note">
-          <div class="music-demo-toolbar"><h3>同一 A7 伴奏上的三度与降五级</h3><div data-writing-choices></div></div>
+          <div class="music-demo-toolbar"><h3>同一 A7 伴奏上的三度与降五级</h3><div data-writing-choices role="group" aria-label="旋律的三度与蓝调音"></div></div>
           <p class="music-demo-cue" data-writing-description aria-live="polite">旋律用 C♯ 与 A7 的三音重合。这个音把旋律同伴奏的大三度连在一起。</p>
           <figure data-writing-score aria-label="A7 上的大三音、小三音和降五级经过音"></figure>
         </div>
@@ -145,19 +149,60 @@
             <tr><th scope="row">aug 或 +</th><td>大三度、增五度</td><td>C、E、G♯</td></tr>
           </tbody>
         </table>
-        <p>D–D♯dim7–Em 的低音 D–D♯–E 是连续的半音。D♯ 同时是 E 的导音，D♯dim7 也恰好是 B7(♭9) 去根音后的四个音。另一种写法在 C–Caug–C6 中保持低音 C 和内声 E，用上声部 G–G♯–A 表示变化。两种写法都能用指定声部的半音运动把和弦接起来。</p>
+        <p>D♯dim7 与 B7(♭9) 去根音后的四音相同，D♯ 是 E 的导音。增三和弦也能填入半音，不过可把变化交给上声部，把 C 低音和 E 内声放在原处。</p>
+        <div id="rock-symmetric-colors-voice-staves" class="voice-leading-staves voice-leading-phrases voice-leading-extended" role="group" aria-label="经过减七放在低音线上、增三和弦推动顶音">
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>经过减七放在低音线上</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 164 85" style="--voice-leading-width: 164px" role="img" aria-label="D、D♯dim7、Em。低音 D3、D♯3、E3。D♯ 在 D 与 E 之间。">
+              <text class="voice-leading-chord-name" x="38" y="12">D</text><text class="voice-leading-chord-name" x="83" y="12">D♯dim7</text><text class="voice-leading-chord-name" x="128" y="12">Em</text>
+              <path class="inline-staff-lines" d="M5 39H159 M5 44H159 M5 49H159 M5 54H159 M5 59H159"/>
+              <text x="8" y="44">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M45 49L66 49 M62 46.6L66 49 62 51.4 M90 49L121 46.5 M117 44.1L121 46.5 117 48.9"/>
+              <text x="69" y="49">&#xE262;</text>
+              <text x="34" y="49">&#xE0A2;</text><text x="79" y="49">&#xE0A2;</text><text x="124" y="46.5">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="38" y="77">D</text><text class="voice-leading-note-name is-bass" x="83" y="77">D♯</text><text class="voice-leading-note-name is-bass" x="128" y="77">E</text>
+            </svg>
+            <p class="voice-leading-distance is-chromatic">D♯ 在 D 与 E 之间</p>
+          </figure>
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>增三和弦推动顶音</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 198 127" style="--voice-leading-width: 198px" role="img" aria-label="C、Caug、C6。顶音 G4、G♯4、A4；内声 E4、E4、E4；低音 C3、C3、C3。固定 C 与 E，只移动 G–G♯–A。">
+              <text class="voice-leading-chord-name" x="38" y="12">C</text><text class="voice-leading-chord-name" x="100" y="12">Caug</text><text class="voice-leading-chord-name" x="162" y="12">C6</text>
+              <path class="inline-staff-lines" d="M5 25H193 M5 30H193 M5 35H193 M5 40H193 M5 45H193"/>
+              <text x="8" y="40">&#xE050;</text>
+              <path class="voice-leading-connector" d="M45 40L83 40 M79 37.6L83 40 79 42.4 M107 40L155 37.5 M151 35.1L155 37.5 151 39.9 M45 45L93 45 M89 42.6L93 45 89 47.4 M107 45L155 45 M151 42.6L155 45 151 47.4"/>
+              <text x="86" y="40">&#xE262;</text>
+              <text x="34" y="40">&#xE0A2;</text><text x="96" y="40">&#xE0A2;</text><text x="158" y="37.5">&#xE0A2;</text><text x="34" y="45">&#xE0A2;</text><text x="96" y="45">&#xE0A2;</text><text x="158" y="45">&#xE0A2;</text>
+              <text class="voice-leading-note-name" x="38" y="63">G·E</text><text class="voice-leading-note-name" x="100" y="63">G♯·E</text><text class="voice-leading-note-name" x="162" y="63">A·E</text>
+              <path class="inline-staff-lines" d="M5 81H193 M5 86H193 M5 91H193 M5 96H193 M5 101H193"/>
+              <text x="8" y="86">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M45 93.5L93 93.5 M89 91.1L93 93.5 89 95.9 M107 93.5L155 93.5 M151 91.1L155 93.5 151 95.9"/>
+              <text x="34" y="93.5">&#xE0A2;</text><text x="96" y="93.5">&#xE0A2;</text><text x="158" y="93.5">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="38" y="119">C</text><text class="voice-leading-note-name is-bass" x="100" y="119">C</text><text class="voice-leading-note-name is-bass" x="162" y="119">C</text>
+            </svg>
+            <p class="voice-leading-distance is-chromatic">固定 C 与 E，只移动 G–G♯–A</p>
+          </figure>
+        </div>
         <div class="music-demo" id="rock-symmetric-chords">
-          <div class="music-demo-toolbar"><h3>低音中的减七与上声部的增三</h3><div data-writing-choices></div></div>
+          <div class="music-demo-toolbar"><h3>低音中的减七与上声部的增三</h3><div data-writing-choices role="group" aria-label="经过和弦的写法"></div></div>
           <p class="music-demo-cue" data-writing-description aria-live="polite">D 与 Em 直接相接，低音跨一个全音。</p>
           <figure data-writing-score aria-label="减七和弦连接 D 与 Em，以及增三和弦连接 C 与 C6"></figure>
         </div>
         <details class="lesson-aside">
           <summary>等音音集与和弦谱简写</summary>
           <div class="lesson-aside-content">
+            <figure class="keyboard-example">
+              <figcaption>Cdim7 · 每隔三个半音取一个音</figcaption>
+              <div id="rock-diminished-keyboard" role="img" aria-label="八度里标出 C、E♭、G♭ 和 B 重降，四个位置分别距 C 零、三、六和九个半音"></div>
+            </figure>
+            <figure class="keyboard-example">
+              <figcaption>Caug · 每隔四个半音取一个音</figcaption>
+              <div id="rock-augmented-keyboard" role="img" aria-label="八度里标出 C、E 和 G♯，三个位置分别距 C 零、四和八个半音"></div>
+            </figure>
             <ul>
               <li>十二平均律下，减七只有三种不同的音高类集合，可用 Cdim7、C♯dim7、Ddim7 分别代表。每种集合中有四个等距的音，对应四个可能的根音。增三有四种集合，可用 Caug、C♯aug、Daug、D♯aug 代表。</li>
               <li>同一减七或增三按弦指型整体平移三个或四个品位，分别得到同一类音集的另一种排列。实际伴奏仍要保留指定低音，以及负责解决的声部。</li>
-              <li>有些流行谱把减七缩写成 dim。单独看到 dim 时，默认先读作减三和弦，再结合录音、谱例或段落功能判断有没有减七度音。</li>
+              <li>Cdim、Cm7(♭5)、Cdim7 共用 C–E♭–G♭。第一种是三和弦，后两种分别加小七音 B♭ 和减七音 B𝄫。有些流行谱用 dim 简写减七，遇到这种记法可结合谱面或实际伴奏确认有没有第四个音。</li>
             </ul>
           </div>
         </details>
@@ -167,7 +212,7 @@
         <h2 id="rock-other-scales">调式、小调变体与外音</h2>
         <p>同样的七个音在不同主音上排列，半音落点随之改变。C 大调的白键音如果持续围绕 D，在 D 根音与 Dm 和弦上把 B 放到显眼的位置，会形成 D 多利亚调式的色彩。以 D 自然小调的 B♭ 对照，区别集中在六级。调式听感取决于伴奏和旋律共同建立的中心，仅从 D 开始经过一次白键音仍可能听成 C 大调。</p>
         <div class="music-demo" id="rock-mode-colors">
-          <div class="music-demo-toolbar"><h3>同一 D 小和弦上的自然小调与多利亚</h3><div data-writing-choices></div></div>
+          <div class="music-demo-toolbar"><h3>同一 D 小和弦上的自然小调与多利亚</h3><div data-writing-choices role="group" aria-label="伴奏上方的调式"></div></div>
           <p class="music-demo-cue" data-writing-description aria-live="polite">伴奏持续用 Dm。旋律在 B♭–A 的半音上形成自然小调的六级色彩。</p>
           <figure data-writing-score aria-label="D 小调和 D 多利亚六级对照"></figure>
         </div>
@@ -175,7 +220,8 @@
           <summary>三种小音阶、调外演奏与自由爵士</summary>
           <div class="lesson-aside-content">
             <ul>
-              <li>A 自然小调是 A、B、C、D、E、F、G；A 和声小调把 G 升为 G♯，可形成 E7 的大三音并解决到 A。A 旋律小调上行常把 F、G 同时升为 F♯、G♯，减小六级到导音的跨度。传统下行通常还原，爵士中上下行常保留升六级与升七级。</li>
+              <li>伊奥尼亚调式的音阶结构与自然大调相同，爱奥尼亚调式与自然小调相同。使用同一组白键时，分别以 C 和 A 为中心。</li>
+              <li>A 自然小调是 A、B、C、D、E、F、G。A 和声小调把 G 升为 G♯，可形成 E7 的大三音并解决到 A。A 旋律小调上行常把 F、G 同时升为 F♯、G♯，减小六级到导音的跨度。传统下行通常还原，爵士旋律小调上下行常保留升六级与升七级。</li>
               <li>调外演奏（playing outside）可以把熟悉的五声音型短暂整体移高半音，再把末尾移回原调的和弦音。伴奏继续维持原中心，听感来自音型暂时离开与回到这个中心之间的距离。</li>
               <li>自由爵士的一些演奏可以不按预先定好的和弦序列或固定拍节发展，在互动中依靠动机、音色、力度和彼此的呼应组织音乐。</li>
             </ul>

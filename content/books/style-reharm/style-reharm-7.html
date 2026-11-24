@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第七篇 J-POP ① · 抒情编配｜图解重配和声乐风编曲法</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./style-reharm-7.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解重配和声乐风编曲法</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">第七篇</span> J-POP ① · 抒情编配</h1>
+      <p class="intro">在抒情编配中，和声可以安排高潮出现的时机。同一旋律划为 A、B、C 三段。A 段铺垫，B 段展开，C 段收束。</p>
+
+      <section aria-labelledby="jpop-ballad-form">
+        <h2 id="jpop-ballad-form">段落功能与全曲的和声骨架</h2>
+        <p>前奏负责导入，主歌陈述材料，副歌集中主题，桥段可在副歌之间引进另一轮材料，尾声收束全曲。谱面上的 A、B、C 是排练位置，同一个字母在不同作品可指主歌、过渡或副歌。A–A–B、A–B–C、A–A–B–C、A–A–B–A 都是可能的组织方式。</p>
+        <p>本例借 A–B–C 安排由安静到高潮、再回落的弧线。A 与 B 的起点先用主功能固定；临时把第 5 小节的 I 换成 IV，把第 14 小节的 V 换成主功能，可以分别为 A 段的 C/E–Dm7 和 C 段的二五终止预留位置。抒情段的起伏还受到歌词、旋律音区和配器影响，后来添加的和弦需要和这些层次协调。</p>
+        <table class="lesson-table">
+          <caption>段落与主导声部</caption>
+          <thead><tr><th scope="col">段落</th><th scope="col">小节</th><th scope="col">在全曲中的作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">A</th><td>1–9</td><td>低调起步。前半让和弦和低音错时移动，中段放宽换和弦的间隔，最后一小节每拍形成支点。</td></tr>
+            <tr><th scope="row">B</th><td>10–12</td><td>副歌。较密的低音线与四度排列接管运动，回落至 C/G。</td></tr>
+            <tr><th scope="row">C</th><td>13–16</td><td>副歌后的收束。先作半音下行，经较弱的挂留属功能回到 Cadd9。</td></tr>
+            <tr><th scope="row">尾声</th><td>17–20</td><td>主题停下后交给钢琴，交替使用 Fmaj7(9,13) 与 Cadd9。</td></tr>
+          </tbody>
+        </table>
+        <table class="lesson-table">
+          <caption>各段的结束强度和下一步去向</caption>
+          <thead><tr><th scope="col">交界</th><th scope="col">关键和声</th><th scope="col">作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">A → B</th><td>Dm7/G–Fmaj7–E7(♭9,♭13) → Am7</td><td>临时属和弦把副歌的 A 作为落点，但下一个和弦立即接续。这里的任务是开启副歌。</td></tr>
+            <tr><th scope="row">B → C</th><td>B♭–F/A–C/G → F♯m7♭5</td><td>B♭–F/A 有局部 IV–I 的感觉，后两小节的低音仍在运动，C/G 只暂时靠拢主区。</td></tr>
+            <tr><th scope="row">C → 尾声</th><td>Dm7–F/G → Cadd9</td><td>把 ii、V 的位置安排在正式回主之前；用挂留减弱属张力，C 低音给出明确的主和弦落点。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo programmatic-score" id="reharm-jpop-ballad-arrangement">
+          <div class="music-demo-toolbar">
+            <h3>抒情编配与基础稿</h3>
+            <label>编配 <select><option value="final">A–B–C 抒情编配</option><option value="base">基础和声</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">A 段由三和弦进入多声部线条，B 段把动势推到高点，C 段按低音半音下行收束。</p>
+          <figure aria-label="抒情编配与基础稿的五线谱与试听"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="jpop-ballad-entry">
+        <h2 id="jpop-ballad-entry">主功能替代与副歌入口</h2>
+        <p>同一个功能位有不同的低音选择。C 大调中，Cmaj7、Em7、Am7 可在这句中承担主功能或近似主功能，因为旋律的落点 E 都能留住。Cmaj7 以主音作低音，Em7 以上方相近的音构成较轻的接续，Am7 让 E 成为五音，并把低音转到 A。替换前须检查旋律重音和该和弦的前后关系。Em7 在其他语境也可能属于通向 Am 的链条。</p>
+        <p>本例用 Dm7/G 为入口建立相同的前导音响。G 上方是 Dm7 的 F–A–C–D，其中 C 是 G 上的挂留四度。三种后续用同一旋律比较，成品在副歌以 Am7 的排列扩展。</p>
+        <div class="music-demo programmatic-score" id="reharm-jpop-ballad-tonic">
+          <div class="music-demo-toolbar">
+            <h3>副歌入口的三个主功能四和弦</h3>
+            <label>第 10 小节 <select><option value="c">Cmaj7</option><option value="e">Em7</option><option value="a">Am7</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">第 9 小节前导和弦相同，第 10 小节用三个含 E 的候选和弦比较。</p>
+          <figure aria-label="副歌入口的三个主功能四和弦的五线谱与试听"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="jpop-ballad-a">
+        <h2 id="jpop-ballad-a">A 段的持续低音、疏密与反向进行</h2>
+        <p>先确定第 2–5 小节的 C–F–Am–F 三和弦骨架，把第 2 小节后半留给一个有反差的和弦。B♭/C 的上方 B♭–D–F 分别是 C 上的七、九、四音，近似无三音的 C7sus4 音响，能引向 F。第 3 小节让 F 和弦继续使用 C 低音，第 2–3 小节的伴奏顶音 E–D–C 清楚下行，低音始终保持 C。</p>
+        <p>接着把第 4 小节的 Am 和 Am 后面的 Gsus4 都排成顶音 C。这样可以先变内声，再让顶音 C→B，最后由 F 的顶音 A 接住。第 5 小节稍后才移到 C/E，第 6 小节的 Dm7 成为 F–E–D 低音的终点。</p>
+        <table class="lesson-table">
+          <caption>第 4–6 小节错时移动的声部</caption>
+          <thead><tr><th scope="col">拍位</th><th scope="col">和弦与实际低音</th><th scope="col">伴奏上层</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">4 第 1 拍</th><td>Am · A2</td><td>E3–A3–C4。承接 F/C 的顶音 C。</td></tr>
+            <tr><th scope="row">4 第 3 拍</th><td>Gsus4 · G2</td><td>D3–G3–C4。内层 E–A 下移到 D–G，顶音 C 继续。</td></tr>
+            <tr><th scope="row">4 第 4 拍</th><td>G · G2</td><td>D3–G3–B3。低音与内声留下，只把 C 降至 B。</td></tr>
+            <tr><th scope="row">5 第 1 拍</th><td>F · F2</td><td>C3–F3–A3。顶音 B 之后继续向 A。</td></tr>
+            <tr><th scope="row">5 后半至 6</th><td>C/E → Dm7 · E2 → D2</td><td>完成低音下行。第 6 小节起和弦更换速度放缓。</td></tr>
+          </tbody>
+        </table>
+        <p>第 6–7 小节留在 Dm7，整小节只换一次和弦。第 8 小节先设想 G7，再改成 Dm7/G，保留 Dm7 的音集合，同时移入 G 低音。重新排列上方后，伴奏最高音从 F 落到 D，旋律 D 也在第 8 小节开头出现。这样只换低音与排列，能把宽松的中段带向第 9 小节的密集前导。</p>
+        <p>在四分音符约 60–80 的慢速句子里，副歌前可尝试让每个主要旋律音配一个和弦，使旋律与伴奏形成共同重音。Shearing 式块状和声也会逐音配和弦，常在旋律下方紧密排列，并在低八度加倍旋律。本例采用其中的逐音配和弦。局部把原来较长的音或不同起音位置改成等距四分音符，和弦和旋律会形成同一个重音。若改动有明确的作曲或歌词约束，旋律调整需和相关创作者协商。这里的第 9 小节重写成一拍休止后接 D–E–F 三个四分音符。</p>
+        <p>给旋律 D–E–F 配同名根音时，候选为 Dm7–Em7–Fmaj7。旋律 F 与 Fmaj7 的大七音 E 相邻，简化为 F 大三和弦可保留清楚的最后一个重音。若从副歌首和弦 Am 倒推，最后一拍需要 E7。把它的低音 E 定在第 4 拍，向前倒排得到 G–F–E，分别对应 G7、Fmaj7、E7。第一拍组的 G7 改成上小节的 Dm7/G，入口连接更连贯。</p>
+        <p>旋律 F 在 E7 上是降九音。再放 C 作为降十三音，可以串起 Dm7/G、Fmaj7、E7 和 Am7 中的同一个 C。E7 的五音 B 与 C 相差半音，省去 B 后仍有 E、G♯、D 交代属功能。</p>
+        <div id="jpop-contrary-staves" class="voice-leading-staves voice-leading-phrases" role="group" aria-label="第九小节第二至第四拍的旋律与低音">
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>同向进行</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 173 132" style="--voice-leading-width: 173px" role="img" aria-label="旋律 D5 到 E5 到 F5，低音 D3 到 E3 到 F3">
+              <text class="voice-leading-chord-name" x="39" y="12">Dm7</text><text class="voice-leading-chord-name" x="86" y="12">Em7</text><text class="voice-leading-chord-name" x="133" y="12">F</text>
+              <path class="inline-staff-lines" d="M6 22H167 M6 27H167 M6 32H167 M6 37H167 M6 42H167"/>
+              <text x="9" y="37">&#xE050;</text>
+              <path class="voice-leading-connector" d="M46 27L79 24.5 M75 22L79 24.5 75 27"/>
+              <path class="voice-leading-connector" d="M93 24.5L126 22 M122 19.5L126 22 122 24.5"/>
+              <text x="35" y="27">&#xE0A2;</text>
+              <text x="82" y="24.5">&#xE0A2;</text>
+              <text x="129" y="22">&#xE0A2;</text>
+              <text class="voice-leading-note-name" x="39" y="64">D</text><text class="voice-leading-note-name" x="86" y="64">E</text><text class="voice-leading-note-name" x="133" y="64">F</text>
+              <path class="inline-staff-lines" d="M6 84H167 M6 89H167 M6 94H167 M6 99H167 M6 104H167"/>
+              <text x="9" y="89">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M46 94L79 91.5 M75 89L79 91.5 75 94"/>
+              <path class="voice-leading-connector is-bass" d="M93 91.5L126 89 M122 86.5L126 89 122 91.5"/>
+              <text x="35" y="94">&#xE0A2;</text>
+              <text x="82" y="91.5">&#xE0A2;</text>
+              <text x="129" y="89">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="39" y="126">D</text><text class="voice-leading-note-name is-bass" x="86" y="126">E</text><text class="voice-leading-note-name is-bass" x="133" y="126">F</text>
+            </svg>
+          </figure>
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>反向进行</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 173 132" style="--voice-leading-width: 173px" role="img" aria-label="旋律 D5 到 E5 到 F5，低音 G2 到 F2 到 E2">
+              <text class="voice-leading-chord-name" x="39" y="12">Dm7/G</text><text class="voice-leading-chord-name" x="86" y="12">Fmaj7</text><text class="voice-leading-chord-name" x="133" y="12">E7(♭9,♭13)</text>
+              <path class="inline-staff-lines" d="M6 22H167 M6 27H167 M6 32H167 M6 37H167 M6 42H167"/>
+              <text x="9" y="37">&#xE050;</text>
+              <path class="voice-leading-connector" d="M46 27L79 24.5 M75 22L79 24.5 75 27"/>
+              <path class="voice-leading-connector" d="M93 24.5L126 22 M122 19.5L126 22 122 24.5"/>
+              <text x="35" y="27">&#xE0A2;</text>
+              <text x="82" y="24.5">&#xE0A2;</text>
+              <text x="129" y="22">&#xE0A2;</text>
+              <text class="voice-leading-note-name" x="39" y="64">D</text><text class="voice-leading-note-name" x="86" y="64">E</text><text class="voice-leading-note-name" x="133" y="64">F</text>
+              <path class="inline-staff-lines" d="M6 84H167 M6 89H167 M6 94H167 M6 99H167 M6 104H167"/>
+              <text x="9" y="89">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M46 104L79 106.5 M75 104L79 106.5 75 109"/>
+              <path d="M126 109h15"/>
+              <path class="voice-leading-connector is-bass" d="M93 106.5L126 109 M122 106.5L126 109 122 111.5"/>
+              <text x="35" y="104">&#xE0A2;</text>
+              <text x="82" y="106.5">&#xE0A2;</text>
+              <text x="129" y="109">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="39" y="126">G</text><text class="voice-leading-note-name is-bass" x="86" y="126">F</text><text class="voice-leading-note-name is-bass" x="133" y="126">E</text>
+            </svg>
+          </figure>
+        </div>
+        <div class="music-demo programmatic-score" id="reharm-jpop-ballad-motion">
+          <div class="music-demo-toolbar">
+            <h3>副歌前的同向与反向线条</h3>
+            <label>第 9 小节运动 <select><option value="parallel">旋律、低音皆上行</option><option value="contrary">旋律上行、低音下行</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">两版学习谱使用相同旋律，比较第 9 小节第二至第四拍的低音方向。</p>
+          <figure aria-label="副歌前的同向与反向线条的五线谱与试听"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="jpop-ballad-b">
+        <h2 id="jpop-ballad-b">B 段的四度排列与双向低音线</h2>
+        <p>从 A 向上按纯四度堆叠，会得到 A–D–G–C。加入 E 并保留 A 低音，可写成 Am7(11)。把 D–G–C 作为 C 上的上层骨架，加 E 后可形成一种 Cadd9 排列。两个和弦可以有相近的上层，但根音、三音和九／十一音的作用由实际低音决定。中间的 G/B 若照搬 C 会和 B 低音形成半音张力，因此改用 B、D、G。</p>
+        <p>先把 Am7 到 Dm7 的距离拆成 A–B–C–D，每两拍换一个低音，Dm7 从第 11 小节第 3 拍开始。A 与 C 上可保留 D–G–C–E。B 低音上改用 D–G–B，留住 D、G，省去 E，并使上方 C 与低音 B 的半音关系消失。下面几种分数和弦也能从同一组四度骨架改出。</p>
+        <table class="lesson-table">
+          <caption>同一四度骨架的转位和重组</caption>
+          <thead><tr><th scope="col">低音</th><th scope="col">上方排列示例</th><th scope="col">得到的和弦</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">A</th><td>D–G–C–E</td><td>Am7(11)，D 是十一音。</td></tr>
+            <tr><th scope="row">C</th><td>D–G–C–E</td><td>Cadd9，D 是九音。</td></tr>
+            <tr><th scope="row">E</th><td>D–G–C</td><td>Cadd9/E，把 E 放到最低。</td></tr>
+            <tr><th scope="row">F</th><td>A–C–D–G</td><td>F6/9，原来的 E 让位给 F 的大三音 A。</td></tr>
+            <tr><th scope="row">G</th><td>D–G–C</td><td>Gsus4，略去 E，留下 G 的四度 C。</td></tr>
+            <tr><th scope="row">B</th><td>D–G–B</td><td>G/B，把 C 换为 B，并省去 E。</td></tr>
+          </tbody>
+        </table>
+        <p>第 11 小节最后两拍把旋律写成 D–C。草稿可以直接配 Dm7–C。在 C 大调借用 B♭ 时，D 是 B♭ 的三音，下一拍的 C 又是 F 的五音。这两拍能短暂形成 F 大调里的 IV–I；把 F 排成 F/A，低音就能从 B♭ 经过 A 下行到 C/G 的 G，再进入 C 段的 F♯。这里保留 C 大三和弦的重量，避免接在两个短三和弦后突然加进 Cmaj7 的 B。</p>
+        <div class="music-demo programmatic-score" id="reharm-jpop-ballad-chorus-line">
+          <div class="music-demo-toolbar">
+            <h3>副歌低音与借用和弦的三阶段</h3>
+            <label>第 10 至 13 小节 <select><option value="upward">A–B–C–D 的低音草稿</option><option value="diatonic">按照旋律 D–C 配和弦</option><option value="borrowed">借用 B♭，接 F/A 与 C/G</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">三个版本只替换第 11 小节最后两拍。</p>
+          <figure aria-label="副歌低音与借用和弦的三阶段的五线谱与试听"></figure>
+        </div>
+        <table class="lesson-table">
+          <caption>B 段上行与回落的连接</caption>
+          <thead><tr><th scope="col">位置</th><th scope="col">和弦</th><th scope="col">实际低音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">10，第 1–2 拍</th><td>Am7(11)</td><td>A</td></tr>
+            <tr><th scope="row">10，第 3–4 拍</th><td>G/B</td><td>B</td></tr>
+            <tr><th scope="row">11，第 1–2 拍</th><td>Cadd9</td><td>C</td></tr>
+            <tr><th scope="row">11，第 3–4 拍</th><td>B♭–F/A</td><td>B♭–A</td></tr>
+            <tr><th scope="row">12，全小节</th><td>C/G</td><td>G</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="jpop-ballad-c">
+        <h2 id="jpop-ballad-c">C 段的半音低音与尾声</h2>
+        <p>第 15 小节原可把 Dm7 拆成 Dm7–G7，再回 C。若旋律持 C，G7 的三音 B 容易把张力推得过强。把上层 F–A–C 保留下来，低音换成 G，即 F/G，给出更柔和的挂留属音响。前两个小节先铺好半音低音，让属区出现前已经具备方向。</p>
+        <table class="lesson-table">
+          <caption>C 段的两段下行与属区回主</caption>
+          <thead><tr><th scope="col">小节</th><th scope="col">和弦</th><th scope="col">实际低音</th><th scope="col">上层连接</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">13</th><td>F♯m7♭5–Fmaj7</td><td>F♯–F</td><td>A–C–E 保持，半音只发生在低音。</td></tr>
+            <tr><th scope="row">14</th><td>Em7–E♭maj7</td><td>E–E♭</td><td>共同音 G、D 保持，B 降为 B♭。</td></tr>
+            <tr><th scope="row">15</th><td>Dm7–F/G</td><td>D–G</td><td>上方 F–A–C 保持，低音变为 G。</td></tr>
+            <tr><th scope="row">16</th><td>Cadd9</td><td>C</td><td>主和弦的三音 E 确立大调，附加九音 D。</td></tr>
+          </tbody>
+        </table>
+        <p>第 15 小节要到 Dm7，可以从 D 往回倒排 E♭、E。这里用 E♭maj7 保留 Em7 的顶音 D。更早的 F♯m7♭5 也可以从 Fmaj7 得来，只把 F 低音变成 F♯，然后再回到 F。</p>
+        <div id="jpop-ballad-c-voice-staves" class="voice-leading-staves voice-leading-phrases" role="group" aria-label="C 段的半音低音和共用顶音">
+          <figure class="voice-leading-panel voice-leading-phrase">
+            <figcaption>C 段的半音低音和共用顶音</figcaption>
+            <svg class="inline-staff voice-leading-staff" viewBox="0 0 254 132" style="--voice-leading-width: 254px" role="img" aria-label="F♯m7♭5、Fmaj7、Em7、E♭maj7、Dm7。顶音 E4、E4、D4、D4、C4；低音 F♯3、F3、E3、E♭3、D3。前两处共用 E，中间两处共用 D。">
+              <text class="voice-leading-chord-name" x="38" y="12">F♯m7♭5</text><text class="voice-leading-chord-name" x="83" y="12">Fmaj7</text><text class="voice-leading-chord-name" x="128" y="12">Em7</text><text class="voice-leading-chord-name" x="173" y="12">E♭maj7</text><text class="voice-leading-chord-name" x="218" y="12">Dm7</text>
+              <path class="inline-staff-lines" d="M5 25H249 M5 30H249 M5 35H249 M5 40H249 M5 45H249"/>
+              <text x="8" y="40">&#xE050;</text>
+              <path d="M210 50H226"/>
+              <path class="voice-leading-connector" d="M45 45L76 45 M72 42.6L76 45 72 47.4 M90 45L121 47.5 M117 45.1L121 47.5 117 49.9 M135 47.5L166 47.5 M162 45.1L166 47.5 162 49.9 M180 47.5L211 50 M207 47.6L211 50 207 52.4"/>
+              <text x="34" y="45">&#xE0A2;</text><text x="79" y="45">&#xE0A2;</text><text x="124" y="47.5">&#xE0A2;</text><text x="169" y="47.5">&#xE0A2;</text><text x="214" y="50">&#xE0A2;</text>
+              <text class="voice-leading-note-name" x="38" y="68">E</text><text class="voice-leading-note-name" x="83" y="68">E</text><text class="voice-leading-note-name" x="128" y="68">D</text><text class="voice-leading-note-name" x="173" y="68">D</text><text class="voice-leading-note-name" x="218" y="68">C</text>
+              <path class="inline-staff-lines" d="M5 86H249 M5 91H249 M5 96H249 M5 101H249 M5 106H249"/>
+              <text x="8" y="91">&#xE062;</text>
+              <path class="voice-leading-connector is-bass" d="M45 91L66 91 M62 88.6L66 91 62 93.4 M90 91L121 93.5 M117 91.1L121 93.5 117 95.9 M135 93.5L156 93.5 M152 91.1L156 93.5 152 95.9 M180 93.5L211 96 M207 93.6L211 96 207 98.4"/>
+              <text x="24" y="91">&#xE262;</text><text x="69" y="91">&#xE261;</text><text x="159" y="93.5">&#xE260;</text>
+              <text x="34" y="91">&#xE0A2;</text><text x="79" y="91">&#xE0A2;</text><text x="124" y="93.5">&#xE0A2;</text><text x="169" y="93.5">&#xE0A2;</text><text x="214" y="96">&#xE0A2;</text>
+              <text class="voice-leading-note-name is-bass" x="38" y="124">F♯</text><text class="voice-leading-note-name is-bass" x="83" y="124">F</text><text class="voice-leading-note-name is-bass" x="128" y="124">E</text><text class="voice-leading-note-name is-bass" x="173" y="124">E♭</text><text class="voice-leading-note-name is-bass" x="218" y="124">D</text>
+            </svg>
+            <p class="voice-leading-distance is-chromatic">前两处共用 E，中间两处共用 D</p>
+          </figure>
+        </div>
+        <div class="music-demo programmatic-score" id="reharm-jpop-ballad-cadence">
+          <div class="music-demo-toolbar">
+            <h3>C 段终止与半音前导的四个阶段</h3>
+            <label>第 13 至 16 小节 <select><option value="single">单用 Dm7 回主</option><option value="dominant">拆成 Dm7–G7</option><option value="suspended">G7 改为 F/G</option><option value="chromatic">加上半音下行前导</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">旋律与末和弦保持一致，依次改变属功能与到达属区前的低音。</p>
+          <figure aria-label="C 段终止与半音前导的四个阶段的五线谱与试听"></figure>
+        </div>
+        <p>尾声交替使用 Fmaj7(9,13) 和 Cadd9。F 上方的 A、C、E、G、D 分别是三、五、七、九、十三音。可把主要共同音安排在相近位置，令伴奏最高音往返 E、D，而低音在 F、C 之间移动。最后一次 Cadd9 让九音 D 留在音响中，同时让低音明确回到主音。</p>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./style-reharm-6.html" rel="prev"><span>第六篇</span><strong>民谣</strong></a>
+        <a href="./style-reharm-8.html" rel="next"><span>第八篇</span><strong>J-POP ② · 舞曲编配</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

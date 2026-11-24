@@ -1,4 +1,4 @@
-export function mountScoreChoiceButtons(host, items, onSelect) {
+export function mountScoreChoiceButtons(host, items, onSelect, initialIndex = 0) {
   const buttons = items.map((item, index) => {
     const button = document.createElement('button');
     button.type = 'button';
@@ -14,5 +14,6 @@ export function mountScoreChoiceButtons(host, items, onSelect) {
     onSelect(items[position], position);
   }
 
-  choose(0);
+  choose(initialIndex);
+  return choose;
 }

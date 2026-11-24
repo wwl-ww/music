@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>常用乐器与音源写法｜图解乐风编曲入门</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./genre-arrangement-3.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解乐风编曲入门</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">第一篇 · 第 3 节</span> 常用乐器与音源写法</h1>
+      <p class="intro">乐器的选择同时决定音色和可写的动作。木吉他的刷弦要经过几根弦，鼓手的过门要分配四肢，慢起音的弦乐适合托住长音。音源相似时，演奏方式仍能让角色清楚。</p>
+
+      <section aria-labelledby="genre-drums">
+        <h2 id="genre-drums">原声鼓组的部件与奏法</h2>
+        <p>原声鼓组可以是真鼓的录音，也可以用采样模拟鼓手。同一套鼓有低、中、高三个听觉层次。底鼓提供低频骨架，小鼓给出可辨认的音头，踩镲或叮叮镲负责细分。套鼓摆位与鼓的数量可随演奏者调整。</p>
+        <table class="lesson-table">
+          <caption>鼓组部件的音色与用法</caption>
+          <thead><tr><th scope="col">部件</th><th scope="col">发音</th><th scope="col">典型作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">底鼓</th><td>脚踏板带动鼓槌敲鼓皮。</td><td>让拍点有低频重量，常与贝斯的支点配合。</td></tr>
+            <tr><th scope="row">小鼓</th><td>响弦让鼓皮击打产生爆裂音头。封闭式击边只有干短的木质响声，开放式击边同时击鼓皮和边框，声音更响、更亮。</td><td>普通小鼓和开放式击边适合明确重音。封闭式击边适合低密度的抒情段或巴萨诺瓦。</td></tr>
+            <tr><th scope="row">踩镲</th><td>脚踏板控制两面镲的张开程度，闭镲短，开镲长。支持互斥的音源会在闭镲触发时切断前一个开镲尾音。</td><td>连续细分中交替开、闭。开镲可扩展到下一拍，闭镲把它收回。</td></tr>
+            <tr><th scope="row">筒鼓、落地筒鼓</th><td>筒鼓比落地筒鼓高，大小不同的一组可以由高到低移动。</td><td>多用在过门的短句，从主节奏引向下一段。</td></tr>
+            <tr><th scope="row">碎音镲、叮叮镲、水镲</th><td>碎音镲展开快且响，叮叮镲适合连续击点，其镲帽比镲面更亮。水镲较小，短促的飞溅声收得快。</td><td>碎音镲可和底鼓同时标出新段首拍，叮叮镲可替换踩镲，水镲可突出局部的短重音。</td></tr>
+          </tbody>
+        </table>
+        <p>模拟鼓手时用双手与双脚检查同一刻的动作。例如双手去打两个筒鼓，便不能同时用第三只手敲踩镲。双脚仍可踩底鼓和镲踏板。切到过门时，把重复的踩镲起音让给筒鼓。新一小节回到底鼓、小鼓和镲分工，便能听出过门的边界。</p>
+        <div class="music-demo programmatic-score" id="genre-drum-part">
+          <div class="music-demo-toolbar"><h3>连续细分与筒鼓过门</h3><label>节奏 <select><option value="groove">基础鼓型</option><option value="fill">过门与下一小节</option><option value="open">开镲与闭镲</option></select></label></div>
+          <p class="music-demo-cue" aria-live="polite">底鼓和小鼓分出低、中两层，闭镲给出持续的八分细分。</p>
+          <figure data-genre-playback aria-label="鼓组基础节奏、过门和开闭镲的对照"></figure>
+          <div data-genre-grid></div>
+        </div>
+      </section>
+
+      <section aria-labelledby="genre-drum-sources">
+        <h2 id="genre-drum-sources">鼓机、采样与音频循环</h2>
+        <p>选择素材时有两个不同的维度。音头可以来自原声鼓、电子鼓机，也可以来自黑胶采样。呈现方式则可以是逐音触发的 MIDI，也可以是已经录成一段的音频。两者可同时使用，例如用独立的鼓机底鼓配一层现场打击乐循环。</p>
+        <table class="lesson-table">
+          <caption>三种音源的编排取舍</caption>
+          <thead><tr><th scope="col">素材</th><th scope="col">可塑性</th><th scope="col">编排例</th></tr></thead>
+          <tbody><tr><th scope="row">鼓机音色</th><td>每个音头都可重排。Analog、Vintage、Electro、Techno 一类名称常指向 808、909 及其衍生的声音。</td><td>舞曲可让底鼓保持稳定，加两三种不同长短的镲。合成编排不受鼓手同时动作的限制。</td></tr>
+          <tr><th scope="row">单次采样</th><td>黑胶或 Lo-fi 样本可保留底噪、颗粒或原录音的重叠声。一个采样中可能已经有镲和底鼓。</td><td>叠加前辨认已有的高频，以免另一层相同的镲把起音挤在一起。</td></tr>
+          <tr><th scope="row">音频循环</th><td>Loop 或 Breakbeat 保留原有力度、先后与录音空间。逐音改写通常不如 MIDI 直接，可剪切片段或调整节拍对齐。</td><td>用录好的鼓或打击乐补充律动，也可以循环质地鲜明的贝斯或吉他句。</td></tr></tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="genre-basses">
+        <h2 id="genre-basses">贝斯音色、音域与低音线</h2>
+        <p>电贝斯可用指拨得到圆润的音头，用拨片得到更锋利的起音。爵士或小编制的拨奏低音提琴有厚实的共鸣，较大编制中可能需要给它留下起音空间。合成贝斯常用于电子舞曲，可由键盘或 MIDI 触发，波形、包络和持续时值的变化比拨弦乐器更自由。</p>
+        <p>四弦电贝斯和常见四弦低音提琴的标准定弦，从低到高的实际音是 E1–A1–D2–G2。五弦电贝斯常能低至 B0。下探到 D1 以下前应判断样本和监听设备能否清楚发出该音高，也可以加较高八度或调整音色来保留辨识度。</p>
+        <p>低音线先安放换和弦时的根音。若符号是 C/G，低音应为 G，C 仍是和弦根音。稳定处可用五音或同一根音的高八度，三音、七音可以建立有方向的继续或解决。把低音起音和底鼓的骨架对照，决定哪里合起来、哪里错开。</p>
+        <p>例如 C 接 G/B 再接 Am，先落稳 C3–B2–A2。在 C 和弦末尾加一个短 G2，既能配合底鼓，也能衬出下一个低音 B2。如果每次底鼓都叠同样响的低音，句中的强调会分散，可以让贝斯在部分鼓点上延续前一个音。</p>
+      </section>
+
+      <section aria-labelledby="genre-guitars">
+        <h2 id="genre-guitars">吉他的把位、扫弦与琶音</h2>
+        <p>六弦吉他的标准定弦从低到高是 E2–A2–D3–G3–B3–E4，最低弦比四弦贝斯高一个八度。在钢琴上 F、A、C 可同时按下。吉他的 F 和弦要从几根弦上取得，常见一品横按的声音从低到高是 F2–C3–F3–A3–C4–F4。把位还决定了哪些音相邻、哪些音会自然重复。</p>
+        <div id="genre-f-chord-diagram"></div>
+        <p>拨片下扫时常由粗弦通向细弦，上扫时方向相反。把每根弦完全对齐到同一个格点，会丢掉扫过弦组的起音顺序。琶音的各音由较明显的时间间隔隔开，适合逐音输入。扫弦还涉及遗漏个别弦、力度和噪音，可用真实录音或带上下扫样本的吉他音源。</p>
+        <div class="music-demo programmatic-score" id="genre-guitar-strum">
+          <div class="music-demo-toolbar"><h3>F 和弦的上下扫与分解奏法</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">六个音完全同时起音，音高排列保持吉他的一品横按。</p>
+          <figure data-writing-score aria-label="F 和弦的上下扫与分解奏法"></figure>
+        </div>
+        <p>钢弦原声吉他提供清晰的拨弦边缘，尼龙弦吉他的音头较柔和，适合巴萨诺瓦等编制。电吉他音色还由拾音、音箱和效果器共同决定。清音保留更多原来的拨弦轮廓，Crunch、Overdrive、Distortion 常用于表示由轻到重的失真质感，但名称并非固定的强度刻度。需要真实箱体反应时可使用音箱模拟，木吉他可以适度压缩以稳定拨弦强度。</p>
+      </section>
+
+      <section aria-labelledby="genre-keys">
+        <h2 id="genre-keys">钢琴、电钢琴、电风琴与合成器</h2>
+        <p>从音头和持续方式决定编配。钢琴起音明显，可以强调拍点。电钢琴和风琴更容易在不同的时间长度上填补背景。合成器名称通常提示功能，仍需核对选中的预置是否具有相应的发音特性。</p>
+        <details class="lesson-aside">
+          <summary>键盘逐音输入中的力度与时差</summary>
+          <div class="lesson-aside-content">
+            <p>DAW 的 Humanize 功能可给力度、起音或长度加入小幅差异。保留已经与底鼓对齐的段落首拍，让弱拍的拨键、短填句或和弦内的各音有细微变化。整轨随机移动容易打散原先设计的合击。</p>
+          </div>
+        </details>
+        <table class="lesson-table">
+          <caption>键盘类音色与写法</caption>
+          <thead><tr><th scope="col">音色</th><th scope="col">声部任务</th><th scope="col">逐音输入</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">原声钢琴</th><td>可同时确定和弦、音区与拍点。</td><td>独奏伴奏时左手可弹根音或五音，右手给和弦。已有贝斯时可腾出低音。轻微改变力度、起音和时值能保留乐句重心，少量压缩可降低尖锐峰值。</td></tr>
+            <tr><th scope="row">电钢琴</th><td>Rhodes 一类音色温暖，适合 R&amp;B 的和声层。</td><td>长时值和弦让尾音展开。Tremolo 是周期性音量波动，速度和深度会改变伴奏律动。</td></tr>
+            <tr><th scope="row">电风琴</th><td>Hammond 类声音可持续，也可带短促的打击音头，适用于抒情、灵魂乐、放克或摇滚。</td><td>可用 Leslie 旋转扬声器效果和滑奏。维持中高区时，结合贝斯和钢琴选三音、七音或延伸音。</td></tr>
+            <tr><th scope="row">合成器 Lead</th><td>突出单线旋律、器乐回答或短钩子。</td><td>在单音且支持连奏滑音的预置中，轻微重叠相邻音符可以引出滑音。需拉开空间时，可用混响或延迟控制尾声。</td></tr>
+            <tr><th scope="row">合成铜管、锯齿波</th><td>明亮、集中的节奏和弦或重复动机。</td><td>可用短和弦集中发力。附点八分延迟间隔为四分拍的四分之三，附点四分则是一拍半，两种回声会落在不同的拍位。</td></tr>
+            <tr><th scope="row">合成弦乐、Pad</th><td>起音较慢的持续背景。</td><td>减少与低音重叠，换和弦时可以续住共有音，高音长音为其他声部留下空间。</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="genre-strings">
+        <h2 id="genre-strings">弦乐持续层与快速起音</h2>
+        <p>真实弦乐组一般由第一、第二小提琴、中提琴、大提琴和低音提琴构成。写齐奏音色时可用合奏采样。如果给每个声部不同的材料，应用不同乐器轨和可演奏的音区，并为长音、断奏等各选相应的奏法。</p>
+        <p>在抒情段，弦乐常维持二分或全音符，让钢琴与吉他负责较明显的起音。也可用顶部做克制的副旋律，再按需要增加低八度。慢起音样本难以清楚读出快句，换用短奏样本，或只在快句叠一层短弓，即可加强音头。保留长音时，共同音不必逢换和弦就重新触发。</p>
+        <div class="music-demo programmatic-score" id="genre-keys-sustain">
+          <div class="music-demo-toolbar"><h3>同一和弦的短起音与持续层</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">钢琴在每小节内打两次和弦，起音分开，留出的间隙让脉搏变得清楚。</p>
+          <figure data-writing-score aria-label="同一和弦的短起音与持续层"></figure>
+        </div>
+        <details class="lesson-aside"><summary>网页音色的示范范围</summary><p>试听用通用音源呈现乐器角色、起音和持续时间。真实录音室中的音箱、旋转扬声器、连奏滑音和具体弓法需要对应的录音或专用音源。</p></details>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./genre-arrangement-2.html" rel="prev"><span>第一篇 · 第 2 节</span><strong>为旋律配和弦</strong></a>
+        <a href="./genre-arrangement-4.html" rel="next"><span>第一篇 · 第 4 节</span><strong>DAW 编曲流程与动态处理</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

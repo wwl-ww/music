@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>朋克摇滚｜图解乐风编曲入门</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./genre-arrangement-9.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解乐风编曲入门</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">乐风 03</span> 朋克摇滚</h1>
+      <p class="intro">快八拍、鼓与吉他的共同起音、直接的电声编制，能让简洁的三和弦获得清楚的冲击力。</p>
+
+      <section aria-labelledby="genre-punk-harmony">
+        <h2 id="genre-punk-harmony">三和弦骨架与高速织体</h2>
+        <p>简单的 C–F–G–C 进行足以承载朋克摇滚的速度和力度。旋律停在三音、五音或根音时，和弦有清楚的支点。C 上的 E 与 G、F 上的 F 与 A、G 上的 D 与 B 都可以在这里用作支点，短的经过音和装饰音在快速织体里保持旋律轮廓。曲风差别主要发生在鼓点、贝斯的连续八分音符与失真吉他起音上。</p>
+        <div class="music-demo programmatic-score" id="genre-punk-arrangement">
+          <div class="music-demo-toolbar">
+            <h3>同一旋律的朋克摇滚编配</h3>
+            <label>编配 <select><option value="arranged">鼓、拨片贝斯与失真吉他</option><option value="reference">同和弦钢琴伴奏</option><option value="base">共用基础稿</option><option value="melody">旋律</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">三和弦与旋律保持可辨，鼓组用四分开镲撑住高速拍点，八分贝斯推进，吉他抓住底鼓与小鼓的合击位置。</p>
+          <figure aria-label="同一旋律的朋克摇滚编配"></figure>
+        </div>
+        <p>「同和弦钢琴伴奏」和乐队版都用 C–F–G–C，旋律和速度相同。钢琴的长和弦让句子按小节展开，乐队的根音八分与鼓、吉他的共同击点在同一小节内持续推进。</p>
+        <p>通常只需鼓组、电贝斯和电吉他三件伴奏。鼓音色可以有原声鼓皮的攻击力和现场杂音；拨片贝斯保留清楚起音，需要时用轻微过载；失真吉他由音箱或模拟器设定粗糙程度。现场一位吉他手与录音中两次演奏的吉他轨仍是同一类编制。双轨分放左右时，需要在奏法、时间或音色上有细差，完全复制同一录音主要使中间听起来更响。</p>
+      </section>
+
+      <section aria-labelledby="genre-punk-groove">
+        <h2 id="genre-punk-groove">快八拍脉搏与鼓、吉他合击</h2>
+        <p>在每分钟 190 拍下，开镲按四分音符击拍已很密。底鼓和小鼓用强起音，开镲的采样余响较长，输入力度可以相应降低，避免高频持续遮住人声。过门可直接用小鼓快速连打。贝斯主要连续弹根音八分，每拍后半放轻，使拍头仍有推进方向。关键位置可临时舍弃连续八分，落到底鼓或小鼓的击点上。</p>
+        <p>吉他安排在鼓组的主要击点，能把低频的鼓击和中音区的和弦结合成同一重音。先区分稳定的四分镲脉搏与更灵活的鼓和吉他落点，句末再用短暂停音或小鼓连打交代新段入口。</p>
+        <figure class="notation-sample"><figcaption>朋克摇滚首小节的共同起音</figcaption><div id="genre-punk-grid" data-arrangement-grid></div></figure>
+      </section>
+
+      <section aria-labelledby="genre-punk-voicing">
+        <h2 id="genre-punk-voicing">强力和弦与四音吉他排列</h2>
+        <p>强力和弦由根音与纯五度构成，可以加倍根音八度。省去三音后，大小性质可由主旋律或别的声部给出。失真音色下也可以用四音的开放排列，例如 C3–G3–E4–C5。音符横跨多个音区，最高音 C 重申根音，较清楚的 E4 仍能保留大三和弦性质。最高音容易被听成一条单独旋律，因此和弦换位时还要检查最高声部的走向。七和弦若在近处叠上高根音，需留意它与七音相邻形成的紧张。</p>
+        <p>数字输入时，吉他的开放排列可按实际音域和弦序设计，六根弦不必全响。尤其在高失真下，省下重复或拥挤的高音能使主要节奏和音高更好分辨。示范比较中已保持鼓与贝斯不动，可以直接对照吉他是否加入三音。</p>
+        <details class="lesson-aside">
+          <summary>C 大三和弦的四音把位</summary>
+          <div class="lesson-aside-content">
+            <p>标准定弦下，C3–G3–E4–C5 可在第 6 弦 8 品、第 5 弦 10 品、第 3 弦 9 品和第 1 弦 8 品取得，第 4 弦和第 2 弦静音。两端的 C 保留，把中间 E4 省去就只剩根音与五音。这个把位适合分弦或编程实现，刷弦时要按所用手型处理静音弦。</p>
+          </div>
+        </details>
+        <div class="music-demo programmatic-score" id="genre-punk-voicing-demo">
+          <div class="music-demo-toolbar">
+            <h3>同一合击型的强力和弦与四音排列</h3>
+            <label>吉他声位 <select><option value="power">根音、五音与八度</option><option value="triad">加入三音的开放排列</option></select></label>
+          </div>
+          <p class="music-demo-cue" aria-live="polite">把和弦第三音加入原有的根音与五音，吉他的重击位置、贝斯与鼓组仍相同。</p>
+          <figure aria-label="同一合击型的强力和弦与四音排列"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="genre-punk-mix">
+        <h2 id="genre-punk-mix">以鼓组为基准的混音顺序</h2>
+        <ol>
+          <li>先将其他推子拉低，以鼓建立电平和动感。单轨推子在约 −10 至 −5 dB 可作示范工程的起点，峰值余量还取决于音源电平与总线处理。</li>
+          <li>带入电贝斯，校准低频与底鼓的关系，再加入左右吉他。吉他必须保有冲击感，同时让小鼓从中频穿出。</li>
+          <li>主唱加入后要融入伴奏而仍可辨词。减少长混响，保留起音与三件组的直接感。需要厚实度时可适度压缩鼓和贝斯，或轻量使用盘带饱和，回到总线比较处理前后的平衡。</li>
+        </ol>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./genre-arrangement-8.html" rel="prev"><span>上一节</span><strong>电子流行</strong></a>
+        <a href="./genre-arrangement-10.html" rel="next"><span>下一节</span><strong>巴萨诺瓦</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

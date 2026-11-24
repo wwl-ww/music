@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>编曲的基本思考｜图解乐风编曲入门</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./genre-arrangement-1.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">图解乐风编曲入门</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1><span class="chapter-number">第一篇 · 第 1 节</span> 编曲的基本思考</h1>
+      <p class="intro">编曲决定旋律出现时的节奏、和声、音色和空间。同一段旋律可以保持音符不变，只把伴奏的高低、左右和起音错开，合奏就会从拥挤变得清楚。</p>
+
+      <section aria-labelledby="genre-concept">
+        <h2 id="genre-concept">同一旋律的编配方向</h2>
+        <p>先确定谁是听众要跟住的主线。歌曲通常是人声，器乐段也可能由吉他、合成器或弦乐承担。即使主旋律不变，缩短伴奏时值会露出更多空隙，把伴奏换成持续音会填满背景，改变鼓组的音头则会改变每拍的重量。风格变化可以从其中一项开始。</p>
+        <p>歌曲的歌词还会制约这些选择。例如口语式、克制的主歌可以让底鼓和贝斯保留脉搏，让钢琴只在句首和换和弦处落下。如果副歌需要同一句话显得更迫切，可以增加连续八分音的拨弦或提高伴奏的顶音。也可以刻意让明亮伴奏衬托苦涩的歌词，用于讽刺、反差或超越悲伤的叙事。两种选择对应不同的表达意图。</p>
+        <details class="lesson-aside"><summary>音色的年代联想</summary><p>有些音色会让人联想到特定年代。闸门混响小鼓有很大的空间尾声，但在自然衰减到很小之前突然截断，形成鲜明的鼓音轮廓。把这种处理用在复古编曲中是明确的音色选择。想得到较贴近的鼓组，则可保留较短的房间反射。</p></details>
+      </section>
+
+      <section aria-labelledby="genre-vertical">
+        <h2 id="genre-vertical">音区与和弦音的分工</h2>
+        <p>合奏把每个音的实际高度分给不同乐器。C 和弦可以由贝斯给出 C2，吉他在中区弹 G3、C4、E4，钢琴再补中高音，弦乐延展顶部。音区分开以后，乐器可以重复同一个和弦音，例如 C2 与 C4 同时有各自的用途。相反，几个乐器都堆在相近的低音区，即使写的音全在和弦中，听起来也容易黏成一层。</p>
+        <table class="lesson-table lesson-table-dense">
+          <caption>含贝斯、吉他、钢琴与弦乐的编配实例</caption>
+          <thead><tr><th scope="col">声部</th><th scope="col">主要任务</th><th scope="col">配置</th></tr></thead>
+          <tbody><tr><th scope="row">贝斯</th><td>明确和弦低音</td><td>Cmaj9 上稳定弹 C2，推动时可用 G2 或邻近的经过音。</td></tr>
+          <tr><th scope="row">吉他</th><td>补和弦音与拨弦节奏</td><td>可在 G3–E4 区间取 G、C、E。想让旋律保持清楚时，不必打满所有拍。</td></tr>
+          <tr><th scope="row">钢琴</th><td>补三音、七音或九音</td><td>贝斯已经给出根音，钢琴可以取 E3、G3、B3、D4。</td></tr>
+          <tr><th scope="row">弦乐</th><td>跨起音维持中高区</td><td>例如在 D5、E5 或 G5 上维持长音，必要时随旋律的音区下移或暂时退出。</td></tr></tbody>
+        </table>
+        <p>Cmaj9 里的 B 是大七音。它和 C 的音名相邻，如果 B4 上方紧接 C5，两者只隔半音，紧密的高音配置会格外显眼。把 C 留在低音区，B 和 D 放在中高区，和弦的色彩仍在，相邻的摩擦则不再占据同一个声区。若乐句本来就需要半音摩擦，也可以有意保留它。</p>
+        <div class="music-demo programmatic-score" id="genre-register-spacing">
+          <div class="music-demo-toolbar"><h3>Cmaj9 的高音半音与分散配置</h3><div data-writing-choices></div></div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">C2 在低音，B4 与其上方的 C5 相隔半音，两个高音同时持续。</p>
+          <figure data-writing-score aria-label="Cmaj9 的高音半音与分散配置"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="genre-pan">
+        <h2 id="genre-pan">声像与中心位置</h2>
+        <p>声像（pan）调的是声音在左右声道之间的分配。居中通常在两边同时发声，偏左或偏右会把重心移向相应的扬声器。钢琴和吉他都在中区时，可让两者稍微向不同侧展开。主唱、底鼓和低音通常保持中央，作为整体重心。脚踩镲与沙铃若同时给高频细分，也可适度分开。</p>
+        <p>声像提供的是水平方向的区分。单声道收听时左右位置会合并，因此拍点与音区仍须分得开。若两个中区乐器在同一瞬间反复按出同一个和弦，单靠转声像无法消除合奏中的节奏重复。</p>
+      </section>
+
+      <section aria-labelledby="genre-time">
+        <h2 id="genre-time">起音、持续与留白</h2>
+        <p>底鼓和贝斯可以在重要拍点一起出现，给节奏和低音一个共同支点。短促的吉他拨弦可放在拍间，钢琴压缩为句首的和弦。弦乐的持续音则能在这些起音之间保持背景。配置从「谁在什么时候开始」和「声音延续到什么时候」一起考虑。</p>
+        <div class="music-demo programmatic-score" id="genre-role-spacing">
+          <div class="music-demo-toolbar"><h3>同拍重叠与分层起音</h3><label>配置 <select><option value="overlap">同拍重叠</option><option value="layers">分层起音</option></select></label></div>
+          <p class="music-demo-cue" aria-live="polite">吉他、钢琴和弦乐同时在每拍起音，拍点很整齐，但每层给出的节奏信息相似。</p>
+          <figure data-genre-playback aria-label="同一和弦的两种声部分工"></figure>
+          <div data-genre-grid></div>
+        </div>
+        <p>全体齐奏本身也有用途，例如强调副歌第一个重拍，或者让一句话在明确的重音后收住。齐奏之后，部分声部退回拍间或拉长，前面的共同重音才仍然听得出来。若旋律正在唱长音，空出的节奏既可以交给伴奏，也可以保留为句间呼吸。</p>
+      </section>
+
+      <section aria-labelledby="genre-listening">
+        <h2 id="genre-listening">从成品提取可复用的写法</h2>
+        <p>把听感落实到可写进音轨的变化。比如副歌显得展开，可能是低音走得更勤、高音增加持续层，或鼓镲在段落边界加了一个起音。记录变化发生在哪一小节、涉及哪件乐器、改变的主要是音区、拍点还是时值，下次就能在自己的旋律上重建一次来确认效果。</p>
+        <aside class="lesson-callout"><p><strong>突出主要声部，给其余声部分派互补任务。</strong> 先决定音区和起音，再用声像补足左右空间。保留少数重合用于加强重音，其余位置用长短和落点的差别建立层次。</p></aside>
+      </section>
+
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./genre-arrangement-intro.html" rel="prev"><span>导论</span><strong>音阶、音程与和弦</strong></a>
+        <a href="./genre-arrangement-2.html" rel="next"><span>第一篇 · 第 2 节</span><strong>为旋律配和弦</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

@@ -5,7 +5,7 @@ import { mountFormAnalysis } from './shared/formats/form-analysis.js';
 import { mountVoiceRelations } from './shared/formats/voice-relations.js';
 import { mountScoreComparison } from './shared/formats/score-comparison.js';
 import { mountScoreWritingSteps } from './shared/formats/score-writing-steps.js';
-import { mountArrangementGrid } from './shared/formats/arrangement-grid.js';
+import { mountPlayableArrangementGrid } from './shared/formats/arrangement-grid-playback.js';
 import { mountGuitarChordDiagrams } from './shared/formats/guitar-chord-diagram.js';
 import { mountFretboard } from './shared/formats/fretboard.js';
 
@@ -17,12 +17,12 @@ function setPreviewWidth() {
 preview.addEventListener('change', setPreviewWidth);
 setPreviewWidth();
 
-mountArrangementGrid(document.querySelector('#arrangement-grid-sample'), {
+mountPlayableArrangementGrid(document.querySelector('#arrangement-grid-sample'), {
   label: '贝斯与底鼓的起音对照',
   subdivisions: 2,
   rows: [
-    { label: '贝斯 C3', events: [{ step: 0, length: 2 }, { step: 4, length: 3 }] },
-    { label: '底鼓', events: [{ step: 0 }, { step: 4 }] }
+    { label: '贝斯 C3', program: 33, pitch: 'C3', events: [{ step: 0, length: 2 }, { step: 4, length: 3 }] },
+    { label: '底鼓', drum: 36, events: [{ step: 0 }, { step: 4 }] }
   ]
 });
 

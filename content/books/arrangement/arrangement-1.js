@@ -1,11 +1,11 @@
 import bandSoundFont from '@coderline/alphatab/soundfont/sonivox.sf3?url';
 import { mountArrangementGrid } from '../../shared/formats/arrangement-grid.js';
 import { mountGuitarChordDiagrams } from '../../shared/formats/guitar-chord-diagram.js';
+import { guitarBrush, guitarNotes, guitarTuning } from '../../shared/formats/guitar-strum.js';
 import { mountRangeKeyboards } from '../../shared/formats/range-keyboards.js';
 import { mountScore } from '../../shared/formats/score.js';
 
 const stepsPerBar = 16;
-const ticksPerStep = 240;
 const durations = [16, 8, 4, 2, 1];
 const meter = String.raw`\ts (4 4)`;
 const makeHit = (step, accent = false) => ({ step, accent });
@@ -85,10 +85,7 @@ function mountVariants(id, variants, { bars = 1, tempo = 106, soundFontUrl = ban
     notation: 'staff',
     notationVisible: !grid,
     ...(soundFontUrl && { soundFontUrl }),
-    onPlaybackPosition: grid ? tick => {
-      const step = Math.floor(tick / ticksPerStep);
-      grid.markStep(tick === null || step >= bars * stepsPerBar ? null : step);
-    } : undefined
+    onPlaybackPosition: grid?.markTick
   });
   selector.addEventListener('change', () => {
     grid?.update(active().rows);
@@ -245,12 +242,11 @@ const guitarShapes = {
     label: 'Gmaj7 · 大七和弦', positions: [3, null, 4, 4, 3, null], degrees: ['R', null, '7', '3', '5']
   }
 };
-const guitarNotes = positions => positions.flatMap((fret, index) => fret === null ? [] : [fret + '.' + (6 - index)]);
 const guitarChord = guitarNotes(guitarShapes.openC.positions);
-const guitarTuning = ['E4', 'B3', 'G3', 'D3', 'A2', 'E2'];
+const strumTempo = 106;
 function strumVersion(down, up, summary, chord = guitarChord) {
-  const downEvents = down.map(step => ({ step, length: 2, pitch: chord, accent: true, brush: 'bd 42' }));
-  const upEvents = up.map(step => ({ step, length: 2, pitch: chord.slice(-3), dynamic: 'mp', brush: 'bu 27' }));
+  const downEvents = down.map(step => ({ step, length: 2, pitch: chord, accent: true, brush: guitarBrush('down', strumTempo, 42) }));
+  const upEvents = up.map(step => ({ step, length: 2, pitch: chord.slice(-3), dynamic: 'mp', brush: guitarBrush('up', strumTempo, 26) }));
   const events = [...downEvents, ...upEvents].sort((a, b) => a.step - b.step);
   const phrase = String.raw`\ks C ${meter} ${rhythmPhrase(events, 1)}`;
   return {

@@ -8,12 +8,12 @@ function chord(pitches, symbol, duration = 1) {
 function mount(id, tempo, versions) {
   mountScoreWritingSteps(document.getElementById(id), {
     score: { tempo, soundFontUrl },
-    steps: versions.map(([label, description, melody, harmony]) => {
+    steps: versions.map(([label, description, melody, harmony, highlights]) => {
       const scoreTracks = [{ name: '旋律', program: 73, phrase: melody.join(' | ') }];
       if (harmony) {
         scoreTracks.push({ name: '伴奏', program: 0, phrase: '\\clef F4 ' + harmony.join(' | ') });
       }
-      return { label, description, notes: { scoreTracks } };
+      return { label, description, highlights, notes: { scoreTracks } };
     })
   });
 }
@@ -22,6 +22,7 @@ const c = chord('C3 G3 E4', 'C');
 const cHalf = chord('C3 G3 E4', 'C', 2);
 const am = chord('A2 E3 C4', 'Am');
 const amHalf = chord('A2 E3 C4', 'Am', 2);
+const em7 = chord('E3 G3 B3 D4', 'Em7');
 const em7Half = chord('E3 G3 B3 D4', 'Em7', 2);
 const f = chord('F3 A3 C4', 'F');
 const dm7 = chord('D3 A3 C4 F4', 'Dm7');
@@ -64,7 +65,7 @@ const sharedLead = [
 ];
 const sharedHarmony = [
   c,
-  chord('E3 G3 B3 D4', 'Em7'),
+  em7,
   amHalf + ' ' + chord('G2 A3 C4 E4', 'Am/G', 2),
   f,
   chord('E3 B3 G4', 'Em', 2) + ' ' + amHalf,
@@ -73,7 +74,11 @@ const sharedHarmony = [
   g7,
   c
 ];
-const localE = { bar: 2, melody: 'E4.4 G4.4 B4.4 G#4.4', harmony: chord('E3 D4 G#4 B4', 'E7') };
+const localE = {
+  bar: 2,
+  melody: 'E4.4 G4.4 B4.4 G#4.4',
+  harmony: em7Half + ' ' + chord('E3 B3 D4 G#4', 'E7', 2)
+};
 const localD = {
   bar: 7,
   melody: 'A4.4 F4.4 A4.4 F#4.4',
@@ -87,12 +92,27 @@ function localVersion(label, description, ...alterations) {
     melody[change.bar - 1] = change.melody;
     harmony[change.bar - 1] = change.harmony;
   }
-  return [label, description, melody, harmony];
+  const highlights = alterations.flatMap(({ bar }) => [{ bar, beat: 4 }, { bar: bar + 1, beat: 1 }]);
+  return [label, description, melody, harmony, highlights];
 }
 
 mount('rock-local-dominants', 96, [
   localVersion('调内进行', '第 2 小节 Em7 连到 Am，第 7 到第 9 小节用 Dm7–G7–C 完成原调的二五一。'),
-  localVersion('E7 → Am', '第 2 小节 E7 的三音 G♯ 在旋律里上行半音到 A，给第 3 小节的 Am 增加短暂的归宿感。', localE),
+  localVersion('E7 → Am', '第 2 小节后半的 Em7 改成 E7，旋律末音升成 G♯，接到第 3 小节 Am 上的 A。', localE),
   localVersion('D7 → G7', '第 7 小节后半变成 D7，旋律由 F♯ 上行到 G。G7 紧接着又引向原调的 C。', localD),
   localVersion('两个副属', '第 2 小节和第 7 小节各出现一次半音导向。Am、G7 都得到局部强调，原调终止仍落在 C。', localE, localD)
+]);
+
+const motifToA = 'A4.2 C5.4 E5.4';
+const motifToG = 'G4.2 B4.4 D5.4';
+const motifHighlights = [{ bar: 1, beat: 4 }, { bar: 2, beat: 1 }];
+mount('rock-improv-dominant-motif', 88, [
+  ['Em7 → Am', 'Em7 上的 G 到 Am 的 A 是全音，A 落在下一小节的强拍。',
+    ['B4.4 D5.4 B4.4 G4.4', motifToA], [em7, am], motifHighlights],
+  ['E7 → Am', '末拍改成 E7 的三音 G♯，到 A 的距离缩成半音，节奏和第二小节维持一致。',
+    ['B4.4 D5.4 B4.4 G#4.4', motifToA], [chord('E3 B3 D4 G#4', 'E7'), am], motifHighlights],
+  ['Dm7 → G7', '动机移到 Dm7 上，末拍的 F 到下一小节 G7 的根音 G 是全音。',
+    ['A4.4 C5.4 A4.4 F4.4', motifToG], [dm7, g7], motifHighlights],
+  ['D7 → G7', '末拍改成 D7 的三音 F♯，动机从半音下方落到 G。后续仍沿 G7 的和弦音展开。',
+    ['A4.4 C5.4 A4.4 F#4.4', motifToG], [chord('D3 A3 C4 F#4', 'D7'), g7], motifHighlights]
 ]);

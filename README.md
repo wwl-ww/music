@@ -11,7 +11,7 @@ npm run dev
 
 打开终端显示的本地地址，先选择教材，再进入章节。复调音乐的上、下两篇共用同一个课程目录。[复调音乐基础教程](./content/books/counterpoint/index.html) · [格式样板页](./content/format-library.html)
 
-课程内容集中放在 `content/`。教材的章节和专用脚本归入各自的目录，参考 PDF 可留在本地的 `sources/`，并由 Git 忽略。课程网页由同一套 Vite 配置运行。
+课程内容集中放在 `content/`。每本书的章节、专用脚本和原书资料归入各自的书目目录。原书 PDF 本地保存在 `content/books/<书目目录>/sources/`，由 Git 忽略。课程网页由同一套 Vite 配置运行。
 
 发布版用 `npm run build` 生成到 `dist/`，可用 `npm run preview` 在本地的 `/music/` 子路径预览。GitHub Pages 在 `main` 有新提交时自动部署。[线上课程](https://wwl-ww.github.io/music/)
 
@@ -36,6 +36,15 @@ npm run dev
 | `content/books/genre-arrangement/` | 《图解乐风编曲入门》编曲基础、歌曲构成与十种乐风 |
 | `content/books/pop-techniques/` | 《POP金曲里技》八章、程序谱与制作试听 |
 | `content/shared/` | 共用的排版、主题、谱例组件与钢琴音源 |
+
+以下书目目前只存放本地原书资料。
+
+| 书目 | 资料目录 |
+| --- | --- |
+| 《音乐分析基础教程》 | `content/books/music-analysis/sources/` |
+| 《键盘和声学教程》 | `content/books/keyboard-harmony/sources/` |
+| 《即兴伴奏实用教程》 | `content/books/improvised-accompaniment/sources/` |
+| 《图解合成器音乐创作法》 | `content/books/synthesizer-composition/sources/` |
 
 ## 课程
 

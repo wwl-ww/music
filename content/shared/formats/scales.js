@@ -6,10 +6,10 @@ export const minorKeys = ['Ab', 'Eb', 'Bb', 'F', 'C', 'G', 'D', 'A', 'E', 'B', '
 const majorSteps = [0, 2, 4, 5, 7, 9, 11, 12];
 const minorSteps = [0, 2, 3, 5, 7, 8, 10, 12];
 const typeNames = { natural: '自然', harmonic: '和声', melodic: '旋律' };
-const pentatonicDegrees = [0, 1, 2, 4, 5];
-const pentatonicSteps = pentatonicDegrees.map(degree => majorSteps[degree]);
-const pentatonicModes = ['宫', '商', '角', '徵', '羽'];
-const sevenToneScales = {
+export const pentatonicDegrees = [0, 1, 2, 4, 5];
+export const pentatonicSteps = pentatonicDegrees.map(degree => majorSteps[degree]);
+export const pentatonicModes = ['宫', '商', '角', '徵', '羽'];
+export const sevenToneScales = {
   ya: { label: '雅乐', steps: [0, 2, 4, 6, 7, 9, 11] },
   qing: { label: '清乐', steps: naturalOffsets },
   yan: { label: '燕乐', steps: [0, 2, 4, 5, 7, 9, 10] }

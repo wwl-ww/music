@@ -1,7 +1,9 @@
 import ensembleSoundFont from '@coderline/alphatab/soundfont/sonivox.sf3?url';
+import { mountWindFingering } from '../../shared/formats/instrument-techniques.js';
 import { mountProgrammaticScore } from '../../shared/formats/programmatic-score.js';
 import { mountRangeKeyboards } from '../../shared/formats/range-keyboards.js';
 import { mountScore } from '../../shared/formats/score.js';
+import { diziFingering, diziHoleLabels, diziModes } from './instrument-technique-data.js';
 
 mountRangeKeyboards(document.getElementById('wind-range-keyboards'), document.getElementById('wind-range-data'), {
   firstOctave: 4,
@@ -9,38 +11,22 @@ mountRangeKeyboards(document.getElementById('wind-range-keyboards'), document.ge
   rangeLabel: '参考'
 });
 
-const tubeModes = {
-  sol: {
-    key: 'D',
-    pitches: [69, 71, 73, 74, 76, 78, 79, 81],
-    notes: 'A4 B4 C#5 D5 E5 F#5 G5 A5',
-    description: '筒音 A4 作 sol，第三孔 D5 作 do。C♯5、F♯5 属于 D 宫七声音列。'
-  },
-  re: {
-    key: 'G',
-    pitches: [69, 71, 72, 74, 76, 78, 79, 81],
-    notes: 'A4 B4 C5 D5 E5 F#5 G5 A5',
-    description: '筒音仍是 A4，在 G 宫七声音列里改唱 re，原来的 C♯5 换为 C5。'
-  },
-  do: {
-    key: 'A',
-    pitches: [69, 71, 73, 74, 76, 78, 80, 81],
-    notes: 'A4 B4 C#5 D5 E5 F#5 G#5 A5',
-    description: '筒音 A4 就是 do，A5 是它的高八度，G♯5 属于 A 宫七声音列。'
-  }
-};
+const fingering = mountWindFingering(document.getElementById('dizi-fingering'), diziHoleLabels);
 
 mountProgrammaticScore(document.getElementById('dizi-tube-tones'), {
   lowestPitch: 60,
   octaves: 2,
   soundFontUrl: ensembleSoundFont,
+  onPitchesChange: fingering.markPitches,
   build({ mode }) {
-    const { key, pitches, notes, description } = tubeModes[mode];
+    const { key, notes, description } = diziModes[mode];
+    const fingerings = diziFingering(mode);
+    fingering.update(fingerings);
     return {
       notes: `\\instrument 73 \\tempo 96 \\ks ${key} \\ts (4 4) :8 ${notes}`,
-      pitches,
+      pitches: fingerings.map(({ pitch }) => pitch),
       description,
-      summary: `${description} 谱与键盘均标实际音高，试听用长笛音色示意音高。`
+      summary: `${description} 试听用长笛音色示意音高。`
     };
   }
 });

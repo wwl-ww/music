@@ -15,8 +15,16 @@ const chordTypes = {
   augMajor7: ['增大七和弦', [0, 4, 8, 11]],
   minorMajor7: ['小大七和弦', [0, 3, 7, 11]]
 };
-const positions = ['原位', '第一转位', '第二转位', '第三转位'];
-const chordDegrees = ['根音', '三音', '五音', '七音'];
+export const chordPositions = ['原位', '第一转位', '第二转位', '第三转位'];
+export const chordBassRoles = ['根音', '三音', '五音', '七音'];
+
+function moveOctave(note, offset) {
+  return { ...note, pitch: note.pitch + 12 * offset, octave: note.octave + offset };
+}
+
+export function invertChordNotes(notes, inversion) {
+  return [...notes.slice(inversion), ...notes.slice(0, inversion).map(note => moveOctave(note, 1))];
+}
 
 export function hasSeventh(type) {
   return chordTypes[type][1].length === 4;
@@ -40,15 +48,9 @@ export function buildChord({ tonic, type, inversion }) {
   const [quality, steps] = chordTypes[type];
   const root = getTonic(tonic);
   const bass = Number(inversion);
-  const indices = steps.map((_, index) => (bass + index) % steps.length);
-  const top = indices.at(-1);
-  const highestPitch = root.tonicPitch + steps[top] + (top < bass ? 12 : 0);
-  const shift = highestPitch >= 84 ? -1 : 0;
-  const notes = indices.map(index => {
-    const octave = shift + Number(index < bass);
-    return spellNote(root, index * 2 + octave * 7, root.tonicPitch + steps[index] + octave * 12);
-  });
-  const summary = `${displayPitch(tonic)} ${quality} · ${positions[bass]} · 低音 ${displayPitch(notes[0].name)}（${chordDegrees[bass]}）`;
+  const voiced = invertChordNotes(steps.map((step, index) => spellNote(root, index * 2, root.tonicPitch + step)), bass);
+  const notes = voiced.at(-1).pitch >= 84 ? voiced.map(note => moveOctave(note, -1)) : voiced;
+  const summary = `${displayPitch(tonic)} ${quality} · ${chordPositions[bass]} · 低音 ${displayPitch(notes[0].name)}（${chordBassRoles[bass]}）`;
   return score([notes], summary);
 }
 

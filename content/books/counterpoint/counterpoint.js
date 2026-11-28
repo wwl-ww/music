@@ -5,6 +5,7 @@ import { chapterOneScores } from './chapter-one-scores.js';
 import { chaptersTwoToFourScores } from './chapters-two-to-four-scores.js';
 import { renderCounterpointAxis } from './counterpoint-axis.js';
 import { mountScoreDefinition } from './counterpoint-definitions.js';
+import { mountScoreRelations } from './counterpoint-relations.js';
 import { upperReviewScores } from './upper-review-scores.js';
 import { addedSequenceScores, combinationScores, sequenceDraft } from './counterpoint-combinations.js';
 
@@ -277,14 +278,15 @@ for (const demo of document.querySelectorAll('[data-counterpoint-score]')) {
   const figure = demo.querySelector('figure:not([data-counterpoint-axis])');
   const axis = demo.querySelector('[data-counterpoint-axis]');
   const voiceAudition = voiceAuditions[demo.id];
+  const showRelations = mountScoreRelations(demo, variants);
   let playback;
   let sample;
 
   function update() {
     const choice = Array.from(toolbar.querySelectorAll('select, input:checked'), control => control.value).join('-') || 'original';
     sample = variants[choice];
-    demo.dataset.variant = choice;
     showDefinition?.(choice);
+    showRelations(choice);
     cue.textContent = sample.cue;
     if (axis) renderCounterpointAxis(axis, sample.axis);
     const fullScore = notation(sample);

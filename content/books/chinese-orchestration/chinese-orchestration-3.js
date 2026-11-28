@@ -1,5 +1,7 @@
+import { mountStringSounds } from '../../shared/formats/instrument-techniques.js';
 import { pianoKeysMarkup } from '../../shared/formats/piano.js';
 import { mountRangeKeyboards } from '../../shared/formats/range-keyboards.js';
+import { guqinSoundExamples, zhengSoundExamples } from './instrument-technique-data.js';
 import { mountStringDemo, stringTrack } from './string-demos.js';
 
 mountRangeKeyboards(
@@ -16,6 +18,9 @@ zhengKeyboardRow.innerHTML = pianoKeysMarkup(
 );
 zhengKeyboardRow.querySelector('svg').setAttribute('preserveAspectRatio', 'none');
 zhengKeyboard.hidden = false;
+
+mountStringSounds(document.getElementById('zheng-string-sounds'), zhengSoundExamples);
+mountStringSounds(document.getElementById('guqin-string-sounds'), guqinSoundExamples);
 
 const pipa = phrase => stringTrack('琵琶', 105, phrase);
 mountStringDemo('pipa-articulation-demo', 84, [

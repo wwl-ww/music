@@ -21,6 +21,8 @@
   font-size: 0.82rem;
 }
 .counterpoint-steps .music-demo-cue { min-block-size: 3em; }
+.counterpoint-steps [data-voice-description] { min-block-size: 0; }
+.voice-relations-section > h4 { margin: 0.75rem 0.85rem 0; font-size: 0.92rem; }
 .music-demo-toolbar > .counterpoint-score-definition { inline-size: 100%; font-size: 0.95rem; }
 .counterpoint-score-controls { display: flex; flex-wrap: wrap; gap: 0.55rem 0.9rem; }
 @media (max-width: 30rem) {
@@ -30,37 +32,6 @@
 [data-counterpoint-score] .at-highlight [fill="#D3323E"] { fill: #d3323e; }
 .counterpoint-next { margin-block-start: 1rem; }
 .counterpoint-next a { display: inline-flex; align-items: center; gap: 0.45em; font-weight: 650; }
-
-.counterpoint-phrase-map {
-  display: grid;
-  grid-template-columns: max-content repeat(4, minmax(0, 1fr));
-  grid-template-rows: repeat(3, auto);
-  gap: 0.25rem;
-  align-items: center;
-  margin: 0.15rem 0.85rem 0.7rem;
-  color: var(--muted);
-  font-size: 0.82rem;
-  text-align: center;
-}
-
-.counterpoint-phrase-label { text-align: start; }
-.counterpoint-phrase-lower { grid-column: 1; grid-row: 3; }
-.counterpoint-phrase-map :is(.counterpoint-phrase-first, .counterpoint-phrase-second, .counterpoint-phrase-answer) {
-  padding: 0.2rem 0.35rem;
-  border: 1px solid var(--line);
-  border-radius: 0.25rem;
-  background: var(--tint);
-  color: var(--ink);
-}
-.counterpoint-phrase-first { grid-column: 2 / span 2; }
-.counterpoint-phrase-second { grid-column: 4 / span 2; }
-.counterpoint-phrase-map .counterpoint-phrase-answer {
-  grid-column: 2 / span 2;
-  grid-row: 3;
-  border-color: var(--accent);
-  color: var(--accent);
-}
-[data-variant="staggered"] .counterpoint-phrase-answer { grid-column-start: 3; }
 
 .counterpoint-axis-diagram {
   --axis-color: #a6293d;

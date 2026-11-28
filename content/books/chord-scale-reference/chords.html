@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>和弦速查｜和弦音阶速查宝典</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="./reference.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./reference.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="library-home" href="./index.html">和弦音阶速查宝典</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width reference-page" data-reference="chords">
+      <nav class="reference-nav" aria-label="本书目录">
+        <a href="./foundations.html">基础知识</a>
+        <a href="./chords.html" aria-current="page">和弦速查</a>
+        <a href="./scales.html">音阶速查</a>
+      </nav>
+      <h1>和弦速查</h1>
+      <p class="intro">选根音与和弦类型，或直接搜索 C♯m7、G7(♭9) 等代号。</p>
+      <noscript><p class="reference-notice">速查需要 JavaScript。<a href="./foundations.html">基础知识</a>可直接阅读。</p></noscript>
+      <form class="reference-filters">
+        <label for="reference-root">根音</label>
+        <select id="reference-root" name="root"></select>
+        <label for="reference-family">类别</label>
+        <select id="reference-family" name="family"><option value="">全部</option></select>
+        <label for="reference-query">搜索和弦</label>
+        <input id="reference-query" name="query" type="search" autocomplete="off" spellcheck="false" placeholder="如 C#m7、小七">
+      </form>
+      <div class="reference-workspace">
+        <section class="reference-results" aria-labelledby="reference-list-title">
+          <div class="reference-results-heading">
+            <h2 id="reference-list-title">和弦类型</h2>
+            <p data-reference-status role="status" hidden>没有匹配的条目。可以缩短关键字或选「全部」。</p>
+          </div>
+          <ul class="reference-list" data-reference-list></ul>
+        </section>
+        <section class="reference-detail" data-reference-result aria-labelledby="reference-title">
+          <div class="reference-detail-header">
+            <div>
+              <p class="reference-category" data-reference-category></p>
+              <h2 id="reference-title" data-reference-title></h2>
+              <p class="reference-category" data-reference-bass aria-live="polite" hidden></p>
+            </div>
+            <div class="reference-detail-actions">
+              <div class="reference-inversion" hidden>
+                <label for="reference-inversion">转位</label>
+                <select id="reference-inversion" name="inversion"></select>
+              </div>
+              <div data-reference-playback></div>
+            </div>
+          </div>
+          <dl class="reference-degrees" aria-label="由低到高的音级与音名" data-reference-notes></dl>
+          <figure class="reference-staff" data-reference-score></figure>
+          <figure class="reference-keyboard keyboard-example">
+            <figcaption>钢琴键位<span data-reference-key-legend></span></figcaption>
+            <div data-reference-keyboard></div>
+          </figure>
+          <p class="reference-note" data-reference-note hidden></p>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

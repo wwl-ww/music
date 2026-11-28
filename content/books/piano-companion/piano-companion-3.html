@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第三章 和声选配基础｜钢琴即兴伴奏宝典</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <script src="../../shared/themes.js"></script>
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./piano-companion.css">
+    <script type="module" src="./chapter-view.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">钢琴即兴伴奏宝典</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter" data-companion-chapter="3">
+      <h1>第三章 和声选配基础</h1>
+      <p class="intro">给旋律选和弦，先认出乐句哪里停顿、哪里结束，再判断哪些音真正支撑和声。一段伴奏的方向、密度与终止通常可以在弹开音型前确定。</p>
+
+      <section aria-labelledby="harmonic-functions">
+        <h2 id="harmonic-functions">和声功能及其基本进行规律</h2>
+        <p>主功能 T 提供稳定中心。下属功能 S 把音乐带离主区并准备下一段进行。属功能 D 借助趋向主音的导音形成明显张力。以 C 大调为例，C、F、G 分别是这三类的正三和弦。F 和 G 的根音分居 C 下方与上方的纯五度。</p>
+        <p><strong>T–S–D–T</strong> 是稳定、离开、加紧、回归的一条典型路线。实际句子可以从属区开头，也可以只用 T–D–T。G7 的 B 倾向升至 C，F 倾向降至 E，根音 G 回 C 把这两个方向归到同一个目标。A 小调里的 E7 以升高七级 G♯引向 A，具备对应的属功能。</p>
+      </section>
+
+      <section aria-labelledby="cadence-types">
+        <h2 id="cadence-types">和声终止式及其运用</h2>
+        <p>终止式用和弦的临时停顿或解决标出结构。乐句内部可以在属上停住，较完整的段落尾声常回到主和弦。两处用不同的落点，才能听见句法层次。</p>
+        <table class="lesson-table lesson-table-dense">
+          <caption>终止的落点与常见准备</caption>
+          <thead><tr><th scope="col">类别</th><th scope="col">常见走法</th><th scope="col">结构用途</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">半终止</th><td>T–D、S–D、ii–D、vi–D、DD–D；也可用 T–S</td><td>停在属功能的正格半终止留出后续预期。停在下属的变格半终止张力较缓。</td></tr>
+            <tr><th scope="row">全终止</th><td>D 或 D7–T；S–T；S–D7–T</td><td>属到主是正格，S–T 是变格。复式全终止由属前经过属回主。</td></tr>
+            <tr><th scope="row">补充终止</th><td>T–S–T、T–s–T 或 T–♭VI–T</td><td>先有一次收束，再添一个短尾声，重复确认主功能。</td></tr>
+            <tr><th scope="row">阻碍终止</th><td>D7–vi，也可到带六级音的其他和弦</td><td>导音可以解决，但低音改去预期主音以外的目标，乐段由此扩充。</td></tr>
+          </tbody>
+        </table>
+        <p>DD 是属的属，例如 C 大调的 D7 指向 G。ii、vi、DD 都能放在 D7 前面，属前材料因旋律和句法而异。主和弦第二转位若出现在终止处，记作 K<span class="fraction" aria-label="六四"><span>6</span><span>4</span></span>。它保留属低音，上面的六度、四度分别降到五度、三度。K 通常放在比后续属和弦更强的拍位，延长属功能准备。</p>
+        <div class="music-demo companion-demo" id="cadence-destinations" role="group" aria-labelledby="cadence-destinations-title" data-companion-demo>
+          <div class="music-demo-toolbar">
+            <h3 id="cadence-destinations-title">同一句尾的主终止、属停顿与阻碍</h3>
+            <div class="score-choice-buttons" data-writing-choices></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">属低音 G 在终点回到 C，旋律也落在主音上。</p>
+          <figure data-writing-score aria-label="同一句尾的主终止、属停顿与阻碍"></figure>
+        </div>
+        <div class="music-demo companion-demo" id="cadential-six-four" role="group" aria-labelledby="cadential-six-four-title" data-companion-demo>
+          <div class="music-demo-toolbar">
+            <h3 id="cadential-six-four-title">直接属七与终止四六</h3>
+            <div class="score-choice-buttons" data-writing-choices></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">第一拍已经给出属和弦的三音 B。</p>
+          <figure data-writing-score aria-label="直接属七与终止四六"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="nonchord-tones">
+        <h2 id="nonchord-tones">和声外音及其处理手法</h2>
+        <p>同一拍的旋律音可能属于当时的和弦，也可能只负责连接、装饰或延缓解决。判断外音时，要看它从哪里来、到哪里去，再看它落在强拍还是弱拍。</p>
+        <table class="lesson-table lesson-table-dense">
+          <caption>常用和声外音的来去</caption>
+          <thead><tr><th scope="col">类型</th><th scope="col">判断依据</th><th scope="col">在 C 和弦附近的示意</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">经过音</th><td>以级进连起两个不同的和弦音。</td><td>C–D–E 中的 D。</td></tr>
+            <tr><th scope="row">辅助音</th><td>从一个和弦音走到相邻音并回原音。</td><td>E–F–E 中的 F。</td></tr>
+            <tr><th scope="row">换音</th><td>连起两个不同的和弦音，一侧级进，另一侧跳进。</td><td>E–D–G 中的 D。</td></tr>
+            <tr><th scope="row">先现音</th><td>后一个和弦的音在前一个和弦末尾先出现。</td><td>G7 上先出现 C，随后进入 C 和弦。</td></tr>
+            <tr><th scope="row">延留音</th><td>前和弦的音延续到后和弦强位，再级进解决。</td><td>G7 的 F 延到 C 低音上，然后 F→E。</td></tr>
+            <tr><th scope="row">倚音</th><td>强位的外音缺少同音准备，一般级进解决。</td><td>C 和弦上的强位 D 下行到 C。</td></tr>
+          </tbody>
+        </table>
+        <p>短弱位的外音通常可以跨在原和弦上。遇到强位外音，选配常依据紧接的解决音。按这里的基础写法，外音与解决音应相邻。如果强位的长音直接跳走，先重新判断和弦或功能，避免把选配的冲突一律视为装饰。</p>
+        <div class="music-demo companion-demo" id="suspension-versus-restrike" role="group" aria-labelledby="suspension-versus-restrike-title" data-companion-demo>
+          <div class="music-demo-toolbar">
+            <h3 id="suspension-versus-restrike-title">同一 F→E 的延留与倚音</h3>
+            <div class="score-choice-buttons" data-writing-choices></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">F 从前一小节悬到新的 C 低音上，第一拍不再次触键。</p>
+          <figure data-writing-score aria-label="同一 F→E 的延留与倚音"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="chord-selection-principles">
+        <h2 id="chord-selection-principles">选择和弦的八个基本原则</h2>
+        <ol>
+          <li><strong>音的归属。</strong> 找小节内多数稳定音指向的和弦，先把短装饰音与和弦音分开。</li>
+          <li><strong>重音。</strong> 强拍、拍内强位与长音，通常比一闪而过的音更能说明和弦。</li>
+          <li><strong>功能走向。</strong> 选配怎样进入、离开主区。基础连接里，属和弦后的下属需要有清楚的动机。</li>
+          <li><strong>跳进。</strong> 同一小节内相隔较远的几个旋律音有时本就是一组分解和弦，先找共同的骨架。</li>
+          <li><strong>色彩。</strong> 多个和弦可托住同一个音时，可以保留基本功能，再改变和弦的明暗或紧张度。</li>
+          <li><strong>和声节奏。</strong> 决定和弦在多少拍后变化，旋律的一串短音可以共享一处和声。</li>
+          <li><strong>结构部位。</strong> 结尾常比段中更需要属的准备，即便同一旋律音也能用主和弦。</li>
+          <li><strong>和声力度。</strong> 选择和弦的远近、强弱，让情绪逐步撑起，或留给收束处最清楚的解决。</li>
+        </ol>
+        <p>多数音和强位若支持不同候选，句子处在开头、途中还是终点，往往成为最后的判断依据。色彩和力度的选择可以在基本走向成立后再细化。</p>
+      </section>
+
+      <section aria-labelledby="harmonic-rhythm-layout">
+        <h2 id="harmonic-rhythm-layout">和声节奏的安排原则与基本和声布局</h2>
+        <p>和声节奏是换和弦的频率。快而旋律繁密的乐句可以两小节甚至更久才换一次。较慢、长音较多的乐句可按照一小节或半小节变化，需要局部推进时也可缩到每拍一个。速度只是初步线索，和弦何时变化还取决于旋律与结构。</p>
+        <p>开头通常用主、属等正三和弦尽快建立调性，下属开头相对少见。短弱起可让旋律先单独出现。内部句尾可以停在 D，也可以用 DD–D 指向属区，若要保留开放感，优先考虑属三和弦。段落末用 D7–T 明确收束，必要时再接补充终止。</p>
+        <p>换和弦通常从强位开始。和弦由弱位提前且跨过下一强拍，就会产生和声切分，适合有意制造提前感的地方。基础编配可先保持段落支点清楚，再安排这种例外。D→S 也可以作为有意的反功能色彩，用前后的旋律走势与终止支撑。</p>
+        <div class="music-demo companion-demo" id="slow-fast-harmony" role="group" aria-labelledby="slow-fast-harmony-title" data-companion-demo>
+          <div class="music-demo-toolbar">
+            <h3 id="slow-fast-harmony-title">四小节旋律的两种换和弦密度</h3>
+            <div class="score-choice-buttons" data-writing-choices></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">伴奏在各小节开头换和弦，短音归入比较长的和声单位。</p>
+          <figure data-writing-score aria-label="四小节旋律的两种换和弦密度"></figure>
+        </div>
+      </section>
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./piano-companion-2.html" rel="prev"><span>上一章</span><strong>伴奏织体基础</strong></a>
+        <a href="./piano-companion-4.html" rel="next"><span>下一章</span><strong>大调基本功能和声的即兴伴奏</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 import { mountScore } from '../../shared/formats/score.js';
 import { mountScoreDefinition } from './counterpoint-definitions.js';
 import { learningScores } from './counterpoint-learning.js';
-import { mountVoiceRelations } from '../../shared/formats/voice-relations.js';
+import { mountScoreRelations } from './counterpoint-relations.js';
 
 const quarter = 2;
 const bar = 8;
@@ -211,6 +211,8 @@ function entryScore([first, second, third]) {
     })
   }));
   const links = [
+    { from: 'subject', to: 'answer', label: '第二个入口在第 2 小节唱答题 AT' },
+    { from: 'answer', to: 'returningSubject', label: '第 4 小节由第三个声部重现主题 T' },
     { from: 'subject', to: 'counterAnswer', label: '答题出现时，先入声部从 T 转入 CT₁' },
     { from: 'answer', to: 'firstCounter', label: '答题声部下次改唱 CT₁' },
     { from: 'counterAnswer', to: 'secondCounter', label: '先入声部在第三次入口处从 CT₁ 转入 CT₂' }
@@ -474,19 +476,7 @@ function mountExample(element) {
   const cue = element.querySelector('.music-demo-cue');
   const figure = element.querySelector('figure');
   const example = variants[initial.value];
-  const relations = element.querySelector('[data-entry-relations]');
-  const maps = new Map();
-  function showRelations(choice) {
-    if (!relations) return;
-    if (!maps.has(choice)) {
-      const map = document.createElement('div');
-      map.innerHTML = '<div class="timeline-frame" data-voice-timeline></div><output class="music-demo-cue" data-voice-description></output>';
-      relations.append(map);
-      mountVoiceRelations(map, variants[choice].relations);
-      maps.set(choice, map);
-    }
-    for (const [key, map] of maps) map.hidden = key !== choice;
-  }
+  const showRelations = mountScoreRelations(element, variants);
   const score = mountScore(figure, { notation: 'staff', tempo: example.tempo, notes: example.notes });
   showDefinition(initial.value);
   cue.textContent = example.description;

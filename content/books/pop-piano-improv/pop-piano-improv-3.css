@@ -1,0 +1,24 @@
+#lesson-8-rhythm .rhythm-part[data-type='attack']::after {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: 0.28rem;
+  width: 0.36rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.notation-sample .lesson-12-key-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+  gap: 0.5rem;
+}
+
+.lesson-12-key-list strong {
+  font-size: 0.85rem;
+}
+
+.lesson-12-keys {
+  margin-block-start: 0;
+}

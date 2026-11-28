@@ -1,0 +1,52 @@
+.practice-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1.25rem;
+  margin-block-start: 0.7rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.practice-meta [role="img"] { color: var(--accent); }
+
+.practice-notes {
+  max-width: var(--reading-width);
+  margin-block-start: 1.15rem;
+}
+
+.practice-lesson > :is(.practice-scores, .practice-extras) { margin-block-start: clamp(1.6rem, 4vw, 2.7rem); }
+
+.practice-lesson .practice-scroll-hint {
+  display: none;
+  margin-block-start: 0.25rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.practice-score { margin-block-start: 1rem; }
+.practice-score + .practice-score { margin-block-start: 1.4rem; }
+.practice-score figcaption { margin-block-end: 0.4rem; font-weight: 650; }
+
+.practice-score-scroll {
+  --practice-score-width: max(100%, 32rem);
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  border: 1px solid var(--line);
+  border-radius: 0.4rem;
+  background: white;
+}
+
+.practice-score-scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.practice-score-scroll img {
+  display: block;
+  /* Align staff spacing and the first ink position across source scans. */
+  width: calc(var(--practice-score-width) * var(--practice-image-scale, 1));
+  margin-inline-start: calc(var(--practice-score-width) * var(--practice-image-inset, 0));
+  height: auto;
+}
+
+@media (max-width: 35rem) {
+  .practice-lesson .practice-scroll-hint { display: block; }
+}

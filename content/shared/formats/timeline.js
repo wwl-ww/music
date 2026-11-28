@@ -1,6 +1,6 @@
 import { enableScrollFrame } from './readable-layout.js';
 
-export function mountTimeline(frame, { unitCount, unitName, lanes, onSelect }) {
+export function mountTimeline(frame, { unitCount, unitName, unitLabels, lanes, onSelect }) {
   const grid = document.createElement('div');
   grid.className = 'score-timeline';
   grid.style.setProperty('--timeline-units', unitCount);
@@ -25,7 +25,7 @@ export function mountTimeline(frame, { unitCount, unitName, lanes, onSelect }) {
     if (unitName) cell('span', 'timeline-label', unitName, 1, 1);
   }
   for (let index = 0; index < unitCount; index++) {
-    const tick = cell('span', 'timeline-unit', index + 1, 1, index + 2);
+    const tick = cell('span', 'timeline-unit', unitLabels?.[index] ?? index + 1, 1, index + 2);
     tick.setAttribute('aria-hidden', 'true');
     units.push(tick);
   }

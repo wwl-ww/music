@@ -181,7 +181,7 @@
         </table>
 
         <h3 id="line-combinations">线条的组合形式</h3>
-        <p>两条旋律可以同时收住，也可以一部收句时另一部仍在进行。同一段对位旋律晚进一小节，原来重合的句尾就会错开。</p>
+        <p>两条旋律可以同时收住，也可以一部收句时另一部仍在进行。同一段对位旋律晚进一小节，原来重合的句尾就会错开。声部关系图用空心圆标出参照材料，实心圆标出与它对应的部分。</p>
         <div class="music-demo counterpoint-steps" id="phrase-contrast" data-counterpoint-score>
           <div class="music-demo-toolbar">
             <h4>同起同落与起落交错</h4>
@@ -190,11 +190,7 @@
               <label><input type="radio" name="phrase-contrast-option" value="staggered"><span>错开一小节</span></label>
             </fieldset>
           </div>
-          <div class="counterpoint-phrase-map" aria-hidden="true">
-            <span class="counterpoint-phrase-label">小节</span><span>1</span><span>2</span><span>3</span><span>4</span>
-            <span class="counterpoint-phrase-label">指定旋律</span><span class="counterpoint-phrase-first">第一句</span><span class="counterpoint-phrase-second">第二句</span>
-            <span class="counterpoint-phrase-label counterpoint-phrase-lower">对位旋律</span><span class="counterpoint-phrase-answer">对位句</span>
-          </div>
+          <div data-score-relations role="group" aria-label="两条旋律的起句与收束位置" hidden></div>
           <figure aria-label="同起同落与起落交错"></figure>
           <output class="music-demo-cue"></output>
         </div>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第一章 和弦基础｜钢琴即兴伴奏宝典</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <script src="../../shared/themes.js"></script>
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./piano-companion.css">
+    <script type="module" src="./chapter-view.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">钢琴即兴伴奏宝典</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter" data-companion-chapter="1">
+      <h1>第一章 和弦基础</h1>
+      <p class="intro">同一个和弦可以换排列、换最低音，也可以让特定的音留在最上方。先认清哪些音决定和弦名称，再把和弦安置到双手能够平稳连接的位置。</p>
+
+      <section aria-labelledby="chord-basics">
+        <h2 id="chord-basics">和弦常识</h2>
+        <p>伴奏中常用的三和弦按三度叠成根音、三音、五音，在上方再叠三度可得到七音。根音表示构造和弦的起点。把 C–E–G 重排为 E–G–C，根音仍是 C，最低音已经变成 E。</p>
+        <table class="lesson-table lesson-table-dense">
+          <caption>三和弦与常用七和弦的音程构造</caption>
+          <thead><tr><th scope="col">类型</th><th scope="col">构造</th><th scope="col">以 C 为根音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">大三、小三</th><td>大三度＋小三度、小三度＋大三度</td><td>C–E–G、C–E♭–G</td></tr>
+            <tr><th scope="row">增三、减三</th><td>大三度＋大三度、小三度＋小三度</td><td>C–E–G♯、C–E♭–G♭</td></tr>
+            <tr><th scope="row">大七、大小七</th><td>大三和弦加大七度或小七度</td><td>C–E–G–B、C–E–G–B♭</td></tr>
+            <tr><th scope="row">小七</th><td>小三和弦加小七度</td><td>C–E♭–G–B♭</td></tr>
+            <tr><th scope="row">半减七、全减七</th><td>减三和弦加小七度或减七度</td><td>C–E♭–G♭–B♭、C–E♭–G♭–B𝄫</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo companion-demo" id="triad-character" role="group" aria-labelledby="triad-character-title" data-companion-demo>
+          <div class="music-demo-toolbar">
+            <h3 id="triad-character-title">固定 C 根音，改变三音和五音</h3>
+            <div class="score-choice-buttons" data-writing-choices></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">E 与 G 形成大三和弦，第二个音程为小三度。</p>
+          <figure data-writing-score aria-label="固定 C 根音，改变三音和五音"></figure>
+        </div>
+        <p>四个声部从高到低可称高音、中音、次中音、低音。高音和低音构成外声部，里面两条是内声部。伴奏常由右手弹上方三个音、左手弹低音。最高的和弦音叫<strong>旋律位置</strong>，可分别在根音、三音、五音或七音。最低的和弦音决定原位或转位，两处位置可以独立调整。</p>
+        <p>三和弦由三音、五音作低音，分别是第一、第二转位，简称六和弦、四六和弦。七和弦由三、五、七音作低音时，依次叫六五、四三、二和弦。上方三声部每对相邻音不超过四度时常用密集排列。把和弦音向外展开，使上方三声部超过八度，可形成开放排列。两种间距结合称混合排列。</p>
+        <div class="music-demo companion-demo" id="chord-positions" role="group" aria-labelledby="chord-positions-title" data-companion-demo>
+          <div class="music-demo-toolbar">
+            <h3 id="chord-positions-title">同一个 C 和弦的顶音、低音与排列</h3>
+            <div class="score-choice-buttons" data-writing-choices></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">左手 C3 决定原位，右手 G4 在最高处，是五音旋律位置。</p>
+          <figure data-writing-score aria-label="同一个 C 和弦的顶音、低音与排列"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="chord-notation">
+        <h2 id="chord-notation">常用和弦标记</h2>
+        <p>同一个 C 大调和弦 C–E–G，可写作 <strong>C</strong>、<strong>Ⅰ</strong> 或 <strong>T</strong>。字母代号直接告诉双手实际音名。级数相对主音，移调时可以保留级数再换算琴键。功能标记 T、S、D 表明主、下属、属三种趋向，小写 t、s 可提示小调里的小主、小下属和弦；和声小调的属仍可为大和弦。</p>
+        <p>字母代号以大写音名为根音，无后缀时是大三和弦。m 表示小三，aug 或 + 表示增三，dim 或 ° 表示减三。maj7、7、m7、m7(♭5)、dim7 依次表示大七、大小七、小七、半减七、全减七。maj9、9、m9 还含七音，add9 只表示加九音。sus4 用四音暂代三音，7sus4 还加小七音，6 是加六音。</p>
+        <p>C/E 与 C on E 都表示 E 在最低处，仍取 C 和弦的音。用级数记就是 Ⅰ<sup>6</sup>。这里的 6 读作转位。字母代号 C6 则读作加六音，构成为 C–E–G–A。三和弦第二转位与七和弦各转位，可在级数或功能字母旁写上下叠放的 <span class="fraction" aria-label="六四"><span>6</span><span>4</span></span>、<span class="fraction" aria-label="六五"><span>6</span><span>5</span></span>、<span class="fraction" aria-label="四三"><span>4</span><span>3</span></span>，或直接写 2。</p>
+        <details class="lesson-aside"><summary>调内级数与功能家族</summary><div class="lesson-aside-content">
+          <p>C 自然大调的 C、F、G 是 T、S、D，Dm、Em、Am、Bdim 分别在 ⅱ、ⅲ、ⅵ、ⅶ°。Dm 多向属区走，Em 可联系主与属，Am 可替代某些主功能，Bdim 含属和弦的导音 B。</p>
+          <p>A 和声小调的 Am、Dm、E 是 t、s、D，E 可加入 D 成 E7。其余 Bdim、Caug、F、G♯dim 分别在 ⅱ°、Ⅲ+、Ⅵ、ⅶ°。G♯dim7 的根音是升高的七级 G♯，级数表示和弦位置，具体作用还要结合它的前后关系。</p>
+        </div></details>
+        <div class="music-demo companion-demo" id="chord-symbol-six" role="group" aria-labelledby="chord-symbol-six-title" data-companion-demo>
+          <div class="music-demo-toolbar">
+            <h3 id="chord-symbol-six-title">第一转位与加六音</h3>
+            <div class="score-choice-buttons" data-writing-choices></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">最低音是 E，只包含 C、E、G 三种音。</p>
+          <figure data-writing-score aria-label="第一转位与加六音"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="chord-links">
+        <h2 id="chord-links">和弦的相互关系及和声连接法</h2>
+        <p>在同一调的自然三和弦之间，根音相隔四度或五度时有一个共同音，二度或七度关系没有共同音，三度或六度关系有两个共同音。把共同音留在原声部叫<strong>和声连接</strong>。无共同音，或有共同音却让它换声部时，上层各声部通过各自的旋律走向连接，称<strong>旋律连接</strong>。</p>
+        <p>整理上方三音时，能留则留，其余通常从邻近位置进入，尽量控制在三度以内。没有共同音的 F→G 可以让低音上行，上方三个音分别下行。教科书式四部连接还检查两声部的平行五度或八度，并避免同一声部生硬的增二度、增四度跳进。伴奏中层次越清楚，越容易听出哪一条线需要改。</p>
+        <div class="music-demo companion-demo" id="nearby-voicings" role="group" aria-labelledby="nearby-voicings-title" data-companion-demo>
+          <div class="music-demo-toolbar">
+            <h3 id="nearby-voicings-title">共同音保留与上方声部移动</h3>
+            <div class="score-choice-buttons" data-writing-choices></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">高音 G4 延续，另外两个音下行，低音换到 G2。</p>
+          <figure data-writing-score aria-label="共同音保留与上方声部移动"></figure>
+        </div>
+      </section>
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./index.html"><span>返回</span><strong>本书目录</strong></a>
+        <a href="./piano-companion-2.html" rel="next"><span>下一章</span><strong>伴奏织体基础</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

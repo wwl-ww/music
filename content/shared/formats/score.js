@@ -46,10 +46,10 @@ export function mountScore(figure, {
   notes, tempo = 90, notation = 'both', audio = true, onPitchesChange,
   onScoreLoaded, sectionNavigation, noteHighlights, voiceAudition,
   soundFontUrl = soundFont, preservePosition = false, notationVisible = true, onPlaybackPosition,
-  horizontal = false, showDynamics = true
+  horizontal = false, showDynamics = true, justifyLastSystem = true, useWorkers = true,
+  onPlaybackStateChange, onPlaybackError
 }) {
-  const staves = views[notation];
-  const tracks = staves.map((_, index) => index);
+  let staves = views[notation];
   let material = notes;
   let timbre = 'strings';
   let playingTimbre = 'piano';
@@ -57,6 +57,7 @@ export function mountScore(figure, {
   let auditionVoices = null;
   let reading;
   let requestedPosition;
+  let playWhenReady = false;
 
   figure.classList.add('score-example');
   figure.toggleAttribute('data-audio-only', !notationVisible);
@@ -85,12 +86,12 @@ export function mountScore(figure, {
   const timbreSelect = timbreControl.querySelector('select');
   const voiceSelect = figure.querySelector('.score-voice-audition select');
   const status = figure.querySelector('.score-status');
-  const updateScroll = notationVisible && enableScrollFrame(viewport, '谱例', { vertical: Boolean(sectionNavigation) });
+  let updateScroll = notationVisible && enableScrollFrame(viewport, '谱例', { vertical: Boolean(sectionNavigation) });
 
   const settings = new Settings();
   settings.fillFromJson({
-    core: { smuflFontSources: new Map([[FontFileFormat.Woff2, bravura]]), enableLazyLoading: false },
-    display: { padding: [5, 5, 7, 3], lastSystemPaddingBottom: 2, lastSystemFillThreshold: 0 },
+    core: { smuflFontSources: new Map([[FontFileFormat.Woff2, bravura]]), enableLazyLoading: false, useWorkers },
+    display: { padding: [5, 5, 7, 3], lastSystemPaddingBottom: 2, lastSystemFillThreshold: justifyLastSystem ? 0 : 1 },
     player: {
       enablePlayer: audio,
       scrollMode: 'off'
@@ -168,8 +169,10 @@ export function mountScore(figure, {
 
   const showError = (error) => {
     console.error(error);
+    playWhenReady = false;
     button.disabled = true;
     status.textContent = '谱例加载失败，请刷新页面重试。';
+    onPlaybackError?.();
   };
   api.error.on(showError);
   api.scoreLoaded.on(scoreModel => {
@@ -201,11 +204,8 @@ export function mountScore(figure, {
     }
   });
   api.renderFinished.on(() => {
-    if (updateScroll) updateScroll();
-    if (!audio || api.isReadyForPlayback) {
-      button.disabled = false;
-      status.textContent = '';
-    }
+    if (notationVisible && updateScroll) updateScroll();
+    if (!audio || api.isReadyForPlayback) readyToPlay();
   });
   api.postRenderFinished.on(() => {
     reading?.renderMarker();
@@ -221,8 +221,7 @@ export function mountScore(figure, {
     api.playerReady.on(() => {
       applyVoiceAudition();
       api.masterVolume = 0.65;
-      button.disabled = false;
-      status.textContent = '';
+      readyToPlay();
     });
 
     api.playerStateChanged.on(({ state }) => {
@@ -231,6 +230,7 @@ export function mountScore(figure, {
       figure.classList.toggle('playing', playing);
       button.toggleAttribute('data-playing', playing);
       button.setAttribute('aria-label', playing ? '停止播放' : '播放谱例');
+      onPlaybackStateChange?.(playing);
       reading?.setPlaying(playing);
       if (!playing) onPitchesChange?.([]);
       if (!playing) onPlaybackPosition?.(null);
@@ -254,31 +254,45 @@ export function mountScore(figure, {
         stopPlayback();
         return;
       }
-      startExclusivePlayback(api);
-      applyVoiceAudition();
-      reading?.preparePlayback();
-      if (sections && !sections.preparePlayback()) {
-        endExclusivePlayback(api);
-        status.textContent = '该段落在当前演奏路线中未出现。';
-        return;
-      }
-      if (requestedPosition) {
-        const bar = findRequestedBar();
-        const offset = bar && Math.round((bar.end - bar.start) * requestedPosition.fraction);
-        api.tickPosition = bar ? Math.min(bar.end - 1, bar.start + offset) : 0;
-      }
-      if (api.play()) {
-        requestedPosition = undefined;
-        status.textContent = '';
-      } else {
-        endExclusivePlayback(api);
-        status.textContent = '暂时无法播放，请再试一次。';
-      }
+      playScore();
     });
     timbreSelect.addEventListener('change', () => {
       timbre = timbreSelect.value;
       update('正在切换音色…');
     });
+  }
+
+  function readyToPlay() {
+    button.disabled = false;
+    status.textContent = '';
+    if (playWhenReady) {
+      playWhenReady = false;
+      playScore();
+    }
+  }
+
+  function playScore() {
+    startExclusivePlayback(api);
+    applyVoiceAudition();
+    reading?.preparePlayback();
+    if (sections && !sections.preparePlayback()) {
+      endExclusivePlayback(api);
+      status.textContent = '该段落在当前演奏路线中未出现。';
+      return;
+    }
+    if (requestedPosition) {
+      const bar = findRequestedBar();
+      const offset = bar && Math.round((bar.end - bar.start) * requestedPosition.fraction);
+      api.tickPosition = bar ? Math.min(bar.end - 1, bar.start + offset) : 0;
+    }
+    if (api.play()) {
+      requestedPosition = undefined;
+      status.textContent = '';
+    } else {
+      endExclusivePlayback(api);
+      status.textContent = '暂时无法播放，请再试一次。';
+      onPlaybackError?.();
+    }
   }
 
   function render() {
@@ -295,8 +309,9 @@ export function mountScore(figure, {
     }
     playingTimbre = fourPart && !material.scoreTracks ? timbre : 'piano';
     try {
-      const visibleTracks = material.scoreTracks?.flatMap((track, index) => track.playbackOnly ? [] : [index]) ?? tracks;
-      api.tex(encodeScore(material, staves, tempo, playingTimbre, splitVoices), visibleTracks);
+      const visibleTracks = material.scoreTracks?.flatMap((track, index) => track.playbackOnly ? [] : [index])
+        ?? staves.map((_, index) => index);
+      api.tex(encodeScore(material, staves, material.tempo ?? tempo, playingTimbre, splitVoices), visibleTracks);
     } catch (error) {
       showError(error);
     }
@@ -324,10 +339,31 @@ export function mountScore(figure, {
   return {
     ...(sections && { selectBars: sections.select, preserveSectionView: sections.preserveView }),
     ...(preservePosition && { getPosition, setPosition }),
+    play() {
+      if (!audio || activePlayer === api) return;
+      if (button.disabled) {
+        playWhenReady = true;
+        api.player?.output?.activate();
+      } else playScore();
+    },
     stop() {
+      playWhenReady = false;
       if (activePlayer === api) stopPlayback();
     },
-    setNotes(phrase) {
+    setNotes(phrase, { notation: nextNotation = notation, notationVisible: visible = notationVisible } = {}) {
+      notation = nextNotation;
+      staves = views[notation];
+      if (visible !== notationVisible) {
+        notationVisible = visible;
+        figure.toggleAttribute('data-audio-only', !visible);
+        viewport.toggleAttribute('inert', !visible);
+        if (visible) {
+          viewport.removeAttribute('aria-hidden');
+          updateScroll ||= enableScrollFrame(viewport, '谱例', { vertical: Boolean(sectionNavigation) });
+        } else {
+          viewport.setAttribute('aria-hidden', 'true');
+        }
+      }
       material = phrase;
       update('正在更新谱例…');
     }

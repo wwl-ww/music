@@ -1,0 +1,122 @@
+.format-library.page-width { width: min(72rem, calc(100% - clamp(2rem, 7vw, 6rem))); }
+.format-library { padding-block: clamp(1.75rem, 5vw, 3.5rem) 4rem; }
+.format-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1rem 2rem; }
+.format-header h1 { font: 700 clamp(2rem, 5vw, 3.45rem)/1.2 var(--title-font); }
+.format-header p { margin-block-start: 0.55rem; color: var(--muted); }
+.format-preview-control { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.8rem; }
+.format-layout {
+  display: grid;
+  align-items: start;
+  gap: clamp(1.2rem, 4vw, 3.25rem);
+  margin-block-start: clamp(1.25rem, 4vw, 2.75rem);
+}
+.format-index {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.25rem), 1fr));
+  gap: 0.2rem;
+  padding: 0.4rem;
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  border-radius: 0.6rem;
+}
+.format-index a {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 0.35rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+.format-index a:hover { color: var(--accent); background: var(--control-hover); }
+.format-index a[aria-current="location"] { color: var(--accent); background: var(--control-selected); font-weight: 700; }
+.format-showcase { min-width: 0; container: format-preview / inline-size; }
+.format-showcase[data-preview-width="narrow"] { width: min(100%, 20rem); }
+.format-showcase :is(section, article, figure, h2, h3, [id]) { scroll-margin-block-start: 1rem; }
+.format-family {
+  min-width: 0;
+  padding-block: clamp(1.35rem, 4vw, 2.3rem) clamp(2rem, 6vw, 3.65rem);
+  border-block-start: 1px solid var(--reading-rule);
+}
+.format-family h2 { font: 700 clamp(1.45rem, 4vw, 2.1rem)/1.3 var(--title-font); }
+.format-family-intro { margin-block: 0.4rem 1.1rem; color: var(--muted); }
+.format-branches { display: grid; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
+.format-branches li {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: 0.65rem;
+  padding: 0.55rem 0.75rem;
+  border-inline-start: 2px solid var(--reading-rule);
+  background: var(--sheet);
+}
+.format-branches li > a:first-child { font-weight: 700; }
+.format-library a { text-underline-offset: 0.18em; }
+.format-showcase a { color: var(--accent); }
+.format-items, .format-pair, .format-score-modes { display: grid; gap: 1.15rem; }
+.format-items { gap: clamp(1.45rem, 4vw, 2.35rem); margin-block-start: 1.35rem; }
+.format-item, .format-pair > *, .format-score-modes > * { min-width: 0; }
+.format-item > :is(h3, h4) { margin: 0; font: 700 1.15rem/1.45 var(--title-font); }
+.format-item > :is(h3, h4) + p, .format-reuse { margin-block: 0.2rem 0.65rem; color: var(--muted); }
+.format-reuse { font-size: 0.875rem; }
+.format-reuse a { font-weight: 650; }
+.format-item > :is(.lesson-aside, .lesson-callout, .classification-tree, .notation-sample, .interval-examples,
+  .keyboard-example, .keyboard-intervals, .music-demo, .programmatic-score, .score-example) {
+  max-width: 100%;
+  margin-block: 0.45rem;
+}
+.format-library .table-scroll > table { margin-block-start: 0.4rem; }
+.format-item > .notation-sample + .notation-sample { margin-block-start: 0.8rem; }
+.format-item .keyboard-example > svg { width: min(100%, 16rem); }
+.format-item .reading dl { grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr)); }
+.format-score-modes .score-example { margin-block: 0.4rem 0; }
+.score-state-samples { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 0.75rem; }
+.score-state-samples figcaption { font-weight: 700; padding-inline: 0.45rem; }
+.format-keyboard-staff { display: block; width: min(100%, 23rem); height: auto; }
+.format-keyboard-staff .inline-staff-lines { stroke: currentColor; fill: none; }
+.format-keyboard-staff .format-key-guide { stroke: var(--muted); stroke-dasharray: 2 2; }
+.format-keyboard-staff .format-key-note { fill: var(--ink); font: 14px "Lesson Music Symbols"; }
+.format-keyboard-staff .format-key-clef { fill: var(--ink); font: 30px "Lesson Music Symbols"; }
+.format-keyboard-staff .keyboard-label { font-size: 9px; }
+.format-theme-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.4rem;
+}
+.format-theme-list button {
+  min-width: 0;
+  min-height: 2.75rem;
+  padding-inline: 0.25rem;
+  border-color: var(--control-line);
+  color: var(--ink);
+  background: var(--sheet);
+}
+.format-theme-list button[aria-pressed="true"] { outline: 2px solid var(--accent); outline-offset: -3px; }
+.format-theme-list button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.format-theme-list button::before {
+  content: "";
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-inline-end: 0.35em;
+  vertical-align: 0.05em;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.format-control-row { display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-block: 0.4rem; }
+.format-control-row label { display: flex; align-items: center; flex-wrap: wrap; gap: 0.35rem; }
+.format-control-row output { color: var(--muted); }
+.format-stage { display: grid; align-content: start; gap: 0.5rem; }
+.format-stage > :is(figure, .staff-range-comparison) { margin: 0; }
+.format-course-links { display: grid; gap: 0.75rem; padding-inline-start: 1.3rem; }
+.format-course-links span { display: block; color: var(--muted); font-size: 0.875rem; }
+.format-library .interval-definitions { overflow: hidden; }
+
+@media (min-width: 61rem) {
+  .format-layout { grid-template-columns: 11rem minmax(0, 1fr); }
+  .format-index { position: sticky; inset-block-start: 1rem; grid-template-columns: 1fr; }
+}
+
+@container format-preview (min-width: 39rem) {
+  .format-pair, .format-score-modes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

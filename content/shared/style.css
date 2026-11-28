@@ -292,7 +292,6 @@ h1 {
 .book-summary strong:has(.book-volume) { text-wrap: wrap; }
 .book-volume { display: inline-block; margin-inline-start: 0.35em; color: var(--accent); font-size: 0.68em; }
 .book-summary > span { color: var(--muted); font-size: 0.855rem; line-height: 1.55; }
-.book-summary .book-chapter-count { color: var(--accent); font-size: 0.78rem; font-variant-numeric: tabular-nums; }
 .book-arrow { position: absolute; inset-block-end: 0.6rem; inset-inline-end: 0; color: var(--accent); }
 .book-cover {
   display: block;
@@ -315,19 +314,8 @@ h1 {
 @media (min-width: 63rem) {
   .book-index { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 }
+.book-index a:not(:has(.book-cover)) { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto; }
 .course-index a span { color: var(--muted); font-size: 0.85rem; font-weight: 400; font-variant-numeric: tabular-nums; }
-.sample-title { font-family: var(--title-font); font-size: clamp(1.375rem, 4vw, 1.85rem); }
-.course-sample { margin-top: clamp(2.75rem, 7vw, 5rem); border-top: 1px solid var(--line); padding-top: 1.65rem; }
-.sample-links { display: flex; flex-wrap: wrap; gap: 0.45rem 1.2rem; margin-block: 0.75rem 1.5rem; }
-.sample-links a { color: var(--accent); text-underline-offset: 0.2em; }
-.format-preview-control { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.8rem; margin-block-start: 1rem; }
-.format-showcase[data-preview-width="narrow"] { max-width: 20rem; }
-.format-showcase > .course-sample:first-child { margin-block-start: 1.75rem; }
-.format-showcase > .sample-title { margin-block-start: 2.5rem; }
-.format-long-staff { margin-block-start: 0.9rem; }
-.score-state-samples { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 0.75rem; }
-.score-state-samples figcaption { font-weight: 700; padding-inline: 0.45rem; }
-
 @media (min-width: 42rem) {
   .course-index { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 1.5rem; }
   .single-book-index { grid-template-columns: minmax(0, 1fr); }

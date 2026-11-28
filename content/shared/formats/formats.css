@@ -17,7 +17,7 @@
 .arrangement-example { display: grid; gap: 0.35rem; margin-block: 1rem; }
 .arrangement-grid {
   width: 100%;
-  min-width: calc(4.75rem + var(--arrangement-steps) * 0.83rem);
+  min-width: calc(4.75rem + var(--arrangement-steps) * var(--arrangement-step-width, 0.83rem));
   table-layout: fixed;
   border-collapse: separate;
   border-spacing: 0;
@@ -163,7 +163,6 @@
   .instrument-range text { font-size: 19px; }
   .instrument-range-open { r: 4px; }
 }
-.format-library .table-scroll > table { margin-block-start: 1.25rem; }
 .is-scrollable { padding-block-end: 0.35rem; }
 .score-notation { position: relative; min-width: 0; overflow-x: auto; background: var(--score-paper); }
 .score-example[data-audio-only] { position: relative; }
@@ -914,7 +913,7 @@
   border-start-end-radius: inherit;
   background: var(--tint);
 }
-.score-toolbar h3 { margin: 0; font: 700 1.12rem/1.4 var(--title-font); }
+.score-toolbar :is(h3, h4) { margin: 0; font: 700 1.12rem/1.4 var(--title-font); }
 .score-toolbar:has(.programmatic-score-heading) {
   gap: 0;
   padding: 0;
@@ -931,7 +930,7 @@
   background: var(--accent);
   color: var(--sheet);
 }
-.programmatic-score-heading h3 { font-size: clamp(1.12rem, 3.2vw, 1.42rem); }
+.programmatic-score-heading :is(h3, h4) { font-size: clamp(1.12rem, 3.2vw, 1.42rem); }
 .programmatic-score-heading .score-controls { flex: none; }
 .programmatic-score-heading .score-playback {
   display: flex;
@@ -1010,6 +1009,113 @@
 }
 .programmatic-score .keyboard-example figcaption { font-size: 0.875rem; }
 .programmatic-score .keyboard-example svg { width: min(100%, 25rem); margin-block-start: 0.35rem; }
+
+.instrument-technique {
+  margin: 1rem 0;
+  border: 1px solid var(--line);
+  border-radius: 0.3rem;
+  background: var(--sheet);
+  font-size: 0.9rem;
+}
+.instrument-technique figcaption {
+  padding: 0.55rem 0.8rem;
+  border-block-end: 1px solid var(--line);
+  font-weight: 700;
+}
+.programmatic-score .instrument-technique {
+  margin: 0;
+  border-width: 1px 0 0;
+  border-radius: 0;
+}
+.instrument-technique-note {
+  margin: 0;
+  padding: 0 0.8rem 0.75rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+.wind-fingering-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: start;
+  font-variant-numeric: tabular-nums;
+}
+.wind-fingering-table :is(th, td) {
+  padding: 0.32rem 0.55rem;
+  border-block-end: 1px solid var(--line);
+  text-align: start;
+}
+.wind-fingering-table thead { background: var(--tint); }
+.wind-fingering-table th small {
+  display: inline-block;
+  margin-inline-start: 0.25rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 400;
+}
+.wind-fingering-column { width: 52%; }
+.wind-fingering-column .wind-hole-set { display: grid; color: var(--muted); font-size: 0.75rem; }
+.wind-hole-set {
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1.25rem;
+  place-items: center;
+  vertical-align: middle;
+}
+.wind-hole-mark {
+  width: 0.7rem;
+  height: 0.7rem;
+  box-sizing: border-box;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  flex: none;
+}
+.wind-hole-mark[data-state="half"] { background: linear-gradient(90deg, currentColor 50%, transparent 50%); }
+.wind-hole-mark[data-state="closed"] { background: currentColor; }
+.wind-fingering-table tr[data-playing] {
+  background: var(--control-selected);
+  color: var(--accent);
+}
+.wind-fingering-table tr[data-playing] th { box-shadow: inset 0.18rem 0 currentColor; }
+.wind-hole-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.95rem;
+  margin: 0;
+  padding: 0.5rem 0.8rem;
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+.wind-hole-legend li { display: inline-flex; align-items: center; gap: 0.35rem; }
+.string-sounds { container-type: inline-size; }
+.string-sound-list { margin: 0; padding: 0; list-style: none; }
+.string-sound-list > li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 0.2rem 0.65rem;
+  padding: 0.58rem 0.8rem;
+}
+.string-sound-list > li + li { border-block-start: 1px solid var(--line); }
+.string-sound-list small { display: block; color: var(--muted); font-size: 0.78rem; }
+.string-sound-list p { grid-column: 1 / -1; margin: 0; line-height: 1.5; }
+.string-sound-pitches { text-align: end; }
+.string-sound-path {
+  display: inline-block;
+  padding: 0 0.35rem;
+  border-radius: 0.2rem;
+  background: var(--tint);
+  color: var(--accent);
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.string-sound-arrow { color: var(--muted); }
+@container (min-width: 34rem) {
+  .string-sound-list > li { grid-template-columns: minmax(10rem, 1fr) minmax(6rem, auto) minmax(0, 2fr); }
+  .string-sound-list p { grid-column: auto; align-self: center; padding-inline-start: 0.35rem; }
+  .string-sound-pitches { text-align: start; }
+}
 
 .interval-comparison { max-width: 40rem; margin-block: 1.25rem; }
 .interval-comparison figcaption { font-weight: 700; }
@@ -1381,7 +1487,7 @@ html:has(.score-reader[open]) { overflow: hidden; }
 }
 .score-reader[data-view="wide"] .score-render-surface { min-width: 42rem; }
 
-.voice-relation-arrows {
+.voice-relation-connections {
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1390,9 +1496,18 @@ html:has(.score-reader[open]) { overflow: hidden; }
   pointer-events: none;
   color: var(--muted);
 }
-.voice-relation-arrows > path { fill: none; stroke: currentColor; stroke-width: 1.15; }
-.voice-relation-arrows > path[data-related] { stroke: var(--accent); stroke-width: 1.7; }
-.voice-relation-arrows marker path { fill: currentColor; }
+.voice-relation-connections > g { color: var(--muted); }
+.voice-relation-connections > g[data-related] { color: var(--accent); }
+.voice-relation-connections > g > path { fill: none; stroke: currentColor; stroke-width: 1.15; }
+.voice-relation-connections > g[data-related] > path { stroke-width: 1.7; }
+.voice-relation-destination { fill: currentColor; }
+.voice-relation-origin { fill: var(--sheet); stroke: currentColor; stroke-width: 1.25; }
+@media (max-width: 36rem) {
+  .voice-relations-frame .timeline-event[data-long] {
+    padding-inline-start: 0.75rem;
+    text-align: start;
+  }
+}
 .classification-tree { margin-block: 1.25rem; }
 .classification-tree ul { margin: 0; padding: 0; list-style: none; }
 .classification-tree figcaption,

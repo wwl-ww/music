@@ -73,7 +73,7 @@ export function mountGenreArrangement(id, { tempo, harmony, tracks, summary, swi
         tracks: [melody, { name: '基础和声', program: 0, bars: baseChords }]
       },
       melody: {
-        summary: '十种编配共用的四小节旋律。此处采用本章速度。',
+        summary: '各版编配共用的四小节旋律。此处采用本章速度。',
         tracks: [melody]
       },
       ...(reference && {

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>钢琴伴奏型、和弦进行大全｜简谱与试听</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/formats/accompaniment-patterns.css">
+    <script src="../../shared/themes.js"></script>
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./progressions.css">
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+    <script type="module" src="./study.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">钢琴伴奏型与和弦进行</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter numbered-study">
+      <h1>钢琴伴奏型与和弦进行</h1>
+      <nav class="numbered-navigation" aria-label="素材与组合">
+        <a href="?mode=pattern" data-mode="pattern">节奏型</a>
+        <a href="?mode=harmony" data-mode="harmony">和弦进行</a>
+        <a href="?mode=combined" data-mode="combined">组合简谱</a>
+      </nav>
+      <section id="workbench" class="numbered-workbench" aria-labelledby="workbench-title">
+        <h2 id="workbench-title"></h2>
+        <form class="numbered-controls" aria-label="谱例设置">
+          <label>节奏型<select name="pattern"></select></label>
+          <label>和弦进行<select name="progression"></select></label>
+          <label>1 =<select name="key" aria-label="简谱调号"></select></label>
+        </form>
+        <div class="numbered-catalog" data-catalog hidden>
+          <nav class="numbered-categories" aria-label="素材类别"></nav>
+          <div class="numbered-catalog-heading">
+            <div><h3 data-category-title></h3><p data-category-description></p></div>
+            <div class="numbered-catalog-tools">
+              <div class="numbered-displays" role="group" aria-label="整组显示方式">
+                <button type="button" data-display="chart" aria-pressed="false">时值图</button>
+                <button type="button" data-display="numbered" aria-pressed="false">简谱</button>
+                <button type="button" data-display="staff" aria-pressed="false">五线谱</button>
+              </div>
+            </div>
+          </div>
+          <p class="numbered-caption numbered-audio-status" role="status" data-audio-status></p>
+          <div class="numbered-cards"></div>
+          <figure class="numbered-catalog-audio" aria-hidden="true" inert></figure>
+        </div>
+        <div class="numbered-example music-demo" data-combination hidden>
+          <div class="numbered-example-heading">
+            <div>
+              <h3 data-example-title></h3>
+              <p class="numbered-caption" data-example-caption></p>
+            </div>
+            <figure aria-label="谱例试听"></figure>
+          </div>
+        </div>
+        <p class="numbered-caption" data-composition-rule>组合沿用节奏型的拍号和速度。换和弦的位置按小节比例对应，双手按新和弦配音。</p>
+      </section>
+      <details id="reading-degrees" class="lesson-aside">
+        <summary>首调级数与两手简谱</summary>
+        <div class="lesson-aside-content">
+          <p>简谱的 <strong>1</strong> 由调号确定。以 1=G 为例，1–7 依次是 G、A、B、C、D、E、F♯。关系小调 e 小调共用这些音时以 6（E）为主音。和弦代号也沿用这套级数，<strong>6m</strong> 在 1=G 时是 Em，在 1=C 时是 Am。</p>
+          <table class="lesson-table">
+            <caption>同一组级数在两个调里的和弦</caption>
+            <thead><tr><th scope="col">级数</th><th scope="col">1=C</th><th scope="col">1=G</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">1</th><td>C</td><td>G</td></tr>
+              <tr><th scope="row">6m</th><td>Am</td><td>Em</td></tr>
+              <tr><th scope="row">5/7</th><td>G/B</td><td>D/F♯</td></tr>
+            </tbody>
+          </table>
+          <p>斜线前是和弦，斜线后是实际最低音。以 C 为 1 时，5/7 保留 G 和弦的 G–B–D，让 B 进入左手低音。简谱上下两行对应右手与左手。同一列叠起来的数字同时弹，数字上下的点表示高、低八度，减时线缩短时值，0 表示休止。</p>
+        </div>
+      </details>
+      <details id="combination-examples" class="lesson-aside" data-examples>
+        <summary>组合范例与歌曲伴奏手法</summary>
+        <div class="lesson-aside-content">
+          <h3>伴奏型与和弦进行的六种组合</h3>
+          <ol class="numbered-examples">
+            <li><a href="./study.html?pattern=1&amp;progression=6&amp;key=C#workbench">01 型 × 06 进行</a>。右手柱式四分反复，末拍拆出两个八分音。左手以长低音支撑换和弦，末拍也可前推。</li>
+            <li><a href="./study.html?pattern=14&amp;progression=12&amp;key=C#workbench">14 型 × 12 进行</a>。右手柱式带切分，左手交替摆放根音和其他和弦音。双手错开起音时，切分仍由长低音托住。</li>
+            <li><a href="./study.html?pattern=22&amp;progression=28&amp;key=C#workbench">22 型 × 28 进行</a>。柱式和弦和短弱位的插音形成摇摆感，低音可间插摇摆八分。这一手法可以从三拍原型调整到四拍，链接保留三拍的节奏轮廓。</li>
+            <li><a href="./study.html?pattern=29&amp;progression=62&amp;key=G#workbench">29 型 × 62 进行</a>。右手用密集的十六分音组成反复纹理，左手以长音留出层次。少量加九音能使上方分解有更多邻近音可选。</li>
+            <li><a href="./study.html?pattern=50&amp;progression=48&amp;key=C#workbench">50 型 × 48 进行</a>。双手错开密集细分，合成一个共同的节奏轮廓。上方以多音叠置增加色彩，下方维持换弦位置。</li>
+            <li><a href="./study.html?pattern=87&amp;progression=92&amp;key=F#workbench">87 型 × 92 进行</a>。八分起音与空位交替，右手可换到中高音区。左手在和弦交界处补一个过渡音，保持两手的脉冲。</li>
+          </ol>
+          <h3>歌曲伴奏里的六种安排</h3>
+          <p>以下链接是同类伴奏手法的小样。旋律进入后，伴奏的疏密和顶音位置需要跟着乐句调整。</p>
+          <ol class="numbered-examples">
+            <li><a href="./study.html?pattern=2&amp;progression=2&amp;key=Bb#workbench">02 型 × 02 进行</a>。斜线低音把相邻和弦连成一条线，右手八分分解为旋律留出持续空间。</li>
+            <li><a href="./study.html?pattern=6&amp;progression=7&amp;key=F#workbench">06 型 × 07 进行</a>。较长的和弦支撑旋律开头，下方的短音连接下一次换弦。旋律进入密集处时，低音仍保持前后的重心。</li>
+            <li><a href="./study.html?pattern=24&amp;progression=15&amp;key=A#workbench">24 型 × 15 进行</a>、<a href="./study.html?pattern=24&amp;progression=81&amp;key=A#workbench">同一伴奏型换 81 进行</a>。保持伴奏手法，比较两种和声路线在分句处的落点。</li>
+            <li><a href="./study.html?pattern=36&amp;progression=89&amp;key=A#workbench">36 型 × 89 进行</a>、<a href="./study.html?pattern=41&amp;progression=89&amp;key=A#workbench">41 型 × 89 进行</a>。固定进行，更换双手织体，使段落能在较疏的支撑和较密的流动之间过渡。</li>
+            <li><a href="./study.html?pattern=63&amp;progression=17&amp;key=Ab#workbench">63 型 × 17 进行</a>。用连续的右手短音串接上方，左手以较长的音稳定分句。和弦转位时，低音可以保持级进方向。</li>
+            <li><a href="./study.html?pattern=51&amp;progression=14&amp;key=Db#workbench">51 型 × 14 进行</a>、<a href="./study.html?pattern=70&amp;progression=14&amp;key=Db#workbench">70 型 × 14 进行</a>。较快的律动中，重复低音和反拍上方和弦可以相互接力，使节奏密度随着句子改变。</li>
+          </ol>
+        </div>
+      </details>
+    </main>
+  </body>
+</html>

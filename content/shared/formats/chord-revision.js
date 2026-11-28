@@ -48,7 +48,7 @@ function makeComparison(versions) {
   return { frame, rows };
 }
 
-export function mountChordRevision(container, { title, versions, tempo }) {
+export function mountChordRevision(container, { title, versions, tempo, showDynamics = true }) {
   container.classList.add('music-demo', 'chord-revision');
   const diagrams = container.querySelector('[data-revision-diagrams]');
   const panels = [...diagrams?.querySelectorAll('[data-revision-version]') ?? []];
@@ -74,7 +74,10 @@ export function mountChordRevision(container, { title, versions, tempo }) {
   let active;
   let player;
   function showScore() {
-    player ??= mountScore(figure, { notation: 'staff', tempo, notes: active.score, horizontal: matchMedia('(max-width: 36rem)').matches });
+    player ??= mountScore(figure, {
+      notation: 'staff', tempo, notes: active.score, showDynamics,
+      horizontal: matchMedia('(max-width: 36rem)').matches
+    });
   }
   const linkedIndex = versionFromAnchor();
   const initialIndex = linkedIndex >= 0 ? linkedIndex : Math.max(0, panelVersions.get(panels[0]) ?? 0);

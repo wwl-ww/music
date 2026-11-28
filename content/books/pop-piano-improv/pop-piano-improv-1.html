@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第一章 基础知识｜流行钢琴即兴演奏自学教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./pop-piano-improv-1.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">流行钢琴即兴</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第一章 基础知识</h1>
+      <p class="intro">钢琴即兴由键位、听觉与调性共同支撑。同一组键位可以构成一个和弦，同一条旋律也可以换到别的调。基础谱例把这两种关系落实到双手，再区分右手旋律、左手低音与填充音。</p>
+
+      <section aria-labelledby="lesson-1">
+        <h2 id="lesson-1">第 1 课 和弦</h2>
+        <h3>根音、三音与五音</h3>
+        <p>这课的和弦由三个或更多不同音名的音组成，多数按三度构建。C、E、G 合成 C 大三和弦。C 是构建和弦的<strong>根音</strong>，E、G 分别是向上数的三音和五音。即使把 C 移高到 E、G 的上方，和弦的根音仍是 C。流行谱的和弦符号先写根音，再用后缀表示结构。</p>
+        <table class="lesson-table">
+          <caption>四类三和弦 · 以 C 为根音</caption>
+          <thead><tr><th scope="col">类型</th><th scope="col">叠置顺序</th><th scope="col">和弦符号与构成音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">大三和弦</th><td>大三度＋小三度</td><td>C 或 Cmaj · C–E–G
+              <svg class="inline-staff" viewBox="0 0 62 40" role="img" aria-label="从下到上是 C4、E4、G4"><path class="inline-staff-lines" d="M2 8H60 M2 13H60 M2 18H60 M2 23H60 M2 28H60"/><path d="M38 33h12"/><text x="40" y="33">&#xE0A2;</text><text x="40" y="28">&#xE0A2;</text><text x="40" y="23">&#xE0A2;</text></svg></td></tr>
+            <tr><th scope="row">小三和弦</th><td>小三度＋大三度</td><td>Cm、Cmin 或 C− · C–E♭–G
+              <svg class="inline-staff" viewBox="0 0 62 40" role="img" aria-label="从下到上是 C4、降 E4、G4"><path class="inline-staff-lines" d="M2 8H60 M2 13H60 M2 18H60 M2 23H60 M2 28H60"/><path d="M38 33h12"/><text x="30" y="28">&#xE260;</text><text x="40" y="33">&#xE0A2;</text><text x="40" y="28">&#xE0A2;</text><text x="40" y="23">&#xE0A2;</text></svg></td></tr>
+            <tr><th scope="row">增三和弦</th><td>大三度＋大三度</td><td>Caug 或 C+ · C–E–G♯
+              <svg class="inline-staff" viewBox="0 0 62 40" role="img" aria-label="从下到上是 C4、E4、升 G4"><path class="inline-staff-lines" d="M2 8H60 M2 13H60 M2 18H60 M2 23H60 M2 28H60"/><path d="M38 33h12"/><text x="30" y="23">&#xE262;</text><text x="40" y="33">&#xE0A2;</text><text x="40" y="28">&#xE0A2;</text><text x="40" y="23">&#xE0A2;</text></svg></td></tr>
+            <tr><th scope="row">减三和弦</th><td>小三度＋小三度</td><td>Cdim 或 C° · C–E♭–G♭
+              <svg class="inline-staff" viewBox="0 0 62 40" role="img" aria-label="从下到上是 C4、降 E4、降 G4"><path class="inline-staff-lines" d="M2 8H60 M2 13H60 M2 18H60 M2 23H60 M2 28H60"/><path d="M38 33h12"/><text x="21" y="28">&#xE260;</text><text x="30" y="23">&#xE260;</text><text x="40" y="33">&#xE0A2;</text><text x="40" y="28">&#xE0A2;</text><text x="40" y="23">&#xE0A2;</text></svg></td></tr>
+          </tbody>
+        </table>
+
+        <h3>七和弦、九和弦与扩展音</h3>
+        <p>三和弦上再叠一个三度，得到七音。判断七和弦时，分别看下方三和弦的类型、根音到七音的音程。C7 有 C–E–G–B♭，Cmaj7 有 C–E–G–B。写作 CM7 时大写 M 指大七度，写作 Cm7 时小写 m 指小三和弦。</p>
+        <table class="lesson-table">
+          <caption>常用七和弦 · 以 C 为根音</caption>
+          <thead><tr><th scope="col">代表符号</th><th scope="col">类型</th><th scope="col">构成音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Cmaj7 · CM7</th><td>大七和弦</td><td>C–E–G–B</td></tr>
+            <tr><th scope="row">Cm7 · C−7</th><td>小七和弦</td><td>C–E♭–G–B♭</td></tr>
+            <tr><th scope="row">C7</th><td>属七和弦</td><td>C–E–G–B♭</td></tr>
+            <tr><th scope="row">Cm7(♭5) · Cø7</th><td>半减七和弦</td><td>C–E♭–G♭–B♭</td></tr>
+            <tr><th scope="row">Cdim7 · C°7</th><td>减七和弦</td><td>C–E♭–G♭–B𝄫</td></tr>
+          </tbody>
+        </table>
+        <p>Cmaj9、Cm9、C9 分别在 Cmaj7、Cm7、C7 上加入九音 D。九音下移一个八度，与根音形成二度。继续按三度叠置，C 上方的十一音是 F，十三音是 A。钢琴上声部多时可省略部分音，例如 C13 可以保留 C、E、B♭、A，让根音、三音、七音和十三音说明和弦性质。</p>
+        <p>混合后缀可以拆开读。Cm(maj7) 是小三和弦 C–E♭–G 加大七音 B。Cm(maj9) 再加入大九音 D。遇到 C°9，可从 C°7 的 C–E♭–G♭–B𝄫 出发，向上补 D。三音、五音、七音各自保留原符号的含义。</p>
+
+        <h3>挂留和弦与加九和弦</h3>
+        <p>Csus2 用 D 代替 C 的三音 E，Csus4 用 F 代替 E。C7sus4 同样替换三音，并保留七音 B♭。Cadd9 则是 C、E、G 加 D，三音 E 仍在。Cadd9 和 Cadd2 可以指同一组音，实际排列决定 D 落在什么音区。C9 还含七音 B♭。</p>
+
+        <h3>转位、斜线低音与排列</h3>
+        <p>C/E 的斜线左边仍是 C 和弦，右边指定低音 E。根音在最低处是原位，三音、五音、七音在最低处分别是第一、第二、第三转位。三和弦只有前两种转位。D/C 则让左手弹 C 作低音、右手弹 D–F♯–A，C 在这里是额外加入的低音。低音相同时，重排或重复其他和弦音只改变排列与音区。</p>
+        <figure class="interval-comparison" id="piano-voicing-keys">
+          <figcaption>C7/E 固定低音的两种键位</figcaption>
+          <div class="keyboard-degree"><ul>
+            <li><strong>上方音较低</strong><span>E3 · G3–B♭3–C4</span><div data-voicing="E3 G3 Bb3 C4"></div></li>
+            <li><strong>上方音换位</strong><span>E3 · C4–G4–B♭4</span><div data-voicing="E3 C4 G4 Bb4"></div></li>
+          </ul></div>
+        </figure>
+        <p>圆点所标的 E3 在两种排列里都是最低音，C 仍是和弦根音。增三和弦的键位每隔四个半音重复，C+/E 和 E+ 可能用同一组实际琴键。乐句若仍把 C 当作根音，C+/E 的写法更能说明来处。扩展音充当低音时，也可直接写斜线低音。</p>
+        <div class="music-demo" id="piano-chord-colors" aria-labelledby="piano-chord-colors-title">
+          <div class="music-demo-toolbar">
+            <h3 id="piano-chord-colors-title">钢琴双手的和弦结构对照</h3>
+            <div class="score-choice-buttons" data-writing-choices role="group" aria-label="和弦类别"></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">同一低音 C3 上，右手改变三音和五音，得到四种三和弦。</p>
+          <figure data-writing-score aria-label="钢琴双手的和弦结构对照"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="lesson-2">
+        <h2 id="lesson-2">第 2 课 固定调与首调</h2>
+        <p><strong>固定调</strong>给 C、D、E、F、G、A、B 固定地对应 do、re、mi、fa、sol、la、si，升降号随实际音高标出。<strong>首调</strong>以音在调中的位置决定唱名。例如 D 大调的 D、E、F♯ 在固定调中是 re、mi、升 fa，在首调中是 do、re、mi。唱名也可用数字 1 到 7 表示，在这个例子里两种记法分别写作 2、3、♯4 和 1、2、3。</p>
+        <p>换调时，固定调帮助找到实际按键，首调保留音阶关系。同一段主音回归的旋律移到 B♭ 大调，键盘从白键移到包含黑键的位置，首调仍能写成相同的音程形状。以 la 为小调主音的首调体系中，A 小调的 A 是 la，C 是 do。相同调号下，C 大调和 A 小调的唱名对应相同，乐句的中心与回归点不同。</p>
+        <div class="programmatic-score" id="piano-solfege" aria-labelledby="piano-solfege-title">
+          <div class="score-toolbar">
+            <h3 id="piano-solfege-title">同一轮廓的音名与唱名</h3>
+            <form class="score-choices"><fieldset class="score-directions">
+              <legend id="piano-solfege-key-label">调式与主音</legend>
+              <select name="key" aria-labelledby="piano-solfege-key-label">
+                <optgroup label="移动旋律的键位">
+                  <option value="c">C 大调</option><option value="d">D 大调</option>
+                  <option value="bb">B♭ 大调</option><option value="a">A 自然小调</option>
+                </optgroup>
+                <optgroup label="保留 F 起头的右手音高">
+                  <option value="f-fixed">F 大调 · F 作 do</option>
+                  <option value="c-fixed">C 大调 · F 作 fa</option>
+                </optgroup>
+              </select>
+            </fieldset></form>
+          </div>
+          <p class="music-demo-cue" data-generated-description aria-live="polite">C 大调中右手起于 C4，左手保持主音 C3。</p>
+          <figure data-generated-score aria-label="固定音名和相对唱名的钢琴旋律"></figure>
+          <div class="keyboard-example" data-generated-piano aria-label="钢琴实音键位"></div>
+        </div>
+        <table class="lesson-table" id="piano-singing-map">
+          <caption>右手第一小节逐音对照</caption>
+          <thead><tr><th scope="col">拍位 · 实音</th><th scope="col">固定调</th><th scope="col">首调</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">第 1 拍 · <span data-note>C4</span></th><td>do</td><td>do</td></tr>
+            <tr><th scope="row">第 2 拍 · <span data-note>D4</span></th><td>re</td><td>re</td></tr>
+            <tr><th scope="row">第 3 拍 · <span data-note>E4</span></th><td>mi</td><td>mi</td></tr>
+            <tr><th scope="row">第 4 拍 · <span data-note>G4</span></th><td>sol</td><td>sol</td></tr>
+          </tbody>
+        </table>
+        <aside class="lesson-callout"><p><strong>读键位用实际音名，移调和分析用相对位置。</strong> 乐句中出现转调时，由新主音重新确定首调唱名。调号相同仍要分辨乐句向哪个主音靠拢。</p></aside>
+      </section>
+
+      <section aria-labelledby="lesson-3">
+        <h2 id="lesson-3">第 3 课 唱谱与听音</h2>
+        <p>唱谱把谱面的音高和时值转成能在心里听到的声音，听音则从声音还原音高与节奏。即兴演奏需要这两个方向相接，脑中形成一句旋律后，才能把听到的级数关系移到手下。</p>
+        <h3>音阶、音程与节奏</h3>
+        <p>大调、自然小调、和声小调各有音阶骨架。A 自然小调回到 A 时，前一个 G 相隔全音。把 G 升成 G♯，回主音的最后一步缩至半音，形成和声小调的导音。音程辨认从出发音和方向开始。C4 上方的大三度是 E4，上方的小三度是 E♭4，同一个 C4 下方的大三度是 A♭3。节奏则分辨每个音的起点和持续时间，强拍、弱拍与休止的位置共同划出乐句。</p>
+        <table class="lesson-table" id="piano-scale-endings">
+          <caption>三种音阶回到主音的上行末段</caption>
+          <thead><tr><th scope="col">音阶</th><th scope="col">Ⅴ 级至主音</th><th scope="col">末两音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">C 自然大调</th><td>G4–A4–B4–C5</td><td>半音</td></tr>
+            <tr><th scope="row">A 自然小调</th><td>E4–F4–G4–A4</td><td>全音</td></tr>
+            <tr><th scope="row">A 和声小调</th><td>E4–F4–G♯4–A4</td><td>半音</td></tr>
+          </tbody>
+        </table>
+        <figure class="interval-comparison" id="piano-ear-intervals">
+          <figcaption>同一音上、下方的小三度</figcaption>
+          <div class="keyboard-degree"><ul>
+            <li><strong>向上小三度</strong><span>C4 → E♭4 · 3 个半音</span><div data-interval="12 15"></div></li>
+            <li><strong>向下小三度</strong><span>C4 → A3 · 3 个半音</span><div data-interval="12 9"></div></li>
+          </ul></div>
+        </figure>
+        <p>把出发音放在调里，方向和音程还能指向不同级数。例如同一个 E4 在 C 大调是 mi，向上到 sol 得到小三度，向下到 do 得到大三度。固定调保留实际音高，首调保留这组调内关系。</p>
+        <h3>旋律、多音与多声部</h3>
+        <p>旋律是连续进行的一条线，能分辨句首、重音和归结。双音或和弦在同一时刻发声，需要辨认音程关系，也可将整体音响与已知的和弦类型对应。双手合奏时，先区分右手主线、左手低音和填充音的作用。右手长音下出现的左手新起音属于伴奏层。</p>
+        <div class="music-demo" id="piano-listening-layers" aria-labelledby="piano-listening-layers-title">
+          <div class="music-demo-toolbar">
+            <h3 id="piano-listening-layers-title">同一乐句的旋律、低音与伴奏</h3>
+            <div class="score-choice-buttons" data-writing-choices role="group" aria-label="听辨层次"></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">右手的长短时值与休止勾出两小节的旋律。</p>
+          <figure data-writing-score aria-label="区分右手旋律和左手低音及填充音"></figure>
+        </div>
+        <figure class="notation-sample" id="piano-listening-grid">
+          <figcaption>完整织体的拍位与延音</figcaption>
+          <div data-listening-grid></div>
+          <p>横条覆盖持续的八分音符格。第一小节末拍的右手空白是休止，第二小节最后两拍的横条表示 C4 只起音一次。最末拍的新增起音来自左手填充。</p>
+        </figure>
+      </section>
+    </main>
+  </body>
+</html>

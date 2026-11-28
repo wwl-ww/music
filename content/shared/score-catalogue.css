@@ -12,6 +12,10 @@
   --book-cover: url("./assets/covers/music-theory.png");
   --book-color: #4262a5;
 }
+.score-directory [data-cover="chord-scale-reference"] {
+  --book-cover: url("./assets/covers/chord-scale-reference-series.webp");
+  --book-color: #315aa0;
+}
 .score-directory [data-cover="harmony-upper"] {
   --book-cover: url("./assets/covers/harmony-upper.png");
   --book-color: #ad5934;
@@ -67,6 +71,18 @@
 .score-directory [data-cover="reharmonization"] {
   --book-cover: url("./assets/covers/reharmonization-series.jpg");
   --book-color: #758044;
+}
+.score-directory [data-cover="pop-piano-improv"] {
+  --book-cover: url("./assets/covers/pop-piano-improv-series.webp");
+  --book-color: #8b3656;
+}
+.score-directory [data-cover="piano-companion"] {
+  --book-cover: url("./assets/covers/piano-companion-series.webp");
+  --book-color: #a04532;
+}
+.score-directory [data-cover="numbered-progressions"] {
+  --book-cover: url("./assets/covers/numbered-progressions-series.webp");
+  --book-color: #276b81;
 }
 
 .score-directory [data-cover="pop-techniques"] {
@@ -276,12 +292,6 @@
   font-size: 0.8125rem;
 }
 .score-query-clear:hover { --control-fill: var(--control-selected); }
-.score-filter-count {
-  grid-column: 1 / -1;
-  color: var(--muted);
-  font-size: 0.8125rem;
-  font-variant-numeric: tabular-nums;
-}
 .score-filter-empty {
   margin-block-start: 1rem;
   padding: 1rem;
@@ -306,15 +316,7 @@
   }
   .score-book-jumps,
   .score-book-group { display: grid; }
-  .score-filters:not([hidden]) { grid-template-columns: minmax(0, 1fr) auto; }
   .score-filters .score-book-select { display: none; }
-  .score-filter-count {
-    grid-column: auto;
-    align-self: end;
-    padding-inline: 0.2rem;
-    line-height: 48px;
-    white-space: nowrap;
-  }
 }
 
 .score-book {

@@ -3,6 +3,7 @@ import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { alphaTab } from '@coderline/alphatab-vite';
 import { defineConfig } from 'vite';
+import { numberedChords } from './tools/alphatab-numbered-chords.mjs';
 
 const contentRoot = fileURLToPath(new URL('./content/', import.meta.url));
 const dist = fileURLToPath(new URL('./dist/', import.meta.url));
@@ -35,7 +36,16 @@ export default defineConfig(({ command, isPreview }) => {
     root: staticSite ? contentRoot : undefined,
     base: staticSite ? '/music/' : '/',
     publicDir: false,
+    html: {
+      additionalAssetSources: {
+        a: {
+          srcAttributes: ['href'],
+          filter: ({ attributes }) => Object.hasOwn(attributes, 'data-image-link')
+        }
+      }
+    },
     plugins: [
+      numberedChords(),
       alphaTab({ assetOutputDir: false }),
       {
         name: 'course-entry-redirects',

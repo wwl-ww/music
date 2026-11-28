@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>音程、和弦与音阶基础｜和弦音阶速查宝典</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./reference.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+    <script type="module" src="./foundations.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">和弦音阶速查宝典</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>音程、和弦与音阶基础</h1>
+      <p class="intro">同一个琴键可以写成 F♯ 或 G♭。音名决定它相对于起点是几度，半音距离决定音程性质。和弦查找从根音出发，音阶查找从主音出发，两者都用相对于起点的级数表示构成音。</p>
+
+      <section aria-labelledby="intervals">
+        <h2 id="intervals">音程的度数、性质与音名</h2>
+        <p><strong>度数</strong>按字母音名计算，起点和终点都计入。例如 C–D 与 C–D♭ 都是二度，因为两个端点的字母仍是 C 和 D。<strong>性质</strong>按半音距离区分，C–D 是两个半音的大二度，C–D♭ 是一个半音的小二度。在十二平均律中，两个相邻的琴键相隔一个半音，两个半音合成一个全音。</p>
+        <p>C–F♯ 是增四度，C–G♭ 是减五度。它们的上方音落在同一个键，两种拼法分别表明四度和五度。升、降记号随字母音名而定，例如 G♭ 的纯五度为 D♭，大三度为 B♭。</p>
+        <figure class="foundation-diagram" id="enharmonic-intervals">
+          <figcaption>增四度与减五度的谱面和琴键</figcaption>
+          <div class="foundation-diagram-grid">
+            <div>
+              <strong>增四度 · C–F♯</strong>
+              <svg class="inline-staff voice-leading-staff" viewBox="0 13 94 42" role="img" aria-label="下方 C 在下加一线上，上方 F 带升号">
+                <path class="inline-staff-lines" d="M4 22H90 M4 27H90 M4 32H90 M4 37H90 M4 42H90 M48 47H65"/>
+                <text x="7" y="37">&#xE050;</text><text x="53" y="47">&#xE0A2;</text>
+                <text x="43" y="39.5">&#xE262;</text><text x="53" y="39.5">&#xE0A2;</text>
+              </svg>
+            </div>
+            <div>
+              <strong>减五度 · C–G♭</strong>
+              <svg class="inline-staff voice-leading-staff" viewBox="0 13 94 42" role="img" aria-label="下方 C 在下加一线上，上方 G 带降号">
+                <path class="inline-staff-lines" d="M4 22H90 M4 27H90 M4 32H90 M4 37H90 M4 42H90 M48 47H65"/>
+                <text x="7" y="37">&#xE050;</text><text x="53" y="47">&#xE0A2;</text>
+                <text x="43" y="37">&#xE260;</text><text x="53" y="37">&#xE0A2;</text>
+              </svg>
+            </div>
+          </div>
+          <div class="keyboard-example foundation-keyboard" data-enharmonic-keys></div>
+          <p>圆点标出 C，菱形标出 F♯ 与 G♭ 共用的黑键。两种音程都跨六个半音。</p>
+        </figure>
+        <table class="lesson-table">
+          <caption>同一度数扩张一个半音时的性质变化</caption>
+          <thead><tr><th scope="col">音程度数</th><th scope="col">由窄到宽</th><th scope="col">以 C 起算</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">一、四、五、八度</th><td>减 → 纯 → 增</td><td>C–F♭ → C–F → C–F♯</td></tr>
+            <tr><th scope="row">二、三、六、七度</th><td>减 → 小 → 大 → 增</td><td>C–E𝄫 → C–E♭ → C–E → C–E♯</td></tr>
+          </tbody>
+        </table>
+        <p>缩写 P 表示纯，m 表示小，M 表示大，A 表示增，D 或 d 表示减。P1 是同度，P8 是纯八度。上行和下行的音程度数与性质采用同一套规则。下表列出从所选起音上行时的音名。</p>
+        <div class="music-demo interval-reference" id="interval-reference" data-interval-reference>
+          <div class="interval-reference-header">
+            <h3 id="interval-reference-title">常用上行音程</h3>
+            <label>起音 <select data-interval-start><option value="C">C</option></select></label>
+          </div>
+          <table class="lesson-table interval-table" aria-labelledby="interval-reference-title">
+            <thead><tr><th scope="col">音程</th><th scope="col">半音数</th><th scope="col">上方音</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">纯一度 <span class="interval-code">P1</span></th><td class="interval-distance"><span class="interval-count">0</span></td><td><span data-interval-upper="0">C</span></td></tr>
+              <tr><th scope="row">小二度 <span class="interval-code">m2</span></th><td class="interval-distance"><span class="interval-count">1</span></td><td><span data-interval-upper="1">D♭</span></td></tr>
+              <tr><th scope="row">大二度 <span class="interval-code">M2</span></th><td class="interval-distance"><span class="interval-count">2</span></td><td><span data-interval-upper="1">D</span></td></tr>
+              <tr><th scope="row">小三度 <span class="interval-code">m3</span></th><td class="interval-distance"><span class="interval-count">3</span></td><td><span data-interval-upper="2">E♭</span></td></tr>
+              <tr><th scope="row">大三度 <span class="interval-code">M3</span></th><td class="interval-distance"><span class="interval-count">4</span></td><td><span data-interval-upper="2">E</span></td></tr>
+              <tr><th scope="row">纯四度 <span class="interval-code">P4</span></th><td class="interval-distance"><span class="interval-count">5</span></td><td><span data-interval-upper="3">F</span></td></tr>
+              <tr class="interval-equivalent"><th scope="row">增四度 <span class="interval-code">A4</span></th><td class="interval-distance"><span class="interval-count">6</span></td><td><span data-interval-upper="3">F♯</span></td></tr>
+              <tr class="interval-equivalent"><th scope="row">减五度 <span class="interval-code">d5</span></th><td class="interval-distance"><span class="interval-count">6</span></td><td><span data-interval-upper="4">G♭</span></td></tr>
+              <tr><th scope="row">纯五度 <span class="interval-code">P5</span></th><td class="interval-distance"><span class="interval-count">7</span></td><td><span data-interval-upper="4">G</span></td></tr>
+              <tr><th scope="row">小六度 <span class="interval-code">m6</span></th><td class="interval-distance"><span class="interval-count">8</span></td><td><span data-interval-upper="5">A♭</span></td></tr>
+              <tr><th scope="row">大六度 <span class="interval-code">M6</span></th><td class="interval-distance"><span class="interval-count">9</span></td><td><span data-interval-upper="5">A</span></td></tr>
+              <tr><th scope="row">小七度 <span class="interval-code">m7</span></th><td class="interval-distance"><span class="interval-count">10</span></td><td><span data-interval-upper="6">B♭</span></td></tr>
+              <tr><th scope="row">大七度 <span class="interval-code">M7</span></th><td class="interval-distance"><span class="interval-count">11</span></td><td><span data-interval-upper="6">B</span></td></tr>
+              <tr><th scope="row">纯八度 <span class="interval-code">P8</span></th><td class="interval-distance"><span class="interval-count">12</span></td><td><span data-interval-upper="7">C</span> <small class="interval-octave">高八度</small></td></tr>
+            </tbody>
+          </table>
+          <figure class="keyboard-example interval-keyboard" id="interval-keyboard" hidden>
+            <figcaption><output data-interval-key-caption aria-live="polite"></output></figcaption>
+            <div data-interval-keys></div>
+            <p>圆点为起音，菱形为上方音。</p>
+          </figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="chord-foundations">
+        <h2 id="chord-foundations">和弦骨架与构成级数</h2>
+        <p><strong>根音</strong>是计算和弦各音位置的起点。构成级数以同根大调音阶为参照，例如以 C 为根音时，1、3、5、7 分别是 C、E、G、B。♭3 表示把同根大调的 3 降低一个半音，所以 C 的 ♭3 是 E♭，D 的 ♭3 是 F，后者由 D 大调的 F♯ 降低一个半音得到。</p>
+        <p>基本三和弦沿 1、3、5 叠两个三度，七和弦再加入一个七音。判断三和弦性质时比较相邻构成音，判断七音性质时从根音量到七音。例如 C–E–G 的两个相邻音程分别是大三度和小三度，C–B 则是大七度。
+          <svg class="inline-staff" style="--inline-notation-width: 3em" viewBox="0 3 46 34" role="img" aria-label="C 大七和弦的四个音 C、E、G、B 三度叠置">
+            <path class="inline-staff-lines" d="M1 7H45 M1 12H45 M1 17H45 M1 22H45 M1 27H45 M15 32H32"/>
+            <text x="18" y="32">&#xE0A2;</text><text x="18" y="27">&#xE0A2;</text><text x="18" y="22">&#xE0A2;</text><text x="18" y="17">&#xE0A2;</text>
+          </svg>
+        </p>
+        <table class="lesson-table lesson-table-dense">
+          <caption>常见三和弦与七和弦</caption>
+          <thead><tr><th scope="col">名称</th><th scope="col">构成级数</th><th scope="col">以 C 为根音的符号</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">大三和弦</th><td>1 3 5</td><td>C、Cmaj</td></tr>
+            <tr><th scope="row">小三和弦</th><td>1 ♭3 5</td><td>Cm、Cmin、C−</td></tr>
+            <tr><th scope="row">减三和弦</th><td>1 ♭3 ♭5</td><td>Cdim、C°</td></tr>
+            <tr><th scope="row">增三和弦</th><td>1 3 ♯5</td><td>Caug、C+</td></tr>
+            <tr><th scope="row">大七和弦</th><td>1 3 5 7</td><td>Cmaj7、CM7、C△7</td></tr>
+            <tr><th scope="row">属七和弦（大小七）</th><td>1 3 5 ♭7</td><td>C7</td></tr>
+            <tr><th scope="row">小七和弦</th><td>1 ♭3 5 ♭7</td><td>Cm7、Cmin7、C−7</td></tr>
+            <tr><th scope="row">小大七和弦</th><td>1 ♭3 5 7</td><td>Cm(maj7)、CmM7</td></tr>
+            <tr><th scope="row">减七和弦</th><td>1 ♭3 ♭5 𝄫7</td><td>Cdim7、C°7</td></tr>
+            <tr><th scope="row">半减七和弦（小七降五）</th><td>1 ♭3 ♭5 ♭7</td><td>Cm7(♭5)、Cø7</td></tr>
+            <tr><th scope="row">大七升五和弦</th><td>1 3 ♯5 7</td><td>Cmaj7(♯5)、C△7(♯5)</td></tr>
+          </tbody>
+        </table>
+        <p>Cdim7 的七音写作 B𝄫，Cm7(♭5) 的七音写作 B♭。前者与 A 等音，但七音仍以 B 为字母，和弦的三度叠置关系也随之清楚。</p>
+
+        <h3>挂留和弦与六和弦</h3>
+        <p>挂四用根音上方的纯四度取代三音，挂二用大二度取代三音。符号里的 7 还要求一个小七度音。例如 Csus4 由 C、F、G 构成，C7sus4 再加 B♭。在同一个 C 和弦上，F 可以下行到 E，也可以作为挂留和弦的持续音。</p>
+        <figure class="voice-leading-panel voice-leading-phrase foundation-diagram" id="sus-resolution">
+          <figcaption>Csus4 到 C 的声部走向</figcaption>
+          <svg class="inline-staff voice-leading-staff" viewBox="0 0 170 76" style="--voice-leading-width: 240px" role="img" aria-label="C 与 G 保持，F 下行半音到 E">
+            <text class="voice-leading-chord-name" x="51" y="13">Csus4</text><text class="voice-leading-chord-name" x="122" y="13">C</text>
+            <path class="inline-staff-lines" d="M6 22H164 M6 27H164 M6 32H164 M6 37H164 M6 42H164 M43 47H60 M114 47H131"/>
+            <text x="9" y="37">&#xE050;</text>
+            <path class="foundation-held" d="M60 37H114 M60 47H114"/>
+            <path class="voice-leading-connector" d="M60 39.5L114 42 M110 39.5L114 42 110 44.5"/>
+            <text x="47" y="37">&#xE0A2;</text><text class="voice-leading-change" x="47" y="39.5">&#xE0A2;</text><text x="47" y="47">&#xE0A2;</text>
+            <text x="118" y="37">&#xE0A2;</text><text class="voice-leading-change" x="118" y="42">&#xE0A2;</text><text x="118" y="47">&#xE0A2;</text>
+            <text class="voice-leading-note-name" x="51" y="68">F</text><text class="voice-leading-note-name" x="122" y="68">E</text>
+          </svg>
+        </figure>
+        <p>流行和爵士和弦符号中的 <strong>6</strong> 表示加入根音上方的大六度。C6 与 Cm6 都加 A，它们的区别在于 E 与 E♭。传统和声用语中的「六和弦」也可指三和弦第一转位，其低音为三音。</p>
+        <table class="lesson-table">
+          <caption>挂留与加六的构成</caption>
+          <thead><tr><th scope="col">符号</th><th scope="col">构成级数</th><th scope="col">构成音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Csus4</th><td>1 4 5</td><td>C F G</td></tr>
+            <tr><th scope="row">Csus2</th><td>1 2 5</td><td>C D G</td></tr>
+            <tr><th scope="row">C7sus4</th><td>1 4 5 ♭7</td><td>C F G B♭</td></tr>
+            <tr><th scope="row">C7sus2</th><td>1 2 5 ♭7</td><td>C D G B♭</td></tr>
+            <tr><th scope="row">C6</th><td>1 3 5 6</td><td>C E G A</td></tr>
+            <tr><th scope="row">Cm6</th><td>1 ♭3 5 6</td><td>C E♭ G A</td></tr>
+          </tbody>
+        </table>
+
+        <h3>扩展音、加音与省略</h3>
+        <p>从大调音阶的 2、4、6 各升高一个八度，分别得到 9、11、13。添加这些音或其升降形式，可以在原来的骨架上增加张力。以 C 为根音，♭9、9、♯9 对应 D♭、D、D♯，11、♯11 对应 F、F♯，♭13、13 对应 A♭、A。♯11 与 ♭5、♭13 与 ♯5 在十二平均律中分别等音，符号仍标示各音的作用与拼写。</p>
+        <div class="music-demo score-comparison" id="added-or-extended">
+          <div class="music-demo-toolbar">
+            <h4>Cadd9 与 C9 的骨架</h4>
+            <div class="score-comparison-actions">
+              <div data-comparison-playback></div>
+              <div class="score-choice-buttons" data-comparison-choices role="group" aria-label="试听和弦"></div>
+            </div>
+          </div>
+          <p class="music-demo-cue" data-comparison-description></p>
+          <div class="score-comparison-panes">
+            <div class="score-comparison-pane" data-comparison-pane><h5 data-version-title></h5><figure></figure></div>
+            <div class="score-comparison-pane" data-comparison-pane><h5 data-version-title></h5><figure></figure></div>
+          </div>
+        </div>
+        <table class="lesson-table">
+          <caption>以 C 为根音的扩展和弦示例</caption>
+          <thead><tr><th scope="col">符号</th><th scope="col">构成级数</th><th scope="col">骨架与附加音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Cadd9（也见 Cadd2）</th><td>1 3 5 9</td><td>大三和弦，加 D</td></tr>
+            <tr><th scope="row">C6/9（也写 C6(9)）</th><td>1 3 5 6 9</td><td>C6，加 D</td></tr>
+            <tr><th scope="row">C9</th><td>1 3 5 ♭7 9</td><td>C7，加 D</td></tr>
+            <tr><th scope="row">C7(♯11)</th><td>1 3 5 ♭7 ♯11</td><td>C7，加 F♯</td></tr>
+            <tr><th scope="row">C7(♭9, ♯11)</th><td>1 3 5 ♭7 ♭9 ♯11</td><td>C7，加 D♭、F♯</td></tr>
+            <tr><th scope="row">Cm7(♭13, ♭5)</th><td>1 ♭3 ♭5 ♭7 ♭13</td><td>Cm7 的五音降为 G♭，再加 A♭</td></tr>
+          </tbody>
+        </table>
+        <p>几种符号可以表达同一组变化，如 C7(♭9, ♯11) 也写作 C7(♭9/♯11)。括号内的斜杠分隔变化级数，和弦符号末尾的斜杠后接音名时用于指定低音。自然延伸可简写为最高级数，如 C7 加 9 和 11 写作 C11，Cmaj7 加 9、11、13 可以写作 Cmaj13。</p>
+        <p>和弦符号说明构成与关键色彩，具体发声随配器、旋律和低音而定。十一和弦可省五音、九音，十三和弦也常省十一音。Cmaj13 可以用 C、E、B、A 演奏，保留三音、七音和十三音。明确要求省去某个音时可写 <strong>no</strong> 或 <strong>omit</strong>，如 C9(no 5) 与 C9(omit 5) 都省去 G。</p>
+        <details class="lesson-aside">
+          <summary>不同和弦骨架的扩展音示例</summary>
+          <div class="lesson-aside-content">
+            <p>同一个扩展级数能与不同骨架结合。例如 Cmaj7(♯11) 在大七骨架上加 F♯，C7(♯11) 则保留属七的 B♭。下表列出几种典型的搭配，具体取舍由旋律与和声语境决定。</p>
+            <table class="lesson-table">
+              <caption>不同骨架的扩展级数</caption>
+              <thead><tr><th scope="col">骨架</th><th scope="col">示例级数</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">大三、小三、挂四</th><td>9</td></tr>
+                <tr><th scope="row">增三、大六</th><td>9、♯11</td></tr>
+                <tr><th scope="row">小六</th><td>9、11</td></tr>
+                <tr><th scope="row">减三、减七、半减七</th><td>9、11、♭13</td></tr>
+                <tr><th scope="row">大七</th><td>9、♯11、13</td></tr>
+                <tr><th scope="row">属七、属七升五</th><td>♭9、9、♯9、♯11、♭13、13</td></tr>
+                <tr><th scope="row">属七降五</th><td>♭9、9、♯9、♭13、13</td></tr>
+                <tr><th scope="row">小七</th><td>♭9、9、11、♭13、13</td></tr>
+                <tr><th scope="row">小大七</th><td>9、11、13</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+
+        <h3>斜杠和弦、转位与复合和弦</h3>
+        <p><strong>斜杠和弦</strong>写作「上方和弦/最低音」。当最低音属于上方和弦时，低音是根音、三音、五音或七音，分别对应原位、第一转位、第二转位或第三转位。Cmaj7/E 将 E 放在最下面，是 Cmaj7 的第一转位。</p>
+        <p>斜杠也可把较复杂的音组写成一个容易辨认的上方和弦加低音。F/D 把 F 大三和弦放在 D 上，实际响出 D、F、A、C，与 Dm7 构成相同。D7/A♭ 以 A♭ 为最低音，上方 D、F♯、A、C 可以在语境中理解为 A♭7(♭9, ♯11) 的配声，省去五音 E♭，上方的 F♯、A 等音对应 G♭、B𝄫。</p>
+        <p><strong>复合和弦</strong>用横线分上下两层，每层各写一个和弦。<span class="fraction" role="img" aria-label="上方 B 减三和弦，下方 C 大三和弦"><span aria-hidden="true">B°</span><span aria-hidden="true">C</span></span> 将 C、E、G 放在下层，B、D、F 放在上层，可以表达 Cmaj11 的完整六音构成。也可叠加两组关系更远的和弦形成紧张色彩，例如
+          <span class="fraction" role="img" aria-label="上方 G 属七和弦，下方 E 大七升五和弦"><span aria-hidden="true">G7</span><span aria-hidden="true">Emaj7(♯5)</span></span>。用水平线表达两个和弦的叠置，用斜杠和音名指定单个低音。</p>
+        <p><a href="./chords.html">打开和弦速查</a></p>
+      </section>
+
+      <section aria-labelledby="scale-foundations">
+        <h2 id="scale-foundations">大调、小调与自然调式</h2>
+        <p><strong>主音</strong>是音阶的中心，高八度的主音可记作 8。自然大调的相邻音程依次为<strong>全、全、半、全、全、全、半</strong>。以 C 开始可得 C、D、E、F、G、A、B、C。其他音阶的 ♭3、♯4 等级数可以相对于同主音的自然大调来理解。</p>
+        <table class="lesson-table">
+          <caption>以 C 为主音的三种小调形态</caption>
+          <thead><tr><th scope="col">类型</th><th scope="col">上行级数</th><th scope="col">改变的音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">自然小调</th><td>1 2 ♭3 4 5 ♭6 ♭7 8</td><td>同主音大调的 E、A、B 降为 E♭、A♭、B♭</td></tr>
+            <tr><th scope="row">和声小调</th><td>1 2 ♭3 4 5 ♭6 7 8</td><td>自然小调的 B♭ 升回 B，可作导音</td></tr>
+            <tr><th scope="row">旋律小调（上行）</th><td>1 2 ♭3 4 5 6 7 8</td><td>自然小调的 A♭、B♭ 升回 A、B</td></tr>
+          </tbody>
+        </table>
+        <p>古典旋律小调下行常回到自然小调的音列，C 旋律小调向下为 C、B♭、A♭、G、F、E♭、D、C。爵士语境常将旋律小调的上行音集用于两个方向。</p>
+        <figure class="foundation-diagram" id="minor-keyboards">
+          <figcaption>C 小调三种形态的琴键对照</figcaption>
+          <div class="foundation-diagram-grid foundation-key-trio">
+            <div><strong>自然小调</strong><span>A♭、B♭</span><div class="keyboard-example foundation-keyboard" data-foundation-scale="aeolian"></div></div>
+            <div><strong>和声小调</strong><span>A♭、B</span><div class="keyboard-example foundation-keyboard" data-foundation-scale="harmonic-minor" data-compare-with="aeolian"></div></div>
+            <div><strong>旋律小调上行</strong><span>A、B</span><div class="keyboard-example foundation-keyboard" data-foundation-scale="melodic-minor" data-compare-with="aeolian"></div></div>
+          </div>
+          <p>菱形标出与自然小调不同的音。三种形态的前五级相同。</p>
+        </figure>
+        <p><strong>关系大小调</strong>共用调号。大调的第 6 级是关系自然小调的主音，因此 C 大调与 A 小调共用七个白键音，E 大调与 C♯ 小调也互为关系调。相同的音集以不同的音作中心，句尾落点和和声重心随之改变。</p>
+
+        <h3>同一大调音列的七种调式</h3>
+        <p>选大调中的不同音为主音，按原来的顺序绕到该音的高八度，便得到七种自然调式，常沿用教会调式的名称。它们也常用于爵士。以下各行共用 C 大调音集，级数则以各行自己的主音为 1，参照该主音的大调填写。</p>
+        <table class="lesson-table lesson-table-dense">
+          <caption>C 大调音集的七种调式</caption>
+          <thead><tr><th scope="col">调式</th><th scope="col">主音</th><th scope="col">相对于同主音大调的级数</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">伊奥尼亚（自然大调）</th><td>C</td><td>1 2 3 4 5 6 7 8</td></tr>
+            <tr><th scope="row">多利亚</th><td>D</td><td>1 2 ♭3 4 5 6 ♭7 8</td></tr>
+            <tr><th scope="row">弗里几亚</th><td>E</td><td>1 ♭2 ♭3 4 5 ♭6 ♭7 8</td></tr>
+            <tr><th scope="row">利底亚</th><td>F</td><td>1 2 3 ♯4 5 6 7 8</td></tr>
+            <tr><th scope="row">混合利底亚</th><td>G</td><td>1 2 3 4 5 6 ♭7 8</td></tr>
+            <tr><th scope="row">爱奥尼亚（自然小调）</th><td>A</td><td>1 2 ♭3 4 5 ♭6 ♭7 8</td></tr>
+            <tr><th scope="row">洛克里亚</th><td>B</td><td>1 ♭2 ♭3 4 ♭5 ♭6 ♭7 8</td></tr>
+          </tbody>
+        </table>
+        <p>多利亚可从自然小调的角度理解，保留 ♭3 和 ♭7，让第六级升高半音。D 多利亚的 B 是自然六级，D 自然小调相应位置是 B♭。利底亚的大三度与升四度、混合利底亚的大三度与降七度，也能帮助区分两种大调色彩。</p>
+      </section>
+
+      <section aria-labelledby="pentatonic-blues">
+        <h2 id="pentatonic-blues">五声音阶与布鲁斯音阶</h2>
+        <p>大调五声从自然大调去掉 4、7。小调五声从自然小调去掉 2、♭6。两者各有五个音级。布鲁斯的常见六音音阶在五声基础上加入蓝音，小调布鲁斯加 ♭5，大调布鲁斯加 ♭3。以 C 为主音时，前者在 F 与 G 之间加 G♭，后者在 D 与 E 之间加 E♭。</p>
+        <table class="lesson-table">
+          <caption>以 C 为主音的五声与布鲁斯音阶</caption>
+          <thead><tr><th scope="col">类型</th><th scope="col">构成级数</th><th scope="col">构成音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">大调五声</th><td>1 2 3 5 6</td><td>C D E G A</td></tr>
+            <tr><th scope="row">小调五声</th><td>1 ♭3 4 5 ♭7</td><td>C E♭ F G B♭</td></tr>
+            <tr><th scope="row">大调布鲁斯</th><td>1 2 ♭3 3 5 6</td><td>C D E♭ E G A</td></tr>
+            <tr><th scope="row">小调布鲁斯</th><td>1 ♭3 4 ♭5 5 ♭7</td><td>C E♭ F G♭ G B♭</td></tr>
+          </tbody>
+        </table>
+        <p>布鲁斯源于美国非裔音乐传统，对爵士和流行音乐影响深远。键盘音阶将蓝音落在固定的半音位置，演唱与推弦还可以在相邻音高之间滑动，形成布鲁斯句法里的音色与语气。</p>
+        <p><a href="./scales.html">打开音阶速查</a></p>
+      </section>
+      <section aria-labelledby="pentatonic-modes">
+        <h2 id="pentatonic-modes">中国五声与日本五声音阶</h2>
+        <h3>宫音、主音与五声调式</h3>
+        <p>C、D、E、G、A 五个音依次是宫、商、角、徵、羽。固定这组音并更换主音，得到同宫的五种调式。例如 C 宫系统的羽调式以 A 为主音，宫音仍是 C。若固定 C 作主音，C 宫与 C 羽的音列则会不同。</p>
+        <div class="programmatic-score foundation-mode-score" id="five-modes-comparison">
+          <div class="score-toolbar">
+            <h4>宫商角徵羽的同宫与同主音对照</h4>
+            <form class="score-options">
+              <label>参照
+                <select name="relationship">
+                  <option value="same-gong">同宫 · C 宫音列</option>
+                  <option value="same-tonic">同主音 · C</option>
+                </select>
+              </label>
+              <label>调式
+                <select name="mode">
+                  <option value="pentatonic-gong">宫</option>
+                  <option value="pentatonic-shang" selected>商</option>
+                  <option value="pentatonic-jue">角</option>
+                  <option value="pentatonic-zhi">徵</option>
+                  <option value="pentatonic-yu">羽</option>
+                </select>
+              </label>
+            </form>
+          </div>
+          <p class="music-demo-cue" data-generated-description aria-live="polite"></p>
+          <figure data-generated-score></figure>
+          <figure class="keyboard-example">
+            <figcaption>圆点为主音。宫音与主音不同时，用菱形标出宫音。</figcaption>
+            <div data-generated-piano></div>
+          </figure>
+        </div>
+        <p><a href="./scales.html?family=中国五声调式">中国五声调式速查</a> · <a href="./scales.html?family=中国七声调式">雅乐、清乐与燕乐调式速查</a></p>
+        <h3>都节音阶与琉球音阶</h3>
+        <p>这两种示例都保留 C、F、G。都节音阶在 C–F 和 G–高音 C 的四度框架内分别用 D♭、A♭，琉球音阶则用 E、B。琴键按十二平均律呈现，传统演奏还涉及调弦与乐句落音。</p>
+        <figure class="foundation-diagram" id="japanese-pentatonic">
+          <figcaption>同主音的都节与琉球音阶</figcaption>
+          <div class="foundation-diagram-grid">
+            <div><strong>都节音阶</strong><span>C　D♭　F　G　A♭</span><div class="keyboard-example foundation-keyboard" data-foundation-scale="miyakobushi"></div></div>
+            <div><strong>琉球音阶</strong><span>C　E　F　G　B</span><div class="keyboard-example foundation-keyboard" data-foundation-scale="ryukyu"></div></div>
+          </div>
+        </figure>
+        <p><a href="./scales.html?family=日本五声音阶">日本五声音阶速查</a></p>
+      </section>
+    </main>
+  </body>
+</html>

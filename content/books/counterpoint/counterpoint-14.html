@@ -73,6 +73,11 @@
             <dd data-analysis-description></dd>
           </dl>
           <p class="music-demo-cue analysis-status" data-analysis-status role="status"></p>
+          <div class="voice-relations-section" id="modal-invention-relations" data-counterpoint-relation role="group" aria-label="第 1–10 小节的主题、对题及倒影">
+            <h4>第 1–10 小节的主题、对题及倒影</h4>
+            <div class="timeline-frame" data-voice-timeline></div>
+            <output class="music-demo-cue" data-voice-description></output>
+          </div>
           <figure data-analysis-score aria-label="小创意曲原谱，标出主题、固定对题及其倒影"></figure>
         </div>
       </section>
@@ -126,6 +131,7 @@
             <p>本谱的 T₁ 用起音较密的短句，T₂ 用几处明显的长音。只看哪条线在上，容易漏掉换过位置的主题。切换到「取 T₁ 作插段」时，短句开始在不同高度出现，下面接唱原来的短句，暂时让两个主题分开。后面可以把长句加回来。另一个插段也可用 T₂ 或两句的结合，顺势走回主调。</p>
             <div class="music-demo" id="two-theme-roles" data-counterpoint="two-theme-roles">
               <div class="music-demo-toolbar"><h3>双主题结合与单一动机插段</h3><label>段落 <select><option value="first">双主题原位</option><option value="swapped">双主题换位</option><option value="episode">取 T₁ 作插段</option></select></label></div>
+              <div data-score-relations role="group" aria-label="双主题换位与单动机插段" hidden></div>
               <figure aria-label="双主题结合与单一动机插段"></figure>
               <output class="music-demo-cue"></output>
             </div>

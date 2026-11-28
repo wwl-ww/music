@@ -5,7 +5,7 @@ import { enableScrollFrame } from '../../shared/formats/readable-layout.js';
 const toolbar = document.querySelector('.range-atlas-header');
 const family = toolbar.querySelector('select');
 const search = toolbar.querySelector('input[type="search"]');
-const count = toolbar.querySelector('[data-range-count]');
+const empty = toolbar.querySelector('[data-range-empty]');
 const links = [...toolbar.querySelectorAll('a')];
 const panels = new Map(links.map(link => [link.hash.slice(1), document.querySelector(link.hash)]));
 const tablePanel = panels.get('range-table');
@@ -107,9 +107,7 @@ function showView() {
     entries: group.entries.filter(entry => entry.keywords.includes(query) &&
       (selection === 'all' || selection === group.id || (selection === 'common' && entry.common)))
   }));
-  const visibleCount = matching.reduce((total, group) => total + group.entries.length, 0);
-  const description = visibleCount ? `${visibleCount} 条乐器及型号` : '没有匹配的乐器';
-  if (count.textContent !== description) count.textContent = description;
+  empty.hidden = matching.some(group => group.entries.length > 0);
   fullStaff.hidden = selection !== 'all' || Boolean(query);
 
   if (active !== tablePanel) {

@@ -4,7 +4,6 @@ const rail = layout.querySelector('.score-book-jumps');
 const bookSelect = form.elements.namedItem('book');
 const search = form.elements.namedItem('query');
 const clear = form.querySelector('.score-query-clear');
-const count = layout.querySelector('.score-filter-count');
 const empty = layout.querySelector('.score-filter-empty');
 
 const normalize = text => text.normalize('NFKC').toLowerCase();
@@ -58,22 +57,20 @@ function filterURL(book = bookSelect.value) {
 
 function filter() {
   const terms = normalize(search.value).trim().split(/\s+/).filter(Boolean);
-  let matches = 0;
+  let hasMatches = false;
   for (const { id, section, groups, parts } of books) {
     const selected = !bookSelect.value || bookSelect.value === id;
-    let bookMatches = 0;
+    let hasBookMatches = false;
     for (const { group, items } of groups) {
-      let groupMatches = 0;
       for (const { item, text } of items) {
         item.hidden = !selected || !terms.every(term => text.includes(term));
-        if (!item.hidden) groupMatches++;
       }
-      group.hidden = !groupMatches;
-      bookMatches += groupMatches;
+      group.hidden = !items.some(({ item }) => !item.hidden);
+      hasBookMatches ||= !group.hidden;
     }
     for (const part of parts) part.hidden = !part.querySelector('.course-group:not([hidden])');
-    section.hidden = !bookMatches;
-    matches += bookMatches;
+    section.hidden = !hasBookMatches;
+    hasMatches ||= hasBookMatches;
   }
   for (const link of filters) {
     const { scoreBook } = link.dataset;
@@ -82,9 +79,7 @@ function filter() {
     else link.removeAttribute('aria-current');
   }
   clear.hidden = !search.value;
-  empty.hidden = matches > 0;
-  count.hidden = !matches;
-  count.textContent = `${matches} 个谱例`;
+  empty.hidden = hasMatches;
 }
 
 function restore() {

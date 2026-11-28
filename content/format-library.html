@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="./shared/style.css">
     <link rel="stylesheet" href="./shared/themes.css">
     <link rel="stylesheet" href="./shared/formats/formats.css">
+    <link rel="stylesheet" href="./shared/formats/accompaniment-patterns.css">
+    <link rel="stylesheet" href="./books/counterpoint/counterpoint-learning.css">
+    <link rel="stylesheet" href="./books/songwriting/songwriting-reference.css">
+    <link rel="stylesheet" href="./books/orchestration/orchestration.css">
+    <link rel="stylesheet" href="./format-library.css">
     <script src="./shared/themes.js"></script>
     <script type="module" src="./shared/chapter-layout.js"></script>
   </head>
@@ -33,308 +38,807 @@
       </div>
     </header>
     <main class="page-width format-library">
-      <h1>格式样板</h1>
-      <div class="format-preview-control">
-        <label for="preview-width">预览宽度</label>
-        <select id="preview-width">
-          <option value="current">随窗口</option>
-          <option value="narrow">窄屏 · 320 像素</option>
-        </select>
-      </div>
-      <nav class="sample-links" aria-label="样板目录">
-        <a href="#sample-title">可播放谱</a>
-        <a href="#static-samples">表格与静态谱</a>
-        <a href="#keyboard-example">键盘图</a>
-        <a href="#fretboard-samples">弦乐器指板图</a>
-        <a href="#analysis-samples">曲式与声部关系</a>
-        <a href="#comparison-samples">对照与写作</a>
-        <a href="#control-samples">控件与状态</a>
-      </nav>
-      <div class="format-showcase">
-      <section class="course-sample" aria-labelledby="sample-title">
-      <h2 class="sample-title" id="sample-title">五线谱与简谱</h2>
-      <p class="intro">五线谱用音符在谱表上的位置表示音高。简谱用数字表示音级，并用数字上下的圆点区分八度。这里以 C 为 1，两行谱记录同一段旋律。</p>
-
-      <figure id="melody-example" aria-label="四小节旋律的五线谱与简谱对照"></figure>
-
-      <p class="sample-links"><a href="./books/music-theory/chapter-5.html#major-scale-example">大调音阶</a><a href="./books/music-theory/chapter-6.html#minor-scale-example">小调音阶</a></p>
-
-      <section class="reading">
-        <h2>谱例说明</h2>
-        <dl>
-          <div>
-            <dt><span>第一小节</span>附点</dt>
-            <dd>附点把音符的时值延长一半。第一个音为一拍半，第二个音为半拍。</dd>
-          </div>
-          <div>
-            <dt><span>第二小节</span>八度与升号</dt>
-            <dd>简谱的高音 1 上方有一点。两种谱面都把升号写在对应音符的左边。</dd>
-          </div>
-          <div>
-            <dt><span>第三小节</span>休止</dt>
-            <dd>第三小节休止四拍，旋律在第四小节恢复。</dd>
-          </div>
-        </dl>
-      </section>
-      </section>
-      <h2 class="sample-title" id="static-samples">表格与静态谱</h2>
-      <figure class="format-long-staff">
-        <figcaption><strong>长谱 · C 大调半音阶上行</strong></figcaption>
-          <svg class="inline-staff scale-overlap chromatic-staff" viewBox="0 0 480 86" role="img" aria-label="C 大调上行音级：Ⅰ、♯Ⅰ、Ⅱ、♯Ⅱ、Ⅲ、Ⅳ、♯Ⅳ、Ⅴ、♯Ⅴ、Ⅵ、♭Ⅶ、Ⅶ、Ⅰ">
-            <path class="inline-staff-lines" d="M8 10H472 M8 18H472 M8 26H472 M8 34H472 M8 42H472"/>
-            <text class="scale-overlap-clef" x="14" y="34">&#xE050;</text>
-            <g class="scale-overlap-notes">
-              <path d="M47 50h20"/>
-              <text x="57" y="50" text-anchor="middle">&#xE0A2;</text>
-              <path d="M80 50h20"/>
-              <text x="71" y="50">&#xE262;</text>
-              <text x="90" y="50" text-anchor="middle">&#xE0A2;</text>
-              <text x="123" y="46" text-anchor="middle">&#xE0A2;</text>
-              <text x="137" y="46">&#xE262;</text>
-              <text x="156" y="46" text-anchor="middle">&#xE0A2;</text>
-              <text x="189" y="42" text-anchor="middle">&#xE0A2;</text>
-              <text x="222" y="38" text-anchor="middle">&#xE0A2;</text>
-              <text x="236" y="38">&#xE262;</text>
-              <text x="255" y="38" text-anchor="middle">&#xE0A2;</text>
-              <text x="288" y="34" text-anchor="middle">&#xE0A2;</text>
-              <text x="302" y="34">&#xE262;</text>
-              <text x="321" y="34" text-anchor="middle">&#xE0A2;</text>
-              <text x="354" y="30" text-anchor="middle">&#xE0A2;</text>
-              <text x="368" y="26">&#xE260;</text>
-              <text x="387" y="26" text-anchor="middle">&#xE0A2;</text>
-              <text x="401" y="26">&#xE261;</text>
-              <text x="420" y="26" text-anchor="middle">&#xE0A2;</text>
-              <text x="453" y="22" text-anchor="middle">&#xE0A2;</text>
-            </g>
-            <g class="chromatic-staff-degrees">
-              <text class="scale-overlap-label" x="57" y="79" text-anchor="middle">Ⅰ</text>
-              <text class="scale-overlap-label chromatic-staff-altered" x="90" y="79" text-anchor="middle">♯Ⅰ</text>
-              <text class="scale-overlap-label" x="123" y="79" text-anchor="middle">Ⅱ</text>
-              <text class="scale-overlap-label chromatic-staff-altered" x="156" y="79" text-anchor="middle">♯Ⅱ</text>
-              <text class="scale-overlap-label" x="189" y="79" text-anchor="middle">Ⅲ</text>
-              <text class="scale-overlap-label" x="222" y="79" text-anchor="middle">Ⅳ</text>
-              <text class="scale-overlap-label chromatic-staff-altered" x="255" y="79" text-anchor="middle">♯Ⅳ</text>
-              <text class="scale-overlap-label" x="288" y="79" text-anchor="middle">Ⅴ</text>
-              <text class="scale-overlap-label chromatic-staff-altered" x="321" y="79" text-anchor="middle">♯Ⅴ</text>
-              <text class="scale-overlap-label" x="354" y="79" text-anchor="middle">Ⅵ</text>
-              <text class="scale-overlap-label chromatic-staff-altered" x="387" y="79" text-anchor="middle">♭Ⅶ</text>
-              <text class="scale-overlap-label" x="420" y="79" text-anchor="middle">Ⅶ</text>
-              <text class="scale-overlap-label" x="453" y="79" text-anchor="middle">Ⅰ</text>
-            </g>
-          </svg>
-      </figure>
-      <table class="lesson-table">
-        <caption>宽表格 · 音符时值对照</caption>
-        <thead><tr><th scope="col">基准</th><th scope="col">二分音符</th><th scope="col">四分音符</th><th scope="col">八分音符</th><th scope="col">十六分音符</th></tr></thead>
-        <tbody><tr><th scope="row">四分音符为一拍</th><td>2 拍</td><td>1 拍</td><td><span class="fraction" role="img" aria-label="二分之一"><span aria-hidden="true">1</span><span aria-hidden="true">2</span></span> 拍</td><td><span class="fraction" role="img" aria-label="四分之一"><span aria-hidden="true">1</span><span aria-hidden="true">4</span></span> 拍</td></tr></tbody>
-      </table>
-      <details class="lesson-aside">
-        <summary>五线谱手写规范</summary>
-        <div class="lesson-aside-content">
-          <ul>
-            <li>加线略宽于符头。几个音都用到加线时，各自画自己的短线。</li>
-            <li>小节线从谱表的最上面一线连到最下面一线。</li>
-          </ul>
+      <header class="format-header">
+        <div>
+          <h1>格式样板</h1>
+          <p>教学组件、可操作示例与复用关系</p>
         </div>
-      </details>
-      <table class="lesson-table">
-        <caption>常见音符时值（以四分音符为一拍）</caption>
-        <thead>
-          <tr><th scope="col">音符</th><th scope="col" class="numeric">时值</th></tr>
-        </thead>
-        <tbody>
-          <tr><th scope="row"><span class="music-symbol" aria-hidden="true">&#xE1D3;</span>二分音符</th><td class="numeric">2 拍</td></tr>
-          <tr><th scope="row"><span class="music-symbol" aria-hidden="true">&#xE1D5;</span>四分音符</th><td class="numeric">1 拍</td></tr>
-          <tr><th scope="row"><span class="music-symbol" aria-hidden="true">&#xE1D7;</span>八分音符</th><td class="numeric"><span class="fraction" role="img" aria-label="二分之一"><span aria-hidden="true">1</span><span aria-hidden="true">2</span></span> 拍</td></tr>
-        </tbody>
-      </table>
-      <figure class="notation-sample">
-        <figcaption>四分休止符与八分休止符</figcaption>
-        <ul>
-          <li><span class="music-symbol" aria-hidden="true">&#xE4E5;</span>四分休止符</li>
-          <li><span class="music-symbol" aria-hidden="true">&#xE4E6;</span>八分休止符</li>
-        </ul>
-      </figure>
-      <section class="interval-examples" aria-labelledby="interval-title">
-        <h2 id="interval-title">以中央 C 为底音的音程</h2>
-        <svg width="0" height="0" class="interval-definitions" aria-hidden="true">
-          <defs>
-            <g id="interval-staff">
-              <path d="M8 30H136 M8 40H136 M8 50H136 M8 60H136 M8 70H136 M57 80H77" stroke="currentColor" fill="none"/>
-              <text x="14" y="60">&#xE050;</text>
-              <text x="61" y="80">&#xE0A2;</text>
-            </g>
-          </defs>
-        </svg>
-        <ul>
-          <li>
-            <svg viewBox="0 10 144 84" aria-hidden="true"><use href="#interval-staff"/><text x="100" y="75">&#xE0A2;</text></svg>
-            <strong>大二度</strong><span>C4 至 D4</span>
-          </li>
-          <li>
-            <svg viewBox="0 10 144 84" aria-hidden="true"><use href="#interval-staff"/><text x="100" y="70">&#xE0A2;</text></svg>
-            <strong>大三度</strong><span>C4 至 E4</span>
-          </li>
-          <li>
-            <svg viewBox="0 10 144 84" aria-hidden="true"><use href="#interval-staff"/><text x="100" y="60">&#xE0A2;</text></svg>
-            <strong>纯五度</strong><span>C4 至 G4</span>
-          </li>
-          <li>
-            <svg viewBox="0 10 144 84" aria-hidden="true"><use href="#interval-staff"/><text x="100" y="45">&#xE0A2;</text></svg>
-            <strong>纯八度</strong><span>C4 至 C5</span>
-          </li>
-        </ul>
-      </section>
-      <figure class="keyboard-example" id="keyboard-example">
-        <figcaption>C、E、G 的键位</figcaption>
-        <svg viewBox="0 0 224 96" role="img" aria-label="一个八度的钢琴键盘，高亮 C、E、G 三个白键">
-          <use class="keyboard-white" href="./shared/formats/piano.svg#white-keys"/>
-          <g class="keyboard-highlight">
-            <use href="./shared/formats/piano.svg#key-c"/>
-            <use href="./shared/formats/piano.svg#key-e"/>
-            <use href="./shared/formats/piano.svg#key-g"/>
-          </g>
-          <use class="keyboard-black" href="./shared/formats/piano.svg#black-keys"/>
-          <g class="keyboard-label">
-            <text x="16" y="86">C</text>
-            <text x="80" y="86">E</text>
-            <text x="144" y="86">G</text>
-          </g>
-        </svg>
-      </figure>
-      <section class="keyboard-intervals" id="keyboard-intervals" aria-labelledby="keyboard-interval-title">
-        <h2 id="keyboard-interval-title">钢琴键盘上的一度至十二度</h2>
-        <aside class="lesson-callout" aria-labelledby="interval-rule-title">
-          <h3 id="interval-rule-title">音程的判断</h3>
-          <p>数度数时，两端音名都算在内。确定度数后，再用半音数区分纯、大、小、增、减。</p>
-        </aside>
-        <p>蓝色圆点标起点 C4，橙色菱形标终点。两个音落在同一个键时，只标一个键。</p>
-        <div class="keyboard-interval-list"></div>
-      </section>
-      <section class="course-sample" aria-labelledby="analysis-samples">
-        <h2 class="sample-title" id="analysis-samples">曲式与声部关系</h2>
-        <details class="lesson-aside">
-          <summary>格式的继承关系</summary>
-          <div class="lesson-aside-content">
-            <ul>
-              <li><strong>共享时间轴</strong>沿用主题、控件和局部滚动样式。每个格子表示同样大小的时间单位。</li>
-              <li><strong>曲式分析谱</strong>组合时间轴与可播放谱，增加段落、小节范围和调性说明。</li>
-              <li><strong>声部关系图</strong>在时间轴上增加声部行与关系箭头。虚线框表示预先写在辅助谱表上的材料。</li>
+        <div class="format-preview-control">
+          <label for="preview-width">预览宽度</label>
+          <select id="preview-width">
+            <option value="current">随窗口</option>
+            <option value="narrow">窄屏 · 320 像素</option>
+          </select>
+        </div>
+      </header>
+      <div class="format-layout">
+        <nav class="format-index" aria-label="样板目录">
+          <a href="#format-inheritance">继承关系</a>
+          <a href="#control-samples">主题与控件</a>
+          <a href="#reading-samples">正文与表格</a>
+          <a href="#static-samples">记号与静态谱</a>
+          <a href="#instrument-samples">键盘、音域与指法</a>
+          <a href="#sample-title">可播放谱与程序谱</a>
+          <a href="#analysis-samples">时间轴与结构分析</a>
+          <a href="#comparison-samples">对照、写作与和声</a>
+          <a href="#arrangement-grid-samples">编曲网格与锣鼓经</a>
+          <a href="#book-samples">书目专用版式</a>
+        </nav>
+        <div class="format-showcase">
+          <section class="format-family" aria-labelledby="format-inheritance">
+            <h2 id="format-inheritance">继承关系</h2>
+            <p class="format-family-intro">每条从基础样式出发，链接到使用它的样板。</p>
+            <ul class="format-branches">
+              <li><a href="#control-samples">主题与控件</a><span aria-hidden="true">→</span><a href="#reading-samples">正文、表格与选学</a></li>
+              <li><a href="#inline-staff-sample">文本内五线谱</a><span aria-hidden="true">→</span><a href="#long-staff-sample">独立长谱</a><a href="#voice-leading-sample">声部走向谱</a><a href="#library-route">演奏路线</a></li>
+              <li><a href="#keyboard-example">钢琴键盘</a><span aria-hidden="true">→</span><a href="#keyboard-intervals">音程图鉴</a><a href="#range-samples">音域图</a><a href="#programmatic-sample">程序谱</a></li>
+              <li><a href="#table-sample">教学对照</a><span aria-hidden="true">→</span><a href="#wind-fingering-sample">管乐指法对照</a><a href="#string-sound-sample">弦位与实响对照</a></li>
+              <li><a href="#sample-title">可播放谱</a><span aria-hidden="true">→</span><a href="#four-part-sample">四部和声</a><a href="#comparison-samples">对照与写作</a><a href="#library-form-analysis">曲式分析谱</a></li>
+              <li><a href="#timeline-sample">时间轴</a><span aria-hidden="true">→</span><a href="#library-voice-relations">声部关系图</a><a href="#library-form-analysis">曲式分析谱</a></li>
+              <li><a href="#arrangement-grid-base">编曲网格</a><span aria-hidden="true">→</span><a href="#arrangement-grid-sample">可播放网格</a><span aria-hidden="true">→</span><a href="#gong-syllable-sample">锣鼓经对照谱</a></li>
+              <li><a href="#table-sample">教学表格</a><span aria-hidden="true">＋</span><a href="#voice-leading-sample">声部走向谱</a><span aria-hidden="true">＋</span><a href="#score-base-sample">可播放谱</a><span aria-hidden="true">→</span><a href="#chord-revision-sample">联动的重配对照</a></li>
             </ul>
-          </div>
-        </details>
-        <div class="music-demo" id="library-form-analysis">
-          <div class="music-demo-toolbar">
-            <h3>曲式分析谱 · 三段式教学例</h3>
-            <button type="button" aria-pressed="true" data-analysis-whole>全曲</button>
-          </div>
-          <div class="timeline-frame" data-analysis-timeline></div>
-          <dl class="analysis-description" aria-live="polite">
-            <dt data-analysis-section>全曲</dt>
-            <dd data-analysis-description>A 呈示 → B 对比 → A′ 再现</dd>
-          </dl>
-          <p class="music-demo-cue analysis-status" data-analysis-status role="status"></p>
-          <figure data-analysis-score aria-label="带有三个段落的二声部五线谱"></figure>
-        </div>
-        <div class="music-demo" id="library-voice-relations">
-          <div class="music-demo-toolbar">
-            <h3>声部关系图 · 卡农模进</h3>
-          </div>
-          <div class="timeline-frame" data-voice-timeline></div>
-          <output class="music-demo-cue" data-voice-description>两组题头分别相隔两拍应答，第二组起句上移二度。</output>
-        </div>
-      </section>
-      <section class="course-sample" aria-labelledby="comparison-samples">
-        <h2 class="sample-title" id="comparison-samples">对照与写作</h2>
-        <div class="music-demo score-comparison" id="library-score-comparison">
-          <div class="music-demo-toolbar">
-            <h3>对照谱 · 八度换位</h3>
-            <div class="score-comparison-actions">
-              <div data-comparison-playback></div>
-              <div class="score-choice-buttons" data-comparison-choices role="group" aria-label="试听版本"></div>
+          </section>
+
+          <section class="format-family" aria-labelledby="control-samples">
+            <h2 id="control-samples">主题与控件</h2>
+            <p class="format-family-intro">页面、表格、谱面和交互控件共用这套配色与状态。</p>
+            <div class="format-items">
+              <div class="format-pair">
+                <article class="format-item">
+                  <h3>九种主题</h3>
+                  <p class="format-reuse">点选色样可预览整页，也可通过页首设置切换。</p>
+                  <div class="format-theme-list" role="group" aria-label="预览主题">
+                    <button type="button" data-theme="paper" aria-pressed="true">纸白</button>
+                    <button type="button" data-theme="ivory" aria-pressed="false">米浆</button>
+                    <button type="button" data-theme="mist" aria-pressed="false">雾蓝</button>
+                    <button type="button" data-theme="lilac" aria-pressed="false">淡紫</button>
+                    <button type="button" data-theme="rose" aria-pressed="false">烟粉</button>
+                    <button type="button" data-theme="mint" aria-pressed="false">薄荷</button>
+                    <button type="button" data-theme="amber" aria-pressed="false">琥珀</button>
+                    <button type="button" data-theme="slate" aria-pressed="false">石墨</button>
+                    <button type="button" data-theme="midnight" aria-pressed="false">午夜蓝</button>
+                  </div>
+                </article>
+                <article class="format-item">
+                  <h3>共用控件</h3>
+                  <p class="format-reuse">按钮的选中与禁用、下拉框和搜索框共用边线与焦点样式。</p>
+                  <div class="format-control-row">
+                    <button type="button" id="sample-toggle" aria-pressed="false">显示音名</button>
+                    <button type="button" disabled>暂不可用</button>
+                    <output id="sample-toggle-state" aria-live="polite"></output>
+                  </div>
+                  <div class="format-control-row">
+                    <label>调式 <select><option>C 大调</option><option>a 小调</option></select></label>
+                    <label>音名 <input type="search" placeholder="C、E、G"></label>
+                  </div>
+                </article>
+              </div>
+
+              <article class="format-item">
+                <h3>播放状态</h3>
+                <p class="format-reuse">沿用同一个三角播放键。<a href="#sample-title">就绪与播放状态</a>可在谱例中交互查看。</p>
+                <div class="score-state-samples">
+                  <figure class="score-example">
+                    <figcaption>加载中</figcaption>
+                    <button class="score-playback" type="button" aria-label="播放谱例" disabled><span class="score-playback-icon" aria-hidden="true"></span></button>
+                    <p class="score-status">正在加载谱例…</p>
+                  </figure>
+                  <figure class="score-example">
+                    <figcaption>加载失败</figcaption>
+                    <button class="score-playback" type="button" aria-label="播放谱例" disabled><span class="score-playback-icon" aria-hidden="true"></span></button>
+                    <p class="score-status">谱例加载失败，请刷新页面重试。</p>
+                  </figure>
+                </div>
+              </article>
             </div>
-          </div>
-          <p class="music-demo-cue" data-comparison-description></p>
-          <div class="score-comparison-panes">
-            <div class="score-comparison-pane" data-comparison-pane>
-              <h4 data-version-title></h4>
-              <figure></figure>
+          </section>
+
+          <section class="format-family" aria-labelledby="reading-samples">
+            <h2 id="reading-samples">正文与表格</h2>
+            <p class="format-family-intro">段落解释概念，强调块保留关键规则，选学收纳可按需展开的细节。</p>
+            <div class="format-items">
+              <div class="format-pair">
+                <article class="format-item">
+                  <h3>阅读块</h3>
+                  <p class="format-reuse">相同的段落和列表排版也用于选学与强调块。</p>
+                  <div class="reading">
+                    <p>同一个音符的实际时长取决于速度。本例以四分音符为一拍。</p>
+                    <dl>
+                      <div><dt>时值</dt><dd>由音符和拍号确定音持续几拍。</dd></div>
+                      <div><dt>速度</dt><dd>由每分钟的拍数确定一拍有多长。</dd></div>
+                    </dl>
+                  </div>
+                  <aside class="lesson-callout"><h3>附点的时值</h3><p>附点增加原音符时值的一半。</p></aside>
+                  <details class="lesson-aside">
+                    <summary>五线谱手写规范</summary>
+                    <div class="lesson-aside-content">
+                      <ul>
+                        <li>加线略宽于符头。几个音都用到加线时，各自画自己的短线。</li>
+                        <li>小节线从谱表的最上面一线连到最下面一线。</li>
+                      </ul>
+                    </div>
+                  </details>
+                </article>
+                <article class="format-item" id="table-sample">
+                  <h3>教学表格</h3>
+                  <p class="format-reuse">音符字形和上下分数可直接嵌入单元格。</p>
+                  <table class="lesson-table">
+                    <caption>常见音符时值（以四分音符为一拍）</caption>
+                    <thead>
+                      <tr><th scope="col">音符</th><th scope="col" class="numeric">时值</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><th scope="row"><span class="music-symbol" aria-hidden="true">&#xE1D3;</span>二分音符</th><td class="numeric">2 拍</td></tr>
+                      <tr><th scope="row"><span class="music-symbol" aria-hidden="true">&#xE1D5;</span>四分音符</th><td class="numeric">1 拍</td></tr>
+                      <tr><th scope="row"><span class="music-symbol" aria-hidden="true">&#xE1D7;</span>八分音符</th><td class="numeric"><span class="fraction" role="img" aria-label="二分之一"><span aria-hidden="true">1</span><span aria-hidden="true">2</span></span> 拍</td></tr>
+                    </tbody>
+                  </table>
+                </article>
+              </div>
+
+              <article class="format-item" id="wide-table-sample">
+                <h3>宽表格</h3>
+                <p class="format-reuse">沿用<a href="#table-sample">教学表格</a>。窄屏可局部横向滚动。</p>
+                <table class="lesson-table">
+                  <caption>宽表格 · 音符时值对照</caption>
+                  <thead><tr><th scope="col">基准</th><th scope="col">二分音符</th><th scope="col">四分音符</th><th scope="col">八分音符</th><th scope="col">十六分音符</th></tr></thead>
+                  <tbody><tr><th scope="row">四分音符为一拍</th><td>2 拍</td><td>1 拍</td><td><span class="fraction" role="img" aria-label="二分之一"><span aria-hidden="true">1</span><span aria-hidden="true">2</span></span> 拍</td><td><span class="fraction" role="img" aria-label="四分之一"><span aria-hidden="true">1</span><span aria-hidden="true">4</span></span> 拍</td></tr></tbody>
+                </table>
+              </article>
             </div>
-            <div class="score-comparison-pane" data-comparison-pane>
-              <h4 data-version-title></h4>
-              <figure></figure>
+          </section>
+
+          <section class="format-family" aria-labelledby="static-samples">
+            <h2 id="static-samples">记号与静态谱</h2>
+            <p class="format-family-intro">由单个字形到完整片段，沿用本地 Bravura 字体。谱线、符头和需要说明的标记可以独立呈现。</p>
+            <div class="format-items">
+              <div class="format-pair">
+                <article class="format-item">
+                  <h3>记号组</h3>
+                  <p class="format-reuse">同一字形也可嵌入正文和表格。</p>
+                  <figure class="notation-sample">
+                    <figcaption>四分休止符与八分休止符</figcaption>
+                    <ul>
+                      <li><span class="music-symbol" aria-hidden="true">&#xE4E5;</span>四分休止符</li>
+                      <li><span class="music-symbol" aria-hidden="true">&#xE4E6;</span>八分休止符</li>
+                    </ul>
+                  </figure>
+                </article>
+                <article class="format-item" id="inline-staff-sample">
+                  <h3>文本内五线谱</h3>
+                  <p class="format-reuse">在正文或表格中展示一处记法。短谱只保留与知识点有关的谱线和符号。</p>
+                  <p>加线随音符出现
+                    <svg class="inline-staff" viewBox="0 0 80 42" role="img" aria-label="中央 C 的符头穿过下加线">
+                      <path class="inline-staff-lines" d="M2 6H78 M2 12H78 M2 18H78 M2 24H78 M2 30H78"/>
+                      <path d="M30 36h19"/><text x="34" y="36">&#xE0A2;</text>
+                    </svg>，谱线中间可以嵌入需要说明的记号。
+                  </p>
+                  <p>正文的 <span class="time-signature" role="img" aria-label="四四拍"><span aria-hidden="true">4</span><span aria-hidden="true">4</span></span>
+                    可沿用分数排版。<span class="music-term">ritardando</span> 用斜体，力度 <span class="dynamic-mark" role="img" aria-label="强">&#xE522;</span> 用音乐字形。
+                  </p>
+                </article>
+              </div>
+
+              <article class="format-item" id="long-staff-sample">
+                <h3>独立长谱</h3>
+                <p class="format-reuse">沿用<a href="#inline-staff-sample">文本内五线谱</a>，增加统一线距、音级标注和窄屏滚动。</p>
+                <figure>
+                  <figcaption><strong>长谱 · C 大调半音阶上行</strong></figcaption>
+                    <svg class="inline-staff scale-overlap chromatic-staff" viewBox="0 0 480 86" role="img" aria-label="C 大调上行音级：Ⅰ、♯Ⅰ、Ⅱ、♯Ⅱ、Ⅲ、Ⅳ、♯Ⅳ、Ⅴ、♯Ⅴ、Ⅵ、♭Ⅶ、Ⅶ、Ⅰ">
+                      <path class="inline-staff-lines" d="M8 10H472 M8 18H472 M8 26H472 M8 34H472 M8 42H472"/>
+                      <text class="scale-overlap-clef" x="14" y="34">&#xE050;</text>
+                      <g class="scale-overlap-notes">
+                        <path d="M47 50h20"/>
+                        <text x="57" y="50" text-anchor="middle">&#xE0A2;</text>
+                        <path d="M80 50h20"/>
+                        <text x="71" y="50">&#xE262;</text>
+                        <text x="90" y="50" text-anchor="middle">&#xE0A2;</text>
+                        <text x="123" y="46" text-anchor="middle">&#xE0A2;</text>
+                        <text x="137" y="46">&#xE262;</text>
+                        <text x="156" y="46" text-anchor="middle">&#xE0A2;</text>
+                        <text x="189" y="42" text-anchor="middle">&#xE0A2;</text>
+                        <text x="222" y="38" text-anchor="middle">&#xE0A2;</text>
+                        <text x="236" y="38">&#xE262;</text>
+                        <text x="255" y="38" text-anchor="middle">&#xE0A2;</text>
+                        <text x="288" y="34" text-anchor="middle">&#xE0A2;</text>
+                        <text x="302" y="34">&#xE262;</text>
+                        <text x="321" y="34" text-anchor="middle">&#xE0A2;</text>
+                        <text x="354" y="30" text-anchor="middle">&#xE0A2;</text>
+                        <text x="368" y="26">&#xE260;</text>
+                        <text x="387" y="26" text-anchor="middle">&#xE0A2;</text>
+                        <text x="401" y="26">&#xE261;</text>
+                        <text x="420" y="26" text-anchor="middle">&#xE0A2;</text>
+                        <text x="453" y="22" text-anchor="middle">&#xE0A2;</text>
+                      </g>
+                      <g class="chromatic-staff-degrees">
+                        <text class="scale-overlap-label" x="57" y="79" text-anchor="middle">Ⅰ</text>
+                        <text class="scale-overlap-label chromatic-staff-altered" x="90" y="79" text-anchor="middle">♯Ⅰ</text>
+                        <text class="scale-overlap-label" x="123" y="79" text-anchor="middle">Ⅱ</text>
+                        <text class="scale-overlap-label chromatic-staff-altered" x="156" y="79" text-anchor="middle">♯Ⅱ</text>
+                        <text class="scale-overlap-label" x="189" y="79" text-anchor="middle">Ⅲ</text>
+                        <text class="scale-overlap-label" x="222" y="79" text-anchor="middle">Ⅳ</text>
+                        <text class="scale-overlap-label chromatic-staff-altered" x="255" y="79" text-anchor="middle">♯Ⅳ</text>
+                        <text class="scale-overlap-label" x="288" y="79" text-anchor="middle">Ⅴ</text>
+                        <text class="scale-overlap-label chromatic-staff-altered" x="321" y="79" text-anchor="middle">♯Ⅴ</text>
+                        <text class="scale-overlap-label" x="354" y="79" text-anchor="middle">Ⅵ</text>
+                        <text class="scale-overlap-label chromatic-staff-altered" x="387" y="79" text-anchor="middle">♭Ⅶ</text>
+                        <text class="scale-overlap-label" x="420" y="79" text-anchor="middle">Ⅶ</text>
+                        <text class="scale-overlap-label" x="453" y="79" text-anchor="middle">Ⅰ</text>
+                      </g>
+                    </svg>
+                </figure>
+              </article>
+
+              <div class="format-pair">
+                <article class="format-item" id="interval-title">
+                  <h3>静态音程谱</h3>
+                  <p class="format-reuse">四个小图复用同一组谱线与基准音。</p>
+                  <div class="interval-examples">
+                    <svg width="0" height="0" class="interval-definitions" aria-hidden="true">
+                      <defs>
+                        <g id="interval-staff">
+                          <path d="M8 30H136 M8 40H136 M8 50H136 M8 60H136 M8 70H136 M57 80H77" stroke="currentColor" fill="none"/>
+                          <text x="14" y="60">&#xE050;</text>
+                          <text x="61" y="80">&#xE0A2;</text>
+                        </g>
+                      </defs>
+                    </svg>
+                    <ul>
+                      <li>
+                        <svg viewBox="0 10 144 84" aria-hidden="true"><use href="#interval-staff"/><text x="100" y="75">&#xE0A2;</text></svg>
+                        <strong>大二度</strong><span>C4 至 D4</span>
+                      </li>
+                      <li>
+                        <svg viewBox="0 10 144 84" aria-hidden="true"><use href="#interval-staff"/><text x="100" y="70">&#xE0A2;</text></svg>
+                        <strong>大三度</strong><span>C4 至 E4</span>
+                      </li>
+                      <li>
+                        <svg viewBox="0 10 144 84" aria-hidden="true"><use href="#interval-staff"/><text x="100" y="60">&#xE0A2;</text></svg>
+                        <strong>纯五度</strong><span>C4 至 G4</span>
+                      </li>
+                      <li>
+                        <svg viewBox="0 10 144 84" aria-hidden="true"><use href="#interval-staff"/><text x="100" y="45">&#xE0A2;</text></svg>
+                        <strong>纯八度</strong><span>C4 至 C5</span>
+                      </li>
+                    </ul>
+                  </div>
+                </article>
+                <article class="format-item" id="classification-sample">
+                  <h3>分类树</h3>
+                  <p class="format-reuse">嵌套列表配合边线，展示两级分类。</p>
+                  <figure class="classification-tree">
+                  <figcaption>和声音程的协和分类</figcaption>
+                  <ul class="classification-branches">
+                  <li>
+                  <strong>协和音程</strong>
+                  <ul>
+                  <li><strong>极完全协和</strong><span>纯一度、纯八度</span></li>
+                  <li><strong>完全协和</strong><span>纯四度、纯五度</span></li>
+                  <li><strong>不完全协和</strong><span>大、小三度与大、小六度</span></li>
+                  </ul>
+                  </li>
+                  <li>
+                  <strong>不协和音程</strong>
+                  <ul>
+                  <li><strong>不协和</strong><span>大二度、小七度，增减及倍增倍减音程</span></li>
+                  <li><strong>极不协和</strong><span>小二度、大七度</span></li>
+                  </ul>
+                  </li>
+                  </ul>
+                  </figure>
+                </article>
+              </div>
+
+              <article class="format-item">
+                <h3>演奏路线</h3>
+                <p class="format-reuse">沿用<a href="#inline-staff-sample">静态谱线与记号</a>，按步骤高亮反复后的实际小节顺序。</p>
+                <div class="music-demo" id="library-route">
+                  <div class="music-demo-toolbar">
+                    <h4>小节反复</h4>
+                    <label>记法
+                      <select><option value="repeat">一对反复线</option><option value="straight">顺序演奏</option></select>
+                    </label>
+                  </div>
+                  <div data-route-staff></div>
+                  <ol class="route-sequence" aria-label="已经演奏的小节"></ol>
+                  <output class="music-demo-cue"></output>
+                  <div class="route-actions">
+                    <button type="button" data-route-back>上一步</button>
+                    <button type="button" data-route-next>下一步</button>
+                    <button type="button" data-route-reset>重置</button>
+                  </div>
+                </div>
+              </article>
             </div>
-          </div>
+          </section>
+
+          <section class="format-family" aria-labelledby="instrument-samples">
+            <h2 id="instrument-samples">键盘、音域与指法</h2>
+            <p class="format-family-intro">琴键统一音高位置，音域可按同一份数据转换视图。指板、指孔和弦位对照说明音怎样奏出。</p>
+            <div class="format-items">
+              <div class="format-pair">
+                <article class="format-item">
+                  <h3>静态钢琴键盘</h3>
+                  <p class="format-reuse">展示构成 C 大三和弦的三个键位。</p>
+                  <figure class="keyboard-example" id="keyboard-example">
+                    <figcaption>C、E、G 的键位</figcaption>
+                    <svg viewBox="0 0 224 96" role="img" aria-label="一个八度的钢琴键盘，高亮 C、E、G 三个白键">
+                      <use class="keyboard-white" href="./shared/formats/piano.svg#white-keys"/>
+                      <g class="keyboard-highlight">
+                        <use href="./shared/formats/piano.svg#key-c"/>
+                        <use href="./shared/formats/piano.svg#key-e"/>
+                        <use href="./shared/formats/piano.svg#key-g"/>
+                      </g>
+                      <use class="keyboard-black" href="./shared/formats/piano.svg#black-keys"/>
+                      <g class="keyboard-label">
+                        <text x="16" y="86">C</text>
+                        <text x="80" y="86">E</text>
+                        <text x="144" y="86">G</text>
+                      </g>
+                    </svg>
+                  </figure>
+                </article>
+                <article class="format-item" id="staff-key-sample">
+                  <h3>谱键对照图</h3>
+                  <p class="format-reuse">同一套<a href="#keyboard-example">钢琴键盘</a>加五线谱，共用横坐标。</p>
+                  <figure>
+                    <svg class="format-keyboard-staff" viewBox="-32 0 256 151" role="img" aria-label="C4、E4、G4 的符头与同名白键上下对齐">
+                      <path class="inline-staff-lines" d="M1 7H223 M1 15H223 M1 23H223 M1 31H223 M1 39H223 M9 47H23"/>
+                      <text class="format-key-clef" x="-25" y="31">&#xE050;</text>
+                      <path class="format-key-guide" d="M16 48V54 M80 40V54 M144 32V54"/>
+                      <g class="format-key-note" text-anchor="middle"><text x="16" y="47">&#xE0A2;</text><text x="80" y="39">&#xE0A2;</text><text x="144" y="31">&#xE0A2;</text></g>
+                      <g transform="translate(0 55)">
+                        <use class="keyboard-white" href="./shared/formats/piano.svg#white-keys"/>
+                        <g class="keyboard-highlight"><use href="./shared/formats/piano.svg#key-c"/><use href="./shared/formats/piano.svg#key-e"/><use href="./shared/formats/piano.svg#key-g"/></g>
+                        <use class="keyboard-black" href="./shared/formats/piano.svg#black-keys"/>
+                        <g class="keyboard-label"><text x="16" y="86">C</text><text x="80" y="86">E</text><text x="144" y="86">G</text></g>
+                      </g>
+                    </svg>
+                  </figure>
+                </article>
+              </div>
+
+              <article class="format-item" id="range-samples">
+                <h3>音域键盘、横向音域图与共用谱表</h3>
+                <p class="format-reuse">同一张<a href="#table-sample">教学表</a>给三种视图提供实音、扩展音和空弦。</p>
+                <table class="lesson-table" id="library-range-table">
+                  <caption>弓弦乐器实音</caption>
+                  <thead><tr><th scope="col">乐器</th><th scope="col">常用音域</th><th scope="col">上限</th><th scope="col">空弦</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">小提琴</th><td data-range-main>G3–C7</td><td data-range-high>E7</td><td data-range-open>G3 · D4 · A4 · E5</td></tr>
+                    <tr><th scope="row">中提琴</th><td data-range-main>C3–C6</td><td data-range-high>F6</td><td data-range-open>C3 · G3 · D4 · A4</td></tr>
+                  </tbody>
+                </table>
+                <div class="format-control-row"><label for="range-sample-view">音域视图</label>
+                  <select id="range-sample-view"><option value="keyboard">钢琴键盘</option><option value="horizontal">横向音域图</option><option value="staff">共用谱表</option></select>
+                </div>
+                <figure class="format-stage" id="library-range-preview"></figure>
+              </article>
+
+              <article class="format-item">
+                <h3>键盘音程图鉴</h3>
+                <p class="format-reuse">复用<a href="#keyboard-example">钢琴键盘</a>。蓝色圆点标起音，橙色菱形标终点。</p>
+                <details class="lesson-aside" id="keyboard-intervals">
+                  <summary id="keyboard-interval-title">一度至十二度</summary>
+                  <div class="lesson-aside-content keyboard-intervals"><div class="keyboard-interval-list"></div></div>
+                </details>
+              </article>
+
+              <div class="format-pair">
+                <article class="format-item" id="fretboard-samples">
+                  <h3>弦乐器指板图</h3>
+                  <p class="format-reuse">一个弦上可标多个音，方框表示主音。</p>
+                  <figure id="fretboard-sample"><figcaption>C 大调的两段四音排列</figcaption></figure>
+                </article>
+                <article class="format-item" id="guitar-chord-samples">
+                  <h3>吉他和弦指板</h3>
+                  <p class="format-reuse">每弦一个位置。空心圆为空弦，× 表示不弹，横线表示横按。</p>
+                  <div id="guitar-chord-diagram-sample"></div>
+                </article>
+              </div>
+              <div class="format-pair">
+                <article class="format-item" id="wind-fingering-sample">
+                  <h3>管乐指法对照</h3>
+                  <p class="format-reuse">把实音、唱名、指孔状态和超吹并列。可随同一个程序谱切换并高亮。<a href="./books/chinese-orchestration/chinese-orchestration-1.html#dizi-tube-tones">曲笛程序谱</a></p>
+                  <figure id="wind-fingering-preview"><figcaption>D 调曲笛 · 筒音作 re</figcaption></figure>
+                </article>
+                <article class="format-item" id="string-sound-sample">
+                  <h3>弦位与实响对照</h3>
+                  <p class="format-reuse">把弦位与手势和实响配对。滑音同时标出起音和目标音。<a href="./books/chinese-orchestration/chinese-orchestration-3.html#zheng-string-sounds">筝的弦位与实响</a></p>
+                  <figure id="string-sound-preview"><figcaption>古琴同一个 C3 的三种来源</figcaption></figure>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="format-family" aria-labelledby="sample-title">
+            <h2 id="sample-title">可播放谱与程序谱</h2>
+            <p class="format-family-intro">从同一份音符数据排谱、播放和高亮，再接入音色、分声部或键盘。</p>
+            <div class="format-items">
+              <article class="format-item" id="score-base-sample">
+                <h3>五线谱与简谱对照</h3>
+                <p class="format-reuse">两行使用同一段旋律和一个播放键。</p>
+                <figure id="melody-example" aria-label="四小节旋律的五线谱与简谱对照"></figure>
+                <details class="lesson-aside" id="score-mode-details">
+                  <summary>单谱、只排谱与只试听</summary>
+                  <div class="lesson-aside-content format-score-modes">
+                    <div><strong>五线谱</strong><figure id="staff-example" aria-label="同一旋律的五线谱"></figure></div>
+                    <div><strong>简谱</strong><figure id="numbered-example" aria-label="同一旋律的简谱"></figure></div>
+                    <div><strong>只排谱</strong><figure id="visual-score-example" aria-label="有谱面且没有播放控件"></figure></div>
+                    <div><strong>只试听</strong><figure id="audio-example" aria-label="有播放控件的同一旋律"></figure></div>
+                  </div>
+                </details>
+              </article>
+
+              <article class="format-item" id="four-part-sample">
+                <h3>四部和声与分声部试听</h3>
+                <p class="format-reuse">复用<a href="#score-base-sample">可播放谱</a>。音色可切换为钢琴或弦乐，读谱面板可查看音名与和弦。</p>
+                <figure id="library-four-part" aria-label="C 大调的 I、IV、V7、I 四部和声"></figure>
+              </article>
+
+              <article class="format-item" id="programmatic-sample">
+                <h3>程序谱与键盘</h3>
+                <p class="format-reuse">组合<a href="#score-base-sample">播放器</a>与<a href="#keyboard-example">键盘</a>。主音和方向变化时两者一起更新。</p>
+                <div class="programmatic-score" id="library-programmatic">
+                  <div class="score-toolbar">
+                    <h4>主音与音阶</h4>
+                    <form class="score-choices">
+                      <label>主音 <select name="tonic"><option>C</option><option>F</option><option>G</option></select></label>
+                      <label>方向 <select name="direction"><option value="up">上行</option><option value="down">下行</option></select></label>
+                    </form>
+                  </div>
+                  <figure data-generated-score aria-label="大调音阶"></figure>
+                  <figure class="keyboard-example"><figcaption>对应键位</figcaption><div data-generated-piano></div></figure>
+                </div>
+              </article>
+
+              <article class="format-item" id="ornament-sample">
+                <h3>装饰音对照</h3>
+                <p class="format-reuse">组合<a href="#inline-staff-sample">文本谱</a>与<a href="#score-base-sample">播放器</a>，并列简写和展开后的发声。</p>
+                <div class="music-demo" id="library-ornament">
+                  <div class="music-demo-toolbar"><h4>波音的记法与演奏</h4>
+                    <form class="ornament-controls"><label>辅助音 <select name="variant"><option value="upper">上方</option><option value="lower">下方</option></select></label></form>
+                  </div>
+                  <div class="ornament-compare-layout"><strong>简写记号</strong><div data-ornament-printed></div></div>
+                  <output class="music-demo-cue"></output>
+                  <figure data-ornament-score aria-label="波音展开后的五线谱"></figure>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="format-family" aria-labelledby="analysis-samples">
+            <h2 id="analysis-samples">时间轴与结构分析</h2>
+            <p class="format-family-intro">每行共用同一组等长时间单位。选中一个事件后，可以显示它的关系或定位到谱面。</p>
+            <div class="format-items">
+              <article class="format-item" id="timeline-sample">
+                <h3>共享时间轴</h3>
+                <p class="format-reuse">横向标小节，点选段落查看其范围。</p>
+                <div class="music-demo"><div class="timeline-frame" id="library-timeline"></div><output class="music-demo-cue" id="library-timeline-status"></output></div>
+              </article>
+
+              <article class="format-item" id="rhythm-pattern-sample">
+                <h3>双手时值图</h3>
+                <p class="format-reuse">按拍对齐两手，在时值横条内标和弦音。字的上点和下点标相对八度，虚线表示休止。</p>
+                <div id="library-rhythm-pattern"></div>
+              </article>
+
+              <article class="format-item" id="harmony-pattern-sample">
+                <h3>和弦时值图</h3>
+                <p class="format-reuse">沿同一拍线排开和弦。段宽表示持续时值，斜线后显示实际低音。</p>
+                <div id="library-harmony-pattern"></div>
+              </article>
+
+              <article class="format-item">
+                <h3>声部关系图</h3>
+                <p class="format-reuse">在<a href="#timeline-sample">时间轴</a>上对齐声部与辅助谱表。空心圆标出原材料，渐变连线通向实心圆所标出的对应项。</p>
+                <div class="music-demo" id="library-voice-relations">
+                  <div class="music-demo-toolbar">
+                    <h4>卡农模进</h4>
+                  </div>
+                  <div class="timeline-frame" data-voice-timeline></div>
+                  <output class="music-demo-cue" data-voice-description>两组题头分别相隔两拍应答，第二组起句上移二度。</output>
+                </div>
+              </article>
+
+              <article class="format-item">
+                <h3>曲式分析谱</h3>
+                <p class="format-reuse">组合<a href="#timeline-sample">时间轴</a>和<a href="#score-base-sample">可播放谱</a>。段落、位置、说明和试听同步。窄屏可展开读谱。</p>
+                <div class="music-demo" id="library-form-analysis">
+                  <div class="music-demo-toolbar">
+                    <h4>三段式教学例</h4>
+                    <button type="button" aria-pressed="true" data-analysis-whole>全曲</button>
+                  </div>
+                  <div class="timeline-frame" data-analysis-timeline></div>
+                  <dl class="analysis-description" aria-live="polite">
+                    <dt data-analysis-section>全曲</dt>
+                    <dd data-analysis-description>A 呈示 → B 对比 → A′ 再现</dd>
+                  </dl>
+                  <p class="music-demo-cue analysis-status" data-analysis-status role="status"></p>
+                  <figure data-analysis-score aria-label="带有三个段落的二声部五线谱"></figure>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="format-family" aria-labelledby="comparison-samples">
+            <h2 id="comparison-samples">对照、写作与和声</h2>
+            <p class="format-family-intro">比较材料时保留共同的部分，版本控件只更新正在比较的内容。</p>
+            <div class="format-items">
+              <article class="format-item">
+                <h3>对照谱</h3>
+                <p class="format-reuse">复用<a href="#score-base-sample">可播放谱</a>。两份谱同时展示，版本选择控制同一区域的播放键。</p>
+                <div class="music-demo score-comparison" id="library-score-comparison">
+                  <div class="music-demo-toolbar">
+                    <h4>八度换位</h4>
+                    <div class="score-comparison-actions">
+                      <div data-comparison-playback></div>
+                      <div class="score-choice-buttons" data-comparison-choices role="group" aria-label="试听版本"></div>
+                    </div>
+                  </div>
+                  <p class="music-demo-cue" data-comparison-description></p>
+                  <div class="score-comparison-panes">
+                    <div class="score-comparison-pane" data-comparison-pane>
+                      <h5 data-version-title></h5>
+                      <figure></figure>
+                    </div>
+                    <div class="score-comparison-pane" data-comparison-pane>
+                      <h5 data-version-title></h5>
+                      <figure></figure>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="format-item">
+                <h3>分步写作谱</h3>
+                <p class="format-reuse">共用版本控件与音符高亮，在同一份谱上展示卡农的写作步骤。</p>
+                <div class="music-demo" id="library-writing-steps">
+                  <div class="music-demo-toolbar">
+                    <h4>卡农</h4>
+                    <div class="score-choice-buttons" data-writing-choices role="group" aria-label="写作阶段"></div>
+                  </div>
+                  <output class="music-demo-cue" data-writing-description></output>
+                  <figure data-writing-score aria-label="三小节卡农的写作步骤"></figure>
+                </div>
+              </article>
+
+              <article class="format-item" id="voice-leading-sample">
+                <h3>声部走向谱</h3>
+                <p class="format-reuse">沿用<a href="#inline-staff-sample">文本内五线谱</a>。实线连接上方声部，虚线跟踪低音。</p>
+                <div class="voice-leading-staves">
+                  <figure class="voice-leading-panel">
+                    <figcaption>G7 → C</figcaption>
+                    <svg class="inline-staff voice-leading-staff" viewBox="0 0 175 134" role="img" aria-label="F4 下行半音到 E4，B3 上行半音到 C4，低音 G2 下行纯五度到 C2">
+                      <path class="inline-staff-lines" d="M6 22H169 M6 27H169 M6 32H169 M6 37H169 M6 42H169 M6 83H169 M6 88H169 M6 93H169 M6 98H169 M6 103H169"/>
+                      <text x="10" y="37">&#xE050;</text><text x="10" y="88">&#xE062;</text>
+                      <path d="M42 47h13 M124 47h13 M124 108h13 M124 113h13"/>
+                      <path class="voice-leading-connector" d="M58 39.5L115 42 M111 39.4L115 42 111 44.6"/>
+                      <path class="voice-leading-connector" d="M58 49.5L115 47 M111 44.4L115 47 111 49.6"/>
+                      <path class="voice-leading-connector is-bass" d="M58 103L115 113 M111 110.4L115 113 111 115.6"/>
+                      <text x="45" y="39.5">&#xE0A2;</text><text x="127" y="42">&#xE0A2;</text>
+                      <text x="45" y="49.5">&#xE0A2;</text><text x="127" y="47">&#xE0A2;</text>
+                      <text x="45" y="103">&#xE0A2;</text><text x="127" y="113">&#xE0A2;</text>
+                      <text class="voice-leading-note-name" x="49" y="15">F</text><text class="voice-leading-note-name" x="131" y="15">E</text>
+                      <text class="voice-leading-note-name" x="49" y="64">B</text><text class="voice-leading-note-name" x="131" y="64">C</text>
+                      <text class="voice-leading-note-name is-bass" x="49" y="130">G</text><text class="voice-leading-note-name is-bass" x="131" y="130">C</text>
+                    </svg>
+                    <p class="voice-leading-distance"><strong>G → C</strong> 下行纯五度</p>
+                  </figure>
+                  <figure class="voice-leading-panel">
+                    <figcaption>D♭7 → C</figcaption>
+                    <svg class="inline-staff voice-leading-staff" viewBox="0 0 175 134" role="img" aria-label="F4 下行半音到 E4，C♭4 上行半音到 C4，低音 D♭2 下行半音到 C2">
+                      <path class="inline-staff-lines" d="M6 22H169 M6 27H169 M6 32H169 M6 37H169 M6 42H169 M6 83H169 M6 88H169 M6 93H169 M6 98H169 M6 103H169"/>
+                      <text x="10" y="37">&#xE050;</text><text x="10" y="88">&#xE062;</text>
+                      <path d="M42 47h13 M124 47h13 M42 108h13 M124 108h13 M124 113h13"/>
+                      <path class="voice-leading-connector" d="M58 39.5L115 42 M111 39.4L115 42 111 44.6"/>
+                      <path class="voice-leading-connector" d="M58 47L115 47 M111 44.4L115 47 111 49.6"/>
+                      <path class="voice-leading-connector is-bass" d="M58 110.5L115 113 M111 110.4L115 113 111 115.6"/>
+                      <text x="45" y="39.5">&#xE0A2;</text><text x="127" y="42">&#xE0A2;</text>
+                      <text x="36.5" y="47">&#xE260;</text><text x="45" y="47">&#xE0A2;</text><text x="118.5" y="47">&#xE261;</text><text x="127" y="47">&#xE0A2;</text>
+                      <text x="36.5" y="110.5">&#xE260;</text><text x="45" y="110.5">&#xE0A2;</text><text x="127" y="113">&#xE0A2;</text>
+                      <text class="voice-leading-note-name" x="49" y="15">F</text><text class="voice-leading-note-name" x="131" y="15">E</text>
+                      <text class="voice-leading-note-name" x="49" y="64">C♭</text><text class="voice-leading-note-name" x="131" y="64">C</text>
+                      <text class="voice-leading-note-name is-bass" x="49" y="130">D♭</text><text class="voice-leading-note-name is-bass" x="131" y="130">C</text>
+                    </svg>
+                    <p class="voice-leading-distance is-chromatic"><strong>D♭ → C</strong> 下行半音</p>
+                  </figure>
+                </div>
+              </article>
+
+              <article class="format-item" id="chord-revision-sample">
+                <h3>重配和声对照谱</h3>
+                <p class="format-reuse">组合<a href="#table-sample">教学表</a>、<a href="#voice-leading-sample">走向谱</a>与<a href="#score-base-sample">可播放谱</a>。选中版本时，三处同步更新。</p>
+                <div id="library-chord-revision"></div>
+              </article>
+
+              <article class="format-item" id="dominant-tension-sample">
+                <h3>和声落点推导图</h3>
+                <p class="format-reuse">复用<a href="#score-base-sample">播放器</a>。切换大、小调时，音级、延伸音和试听顺序同步。</p>
+                <div id="library-tension" class="music-demo dominant-tension">
+                  <div class="music-demo-toolbar">
+                    <h4>目标调与属七的延伸音</h4>
+                    <div class="score-choice-buttons" data-tension-choices role="group" aria-label="目标调"></div>
+                  </div>
+                  <div class="dominant-tension-content">
+                    <div class="dominant-tension-scale">
+                      <p><strong data-tension-field="scale" aria-live="polite">C 大调</strong>音阶</p>
+                      <ol aria-label="从主音起的七个音级">
+                        <li><small>1</small><span data-tension-degree>C</span></li>
+                        <li><small>2</small><span data-tension-degree>D</span></li>
+                        <li data-linked-tone><small>3</small><span data-tension-degree>E</span></li>
+                        <li><small>4</small><span data-tension-degree>F</span></li>
+                        <li><small>5</small><span data-tension-degree>G</span></li>
+                        <li data-linked-tone><small>6</small><span data-tension-degree>A</span></li>
+                        <li><small>7</small><span data-tension-degree>B</span></li>
+                      </ol>
+                    </div>
+                    <div class="dominant-tension-links">
+                      <div>
+                        <span data-tension-field="third-role">主和弦的大三音</span>
+                        <strong data-tension-field="third-note">E</strong>
+                        <b data-tension-field="third-tension">在 G7 上是 13</b>
+                        <small data-tension-field="third-alteration" hidden></small>
+                      </div>
+                      <div>
+                        <span data-tension-field="sixth-role">大调音阶的第六级（6）</span>
+                        <strong data-tension-field="sixth-note">A</strong>
+                        <b data-tension-field="sixth-tension">在 G7 上是 9</b>
+                        <small data-tension-field="sixth-alteration" hidden></small>
+                      </div>
+                    </div>
+                    <p class="dominant-tension-label">演奏顺序</p>
+                    <div class="dominant-tension-route">
+                      <label><span><input type="checkbox" data-tension-toggle aria-label="加二级和弦" disabled> 加二级</span><strong data-tension-field="preparation">Dm7</strong></label>
+                      <span aria-hidden="true">→</span>
+                      <div><small>五级的属七</small><strong data-tension-field="dominant">G7</strong><small data-tension-field="extensions">9、13</small></div>
+                      <span aria-hidden="true">→</span>
+                      <div><small>落点</small><strong data-tension-field="target">C</strong><small data-tension-field="target-notes">C–E–G</small></div>
+                    </div>
+                  </div>
+                  <figure data-tension-score aria-label="G7 到 C 的试听"></figure>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="format-family" aria-labelledby="arrangement-grid-samples">
+            <h2 id="arrangement-grid-samples">编曲网格与锣鼓经</h2>
+            <p class="format-family-intro">等宽拍格显示起音、延续和重音。加上播放器后，拍格跟随播放进度。</p>
+            <div class="format-items">
+              <article class="format-item" id="arrangement-grid-base">
+                <h3>编曲网格</h3>
+                <p class="format-reuse">贝斯的色块表示持续时值，底鼓的圆点只标起音。</p>
+                <div id="library-grid"></div>
+              </article>
+
+              <article class="format-item">
+                <h3>可播放编曲网格</h3>
+                <p class="format-reuse">同一份<a href="#arrangement-grid-base">网格拍点</a>生成演奏轨，播放时高亮当前拍格。</p>
+                <figure class="arrangement-example"><figcaption>贝斯与底鼓</figcaption><div id="arrangement-grid-sample"></div></figure>
+              </article>
+
+              <article class="format-item" id="gong-syllable-sample">
+                <h3>锣鼓经对照谱</h3>
+                <p class="format-reuse">沿用<a href="#arrangement-grid-sample">可播放编曲网格</a>，新增口诀与击法文字。只由乐器行发声。</p>
+                <figure class="arrangement-example"><figcaption>锣、钹的分击与合击</figcaption><div id="library-gong-grid"></div></figure>
+              </article>
+            </div>
+          </section>
+
+          <section class="format-family" aria-labelledby="book-samples">
+            <h2 id="book-samples">书目专用版式</h2>
+            <p class="format-family-intro">这些样例使用指定书目的材料或排版，取自各章的实际样例。</p>
+            <div class="format-items">
+              <div class="format-pair">
+                <details class="lesson-aside">
+                  <summary>复调音乐 · 倒影轴</summary>
+                  <div class="lesson-aside-content">
+                    <p class="format-reuse">在<a href="#inline-staff-sample">静态谱</a>上加轴线，对齐原形与倒影。</p>
+                    <figure class="counterpoint-axis-diagram">
+                      <figcaption>以 A 为轴的等距离倒影</figcaption>
+                      <div class="counterpoint-axis-key" aria-hidden="true"><span>原形</span><span class="counterpoint-axis-image">倒影</span></div>
+                      <svg class="inline-staff counterpoint-axis-staff" viewBox="0 0 360 113" role="img" aria-label="高音谱表上的红线为 A4 轴。G4 向上对应 B4，A4 保持原位，B4 向下对应 G4，D5 向下对应 E4。">
+                        <defs>
+                          <marker id="a-axis-arrow" class="counterpoint-axis-arrow" viewBox="0 0 4 4" refX="4" refY="2" markerWidth="4" markerHeight="4" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0L4 2L0 4Z"/></marker>
+                        </defs>
+                        <path class="inline-staff-lines" d="M4 33H306 M4 45H306 M4 57H306 M4 69H306 M4 81H306"/>
+                        <text x="12" y="69">&#xE050;</text>
+                        <path class="counterpoint-axis-line" d="M42 63H309"/>
+                        <text class="counterpoint-axis-label" x="315" y="67">A4 轴</text>
+                        <path class="counterpoint-axis-connection" d="M76 67V58" marker-end="url(#a-axis-arrow)"/>
+                        <path class="counterpoint-axis-connection" d="M204 59V68" marker-end="url(#a-axis-arrow)"/>
+                        <path class="counterpoint-axis-connection" d="M268 47V80" marker-end="url(#a-axis-arrow)"/>
+                        <g text-anchor="middle">
+                          <g><text x="63" y="69">&#xE0A4;</text><text x="127" y="63">&#xE0A4;</text><text x="191" y="57">&#xE0A4;</text><text x="255" y="45">&#xE0A4;</text></g>
+                          <g class="counterpoint-axis-image"><text x="89" y="57">&#xE0A4;</text><text x="153" y="63">&#xE0A4;</text><text x="217" y="69">&#xE0A4;</text><text x="281" y="81">&#xE0A4;</text></g>
+                          <g class="counterpoint-axis-pair"><text x="76" y="105">G → B</text><text x="140" y="105">A → A</text><text x="204" y="105">B → G</text><text x="268" y="105">D → E</text></g>
+                        </g>
+                      </svg>
+                    </figure>
+                  </div>
+                </details>
+                <details class="lesson-aside">
+                  <summary>歌曲写作 · 谱头与歌词</summary>
+                  <div class="lesson-aside-content">
+                    <p class="format-reuse">在<a href="#inline-staff-sample">静态谱</a>上加题名、署名、速度和对齐的唱词。</p>
+                    <figure class="song-title-sample">
+                      <figcaption>五线谱题头</figcaption>
+                      <div class="song-title-paper">
+                        <div class="song-title-top">
+                          <div class="song-title-heading"><h4>灯火</h4><p>女声独唱</p></div>
+                          <p class="song-title-byline">甲 词<br>乙 曲</p>
+                        </div>
+                        <p class="song-title-markings"><span>中板　♩＝100</span><span>深情地</span></p>
+                        <svg class="inline-staff song-title-notation" viewBox="0 0 280 62" role="img" aria-label="高音谱号后写两个升号及四四拍。D4、E4、升 F4、D4 各一拍，配词疏灯照岸。">
+                          <path class="inline-staff-lines" d="M2 14H278 M2 19H278 M2 24H278 M2 29H278 M2 34H278"/>
+                          <text x="5" y="29">&#xE050;</text>
+                          <text x="24" y="14">&#xE262;</text><text x="31" y="21.5">&#xE262;</text>
+                          <text x="44" y="19">&#xE084;</text><text x="44" y="29">&#xE084;</text>
+                          <path d="M80 36.5V21.5 M135 34V19 M190 31.5V16.5 M245 36.5V21.5 M278 14V34"/>
+                          <text x="74" y="36.5">&#xE0A4;</text><text x="129" y="34">&#xE0A4;</text>
+                          <text x="184" y="31.5">&#xE0A4;</text><text x="239" y="36.5">&#xE0A4;</text>
+                          <text class="song-title-lyrics" y="56"><tspan x="77">疏</tspan><tspan x="132">灯</tspan><tspan x="187">照</tspan><tspan x="242">岸</tspan></text>
+                        </svg>
+                      </div>
+                    </figure>
+                  </div>
+                </details>
+                <details class="lesson-aside">
+                  <summary>配器法 · 总谱的谱表顺序</summary>
+                  <div class="lesson-aside-content">
+                    <p class="format-reuse">复用谱线、谱号和标注，按乐器组排列多行谱表。</p>
+                    <figure class="notation-sample">
+                      <figcaption id="orchestra-layout-caption">双管乐队总谱的谱表顺序</figcaption>
+                      <svg class="orchestra-score" viewBox="0 0 355 498" role="img" aria-labelledby="orchestra-layout-caption orchestra-layout-desc">
+                        <desc id="orchestra-layout-desc">自上而下为木管四行、铜管五行、定音鼓和其他打击乐器、竖琴大谱表、弓弦五行。圆号和长号与大号各占两行。降 B 调单簧管标有两个升号。</desc>
+                        <defs><path id="score-staff" d="M114 0H349 M114 4H349 M114 8H349 M114 12H349 M114 16H349"/></defs>
+                        <path class="orchestra-bracket" d="M111 18h-3V112h3"/>
+                        <path class="orchestra-barline" d="M114 18V112M236 18V112"/>
+                        <g><text lang="it" class="orchestra-label" x="97" y="28">2 Flauti</text><use href="#score-staff" y="18"/><text class="orchestra-clef" x="120" y="30"></text><text class="orchestra-meter" x="143" y="26"></text><text class="orchestra-meter" x="143" y="34"></text></g>
+                        <g><text lang="it" class="orchestra-label" x="97" y="54">2 Oboi</text><use href="#score-staff" y="44"/><text class="orchestra-clef" x="120" y="56"></text><text class="orchestra-meter" x="143" y="52"></text><text class="orchestra-meter" x="143" y="60"></text></g>
+                        <g><text lang="it" class="orchestra-label" x="97" y="80">2 Clarinetti (B♭)</text><use href="#score-staff" y="70"/><text class="orchestra-clef" x="120" y="82"></text><text class="orchestra-key" x="138" y="70"></text><text class="orchestra-key" x="144" y="76"></text><text class="orchestra-meter" x="155" y="78"></text><text class="orchestra-meter" x="155" y="86"></text></g>
+                        <g><text lang="it" class="orchestra-label" x="97" y="106">2 Fagotti</text><use href="#score-staff" y="96"/><text class="orchestra-clef" x="120" y="100"></text><text class="orchestra-meter" x="143" y="104"></text><text class="orchestra-meter" x="143" y="112"></text></g>
+                        <path class="orchestra-bracket" d="M111 126h-3V246h3"/>
+                        <path class="orchestra-barline" d="M114 126V246M236 126V246"/>
+                        <g><text lang="it" class="orchestra-label" x="97" y="148">4 Corni (F)</text><use href="#score-staff" y="126"/><text class="orchestra-clef" x="120" y="138"></text><text class="orchestra-meter" x="143" y="134"></text><text class="orchestra-meter" x="143" y="142"></text></g>
+                        <g><use href="#score-staff" y="152"/><text class="orchestra-clef" x="120" y="164"></text><text class="orchestra-meter" x="143" y="160"></text><text class="orchestra-meter" x="143" y="168"></text></g>
+                        <g><text lang="it" class="orchestra-label" x="97" y="188">2 Trombe (B♭)</text><use href="#score-staff" y="178"/><text class="orchestra-clef" x="120" y="190"></text><text class="orchestra-meter" x="143" y="186"></text><text class="orchestra-meter" x="143" y="194"></text></g>
+                        <g><text lang="it" class="orchestra-label" x="97" y="226"><tspan x="97" y="221">3 Tromboni</tspan><tspan x="97" y="234">e Tuba</tspan></text><use href="#score-staff" y="204"/><text class="orchestra-clef" x="120" y="212"></text><text class="orchestra-meter" x="143" y="212"></text><text class="orchestra-meter" x="143" y="220"></text></g>
+                        <g><use href="#score-staff" y="230"/><text class="orchestra-clef" x="120" y="234"></text><text class="orchestra-meter" x="143" y="238"></text><text class="orchestra-meter" x="143" y="246"></text></g>
+                        <path class="orchestra-bracket" d="M111 260h-3V294h3"/>
+                        <path class="orchestra-barline" d="M114 260V294M236 260V294"/>
+                        <g><text lang="it" class="orchestra-label" x="97" y="270">Timpani</text><use href="#score-staff" y="260"/><text class="orchestra-clef" x="120" y="264"></text><text class="orchestra-meter" x="143" y="268"></text><text class="orchestra-meter" x="143" y="276"></text></g>
+                        <g><text lang="it" class="orchestra-label" x="97" y="296">Batteria</text><path d="M114 294H349"/></g>
+                        <path class="orchestra-bracket" d="M110 316C101 320 108 334 102 337C108 340 101 354 110 358"/>
+                        <path class="orchestra-barline" d="M114 316V358M236 316V358"/>
+                        <g><text lang="it" class="orchestra-label" x="97" y="338">Arpa</text><use href="#score-staff" y="316"/><text class="orchestra-clef" x="120" y="328"></text><text class="orchestra-meter" x="143" y="324"></text><text class="orchestra-meter" x="143" y="332"></text></g>
+                        <g><use href="#score-staff" y="342"/><text class="orchestra-clef" x="120" y="346"></text><text class="orchestra-meter" x="143" y="350"></text><text class="orchestra-meter" x="143" y="358"></text></g>
+                        <path class="orchestra-bracket" d="M111 372h-3V492h3"/>
+                        <path class="orchestra-barline" d="M114 372V492M236 372V492"/>
+                        <g><text lang="it" class="orchestra-label" x="97" y="382">Violini I</text><use href="#score-staff" y="372"/><text class="orchestra-clef" x="120" y="384"></text><text class="orchestra-meter" x="143" y="380"></text><text class="orchestra-meter" x="143" y="388"></text></g>
+                        <g><text lang="it" class="orchestra-label" x="97" y="408">Violini II</text><use href="#score-staff" y="398"/><text class="orchestra-clef" x="120" y="410"></text><text class="orchestra-meter" x="143" y="406"></text><text class="orchestra-meter" x="143" y="414"></text></g>
+                        <g><text lang="it" class="orchestra-label" x="97" y="434">Viole</text><use href="#score-staff" y="424"/><text class="orchestra-clef" x="120" y="432"></text><text class="orchestra-meter" x="143" y="432"></text><text class="orchestra-meter" x="143" y="440"></text></g>
+                        <g><text lang="it" class="orchestra-label" x="97" y="460">Violoncelli</text><use href="#score-staff" y="450"/><text class="orchestra-clef" x="120" y="454"></text><text class="orchestra-meter" x="143" y="458"></text><text class="orchestra-meter" x="143" y="466"></text></g>
+                        <g><text lang="it" class="orchestra-label" x="97" y="486">Contrabbassi</text><use href="#score-staff" y="476"/><text class="orchestra-clef" x="120" y="480"></text><text class="orchestra-meter" x="143" y="484"></text><text class="orchestra-meter" x="143" y="492"></text></g>
+                      </svg>
+                    </figure>
+                  </div>
+                </details>
+              </div>
+              <ul class="format-course-links">
+                <li><a href="./books/music-theory/chapter-3.html#pitch-octaves">基本乐理 · 全音列的谱键对照</a><span>大谱表、音列分组和琴键共用坐标。</span></li>
+                <li><a href="./books/counterpoint/counterpoint-4.html">复调音乐 · 倒影轴与调式</a><span>静态谱加倒影轴、连线和调式标注。</span></li>
+                <li><a href="./books/orchestration/orchestration-1.html#orchestra-layout-caption">配器法 · 总谱编制</a><span>谱表与音乐符号按乐器组排成总谱。</span></li>
+                <li><a href="./books/songwriting/songwriting-reference.html">歌曲写作 · 乐谱写法与谱头</a><span>题名、署名、速度和谱面组成成品谱头。</span></li>
+                <li><a href="./books/arrangement/arrangement-case.html">图解编曲 · 曲式与网格联动</a><span>曲式分析谱的播放进度驱动同一个编曲网格。</span></li>
+                <li><a href="./books/genre-arrangement/genre-arrangement-9.html#genre-punk-arrangement">乐风编曲 · 多轨乐队谱</a><span>各轨使用独立音色，编曲和参考版共用同一个播放器。</span></li>
+                <li><a href="./books/humor-collection/">休闲阅读 · 分卷与索引</a><span>基于站点主题和排版增加分卷、索引筛选。</span></li>
+              </ul>
+            </div>
+          </section>
         </div>
-        <div class="music-demo" id="library-writing-steps">
-          <div class="music-demo-toolbar">
-            <h3>分步写作谱 · 卡农</h3>
-            <div class="score-choice-buttons" data-writing-choices role="group" aria-label="写作阶段"></div>
-          </div>
-          <output class="music-demo-cue" data-writing-description></output>
-          <figure data-writing-score aria-label="三小节卡农的写作步骤"></figure>
-        </div>
-        <h3 id="chord-revision-sample">重配和声对照谱</h3>
-        <p>保留同一旋律，把两版和弦按小节与拍位排在同一张表上。高亮标出改动，版本切换与五线谱共用一个播放键。<a href="./books/reharmonization/reharmonization-5.html#technique-50">查看逐拍重配示例</a></p>
-        <h3 id="voice-leading-sample">声部走向谱</h3>
-        <p>在五线谱上用箭头连接同一声部前后的音。并列两种进行时，共同的声部放在对应位置，低音单独标出。<a href="./books/style-reharm/style-reharm-1.html#style-jazz-tritone">三全音替代</a> · <a href="./books/style-reharm/style-reharm-2.html#bossa-line-staves">同一条半音线的两个位置</a> · <a href="./books/style-reharm/style-reharm-7.html#jpop-contrary-staves">同向与反向</a> · <a href="./books/reharmonization/reharmonization-4.html#reharm-prelude-staves">固定低音上的两条顶音线</a></p>
-        <p>走向谱也可放进重配和声对照谱。选同一个版本时，走向图、和弦表与播放器会同步。<a href="./books/reharmonization/reharmonization-4.html#reharm-prelude-comparison">查看联动对照</a></p>
-        <h3 id="dominant-tension-sample">和声落点推导图</h3>
-        <p>从目标音阶取出两个音，对照它们在属七和弦上的名称。切换目标调时，音阶、对应的延伸音和演奏顺序一起更新。<a href="./books/style-reharm/style-reharm-1.html#style-jazz-tensions">查看目标调与属七延伸音示例</a></p>
-      </section>
-      <section class="course-sample" aria-labelledby="arrangement-grid-samples">
-        <h2 class="sample-title" id="arrangement-grid-samples">编曲网格</h2>
-        <p>横向对齐拍点和拍内细分。圆点标出起音，大点表示重音，色块的长度表示持续时间。播放时高亮当前拍格。</p>
-        <figure class="arrangement-example">
-          <figcaption>贝斯与底鼓的起音</figcaption>
-          <div id="arrangement-grid-sample"></div>
-        </figure>
-        <h3 id="gong-syllable-sample">锣鼓经对照谱</h3>
-        <p>口读字与分乐器击法共用拍格。口读行只显示口诀，击法行标明放响、掩音等动作。播放时各行随同一拍格高亮。<a href="./books/chinese-orchestration/chinese-orchestration-7.html#gong-syllable-score">查看打溜子锣鼓经</a></p>
-      </section>
-      <section class="course-sample" aria-labelledby="guitar-chord-samples">
-        <h2 class="sample-title" id="guitar-chord-samples">吉他和弦指板</h2>
-        <p>从左到右是第 6 弦到第 1 弦。空心圆为空弦，× 表示不弹，横条表示横按。R 标出和弦根音。</p>
-        <div id="guitar-chord-diagram-sample"></div>
-      </section>
-      <section class="course-sample" aria-labelledby="fretboard-samples">
-        <h2 class="sample-title" id="fretboard-samples">弦乐器指板图</h2>
-        <p>横向是品位，纵向是弦，方框标出主音。这两段音都依次相隔两品、两品和一品，C–D–E–F 在第 5 弦，G–A–B–C 在第 4 弦。</p>
-        <figure id="fretboard-sample">
-          <figcaption>C 大调的两段四音排列</figcaption>
-        </figure>
-      </section>
-      <section class="course-sample" aria-labelledby="control-samples">
-        <h2 class="sample-title" id="control-samples">控件与状态</h2>
-        <div class="music-demo" id="library-route">
-          <div class="music-demo-toolbar">
-            <h3>演奏路线</h3>
-            <label>记法
-              <select><option value="repeat">一对反复线</option><option value="straight">顺序演奏</option></select>
-            </label>
-          </div>
-          <div data-route-staff></div>
-          <ol class="route-sequence" aria-label="已经演奏的小节"></ol>
-          <output class="music-demo-cue"></output>
-          <div class="route-actions">
-            <button type="button" data-route-back>上一步</button>
-            <button type="button" data-route-next>下一步</button>
-            <button type="button" data-route-reset>重置</button>
-          </div>
-        </div>
-        <div class="score-state-samples">
-          <figure class="score-example">
-            <figcaption>加载中</figcaption>
-            <button class="score-playback" type="button" aria-label="播放谱例" disabled><span class="score-playback-icon" aria-hidden="true"></span></button>
-            <p class="score-status">正在加载谱例…</p>
-          </figure>
-          <figure class="score-example">
-            <figcaption>加载失败</figcaption>
-            <button class="score-playback" type="button" aria-label="播放谱例" disabled><span class="score-playback-icon" aria-hidden="true"></span></button>
-            <p class="score-status">谱例加载失败，请刷新页面重试。</p>
-          </figure>
-        </div>
-      </section>
       </div>
     </main>
     <script type="module" src="./format-library.js"></script>

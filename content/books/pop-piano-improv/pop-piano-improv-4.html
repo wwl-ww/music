@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第四章 为歌曲配和弦｜流行钢琴即兴演奏自学教程</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <link rel="stylesheet" href="../../shared/formats/accompaniment-patterns.css">
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <script src="../../shared/themes.js"></script>
+    <script type="module" src="./pop-piano-improv-4.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">流行钢琴即兴演奏自学教程</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter">
+      <h1>第四章 为歌曲配和弦</h1>
+      <p class="intro">旋律唱到 F，左手可以弹 F，也可以弹含 F 的 Dm 或 G7。三种和弦都容得下这个音，走向却不一样。配和弦要同时判断眼前旋律和前后走向。本章沿用同一段原创旋律，从正三和弦的骨架写到改变低音与调性感的版本。</p>
+      <p>给没有伴奏的旋律设计和声，叫<strong>配和弦</strong>。从已有录音辨认出实际伴奏，叫<strong>听写和弦</strong>。听写时也可以用常见的级数走向帮助判断候选，再用实际低音和和弦音验证。以下大谱表的上方是右手旋律，下方是左手和弦，和弦名称标在开始的拍点上。</p>
+
+      <section aria-labelledby="lesson-16">
+        <h2 id="lesson-16">第 16 课 正三和弦</h2>
+        <p>建在主音、下属音、属音上的三个三和弦叫正三和弦。C 大调用 C、F、G，三者合起来覆盖七个音级。A 自然小调用 Am、Dm、Em。A 和声小调升 G 为 G♯，属和弦变成 E，导音 G♯ 向 A 的半音上行使回到 Am 的方向更明确。</p>
+        <ol>
+          <li><strong>确定调性。</strong>看调号、句尾停留和反复出现的骨干音。示范的末句由 B4 走向 C5，先用 C 大调建立候选池。</li>
+          <li><strong>安排换和弦的节奏。</strong>二拍子、四拍子可先试每两拍或每四拍一换，三拍子可先试每三拍或每六拍一换。跨小节延续要看乐句需要。</li>
+          <li><strong>找出这一组中的主要旋律音。</strong>优先看长音、反复出现的音和有重音的音。四拍子通常第 1 拍最强、第 3 拍次强，拍内前半拍通常比后半拍更稳。第 1 小节的 D5 只在第 2 拍前半短暂经过，后半拍到 E5，C 可以支撑这一组。</li>
+          <li><strong>比较相邻位置。</strong>完整乐段常用主和弦建立起点或收束，乐句中间也可以停在属和弦。示范用 F 支撑第 1 小节后半的 F5，再经 G 回到 C。需要维持同一功能时，同一个和弦可以多留几拍。</li>
+        </ol>
+        <figure class="arrangement-example" id="primary-harmony-beats">
+          <figcaption>第一小节的旋律骨干与换弦拍点</figcaption>
+          <div data-harmony-grid></div>
+        </figure>
+        <p>C 与 F 都含句首的 C5。继续看同一组后半的 E5，就能分出哪一个和弦能同时托住 C5、E5。第 3 拍落到长音 F5 时，F 又成为更直接的选择。</p>
+        <div class="music-demo" id="primary-harmony">
+          <div class="music-demo-toolbar">
+            <h3>旋律骨干与换和弦的拍点</h3>
+            <div class="score-choice-buttons" data-writing-choices aria-label="谱例版本" role="group"></div>
+          </div>
+          <output class="music-demo-cue" data-writing-description></output>
+          <figure data-writing-score aria-label="旋律骨干与换和弦的拍点"></figure>
+        </div>
+        <p>有些乐句的重心在关系大调与关系小调之间移动。一个落在 C 的长音可以是 C 的根音，也可以是 Am 的三音。低音、属和弦与结束方式共同决定主音。若下一句转向另一重心，可以分句确定调性，再分别使用当地的正三和弦。</p>
+        <div class="music-demo" id="relative-centers">
+          <div class="music-demo-toolbar">
+            <h3>共有音旋律的大调与小调配法</h3>
+            <div class="score-choice-buttons" data-writing-choices aria-label="谱例版本" role="group"></div>
+          </div>
+          <output class="music-demo-cue" data-writing-description></output>
+          <figure data-writing-score aria-label="共有音旋律的大调与小调配法"></figure>
+        </div>
+        <details class="lesson-aside">
+          <summary>三拍子小调的正三和弦走向</summary>
+          <div class="lesson-aside-content">
+            <p>A 小调的起句和落点都可用 Am，中间经 Dm 离开主和弦。E 中的 G♯ 在第 3 小节产生导音张力，向第 4 小节的 A 解决。这里每个和弦写一整小节，三拍都属于同一个和弦。</p>
+            <div id="minor-primary-pattern"></div>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="lesson-17">
+        <h2 id="lesson-17">第 17 课 副三和弦</h2>
+        <p>在第二、三、六、七音级上叠三度得到副三和弦。把它们加进候选池，同一主要旋律音就有更多和弦可选。C 大调的 F 可以属于 F、Dm 和 Bdim。F 与 Dm 都含 F、A，低音分别给出 F 和 D。Bdim 还带 B 与 F 形成的减五度，接 C 时容易方向明确，适合需要属功能的地方。</p>
+        <table class="lesson-table">
+          <caption>大小调的正三和弦与副三和弦</caption>
+          <thead><tr><th scope="col">调式</th><th scope="col">正三和弦</th><th scope="col">副三和弦</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">C 大调</th><td>C、F、G</td><td>Dm、Em、Am、Bdim</td></tr>
+            <tr><th scope="row">A 自然小调</th><td>Am、Dm、Em</td><td>Bdim、C、F、G</td></tr>
+            <tr><th scope="row">A 和声小调</th><td>Am、Dm、E</td><td>Bdim、Caug、F、G♯dim</td></tr>
+          </tbody>
+        </table>
+        <div class="voice-leading-voicings" id="secondary-triad-coverage" role="group" aria-label="F 和 Dm 中两个骨干音的落点">
+          <figure class="notation-sample keyboard-example">
+            <figcaption><strong>F</strong> · F、A、C</figcaption>
+            <div data-triad-keys="F"></div>
+          </figure>
+          <figure class="notation-sample keyboard-example">
+            <figcaption><strong>Dm</strong> · D、F、A</figcaption>
+            <div data-triad-keys="Dm"></div>
+          </figure>
+        </div>
+        <p>圆点标出 F、A 两个共同音，菱形标出各自不同的和弦音。键盘统一用一个八度呈现音名，下方谱例保留真实音区。</p>
+        <table class="lesson-table">
+          <caption>第 2 小节的主要音与候选</caption>
+          <thead><tr><th scope="col">候选</th><th scope="col">包含的骨干音</th><th scope="col">连接用途</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">F 或 Dm</th><td>A5、F5</td><td>都能接 G，分别是 IV 和 ii。</td></tr>
+            <tr><th scope="row">Am</th><td>A5</td><td>可作 vi，F5 需要作为短暂的和弦外音处理。</td></tr>
+            <tr><th scope="row">Bdim</th><td>F5</td><td>若 F 单独成为主要音，可选 vii° 引向 C。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="secondary-triads">
+          <div class="music-demo-toolbar">
+            <h3>F 与 Dm 的共同音和低音</h3>
+            <div class="score-choice-buttons" data-writing-choices aria-label="谱例版本" role="group"></div>
+          </div>
+          <output class="music-demo-cue" data-writing-description></output>
+          <figure data-writing-score aria-label="F 与 Dm 的共同音和低音"></figure>
+        </div>
+        <p>第 2 小节第 1 拍是 F5，第 3 拍的 A5 持续两拍。弱拍上的 G5 短暂离开 F5 又返回，可保留和弦。若乐句的重心移到 A 小调，Dm 可以接 E，当地的 Bdim–E 则是 ii°–V，最后可回 Am。</p>
+      </section>
+
+      <section aria-labelledby="lesson-18">
+        <h2 id="lesson-18">第 18 课 和弦的功能与连接</h2>
+        <table class="lesson-table">
+          <caption>主要功能和常见成员</caption>
+          <thead><tr><th scope="col">功能</th><th scope="col">C 大调示例</th><th scope="col">常见用法</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">主</th><td>I 的 C</td><td>交代中心。iii 的 Em、vi 的 Am 都与 C 共享两个音，在适当语境下延展或暂代主功能。</td></tr>
+            <tr><th scope="row">下属</th><td>IV 的 F、ii 的 Dm</td><td>离开主和弦，也常引向属和弦。IV 与 ii 可以连用。</td></tr>
+            <tr><th scope="row">属</th><td>V 的 G、G7，vii° 的 Bdim</td><td>推动音乐回到主和弦。G7 的 B 倾向上行到 C，F 倾向下行到 E。</td></tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="harmonic-function-route">
+          <div class="music-demo-toolbar"><h3>主功能延展与终止走向</h3></div>
+          <div class="timeline-frame" data-voice-timeline></div>
+          <output class="music-demo-cue" data-voice-description></output>
+        </div>
+        <p><strong>I–IV–V7–I</strong> 是一条完整路线。用 G7 给属功能增加 F，也让旋律的第四音级可以成为和弦音。段落中若以 V 为最后和弦，形成<strong>半终止</strong>，可以把落稳的位置留给下一句。V7 去 vi 也可以保留导音上行，此时 C 成了 Am 的三音，乐句暂时落在 Am 上。</p>
+        <div class="music-demo" id="harmonic-closure">
+          <div class="music-demo-toolbar">
+            <h3>同一乐句的三种收束</h3>
+            <div class="score-choice-buttons" data-writing-choices aria-label="谱例版本" role="group"></div>
+          </div>
+          <output class="music-demo-cue" data-writing-description></output>
+          <figure data-writing-score aria-label="同一乐句的三种收束"></figure>
+        </div>
+        <p>延展主功能时可以采用 I–iii–vi，也可交换 iii 与 vi 的位置，再接下属或属功能。V 接 IV 会削弱古典终止的方向，流行段落可有意用它继续循环，例如 C–G–F–G。Em、Am 的功能也要结合上下文判断，尤其在大小调边界含混时，可以分乐段确定重心。</p>
+      </section>
+
+      <section aria-labelledby="lesson-19">
+        <h2 id="lesson-19">第 19 课 使用高级和弦</h2>
+        <p>一个旋律音超出三和弦时，可以在同一根音上调整结构。想让主功能的 C 接纳 D，Cadd9 保留 C–E–G 并加 D，Cmaj9 还包含大七度 B。若 C 上方的旋律暂落在 F，Csus4 可让 F 暂代三音 E，等 F 回 E 时恢复 C。<strong>加九</strong>与<strong>挂四</strong>的区别在于前者加音，后者替换原来的三音。</p>
+        <p>七和弦可以保留原有功能并改变色彩，例如 F 变 Fmaj7，Dm 变 Dm7。Gadd9 中的 A 是加九音，和 G 三和弦共存。G7sus4 中 C 代替 B，后续变回 G7 时可听见 C 向 B 收拢，再由 B 引向 C。</p>
+        <div id="chord-colors">
+          <div class="voice-leading-staves" data-revision-diagrams>
+            <figure class="voice-leading-panel" data-revision-version="三和弦骨架">
+              <figcaption>C　G</figcaption>
+              <p class="voice-leading-distance">C–E–G<br>G–B–D</p>
+            </figure>
+            <figure class="voice-leading-panel" data-revision-version="加九、挂四与七音">
+              <figcaption>Cadd9　G7sus4</figcaption>
+              <p class="voice-leading-distance">D 加到 C 上。C 替代 G7 的 B，随后回 B。</p>
+            </figure>
+          </div>
+        </div>
+        <p>两种配法保留原来的根音走向。第 1 小节把经过的 D5 纳入 Cadd9，第 3 小节的 G7sus4 在第 3 拍改成 G7，回到 B。最后的 Cmaj9 可省略五音 G，给钢琴左手留出舒适的跨度。</p>
+        <p>旋律 D 在 Am 上短暂经过时，可以留在基本和弦之外。如果 D 停留较久，可以把它当作 Am11 的十一音，与 A–C–E–G 相配。加九、十一和十三可以扩充可用音，具体选择仍受相邻和弦和声部间距影响。</p>
+      </section>
+
+      <section aria-labelledby="lesson-20">
+        <h2 id="lesson-20">第 20 课 副属和弦</h2>
+        <p>把调内某个大、小三和弦临时当作主和弦，再在它之前放上自己的属和弦。后者称<strong>副属和弦</strong>，根音在目标根音上方纯五度，常加小七度成为副属七和弦。C 大调的 D7 指向 G，记作 V7/V。D7 的 F♯ 是 G 的临时导音。G 随后仍去 C，整段仍然可以明确属于 C 大调。</p>
+        <table class="lesson-table">
+          <caption>C 大调的常见副属七和弦</caption>
+          <thead><tr><th scope="col">目标</th><th scope="col">副属七</th><th scope="col">临时导音</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Dm</th><td>A7 · V7/ii</td><td>C♯ → D</td></tr>
+            <tr><th scope="row">Em</th><td>B7 · V7/iii</td><td>D♯ → E</td></tr>
+            <tr><th scope="row">F</th><td>C7 · V7/IV</td><td>E → F</td></tr>
+            <tr><th scope="row">G</th><td>D7 · V7/V</td><td>F♯ → G</td></tr>
+            <tr><th scope="row">Am</th><td>E7 · V7/vi</td><td>G♯ → A</td></tr>
+          </tbody>
+        </table>
+        <table class="lesson-table voice-leading-comparison" id="secondary-dominant-paths">
+          <caption>局部属到主的声部走向</caption>
+          <thead><tr><th scope="col">连接</th><th scope="col">导音上行</th><th scope="col">七音下行</th></tr></thead>
+          <tbody>
+            <tr>
+              <th scope="row">D7 → G<small>V7/V → V</small></th>
+              <td><div class="voice-leading-motion"><b>F♯3</b><span class="voice-leading-arrow">↗</span><b>G3</b></div><small>半音</small></td>
+              <td><div class="voice-leading-motion"><b>C4</b><span class="voice-leading-arrow">↘</span><b>B3</b></div><small>半音</small></td>
+            </tr>
+            <tr>
+              <th scope="row">A7 → Dm<small>V7/ii → ii</small></th>
+              <td><div class="voice-leading-motion"><b>C♯</b><span class="voice-leading-arrow">↗</span><b>D</b></div><small>半音</small></td>
+              <td><div class="voice-leading-motion"><b>G</b><span class="voice-leading-arrow">↘</span><b>F</b></div><small>全音</small></td>
+            </tr>
+            <tr>
+              <th scope="row">B7 → Em<small>A 小调 · V7/v → v</small></th>
+              <td><div class="voice-leading-motion"><b>D♯</b><span class="voice-leading-arrow">↗</span><b>E</b></div><small>半音</small></td>
+              <td><div class="voice-leading-motion"><b>A</b><span class="voice-leading-arrow">↘</span><b>G</b></div><small>全音</small></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="music-demo" id="secondary-dominant">
+          <div class="music-demo-toolbar">
+            <h3>在 G 前加入 D7</h3>
+            <div class="score-choice-buttons" data-writing-choices aria-label="谱例版本" role="group"></div>
+          </div>
+          <output class="music-demo-cue" data-writing-description></output>
+          <figure data-writing-score aria-label="在 G 前加入 D7"></figure>
+        </div>
+        <p>副属可借用前一个和弦的一部分时值。上例用第 2 小节的后两拍加入 D7，旋律延续 A5，整句长度照旧。若 F5 延长到了第 3 拍，就会与 D7 的 F♯ 产生明显摩擦。</p>
+        <p>同理，C–Dm–G–C 可以在 Dm 前加 A7，Dm 到 G 的下属接属路线仍在。A 自然小调的 Am–Em–Am 也可在 Em 前加 B7。D♯ 把听感暂时拉向 E，后面的 Am 把重心带回 A。</p>
+      </section>
+
+      <section aria-labelledby="lesson-21">
+        <h2 id="lesson-21">第 21 课 转位和弦</h2>
+        <p>转位改变的是最低音。G 的组成仍是 G–B–D，把 B 放到最低就写 G/B。F/C 把 F–A–C 的五音 C 放到最低。斜线前写和弦，斜线后写低音。三音在底是第一转位，五音在底是第二转位。</p>
+        <ul>
+          <li><strong>减小低音跳进。</strong>C–G–C 的低音可以是 C3–G2–C3。中间换成 G/B，低音变成 C3–B2–C3。C–F/C–C 还可把低音一直留在 C。</li>
+          <li><strong>改变重心或与下一和弦共同起作用。</strong>C/E 的低音 E 和上方 G 会让人联想到 Em，实际和弦音仍是 C、E、G。Am/C 也会因低音 C 与上方 E 而接近 C 的听感。终止处的 C/G 接 G，再接 C，前两个和弦共用 G 低音，上方 C 到 B、E 到 D 的移动使它们共同形成属功能。</li>
+          <li><strong>用短和弦接通低音。</strong>C–A7/C♯–Dm 可让低音 C–C♯–D 连续上行。A7/C♯ 同时是 Dm 的副属七和弦。把它放在短时值或弱拍，主和弦到 Dm 的行进仍清楚。</li>
+        </ul>
+        <div class="music-demo voice-leading-demo" id="bass-inversions">
+          <div class="music-demo-toolbar">
+            <h3>同一组和弦的低音走向</h3>
+            <div class="score-choice-buttons" data-writing-choices aria-label="谱例版本" role="group"></div>
+          </div>
+          <output class="music-demo-cue" data-writing-description></output>
+          <div class="voice-leading-staves voice-leading-phrases voice-leading-extended" id="bass-inversion-lines" role="group" aria-label="最后三个换弦点的最低音">
+            <figure class="voice-leading-panel voice-leading-phrase" data-bass-line="root"><figcaption>原位低音</figcaption></figure>
+            <figure class="voice-leading-panel voice-leading-phrase" data-bass-line="inverted"><figcaption>转位低音</figcaption></figure>
+          </div>
+          <figure data-writing-score aria-label="同一组和弦的低音走向"></figure>
+        </div>
+        <details class="lesson-aside">
+          <summary>转位版的级数、拍点和最低音</summary>
+          <div class="lesson-aside-content"><div id="inversion-harmony-pattern"></div></div>
+        </details>
+      </section>
+
+      <section aria-labelledby="lesson-22">
+        <h2 id="lesson-22">第 22 课 和声的非常规用法</h2>
+        <p>句首用 IV，旋律一开始就像是接着前面的话说下去。句尾停在 V 可以让下一句接着解决，停在 vi 则可以在落稳的旋律音下换一层小调色彩。结束的力度还取决于低音、持续时值和下一段是否立即进入。</p>
+        <p>同一低音也可以承托不同的结尾色彩。G7 接 C 或 Cm，右手末音仍落在 C5，左手的最低音也仍是 C3，只有主和弦三音 E 和 E♭ 不同。这种同主音的大小变化可以出现在乐句最后一刻。</p>
+        <p><strong>非功能和声</strong>可以用共同音、内声半音和主要旋律音组织连接。比如 Gm7 和 G7 只差 B♭ 与 B，两者在 D5、G5 下都成立，换成 Gm7 会减弱 B 向 C 的导音张力。后面用 Em7 托 B4、用 Fm6 托 C5，句末仍可凭旋律和节奏形成落点。</p>
+        <div id="open-harmony">
+          <div class="voice-leading-staves" data-revision-diagrams>
+            <figure class="voice-leading-panel" data-revision-version="主和弦首尾"><figcaption>C → … → C</figcaption><p class="voice-leading-distance">B4 上行到主音 C5。</p></figure>
+            <figure class="voice-leading-panel" data-revision-version="IV 起、vi 收"><figcaption>Fmaj7 → … → Am7</figcaption><p class="voice-leading-distance">末音 C5 成了 Am7 的三音。</p></figure>
+            <figure class="voice-leading-panel" data-revision-version="同主音改色"><figcaption>C → … → Cm</figcaption><p class="voice-leading-distance">保留末音 C5，左手 E3 降到 E♭3。</p></figure>
+            <figure class="voice-leading-panel" data-revision-version="色彩主导"><figcaption>Am7 → … → Fm6</figcaption><p class="voice-leading-distance">各主要旋律音在改配和弦中有落点，C5 成为 Fm6 的五音。</p></figure>
+          </div>
+        </div>
+        <aside class="lesson-callout"><p><strong>配和弦从乐句重心与换弦拍点出发。</strong>接着核对重音、长音和相邻和弦。要增强局部走向可用副属，要写顺滑的低音可用转位，要改变段落色彩再调整首尾和弦或连接原则。</p></aside>
+      </section>
+    </main>
+  </body>
+</html>

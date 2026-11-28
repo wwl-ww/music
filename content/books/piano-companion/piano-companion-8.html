@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>第八章 大调完全功能和声体系的即兴伴奏｜钢琴即兴伴奏宝典</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="../../shared/themes.css">
+    <link rel="stylesheet" href="../../shared/formats/formats.css">
+    <script src="../../shared/themes.js"></script>
+    <link rel="stylesheet" href="../../shared/chapter.css">
+    <link rel="stylesheet" href="./piano-companion.css">
+    <script type="module" src="./chapter-view.js"></script>
+    <script type="module" src="../../shared/chapter-layout.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="page-width">
+        <a class="chapter-home" href="./index.html">钢琴即兴伴奏宝典</a>
+        <button class="settings-button" type="button" popovertarget="settings">设置</button>
+        <div id="settings" popover>
+          <fieldset id="theme-choices">
+            <legend>主题配色</legend>
+            <label data-theme="paper"><input type="radio" name="theme" value="paper" checked><span>纸白</span></label>
+            <label data-theme="ivory"><input type="radio" name="theme" value="ivory"><span>米浆</span></label>
+            <label data-theme="mist"><input type="radio" name="theme" value="mist"><span>雾蓝</span></label>
+            <label data-theme="lilac"><input type="radio" name="theme" value="lilac"><span>淡紫</span></label>
+            <label data-theme="rose"><input type="radio" name="theme" value="rose"><span>烟粉</span></label>
+            <label data-theme="mint"><input type="radio" name="theme" value="mint"><span>薄荷</span></label>
+            <label data-theme="amber"><input type="radio" name="theme" value="amber"><span>琥珀</span></label>
+            <label data-theme="slate"><input type="radio" name="theme" value="slate"><span>石墨</span></label>
+            <label data-theme="midnight"><input type="radio" name="theme" value="midnight"><span>午夜蓝</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </header>
+    <main class="page-width lesson-chapter" data-companion-chapter="8">
+      <h1>第八章 大调完全功能和声体系的即兴伴奏</h1>
+      <p class="intro">大调的 I、IV、V 能建立主、下属、属三种功能。加入 ii、iii、vi、vii° 后，同一种句法可以有不同的低音与明暗层次。编配时从乐句的落点向前安排，分辨哪些地方需要明确解决，哪些地方适合保留共同音或改变低音路线。</p>
+
+      <section aria-labelledby="major-harmonic-momentum">
+        <h2 id="major-harmonic-momentum">和声力度及其处理手法</h2>
+        <p><strong>和声力度</strong>是两个和弦相接时感到的推进强弱。少有共同音、后一个根音尚未出现、或两个和弦都是正三和弦，通常会让变化更鲜明。共同音越多，越容易把两次和声听成同一功能区内的延伸。这些判断针对和弦连接，实际听感还受拍位、低音和声部排列影响。</p>
+        <table class="lesson-table"><caption>C 大调的完全功能体系</caption><thead><tr><th scope="col">功能组</th><th scope="col">正三和弦</th><th scope="col">可加入的副三和弦</th></tr></thead><tbody>
+          <tr><th scope="row">主功能 T</th><td>I · C</td><td>vi · Am、iii · Em</td></tr>
+          <tr><th scope="row">下属功能 S</th><td>IV · F</td><td>ii · Dm、vi · Am</td></tr>
+          <tr><th scope="row">属功能 D</th><td>V · G</td><td>iii · Em、vii° · Bdim</td></tr>
+        </tbody></table>
+        <p>vi 的 C、E 属于主和弦，A、C 又与 IV 共用。iii 的 E、G 与 I 共用，G、B 与 V 共用。因此 vi、iii 可以承担双重功能，实际归属还要由前后和弦和落点来判断。T–S–D–T 加入副三和弦后，可扩成 I–iii–vi–IV–ii–V–V7–I。</p>
+        <table class="lesson-table"><caption>以根音关系估计和声力度</caption><thead><tr><th scope="col">根音关系</th><th scope="col">常见听感</th><th scope="col">大调示例</th></tr></thead><tbody>
+          <tr><th scope="row">二度或七度</th><td>调内相邻三和弦没有共同音，色彩切换明显。</td><td>IV–iii–ii–I</td></tr>
+          <tr><th scope="row">四度或五度</th><td>上四度、下五度较强。反向较弱，I–V 因主属关系仍有强方向。</td><td>vi–ii–V–I</td></tr>
+          <tr><th scope="row">三度或六度</th><td>常有两个共同音。下三度半强，上三度较弱，后一个根音已经出现。</td><td>I–vi–IV–ii</td></tr>
+        </tbody></table>
+        <p>三类关系可以组合。I–vi–ii–V 先以三度延伸，再用四度推进。I–ii–V 把二度和四度接在一起。I–iii–IV–iii–ii–V 兼有三类关系。上二度也可用于小调，例如 III–iv–v。弱进行安排在句中时，随后一个明确的属前—属连接可以重新建立方向。</p>
+        <div class="music-demo companion-demo" id="major-common-tone-momentum" role="group" aria-labelledby="major-common-tone-momentum-title" data-companion-demo>
+          <div class="music-demo-toolbar">
+            <h3 id="major-common-tone-momentum-title">共同旋律下的下三度与上四度</h3>
+            <div class="score-choice-buttons" data-writing-choices></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">C 与 Am 共用 C、E，调性仍在主区，之后 ii–V7–I 才加快推进。</p>
+          <figure data-writing-score aria-label="共同旋律下的下三度与上四度"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="major-secondary-triads">
+        <h2 id="major-secondary-triads">副三和弦的常用手法</h2>
+        <p>副三和弦可替换同功能组的正三和弦，例如 ii–V 取代 IV–V。也可接在正三和弦之后延伸功能，例如 I–vi、IV–ii、V–iii。多组下三度连接可组成 I–vi–IV–ii。若要显出关系小调，ii–iii–vi 在 A 小调里可以读作 iv–v–i。</p>
+        <p>相似或重复的旋律可以改变配和弦。C、E 是 I 与 vi 的共同音，长 C 或 E 适合在两个根音之间转换。旋律是 A、C 时，vi 与 IV 都可承托。选择时要把整句的落点算进去。减少和声改动可保留旋律的辨识度，把变化集中在第二次出现的位置。</p>
+        <details class="lesson-aside"><summary>调内三度与借用三度</summary><div class="lesson-aside-content"><p>I 到 vi 改变的是调内和声。I 到 ♭III 则会出现同主音小调的色彩，在 C 大调中用 E♭ 替换 E。这样的色彩替换需要旋律允许 E♭，或避开和它相邻的 E 长音，后续也要交代回到原有中心的方法。</p></div></details>
+        <div class="music-demo companion-demo" id="major-motif-two-basses" role="group" aria-labelledby="major-motif-two-basses-title" data-companion-demo>
+          <div class="music-demo-toolbar">
+            <h3 id="major-motif-two-basses-title">重复乐句的 I 与 vi</h3>
+            <div class="score-choice-buttons" data-writing-choices></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">前两小节旋律与和声都原样返回，低音持续指向 C。</p>
+          <figure data-writing-score aria-label="重复乐句的 I 与 vi"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="major-supertonic">
+        <h2 id="major-supertonic">大调二级和弦</h2>
+        <p>ii 是由第 2、4、6 级构成的小三和弦，属下属功能组。它可接在 I、vi 或 IV 后，随后直接去 V，也可经重属再去 V。以 4 级作低音时得到 ii 的第一转位。C 大调中的 Dm/F 与 F 大三共享 F、A 和低音 F，常用来替代终止前的 IV。</p>
+        <table class="lesson-table"><caption>大调 ii 的位置与后续落点</caption><thead><tr><th scope="col">位置</th><th scope="col">进行</th><th scope="col">用途</th></tr></thead><tbody>
+          <tr><th scope="row">属准备</th><td>I、vi 或 IV → ii → V</td><td>可以在 ii 与 V 之间插入 V/V。</td></tr>
+          <tr><th scope="row">关系小调色彩</th><td>ii–iii–vi</td><td>在 A 小调听作 iv–v–i。</td></tr>
+          <tr><th scope="row">完全终止</th><td>ii 第一转位–V7–I</td><td>以同一个下属低音替换 IV。</td></tr>
+          <tr><th scope="row">较长的终止准备</th><td>IV–ii–终止四六–V7–I</td><td>先扩展下属，再用属低音上的主和弦音准备 V7。</td></tr>
+        </tbody></table>
+        <p>ii 也能出现在级进低音的途中，过渡到 I 或 I 的第一转位。其位置由连线决定。作为属准备的整段路线可以写成 I–IV–ii–V–V7–I，增加 V 的七音后才做最后一次解决。</p>
+        <div class="music-demo companion-demo" id="major-ii-six-cadence" role="group" aria-labelledby="major-ii-six-cadence-title" data-companion-demo>
+          <div class="music-demo-toolbar">
+            <h3 id="major-ii-six-cadence-title">同一个 F 低音的两种属准备</h3>
+            <div class="score-choice-buttons" data-writing-choices></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">F 与 A 稳住旋律，伴奏还有 C，形成 IV。B 上行到主音 C。</p>
+          <figure data-writing-score aria-label="同一个 F 低音的两种属准备"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="major-secondary-dominant">
+        <h2 id="major-secondary-dominant">大调重属和弦</h2>
+        <p>属三和弦、属七和弦或导和弦可以把调内另一个大、小三和弦暂时当成局部主和弦。减三和弦本身缺少稳定的主和弦音响，通常不作为这种目标。C 大调的 Dm 把 F 升成 F♯ 后成为 D，继续加 C 得到 D7。D 和 D7 是 G 的属与属七，也就是<strong>重属和弦</strong> V/V 与 V7/V。</p>
+        <p>重属对 G 承担局部属功能，在全句里仍常置于下属与属之间。先定位后面的 G 或 G7，再核对之前的旋律能否容纳 F♯。旋律正以 F 自然音为重拍或长音时，可先保留 Dm，等 F 离开才升高。重属在句尾接 G 可以形成属区半终止，接终止四六则把强势的 G 低音提前。高潮上也可以独立用 D 或 D7 着色，让后续和声另择去向。</p>
+        <table class="lesson-table"><caption>重属连接的起点与终点</caption><thead><tr><th scope="col">位置</th><th scope="col">常见路线</th></tr></thead><tbody>
+          <tr><th scope="row">进入属区</th><td>I–V/V–V、vi–V/V–V、IV–V/V–V、ii–V/V–V</td></tr>
+          <tr><th scope="row">终止延展</th><td>ii–V/V–终止四六–V，或 V/V–V7–I</td></tr>
+          <tr><th scope="row">完整一句</th><td>I–IV–ii–V/V–V–V7–I</td></tr>
+        </tbody></table>
+        <div class="music-demo companion-demo" id="major-double-dominant-cadence" role="group" aria-labelledby="major-double-dominant-cadence-title" data-companion-demo>
+          <div class="music-demo-toolbar">
+            <h3 id="major-double-dominant-cadence-title">ii 与重属七引向同一个终止</h3>
+            <div class="score-choice-buttons" data-writing-choices></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">D 低音仍配 F 自然音，以普通下属色彩进入 G 低音。</p>
+          <figure data-writing-score aria-label="ii 与重属七引向同一个终止"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="major-submediant">
+        <h2 id="major-submediant">大调六级和弦</h2>
+        <p>C 大调的 vi 是 Am。C、E 使它主要倾向主功能，A、C 又使它能接续 IV。vi 同时是关系小调的主和弦。它可以接在主、下属或属功能后。IV 到 vi 是上三度且有两个共同音，推进较弱。用于清楚分句时，可让后面再接 ii、重属或属。</p>
+        <table class="lesson-table"><caption>大调 vi 的三种用途</caption><thead><tr><th scope="col">用途</th><th scope="col">常见路线</th><th scope="col">判断</th></tr></thead><tbody>
+          <tr><th scope="row">主功能延伸</th><td>I–vi–ii–V、I–vi–IV、I–vi–V/V–V</td><td>从主区过渡到下属或属准备。</td></tr>
+          <tr><th scope="row">改变属的落点</th><td>I–V–vi，或 V7–vi</td><td>保留 B→C 等趋向音，低音用 A 代替预期的 C，形成阻碍进行。</td></tr>
+          <tr><th scope="row">关系小调与属准备</th><td>ii–iii–vi、vi–ii–V/V–V、vi–终止四六–V7–I</td><td>vi 可短暂像小调主和弦，也可服务于大调终止。</td></tr>
+          <tr><th scope="row">下行低音</th><td>C–G/B–Am–G</td><td>前半 C–B–A 保持级进，随后仍去 G。</td></tr>
+        </tbody></table>
+        <p>在 I–vi–IV–ii–V/V–V–V7–I 中，vi 连接主和弦与下属区。只有在句尾用 vi 替代原本期待的 I，并带来停顿时，V7–vi 才明显成为阻碍终止。</p>
+        <div class="music-demo companion-demo" id="major-vi-deceptive" role="group" aria-labelledby="major-vi-deceptive-title" data-companion-demo>
+          <div class="music-demo-toolbar">
+            <h3 id="major-vi-deceptive-title">属七后的完全收束和阻碍落点</h3>
+            <div class="score-choice-buttons" data-writing-choices></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">低音 G 到 C，属七的 B 向上解决到 C，乐句落在主和弦。</p>
+          <figure data-writing-score aria-label="属七后的完全收束和阻碍落点"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="major-mediant">
+        <h2 id="major-mediant">大调三级和弦</h2>
+        <p>iii 在 C 大调为 Em。B 是调的导音，令它带有属色彩。由于 E、G 与 I 共用，iii 又可以延伸主功能，接到 IV 或 ii。它与含 F 的 G7 有不同的趋向强度，结束乐句时，iii 通常只延伸过程，真正的收束留给 V7–I。</p>
+        <table class="lesson-table"><caption>大调 iii 的常见连接</caption><thead><tr><th scope="col">用途</th><th scope="col">进行</th></tr></thead><tbody>
+          <tr><th scope="row">进入 vi</th><td>I–iii–vi、IV–iii–vi、V–iii–vi、ii–iii–vi</td></tr>
+          <tr><th scope="row">过渡到下属组</th><td>V–iii–IV、vi–iii–IV、I–iii–IV、I–iii–ii</td></tr>
+          <tr><th scope="row">级进或平行色彩</th><td>IV–iii–ii，或 Dm/F–Em–Dm，低音 F–E–D</td></tr>
+          <tr><th scope="row">顺接关系小调</th><td>I–V–vi–iii；用 C–G/B–Am–Em/G 可把低音写成 C–B–A–G。</td></tr>
+        </tbody></table>
+        <p>可把这些短连接扩成 I–iii–vi–IV–ii–V/V–V–V7–I。听见 Em 后的 Am 时，低音 E–A 容易带出小调色彩。后段若仍以 G7–C 收束，全句保持 C 大调中心。</p>
+        <div class="music-demo companion-demo" id="major-iii-tonic-option" role="group" aria-labelledby="major-iii-tonic-option-title" data-companion-demo>
+          <div class="music-demo-toolbar">
+            <h3 id="major-iii-tonic-option-title">同一旋律中的 I 与 iii 延伸</h3>
+            <div class="score-choice-buttons" data-writing-choices></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">IV 后回到 I，句中已经清楚交代主功能。</p>
+          <figure data-writing-score aria-label="同一旋律中的 I 与 iii 延伸"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="major-inversions">
+        <h2 id="major-inversions">大调完全功能体系中的转位和弦</h2>
+        <p>转位改变的是实际低音，和弦根音保持原来的级数。正三和弦的转位可连接原位副和弦，副三和弦的转位也能填在正三和弦之间。选择低音时先看目标低音，再选包含中间音的和弦和转位，最后确认旋律的重音仍与和弦相容。</p>
+        <table class="lesson-table"><caption>正、副和弦转位的搭配</caption><thead><tr><th scope="col">组合</th><th scope="col">C 大调连接示例</th></tr></thead><tbody>
+          <tr><th scope="row">正三转位与副三原位</th><td>C–C/E–Dm–G、C–G/B–Am、C–F/C–Dm–G、C–F/C–Dm–G/B–C、C–Am–G/B–C</td></tr>
+          <tr><th scope="row">正三原位与副三转位</th><td>C–Em–Dm/F–G、C–Am/C–Dm–G、C–Em/G–F、C–Em/G–Am、C–Em/B–Am。Em/B 也可加 D 形成 Em7/B。</td></tr>
+          <tr><th scope="row">两类转位结合</th><td>C–G/B–Am–Em/G、C–C/E–Dm/F–G、C–G/B–Am–Em/G–F–C/E–Dm–G、C–G/B–Am–Em/G–F–C/E–G7/D–C</td></tr>
+        </tbody></table>
+        <p>最后一条的低音完整地沿 C–B–A–G–F–E–D–C 下行。这里 G7/D 的 D 为属七的五音，低音向下到 C。F/C 的低音与前一个 C 保持时，可看作主区低音之上的上层和声变化。终止四六要看 G 低音和后续属解决，不能只凭上方音组的组成判断。</p>
+        <div class="music-demo companion-demo" id="major-descending-bass" role="group" aria-labelledby="major-descending-bass-title" data-companion-demo>
+          <div class="music-demo-toolbar">
+            <h3 id="major-descending-bass-title">同一和弦序列的原位与下行低音</h3>
+            <div class="score-choice-buttons" data-writing-choices></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">低音直接给出 C、G、A、E、F、C、G、C，各处和弦根音都清楚。</p>
+          <figure data-writing-score aria-label="同一和弦序列的原位与下行低音"></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="major-secondary-sevenths">
+        <h2 id="major-secondary-sevenths">大调副七和弦</h2>
+        <p>调内自然七和弦中，V7 是属七。其他各级三和弦加上调内七音，便有 Imaj7、ii7、iii7、IVmaj7、vi7、viiø7。新加入的七音会使音响更不稳定，原功能组基本保留。七音一般下行解决，根音上四度、下五度或上二度时，很容易为七音找到下一和弦音。</p>
+        <table class="lesson-table"><caption>副七和弦的连接方向</caption><thead><tr><th scope="col">级数</th><th scope="col">C 大调示例与要点</th></tr></thead><tbody>
+          <tr><th scope="row">Imaj7、IVmaj7</th><td>Cmaj7–F 中 B 可下行到 A。Fmaj7–C/G–G 中 E 可保留到终止四六，再下行到 D。</td></tr>
+          <tr><th scope="row">ii7</th><td>Dm7–G7–C 中 C→B，F 可留到 G7，再下行到 E。ii7–vi 的推进较弱，适合内部过渡。</td></tr>
+          <tr><th scope="row">vi7</th><td>Am7–Dm 或 Am7–D7–G。后一种经 D7 引入 F♯，提前指向 G。</td></tr>
+          <tr><th scope="row">iii7</th><td>Em7–Am 向关系小调靠拢，Em7–F 可让 D 下行到 C。</td></tr>
+          <tr><th scope="row">viiø7</th><td>Bm7(♭5)–Em 可让 A 下行到 G，在下降五度序列中连接 iii。</td></tr>
+        </tbody></table>
+        <p>七和弦可以隔一个加入，保留三和弦作为落点，例如 I–iii–iii7–vi–vi7–ii–ii7–V–V7–I。也可将 iii7、vi7、ii 与终止四六组织到一句。连续自然七和弦的低音 C–F–B–E–A–D–G–C，适合把共同音与七音的级进织成同一条线。</p>
+        <details class="lesson-aside"><summary>转位七和弦之间的低音连接</summary><div class="lesson-aside-content"><p>C–Cmaj7/E–Fmaj7–C/G–Bm7(♭5)/D–C–G7–C 把 Imaj7 与 viiø7 都放在第一转位。转位使低音可按乐句需要独立设计，七音的去向仍由内声承担。</p></div></details>
+        <div class="music-demo companion-demo" id="major-ii7-stepwise-resolution" role="group" aria-labelledby="major-ii7-stepwise-resolution-title" data-companion-demo>
+          <div class="music-demo-toolbar">
+            <h3 id="major-ii7-stepwise-resolution-title">ii 与 ii7 的终止声部线</h3>
+            <div class="score-choice-buttons" data-writing-choices></div>
+          </div>
+          <p class="music-demo-cue" data-writing-description aria-live="polite">Dm 与 G7 共用 D、F，属七的三全音最后解向 C、E。</p>
+          <figure data-writing-score aria-label="ii 与 ii7 的终止声部线"></figure>
+        </div>
+      </section>
+      <nav class="chapter-pagination" aria-label="相邻章节">
+        <a href="./piano-companion-7.html" rel="prev"><span>上一章</span><strong>伴奏织体的钢琴化及织体简易变化手法</strong></a>
+        <a href="./piano-companion-9.html" rel="next"><span>下一章</span><strong>小调完全和声功能体系的即兴伴奏</strong></a>
+      </nav>
+    </main>
+  </body>
+</html>

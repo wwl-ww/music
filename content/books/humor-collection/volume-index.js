@@ -1,11 +1,10 @@
 const search = document.querySelector('#humor-search');
 const rows = [...document.querySelectorAll('[data-entry-number]')];
-const count = document.querySelector('.humor-index-count');
+const empty = document.querySelector('.humor-index-empty');
 
 function filterEntries() {
   const query = search.value.normalize('NFKC').trim().toLowerCase();
   const isNumber = /^\d+$/.test(query);
-  let hits = 0;
 
   for (const row of rows) {
     const match = isNumber
@@ -13,12 +12,9 @@ function filterEntries() {
       : row.dataset.title.normalize('NFKC').toLowerCase().includes(query);
 
     row.hidden = !match;
-    if (match) hits += 1;
   }
 
-  count.textContent = hits === rows.length
-    ? `共 ${rows.length} 条`
-    : hits ? `找到 ${hits} 条，共 ${rows.length} 条` : '没有匹配条目';
+  empty.hidden = rows.some(row => !row.hidden);
 }
 
 function revealLinkedEntry() {

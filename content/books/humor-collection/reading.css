@@ -29,9 +29,8 @@
   margin-block-start: 0.8rem;
 }
 
-.humor-volumes small,
 .humor-index-list small,
-.humor-index-count {
+.humor-index-empty {
   color: var(--muted);
 }
 

@@ -101,6 +101,33 @@ if (fifthCanon) {
   });
 }
 
+const canonicEntry = document.querySelector('#canonic-entry-map');
+if (canonicEntry) {
+  mountVoiceRelations(canonicEntry, {
+    unitCount: 8,
+    unitName: '拍',
+    lanes: [
+      { label: '上声部', events: [
+        { id: 'first-head', label: 'G–A–B', start: 1, length: 2, detail: '第 1 小节第 1 拍，上声部唱出第一组题头' },
+        { id: 'first-tail', label: '长音 D', start: 3, length: 2, detail: '第 1 小节后两拍，上声部保持 D，下声部在同一时刻开始 G–A–B' },
+        { id: 'next-head', label: 'F–G–A', start: 5, length: 2, detail: '第 2 小节第 1 拍，题头的三个音各下移一级，节奏保持原样' },
+        { id: 'next-tail', label: '长音 C', start: 7, length: 2, detail: '第 2 小节后两拍，上声部保持 C，下声部在同一时刻开始 F–G–A' }
+      ] },
+      { label: '下声部', events: [
+        { id: 'rest', label: '休止', start: 1, length: 2, detail: '第 1 小节前两拍只有上声部发声' },
+        { id: 'first-answer', label: 'G–A–B', start: 3, length: 2, detail: '第 1 小节第 3 拍，下声部接入第一组', accessibleLabel: '下声部第一组应句 G–A–B' },
+        { id: 'tail-answer', label: '长音 D', start: 5, length: 2, detail: '第 2 小节前两拍，下声部延后唱出上一组的长音 D' },
+        { id: 'next-answer', label: 'F–G–A', start: 7, length: 2, detail: '第 2 小节第 3 拍，下声部接入第二组', accessibleLabel: '下声部第二组应句 F–G–A' }
+      ] }
+    ],
+    links: [
+      { from: 'first-head', to: 'first-answer', label: '应句低八度，晚两拍' },
+      { from: 'first-tail', to: 'tail-answer', label: '尾音也按同样的时差和音程模仿' },
+      { from: 'next-head', to: 'next-answer', label: '第二组的应句仍低八度，晚两拍' }
+    ]
+  });
+}
+
 const sequence = document.querySelector('#canonic-seam-map');
 if (sequence) {
   mountVoiceRelations(sequence, {

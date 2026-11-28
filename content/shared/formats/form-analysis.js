@@ -3,7 +3,7 @@ import { mountTimeline } from './timeline.js';
 import { mountScoreReader } from './score-reader.js';
 
 export function mountFormAnalysis(container, {
-  score, sections, barCount = sections.at(-1).last, wholeLabel = '全曲',
+  score, sections, phrases = [], barCount = sections.at(-1).last, wholeLabel = '全曲',
   initialSection = null, describeSection, onSelectionChange
 }) {
   const scoreFigure = container.querySelector('[data-analysis-score]');
@@ -14,25 +14,29 @@ export function mountFormAnalysis(container, {
   const summary = container.querySelector('[data-analysis-description]');
   const status = container.querySelector('[data-analysis-status]');
   const frame = container.querySelector('[data-analysis-timeline]');
+  const locations = [...sections, ...phrases];
   let selection = null;
 
   if (jump) {
     jump.add(new Option(wholeLabel, ''));
-    for (const { id, label, first, last, rangeLabel } of sections) {
+    for (const { id, label, first, last, rangeLabel } of locations) {
       jump.add(new Option(label + ' · ' + (rangeLabel ?? first + '–' + last + ' 小节'), id));
     }
   }
   let described;
 
+  const lane = (label, items) => ({
+    label,
+    events: items.map(({ id, label: title, first, last, rangeLabel }) => ({
+      id, label: title, start: first, length: last - first + 1,
+      accessibleLabel: title + '，' + (rangeLabel ?? '第 ' + first + ' 至 ' + last + ' 小节')
+    }))
+  });
+  const lanes = phrases.length ? [lane('段落', sections), lane('乐句', phrases)] : [lane(undefined, sections)];
   const timeline = mountTimeline(frame, {
     unitCount: barCount,
     unitName: '小节',
-    lanes: [{
-      events: sections.map(({ id, label, first, last, rangeLabel }) => ({
-        id, label, start: first, length: last - first + 1,
-        accessibleLabel: label + '，' + (rangeLabel ?? '第 ' + first + ' 至 ' + last + ' 小节')
-      }))
-    }],
+    lanes,
     onSelect: select
   });
 
@@ -64,10 +68,13 @@ export function mountFormAnalysis(container, {
   });
 
   function select(id) {
-    selection = sections.find(section => section.id === id) ?? null;
+    selection = locations.find(location => location.id === id) ?? null;
     whole?.setAttribute('aria-pressed', String(!selection));
     if (jump) jump.value = selection?.id ?? '';
-    timeline.select(id);
+    const related = selection ? (sections.includes(selection) ? phrases : sections)
+      .filter(({ first, last }) => first <= selection.last && last >= selection.first)
+      .map(location => location.id) : [];
+    timeline.select(id, related);
     const button = timeline.events.get(id);
     if (button) {
       const cell = button.getBoundingClientRect();

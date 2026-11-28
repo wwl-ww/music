@@ -20,21 +20,28 @@ npm run dev
 | `content/` | 教材首页、程序谱目录、格式样板 |
 | `content/reading.html` | 休闲阅读的独立入口，同组读物也列在教材首页 |
 | `content/books/music-theory/` | 《基本乐理教程》章节、专用资产与参考 PDF |
+| `content/books/chord-scale-reference/` | [《和弦音阶速查宝典》](./content/books/chord-scale-reference/index.html)的基础知识、和弦速查和音阶速查 |
 | `content/books/harmony-upper/` | 《和声学基础教程 · 上》章节、专用脚本与参考 PDF |
 | `content/books/harmony-lower/` | 《和声学基础教程 · 下》章节、四部和声谱例与参考 PDF |
 | `content/books/counterpoint/` | 《复调音乐基础教程》上下篇、全书目录与可调谱例 |
 | `content/books/orchestration/` | 《配器法基础教程》章节、总谱示意与音响对照 |
-| `content/books/chinese-orchestration/` | 《中国民族器乐配器教程》绪论、乐器法与配器法八章 |
+| `content/books/chinese-orchestration/` | 《中国民族器乐配器教程》绪论、乐器法与配器法 |
 | `content/books/songwriting/` | 《歌曲写作教程》章节、词曲逐字对齐谱与歌曲结构分析 |
 | `content/books/form-analysis/` | 《曲式学基础教程》章节与曲式分析谱 |
-| `content/books/arrangement/` | 《图解编曲入门》导论、三篇正文与制作流程 |
-| `content/books/composition-scoring/` | 《图解作曲配乐》基本技巧、40 个情境与 10 项延伸技巧 |
-| `content/books/pro-composition/` | 《图解 PRO 作曲法》导论、五首成曲案例与技巧索引 |
-| `content/books/reharmonization/` | 《图解重配和声入门》导论与五章，覆盖 50 种重配技法 |
-| `content/books/style-reharm/` | 《图解重配和声乐风编曲法》导论、八篇风格重配与结语 |
-| `content/books/pop-rock-theory/` | 《图解流行摇滚音乐理论》导论、七章、乐器指板与音高附录 |
-| `content/books/genre-arrangement/` | 《图解乐风编曲入门》编曲基础、歌曲构成与十种乐风 |
-| `content/books/pop-techniques/` | 《POP金曲里技》八章、程序谱与制作试听 |
+| `content/books/arrangement/` | 《图解编曲入门》导论、编曲基础与制作流程 |
+| `content/books/composition-scoring/` | 《图解作曲配乐》作曲基础、情境配乐与延伸技巧 |
+| `content/books/pro-composition/` | 《图解 PRO 作曲法》导论、成曲案例与技巧索引 |
+| `content/books/reharmonization/` | 《图解重配和声入门》导论、重配技法与谱例 |
+| `content/books/numbered-progressions/` | [《钢琴伴奏型、和弦进行大全》简谱版](./content/books/numbered-progressions/index.html)的节奏型、和弦进行、组合简谱和附录 |
+| `content/books/pop-piano-improv/` | [《流行钢琴即兴演奏自学教程》](./content/books/pop-piano-improv/index.html)的即兴教程、双手谱例与曲式分析谱 |
+| `content/books/piano-companion/` | [《钢琴即兴伴奏宝典》](./content/books/piano-companion/index.html)的和声选配、双手织体和民族调式伴奏 |
+| `content/books/piano-technique-30/` | [《钢琴演奏技巧30课》](./content/books/piano-technique-30/index.html)的技术要点、完整练习谱及补充练习 |
+| `content/books/piano-practice-workbook/` | [《流行钢琴伴奏练习册》](./content/books/piano-practice-workbook/index.html)的节奏、伴奏音型、和声织体与加花原谱 |
+| `content/books/piano-accompaniment-fills/` | [《钢琴弹唱即兴伴奏加花》](./content/books/piano-accompaniment-fills/index.html)的技法讲解、原书谱例与完整曲目索引 |
+| `content/books/style-reharm/` | 《图解重配和声乐风编曲法》导论、风格重配与结语 |
+| `content/books/pop-rock-theory/` | 《图解流行摇滚音乐理论》流行摇滚乐理、乐器指板与音高附录 |
+| `content/books/genre-arrangement/` | 《图解乐风编曲入门》编曲基础、歌曲构成与风格编配 |
+| `content/books/pop-techniques/` | 《POP金曲里技》歌曲制作、程序谱与试听 |
 | `content/shared/` | 共用的排版、主题、谱例组件与钢琴音源 |
 
 以下书目目前只存放本地原书资料。
@@ -313,6 +320,18 @@ npm run dev
 
 每篇用一首原创歌曲贯穿曲式、旋律、配词、器乐连接与和声修订。成曲沿用段落分析谱，支持全曲与分段试听。
 
+### 流行钢琴即兴演奏自学教程
+
+按文武贝编著的教程保留五章、二十六课的顺序。本地扫描的印刷页与 PDF 页如下。课程示范采用原创短谱，复用双手大谱表、程序谱、分步写作谱和曲式分析谱。
+
+| 章节 | 课次 | 印刷页 | PDF 页 |
+| --- | --- | --- | --- |
+| [基础知识](./content/books/pop-piano-improv/pop-piano-improv-1.html) | 1–3 | 1–11 | 10–20 |
+| [常用的和弦连接](./content/books/pop-piano-improv/pop-piano-improv-2.html) | 4–5 | 12–27 | 21–36 |
+| [歌曲的钢琴改编技巧](./content/books/pop-piano-improv/pop-piano-improv-3.html) | 6–15 | 28–82 | 37–91 |
+| [为歌曲配和弦](./content/books/pop-piano-improv/pop-piano-improv-4.html) | 16–22 | 83–106 | 92–115 |
+| [即兴创作](./content/books/pop-piano-improv/pop-piano-improv-5.html) | 23–26 | 107–118 | 116–127 |
+
 ### 图解重配和声乐风编曲法
 
 | 课程 | 印刷页 | PDF 页 |
@@ -366,15 +385,15 @@ npm run dev
 | [爵士](./content/books/genre-arrangement/genre-arrangement-14.html) | 143–151 |
 | [节奏布鲁斯](./content/books/genre-arrangement/genre-arrangement-15.html) | 152–162 |
 | [巴西浩室](./content/books/genre-arrangement/genre-arrangement-16.html) | 163–173 |
-| [结语 同一旋律的十种编配](./content/books/genre-arrangement/genre-arrangement-summary.html) | 174–179 |
+| [结语 同一旋律的编配对照](./content/books/genre-arrangement/genre-arrangement-summary.html) | 174–179 |
 
-十种乐风共用一段四小节原创旋律，每章用同速基础稿示范节奏、和声、音色与织体的变化。结语沿用原书示范速度，并汇总十种编配的入口。
+各乐风的示范共用一段四小节原创旋律，每章用同速基础稿示范节奏、和声、音色与织体的变化。结语沿用原书示范速度，并汇总各版编配的入口。
 
 ## 预制格式库
 
 课程中的可调谱例集中列在[程序谱目录](./content/programmatic-scores.html)，每项链接到原章的谱面。
 
-章节页面引入 `content/shared/formats/formats.css`，在 `style.css` 里统一管理颜色和字体。各章填写谱例数据、时间轴事件或表格内容。[格式样板页](./content/format-library.html)演示这些共用组件。
+章节页面引入 `content/shared/formats/formats.css`。`themes.css` 提供主题配色，`style.css` 提供正文排版和共用控件入口。各章填写谱例数据、时间轴事件或表格内容。[样式与继承关系](./docs/format-inheritance.md)记录各组件的复用来源，[格式样板页](./content/format-library.html)提供可操作的示例。
 
 [逐小节和声修订](./content/books/pro-composition/pro-composition-4.html#pro-chord-revision-table)在 `lesson-table` 上加 `chord-revision-table`。两行放草稿和修订，列对齐小节，单元格标出换和弦的拍位和跨小节延续，修订行高亮实际改动。段落切换会同步更新表格和同一个播放器。
 
@@ -427,7 +446,7 @@ mountScore(document.querySelector('#example'), {
 
 ### 程序性谱子
 
-第五章的[大调音阶](chapter-5.html#major-scale-example)与第六章的[小调音阶](chapter-6.html#minor-scale-example)共用 `mountProgrammaticScore`。复用时，在容器内放置含命名控件的 `form`、`[data-generated-score]` 谱例和 `[data-generated-piano]` 键盘容器。传入 `build(choices)`，返回同一音列生成的 alphaTex（`notes`）、MIDI 音高（`pitches`）和可读的谱例描述（`description`）。`lowestPitch` 是键盘最左侧 C 的 MIDI 音高，`octaves` 决定键盘范围。
+第五章的[大调音阶](./content/books/music-theory/chapter-5.html#major-scale-example)与第六章的[小调音阶](./content/books/music-theory/chapter-6.html#minor-scale-example)共用 `mountProgrammaticScore`。复用时，在容器内放置含命名控件的 `form`、`[data-generated-score]` 谱例和 `[data-generated-piano]` 键盘容器。传入 `build(choices)`，返回同一音列生成的 alphaTex（`notes`）、MIDI 音高（`pitches`）和可读的谱例描述（`description`）。`lowestPitch` 是键盘最左侧 C 的 MIDI 音高，`octaves` 决定键盘范围。可在 `keyboardMarks` 传入 `[MIDI 音高, 'start' 或 'end']`，分别用圆点和菱形标出两个音位。[五声调式对照](./content/books/chord-scale-reference/foundations.html#five-modes-comparison)
 
 ### 编曲网格
 
@@ -445,21 +464,27 @@ mountScore(document.querySelector('#example'), {
 
 `mountFretboard(figure, options)` 的 `tuning` 按第 1 弦起排列，默认使用吉他标准调弦。用 `startFret`、`endFret` 指定显示区间，`0` 表示空弦。每个 `markers` 条目含数值 `string`、`fret` 与 `label`，可设 `variant` 为 `root`（方框主音）、`accent` 或 `secondary`。可用 `connections` 的 `{ from: { string, fret }, to: { string, fret } }` 标移动方向。传入新数据可更新同一张图。
 
+### 管乐指法对照与弦位实响
+
+[管乐指法样板](./content/format-library.html#wind-fingering-sample)由 `mountWindFingering(figure, holeLabels)` 建立。用 `update` 传入实音名 `note`、MIDI 音高 `pitch`、唱名 `syllable`、按编号排列的 `holes` 和可选的吹气方式 `breath`。孔位用 `open`、`half`、`closed`。同一支乐器切换唱名时，程序谱与指法应从同一组音高产生。可把程序谱的 `onPitchesChange` 接到 `markPitches`。
+
+[弦位与实响样板](./content/format-library.html#string-sound-sample)由 `mountStringSounds` 接收奏法 `technique`、弦位与手势 `position`、实际起音 `attack` 和说明 `description`。一次起音后连续滑向另一音的情况加 `arrival`。空弦音或弦号写在 `position`，泛音和按音的音高按实际听到的音填写。
+
 ### 吉他和弦指板
 
 [吉他和弦指板样板](./content/format-library.html#guitar-chord-samples)复用站点主题，用于并排比较把位或和弦声位。`mountGuitarChordDiagrams` 接收图名 `label`、由第 6 弦至第 1 弦排列的 `positions` 与可选的 `degrees`。品位填数字，`0` 为空弦，`null` 为不弹。较高把位用 `firstFret` 指定第一行的品号。横按用 `barre` 标数值 `fret`、`fromString` 与 `toString`。读屏描述由同一组弦位数据生成。
 
 ### 曲式分析谱与声部关系图
 
-两种格式从共用时间轴继承等长分格、选择状态、键盘操作和窄屏滚动。曲式分析谱另外复用可播放谱；声部关系图在时间轴上叠加连接箭头。主题颜色和控件样式由 `formats.css` 统一提供。两种格式的页面结构和调用数据可从[曲式与声部关系样板](./content/format-library.html#analysis-samples)复制。
+两种格式从共用时间轴继承等长分格、选择状态、键盘操作和窄屏滚动。曲式分析谱另外复用可播放谱。声部关系图用由浅到深的线连接两次出现的材料，空心圆标出关系的来源，实心圆标出对应项。点选任一端时，两端和连线一起高亮。主题颜色和控件样式由 `formats.css` 统一提供。两种格式的页面结构和调用数据可从[曲式与声部关系样板](./content/format-library.html#analysis-samples)复制。
 
 | 格式 | 接口与数据 | 何时使用 |
 |---|---|---|
-| 共用时间轴 | `mountTimeline` 接收 `unitCount`、`unitName`、`lanes` 和 `onSelect`。每个事件填写 `id`、`label`、`start` 和 `length`。位置从 1 开始，长度以时间单位计。 | 多组材料需要在同一时间尺度上比较。 |
+| 共用时间轴 | `mountTimeline` 接收 `unitCount`、`unitName`、`lanes` 和 `onSelect`。每个事件填写 `id`、`label`、`start` 和 `length`。位置从 1 开始，长度以时间单位计。`unitLabels` 可显示原谱的小节号或对照的版本名。 | 多组材料需要在同一时间尺度上比较。 |
 | 曲式分析谱 | `mountFormAnalysis` 接收一个 `score` 与按时间排列的 `sections`。段落填写首末小节 `first`、`last`，以及 `material`、`voice`、`key`、`role` 中与分析有关的说明。 | 追踪同一首作品的呈示、发展、再现等结构。可定位并试听所选段或全曲。 |
-| 声部关系图 | `mountVoiceRelations` 接收时间单位、各声部的事件和 `links`。连接写明 `from`、`to`，并在 `label` 说明时差、音程或关系。辅助谱表事件可用 `guide: true`。 | 对照几个声部的起句、应句、移位或重叠。 |
+| 声部关系图 | `mountVoiceRelations` 接收时间单位、各声部的事件和 `links`。事件的起点与长度用同一单位，连接从 `from`（空心圆）到 `to`（实心圆），在 `label` 说明时差、音程或材料的变化。辅助谱表事件可用 `guide: true`。 | 对照模仿入口、同一材料的换位、两部的重叠与交接。并行背景可只画事件。 |
 
-曲式分析谱按写在谱上的小节编号定位，选段试听从所选小节的首次进入开始，演奏路线离开所选小节范围时停止。全曲播放遵循谱中的演奏路线。
+曲式分析谱按写在谱上的小节编号定位，选段试听从所选小节的首次进入开始，演奏路线离开所选小节范围时停止。全曲播放遵循谱中的演奏路线。可选的 `phrases` 沿用段落的首末小节结构，在同一时间轴增加乐句一行。选择段落或乐句时，另一行的对应区间一起标出。 [双层曲式时间轴](./content/books/pop-piano-improv/pop-piano-improv-5.html#piano-improv-form)
 
 段落起点在小节内部时，可用 `entry: { bar, staff, voice, beat }` 指定从哪一个记谱事件起播，编号从 1 开始，`staff` 和 `voice` 默认取 1。`first` 和 `last` 仍用于排布时间轴，可用 `rangeLabel` 显示准确的拍内起点。
 
@@ -471,6 +496,8 @@ mountScore(document.querySelector('#example'), {
 |---|---|---|
 | 对照谱 | `mountScoreComparison` 接收两份 `versions` 和一段 `description`。每份填写 `label`、`score` 与 `highlights`。两份谱同时显示，选择对应版本试听。 | 同一材料经过换位、变形或修正，需要直接比对相应音符。 |
 | 分步写作谱 | `mountScoreWritingSteps` 接收共用 `score` 设置与按写作顺序排列的 `steps`。每步填写 `label`、`notes`、`description` 与 `highlights`。 | 一条写作规则需要通过材料的加入、重叠与修正来说明。各步使用同一个谱面和播放键。 |
+
+分步写作谱可以用 `onStepChange` 更新其他视图。需要让拍格随乐谱播放，用同一组节奏事件生成谱面与编曲网格，并将 `score.onPlaybackPosition` 接到 `grid.markTick`。 [双手节奏对照](./content/books/pop-piano-improv/pop-piano-improv-5.html#piano-rhythm-building)
 
 高亮位置使用 `{ staff, bar, voice, beat }`，所有编号从 1 开始，`staff` 和 `voice` 默认取 1。`beat` 对应谱上该声部的第几个记谱事件，八分音符和休止各占一个事件。需要标出冲突时可加 `kind: 'conflict'`，并在说明中交代涉及的音和音程。
 

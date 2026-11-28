@@ -1,0 +1,6 @@
+.lesson-chapter .companion-demo { max-width: var(--reading-width); }
+.companion-demo .score-controls { margin-block-end: 0.45rem; }
+.companion-demo .music-demo-cue[hidden] { display: none; }
+.companion-demo figure { min-width: 0; }
+.companion-demo .music-demo-toolbar h3 { font-size: 1rem; }
+.companion-demo .music-demo-toolbar select { min-width: 0; max-width: 100%; }
